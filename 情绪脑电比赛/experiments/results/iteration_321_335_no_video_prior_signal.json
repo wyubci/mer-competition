@@ -1,0 +1,3778 @@
+{
+  "method": "No-video-prior signal-only EEG/fNIRS evaluation",
+  "note": "No candidate uses VideoTimeMean, PatternPrior, video ID, timestamp, or label-derived video/time cells. SignalSmooth variants use only the model output order within each trial.",
+  "subjects": [
+    "test_1",
+    "test_2",
+    "test_3",
+    "test_4",
+    "test_5",
+    "test_6",
+    "test_7",
+    "test_8",
+    "test_9",
+    "test_10",
+    "test_11",
+    "test_12",
+    "test_13",
+    "test_14",
+    "test_15",
+    "test_16",
+    "test_17",
+    "test_18",
+    "test_19",
+    "test_20",
+    "test_21",
+    "test_22",
+    "test_23",
+    "test_24"
+  ],
+  "fold_size": 4,
+  "fnirs_types": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "baseline_correction": true,
+  "raw_feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20",
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ]
+  },
+  "compact_feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+      "overall_mae": 47.0764,
+      "valence_mae": 50.6582,
+      "arousal_mae": 43.4946,
+      "overall_mse": 3526.5726,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+      "overall_mae": 47.0769,
+      "valence_mae": 50.6524,
+      "arousal_mae": 43.5015,
+      "overall_mse": 3527.0222,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+      "overall_mae": 47.077,
+      "valence_mae": 50.6518,
+      "arousal_mae": 43.5021,
+      "overall_mse": 3527.0651,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+      "overall_mae": 47.0989,
+      "valence_mae": 50.6784,
+      "arousal_mae": 43.5195,
+      "overall_mse": 3528.764,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+      "overall_mae": 47.0999,
+      "valence_mae": 50.6727,
+      "arousal_mae": 43.527,
+      "overall_mse": 3529.2642,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+      "overall_mae": 47.1,
+      "valence_mae": 50.6722,
+      "arousal_mae": 43.5278,
+      "overall_mse": 3529.3152,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+      "overall_mae": 47.1689,
+      "valence_mae": 50.5323,
+      "arousal_mae": 43.8054,
+      "overall_mse": 3534.8361,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+      "overall_mae": 47.1754,
+      "valence_mae": 50.5273,
+      "arousal_mae": 43.8235,
+      "overall_mse": 3535.949,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+      "overall_mae": 47.1764,
+      "valence_mae": 50.5268,
+      "arousal_mae": 43.8259,
+      "overall_mse": 3536.1065,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+      "overall_mae": 47.1919,
+      "valence_mae": 50.6847,
+      "arousal_mae": 43.6991,
+      "overall_mse": 3542.2545,
+      "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "334_PLSEarlyDirect_c2",
+      "overall_mae": 47.2138,
+      "valence_mae": 50.7077,
+      "arousal_mae": 43.7199,
+      "overall_mse": 3544.4536,
+      "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+      "overall_mae": 47.2184,
+      "valence_mae": 50.5893,
+      "arousal_mae": 43.8476,
+      "overall_mse": 3539.2372,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+      "overall_mae": 47.2271,
+      "valence_mae": 50.5868,
+      "arousal_mae": 43.8674,
+      "overall_mse": 3540.5433,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+      "overall_mae": 47.2282,
+      "valence_mae": 50.5866,
+      "arousal_mae": 43.8699,
+      "overall_mse": 3540.7243,
+      "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+      "overall_mae": 47.4199,
+      "valence_mae": 50.8751,
+      "arousal_mae": 43.9648,
+      "overall_mse": 3560.8336,
+      "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "334_PLSEarlyDirect_c4",
+      "overall_mae": 47.4585,
+      "valence_mae": 50.9175,
+      "arousal_mae": 43.9994,
+      "overall_mse": 3565.1012,
+      "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+    },
+    {
+      "method": "321_Center128_noPrior",
+      "overall_mae": 47.5663,
+      "valence_mae": 52.198,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.896,
+      "notes": "No signal and no video/time prior; constant VA-plane center."
+    },
+    {
+      "method": "321_Center128_noPrior_SignalSmooth5",
+      "overall_mae": 47.5663,
+      "valence_mae": 52.198,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.896,
+      "notes": "No signal and no video/time prior; constant VA-plane center."
+    },
+    {
+      "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 47.6896,
+      "valence_mae": 51.0726,
+      "arousal_mae": 44.3066,
+      "overall_mse": 3605.5504,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "330_CoupledSlopeDirectRidge_a10000p0",
+      "overall_mae": 47.7697,
+      "valence_mae": 51.1597,
+      "arousal_mae": 44.3796,
+      "overall_mse": 3614.1587,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 47.7874,
+      "valence_mae": 51.2401,
+      "arousal_mae": 44.3347,
+      "overall_mse": 3616.3966,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "328_NeurovascularDirectRidge_a10000p0",
+      "overall_mae": 47.8469,
+      "valence_mae": 51.2945,
+      "arousal_mae": 44.3992,
+      "overall_mse": 3622.48,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 47.8716,
+      "valence_mae": 51.3221,
+      "arousal_mae": 44.4211,
+      "overall_mse": 3602.2789,
+      "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "326_FNIRSSlowDirectRidge_a10000p0",
+      "overall_mae": 47.917,
+      "valence_mae": 51.3633,
+      "arousal_mae": 44.4707,
+      "overall_mse": 3606.824,
+      "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 48.0654,
+      "valence_mae": 51.2014,
+      "arousal_mae": 44.9294,
+      "overall_mse": 3657.115,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 48.0994,
+      "valence_mae": 51.2718,
+      "arousal_mae": 44.9269,
+      "overall_mse": 3635.4603,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 48.1084,
+      "valence_mae": 51.3876,
+      "arousal_mae": 44.8292,
+      "overall_mse": 3662.3062,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "322_TrainMean_noPrior",
+      "overall_mae": 48.1506,
+      "valence_mae": 52.4129,
+      "arousal_mae": 43.8883,
+      "overall_mse": 3592.4366,
+      "notes": "No signal and no video/time prior; train-subject global mean."
+    },
+    {
+      "method": "322_TrainMean_noPrior_SignalSmooth5",
+      "overall_mae": 48.1506,
+      "valence_mae": 52.4129,
+      "arousal_mae": 43.8883,
+      "overall_mse": 3592.4366,
+      "notes": "No signal and no video/time prior; train-subject global mean."
+    },
+    {
+      "method": "328_NeurovascularDirectRidge_a1000p0",
+      "overall_mae": 48.2004,
+      "valence_mae": 51.4743,
+      "arousal_mae": 44.9266,
+      "overall_mse": 3672.5543,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "329_HRFDirectRidge_a10000p0",
+      "overall_mae": 48.2051,
+      "valence_mae": 51.3799,
+      "arousal_mae": 45.0304,
+      "overall_mse": 3648.2157,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "330_CoupledSlopeDirectRidge_a1000p0",
+      "overall_mae": 48.2192,
+      "valence_mae": 51.3809,
+      "arousal_mae": 45.0576,
+      "overall_mse": 3673.7584,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 48.2282,
+      "valence_mae": 52.0143,
+      "arousal_mae": 44.4421,
+      "overall_mse": 3600.3675,
+      "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 48.3101,
+      "valence_mae": 51.7629,
+      "arousal_mae": 44.8572,
+      "overall_mse": 3649.7734,
+      "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 48.3105,
+      "valence_mae": 52.0635,
+      "arousal_mae": 44.5575,
+      "overall_mse": 3602.9416,
+      "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 48.3118,
+      "valence_mae": 52.0272,
+      "arousal_mae": 44.5964,
+      "overall_mse": 3655.4135,
+      "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 48.3254,
+      "valence_mae": 52.0708,
+      "arousal_mae": 44.58,
+      "overall_mse": 3603.4309,
+      "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 48.3351,
+      "valence_mae": 51.4135,
+      "arousal_mae": 45.2568,
+      "overall_mse": 3664.1686,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "325_EEGLagDirectRidge_a10000p0",
+      "overall_mae": 48.349,
+      "valence_mae": 52.1575,
+      "arousal_mae": 44.5404,
+      "overall_mse": 3612.2302,
+      "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "326_FNIRSSlowDirectRidge_a1000p0",
+      "overall_mae": 48.3694,
+      "valence_mae": 51.8145,
+      "arousal_mae": 44.9243,
+      "overall_mse": 3656.9044,
+      "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "326_FNIRSSlowDirectRidge_a100p0",
+      "overall_mae": 48.3951,
+      "valence_mae": 52.1001,
+      "arousal_mae": 44.6902,
+      "overall_mse": 3665.5098,
+      "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "327_EarlyConcatDirectRidge_a10000p0",
+      "overall_mae": 48.4514,
+      "valence_mae": 51.5412,
+      "arousal_mae": 45.3617,
+      "overall_mse": 3677.254,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 48.4822,
+      "valence_mae": 51.4702,
+      "arousal_mae": 45.4941,
+      "overall_mse": 3712.3916,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "325_EEGLagDirectRidge_a1000p0",
+      "overall_mae": 48.4901,
+      "valence_mae": 52.2504,
+      "arousal_mae": 44.7299,
+      "overall_mse": 3621.3838,
+      "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "325_EEGLagDirectRidge_a100p0",
+      "overall_mae": 48.5168,
+      "valence_mae": 52.2654,
+      "arousal_mae": 44.7682,
+      "overall_mse": 3623.3715,
+      "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+    },
+    {
+      "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 48.5586,
+      "valence_mae": 51.6781,
+      "arousal_mae": 45.4392,
+      "overall_mse": 3726.1874,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 48.6512,
+      "valence_mae": 51.738,
+      "arousal_mae": 45.5644,
+      "overall_mse": 3696.8031,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "328_NeurovascularDirectRidge_a100p0",
+      "overall_mae": 48.6798,
+      "valence_mae": 51.8086,
+      "arousal_mae": 45.551,
+      "overall_mse": 3740.8318,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "330_CoupledSlopeDirectRidge_a100p0",
+      "overall_mae": 48.6823,
+      "valence_mae": 51.7081,
+      "arousal_mae": 45.6565,
+      "overall_mse": 3735.1437,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "329_HRFDirectRidge_a1000p0",
+      "overall_mae": 48.8135,
+      "valence_mae": 51.9099,
+      "arousal_mae": 45.7171,
+      "overall_mse": 3719.6735,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 48.918,
+      "valence_mae": 51.9928,
+      "arousal_mae": 45.8432,
+      "overall_mse": 3736.2711,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 48.9489,
+      "valence_mae": 52.1184,
+      "arousal_mae": 45.7795,
+      "overall_mse": 3741.6135,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 49.0176,
+      "valence_mae": 52.6669,
+      "arousal_mae": 45.3682,
+      "overall_mse": 3756.5509,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "327_EarlyConcatDirectRidge_a1000p0",
+      "overall_mae": 49.115,
+      "valence_mae": 52.2857,
+      "arousal_mae": 45.9443,
+      "overall_mse": 3762.7425,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "329_HRFDirectRidge_a100p0",
+      "overall_mae": 49.1446,
+      "valence_mae": 52.2352,
+      "arousal_mae": 46.0541,
+      "overall_mse": 3767.845,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "327_EarlyConcatDirectRidge_a100p0",
+      "overall_mae": 49.2065,
+      "valence_mae": 52.8563,
+      "arousal_mae": 45.5568,
+      "overall_mse": 3781.3606,
+      "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+    },
+    {
+      "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+      "overall_mae": 52.0232,
+      "valence_mae": 56.6626,
+      "arousal_mae": 47.3838,
+      "overall_mse": 4313.0044,
+      "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+    },
+    {
+      "method": "323_RawFlatDirectRidge_a10000p0",
+      "overall_mae": 53.1003,
+      "valence_mae": 57.5996,
+      "arousal_mae": 48.601,
+      "overall_mse": 4504.8964,
+      "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+    },
+    {
+      "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+      "overall_mae": 57.2548,
+      "valence_mae": 63.2836,
+      "arousal_mae": 51.2259,
+      "overall_mse": 5413.1235,
+      "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+    },
+    {
+      "method": "323_RawFlatDirectRidge_a1000p0",
+      "overall_mae": 59.1853,
+      "valence_mae": 65.0581,
+      "arousal_mae": 53.3125,
+      "overall_mse": 5737.8389,
+      "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+    },
+    {
+      "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+      "overall_mae": 59.4976,
+      "valence_mae": 64.2896,
+      "arousal_mae": 54.7056,
+      "overall_mse": 5767.4528,
+      "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+    },
+    {
+      "method": "323_RawFlatDirectRidge_a100p0",
+      "overall_mae": 61.8573,
+      "valence_mae": 66.658,
+      "arousal_mae": 57.0567,
+      "overall_mse": 6187.2035,
+      "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+          "overall_mae": 38.307,
+          "valence_mae": 45.3961,
+          "arousal_mae": 31.2178,
+          "overall_mse": 2769.4832,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4",
+          "overall_mae": 38.3615,
+          "valence_mae": 45.4613,
+          "arousal_mae": 31.2616,
+          "overall_mse": 2774.0046,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+          "overall_mae": 38.54,
+          "valence_mae": 45.9139,
+          "arousal_mae": 31.166,
+          "overall_mse": 2786.6653,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+          "overall_mae": 38.5421,
+          "valence_mae": 45.9172,
+          "arousal_mae": 31.1669,
+          "overall_mse": 2786.8545,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+          "overall_mae": 38.5625,
+          "valence_mae": 45.9486,
+          "arousal_mae": 31.1765,
+          "overall_mse": 2788.7207,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+          "overall_mae": 38.5862,
+          "valence_mae": 45.9641,
+          "arousal_mae": 31.2084,
+          "overall_mse": 2789.9998,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+          "overall_mae": 38.588,
+          "valence_mae": 45.9669,
+          "arousal_mae": 31.2091,
+          "overall_mse": 2790.1746,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+          "overall_mae": 38.606,
+          "valence_mae": 45.9947,
+          "arousal_mae": 31.2173,
+          "overall_mse": 2791.9011,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+          "overall_mae": 38.6205,
+          "valence_mae": 46.0592,
+          "arousal_mae": 31.1817,
+          "overall_mse": 2798.4648,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+          "overall_mae": 38.6225,
+          "valence_mae": 46.0622,
+          "arousal_mae": 31.1828,
+          "overall_mse": 2798.6482,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+          "overall_mae": 38.639,
+          "valence_mae": 46.0706,
+          "arousal_mae": 31.2074,
+          "overall_mse": 2800.238,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+          "overall_mae": 38.641,
+          "valence_mae": 46.0736,
+          "arousal_mae": 31.2085,
+          "overall_mse": 2800.4182,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+          "overall_mae": 38.6419,
+          "valence_mae": 46.0915,
+          "arousal_mae": 31.1922,
+          "overall_mse": 2800.3772,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+          "overall_mae": 38.66,
+          "valence_mae": 46.1031,
+          "arousal_mae": 31.2169,
+          "overall_mse": 2802.1172,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 38.9193,
+          "valence_mae": 46.1754,
+          "arousal_mae": 31.6632,
+          "overall_mse": 2810.6692,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0",
+          "overall_mae": 38.9629,
+          "valence_mae": 46.2085,
+          "arousal_mae": 31.7174,
+          "overall_mse": 2814.3127,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 39.1709,
+          "valence_mae": 46.7174,
+          "arousal_mae": 31.6245,
+          "overall_mse": 2876.8542,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 39.1791,
+          "valence_mae": 46.7418,
+          "arousal_mae": 31.6163,
+          "overall_mse": 2819.8684,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+          "overall_mae": 39.1917,
+          "valence_mae": 46.4803,
+          "arousal_mae": 31.9031,
+          "overall_mse": 2864.3105,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2",
+          "overall_mae": 39.2144,
+          "valence_mae": 46.4935,
+          "arousal_mae": 31.9354,
+          "overall_mse": 2865.7981,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 39.2744,
+          "valence_mae": 46.4161,
+          "arousal_mae": 32.1328,
+          "overall_mse": 2820.1624,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0",
+          "overall_mae": 39.2901,
+          "valence_mae": 46.8324,
+          "arousal_mae": 31.7477,
+          "overall_mse": 2883.907,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 39.3044,
+          "valence_mae": 46.76,
+          "arousal_mae": 31.8488,
+          "overall_mse": 2875.5515,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0",
+          "overall_mae": 39.3286,
+          "valence_mae": 46.8738,
+          "arousal_mae": 31.7833,
+          "overall_mse": 2831.5164,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 39.349,
+          "valence_mae": 46.9424,
+          "arousal_mae": 31.7555,
+          "overall_mse": 2880.9744,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0",
+          "overall_mae": 39.4276,
+          "valence_mae": 46.5839,
+          "arousal_mae": 32.2713,
+          "overall_mse": 2833.2034,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0",
+          "overall_mae": 39.4459,
+          "valence_mae": 47.0082,
+          "arousal_mae": 31.8837,
+          "overall_mse": 2886.5879,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 39.4874,
+          "valence_mae": 46.2483,
+          "arousal_mae": 32.7265,
+          "overall_mse": 2831.4929,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0",
+          "overall_mae": 39.5265,
+          "valence_mae": 47.004,
+          "arousal_mae": 32.049,
+          "overall_mse": 2889.9065,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0",
+          "overall_mae": 39.5364,
+          "valence_mae": 46.2869,
+          "arousal_mae": 32.786,
+          "overall_mse": 2836.9209,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 39.539,
+          "valence_mae": 46.8197,
+          "arousal_mae": 32.2583,
+          "overall_mse": 2881.3425,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 39.619,
+          "valence_mae": 47.0392,
+          "arousal_mae": 32.1988,
+          "overall_mse": 2896.7559,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0",
+          "overall_mae": 39.6918,
+          "valence_mae": 46.932,
+          "arousal_mae": 32.4516,
+          "overall_mse": 2892.0059,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 39.8199,
+          "valence_mae": 46.8081,
+          "arousal_mae": 32.8318,
+          "overall_mse": 2828.387,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 39.8841,
+          "valence_mae": 47.0194,
+          "arousal_mae": 32.7488,
+          "overall_mse": 2904.9678,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0",
+          "overall_mae": 39.9005,
+          "valence_mae": 47.3612,
+          "arousal_mae": 32.4399,
+          "overall_mse": 2916.5557,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 39.9842,
+          "valence_mae": 46.3416,
+          "arousal_mae": 33.6269,
+          "overall_mse": 2867.2102,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0",
+          "overall_mae": 40.0342,
+          "valence_mae": 46.3881,
+          "arousal_mae": 33.6803,
+          "overall_mse": 2874.2246,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0",
+          "overall_mae": 40.0349,
+          "valence_mae": 47.0288,
+          "arousal_mae": 33.0411,
+          "overall_mse": 2851.3777,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "321_Center128_noPrior_SignalSmooth5",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0",
+          "overall_mae": 40.0763,
+          "valence_mae": 47.1832,
+          "arousal_mae": 32.9695,
+          "overall_mse": 2921.1379,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 40.3023,
+          "valence_mae": 46.6776,
+          "arousal_mae": 33.9271,
+          "overall_mse": 2878.1836,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0",
+          "overall_mae": 40.5087,
+          "valence_mae": 46.9093,
+          "arousal_mae": 34.108,
+          "overall_mse": 2899.7908,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 40.6584,
+          "valence_mae": 47.0005,
+          "arousal_mae": 34.3163,
+          "overall_mse": 2875.4216,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 40.7781,
+          "valence_mae": 46.894,
+          "arousal_mae": 34.6623,
+          "overall_mse": 2932.2356,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 40.8393,
+          "valence_mae": 48.7836,
+          "arousal_mae": 32.895,
+          "overall_mse": 2988.7783,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 40.9295,
+          "valence_mae": 48.8252,
+          "arousal_mae": 33.0337,
+          "overall_mse": 2990.2917,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0",
+          "overall_mae": 40.9411,
+          "valence_mae": 47.342,
+          "arousal_mae": 34.5403,
+          "overall_mse": 2907.8545,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 40.9554,
+          "valence_mae": 48.8246,
+          "arousal_mae": 33.0862,
+          "overall_mse": 2990.8918,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0",
+          "overall_mae": 40.9921,
+          "valence_mae": 48.9347,
+          "arousal_mae": 33.0496,
+          "overall_mse": 3000.0762,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0",
+          "overall_mae": 41.0009,
+          "valence_mae": 47.1556,
+          "arousal_mae": 34.8462,
+          "overall_mse": 2955.8926,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "322_TrainMean_noPrior",
+          "overall_mae": 41.1312,
+          "valence_mae": 49.0335,
+          "arousal_mae": 33.2289,
+          "overall_mse": 3025.7473,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "322_TrainMean_noPrior_SignalSmooth5",
+          "overall_mae": 41.1312,
+          "valence_mae": 49.0335,
+          "arousal_mae": 33.2289,
+          "overall_mse": 3025.7473,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0",
+          "overall_mae": 41.1782,
+          "valence_mae": 49.0355,
+          "arousal_mae": 33.3209,
+          "overall_mse": 3008.7891,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0",
+          "overall_mae": 41.2213,
+          "valence_mae": 49.0421,
+          "arousal_mae": 33.4005,
+          "overall_mse": 3011.0276,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 47.3542,
+          "valence_mae": 53.2863,
+          "arousal_mae": 41.4221,
+          "overall_mse": 3872.6692,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0",
+          "overall_mae": 47.9773,
+          "valence_mae": 53.8213,
+          "arousal_mae": 42.1332,
+          "overall_mse": 3962.5627,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 51.923,
+          "valence_mae": 56.6854,
+          "arousal_mae": 47.1606,
+          "overall_mse": 4493.8423,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0",
+          "overall_mae": 52.8207,
+          "valence_mae": 57.6292,
+          "arousal_mae": 48.0123,
+          "overall_mse": 4651.1255,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 52.9697,
+          "valence_mae": 56.8008,
+          "arousal_mae": 49.1386,
+          "overall_mse": 4582.8628,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0",
+          "overall_mae": 54.0754,
+          "valence_mae": 58.093,
+          "arousal_mae": 50.0578,
+          "overall_mse": 4781.2246,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "322_TrainMean_noPrior",
+          "overall_mae": 59.4934,
+          "valence_mae": 62.2209,
+          "arousal_mae": 56.7659,
+          "overall_mse": 4760.7578,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "322_TrainMean_noPrior_SignalSmooth5",
+          "overall_mae": 59.4934,
+          "valence_mae": 62.2209,
+          "arousal_mae": 56.7659,
+          "overall_mse": 4760.7578,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+          "overall_mae": 59.5776,
+          "valence_mae": 60.7224,
+          "arousal_mae": 58.4328,
+          "overall_mse": 4932.0361,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+          "overall_mae": 59.5901,
+          "valence_mae": 60.7335,
+          "arousal_mae": 58.4467,
+          "overall_mse": 4935.731,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+          "overall_mae": 59.5914,
+          "valence_mae": 60.7346,
+          "arousal_mae": 58.4482,
+          "overall_mse": 4936.1069,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+          "overall_mae": 59.6028,
+          "valence_mae": 60.7506,
+          "arousal_mae": 58.455,
+          "overall_mse": 4936.123,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+          "overall_mae": 59.6072,
+          "valence_mae": 60.6252,
+          "arousal_mae": 58.5892,
+          "overall_mse": 4918.041,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+          "overall_mae": 59.6158,
+          "valence_mae": 60.7616,
+          "arousal_mae": 58.4699,
+          "overall_mse": 4939.9136,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+          "overall_mae": 59.6171,
+          "valence_mae": 60.7628,
+          "arousal_mae": 58.4715,
+          "overall_mse": 4940.2998,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+          "overall_mae": 59.6206,
+          "valence_mae": 60.6322,
+          "arousal_mae": 58.6091,
+          "overall_mse": 4921.437,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+          "overall_mae": 59.6236,
+          "valence_mae": 60.6329,
+          "arousal_mae": 58.6144,
+          "overall_mse": 4922.042,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+          "overall_mae": 59.6293,
+          "valence_mae": 60.3225,
+          "arousal_mae": 58.936,
+          "overall_mse": 4947.0605,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+          "overall_mae": 59.6408,
+          "valence_mae": 60.6654,
+          "arousal_mae": 58.6162,
+          "overall_mse": 4924.1714,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2",
+          "overall_mae": 59.6518,
+          "valence_mae": 60.3559,
+          "arousal_mae": 58.9478,
+          "overall_mse": 4951.0352,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+          "overall_mae": 59.6557,
+          "valence_mae": 60.6736,
+          "arousal_mae": 58.6378,
+          "overall_mse": 4927.8022,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+          "overall_mae": 59.6588,
+          "valence_mae": 60.6745,
+          "arousal_mae": 58.6432,
+          "overall_mse": 4928.4346,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 59.8837,
+          "valence_mae": 61.6332,
+          "arousal_mae": 58.1341,
+          "overall_mse": 4831.3159,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 59.8944,
+          "valence_mae": 61.6198,
+          "arousal_mae": 58.1691,
+          "overall_mse": 4832.5815,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "321_Center128_noPrior_SignalSmooth5",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0",
+          "overall_mae": 59.9447,
+          "valence_mae": 61.7175,
+          "arousal_mae": 58.1719,
+          "overall_mse": 4851.0117,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0",
+          "overall_mae": 59.9517,
+          "valence_mae": 61.7,
+          "arousal_mae": 58.2034,
+          "overall_mse": 4850.9194,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 59.9609,
+          "valence_mae": 61.6474,
+          "arousal_mae": 58.2744,
+          "overall_mse": 4840.1577,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0",
+          "overall_mae": 59.9995,
+          "valence_mae": 61.705,
+          "arousal_mae": 58.2939,
+          "overall_mse": 4853.1235,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+          "overall_mae": 60.152,
+          "valence_mae": 61.5082,
+          "arousal_mae": 58.7958,
+          "overall_mse": 5019.2358,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4",
+          "overall_mae": 60.1922,
+          "valence_mae": 61.5619,
+          "arousal_mae": 58.8225,
+          "overall_mse": 5026.6758,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 60.2609,
+          "valence_mae": 61.1481,
+          "arousal_mae": 59.3736,
+          "overall_mse": 5114.6558,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 60.2666,
+          "valence_mae": 61.5943,
+          "arousal_mae": 58.9389,
+          "overall_mse": 5025.5483,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0",
+          "overall_mae": 60.3205,
+          "valence_mae": 61.6488,
+          "arousal_mae": 58.9923,
+          "overall_mse": 5033.7524,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0",
+          "overall_mae": 60.3952,
+          "valence_mae": 61.2683,
+          "arousal_mae": 59.5222,
+          "overall_mse": 5135.3242,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 60.4981,
+          "valence_mae": 60.3673,
+          "arousal_mae": 60.629,
+          "overall_mse": 5114.9497,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0",
+          "overall_mae": 60.5769,
+          "valence_mae": 60.4587,
+          "arousal_mae": 60.6951,
+          "overall_mse": 5130.0972,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 60.7839,
+          "valence_mae": 61.4405,
+          "arousal_mae": 60.1274,
+          "overall_mse": 5151.8721,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0",
+          "overall_mae": 60.8693,
+          "valence_mae": 61.5244,
+          "arousal_mae": 60.2143,
+          "overall_mse": 5166.1587,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 60.9729,
+          "valence_mae": 60.7672,
+          "arousal_mae": 61.1786,
+          "overall_mse": 5199.3452,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0",
+          "overall_mae": 61.0264,
+          "valence_mae": 60.8395,
+          "arousal_mae": 61.2132,
+          "overall_mse": 5209.7017,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 61.3275,
+          "valence_mae": 60.5845,
+          "arousal_mae": 62.0705,
+          "overall_mse": 5297.5864,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 61.4368,
+          "valence_mae": 61.6378,
+          "arousal_mae": 61.2359,
+          "overall_mse": 5273.8188,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0",
+          "overall_mae": 61.4452,
+          "valence_mae": 60.7064,
+          "arousal_mae": 62.1841,
+          "overall_mse": 5321.7373,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 61.5168,
+          "valence_mae": 61.3828,
+          "arousal_mae": 61.6509,
+          "overall_mse": 5291.5122,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0",
+          "overall_mae": 61.5365,
+          "valence_mae": 61.7608,
+          "arousal_mae": 61.3123,
+          "overall_mse": 5291.6128,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 61.5959,
+          "valence_mae": 62.2346,
+          "arousal_mae": 60.9572,
+          "overall_mse": 5432.5,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0",
+          "overall_mae": 61.6003,
+          "valence_mae": 61.4902,
+          "arousal_mae": 61.7104,
+          "overall_mse": 5311.1431,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 61.6216,
+          "valence_mae": 61.5161,
+          "arousal_mae": 61.727,
+          "overall_mse": 5430.2383,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 61.6573,
+          "valence_mae": 60.9152,
+          "arousal_mae": 62.3993,
+          "overall_mse": 5359.5786,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0",
+          "overall_mae": 61.7895,
+          "valence_mae": 61.0467,
+          "arousal_mae": 62.5322,
+          "overall_mse": 5387.9106,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0",
+          "overall_mae": 61.8125,
+          "valence_mae": 61.7573,
+          "arousal_mae": 61.8677,
+          "overall_mse": 5464.5659,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0",
+          "overall_mae": 61.8196,
+          "valence_mae": 62.4877,
+          "arousal_mae": 61.1516,
+          "overall_mse": 5482.4351,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 62.0975,
+          "valence_mae": 61.4717,
+          "arousal_mae": 62.7232,
+          "overall_mse": 5445.6733,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 62.153,
+          "valence_mae": 61.575,
+          "arousal_mae": 62.731,
+          "overall_mse": 5461.5054,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0",
+          "overall_mae": 62.1757,
+          "valence_mae": 61.5761,
+          "arousal_mae": 62.7753,
+          "overall_mse": 5462.3599,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 62.2501,
+          "valence_mae": 61.9766,
+          "arousal_mae": 62.5236,
+          "overall_mse": 5472.1909,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0",
+          "overall_mae": 62.3002,
+          "valence_mae": 61.7483,
+          "arousal_mae": 62.852,
+          "overall_mse": 5488.4556,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0",
+          "overall_mae": 62.3858,
+          "valence_mae": 62.1337,
+          "arousal_mae": 62.6379,
+          "overall_mse": 5506.0103,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 62.6037,
+          "valence_mae": 61.9494,
+          "arousal_mae": 63.2581,
+          "overall_mse": 5566.1465,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0",
+          "overall_mae": 62.7,
+          "valence_mae": 62.0713,
+          "arousal_mae": 63.3288,
+          "overall_mse": 5586.8828,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 69.9505,
+          "valence_mae": 71.9897,
+          "arousal_mae": 67.9113,
+          "overall_mse": 7083.8677,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0",
+          "overall_mae": 72.286,
+          "valence_mae": 73.2599,
+          "arousal_mae": 71.3122,
+          "overall_mse": 7632.5796,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 79.2453,
+          "valence_mae": 94.7968,
+          "arousal_mae": 63.6937,
+          "overall_mse": 9682.4482,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 79.4901,
+          "valence_mae": 95.0878,
+          "arousal_mae": 63.8923,
+          "overall_mse": 9679.1729,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0",
+          "overall_mae": 83.7296,
+          "valence_mae": 97.5526,
+          "arousal_mae": 69.9066,
+          "overall_mse": 10479.2354,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0",
+          "overall_mae": 84.3698,
+          "valence_mae": 98.829,
+          "arousal_mae": 69.9105,
+          "overall_mse": 10643.7568,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 50.9757,
+          "valence_mae": 56.6205,
+          "arousal_mae": 45.331,
+          "overall_mse": 3926.3574,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 51.011,
+          "valence_mae": 56.7319,
+          "arousal_mae": 45.29,
+          "overall_mse": 3915.4329,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 51.027,
+          "valence_mae": 56.7,
+          "arousal_mae": 45.3539,
+          "overall_mse": 3925.4893,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0",
+          "overall_mae": 51.0277,
+          "valence_mae": 56.6651,
+          "arousal_mae": 45.3903,
+          "overall_mse": 3931.8887,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0",
+          "overall_mae": 51.0475,
+          "valence_mae": 56.7484,
+          "arousal_mae": 45.3466,
+          "overall_mse": 3919.3835,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+          "overall_mae": 51.0517,
+          "valence_mae": 56.4572,
+          "arousal_mae": 45.6461,
+          "overall_mse": 3952.8689,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2",
+          "overall_mae": 51.0687,
+          "valence_mae": 56.4668,
+          "arousal_mae": 45.6705,
+          "overall_mse": 3954.6064,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+          "overall_mae": 51.1207,
+          "valence_mae": 56.613,
+          "arousal_mae": 45.6284,
+          "overall_mse": 3969.2683,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+          "overall_mae": 51.1216,
+          "valence_mae": 56.6014,
+          "arousal_mae": 45.6418,
+          "overall_mse": 3969.9226,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+          "overall_mae": 51.1217,
+          "valence_mae": 56.6003,
+          "arousal_mae": 45.6431,
+          "overall_mse": 3969.9902,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+          "overall_mae": 51.1344,
+          "valence_mae": 56.6218,
+          "arousal_mae": 45.647,
+          "overall_mse": 3970.8777,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+          "overall_mae": 51.1357,
+          "valence_mae": 56.6105,
+          "arousal_mae": 45.661,
+          "overall_mse": 3971.5696,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+          "overall_mae": 51.1359,
+          "valence_mae": 56.6093,
+          "arousal_mae": 45.6624,
+          "overall_mse": 3971.6414,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 51.138,
+          "valence_mae": 56.9351,
+          "arousal_mae": 45.3409,
+          "overall_mse": 3919.1765,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0",
+          "overall_mae": 51.1412,
+          "valence_mae": 56.8294,
+          "arousal_mae": 45.4531,
+          "overall_mse": 3936.3926,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 51.192,
+          "valence_mae": 56.8135,
+          "arousal_mae": 45.5706,
+          "overall_mse": 3933.864,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0",
+          "overall_mae": 51.2068,
+          "valence_mae": 56.9773,
+          "arousal_mae": 45.4363,
+          "overall_mse": 3926.679,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+          "overall_mae": 51.2707,
+          "valence_mae": 56.3133,
+          "arousal_mae": 46.2282,
+          "overall_mse": 3992.7422,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+          "overall_mae": 51.2826,
+          "valence_mae": 56.3007,
+          "arousal_mae": 46.2645,
+          "overall_mse": 3994.6111,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+          "overall_mae": 51.2839,
+          "valence_mae": 56.2995,
+          "arousal_mae": 46.2683,
+          "overall_mse": 3994.8054,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+          "overall_mae": 51.3193,
+          "valence_mae": 56.3592,
+          "arousal_mae": 46.2794,
+          "overall_mse": 3996.5723,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 51.3274,
+          "valence_mae": 57.1278,
+          "arousal_mae": 45.5271,
+          "overall_mse": 3929.4885,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0",
+          "overall_mae": 51.3278,
+          "valence_mae": 56.9791,
+          "arousal_mae": 45.6766,
+          "overall_mse": 3947.7754,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+          "overall_mae": 51.3333,
+          "valence_mae": 56.3483,
+          "arousal_mae": 46.3182,
+          "overall_mse": 3998.6191,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+          "overall_mae": 51.3347,
+          "valence_mae": 56.3473,
+          "arousal_mae": 46.3222,
+          "overall_mse": 3998.8328,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0",
+          "overall_mae": 51.414,
+          "valence_mae": 57.2176,
+          "arousal_mae": 45.6104,
+          "overall_mse": 3939.6345,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 51.5525,
+          "valence_mae": 56.8801,
+          "arousal_mae": 46.225,
+          "overall_mse": 4103.7949,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+          "overall_mae": 51.5548,
+          "valence_mae": 56.5637,
+          "arousal_mae": 46.5459,
+          "overall_mse": 4009.5325,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4",
+          "overall_mae": 51.5858,
+          "valence_mae": 56.5938,
+          "arousal_mae": 46.5778,
+          "overall_mse": 4012.5466,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 51.6046,
+          "valence_mae": 56.8061,
+          "arousal_mae": 46.403,
+          "overall_mse": 3992.3662,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0",
+          "overall_mae": 51.6847,
+          "valence_mae": 56.8578,
+          "arousal_mae": 46.5117,
+          "overall_mse": 4002.748,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "321_Center128_noPrior",
+          "overall_mae": 51.7127,
+          "valence_mae": 58.2524,
+          "arousal_mae": 45.173,
+          "overall_mse": 4117.0942,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "321_Center128_noPrior_SignalSmooth5",
+          "overall_mae": 51.7127,
+          "valence_mae": 58.2524,
+          "arousal_mae": 45.173,
+          "overall_mse": 4117.0942,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 51.8239,
+          "valence_mae": 57.5038,
+          "arousal_mae": 46.144,
+          "overall_mse": 4007.2883,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 51.8586,
+          "valence_mae": 58.2208,
+          "arousal_mae": 45.4964,
+          "overall_mse": 4017.1062,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 51.9615,
+          "valence_mae": 57.2787,
+          "arousal_mae": 46.6444,
+          "overall_mse": 4021.7844,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 51.9687,
+          "valence_mae": 56.9097,
+          "arousal_mae": 47.0277,
+          "overall_mse": 4046.8164,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 51.9698,
+          "valence_mae": 58.3506,
+          "arousal_mae": 45.5889,
+          "overall_mse": 4020.7468,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0",
+          "overall_mae": 51.9864,
+          "valence_mae": 58.3437,
+          "arousal_mae": 45.6292,
+          "overall_mse": 4028.4133,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 51.994,
+          "valence_mae": 58.3816,
+          "arousal_mae": 45.6063,
+          "overall_mse": 4021.9832,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "322_TrainMean_noPrior",
+          "overall_mae": 52.0018,
+          "valence_mae": 58.6159,
+          "arousal_mae": 45.3878,
+          "overall_mse": 4036.2334,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "322_TrainMean_noPrior_SignalSmooth5",
+          "overall_mae": 52.0018,
+          "valence_mae": 58.6159,
+          "arousal_mae": 45.3878,
+          "overall_mse": 4036.2334,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0",
+          "overall_mae": 52.0175,
+          "valence_mae": 57.6534,
+          "arousal_mae": 46.3816,
+          "overall_mse": 4030.4519,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0",
+          "overall_mae": 52.0537,
+          "valence_mae": 56.9907,
+          "arousal_mae": 47.1167,
+          "overall_mse": 4056.0364,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 52.0562,
+          "valence_mae": 57.2527,
+          "arousal_mae": 46.8598,
+          "overall_mse": 4059.0925,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 52.0717,
+          "valence_mae": 57.8826,
+          "arousal_mae": 46.2608,
+          "overall_mse": 4085.6191,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0",
+          "overall_mae": 52.1009,
+          "valence_mae": 57.3892,
+          "arousal_mae": 46.8127,
+          "overall_mse": 4040.4539,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0",
+          "overall_mae": 52.1213,
+          "valence_mae": 57.4782,
+          "arousal_mae": 46.7643,
+          "overall_mse": 4177.0703,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0",
+          "overall_mae": 52.1424,
+          "valence_mae": 58.5008,
+          "arousal_mae": 45.7839,
+          "overall_mse": 4038.1575,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0",
+          "overall_mae": 52.1752,
+          "valence_mae": 58.5365,
+          "arousal_mae": 45.8138,
+          "overall_mse": 4040.6924,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0",
+          "overall_mae": 52.1885,
+          "valence_mae": 57.3659,
+          "arousal_mae": 47.0112,
+          "overall_mse": 4074.1289,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0",
+          "overall_mae": 52.224,
+          "valence_mae": 58.0052,
+          "arousal_mae": 46.4429,
+          "overall_mse": 4102.6836,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 52.2887,
+          "valence_mae": 57.2685,
+          "arousal_mae": 47.3089,
+          "overall_mse": 4087.6545,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0",
+          "overall_mae": 52.3205,
+          "valence_mae": 57.2916,
+          "arousal_mae": 47.3495,
+          "overall_mse": 4090.9866,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 52.5745,
+          "valence_mae": 57.6773,
+          "arousal_mae": 47.4716,
+          "overall_mse": 4122.9238,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 52.5917,
+          "valence_mae": 58.4282,
+          "arousal_mae": 46.7553,
+          "overall_mse": 4164.9082,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0",
+          "overall_mae": 52.6191,
+          "valence_mae": 57.7102,
+          "arousal_mae": 47.5281,
+          "overall_mse": 4127.6567,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0",
+          "overall_mae": 52.654,
+          "valence_mae": 58.4711,
+          "arousal_mae": 46.837,
+          "overall_mse": 4171.1055,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 53.4619,
+          "valence_mae": 58.2702,
+          "arousal_mae": 48.6536,
+          "overall_mse": 4705.1362,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0",
+          "overall_mae": 54.5927,
+          "valence_mae": 59.5868,
+          "arousal_mae": 49.5985,
+          "overall_mse": 4860.6548,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 54.8825,
+          "valence_mae": 59.435,
+          "arousal_mae": 50.33,
+          "overall_mse": 5104.2085,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0",
+          "overall_mae": 56.2693,
+          "valence_mae": 60.914,
+          "arousal_mae": 51.6246,
+          "overall_mse": 5311.4487,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+          "overall_mae": 40.2874,
+          "valence_mae": 40.9157,
+          "arousal_mae": 39.6592,
+          "overall_mse": 2461.5818,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+          "overall_mae": 40.2882,
+          "valence_mae": 40.9166,
+          "arousal_mae": 39.6598,
+          "overall_mse": 2461.6152,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+          "overall_mae": 40.2957,
+          "valence_mae": 40.9251,
+          "arousal_mae": 39.6664,
+          "overall_mse": 2461.95,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+          "overall_mae": 40.3048,
+          "valence_mae": 40.9323,
+          "arousal_mae": 39.6772,
+          "overall_mse": 2463.3899,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+          "overall_mae": 40.3055,
+          "valence_mae": 40.9331,
+          "arousal_mae": 39.6778,
+          "overall_mse": 2463.4197,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+          "overall_mae": 40.3126,
+          "valence_mae": 40.9412,
+          "arousal_mae": 39.6841,
+          "overall_mse": 2463.7197,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+          "overall_mae": 40.5279,
+          "valence_mae": 41.2292,
+          "arousal_mae": 39.8266,
+          "overall_mse": 2518.2996,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+          "overall_mae": 40.5322,
+          "valence_mae": 40.539,
+          "arousal_mae": 40.5254,
+          "overall_mse": 2523.6467,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+          "overall_mae": 40.5349,
+          "valence_mae": 40.5201,
+          "arousal_mae": 40.5497,
+          "overall_mse": 2525.9338,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+          "overall_mae": 40.5352,
+          "valence_mae": 40.5182,
+          "arousal_mae": 40.5523,
+          "overall_mse": 2526.1738,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2",
+          "overall_mae": 40.5492,
+          "valence_mae": 41.2535,
+          "arousal_mae": 39.8448,
+          "overall_mse": 2520.3928,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+          "overall_mae": 40.5873,
+          "valence_mae": 40.5977,
+          "arousal_mae": 40.5769,
+          "overall_mse": 2528.6121,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+          "overall_mae": 40.5924,
+          "valence_mae": 40.5814,
+          "arousal_mae": 40.6034,
+          "overall_mse": 2531.1436,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+          "overall_mae": 40.593,
+          "valence_mae": 40.5797,
+          "arousal_mae": 40.6062,
+          "overall_mse": 2531.4089,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+          "overall_mae": 40.9847,
+          "valence_mae": 41.0611,
+          "arousal_mae": 40.9083,
+          "overall_mse": 2551.2002,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4",
+          "overall_mae": 41.0159,
+          "valence_mae": 41.0903,
+          "arousal_mae": 40.9416,
+          "overall_mse": 2555.0896,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 41.1758,
+          "valence_mae": 40.7394,
+          "arousal_mae": 41.6122,
+          "overall_mse": 2536.9236,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0",
+          "overall_mae": 41.202,
+          "valence_mae": 40.7634,
+          "arousal_mae": 41.6406,
+          "overall_mse": 2539.8484,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 41.2816,
+          "valence_mae": 41.0731,
+          "arousal_mae": 41.4901,
+          "overall_mse": 2522.2869,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0",
+          "overall_mae": 41.3127,
+          "valence_mae": 41.1089,
+          "arousal_mae": 41.5165,
+          "overall_mse": 2526.2825,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 41.3177,
+          "valence_mae": 41.6667,
+          "arousal_mae": 40.9686,
+          "overall_mse": 2532.656,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0",
+          "overall_mae": 41.3755,
+          "valence_mae": 41.7304,
+          "arousal_mae": 41.0206,
+          "overall_mse": 2538.8665,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 41.5141,
+          "valence_mae": 41.4198,
+          "arousal_mae": 41.6084,
+          "overall_mse": 2588.5667,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 41.5173,
+          "valence_mae": 41.2241,
+          "arousal_mae": 41.8105,
+          "overall_mse": 2560.7878,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 41.5704,
+          "valence_mae": 41.016,
+          "arousal_mae": 42.1248,
+          "overall_mse": 2597.4131,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 41.5968,
+          "valence_mae": 41.4348,
+          "arousal_mae": 41.7588,
+          "overall_mse": 2583.0784,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 41.6314,
+          "valence_mae": 41.4425,
+          "arousal_mae": 41.8203,
+          "overall_mse": 2607.1306,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0",
+          "overall_mae": 41.6461,
+          "valence_mae": 41.3734,
+          "arousal_mae": 41.9188,
+          "overall_mse": 2575.7297,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0",
+          "overall_mae": 41.6465,
+          "valence_mae": 41.5696,
+          "arousal_mae": 41.7234,
+          "overall_mse": 2607.019,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0",
+          "overall_mae": 41.6599,
+          "valence_mae": 41.1266,
+          "arousal_mae": 42.1932,
+          "overall_mse": 2607.4478,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 41.6818,
+          "valence_mae": 42.2036,
+          "arousal_mae": 41.1599,
+          "overall_mse": 2564.7424,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0",
+          "overall_mae": 41.6905,
+          "valence_mae": 41.543,
+          "arousal_mae": 41.838,
+          "overall_mse": 2596.6531,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0",
+          "overall_mae": 41.6932,
+          "valence_mae": 41.5179,
+          "arousal_mae": 41.8686,
+          "overall_mse": 2615.8884,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "322_TrainMean_noPrior",
+          "overall_mae": 41.7103,
+          "valence_mae": 42.4165,
+          "arousal_mae": 41.0041,
+          "overall_mse": 2561.1365,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "322_TrainMean_noPrior_SignalSmooth5",
+          "overall_mae": 41.7103,
+          "valence_mae": 42.4165,
+          "arousal_mae": 41.0041,
+          "overall_mse": 2561.1365,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0",
+          "overall_mae": 41.8422,
+          "valence_mae": 42.3785,
+          "arousal_mae": 41.3058,
+          "overall_mse": 2582.2053,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "321_Center128_noPrior",
+          "overall_mae": 41.9163,
+          "valence_mae": 43.9157,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2631.1885,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "321_Center128_noPrior_SignalSmooth5",
+          "overall_mae": 41.9163,
+          "valence_mae": 43.9157,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2631.1885,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 41.918,
+          "valence_mae": 42.3971,
+          "arousal_mae": 41.439,
+          "overall_mse": 2686.6543,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 41.9523,
+          "valence_mae": 42.2346,
+          "arousal_mae": 41.67,
+          "overall_mse": 2853.2852,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0",
+          "overall_mae": 42.0067,
+          "valence_mae": 42.5026,
+          "arousal_mae": 41.5108,
+          "overall_mse": 2696.1199,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 42.0701,
+          "valence_mae": 42.6202,
+          "arousal_mae": 41.52,
+          "overall_mse": 2687.5159,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 42.0806,
+          "valence_mae": 42.5458,
+          "arousal_mae": 41.6154,
+          "overall_mse": 2693.5583,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0",
+          "overall_mae": 42.1447,
+          "valence_mae": 42.6143,
+          "arousal_mae": 41.6751,
+          "overall_mse": 2700.6631,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0",
+          "overall_mae": 42.1454,
+          "valence_mae": 42.6996,
+          "arousal_mae": 41.5912,
+          "overall_mse": 2696.9919,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 42.1757,
+          "valence_mae": 42.6692,
+          "arousal_mae": 41.6822,
+          "overall_mse": 2713.9487,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 42.1809,
+          "valence_mae": 42.5252,
+          "arousal_mae": 41.8366,
+          "overall_mse": 2719.2937,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 42.2076,
+          "valence_mae": 42.642,
+          "arousal_mae": 41.7732,
+          "overall_mse": 2618.3145,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 42.231,
+          "valence_mae": 42.494,
+          "arousal_mae": 41.968,
+          "overall_mse": 2617.1921,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 42.238,
+          "valence_mae": 42.5407,
+          "arousal_mae": 41.9353,
+          "overall_mse": 2618.0347,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0",
+          "overall_mae": 42.2713,
+          "valence_mae": 42.6173,
+          "arousal_mae": 41.9253,
+          "overall_mse": 2731.9836,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0",
+          "overall_mae": 42.3033,
+          "valence_mae": 42.7618,
+          "arousal_mae": 41.8448,
+          "overall_mse": 2628.8669,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0",
+          "overall_mae": 42.3046,
+          "valence_mae": 42.8098,
+          "arousal_mae": 41.7994,
+          "overall_mse": 2729.324,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 42.3157,
+          "valence_mae": 42.7059,
+          "arousal_mae": 41.9255,
+          "overall_mse": 2730.9314,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0",
+          "overall_mae": 42.3759,
+          "valence_mae": 42.689,
+          "arousal_mae": 42.0628,
+          "overall_mse": 2634.1152,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0",
+          "overall_mae": 42.379,
+          "valence_mae": 42.6486,
+          "arousal_mae": 42.1095,
+          "overall_mse": 2634.6821,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0",
+          "overall_mae": 42.4589,
+          "valence_mae": 42.8542,
+          "arousal_mae": 42.0636,
+          "overall_mse": 2749.0432,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0",
+          "overall_mae": 43.1969,
+          "valence_mae": 43.9147,
+          "arousal_mae": 42.4792,
+          "overall_mse": 3004.8865,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 47.0533,
+          "valence_mae": 47.3471,
+          "arousal_mae": 46.7595,
+          "overall_mse": 3705.7068,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0",
+          "overall_mae": 49.3345,
+          "valence_mae": 50.3864,
+          "arousal_mae": 48.2825,
+          "overall_mse": 4013.1477,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 50.7596,
+          "valence_mae": 52.3135,
+          "arousal_mae": 49.2056,
+          "overall_mse": 4183.8179,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0",
+          "overall_mae": 53.6019,
+          "valence_mae": 55.8598,
+          "arousal_mae": 51.3439,
+          "overall_mse": 4616.9834,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "321_Center128_noPrior",
+          "overall_mae": 45.2909,
+          "valence_mae": 50.6307,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3066,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "321_Center128_noPrior_SignalSmooth5",
+          "overall_mae": 45.2909,
+          "valence_mae": 50.6307,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3066,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "322_TrainMean_noPrior",
+          "overall_mae": 45.9326,
+          "valence_mae": 51.4337,
+          "arousal_mae": 40.4315,
+          "overall_mse": 3379.3848,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "322_TrainMean_noPrior_SignalSmooth5",
+          "overall_mae": 45.9326,
+          "valence_mae": 51.4337,
+          "arousal_mae": 40.4315,
+          "overall_mse": 3379.3848,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 46.1234,
+          "valence_mae": 51.235,
+          "arousal_mae": 41.0118,
+          "overall_mse": 3400.9539,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 46.2399,
+          "valence_mae": 51.4153,
+          "arousal_mae": 41.0646,
+          "overall_mse": 3408.2629,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 46.2604,
+          "valence_mae": 51.4501,
+          "arousal_mae": 41.0706,
+          "overall_mse": 3409.1033,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0",
+          "overall_mae": 46.322,
+          "valence_mae": 51.4897,
+          "arousal_mae": 41.1543,
+          "overall_mse": 3415.699,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+          "overall_mae": 46.3886,
+          "valence_mae": 51.9288,
+          "arousal_mae": 40.8484,
+          "overall_mse": 3413.9114,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+          "overall_mae": 46.4102,
+          "valence_mae": 51.957,
+          "arousal_mae": 40.8634,
+          "overall_mse": 3415.5881,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+          "overall_mae": 46.4124,
+          "valence_mae": 51.9599,
+          "arousal_mae": 40.8649,
+          "overall_mse": 3415.759,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+          "overall_mae": 46.4242,
+          "valence_mae": 51.9681,
+          "arousal_mae": 40.8804,
+          "overall_mse": 3416.1277,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+          "overall_mae": 46.4244,
+          "valence_mae": 52.1378,
+          "arousal_mae": 40.7111,
+          "overall_mse": 3398.9041,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+          "overall_mae": 46.4465,
+          "valence_mae": 51.9969,
+          "arousal_mae": 40.896,
+          "overall_mse": 3417.8508,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+          "overall_mae": 46.4487,
+          "valence_mae": 51.9999,
+          "arousal_mae": 40.8976,
+          "overall_mse": 3418.0261,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+          "overall_mae": 46.451,
+          "valence_mae": 52.179,
+          "arousal_mae": 40.723,
+          "overall_mse": 3400.5295,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+          "overall_mae": 46.4537,
+          "valence_mae": 52.1832,
+          "arousal_mae": 40.7242,
+          "overall_mse": 3400.6941,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+          "overall_mae": 46.4785,
+          "valence_mae": 52.2092,
+          "arousal_mae": 40.7478,
+          "overall_mse": 3403.2903,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+          "overall_mae": 46.5061,
+          "valence_mae": 52.2514,
+          "arousal_mae": 40.7608,
+          "overall_mse": 3405.0959,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+          "overall_mae": 46.5089,
+          "valence_mae": 52.2557,
+          "arousal_mae": 40.7621,
+          "overall_mse": 3405.2793,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0",
+          "overall_mae": 46.5178,
+          "valence_mae": 51.7457,
+          "arousal_mae": 41.2898,
+          "overall_mse": 3430.2483,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0",
+          "overall_mae": 46.554,
+          "valence_mae": 51.7958,
+          "arousal_mae": 41.3123,
+          "overall_mse": 3432.6306,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 46.5883,
+          "valence_mae": 51.7919,
+          "arousal_mae": 41.3847,
+          "overall_mse": 3432.1523,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 46.6247,
+          "valence_mae": 51.98,
+          "arousal_mae": 41.2695,
+          "overall_mse": 3428.3972,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+          "overall_mae": 46.6365,
+          "valence_mae": 52.1877,
+          "arousal_mae": 41.0854,
+          "overall_mse": 3434.8672,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2",
+          "overall_mae": 46.6721,
+          "valence_mae": 52.2332,
+          "arousal_mae": 41.111,
+          "overall_mse": 3437.4773,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0",
+          "overall_mae": 46.6776,
+          "valence_mae": 51.9002,
+          "arousal_mae": 41.455,
+          "overall_mse": 3440.3567,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0",
+          "overall_mae": 46.6831,
+          "valence_mae": 52.0521,
+          "arousal_mae": 41.3141,
+          "overall_mse": 3434.1375,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 46.7541,
+          "valence_mae": 52.0756,
+          "arousal_mae": 41.4325,
+          "overall_mse": 3446.1106,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0",
+          "overall_mae": 46.8389,
+          "valence_mae": 52.1799,
+          "arousal_mae": 41.4979,
+          "overall_mse": 3454.3284,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+          "overall_mae": 46.8648,
+          "valence_mae": 52.7273,
+          "arousal_mae": 41.0023,
+          "overall_mse": 3432.0078,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4",
+          "overall_mae": 46.9024,
+          "valence_mae": 52.7696,
+          "arousal_mae": 41.0353,
+          "overall_mse": 3436.2278,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 46.9104,
+          "valence_mae": 51.9581,
+          "arousal_mae": 41.8627,
+          "overall_mse": 3474.9939,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 46.9407,
+          "valence_mae": 52.8042,
+          "arousal_mae": 41.0772,
+          "overall_mse": 3449.3708,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0",
+          "overall_mae": 46.9829,
+          "valence_mae": 52.847,
+          "arousal_mae": 41.1189,
+          "overall_mse": 3452.6406,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0",
+          "overall_mae": 47.0541,
+          "valence_mae": 52.1334,
+          "arousal_mae": 41.9748,
+          "overall_mse": 3489.8777,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 47.0867,
+          "valence_mae": 53.0945,
+          "arousal_mae": 41.079,
+          "overall_mse": 3442.9021,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 47.1199,
+          "valence_mae": 52.3588,
+          "arousal_mae": 41.881,
+          "overall_mse": 3500.7043,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0",
+          "overall_mae": 47.1475,
+          "valence_mae": 53.1449,
+          "arousal_mae": 41.1502,
+          "overall_mse": 3447.7988,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 47.1826,
+          "valence_mae": 52.2165,
+          "arousal_mae": 42.1488,
+          "overall_mse": 3515.1348,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0",
+          "overall_mae": 47.2269,
+          "valence_mae": 52.4777,
+          "arousal_mae": 41.976,
+          "overall_mse": 3512.2449,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0",
+          "overall_mae": 47.3512,
+          "valence_mae": 52.4192,
+          "arousal_mae": 42.2832,
+          "overall_mse": 3534.4658,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 47.3891,
+          "valence_mae": 53.5385,
+          "arousal_mae": 41.2396,
+          "overall_mse": 3444.6228,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0",
+          "overall_mae": 47.4579,
+          "valence_mae": 53.5938,
+          "arousal_mae": 41.322,
+          "overall_mse": 3451.4109,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 47.6038,
+          "valence_mae": 53.2606,
+          "arousal_mae": 41.9469,
+          "overall_mse": 3518.9822,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0",
+          "overall_mae": 47.7106,
+          "valence_mae": 53.3891,
+          "arousal_mae": 42.0321,
+          "overall_mse": 3531.6055,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 48.0929,
+          "valence_mae": 53.6701,
+          "arousal_mae": 42.5157,
+          "overall_mse": 3586.7812,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 48.1277,
+          "valence_mae": 54.7368,
+          "arousal_mae": 41.5186,
+          "overall_mse": 3518.7158,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0",
+          "overall_mae": 48.2047,
+          "valence_mae": 53.7761,
+          "arousal_mae": 42.6332,
+          "overall_mse": 3602.042,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0",
+          "overall_mae": 48.5762,
+          "valence_mae": 55.1408,
+          "arousal_mae": 42.0117,
+          "overall_mse": 3589.002,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 48.5901,
+          "valence_mae": 54.3797,
+          "arousal_mae": 42.8004,
+          "overall_mse": 3643.3132,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0",
+          "overall_mae": 48.7577,
+          "valence_mae": 54.5556,
+          "arousal_mae": 42.9598,
+          "overall_mse": 3665.7969,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 48.8398,
+          "valence_mae": 54.9038,
+          "arousal_mae": 42.7758,
+          "overall_mse": 3687.0312,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.9895,
+          "valence_mae": 55.7248,
+          "arousal_mae": 42.2542,
+          "overall_mse": 3691.2539,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0",
+          "overall_mae": 49.0063,
+          "valence_mae": 55.0331,
+          "arousal_mae": 42.9795,
+          "overall_mse": 3712.3877,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0",
+          "overall_mae": 49.1573,
+          "valence_mae": 55.8596,
+          "arousal_mae": 42.4551,
+          "overall_mse": 3719.5364,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 49.1951,
+          "valence_mae": 55.0726,
+          "arousal_mae": 43.3177,
+          "overall_mse": 3732.302,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0",
+          "overall_mae": 49.4023,
+          "valence_mae": 55.2616,
+          "arousal_mae": 43.5429,
+          "overall_mse": 3761.1116,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 55.4921,
+          "valence_mae": 58.0106,
+          "arousal_mae": 52.9736,
+          "overall_mse": 4985.1211,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0",
+          "overall_mae": 56.2841,
+          "valence_mae": 58.7548,
+          "arousal_mae": 53.8134,
+          "overall_mse": 5127.0347,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 61.4745,
+          "valence_mae": 58.6093,
+          "arousal_mae": 64.3397,
+          "overall_mse": 5967.9902,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0",
+          "overall_mae": 62.2907,
+          "valence_mae": 59.6105,
+          "arousal_mae": 64.9708,
+          "overall_mse": 6146.3599,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "334_PLSEarlyDirect_c2_SignalSmooth5",
+          "overall_mae": 46.1145,
+          "valence_mae": 47.4314,
+          "arousal_mae": 44.7977,
+          "overall_mse": 3536.134,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c2",
+          "overall_mae": 46.1266,
+          "valence_mae": 47.4434,
+          "arousal_mae": 44.8098,
+          "overall_mse": 3537.4285,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0_SignalSmooth5",
+          "overall_mae": 46.4284,
+          "valence_mae": 47.6412,
+          "arousal_mae": 45.2157,
+          "overall_mse": 3580.5059,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0_SignalSmooth5",
+          "overall_mae": 46.4289,
+          "valence_mae": 47.6437,
+          "arousal_mae": 45.2142,
+          "overall_mse": 3580.6316,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0_SignalSmooth5",
+          "overall_mae": 46.4341,
+          "valence_mae": 47.6687,
+          "arousal_mae": 45.1995,
+          "overall_mse": 3581.8884,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a100p0",
+          "overall_mae": 46.4543,
+          "valence_mae": 47.6583,
+          "arousal_mae": 45.2503,
+          "overall_mse": 3582.2949,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a1000p0",
+          "overall_mae": 46.4548,
+          "valence_mae": 47.6608,
+          "arousal_mae": 45.2488,
+          "overall_mse": 3582.4158,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c8_a10000p0",
+          "overall_mae": 46.4596,
+          "valence_mae": 47.6854,
+          "arousal_mae": 45.2338,
+          "overall_mse": 3583.6248,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "321_Center128_noPrior",
+          "overall_mae": 46.5051,
+          "valence_mae": 47.9976,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3796.8098,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "321_Center128_noPrior_SignalSmooth5",
+          "overall_mae": 46.5051,
+          "valence_mae": 47.9976,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3796.8098,
+          "notes": "No signal and no video/time prior; constant VA-plane center."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0_SignalSmooth5",
+          "overall_mae": 46.6161,
+          "valence_mae": 47.6301,
+          "arousal_mae": 45.6021,
+          "overall_mse": 3586.9873,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0_SignalSmooth5",
+          "overall_mae": 46.6212,
+          "valence_mae": 47.6145,
+          "arousal_mae": 45.6278,
+          "overall_mse": 3586.3406,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0_SignalSmooth5",
+          "overall_mae": 46.6217,
+          "valence_mae": 47.613,
+          "arousal_mae": 45.6304,
+          "overall_mse": 3586.2793,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4_SignalSmooth5",
+          "overall_mae": 46.6561,
+          "valence_mae": 47.9941,
+          "arousal_mae": 45.3182,
+          "overall_mse": 3583.5432,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a10000p0",
+          "overall_mae": 46.6786,
+          "valence_mae": 47.7094,
+          "arousal_mae": 45.6477,
+          "overall_mse": 3590.8748,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 46.6866,
+          "valence_mae": 48.4735,
+          "arousal_mae": 44.8996,
+          "overall_mse": 3580.665,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a1000p0",
+          "overall_mae": 46.687,
+          "valence_mae": 47.6992,
+          "arousal_mae": 45.6748,
+          "overall_mse": 3590.4343,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "333_PCAEarlyDirectRidge_c16_a100p0",
+          "overall_mae": 46.6879,
+          "valence_mae": 47.6982,
+          "arousal_mae": 45.6776,
+          "overall_mse": 3590.3948,
+          "notes": "Low-rank direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "334_PLSEarlyDirect_c4",
+          "overall_mae": 46.6928,
+          "valence_mae": 48.0282,
+          "arousal_mae": 45.3575,
+          "overall_mse": 3586.0723,
+          "notes": "PLS latent direct signal model on EEG/fNIRS compact features; no video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a10000p0",
+          "overall_mae": 46.7334,
+          "valence_mae": 48.5045,
+          "arousal_mae": 44.9623,
+          "overall_mse": 3584.4238,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 46.9863,
+          "valence_mae": 48.5412,
+          "arousal_mae": 45.4314,
+          "overall_mse": 3596.3379,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a10000p0",
+          "overall_mae": 47.0392,
+          "valence_mae": 48.5992,
+          "arousal_mae": 45.4792,
+          "overall_mse": 3602.6094,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 47.0517,
+          "valence_mae": 48.4033,
+          "arousal_mae": 45.7001,
+          "overall_mse": 3594.0203,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 47.0605,
+          "valence_mae": 47.997,
+          "arousal_mae": 46.124,
+          "overall_mse": 3582.8918,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a1000p0",
+          "overall_mae": 47.144,
+          "valence_mae": 48.4808,
+          "arousal_mae": 45.8072,
+          "overall_mse": 3602.9602,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a10000p0",
+          "overall_mae": 47.2133,
+          "valence_mae": 48.1505,
+          "arousal_mae": 46.2761,
+          "overall_mse": 3596.3889,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 47.6387,
+          "valence_mae": 49.3507,
+          "arousal_mae": 45.9267,
+          "overall_mse": 3703.4988,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 47.6475,
+          "valence_mae": 48.5368,
+          "arousal_mae": 46.7582,
+          "overall_mse": 3655.1218,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 47.6674,
+          "valence_mae": 48.8311,
+          "arousal_mae": 46.5038,
+          "overall_mse": 3660.0137,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 47.689,
+          "valence_mae": 48.5505,
+          "arousal_mae": 46.8275,
+          "overall_mse": 3632.0605,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a10000p0",
+          "overall_mae": 47.7129,
+          "valence_mae": 49.4204,
+          "arousal_mae": 46.0054,
+          "overall_mse": 3709.416,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a10000p0",
+          "overall_mae": 47.826,
+          "valence_mae": 49.0088,
+          "arousal_mae": 46.6433,
+          "overall_mse": 3673.196,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a1000p0",
+          "overall_mae": 47.8438,
+          "valence_mae": 48.8026,
+          "arousal_mae": 46.8849,
+          "overall_mse": 3675.3445,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a1000p0",
+          "overall_mae": 47.9116,
+          "valence_mae": 48.8097,
+          "arousal_mae": 47.0136,
+          "overall_mse": 3657.7656,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.2354,
+          "valence_mae": 49.0876,
+          "arousal_mae": 47.3833,
+          "overall_mse": 3736.5339,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.3273,
+          "valence_mae": 51.0399,
+          "arousal_mae": 45.6147,
+          "overall_mse": 3808.4255,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 48.3796,
+          "valence_mae": 49.5572,
+          "arousal_mae": 47.202,
+          "overall_mse": 3736.8945,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "328_NeurovascularDirectRidge_a100p0",
+          "overall_mae": 48.3902,
+          "valence_mae": 49.2841,
+          "arousal_mae": 47.4963,
+          "overall_mse": 3753.1104,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a100p0",
+          "overall_mae": 48.454,
+          "valence_mae": 51.1492,
+          "arousal_mae": 45.7589,
+          "overall_mse": 3822.134,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a10000p0",
+          "overall_mae": 48.4906,
+          "valence_mae": 49.7104,
+          "arousal_mae": 47.2708,
+          "overall_mse": 3747.2078,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 48.5916,
+          "valence_mae": 49.6298,
+          "arousal_mae": 47.5534,
+          "overall_mse": 3747.7207,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.6281,
+          "valence_mae": 49.6412,
+          "arousal_mae": 47.6151,
+          "overall_mse": 3750.1055,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "322_TrainMean_noPrior",
+          "overall_mae": 48.6331,
+          "valence_mae": 50.7569,
+          "arousal_mae": 46.5094,
+          "overall_mse": 3791.3252,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "322_TrainMean_noPrior_SignalSmooth5",
+          "overall_mae": 48.6331,
+          "valence_mae": 50.7569,
+          "arousal_mae": 46.5094,
+          "overall_mse": 3791.3252,
+          "notes": "No signal and no video/time prior; train-subject global mean."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 48.6462,
+          "valence_mae": 51.0439,
+          "arousal_mae": 46.2484,
+          "overall_mse": 3827.166,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.7205,
+          "valence_mae": 48.7253,
+          "arousal_mae": 48.7158,
+          "overall_mse": 3781.5652,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "326_FNIRSSlowDirectRidge_a1000p0",
+          "overall_mae": 48.7316,
+          "valence_mae": 51.1122,
+          "arousal_mae": 46.3509,
+          "overall_mse": 3836.6042,
+          "notes": "fNIRS-only slow/lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a1000p0",
+          "overall_mae": 48.7748,
+          "valence_mae": 49.8312,
+          "arousal_mae": 47.7183,
+          "overall_mse": 3766.0769,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 48.825,
+          "valence_mae": 51.077,
+          "arousal_mae": 46.573,
+          "overall_mse": 3803.0984,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "325_EEGLagDirectRidge_a100p0",
+          "overall_mae": 48.8265,
+          "valence_mae": 49.8522,
+          "arousal_mae": 47.8008,
+          "overall_mse": 3770.1838,
+          "notes": "EEG-only lagged signal features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.9265,
+          "valence_mae": 49.1312,
+          "arousal_mae": 48.7219,
+          "overall_mse": 3838.1035,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 48.9626,
+          "valence_mae": 51.7804,
+          "arousal_mae": 46.1447,
+          "overall_mse": 3835.2214,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a1000p0",
+          "overall_mae": 49.0401,
+          "valence_mae": 51.2841,
+          "arousal_mae": 46.7961,
+          "overall_mse": 3825.9727,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "329_HRFDirectRidge_a100p0",
+          "overall_mae": 49.0407,
+          "valence_mae": 49.0967,
+          "arousal_mae": 48.9847,
+          "overall_mse": 3818.2019,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "327_EarlyConcatDirectRidge_a100p0",
+          "overall_mae": 49.2021,
+          "valence_mae": 51.9814,
+          "arousal_mae": 46.4228,
+          "overall_mse": 3863.2712,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "330_CoupledSlopeDirectRidge_a100p0",
+          "overall_mae": 49.2662,
+          "valence_mae": 49.5885,
+          "arousal_mae": 48.9438,
+          "overall_mse": 3875.1113,
+          "notes": "EEG-fNIRS signal-derived fusion features; no label-derived video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0_SignalSmooth5",
+          "overall_mae": 53.2018,
+          "valence_mae": 60.8478,
+          "arousal_mae": 45.5558,
+          "overall_mse": 4445.7095,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a10000p0",
+          "overall_mae": 54.4442,
+          "valence_mae": 61.983,
+          "arousal_mae": 46.9053,
+          "overall_mse": 4663.2935,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0_SignalSmooth5",
+          "overall_mae": 56.1082,
+          "valence_mae": 64.3009,
+          "arousal_mae": 47.9155,
+          "overall_mse": 4909.9229,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0_SignalSmooth5",
+          "overall_mae": 57.6539,
+          "valence_mae": 63.782,
+          "arousal_mae": 51.5258,
+          "overall_mse": 5083.5674,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a1000p0",
+          "overall_mae": 58.3502,
+          "valence_mae": 66.4388,
+          "arousal_mae": 50.2617,
+          "overall_mse": 5296.0029,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        },
+        {
+          "method": "323_RawFlatDirectRidge_a100p0",
+          "overall_mae": 60.537,
+          "valence_mae": 66.6416,
+          "arousal_mae": 54.4323,
+          "overall_mse": 5623.6382,
+          "notes": "Direct Ridge on flattened EEG bandpower and fNIRS statistics; no video/time prior."
+        }
+      ]
+    }
+  ]
+}

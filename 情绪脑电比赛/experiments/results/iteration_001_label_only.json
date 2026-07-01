@@ -1,0 +1,63 @@
+{
+  "data_root": "data\\MER_PS_codabench_trainval\\MER_PS_codabench_public_trainval",
+  "metric": "overall_mae = mean absolute error over valence and arousal, raw [1,255] scale",
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_samples": 30720,
+    "val_samples": 6144
+  },
+  "feature_summary": null,
+  "results": [
+    {
+      "method": "VideoTimeMean",
+      "overall_mae": 29.9574,
+      "valence_mae": 28.5041,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.131,
+      "notes": "No signal; mean trajectory by video and second from train subjects."
+    },
+    {
+      "method": "Center128",
+      "overall_mae": 46.5051,
+      "valence_mae": 47.9976,
+      "arousal_mae": 45.0127,
+      "overall_mse": 3796.8098,
+      "notes": "No signal; constant center of VA plane."
+    },
+    {
+      "method": "TrainMean",
+      "overall_mae": 48.6331,
+      "valence_mae": 50.7569,
+      "arousal_mae": 46.5094,
+      "overall_mse": 3791.3252,
+      "notes": "No signal; train-subject global mean."
+    }
+  ]
+}

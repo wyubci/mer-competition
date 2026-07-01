@@ -1,0 +1,617 @@
+{
+  "method": "No-video-prior physiological adaptive module batch",
+  "iteration_range": "356-375",
+  "note": "No candidate uses video/time label priors. This batch tests unsupervised subject/trial feature alignment, robust heads, residual mean constraints, temporal difference features, and conservative arousal gates.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "357_SubjectZPCA16Valence_CenterArousal",
+      "overall_mae": 49.6507,
+      "valence_mae": 55.5243,
+      "arousal_mae": 43.777,
+      "overall_mse": 3941.0395,
+      "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+    },
+    {
+      "method": "359_TrialZPCA16Valence_CenterArousal",
+      "overall_mae": 49.9124,
+      "valence_mae": 56.0478,
+      "arousal_mae": 43.777,
+      "overall_mse": 3927.9966,
+      "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+    },
+    {
+      "method": "368_NystroemRBFValence_CenterArousal",
+      "overall_mae": 49.9841,
+      "valence_mae": 56.1912,
+      "arousal_mae": 43.777,
+      "overall_mse": 3923.3287,
+      "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+    },
+    {
+      "method": "369_DeltaPCA16Valence_CenterArousal",
+      "overall_mae": 49.9844,
+      "valence_mae": 56.1918,
+      "arousal_mae": 43.777,
+      "overall_mse": 3923.603,
+      "notes": "Temporal-difference physiological features; tests whether change is safer than absolute level."
+    },
+    {
+      "method": "Reference_321_Center128_noPrior",
+      "overall_mae": 49.9864,
+      "valence_mae": 56.1957,
+      "arousal_mae": 43.777,
+      "overall_mse": 3984.1726,
+      "notes": "Reference from previous no-video-prior physiological batches."
+    },
+    {
+      "method": "358_TrialCenterPCA16Valence_CenterArousal",
+      "overall_mae": 50.0381,
+      "valence_mae": 56.2991,
+      "arousal_mae": 43.777,
+      "overall_mse": 3934.2173,
+      "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+    },
+    {
+      "method": "361_TrialCenterPLS2Valence_CenterArousal",
+      "overall_mae": 50.1042,
+      "valence_mae": 56.4315,
+      "arousal_mae": 43.777,
+      "overall_mse": 3951.0305,
+      "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+    },
+    {
+      "method": "372_RawSubjectAgreementValence_CenterArousal",
+      "overall_mae": 50.1212,
+      "valence_mae": 56.4654,
+      "arousal_mae": 43.777,
+      "overall_mse": 4060.3253,
+      "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+    },
+    {
+      "method": "356_SubjectCenterPCA16Valence_CenterArousal",
+      "overall_mae": 50.148,
+      "valence_mae": 56.5189,
+      "arousal_mae": 43.777,
+      "overall_mse": 4031.1246,
+      "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+    },
+    {
+      "method": "371_EEGFNIRSAgreementValence_CenterArousal",
+      "overall_mae": 50.209,
+      "valence_mae": 56.6411,
+      "arousal_mae": 43.777,
+      "overall_mse": 3997.5869,
+      "notes": "Conservative agreement gate between independently transformed physiological views."
+    },
+    {
+      "method": "360_SubjectCenterPLS2Valence_CenterArousal",
+      "overall_mae": 50.6985,
+      "valence_mae": 57.62,
+      "arousal_mae": 43.777,
+      "overall_mse": 4126.4996,
+      "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+    },
+    {
+      "method": "373_NeurovascularAgreementValence_CenterArousal",
+      "overall_mae": 50.7364,
+      "valence_mae": 57.6958,
+      "arousal_mae": 43.777,
+      "overall_mse": 4104.4832,
+      "notes": "Conservative agreement gate between independently transformed physiological views."
+    },
+    {
+      "method": "362_RobustScalerPCA16Valence_CenterArousal",
+      "overall_mae": 50.983,
+      "valence_mae": 58.189,
+      "arousal_mae": 43.777,
+      "overall_mse": 4127.4339,
+      "notes": "Tiny arousal residual gate; tests whether arousal can be corrected without damaging center baseline."
+    },
+    {
+      "method": "363_ZeroMeanResidualPCA16Valence_CenterArousal",
+      "overall_mae": 51.4117,
+      "valence_mae": 59.0464,
+      "arousal_mae": 43.777,
+      "overall_mse": 4186.1108,
+      "notes": "Zero-mean residual head around center to reduce label-prior leakage and cross-subject bias."
+    },
+    {
+      "method": "370_LevelDeltaPCA16Valence_CenterArousal",
+      "overall_mae": 51.4132,
+      "valence_mae": 59.0494,
+      "arousal_mae": 43.777,
+      "overall_mse": 4196.7024,
+      "notes": "Temporal-difference physiological features; tests whether change is safer than absolute level."
+    },
+    {
+      "method": "Reference_337_PCA16Valence_CenterArousal",
+      "overall_mae": 51.5816,
+      "valence_mae": 59.3863,
+      "arousal_mae": 43.777,
+      "overall_mse": 4211.8475,
+      "notes": "Reference from previous no-video-prior physiological batches."
+    },
+    {
+      "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+      "overall_mae": 51.6192,
+      "valence_mae": 59.4614,
+      "arousal_mae": 43.777,
+      "overall_mse": 4216.5696,
+      "notes": "Reference from previous no-video-prior physiological batches."
+    },
+    {
+      "method": "365_BayesianPCA16Valence_CenterArousal",
+      "overall_mae": 51.6717,
+      "valence_mae": 59.5663,
+      "arousal_mae": 43.777,
+      "overall_mse": 4225.3713,
+      "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+    },
+    {
+      "method": "366_ElasticNetPCA16Valence_CenterArousal",
+      "overall_mae": 51.7914,
+      "valence_mae": 59.8058,
+      "arousal_mae": 43.777,
+      "overall_mse": 4243.512,
+      "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+    },
+    {
+      "method": "375_PCA16Valence_ArousalSignedSmallGate",
+      "overall_mae": 51.7986,
+      "valence_mae": 59.3863,
+      "arousal_mae": 44.2109,
+      "overall_mse": 4212.6714,
+      "notes": "Tiny arousal residual gate; tests whether arousal can be corrected without damaging center baseline."
+    },
+    {
+      "method": "374_PCA16Valence_ArousalTinyAgreementGate",
+      "overall_mae": 52.0655,
+      "valence_mae": 59.3863,
+      "arousal_mae": 44.7448,
+      "overall_mse": 4216.5734,
+      "notes": "Conservative agreement gate between independently transformed physiological views."
+    },
+    {
+      "method": "367_HistGBPCA16Valence_CenterArousal",
+      "overall_mae": 52.1358,
+      "valence_mae": 60.4946,
+      "arousal_mae": 43.777,
+      "overall_mse": 4509.4233,
+      "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+    },
+    {
+      "method": "364_HuberPCA16Valence_CenterArousal",
+      "overall_mae": 53.2239,
+      "valence_mae": 62.6707,
+      "arousal_mae": 43.777,
+      "overall_mse": 4526.6154,
+      "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "372_RawSubjectAgreementValence_CenterArousal",
+          "overall_mae": 39.662,
+          "valence_mae": 47.7285,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3082.5076,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "Reference from previous no-video-prior physiological batches."
+        },
+        {
+          "method": "357_SubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 40.536,
+          "valence_mae": 49.4764,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3103.0447,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "359_TrialZPCA16Valence_CenterArousal",
+          "overall_mae": 40.7094,
+          "valence_mae": 49.8233,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3098.176,
+          "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+        },
+        {
+          "method": "373_NeurovascularAgreementValence_CenterArousal",
+          "overall_mae": 40.7733,
+          "valence_mae": 49.951,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3154.1309,
+          "notes": "Conservative agreement gate between independently transformed physiological views."
+        },
+        {
+          "method": "368_NystroemRBFValence_CenterArousal",
+          "overall_mae": 40.881,
+          "valence_mae": 50.1665,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3092.5432,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "369_DeltaPCA16Valence_CenterArousal",
+          "overall_mae": 40.882,
+          "valence_mae": 50.1685,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3092.3516,
+          "notes": "Temporal-difference physiological features; tests whether change is safer than absolute level."
+        },
+        {
+          "method": "358_TrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 40.9032,
+          "valence_mae": 50.2108,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3103.3875,
+          "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+        },
+        {
+          "method": "367_HistGBPCA16Valence_CenterArousal",
+          "overall_mae": 40.9212,
+          "valence_mae": 50.2468,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3384.8113,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "361_TrialCenterPLS2Valence_CenterArousal",
+          "overall_mae": 40.9262,
+          "valence_mae": 50.2568,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3118.7656,
+          "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+        },
+        {
+          "method": "371_EEGFNIRSAgreementValence_CenterArousal",
+          "overall_mae": 40.929,
+          "valence_mae": 50.2625,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3145.8455,
+          "notes": "Conservative agreement gate between independently transformed physiological views."
+        },
+        {
+          "method": "356_SubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 41.0455,
+          "valence_mae": 50.4954,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3200.9543,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "363_ZeroMeanResidualPCA16Valence_CenterArousal",
+          "overall_mae": 41.7379,
+          "valence_mae": 51.8803,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3251.6494,
+          "notes": "Zero-mean residual head around center to reduce label-prior leakage and cross-subject bias."
+        },
+        {
+          "method": "360_SubjectCenterPLS2Valence_CenterArousal",
+          "overall_mae": 42.0505,
+          "valence_mae": 52.5055,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3382.384,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "362_RobustScalerPCA16Valence_CenterArousal",
+          "overall_mae": 42.7225,
+          "valence_mae": 53.8494,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3378.6621,
+          "notes": "Tiny arousal residual gate; tests whether arousal can be corrected without damaging center baseline."
+        },
+        {
+          "method": "370_LevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 42.81,
+          "valence_mae": 54.0244,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3419.2051,
+          "notes": "Temporal-difference physiological features; tests whether change is safer than absolute level."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 43.4559,
+          "valence_mae": 55.3163,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3488.032,
+          "notes": "Reference from previous no-video-prior physiological batches."
+        },
+        {
+          "method": "Reference_337_PCA16Valence_CenterArousal",
+          "overall_mae": 43.4748,
+          "valence_mae": 55.3541,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3488.9072,
+          "notes": "Reference from previous no-video-prior physiological batches."
+        },
+        {
+          "method": "365_BayesianPCA16Valence_CenterArousal",
+          "overall_mae": 43.5655,
+          "valence_mae": 55.5355,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3502.3984,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "366_ElasticNetPCA16Valence_CenterArousal",
+          "overall_mae": 43.735,
+          "valence_mae": 55.8746,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3527.9397,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "375_PCA16Valence_ArousalSignedSmallGate",
+          "overall_mae": 43.8907,
+          "valence_mae": 55.3541,
+          "arousal_mae": 32.4272,
+          "overall_mse": 3497.1504,
+          "notes": "Tiny arousal residual gate; tests whether arousal can be corrected without damaging center baseline."
+        },
+        {
+          "method": "374_PCA16Valence_ArousalTinyAgreementGate",
+          "overall_mae": 44.3846,
+          "valence_mae": 55.3541,
+          "arousal_mae": 33.415,
+          "overall_mse": 3511.4114,
+          "notes": "Conservative agreement gate between independently transformed physiological views."
+        },
+        {
+          "method": "364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 47.6622,
+          "valence_mae": 63.7288,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4142.271,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "357_SubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 58.7653,
+          "valence_mae": 61.5722,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4779.1108,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 58.7855,
+          "valence_mae": 61.6125,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4911.0229,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "368_NystroemRBFValence_CenterArousal",
+          "overall_mae": 59.0868,
+          "valence_mae": 62.2151,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4754.269,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "369_DeltaPCA16Valence_CenterArousal",
+          "overall_mae": 59.0868,
+          "valence_mae": 62.2151,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4754.9243,
+          "notes": "Temporal-difference physiological features; tests whether change is safer than absolute level."
+        },
+        {
+          "method": "359_TrialZPCA16Valence_CenterArousal",
+          "overall_mae": 59.1155,
+          "valence_mae": 62.2725,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4757.8882,
+          "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+        },
+        {
+          "method": "358_TrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 59.1729,
+          "valence_mae": 62.3873,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4765.1162,
+          "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+        },
+        {
+          "method": "362_RobustScalerPCA16Valence_CenterArousal",
+          "overall_mae": 59.2435,
+          "valence_mae": 62.5286,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4876.2837,
+          "notes": "Tiny arousal residual gate; tests whether arousal can be corrected without damaging center baseline."
+        },
+        {
+          "method": "356_SubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 59.2504,
+          "valence_mae": 62.5423,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4861.3638,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "361_TrialCenterPLS2Valence_CenterArousal",
+          "overall_mae": 59.2823,
+          "valence_mae": 62.6061,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4783.3706,
+          "notes": "Unsupervised trial-level signal alignment; tests whether within-trial dynamics matter more than level."
+        },
+        {
+          "method": "360_SubjectCenterPLS2Valence_CenterArousal",
+          "overall_mae": 59.3464,
+          "valence_mae": 62.7343,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4870.6865,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "371_EEGFNIRSAgreementValence_CenterArousal",
+          "overall_mae": 59.4891,
+          "valence_mae": 63.0197,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4849.501,
+          "notes": "Conservative agreement gate between independently transformed physiological views."
+        },
+        {
+          "method": "Reference_337_PCA16Valence_CenterArousal",
+          "overall_mae": 59.6885,
+          "valence_mae": 63.4184,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4934.8638,
+          "notes": "Reference from previous no-video-prior physiological batches."
+        },
+        {
+          "method": "375_PCA16Valence_ArousalSignedSmallGate",
+          "overall_mae": 59.7065,
+          "valence_mae": 63.4184,
+          "arousal_mae": 55.9945,
+          "overall_mse": 4928.2266,
+          "notes": "Tiny arousal residual gate; tests whether arousal can be corrected without damaging center baseline."
+        },
+        {
+          "method": "374_PCA16Valence_ArousalTinyAgreementGate",
+          "overall_mae": 59.7466,
+          "valence_mae": 63.4184,
+          "arousal_mae": 56.0747,
+          "overall_mse": 4921.7559,
+          "notes": "Conservative agreement gate between independently transformed physiological views."
+        },
+        {
+          "method": "365_BayesianPCA16Valence_CenterArousal",
+          "overall_mae": 59.7778,
+          "valence_mae": 63.5971,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4948.4131,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 59.7825,
+          "valence_mae": 63.6065,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4945.1836,
+          "notes": "Reference from previous no-video-prior physiological batches."
+        },
+        {
+          "method": "366_ElasticNetPCA16Valence_CenterArousal",
+          "overall_mae": 59.8478,
+          "valence_mae": 63.737,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4959.1538,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "Reference from previous no-video-prior physiological batches."
+        },
+        {
+          "method": "370_LevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 60.0164,
+          "valence_mae": 64.0743,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4974.2676,
+          "notes": "Temporal-difference physiological features; tests whether change is safer than absolute level."
+        },
+        {
+          "method": "372_RawSubjectAgreementValence_CenterArousal",
+          "overall_mae": 60.5804,
+          "valence_mae": 65.2023,
+          "arousal_mae": 55.9585,
+          "overall_mse": 5038.3257,
+          "notes": "Unsupervised subject-level signal alignment; uses no labels from validation subjects."
+        },
+        {
+          "method": "373_NeurovascularAgreementValence_CenterArousal",
+          "overall_mae": 60.6995,
+          "valence_mae": 65.4406,
+          "arousal_mae": 55.9585,
+          "overall_mse": 5055.0117,
+          "notes": "Conservative agreement gate between independently transformed physiological views."
+        },
+        {
+          "method": "363_ZeroMeanResidualPCA16Valence_CenterArousal",
+          "overall_mae": 61.0854,
+          "valence_mae": 66.2124,
+          "arousal_mae": 55.9585,
+          "overall_mse": 5120.6416,
+          "notes": "Zero-mean residual head around center to reduce label-prior leakage and cross-subject bias."
+        },
+        {
+          "method": "367_HistGBPCA16Valence_CenterArousal",
+          "overall_mae": 63.3506,
+          "valence_mae": 70.7427,
+          "arousal_mae": 55.9585,
+          "overall_mse": 5634.1074,
+          "notes": "Alternative robust/nonlinear valence head over low-rank physiological features."
+        }
+      ]
+    }
+  ]
+}

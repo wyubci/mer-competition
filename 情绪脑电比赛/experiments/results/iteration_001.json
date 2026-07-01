@@ -1,0 +1,452 @@
+{
+  "data_root": "data\\MER_PS_codabench_trainval\\MER_PS_codabench_public_trainval",
+  "metric": "overall_mae = mean absolute error over valence and arousal, raw [1,255] scale",
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_samples": 30720,
+    "val_samples": 6144
+  },
+  "feature_summary": {
+    "subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20",
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "samples": 36864,
+    "feature_dim": 779,
+    "eeg_shape": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs_shape": [
+      36864,
+      51,
+      9
+    ],
+    "standardization_keys": [
+      "eeg_mean",
+      "eeg_std",
+      "fnirs_mean",
+      "fnirs_std"
+    ]
+  },
+  "results": [
+    {
+      "method": "VideoTimeMean",
+      "overall_mae": 29.9574,
+      "valence_mae": 28.5041,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.131,
+      "notes": "No signal; mean trajectory by video and second from train subjects."
+    },
+    {
+      "method": "Blend_RidgeSignal_a1000p0_VideoTimeMean_0.25",
+      "overall_mae": 32.2043,
+      "valence_mae": 31.4202,
+      "arousal_mae": 32.9885,
+      "overall_mse": 1651.4058,
+      "notes": "Validation sweep blend of signal Ridge and video-time trajectory prior."
+    },
+    {
+      "method": "ResidualRidge_a1000p0_smooth9",
+      "overall_mae": 33.7939,
+      "valence_mae": 29.806,
+      "arousal_mae": 37.7819,
+      "overall_mse": 1852.9335,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "ResidualRidge_a1000p0_smooth5",
+      "overall_mae": 33.924,
+      "valence_mae": 29.9374,
+      "arousal_mae": 37.9106,
+      "overall_mse": 1869.953,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "ResidualRidge_a1000p0_smooth3",
+      "overall_mae": 34.0607,
+      "valence_mae": 30.0699,
+      "arousal_mae": 38.0514,
+      "overall_mse": 1887.3624,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "ResidualRidge_a1000p0",
+      "overall_mae": 34.6159,
+      "valence_mae": 30.6291,
+      "arousal_mae": 38.6026,
+      "overall_mse": 1952.139,
+      "notes": "VideoTimeMean prior plus EEG/fNIRS Ridge residual prediction."
+    },
+    {
+      "method": "Blend_RidgeSignal_a1000p0_VideoTimeMean_0.50",
+      "overall_mae": 36.9059,
+      "valence_mae": 37.3428,
+      "arousal_mae": 36.469,
+      "overall_mse": 2134.2454,
+      "notes": "Validation sweep blend of signal Ridge and video-time trajectory prior."
+    },
+    {
+      "method": "ResidualRidge_a100p0_smooth9",
+      "overall_mae": 39.6577,
+      "valence_mae": 33.3044,
+      "arousal_mae": 46.011,
+      "overall_mse": 2511.1497,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "ResidualRidge_a100p0_smooth5",
+      "overall_mae": 39.7899,
+      "valence_mae": 33.4623,
+      "arousal_mae": 46.1176,
+      "overall_mse": 2531.863,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "ResidualRidge_a100p0_smooth3",
+      "overall_mae": 39.9155,
+      "valence_mae": 33.6008,
+      "arousal_mae": 46.2301,
+      "overall_mse": 2554.1096,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "ResidualRidge_a100p0",
+      "overall_mae": 40.4106,
+      "valence_mae": 34.2142,
+      "arousal_mae": 46.6069,
+      "overall_mse": 2638.1716,
+      "notes": "VideoTimeMean prior plus EEG/fNIRS Ridge residual prediction."
+    },
+    {
+      "method": "ResidualRidge_a1p0_smooth9",
+      "overall_mae": 40.7932,
+      "valence_mae": 34.404,
+      "arousal_mae": 47.1823,
+      "overall_mse": 2698.0076,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "ResidualRidge_a10p0_smooth9",
+      "overall_mae": 40.8812,
+      "valence_mae": 34.1702,
+      "arousal_mae": 47.5921,
+      "overall_mse": 2709.1191,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "ResidualRidge_a1p0_smooth5",
+      "overall_mae": 40.9701,
+      "valence_mae": 34.6137,
+      "arousal_mae": 47.3264,
+      "overall_mse": 2724.2585,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "ResidualRidge_a10p0_smooth5",
+      "overall_mae": 41.0454,
+      "valence_mae": 34.3648,
+      "arousal_mae": 47.7259,
+      "overall_mse": 2733.2207,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "ResidualRidge_a0p1_smooth9",
+      "overall_mae": 41.1626,
+      "valence_mae": 34.838,
+      "arousal_mae": 47.4872,
+      "overall_mse": 2737.0071,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "ResidualRidge_a1p0_smooth3",
+      "overall_mae": 41.1842,
+      "valence_mae": 34.8876,
+      "arousal_mae": 47.4809,
+      "overall_mse": 2754.458,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "ResidualRidge_a10p0_smooth3",
+      "overall_mae": 41.2115,
+      "valence_mae": 34.56,
+      "arousal_mae": 47.8631,
+      "overall_mse": 2759.9746,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "ResidualRidge_a0p1_smooth5",
+      "overall_mae": 41.3408,
+      "valence_mae": 35.059,
+      "arousal_mae": 47.6226,
+      "overall_mse": 2764.0134,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "ResidualRidge_a0p1_smooth3",
+      "overall_mae": 41.5673,
+      "valence_mae": 35.3788,
+      "arousal_mae": 47.7558,
+      "overall_mse": 2795.1667,
+      "notes": "ResidualRidge with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "ResidualRidge_a10p0",
+      "overall_mae": 41.9071,
+      "valence_mae": 35.4652,
+      "arousal_mae": 48.3491,
+      "overall_mse": 2864.7815,
+      "notes": "VideoTimeMean prior plus EEG/fNIRS Ridge residual prediction."
+    },
+    {
+      "method": "ResidualRidge_a1p0",
+      "overall_mae": 42.0254,
+      "valence_mae": 36.098,
+      "arousal_mae": 47.9528,
+      "overall_mse": 2873.9949,
+      "notes": "VideoTimeMean prior plus EEG/fNIRS Ridge residual prediction."
+    },
+    {
+      "method": "ResidualRidge_a0p1",
+      "overall_mae": 42.4202,
+      "valence_mae": 36.6513,
+      "arousal_mae": 48.189,
+      "overall_mse": 2918.7195,
+      "notes": "VideoTimeMean prior plus EEG/fNIRS Ridge residual prediction."
+    },
+    {
+      "method": "Blend_RidgeSignal_a1000p0_VideoTimeMean_0.75",
+      "overall_mae": 43.5066,
+      "valence_mae": 45.6103,
+      "arousal_mae": 41.403,
+      "overall_mse": 2977.6494,
+      "notes": "Validation sweep blend of signal Ridge and video-time trajectory prior."
+    },
+    {
+      "method": "Center128",
+      "overall_mae": 46.5051,
+      "valence_mae": 47.9976,
+      "arousal_mae": 45.0127,
+      "overall_mse": 3796.8098,
+      "notes": "No signal; constant center of VA plane."
+    },
+    {
+      "method": "TrainMean",
+      "overall_mae": 48.6331,
+      "valence_mae": 50.7569,
+      "arousal_mae": 46.5094,
+      "overall_mse": 3791.3252,
+      "notes": "No signal; train-subject global mean."
+    },
+    {
+      "method": "RidgeSignal_a1000p0_smooth9",
+      "overall_mae": 49.3743,
+      "valence_mae": 53.28,
+      "arousal_mae": 45.4686,
+      "overall_mse": 3866.626,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "RidgeSignal_a1000p0_smooth5",
+      "overall_mae": 49.6577,
+      "valence_mae": 53.602,
+      "arousal_mae": 45.7134,
+      "overall_mse": 3911.4199,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "RidgeSignal_a1000p0_smooth3",
+      "overall_mae": 50.0268,
+      "valence_mae": 54.0179,
+      "arousal_mae": 46.0356,
+      "overall_mse": 3963.3362,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "RidgeSignal_a1000p0",
+      "overall_mae": 51.5937,
+      "valence_mae": 55.6538,
+      "arousal_mae": 47.5336,
+      "overall_mse": 4181.6177,
+      "notes": "EEG bandpower + fNIRS statistics flattened into multi-output Ridge."
+    },
+    {
+      "method": "RidgeSignal_a100p0_smooth9",
+      "overall_mae": 55.1441,
+      "valence_mae": 61.5449,
+      "arousal_mae": 48.7432,
+      "overall_mse": 4702.3735,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "RidgeSignal_a100p0_smooth5",
+      "overall_mae": 55.4409,
+      "valence_mae": 61.8629,
+      "arousal_mae": 49.0189,
+      "overall_mse": 4755.9072,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "RidgeSignal_a0p1_smooth9",
+      "overall_mae": 55.474,
+      "valence_mae": 62.7022,
+      "arousal_mae": 48.2459,
+      "overall_mse": 4702.5,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "RidgeSignal_a1p0_smooth9",
+      "overall_mae": 55.6985,
+      "valence_mae": 64.0877,
+      "arousal_mae": 47.3093,
+      "overall_mse": 4731.231,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "RidgeSignal_a0p1_smooth5",
+      "overall_mae": 55.7488,
+      "valence_mae": 62.9932,
+      "arousal_mae": 48.5045,
+      "overall_mse": 4767.5571,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "RidgeSignal_a10p0_smooth9",
+      "overall_mae": 55.7518,
+      "valence_mae": 64.3537,
+      "arousal_mae": 47.1498,
+      "overall_mse": 4786.5337,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=9."
+    },
+    {
+      "method": "RidgeSignal_a100p0_smooth3",
+      "overall_mae": 55.7981,
+      "valence_mae": 62.23,
+      "arousal_mae": 49.3662,
+      "overall_mse": 4819.3628,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "RidgeSignal_a1p0_smooth5",
+      "overall_mae": 55.9582,
+      "valence_mae": 64.3413,
+      "arousal_mae": 47.5751,
+      "overall_mse": 4793.6445,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "RidgeSignal_a10p0_smooth5",
+      "overall_mae": 56.0204,
+      "valence_mae": 64.6352,
+      "arousal_mae": 47.4055,
+      "overall_mse": 4842.9976,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=5."
+    },
+    {
+      "method": "RidgeSignal_a0p1_smooth3",
+      "overall_mae": 56.1574,
+      "valence_mae": 63.4027,
+      "arousal_mae": 48.9121,
+      "overall_mse": 4847.8301,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "RidgeSignal_a1p0_smooth3",
+      "overall_mae": 56.3415,
+      "valence_mae": 64.7195,
+      "arousal_mae": 47.9635,
+      "overall_mse": 4870.6108,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "RidgeSignal_a10p0_smooth3",
+      "overall_mae": 56.3694,
+      "valence_mae": 64.9661,
+      "arousal_mae": 47.7727,
+      "overall_mse": 4911.2656,
+      "notes": "RidgeSignal with per-trial moving-average smoothing window=3."
+    },
+    {
+      "method": "RidgeSignal_a100p0",
+      "overall_mae": 57.2862,
+      "valence_mae": 63.702,
+      "arousal_mae": 50.8703,
+      "overall_mse": 5093.9663,
+      "notes": "EEG bandpower + fNIRS statistics flattened into multi-output Ridge."
+    },
+    {
+      "method": "RidgeSignal_a10p0",
+      "overall_mae": 58.0376,
+      "valence_mae": 66.5608,
+      "arousal_mae": 49.5144,
+      "overall_mse": 5214.23,
+      "notes": "EEG bandpower + fNIRS statistics flattened into multi-output Ridge."
+    },
+    {
+      "method": "RidgeSignal_a0p1",
+      "overall_mae": 58.1569,
+      "valence_mae": 65.4978,
+      "arousal_mae": 50.8161,
+      "overall_mse": 5209.3574,
+      "notes": "EEG bandpower + fNIRS statistics flattened into multi-output Ridge."
+    },
+    {
+      "method": "RidgeSignal_a1p0",
+      "overall_mae": 58.184,
+      "valence_mae": 66.5584,
+      "arousal_mae": 49.8096,
+      "overall_mse": 5216.1846,
+      "notes": "EEG bandpower + fNIRS statistics flattened into multi-output Ridge."
+    }
+  ]
+}

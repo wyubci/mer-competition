@@ -1,0 +1,1465 @@
+{
+  "method": "No-video-prior physiological output calibration batch",
+  "iteration_range": "396-415",
+  "note": "No candidate uses video/time label priors. This batch keeps HuberPCA16 fixed and searches sequence smoothing, residual soft clipping, asymmetric scaling, train-prediction calibration, and unlabeled subject-level prediction centering.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "407_HuberAsymP10N08Valence_CenterArousal",
+      "overall_mae": 46.6216,
+      "valence_mae": 50.3087,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3555.3676,
+      "notes": "Asymmetric positive/negative residual scaling around center."
+    },
+    {
+      "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+      "overall_mae": 46.639,
+      "valence_mae": 50.3433,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3543.9347,
+      "notes": "Blend Huber with Ridge low-rank physiological valence."
+    },
+    {
+      "method": "401_HuberExpA03Valence_CenterArousal",
+      "overall_mae": 46.6391,
+      "valence_mae": 50.3435,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3555.8573,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "399_HuberSmooth9Valence_CenterArousal",
+      "overall_mae": 46.6435,
+      "valence_mae": 50.3523,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3556.5454,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "398_HuberSmooth7Valence_CenterArousal",
+      "overall_mae": 46.6517,
+      "valence_mae": 50.3688,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3557.9669,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+      "overall_mae": 46.6619,
+      "valence_mae": 50.3892,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3559.555,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "400_HuberMedian5Valence_CenterArousal",
+      "overall_mae": 46.6694,
+      "valence_mae": 50.4041,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3560.4572,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "402_HuberExpA06Valence_CenterArousal",
+      "overall_mae": 46.6703,
+      "valence_mae": 50.406,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3560.6995,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "397_HuberSmooth3Valence_CenterArousal",
+      "overall_mae": 46.6735,
+      "valence_mae": 50.4125,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3561.186,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "396_HuberSmooth0Valence_CenterArousal",
+      "overall_mae": 46.692,
+      "valence_mae": 50.4494,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3563.5898,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    },
+    {
+      "method": "408_HuberAsymP12N08Valence_CenterArousal",
+      "overall_mae": 46.706,
+      "valence_mae": 50.4774,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3604.9188,
+      "notes": "Asymmetric positive/negative residual scaling around center."
+    },
+    {
+      "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+      "overall_mae": 46.7181,
+      "valence_mae": 50.5016,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3534.8833,
+      "notes": "Train-prediction distribution calibration using only train labels."
+    },
+    {
+      "method": "406_HuberAsymP08N10Valence_CenterArousal",
+      "overall_mae": 46.7195,
+      "valence_mae": 50.5044,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3534.0184,
+      "notes": "Asymmetric positive/negative residual scaling around center."
+    },
+    {
+      "method": "409_HuberAsymP08N12Valence_CenterArousal",
+      "overall_mae": 46.7602,
+      "valence_mae": 50.5858,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3538.6829,
+      "notes": "Asymmetric positive/negative residual scaling around center."
+    },
+    {
+      "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+      "overall_mae": 46.8718,
+      "valence_mae": 50.8089,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3560.6457,
+      "notes": "Unlabeled subject-level prediction centering."
+    },
+    {
+      "method": "404_HuberTanhResidual20Valence_CenterArousal",
+      "overall_mae": 47.2977,
+      "valence_mae": 51.6608,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3562.1133,
+      "notes": "Soft or hard residual clipping around center."
+    },
+    {
+      "method": "405_HuberClip20Valence_CenterArousal",
+      "overall_mae": 47.3467,
+      "valence_mae": 51.7587,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3571.1758,
+      "notes": "Soft or hard residual clipping around center."
+    },
+    {
+      "method": "403_HuberTanhResidual12Valence_CenterArousal",
+      "overall_mae": 47.482,
+      "valence_mae": 52.0293,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3582.5069,
+      "notes": "Soft or hard residual clipping around center."
+    },
+    {
+      "method": "Reference_321_Center128_noPrior",
+      "overall_mae": 47.5663,
+      "valence_mae": 52.198,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.896,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+      "overall_mae": 47.7432,
+      "valence_mae": 52.5517,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3589.9895,
+      "notes": "Unlabeled subject-level prediction centering."
+    },
+    {
+      "method": "410_HuberMeanStdCalibValence_CenterArousal",
+      "overall_mae": 52.464,
+      "valence_mae": 61.9934,
+      "arousal_mae": 42.9346,
+      "overall_mse": 4578.8216,
+      "notes": "Train-prediction distribution calibration using only train labels."
+    },
+    {
+      "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+      "overall_mae": 54.1998,
+      "valence_mae": 65.465,
+      "arousal_mae": 42.9346,
+      "overall_mse": 4932.4272,
+      "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "408_HuberAsymP12N08Valence_CenterArousal",
+          "overall_mae": 38.5469,
+          "valence_mae": 45.4982,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2920.0085,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+          "overall_mae": 38.5987,
+          "valence_mae": 45.6019,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2848.3792,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "401_HuberExpA03Valence_CenterArousal",
+          "overall_mae": 38.6549,
+          "valence_mae": 45.7143,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.887,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "399_HuberSmooth9Valence_CenterArousal",
+          "overall_mae": 38.6665,
+          "valence_mae": 45.7374,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.9172,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "398_HuberSmooth7Valence_CenterArousal",
+          "overall_mae": 38.6679,
+          "valence_mae": 45.7403,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2887.7346,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 38.6704,
+          "valence_mae": 45.7452,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.8447,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 38.6729,
+          "valence_mae": 45.7503,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.7688,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "400_HuberMedian5Valence_CenterArousal",
+          "overall_mae": 38.6746,
+          "valence_mae": 45.7537,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2889.3987,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "402_HuberExpA06Valence_CenterArousal",
+          "overall_mae": 38.677,
+          "valence_mae": 45.7585,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2889.0227,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+          "overall_mae": 38.6775,
+          "valence_mae": 45.7594,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2876.5918,
+          "notes": "Blend Huber with Ridge low-rank physiological valence."
+        },
+        {
+          "method": "397_HuberSmooth3Valence_CenterArousal",
+          "overall_mae": 38.6804,
+          "valence_mae": 45.7653,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2889.9563,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "396_HuberSmooth0Valence_CenterArousal",
+          "overall_mae": 38.6926,
+          "valence_mae": 45.7896,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2891.7451,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "406_HuberAsymP08N10Valence_CenterArousal",
+          "overall_mae": 38.8992,
+          "valence_mae": 46.2028,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.4583,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "409_HuberAsymP08N12Valence_CenterArousal",
+          "overall_mae": 38.9017,
+          "valence_mae": 46.2079,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.3936,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+          "overall_mae": 39.2964,
+          "valence_mae": 46.9973,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2931.2507,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "404_HuberTanhResidual20Valence_CenterArousal",
+          "overall_mae": 39.6805,
+          "valence_mae": 47.7655,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2948.3127,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "405_HuberClip20Valence_CenterArousal",
+          "overall_mae": 39.6947,
+          "valence_mae": 47.7939,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2951.9336,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+          "overall_mae": 39.8126,
+          "valence_mae": 48.0297,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2927.7537,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "403_HuberTanhResidual12Valence_CenterArousal",
+          "overall_mae": 39.9132,
+          "valence_mae": 48.2308,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2978.1113,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "410_HuberMeanStdCalibValence_CenterArousal",
+          "overall_mae": 41.9961,
+          "valence_mae": 52.3967,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3367.45,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+          "overall_mae": 43.2775,
+          "valence_mae": 54.9595,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3600.3254,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "401_HuberExpA03Valence_CenterArousal",
+          "overall_mae": 57.7374,
+          "valence_mae": 59.5163,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4743.7285,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "399_HuberSmooth9Valence_CenterArousal",
+          "overall_mae": 57.7774,
+          "valence_mae": 59.5962,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4747.8516,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 57.7838,
+          "valence_mae": 59.6092,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4751.4253,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "398_HuberSmooth7Valence_CenterArousal",
+          "overall_mae": 57.7872,
+          "valence_mae": 59.6159,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.1953,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "402_HuberExpA06Valence_CenterArousal",
+          "overall_mae": 57.7883,
+          "valence_mae": 59.6182,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4752.5791,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 57.7967,
+          "valence_mae": 59.6349,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4752.397,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "400_HuberMedian5Valence_CenterArousal",
+          "overall_mae": 57.8031,
+          "valence_mae": 59.6476,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4754.0483,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "397_HuberSmooth3Valence_CenterArousal",
+          "overall_mae": 57.8053,
+          "valence_mae": 59.6521,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4754.5054,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "396_HuberSmooth0Valence_CenterArousal",
+          "overall_mae": 57.8141,
+          "valence_mae": 59.6698,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4756.7349,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "408_HuberAsymP12N08Valence_CenterArousal",
+          "overall_mae": 57.8489,
+          "valence_mae": 59.7394,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4830.5503,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+          "overall_mae": 57.8757,
+          "valence_mae": 59.7929,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4735.6675,
+          "notes": "Blend Huber with Ridge low-rank physiological valence."
+        },
+        {
+          "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+          "overall_mae": 57.9046,
+          "valence_mae": 59.8507,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4677.6216,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "406_HuberAsymP08N10Valence_CenterArousal",
+          "overall_mae": 57.9124,
+          "valence_mae": 59.8663,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4710.1846,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "409_HuberAsymP08N12Valence_CenterArousal",
+          "overall_mae": 57.9253,
+          "valence_mae": 59.8921,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4711.2646,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+          "overall_mae": 58.1468,
+          "valence_mae": 60.3352,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.9858,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "405_HuberClip20Valence_CenterArousal",
+          "overall_mae": 58.3427,
+          "valence_mae": 60.7269,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4666.7812,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "404_HuberTanhResidual20Valence_CenterArousal",
+          "overall_mae": 58.4503,
+          "valence_mae": 60.9421,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4679.0249,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "403_HuberTanhResidual12Valence_CenterArousal",
+          "overall_mae": 58.9363,
+          "valence_mae": 61.9141,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4725.3423,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+          "overall_mae": 60.0786,
+          "valence_mae": 64.1986,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4890.1836,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "410_HuberMeanStdCalibValence_CenterArousal",
+          "overall_mae": 63.7926,
+          "valence_mae": 71.6268,
+          "arousal_mae": 55.9585,
+          "overall_mse": 6162.3257,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+          "overall_mae": 66.9377,
+          "valence_mae": 77.9168,
+          "arousal_mae": 55.9585,
+          "overall_mse": 6810.9712,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 50.5701,
+          "valence_mae": 55.9672,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.7217,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "399_HuberSmooth9Valence_CenterArousal",
+          "overall_mae": 50.5764,
+          "valence_mae": 55.9799,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.8762,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "398_HuberSmooth7Valence_CenterArousal",
+          "overall_mae": 50.5783,
+          "valence_mae": 55.9835,
+          "arousal_mae": 45.173,
+          "overall_mse": 4035.7468,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "408_HuberAsymP12N08Valence_CenterArousal",
+          "overall_mae": 50.5794,
+          "valence_mae": 55.9858,
+          "arousal_mae": 45.173,
+          "overall_mse": 4094.4329,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "401_HuberExpA03Valence_CenterArousal",
+          "overall_mae": 50.5804,
+          "valence_mae": 55.9879,
+          "arousal_mae": 45.173,
+          "overall_mse": 4033.9958,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "400_HuberMedian5Valence_CenterArousal",
+          "overall_mae": 50.5814,
+          "valence_mae": 55.9898,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.906,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 50.5827,
+          "valence_mae": 55.9923,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.9531,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "397_HuberSmooth3Valence_CenterArousal",
+          "overall_mae": 50.5893,
+          "valence_mae": 56.0056,
+          "arousal_mae": 45.173,
+          "overall_mse": 4038.126,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "402_HuberExpA06Valence_CenterArousal",
+          "overall_mae": 50.5908,
+          "valence_mae": 56.0086,
+          "arousal_mae": 45.173,
+          "overall_mse": 4037.7402,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "396_HuberSmooth0Valence_CenterArousal",
+          "overall_mae": 50.5979,
+          "valence_mae": 56.0227,
+          "arousal_mae": 45.173,
+          "overall_mse": 4040.116,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+          "overall_mae": 50.6076,
+          "valence_mae": 56.0421,
+          "arousal_mae": 45.173,
+          "overall_mse": 4019.9841,
+          "notes": "Blend Huber with Ridge low-rank physiological valence."
+        },
+        {
+          "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+          "overall_mae": 50.6346,
+          "valence_mae": 56.0962,
+          "arousal_mae": 45.173,
+          "overall_mse": 3995.3555,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "406_HuberAsymP08N10Valence_CenterArousal",
+          "overall_mae": 50.7469,
+          "valence_mae": 56.3209,
+          "arousal_mae": 45.173,
+          "overall_mse": 4003.8328,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "409_HuberAsymP08N12Valence_CenterArousal",
+          "overall_mae": 50.7595,
+          "valence_mae": 56.346,
+          "arousal_mae": 45.173,
+          "overall_mse": 4004.1633,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+          "overall_mae": 51.0225,
+          "valence_mae": 56.8721,
+          "arousal_mae": 45.173,
+          "overall_mse": 4039.7637,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "405_HuberClip20Valence_CenterArousal",
+          "overall_mae": 51.4072,
+          "valence_mae": 57.6413,
+          "arousal_mae": 45.173,
+          "overall_mse": 4046.8884,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "404_HuberTanhResidual20Valence_CenterArousal",
+          "overall_mae": 51.4284,
+          "valence_mae": 57.6838,
+          "arousal_mae": 45.173,
+          "overall_mse": 4039.7734,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "403_HuberTanhResidual12Valence_CenterArousal",
+          "overall_mae": 51.6107,
+          "valence_mae": 58.0484,
+          "arousal_mae": 45.173,
+          "overall_mse": 4050.7722,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 51.7127,
+          "valence_mae": 58.2524,
+          "arousal_mae": 45.173,
+          "overall_mse": 4117.0942,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+          "overall_mae": 51.7941,
+          "valence_mae": 58.4152,
+          "arousal_mae": 45.173,
+          "overall_mse": 4052.0925,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "410_HuberMeanStdCalibValence_CenterArousal",
+          "overall_mae": 54.1394,
+          "valence_mae": 63.1058,
+          "arousal_mae": 45.173,
+          "overall_mse": 4811.23,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+          "overall_mae": 55.1226,
+          "valence_mae": 65.0721,
+          "arousal_mae": 45.173,
+          "overall_mse": 5096.8428,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+          "overall_mae": 39.5496,
+          "valence_mae": 39.1823,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2515.4812,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+          "overall_mae": 40.0427,
+          "valence_mae": 40.1685,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2540.1873,
+          "notes": "Blend Huber with Ridge low-rank physiological valence."
+        },
+        {
+          "method": "407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 40.058,
+          "valence_mae": 40.1991,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2553.5969,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "399_HuberSmooth9Valence_CenterArousal",
+          "overall_mae": 40.0779,
+          "valence_mae": 40.2389,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2556.2991,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "398_HuberSmooth7Valence_CenterArousal",
+          "overall_mae": 40.0825,
+          "valence_mae": 40.2481,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2557.7415,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 40.0904,
+          "valence_mae": 40.2639,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2559.4417,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "400_HuberMedian5Valence_CenterArousal",
+          "overall_mae": 40.0946,
+          "valence_mae": 40.2723,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2559.7156,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "401_HuberExpA03Valence_CenterArousal",
+          "overall_mae": 40.0988,
+          "valence_mae": 40.2808,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2557.5139,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "397_HuberSmooth3Valence_CenterArousal",
+          "overall_mae": 40.0996,
+          "valence_mae": 40.2823,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2561.1501,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "402_HuberExpA06Valence_CenterArousal",
+          "overall_mae": 40.1041,
+          "valence_mae": 40.2914,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2560.9348,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "396_HuberSmooth0Valence_CenterArousal",
+          "overall_mae": 40.1193,
+          "valence_mae": 40.3218,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2563.4324,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "406_HuberAsymP08N10Valence_CenterArousal",
+          "overall_mae": 40.131,
+          "valence_mae": 40.3451,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2524.4739,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "409_HuberAsymP08N12Valence_CenterArousal",
+          "overall_mae": 40.1634,
+          "valence_mae": 40.4099,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2530.5762,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+          "overall_mae": 40.2521,
+          "valence_mae": 40.5875,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2522.6741,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "408_HuberAsymP12N08Valence_CenterArousal",
+          "overall_mae": 40.2693,
+          "valence_mae": 40.6218,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2615.8884,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "404_HuberTanhResidual20Valence_CenterArousal",
+          "overall_mae": 40.9177,
+          "valence_mae": 41.9185,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2553.4788,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "405_HuberClip20Valence_CenterArousal",
+          "overall_mae": 40.9575,
+          "valence_mae": 41.9981,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2571.7344,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "403_HuberTanhResidual12Valence_CenterArousal",
+          "overall_mae": 41.269,
+          "valence_mae": 42.6211,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2573.0061,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+          "overall_mae": 41.6199,
+          "valence_mae": 43.323,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2567.7458,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 41.9163,
+          "valence_mae": 43.9157,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2631.1885,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "410_HuberMeanStdCalibValence_CenterArousal",
+          "overall_mae": 46.6237,
+          "valence_mae": 53.3306,
+          "arousal_mae": 39.9168,
+          "overall_mse": 3473.2617,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+          "overall_mae": 49.6991,
+          "valence_mae": 59.4813,
+          "arousal_mae": 39.9168,
+          "overall_mse": 3966.4609,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 45.2909,
+          "valence_mae": 50.6307,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3066,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "403_HuberTanhResidual12Valence_CenterArousal",
+          "overall_mae": 45.8488,
+          "valence_mae": 51.7464,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.0732,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 45.9628,
+          "valence_mae": 51.9744,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3431.8496,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "404_HuberTanhResidual20Valence_CenterArousal",
+          "overall_mae": 46.0049,
+          "valence_mae": 52.0587,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3420.0215,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "406_HuberAsymP08N10Valence_CenterArousal",
+          "overall_mae": 46.0362,
+          "valence_mae": 52.1212,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3431.3721,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+          "overall_mae": 46.0614,
+          "valence_mae": 52.1716,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3436.4714,
+          "notes": "Blend Huber with Ridge low-rank physiological valence."
+        },
+        {
+          "method": "408_HuberAsymP12N08Valence_CenterArousal",
+          "overall_mae": 46.0704,
+          "valence_mae": 52.1897,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3459.2341,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "399_HuberSmooth9Valence_CenterArousal",
+          "overall_mae": 46.0709,
+          "valence_mae": 52.1906,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3443.6533,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "398_HuberSmooth7Valence_CenterArousal",
+          "overall_mae": 46.0899,
+          "valence_mae": 52.2286,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3445.5271,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "401_HuberExpA03Valence_CenterArousal",
+          "overall_mae": 46.1005,
+          "valence_mae": 52.2497,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3445.5596,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 46.1112,
+          "valence_mae": 52.2713,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3447.5481,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "397_HuberSmooth3Valence_CenterArousal",
+          "overall_mae": 46.1323,
+          "valence_mae": 52.3134,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3449.5117,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "400_HuberMedian5Valence_CenterArousal",
+          "overall_mae": 46.1341,
+          "valence_mae": 52.3171,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3449.1758,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "402_HuberExpA06Valence_CenterArousal",
+          "overall_mae": 46.1391,
+          "valence_mae": 52.327,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3449.9583,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "405_HuberClip20Valence_CenterArousal",
+          "overall_mae": 46.1581,
+          "valence_mae": 52.365,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3435.3181,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "396_HuberSmooth0Valence_CenterArousal",
+          "overall_mae": 46.1697,
+          "valence_mae": 52.3881,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3452.8848,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "409_HuberAsymP08N12Valence_CenterArousal",
+          "overall_mae": 46.1875,
+          "valence_mae": 52.4238,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3449.2747,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+          "overall_mae": 46.5309,
+          "valence_mae": 53.1107,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3461.1572,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+          "overall_mae": 46.5548,
+          "valence_mae": 53.1584,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3506.1094,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+          "overall_mae": 46.6115,
+          "valence_mae": 53.2719,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3481.3242,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "410_HuberMeanStdCalibValence_CenterArousal",
+          "overall_mae": 57.196,
+          "valence_mae": 74.4408,
+          "arousal_mae": 39.9512,
+          "overall_mse": 5421.9883,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+          "overall_mae": 57.5616,
+          "valence_mae": 75.1719,
+          "arousal_mae": 39.9512,
+          "overall_mse": 5561.1484,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "412_HuberMeanShiftCalibValence_CenterArousal",
+          "overall_mae": 46.0649,
+          "valence_mae": 47.1171,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3610.7458,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 46.5051,
+          "valence_mae": 47.9976,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3796.8098,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "415_HuberRidgeBlend75Valence_CenterArousal",
+          "overall_mae": 46.569,
+          "valence_mae": 48.1253,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3654.8743,
+          "notes": "Blend Huber with Ridge low-rank physiological valence."
+        },
+        {
+          "method": "406_HuberAsymP08N10Valence_CenterArousal",
+          "overall_mae": 46.5912,
+          "valence_mae": 48.1697,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3654.9607,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "413_HuberSubjectMeanTo128Valence_CenterArousal",
+          "overall_mae": 46.6229,
+          "valence_mae": 48.233,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3641.1797,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "409_HuberAsymP08N12Valence_CenterArousal",
+          "overall_mae": 46.6239,
+          "valence_mae": 48.2351,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3657.5984,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "401_HuberExpA03Valence_CenterArousal",
+          "overall_mae": 46.6624,
+          "valence_mae": 48.3122,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3670.623,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 46.6849,
+          "valence_mae": 48.3571,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3669.9421,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "399_HuberSmooth9Valence_CenterArousal",
+          "overall_mae": 46.6919,
+          "valence_mae": 48.3711,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3669.8379,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "398_HuberSmooth7Valence_CenterArousal",
+          "overall_mae": 46.7044,
+          "valence_mae": 48.3961,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3671.0208,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 46.7176,
+          "valence_mae": 48.4225,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3672.3918,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "402_HuberExpA06Valence_CenterArousal",
+          "overall_mae": 46.7224,
+          "valence_mae": 48.4322,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3674.1399,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "400_HuberMedian5Valence_CenterArousal",
+          "overall_mae": 46.7284,
+          "valence_mae": 48.4442,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3673.6599,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "397_HuberSmooth3Valence_CenterArousal",
+          "overall_mae": 46.7343,
+          "valence_mae": 48.4559,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3674.0312,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "396_HuberSmooth0Valence_CenterArousal",
+          "overall_mae": 46.7585,
+          "valence_mae": 48.5043,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3676.7942,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        },
+        {
+          "method": "414_HuberSubjectMeanToTrainPredValence_CenterArousal",
+          "overall_mae": 46.9027,
+          "valence_mae": 48.7927,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3693.8074,
+          "notes": "Unlabeled subject-level prediction centering."
+        },
+        {
+          "method": "408_HuberAsymP12N08Valence_CenterArousal",
+          "overall_mae": 46.9213,
+          "valence_mae": 48.8299,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3709.5676,
+          "notes": "Asymmetric positive/negative residual scaling around center."
+        },
+        {
+          "method": "404_HuberTanhResidual20Valence_CenterArousal",
+          "overall_mae": 47.3043,
+          "valence_mae": 49.5959,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3732.2344,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "403_HuberTanhResidual12Valence_CenterArousal",
+          "overall_mae": 47.3141,
+          "valence_mae": 49.6154,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3754.8948,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "405_HuberClip20Valence_CenterArousal",
+          "overall_mae": 47.5198,
+          "valence_mae": 50.027,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3754.7488,
+          "notes": "Soft or hard residual clipping around center."
+        },
+        {
+          "method": "410_HuberMeanStdCalibValence_CenterArousal",
+          "overall_mae": 51.0365,
+          "valence_mae": 57.0603,
+          "arousal_mae": 45.0127,
+          "overall_mse": 4236.8755,
+          "notes": "Train-prediction distribution calibration using only train labels."
+        },
+        {
+          "method": "411_HuberMedianIQRCalibValence_CenterArousal",
+          "overall_mae": 52.6005,
+          "valence_mae": 60.1882,
+          "arousal_mae": 45.0127,
+          "overall_mse": 4559.0898,
+          "notes": "Temporal smoothing variant over the fixed HuberPCA16 valence trajectory."
+        }
+      ]
+    }
+  ]
+}

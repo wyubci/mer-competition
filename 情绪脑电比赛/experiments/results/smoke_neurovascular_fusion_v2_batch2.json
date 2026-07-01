@@ -1,0 +1,528 @@
+{
+  "method": "NOVA-v2: neurovascular agreement module search",
+  "note": "This batch tests distinct EEG-fNIRS fusion rules over PatternPrior_098: reliability softmax, trimmed agreement, geometric sign consensus, orthogonal neurovascular evidence, temporal delta agreement, state-dependent helpfulness, and lightweight attention over modality experts.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      9
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "251_OrthogonalNeurovascular_v_s0p3_c4p0_smooth5",
+      "overall_mae": 28.1489,
+      "valence_mae": 25.1042,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1469.5757,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_v_s0p3_c4p0_smooth5",
+      "overall_mae": 28.1489,
+      "valence_mae": 25.1042,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1469.5757,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_both_s0p3_c4p0_smooth5",
+      "overall_mae": 28.1489,
+      "valence_mae": 25.1042,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1469.5757,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_v_s0p24_c4p0_smooth5",
+      "overall_mae": 28.1611,
+      "valence_mae": 25.1286,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.2989,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_v_s0p24_c4p0_smooth5",
+      "overall_mae": 28.1611,
+      "valence_mae": 25.1286,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.2989,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_both_s0p24_c4p0_smooth5",
+      "overall_mae": 28.1611,
+      "valence_mae": 25.1286,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.2989,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_v_s0p2_c4p0_smooth5",
+      "overall_mae": 28.1742,
+      "valence_mae": 25.1548,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1472.9645,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_v_s0p2_c4p0_smooth5",
+      "overall_mae": 28.1742,
+      "valence_mae": 25.1548,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1472.9645,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_both_s0p2_c4p0_smooth5",
+      "overall_mae": 28.1742,
+      "valence_mae": 25.1548,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1472.9645,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "247_ReliabilitySoftmax3_v_s0p3_c4p0_smooth5",
+      "overall_mae": 28.1749,
+      "valence_mae": 25.1561,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1472.8286,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "247_ReliabilitySoftmax3_VOnly_v_s0p3_c4p0_smooth5",
+      "overall_mae": 28.1749,
+      "valence_mae": 25.1561,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1472.8286,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "247_ReliabilitySoftmax3_VOnly_both_s0p3_c4p0_smooth5",
+      "overall_mae": 28.1749,
+      "valence_mae": 25.1561,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1472.8286,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_v_s0p3_c4p0",
+      "overall_mae": 28.1782,
+      "valence_mae": 25.1371,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1472.7053,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_v_s0p3_c4p0",
+      "overall_mae": 28.1782,
+      "valence_mae": 25.1371,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1472.7053,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_both_s0p3_c4p0",
+      "overall_mae": 28.1782,
+      "valence_mae": 25.1371,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1472.7053,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_v_s0p24_c4p0",
+      "overall_mae": 28.1878,
+      "valence_mae": 25.1563,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1474.311,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_v_s0p24_c4p0",
+      "overall_mae": 28.1878,
+      "valence_mae": 25.1563,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1474.311,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "251_OrthogonalNeurovascular_VOnly_both_s0p24_c4p0",
+      "overall_mae": 28.1878,
+      "valence_mae": 25.1563,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1474.311,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "247_ReliabilitySoftmax3_v_s0p24_c4p0_smooth5",
+      "overall_mae": 28.1926,
+      "valence_mae": 25.1915,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1475.0257,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "247_ReliabilitySoftmax3_VOnly_v_s0p24_c4p0_smooth5",
+      "overall_mae": 28.1926,
+      "valence_mae": 25.1915,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1475.0257,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "251_OrthogonalNeurovascular_v_s0p3_c4p0_smooth5",
+          "overall_mae": 27.9774,
+          "valence_mae": 26.1146,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1385.2877,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_v_s0p3_c4p0_smooth5",
+          "overall_mae": 27.9774,
+          "valence_mae": 26.1146,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1385.2877,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_both_s0p3_c4p0_smooth5",
+          "overall_mae": 27.9774,
+          "valence_mae": 26.1146,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1385.2877,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_v_s0p3_c4p0",
+          "overall_mae": 28.0089,
+          "valence_mae": 26.1474,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1389.0756,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_v_s0p3_c4p0",
+          "overall_mae": 28.0089,
+          "valence_mae": 26.1474,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1389.0756,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_both_s0p3_c4p0",
+          "overall_mae": 28.0089,
+          "valence_mae": 26.1474,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1389.0756,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_v_s0p24_c4p0_smooth5",
+          "overall_mae": 28.0141,
+          "valence_mae": 26.1879,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1388.6099,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_v_s0p24_c4p0_smooth5",
+          "overall_mae": 28.0141,
+          "valence_mae": 26.1879,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1388.6099,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_both_s0p24_c4p0_smooth5",
+          "overall_mae": 28.0141,
+          "valence_mae": 26.1879,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1388.6099,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "247_ReliabilitySoftmax3_v_s0p3_c4p0_smooth5",
+          "overall_mae": 28.0403,
+          "valence_mae": 26.2402,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.2181,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "247_ReliabilitySoftmax3_VOnly_v_s0p3_c4p0_smooth5",
+          "overall_mae": 28.0403,
+          "valence_mae": 26.2402,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.2181,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "247_ReliabilitySoftmax3_VOnly_both_s0p3_c4p0_smooth5",
+          "overall_mae": 28.0403,
+          "valence_mae": 26.2402,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.2181,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_v_s0p24_c4p0",
+          "overall_mae": 28.0426,
+          "valence_mae": 26.2148,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1392.3021,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_v_s0p24_c4p0",
+          "overall_mae": 28.0426,
+          "valence_mae": 26.2148,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1392.3021,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_both_s0p24_c4p0",
+          "overall_mae": 28.0426,
+          "valence_mae": 26.2148,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1392.3021,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_v_s0p2_c4p0_smooth5",
+          "overall_mae": 28.0437,
+          "valence_mae": 26.2471,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.3414,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_v_s0p2_c4p0_smooth5",
+          "overall_mae": 28.0437,
+          "valence_mae": 26.2471,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.3414,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_both_s0p2_c4p0_smooth5",
+          "overall_mae": 28.0437,
+          "valence_mae": 26.2471,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.3414,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_v_s0p3_c2p0_smooth5",
+          "overall_mae": 28.0682,
+          "valence_mae": 26.2961,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1394.2007,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "251_OrthogonalNeurovascular_VOnly_v_s0p3_c2p0_smooth5",
+          "overall_mae": 28.0682,
+          "valence_mae": 26.2961,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1394.2007,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "261_AttentionStateHelpful_both_s0p3_c4p0_smooth5",
+          "overall_mae": 28.2246,
+          "valence_mae": 23.9101,
+          "arousal_mae": 32.5391,
+          "overall_mse": 1550.7192,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_v_s0p3_c4p0_smooth5",
+          "overall_mae": 28.2286,
+          "valence_mae": 23.9101,
+          "arousal_mae": 32.547,
+          "overall_mse": 1550.5443,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_v_s0p3_c4p0_smooth5",
+          "overall_mae": 28.2286,
+          "valence_mae": 23.9101,
+          "arousal_mae": 32.547,
+          "overall_mse": 1550.5443,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_both_s0p3_c4p0_smooth5",
+          "overall_mae": 28.2286,
+          "valence_mae": 23.9101,
+          "arousal_mae": 32.547,
+          "overall_mse": 1550.5443,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_both_s0p24_c4p0_smooth5",
+          "overall_mae": 28.2385,
+          "valence_mae": 23.9364,
+          "arousal_mae": 32.5405,
+          "overall_mse": 1551.934,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_both_s0p3_c4p0",
+          "overall_mae": 28.2397,
+          "valence_mae": 23.9154,
+          "arousal_mae": 32.5641,
+          "overall_mse": 1552.7402,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_v_s0p24_c4p0_smooth5",
+          "overall_mae": 28.2417,
+          "valence_mae": 23.9364,
+          "arousal_mae": 32.547,
+          "overall_mse": 1551.817,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_v_s0p24_c4p0_smooth5",
+          "overall_mae": 28.2417,
+          "valence_mae": 23.9364,
+          "arousal_mae": 32.547,
+          "overall_mse": 1551.817,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_both_s0p24_c4p0_smooth5",
+          "overall_mae": 28.2417,
+          "valence_mae": 23.9364,
+          "arousal_mae": 32.547,
+          "overall_mse": 1551.817,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_v_s0p3_c4p0",
+          "overall_mae": 28.2418,
+          "valence_mae": 23.9154,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1552.5558,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_v_s0p3_c4p0",
+          "overall_mae": 28.2418,
+          "valence_mae": 23.9154,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1552.5558,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_both_s0p3_c4p0",
+          "overall_mae": 28.2418,
+          "valence_mae": 23.9154,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1552.5558,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_both_s0p24_c4p0",
+          "overall_mae": 28.2534,
+          "valence_mae": 23.9421,
+          "arousal_mae": 32.5647,
+          "overall_mse": 1553.9415,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_v_s0p24_c4p0",
+          "overall_mae": 28.2552,
+          "valence_mae": 23.9421,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1553.8202,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_v_s0p24_c4p0",
+          "overall_mae": 28.2552,
+          "valence_mae": 23.9421,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1553.8202,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_both_s0p24_c4p0",
+          "overall_mae": 28.2552,
+          "valence_mae": 23.9421,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1553.8202,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_both_s0p2_c4p0_smooth5",
+          "overall_mae": 28.2562,
+          "valence_mae": 23.9709,
+          "arousal_mae": 32.5414,
+          "overall_mse": 1553.6105,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_v_s0p2_c4p0_smooth5",
+          "overall_mae": 28.259,
+          "valence_mae": 23.9709,
+          "arousal_mae": 32.547,
+          "overall_mse": 1553.5254,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_v_s0p2_c4p0_smooth5",
+          "overall_mae": 28.259,
+          "valence_mae": 23.9709,
+          "arousal_mae": 32.547,
+          "overall_mse": 1553.5254,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "261_AttentionStateHelpful_VOnly_both_s0p2_c4p0_smooth5",
+          "overall_mae": 28.259,
+          "valence_mae": 23.9709,
+          "arousal_mae": 32.547,
+          "overall_mse": 1553.5254,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        }
+      ]
+    }
+  ]
+}

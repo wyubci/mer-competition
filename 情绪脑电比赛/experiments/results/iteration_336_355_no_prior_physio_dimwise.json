@@ -1,0 +1,1577 @@
+{
+  "method": "No-video-prior physiological dimwise fusion batch",
+  "iteration_range": "336-355",
+  "note": "No candidate uses VideoTimeMean, PatternPrior, video ID, timestamp, or label-derived video-time cells. This batch tests whether direct EEG/fNIRS signal should correct valence only while arousal remains conservative.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+      "overall_mae": 46.7142,
+      "valence_mae": 50.4937,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3527.7887,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "337_PCA16Valence_CenterArousal",
+      "overall_mae": 46.7335,
+      "valence_mae": 50.5323,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3523.2831,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "352_LowRankEnsembleValence_CenterArousal",
+      "overall_mae": 46.7612,
+      "valence_mae": 50.5878,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3528.6542,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "336_PCA8Valence_CenterArousal",
+      "overall_mae": 46.7964,
+      "valence_mae": 50.6582,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3531.4725,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "338_PLS2Valence_CenterArousal",
+      "overall_mae": 46.8097,
+      "valence_mae": 50.6847,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3539.6592,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+      "overall_mae": 46.8189,
+      "valence_mae": 50.7031,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3533.2357,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "349_PCA16ValenceShrink75_CenterArousal",
+      "overall_mae": 46.8936,
+      "valence_mae": 50.8526,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3528.5859,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "339_PLS4Valence_CenterArousal",
+      "overall_mae": 46.9048,
+      "valence_mae": 50.8751,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3543.7463,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+      "overall_mae": 46.9162,
+      "valence_mae": 50.8977,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3535.6793,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "351_PCA8ValenceShrink75_CenterArousal",
+      "overall_mae": 46.9448,
+      "valence_mae": 50.955,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3535.9636,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "341_CoupledSlopeValence_CenterArousal",
+      "overall_mae": 47.0036,
+      "valence_mae": 51.0726,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3552.7445,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "Reference_333_PCA8Direct_smooth5",
+      "overall_mae": 47.0764,
+      "valence_mae": 50.6582,
+      "arousal_mae": 43.4946,
+      "overall_mse": 3526.5726,
+      "notes": "Reference from previous no-video-prior physiological batch."
+    },
+    {
+      "method": "340_NeurovascularValence_CenterArousal",
+      "overall_mae": 47.0874,
+      "valence_mae": 51.2401,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3561.7767,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "348_PCA16ValenceShrink50_CenterArousal",
+      "overall_mae": 47.0915,
+      "valence_mae": 51.2484,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3552.466,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "344_HRFValence_CenterArousal",
+      "overall_mae": 47.1032,
+      "valence_mae": 51.2718,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3557.5699,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "350_PCA8ValenceShrink50_CenterArousal",
+      "overall_mae": 47.1265,
+      "valence_mae": 51.3183,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3558.2088,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "342_FNIRSValence_CenterArousal",
+      "overall_mae": 47.1284,
+      "valence_mae": 51.3221,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3569.7872,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "Reference_333_PCA16Direct_smooth5",
+      "overall_mae": 47.1689,
+      "valence_mae": 50.5323,
+      "arousal_mae": 43.8054,
+      "overall_mse": 3534.8361,
+      "notes": "Reference from previous no-video-prior physiological batch."
+    },
+    {
+      "method": "345_EarlyConcatValence_CenterArousal",
+      "overall_mae": 47.1741,
+      "valence_mae": 51.4135,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3572.1791,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "347_PCA16Valence_TrainMeanArousal",
+      "overall_mae": 47.2103,
+      "valence_mae": 50.5323,
+      "arousal_mae": 43.8883,
+      "overall_mse": 3517.0679,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+    },
+    {
+      "method": "346_PCA8Valence_TrainMeanArousal",
+      "overall_mae": 47.2733,
+      "valence_mae": 50.6582,
+      "arousal_mae": 43.8883,
+      "overall_mse": 3525.2574,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+    },
+    {
+      "method": "343_EEGValence_CenterArousal",
+      "overall_mae": 47.4745,
+      "valence_mae": 52.0143,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3580.8259,
+      "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+    },
+    {
+      "method": "Reference_321_Center128_noPrior",
+      "overall_mae": 47.5663,
+      "valence_mae": 52.198,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.896,
+      "notes": "Reference from previous no-video-prior physiological batch."
+    },
+    {
+      "method": "Reference_322_TrainMean_noPrior",
+      "overall_mae": 48.1506,
+      "valence_mae": 52.4129,
+      "arousal_mae": 43.8883,
+      "overall_mse": 3592.4366,
+      "notes": "Reference from previous no-video-prior physiological batch."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "339_PLS4Valence_CenterArousal",
+          "overall_mae": 38.4958,
+          "valence_mae": 45.3961,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2843.5935,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA16Direct_smooth5",
+          "overall_mae": 38.5625,
+          "valence_mae": 45.9486,
+          "arousal_mae": 31.1765,
+          "overall_mse": 2788.7207,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_333_PCA8Direct_smooth5",
+          "overall_mae": 38.6419,
+          "valence_mae": 46.0915,
+          "arousal_mae": 31.1922,
+          "overall_mse": 2800.3772,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 38.6649,
+          "valence_mae": 45.7343,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2851.5403,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "337_PCA16Valence_CenterArousal",
+          "overall_mae": 38.772,
+          "valence_mae": 45.9486,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2857.5046,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "336_PCA8Valence_CenterArousal",
+          "overall_mae": 38.8435,
+          "valence_mae": 46.0915,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2861.8262,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "352_LowRankEnsembleValence_CenterArousal",
+          "overall_mae": 38.8522,
+          "valence_mae": 46.1088,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2866.6726,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "342_FNIRSValence_CenterArousal",
+          "overall_mae": 38.8855,
+          "valence_mae": 46.1754,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.4128,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+          "overall_mae": 38.9738,
+          "valence_mae": 46.352,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2884.4333,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "345_EarlyConcatValence_CenterArousal",
+          "overall_mae": 39.0058,
+          "valence_mae": 46.4161,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2896.5652,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "338_PLS2Valence_CenterArousal",
+          "overall_mae": 39.0379,
+          "valence_mae": 46.4803,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2895.1731,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "349_PCA16ValenceShrink75_CenterArousal",
+          "overall_mae": 39.0776,
+          "valence_mae": 46.5597,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2880.1389,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+          "overall_mae": 39.0943,
+          "valence_mae": 46.5931,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2887.6296,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "351_PCA8ValenceShrink75_CenterArousal",
+          "overall_mae": 39.1331,
+          "valence_mae": 46.6706,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2885.1833,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "341_CoupledSlopeValence_CenterArousal",
+          "overall_mae": 39.1564,
+          "valence_mae": 46.7174,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2916.6309,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "344_HRFValence_CenterArousal",
+          "overall_mae": 39.1687,
+          "valence_mae": 46.7418,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2904.6462,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "340_NeurovascularValence_CenterArousal",
+          "overall_mae": 39.269,
+          "valence_mae": 46.9424,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2925.636,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "348_PCA16ValenceShrink50_CenterArousal",
+          "overall_mae": 39.3971,
+          "valence_mae": 47.1986,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2921.7488,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "350_PCA8ValenceShrink50_CenterArousal",
+          "overall_mae": 39.4354,
+          "valence_mae": 47.2753,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2926.3137,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "347_PCA16Valence_TrainMeanArousal",
+          "overall_mae": 39.5887,
+          "valence_mae": 45.9486,
+          "arousal_mae": 33.2289,
+          "overall_mse": 2860.1963,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "346_PCA8Valence_TrainMeanArousal",
+          "overall_mae": 39.6602,
+          "valence_mae": 46.0915,
+          "arousal_mae": 33.2289,
+          "overall_mse": 2864.5183,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "343_EEGValence_CenterArousal",
+          "overall_mae": 40.1896,
+          "valence_mae": 48.7836,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3005.989,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_322_TrainMean_noPrior",
+          "overall_mae": 41.1312,
+          "valence_mae": 49.0335,
+          "arousal_mae": 33.2289,
+          "overall_mse": 3025.7473,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "338_PLS2Valence_CenterArousal",
+          "overall_mae": 58.1405,
+          "valence_mae": 60.3225,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4738.1113,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "341_CoupledSlopeValence_CenterArousal",
+          "overall_mae": 58.1629,
+          "valence_mae": 60.3673,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4733.6157,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+          "overall_mae": 58.2078,
+          "valence_mae": 60.4572,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4733.4546,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "352_LowRankEnsembleValence_CenterArousal",
+          "overall_mae": 58.2471,
+          "valence_mae": 60.5356,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4738.5103,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "337_PCA16Valence_CenterArousal",
+          "overall_mae": 58.2918,
+          "valence_mae": 60.6252,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4732.4272,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "336_PCA8Valence_CenterArousal",
+          "overall_mae": 58.3404,
+          "valence_mae": 60.7224,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4751.666,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 58.353,
+          "valence_mae": 60.7474,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4741.4336,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "340_NeurovascularValence_CenterArousal",
+          "overall_mae": 58.3628,
+          "valence_mae": 60.7672,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4767.9038,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+          "overall_mae": 58.6024,
+          "valence_mae": 61.2463,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4745.9961,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "349_PCA16ValenceShrink75_CenterArousal",
+          "overall_mae": 58.6078,
+          "valence_mae": 61.2571,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4738.3413,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "351_PCA8ValenceShrink75_CenterArousal",
+          "overall_mae": 58.6375,
+          "valence_mae": 61.3165,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.6606,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "344_HRFValence_CenterArousal",
+          "overall_mae": 58.6707,
+          "valence_mae": 61.3828,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4799.4619,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "347_PCA16Valence_TrainMeanArousal",
+          "overall_mae": 58.6955,
+          "valence_mae": 60.6252,
+          "arousal_mae": 56.7659,
+          "overall_mse": 4738.5015,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "339_PLS4Valence_CenterArousal",
+          "overall_mae": 58.7333,
+          "valence_mae": 61.5082,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4806.9238,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "346_PCA8Valence_TrainMeanArousal",
+          "overall_mae": 58.7441,
+          "valence_mae": 60.7224,
+          "arousal_mae": 56.7659,
+          "overall_mse": 4757.7407,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "342_FNIRSValence_CenterArousal",
+          "overall_mae": 58.7764,
+          "valence_mae": 61.5943,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4802.7593,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "345_EarlyConcatValence_CenterArousal",
+          "overall_mae": 58.7981,
+          "valence_mae": 61.6378,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4821.7231,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "343_EEGValence_CenterArousal",
+          "overall_mae": 58.8029,
+          "valence_mae": 61.6474,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4753.0366,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "348_PCA16ValenceShrink50_CenterArousal",
+          "overall_mae": 59.0026,
+          "valence_mae": 62.0468,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4769.356,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "350_PCA8ValenceShrink50_CenterArousal",
+          "overall_mae": 59.024,
+          "valence_mae": 62.0896,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4776.1621,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_322_TrainMean_noPrior",
+          "overall_mae": 59.4934,
+          "valence_mae": 62.2209,
+          "arousal_mae": 56.7659,
+          "overall_mse": 4760.7578,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_333_PCA8Direct_smooth5",
+          "overall_mae": 59.5776,
+          "valence_mae": 60.7224,
+          "arousal_mae": 58.4328,
+          "overall_mse": 4932.0361,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_333_PCA16Direct_smooth5",
+          "overall_mae": 59.6072,
+          "valence_mae": 60.6252,
+          "arousal_mae": 58.5892,
+          "overall_mse": 4918.041,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "337_PCA16Valence_CenterArousal",
+          "overall_mae": 50.7432,
+          "valence_mae": 56.3133,
+          "arousal_mae": 45.173,
+          "overall_mse": 3992.3113,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 50.781,
+          "valence_mae": 56.389,
+          "arousal_mae": 45.173,
+          "overall_mse": 4003.8958,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "352_LowRankEnsembleValence_CenterArousal",
+          "overall_mae": 50.8049,
+          "valence_mae": 56.4368,
+          "arousal_mae": 45.173,
+          "overall_mse": 3999.842,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+          "overall_mae": 50.8126,
+          "valence_mae": 56.4523,
+          "arousal_mae": 45.173,
+          "overall_mse": 3987.4031,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "338_PLS2Valence_CenterArousal",
+          "overall_mae": 50.8151,
+          "valence_mae": 56.4572,
+          "arousal_mae": 45.173,
+          "overall_mse": 3998.9133,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "347_PCA16Valence_TrainMeanArousal",
+          "overall_mae": 50.8505,
+          "valence_mae": 56.3133,
+          "arousal_mae": 45.3878,
+          "overall_mse": 3959.0339,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "339_PLS4Valence_CenterArousal",
+          "overall_mae": 50.8683,
+          "valence_mae": 56.5637,
+          "arousal_mae": 45.173,
+          "overall_mse": 3994.4075,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "336_PCA8Valence_CenterArousal",
+          "overall_mae": 50.893,
+          "valence_mae": 56.613,
+          "arousal_mae": 45.173,
+          "overall_mse": 4012.7764,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "341_CoupledSlopeValence_CenterArousal",
+          "overall_mae": 50.8968,
+          "valence_mae": 56.6205,
+          "arousal_mae": 45.173,
+          "overall_mse": 3989.3738,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "349_PCA16ValenceShrink75_CenterArousal",
+          "overall_mae": 50.9489,
+          "valence_mae": 56.7248,
+          "arousal_mae": 45.173,
+          "overall_mse": 3994.5085,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "340_NeurovascularValence_CenterArousal",
+          "overall_mae": 50.9525,
+          "valence_mae": 56.7319,
+          "arousal_mae": 45.173,
+          "overall_mse": 3990.7607,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "344_HRFValence_CenterArousal",
+          "overall_mae": 50.9896,
+          "valence_mae": 56.8061,
+          "arousal_mae": 45.173,
+          "overall_mse": 3996.2175,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "346_PCA8Valence_TrainMeanArousal",
+          "overall_mae": 51.0004,
+          "valence_mae": 56.613,
+          "arousal_mae": 45.3878,
+          "overall_mse": 3979.499,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+          "overall_mae": 51.0019,
+          "valence_mae": 56.8308,
+          "arousal_mae": 45.173,
+          "overall_mse": 4002.071,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "345_EarlyConcatValence_CenterArousal",
+          "overall_mae": 51.0414,
+          "valence_mae": 56.9097,
+          "arousal_mae": 45.173,
+          "overall_mse": 4005.6707,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "351_PCA8ValenceShrink75_CenterArousal",
+          "overall_mae": 51.0618,
+          "valence_mae": 56.9505,
+          "arousal_mae": 45.173,
+          "overall_mse": 4007.4207,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA8Direct_smooth5",
+          "overall_mae": 51.1207,
+          "valence_mae": 56.613,
+          "arousal_mae": 45.6284,
+          "overall_mse": 3969.2683,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "348_PCA16ValenceShrink50_CenterArousal",
+          "overall_mae": 51.1925,
+          "valence_mae": 57.212,
+          "arousal_mae": 45.173,
+          "overall_mse": 4016.0383,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "342_FNIRSValence_CenterArousal",
+          "overall_mae": 51.2208,
+          "valence_mae": 57.2685,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.9978,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "350_PCA8ValenceShrink50_CenterArousal",
+          "overall_mae": 51.2661,
+          "valence_mae": 57.3592,
+          "arousal_mae": 45.173,
+          "overall_mse": 4023.0215,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA16Direct_smooth5",
+          "overall_mae": 51.2707,
+          "valence_mae": 56.3133,
+          "arousal_mae": 46.2282,
+          "overall_mse": 3992.7422,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "343_EEGValence_CenterArousal",
+          "overall_mae": 51.6969,
+          "valence_mae": 58.2208,
+          "arousal_mae": 45.173,
+          "overall_mse": 4052.5117,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 51.7127,
+          "valence_mae": 58.2524,
+          "arousal_mae": 45.173,
+          "overall_mse": 4117.0942,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_322_TrainMean_noPrior",
+          "overall_mae": 52.0018,
+          "valence_mae": 58.6159,
+          "arousal_mae": 45.3878,
+          "overall_mse": 4036.2334,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 40.0881,
+          "valence_mae": 40.2593,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2487.7498,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "337_PCA16Valence_CenterArousal",
+          "overall_mae": 40.2279,
+          "valence_mae": 40.539,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2509.9153,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA8Direct_smooth5",
+          "overall_mae": 40.2957,
+          "valence_mae": 40.9251,
+          "arousal_mae": 39.6664,
+          "overall_mse": 2461.95,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "342_FNIRSValence_CenterArousal",
+          "overall_mae": 40.3281,
+          "valence_mae": 40.7394,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2499.4021,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "352_LowRankEnsembleValence_CenterArousal",
+          "overall_mae": 40.3892,
+          "valence_mae": 40.8616,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2512.7659,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "336_PCA8Valence_CenterArousal",
+          "overall_mae": 40.421,
+          "valence_mae": 40.9251,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2496.3538,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "345_EarlyConcatValence_CenterArousal",
+          "overall_mae": 40.4664,
+          "valence_mae": 41.016,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2526.0535,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "339_PLS4Valence_CenterArousal",
+          "overall_mae": 40.489,
+          "valence_mae": 41.0611,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2533.5693,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA16Direct_smooth5",
+          "overall_mae": 40.5322,
+          "valence_mae": 40.539,
+          "arousal_mae": 40.5254,
+          "overall_mse": 2523.6467,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "349_PCA16ValenceShrink75_CenterArousal",
+          "overall_mae": 40.5426,
+          "valence_mae": 41.1683,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2509.366,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "338_PLS2Valence_CenterArousal",
+          "overall_mae": 40.573,
+          "valence_mae": 41.2292,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2542.7959,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+          "overall_mae": 40.5822,
+          "valence_mae": 41.2476,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.9578,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+          "overall_mae": 40.6468,
+          "valence_mae": 41.3768,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2508.5327,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "344_HRFValence_CenterArousal",
+          "overall_mae": 40.6797,
+          "valence_mae": 41.4425,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.866,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "351_PCA8ValenceShrink75_CenterArousal",
+          "overall_mae": 40.7109,
+          "valence_mae": 41.5051,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2504.7664,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "347_PCA16Valence_TrainMeanArousal",
+          "overall_mae": 40.7715,
+          "valence_mae": 40.539,
+          "arousal_mae": 41.0041,
+          "overall_mse": 2511.5681,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "348_PCA16ValenceShrink50_CenterArousal",
+          "overall_mae": 40.9321,
+          "valence_mae": 41.9475,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2529.395,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "346_PCA8Valence_TrainMeanArousal",
+          "overall_mae": 40.9646,
+          "valence_mae": 40.9251,
+          "arousal_mae": 41.0041,
+          "overall_mse": 2498.0066,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "350_PCA8ValenceShrink50_CenterArousal",
+          "overall_mae": 41.0451,
+          "valence_mae": 42.1733,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2530.0427,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "341_CoupledSlopeValence_CenterArousal",
+          "overall_mae": 41.157,
+          "valence_mae": 42.3971,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2612.3643,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "340_NeurovascularValence_CenterArousal",
+          "overall_mae": 41.2313,
+          "valence_mae": 42.5458,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2617.0859,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "343_EEGValence_CenterArousal",
+          "overall_mae": 41.2794,
+          "valence_mae": 42.642,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2580.2222,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_322_TrainMean_noPrior",
+          "overall_mae": 41.7103,
+          "valence_mae": 42.4165,
+          "arousal_mae": 41.0041,
+          "overall_mse": 2561.1365,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 41.9163,
+          "valence_mae": 43.9157,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2631.1885,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 45.2909,
+          "valence_mae": 50.6307,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3066,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "350_PCA8ValenceShrink50_CenterArousal",
+          "overall_mae": 45.5669,
+          "valence_mae": 51.1827,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3403.9199,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "343_EEGValence_CenterArousal",
+          "overall_mae": 45.5931,
+          "valence_mae": 51.235,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3381.155,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "348_PCA16ValenceShrink50_CenterArousal",
+          "overall_mae": 45.6147,
+          "valence_mae": 51.2783,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3398.4902,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+          "overall_mae": 45.7352,
+          "valence_mae": 51.5192,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3402.9329,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "351_PCA8ValenceShrink75_CenterArousal",
+          "overall_mae": 45.7453,
+          "valence_mae": 51.5394,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3409.6443,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "349_PCA16ValenceShrink75_CenterArousal",
+          "overall_mae": 45.8203,
+          "valence_mae": 51.6894,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3403.5723,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 45.8607,
+          "valence_mae": 51.7703,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3403.8923,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "341_CoupledSlopeValence_CenterArousal",
+          "overall_mae": 45.8716,
+          "valence_mae": 51.7919,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3399.967,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_322_TrainMean_noPrior",
+          "overall_mae": 45.9326,
+          "valence_mae": 51.4337,
+          "arousal_mae": 40.4315,
+          "overall_mse": 3379.3848,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "336_PCA8Valence_CenterArousal",
+          "overall_mae": 45.94,
+          "valence_mae": 51.9288,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3425.3132,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+          "overall_mae": 45.9418,
+          "valence_mae": 51.9324,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3414.1941,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "340_NeurovascularValence_CenterArousal",
+          "overall_mae": 45.9656,
+          "valence_mae": 51.98,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3407.1331,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "352_LowRankEnsembleValence_CenterArousal",
+          "overall_mae": 45.997,
+          "valence_mae": 52.0429,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3425.4065,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "337_PCA16Valence_CenterArousal",
+          "overall_mae": 46.0445,
+          "valence_mae": 52.1378,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3419.9814,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "338_PLS2Valence_CenterArousal",
+          "overall_mae": 46.0694,
+          "valence_mae": 52.1877,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3438.7168,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "346_PCA8Valence_TrainMeanArousal",
+          "overall_mae": 46.1801,
+          "valence_mae": 51.9288,
+          "arousal_mae": 40.4315,
+          "overall_mse": 3403.0715,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "347_PCA16Valence_TrainMeanArousal",
+          "overall_mae": 46.2846,
+          "valence_mae": 52.1378,
+          "arousal_mae": 40.4315,
+          "overall_mse": 3397.7395,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "339_PLS4Valence_CenterArousal",
+          "overall_mae": 46.3393,
+          "valence_mae": 52.7273,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3442.8269,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "342_FNIRSValence_CenterArousal",
+          "overall_mae": 46.3777,
+          "valence_mae": 52.8042,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3464.8418,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA8Direct_smooth5",
+          "overall_mae": 46.3886,
+          "valence_mae": 51.9288,
+          "arousal_mae": 40.8484,
+          "overall_mse": 3413.9114,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "Reference_333_PCA16Direct_smooth5",
+          "overall_mae": 46.4244,
+          "valence_mae": 52.1378,
+          "arousal_mae": 40.7111,
+          "overall_mse": 3398.9041,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "344_HRFValence_CenterArousal",
+          "overall_mae": 46.6059,
+          "valence_mae": 53.2606,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3477.2512,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "345_EarlyConcatValence_CenterArousal",
+          "overall_mae": 46.8107,
+          "valence_mae": 53.6701,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3506.2781,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "338_PLS2Valence_CenterArousal",
+          "overall_mae": 46.222,
+          "valence_mae": 47.4314,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3624.416,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "352_LowRankEnsembleValence_CenterArousal",
+          "overall_mae": 46.2769,
+          "valence_mae": 47.5412,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3628.8894,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "337_PCA16Valence_CenterArousal",
+          "overall_mae": 46.3214,
+          "valence_mae": 47.6301,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3627.7371,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "336_PCA8Valence_CenterArousal",
+          "overall_mae": 46.3407,
+          "valence_mae": 47.6687,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3641.0618,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "349_PCA16ValenceShrink75_CenterArousal",
+          "overall_mae": 46.3645,
+          "valence_mae": 47.7163,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3645.7566,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "351_PCA8ValenceShrink75_CenterArousal",
+          "overall_mae": 46.3803,
+          "valence_mae": 47.748,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3658.2766,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "353_NeuroLowRankEnsembleValence_CenterArousal",
+          "overall_mae": 46.3951,
+          "valence_mae": 47.7775,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3633.1394,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "348_PCA16ValenceShrink50_CenterArousal",
+          "overall_mae": 46.4101,
+          "valence_mae": 47.8075,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3679.9417,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "355_AgreementWeightedEnsembleValence_CenterArousal",
+          "overall_mae": 46.4167,
+          "valence_mae": 47.8207,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.084,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "350_PCA8ValenceShrink50_CenterArousal",
+          "overall_mae": 46.4211,
+          "valence_mae": 47.8295,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3689.9729,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA8Direct_smooth5",
+          "overall_mae": 46.4341,
+          "valence_mae": 47.6687,
+          "arousal_mae": 45.1995,
+          "overall_mse": 3581.8884,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "339_PLS4Valence_CenterArousal",
+          "overall_mae": 46.5034,
+          "valence_mae": 47.9941,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3641.3186,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "344_HRFValence_CenterArousal",
+          "overall_mae": 46.5049,
+          "valence_mae": 47.997,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3621.1409,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 46.5051,
+          "valence_mae": 47.9976,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3796.8098,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 46.5373,
+          "valence_mae": 48.062,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3678.4128,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_333_PCA16Direct_smooth5",
+          "overall_mae": 46.6161,
+          "valence_mae": 47.6301,
+          "arousal_mae": 45.6021,
+          "overall_mse": 3586.9873,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        },
+        {
+          "method": "340_NeurovascularValence_CenterArousal",
+          "overall_mae": 46.7431,
+          "valence_mae": 48.4735,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3662.2979,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "341_CoupledSlopeValence_CenterArousal",
+          "overall_mae": 46.777,
+          "valence_mae": 48.5412,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3664.6868,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "345_EarlyConcatValence_CenterArousal",
+          "overall_mae": 46.9219,
+          "valence_mae": 48.8311,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3676.9504,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "347_PCA16Valence_TrainMeanArousal",
+          "overall_mae": 47.0697,
+          "valence_mae": 47.6301,
+          "arousal_mae": 46.5094,
+          "overall_mse": 3635.3506,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "346_PCA8Valence_TrainMeanArousal",
+          "overall_mae": 47.0891,
+          "valence_mae": 47.6687,
+          "arousal_mae": 46.5094,
+          "overall_mse": 3648.6755,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, train global mean for arousal."
+        },
+        {
+          "method": "342_FNIRSValence_CenterArousal",
+          "overall_mae": 47.1817,
+          "valence_mae": 49.3507,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3737.4658,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "343_EEGValence_CenterArousal",
+          "overall_mae": 47.2849,
+          "valence_mae": 49.5572,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3712.2131,
+          "notes": "No-prior physiological dimwise output: use EEG/fNIRS signal for valence, keep arousal at center."
+        },
+        {
+          "method": "Reference_322_TrainMean_noPrior",
+          "overall_mae": 48.6331,
+          "valence_mae": 50.7569,
+          "arousal_mae": 46.5094,
+          "overall_mse": 3791.3252,
+          "notes": "Reference from previous no-video-prior physiological batch."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5851 @@
+{
+  "method": "Robust video-time aggregation search",
+  "note": "Tests replacing ordinary video-time means with drop-extreme, trimmed, winsorized, Huber, and quantile centers. Pattern variants replace only the meanPrior references inside PatternPrior_098 while keeping the same subject-disjoint folds.",
+  "fold_size": 4,
+  "estimators": [
+    "mean",
+    "median",
+    "drop1",
+    "drop2",
+    "trim5",
+    "trim10",
+    "trim15",
+    "trim20",
+    "winsor5",
+    "winsor10",
+    "winsor15",
+    "winsor20",
+    "huber15",
+    "huber20",
+    "q45",
+    "q50",
+    "q55"
+  ],
+  "lags": [
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "smooths": [
+    5,
+    9,
+    11,
+    15,
+    21,
+    43,
+    51,
+    61
+  ],
+  "aggregate_results": [
+    {
+      "method": "Pattern098_RobustMeanRefs[winsor5]",
+      "overall_mae": 28.7425,
+      "valence_mae": 26.97,
+      "arousal_mae": 30.5151,
+      "overall_mse": 1591.3526,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[winsor10]",
+      "overall_mae": 28.7425,
+      "valence_mae": 26.967,
+      "arousal_mae": 30.5181,
+      "overall_mse": 1592.0976,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[drop1]",
+      "overall_mae": 28.7459,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.5211,
+      "overall_mse": 1593.0146,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[trim5]",
+      "overall_mae": 28.7459,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.5211,
+      "overall_mse": 1593.0146,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "PatternPrior_098_reference",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[winsor15]",
+      "overall_mae": 28.7473,
+      "valence_mae": 26.969,
+      "arousal_mae": 30.5256,
+      "overall_mse": 1593.9084,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[mean]",
+      "overall_mae": 28.7485,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5213,
+      "overall_mse": 1590.8808,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag0_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9799,
+      "arousal_mae": 30.5185,
+      "overall_mse": 1595.401,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7508,
+      "valence_mae": 26.9856,
+      "arousal_mae": 30.516,
+      "overall_mse": 1584.1048,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9851,
+      "arousal_mae": 30.5166,
+      "overall_mse": 1596.5422,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9792,
+      "arousal_mae": 30.5226,
+      "overall_mse": 1594.2316,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag0_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7514,
+      "valence_mae": 26.9831,
+      "arousal_mae": 30.5197,
+      "overall_mse": 1582.7491,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.752,
+      "valence_mae": 26.9553,
+      "arousal_mae": 30.5487,
+      "overall_mse": 1594.905,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.752,
+      "valence_mae": 26.9553,
+      "arousal_mae": 30.5487,
+      "overall_mse": 1594.905,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag0_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7522,
+      "valence_mae": 26.9575,
+      "arousal_mae": 30.547,
+      "overall_mse": 1596.0992,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag0_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7522,
+      "valence_mae": 26.9575,
+      "arousal_mae": 30.547,
+      "overall_mse": 1596.0992,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[drop2]",
+      "overall_mae": 28.7523,
+      "valence_mae": 26.9731,
+      "arousal_mae": 30.5316,
+      "overall_mse": 1595.3183,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[trim10]",
+      "overall_mae": 28.7523,
+      "valence_mae": 26.9731,
+      "arousal_mae": 30.5316,
+      "overall_mse": 1595.3183,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7532,
+      "valence_mae": 26.989,
+      "arousal_mae": 30.5173,
+      "overall_mse": 1595.637,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[winsor20]",
+      "overall_mae": 28.7532,
+      "valence_mae": 26.9767,
+      "arousal_mae": 30.5296,
+      "overall_mse": 1596.0967,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag0_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7533,
+      "valence_mae": 26.9867,
+      "arousal_mae": 30.52,
+      "overall_mse": 1594.5447,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7534,
+      "valence_mae": 26.9926,
+      "arousal_mae": 30.5142,
+      "overall_mse": 1585.416,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7551,
+      "valence_mae": 26.9633,
+      "arousal_mae": 30.547,
+      "overall_mse": 1597.2305,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7551,
+      "valence_mae": 26.9633,
+      "arousal_mae": 30.547,
+      "overall_mse": 1597.2305,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7552,
+      "valence_mae": 26.9937,
+      "arousal_mae": 30.5166,
+      "overall_mse": 1597.6265,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7553,
+      "valence_mae": 26.9916,
+      "arousal_mae": 30.519,
+      "overall_mse": 1581.6565,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[huber20]",
+      "overall_mae": 28.7553,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5327,
+      "overall_mse": 1593.9054,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag0_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7555,
+      "valence_mae": 26.9637,
+      "arousal_mae": 30.5473,
+      "overall_mse": 1595.1795,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag0_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7555,
+      "valence_mae": 26.9637,
+      "arousal_mae": 30.5473,
+      "overall_mse": 1595.1795,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7556,
+      "valence_mae": 26.9588,
+      "arousal_mae": 30.5525,
+      "overall_mse": 1593.6766,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7556,
+      "valence_mae": 26.9588,
+      "arousal_mae": 30.5525,
+      "overall_mse": 1593.6766,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7557,
+      "valence_mae": 26.9856,
+      "arousal_mae": 30.5258,
+      "overall_mse": 1581.3981,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7558,
+      "valence_mae": 26.9931,
+      "arousal_mae": 30.5185,
+      "overall_mse": 1583.5105,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7559,
+      "valence_mae": 26.9951,
+      "arousal_mae": 30.5166,
+      "overall_mse": 1596.6701,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.756,
+      "valence_mae": 26.9934,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1595.1021,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag0_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7562,
+      "valence_mae": 26.9896,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1580.2697,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.997,
+      "arousal_mae": 30.5158,
+      "overall_mse": 1584.7582,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.9837,
+      "arousal_mae": 30.5291,
+      "overall_mse": 1593.0479,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag-1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7566,
+      "valence_mae": 26.9663,
+      "arousal_mae": 30.5468,
+      "overall_mse": 1596.2652,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag-1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7566,
+      "valence_mae": 26.9663,
+      "arousal_mae": 30.5468,
+      "overall_mse": 1596.2652,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7572,
+      "valence_mae": 26.989,
+      "arousal_mae": 30.5255,
+      "overall_mse": 1593.4409,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-2_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7575,
+      "valence_mae": 26.9979,
+      "arousal_mae": 30.5171,
+      "overall_mse": 1596.1111,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7576,
+      "valence_mae": 26.9981,
+      "arousal_mae": 30.5171,
+      "overall_mse": 1583.0096,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag0_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7577,
+      "valence_mae": 26.9927,
+      "arousal_mae": 30.5228,
+      "overall_mse": 1594.0613,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7578,
+      "valence_mae": 26.9652,
+      "arousal_mae": 30.5504,
+      "overall_mse": 1594.0564,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7578,
+      "valence_mae": 26.9652,
+      "arousal_mae": 30.5504,
+      "overall_mse": 1594.0564,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[huber15]",
+      "overall_mae": 28.7581,
+      "valence_mae": 26.9794,
+      "arousal_mae": 30.5369,
+      "overall_mse": 1595.806,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-3_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7583,
+      "valence_mae": 27.0028,
+      "arousal_mae": 30.5139,
+      "overall_mse": 1586.6492,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag0_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7583,
+      "valence_mae": 26.9935,
+      "arousal_mae": 30.5231,
+      "overall_mse": 1582.2382,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag-1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7588,
+      "valence_mae": 26.9703,
+      "arousal_mae": 30.5473,
+      "overall_mse": 1595.6894,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag-1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7588,
+      "valence_mae": 26.9703,
+      "arousal_mae": 30.5473,
+      "overall_mse": 1595.6894,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag0_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7592,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.5489,
+      "overall_mse": 1594.6567,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag0_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7592,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.5489,
+      "overall_mse": 1594.6567,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-2_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7594,
+      "valence_mae": 27.0014,
+      "arousal_mae": 30.5173,
+      "overall_mse": 1584.3674,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim20_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7595,
+      "valence_mae": 26.9865,
+      "arousal_mae": 30.5324,
+      "overall_mse": 1585.8326,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim20_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7596,
+      "valence_mae": 26.9909,
+      "arousal_mae": 30.5284,
+      "overall_mse": 1587.0206,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-3_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7596,
+      "valence_mae": 27.0048,
+      "arousal_mae": 30.5144,
+      "overall_mse": 1585.954,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7602,
+      "valence_mae": 26.9994,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1583.1588,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7604,
+      "valence_mae": 26.9719,
+      "arousal_mae": 30.5489,
+      "overall_mse": 1598.2932,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag-2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7604,
+      "valence_mae": 26.9727,
+      "arousal_mae": 30.5481,
+      "overall_mse": 1597.2823,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7604,
+      "valence_mae": 26.9719,
+      "arousal_mae": 30.5489,
+      "overall_mse": 1598.2932,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag-2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7604,
+      "valence_mae": 26.9727,
+      "arousal_mae": 30.5481,
+      "overall_mse": 1597.2823,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7606,
+      "valence_mae": 26.9996,
+      "arousal_mae": 30.5217,
+      "overall_mse": 1581.0996,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7608,
+      "valence_mae": 27.0028,
+      "arousal_mae": 30.5188,
+      "overall_mse": 1582.3813,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Pattern098_RobustMeanRefs[trim15]",
+      "overall_mae": 28.7609,
+      "valence_mae": 26.9784,
+      "arousal_mae": 30.5434,
+      "overall_mse": 1597.7955,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7611,
+      "valence_mae": 26.9929,
+      "arousal_mae": 30.5293,
+      "overall_mse": 1578.8974,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag-2_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7612,
+      "valence_mae": 26.9747,
+      "arousal_mae": 30.5477,
+      "overall_mse": 1596.6779,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag-2_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7612,
+      "valence_mae": 26.9747,
+      "arousal_mae": 30.5477,
+      "overall_mse": 1596.6779,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-3_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7612,
+      "valence_mae": 27.0048,
+      "arousal_mae": 30.5176,
+      "overall_mse": 1597.6428,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-3_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7613,
+      "valence_mae": 27.0074,
+      "arousal_mae": 30.5152,
+      "overall_mse": 1585.5318,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-3_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7617,
+      "valence_mae": 27.006,
+      "arousal_mae": 30.5174,
+      "overall_mse": 1597.0541,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-3_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7618,
+      "valence_mae": 27.0048,
+      "arousal_mae": 30.5188,
+      "overall_mse": 1598.6345,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-3_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7623,
+      "valence_mae": 27.0079,
+      "arousal_mae": 30.5166,
+      "overall_mse": 1584.2872,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim20_lag-3_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7625,
+      "valence_mae": 26.9992,
+      "arousal_mae": 30.5257,
+      "overall_mse": 1588.1643,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim15_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7628,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.5324,
+      "overall_mse": 1583.7435,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim20_lag0_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.763,
+      "valence_mae": 26.9868,
+      "arousal_mae": 30.5391,
+      "overall_mse": 1584.6411,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7631,
+      "valence_mae": 26.9967,
+      "arousal_mae": 30.5295,
+      "overall_mse": 1593.024,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7632,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.5535,
+      "overall_mse": 1593.6004,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7632,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.5535,
+      "overall_mse": 1593.6004,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim20_lag-2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7636,
+      "valence_mae": 26.9965,
+      "arousal_mae": 30.5308,
+      "overall_mse": 1586.4524,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag0_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7636,
+      "valence_mae": 27.0007,
+      "arousal_mae": 30.5265,
+      "overall_mse": 1579.801,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-2_smooth15_Pattern098_w0p25",
+      "overall_mae": 28.7637,
+      "valence_mae": 27.0072,
+      "arousal_mae": 30.5201,
+      "overall_mse": 1594.8333,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-3_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7638,
+      "valence_mae": 27.0102,
+      "arousal_mae": 30.5173,
+      "overall_mse": 1583.6149,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-2_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.764,
+      "valence_mae": 27.0076,
+      "arousal_mae": 30.5205,
+      "overall_mse": 1582.0109,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_median_lag2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7641,
+      "valence_mae": 26.9719,
+      "arousal_mae": 30.5563,
+      "overall_mse": 1592.9398,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag0_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7641,
+      "valence_mae": 27.0015,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1581.9403,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q50_lag2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7641,
+      "valence_mae": 26.9719,
+      "arousal_mae": 30.5563,
+      "overall_mse": 1592.9398,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim15_lag-3_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7643,
+      "valence_mae": 27.0001,
+      "arousal_mae": 30.5285,
+      "overall_mse": 1584.9221,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim15_lag-1_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7644,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.5381,
+      "overall_mse": 1582.5431,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7645,
+      "valence_mae": 26.9943,
+      "arousal_mae": 30.5346,
+      "overall_mse": 1580.0922,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_trim20_lag-3_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7646,
+      "valence_mae": 27.0024,
+      "arousal_mae": 30.5269,
+      "overall_mse": 1587.5423,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag1_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7648,
+      "valence_mae": 26.9988,
+      "arousal_mae": 30.5308,
+      "overall_mse": 1580.9849,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-4_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.765,
+      "valence_mae": 27.0156,
+      "arousal_mae": 30.5144,
+      "overall_mse": 1587.0874,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber15_lag-4_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7651,
+      "valence_mae": 27.0153,
+      "arousal_mae": 30.5148,
+      "overall_mse": 1587.8032,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-3_smooth15_Pattern098_w0p25",
+      "overall_mae": 28.7651,
+      "valence_mae": 27.0117,
+      "arousal_mae": 30.5184,
+      "overall_mse": 1595.737,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_huber20_lag-1_smooth11_Pattern098_w0p25",
+      "overall_mae": 28.7652,
+      "valence_mae": 27.0063,
+      "arousal_mae": 30.5242,
+      "overall_mse": 1580.7709,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_winsor20_lag-3_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7653,
+      "valence_mae": 27.0089,
+      "arousal_mae": 30.5218,
+      "overall_mse": 1581.7514,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_winsor20_lag-2_smooth5_Pattern098_w0p25",
+      "overall_mae": 28.7653,
+      "valence_mae": 27.0036,
+      "arousal_mae": 30.5269,
+      "overall_mse": 1580.5487,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag-1_smooth15_Pattern098_w0p25",
+      "overall_mae": 28.7653,
+      "valence_mae": 27.0062,
+      "arousal_mae": 30.5244,
+      "overall_mse": 1593.9303,
+      "notes": "Robust video-time aggregation prior."
+    },
+    {
+      "method": "Blend_q55_lag2_smooth9_Pattern098_w0p25",
+      "overall_mae": 28.7654,
+      "valence_mae": 26.9964,
+      "arousal_mae": 30.5345,
+      "overall_mse": 1592.37,
+      "notes": "Robust video-time aggregation prior."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "huber20_lag-4_smooth9",
+          "overall_mae": 25.7576,
+          "valence_mae": 24.7116,
+          "arousal_mae": 26.8036,
+          "overall_mse": 1203.9808,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth11",
+          "overall_mae": 25.7598,
+          "valence_mae": 24.726,
+          "arousal_mae": 26.7936,
+          "overall_mse": 1201.9735,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth15]",
+          "overall_mae": 25.7665,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.7809,
+          "overall_mse": 1204.4912,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth5",
+          "overall_mae": 25.7678,
+          "valence_mae": 24.7041,
+          "arousal_mae": 26.8315,
+          "overall_mse": 1208.0538,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth11]",
+          "overall_mae": 25.7729,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.7936,
+          "overall_mse": 1206.7451,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth21]",
+          "overall_mae": 25.7766,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.801,
+          "overall_mse": 1201.4481,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth9]",
+          "overall_mae": 25.7779,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.8036,
+          "overall_mse": 1207.8335,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth15",
+          "overall_mae": 25.7799,
+          "valence_mae": 24.7789,
+          "arousal_mae": 26.7809,
+          "overall_mse": 1198.2089,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 25.7901,
+          "valence_mae": 24.6835,
+          "arousal_mae": 26.8967,
+          "overall_mse": 1206.9707,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth5]",
+          "overall_mae": 25.7919,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.8315,
+          "overall_mse": 1209.8781,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 25.792,
+          "valence_mae": 24.6948,
+          "arousal_mae": 26.8892,
+          "overall_mse": 1205.5748,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 25.7944,
+          "valence_mae": 24.6761,
+          "arousal_mae": 26.9126,
+          "overall_mse": 1209.6261,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-4_smooth9",
+          "overall_mae": 25.8039,
+          "valence_mae": 24.6668,
+          "arousal_mae": 26.941,
+          "overall_mse": 1214.3029,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-4_smooth11",
+          "overall_mae": 25.8049,
+          "valence_mae": 24.6802,
+          "arousal_mae": 26.9296,
+          "overall_mse": 1212.1555,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 25.8082,
+          "valence_mae": 24.7356,
+          "arousal_mae": 26.8808,
+          "overall_mse": 1202.7944,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-4_smooth5",
+          "overall_mae": 25.8148,
+          "valence_mae": 24.6581,
+          "arousal_mae": 26.9716,
+          "overall_mse": 1218.61,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-4_smooth15",
+          "overall_mae": 25.8235,
+          "valence_mae": 24.7299,
+          "arousal_mae": 26.9172,
+          "overall_mse": 1208.0714,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth9",
+          "overall_mae": 25.8273,
+          "valence_mae": 24.7122,
+          "arousal_mae": 26.9424,
+          "overall_mse": 1201.9142,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth5",
+          "overall_mae": 25.8305,
+          "valence_mae": 24.6923,
+          "arousal_mae": 26.9687,
+          "overall_mse": 1205.7198,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth15]",
+          "overall_mae": 25.8347,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9172,
+          "overall_mse": 1212.4404,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth11",
+          "overall_mae": 25.835,
+          "valence_mae": 24.7365,
+          "arousal_mae": 26.9335,
+          "overall_mse": 1200.0892,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 25.8375,
+          "valence_mae": 24.6567,
+          "arousal_mae": 27.0183,
+          "overall_mse": 1216.0122,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 25.8397,
+          "valence_mae": 24.668,
+          "arousal_mae": 27.0113,
+          "overall_mse": 1214.5262,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth15]",
+          "overall_mae": 25.8399,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9276,
+          "overall_mse": 1206.9374,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth11]",
+          "overall_mae": 25.8409,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9296,
+          "overall_mse": 1214.8287,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 25.8414,
+          "valence_mae": 24.648,
+          "arousal_mae": 27.0348,
+          "overall_mse": 1218.8156,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-4_smooth15]",
+          "overall_mae": 25.8421,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9319,
+          "overall_mse": 1189.3734,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-4_smooth11]",
+          "overall_mae": 25.8423,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9324,
+          "overall_mse": 1191.1495,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth11]",
+          "overall_mae": 25.8429,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9335,
+          "overall_mse": 1209.137,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth21]",
+          "overall_mae": 25.8455,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9389,
+          "overall_mse": 1209.2493,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth9]",
+          "overall_mae": 25.8466,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.941,
+          "overall_mse": 1215.986,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth9]",
+          "overall_mae": 25.8473,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9424,
+          "overall_mse": 1210.2189,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-4_smooth9]",
+          "overall_mae": 25.8474,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9426,
+          "overall_mse": 1192.0775,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 25.8489,
+          "valence_mae": 24.6918,
+          "arousal_mae": 27.0059,
+          "overall_mse": 1206.392,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth5_Pattern098_w0p75",
+          "overall_mae": 25.8493,
+          "valence_mae": 24.6767,
+          "arousal_mae": 27.022,
+          "overall_mse": 1208.8824,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 25.8541,
+          "valence_mae": 24.7096,
+          "arousal_mae": 26.9986,
+          "overall_mse": 1205.0988,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 25.8554,
+          "valence_mae": 24.707,
+          "arousal_mae": 27.0038,
+          "overall_mse": 1211.5414,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth21]",
+          "overall_mae": 25.8568,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9614,
+          "overall_mse": 1204.0391,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth9_Pattern098_w0p5",
+          "overall_mae": 25.8569,
+          "valence_mae": 24.6773,
+          "arousal_mae": 27.0365,
+          "overall_mse": 1213.9092,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth5_Pattern098_w0p5",
+          "overall_mae": 25.8571,
+          "valence_mae": 24.6711,
+          "arousal_mae": 27.0431,
+          "overall_mse": 1215.4132,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth21",
+          "overall_mae": 25.8582,
+          "valence_mae": 24.9155,
+          "arousal_mae": 26.801,
+          "overall_mse": 1194.1652,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth11_Pattern098_w0p5",
+          "overall_mae": 25.8594,
+          "valence_mae": 24.6857,
+          "arousal_mae": 27.0331,
+          "overall_mse": 1213.0516,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth5]",
+          "overall_mae": 25.8604,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9687,
+          "overall_mse": 1212.2411,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-4_smooth21]",
+          "overall_mae": 25.8611,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9699,
+          "overall_mse": 1187.2306,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth5]",
+          "overall_mae": 25.8619,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9716,
+          "overall_mse": 1218.1532,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-4_smooth5]",
+          "overall_mae": 25.863,
+          "valence_mae": 24.7522,
+          "arousal_mae": 26.9738,
+          "overall_mse": 1193.9044,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth21_Pattern098_w0p75",
+          "overall_mae": 25.8678,
+          "valence_mae": 24.8395,
+          "arousal_mae": 26.8962,
+          "overall_mse": 1199.3683,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth15",
+          "overall_mae": 25.8684,
+          "valence_mae": 24.8091,
+          "arousal_mae": 26.9276,
+          "overall_mse": 1196.7941,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth15_Pattern098_w0p5",
+          "overall_mae": 25.8718,
+          "valence_mae": 24.7146,
+          "arousal_mae": 27.0289,
+          "overall_mse": 1211.2269,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-3_smooth9",
+          "overall_mae": 25.8762,
+          "valence_mae": 24.6674,
+          "arousal_mae": 27.085,
+          "overall_mse": 1212.5839,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth15_Pattern098_w0p75",
+          "overall_mae": 25.8796,
+          "valence_mae": 24.7652,
+          "arousal_mae": 26.9941,
+          "overall_mse": 1202.5511,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-3_smooth5",
+          "overall_mae": 25.8811,
+          "valence_mae": 24.6477,
+          "arousal_mae": 27.1145,
+          "overall_mse": 1216.63,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-3_smooth11",
+          "overall_mae": 25.883,
+          "valence_mae": 24.691,
+          "arousal_mae": 27.075,
+          "overall_mse": 1210.6188,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth9_Pattern098_w0p5",
+          "overall_mae": 25.8951,
+          "valence_mae": 24.6637,
+          "arousal_mae": 27.1265,
+          "overall_mse": 1220.8033,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth5_Pattern098_w0p5",
+          "overall_mae": 25.8954,
+          "valence_mae": 24.6569,
+          "arousal_mae": 27.1338,
+          "overall_mse": 1222.3879,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth11_Pattern098_w0p5",
+          "overall_mae": 25.8975,
+          "valence_mae": 24.6718,
+          "arousal_mae": 27.1232,
+          "overall_mse": 1219.896,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 25.8981,
+          "valence_mae": 24.6651,
+          "arousal_mae": 27.1311,
+          "overall_mse": 1215.6827,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-3_smooth5_Pattern098_w0p75",
+          "overall_mae": 25.8985,
+          "valence_mae": 24.6495,
+          "arousal_mae": 27.1476,
+          "overall_mse": 1218.3253,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth5_Pattern098_w0p5",
+          "overall_mae": 25.899,
+          "valence_mae": 24.6786,
+          "arousal_mae": 27.1195,
+          "overall_mse": 1215.5885,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[winsor5_lag-4_smooth11]",
+          "overall_mae": 25.8991,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.046,
+          "overall_mse": 1197.8458,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth9_Pattern098_w0p5",
+          "overall_mae": 25.9005,
+          "valence_mae": 24.6893,
+          "arousal_mae": 27.1117,
+          "overall_mse": 1214.171,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[winsor5_lag-4_smooth15]",
+          "overall_mae": 25.9008,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0495,
+          "overall_mse": 1195.8627,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-4_smooth21",
+          "overall_mae": 25.9011,
+          "valence_mae": 24.8633,
+          "arousal_mae": 26.9389,
+          "overall_mse": 1203.569,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[winsor5_lag-4_smooth9]",
+          "overall_mae": 25.9027,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0532,
+          "overall_mse": 1198.8721,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 25.9038,
+          "valence_mae": 24.6829,
+          "arousal_mae": 27.1247,
+          "overall_mse": 1214.2982,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth11_Pattern098_w0p5",
+          "overall_mae": 25.905,
+          "valence_mae": 24.7016,
+          "arousal_mae": 27.1084,
+          "overall_mse": 1213.3589,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth15_Pattern098_w0p5",
+          "overall_mae": 25.9094,
+          "valence_mae": 24.6998,
+          "arousal_mae": 27.119,
+          "overall_mse": 1217.9581,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth21_Pattern098_w0p5",
+          "overall_mae": 25.9102,
+          "valence_mae": 24.7837,
+          "arousal_mae": 27.0367,
+          "overall_mse": 1208.6807,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth15]",
+          "overall_mae": 25.9105,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0688,
+          "overall_mse": 1215.0726,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth11]",
+          "overall_mae": 25.9136,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.075,
+          "overall_mse": 1217.4155,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-4_smooth21_Pattern098_w0p75",
+          "overall_mae": 25.914,
+          "valence_mae": 24.8087,
+          "arousal_mae": 27.0193,
+          "overall_mse": 1207.8296,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber15_lag-3_smooth15",
+          "overall_mae": 25.9146,
+          "valence_mae": 24.7604,
+          "arousal_mae": 27.0688,
+          "overall_mse": 1206.9972,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth5",
+          "overall_mae": 25.916,
+          "valence_mae": 24.7131,
+          "arousal_mae": 27.1188,
+          "overall_mse": 1205.29,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-2_smooth5_Pattern098_w0p75",
+          "overall_mae": 25.9171,
+          "valence_mae": 24.6972,
+          "arousal_mae": 27.1369,
+          "overall_mse": 1209.0415,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[winsor5_lag-4_smooth5]",
+          "overall_mae": 25.9177,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0832,
+          "overall_mse": 1200.8961,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth9]",
+          "overall_mae": 25.9186,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.085,
+          "overall_mse": 1218.564,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[drop1_lag-4_smooth11]",
+          "overall_mae": 25.9187,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0853,
+          "overall_mse": 1204.0551,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[trim5_lag-4_smooth11]",
+          "overall_mae": 25.9187,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0853,
+          "overall_mse": 1204.0551,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth11]",
+          "overall_mae": 25.9201,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.088,
+          "overall_mse": 1211.996,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth9",
+          "overall_mae": 25.9205,
+          "valence_mae": 24.7475,
+          "arousal_mae": 27.0935,
+          "overall_mse": 1201.6173,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[drop1_lag-4_smooth15]",
+          "overall_mae": 25.9208,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0895,
+          "overall_mse": 1202.0421,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[trim5_lag-4_smooth15]",
+          "overall_mae": 25.9208,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0895,
+          "overall_mse": 1202.0421,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[winsor5_lag-4_smooth21]",
+          "overall_mae": 25.9212,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0903,
+          "overall_mse": 1193.424,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-3_smooth11]",
+          "overall_mae": 25.9214,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0906,
+          "overall_mse": 1193.4662,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-2_smooth9_Pattern098_w0p75",
+          "overall_mae": 25.922,
+          "valence_mae": 24.7229,
+          "arousal_mae": 27.1211,
+          "overall_mse": 1206.6195,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[drop1_lag-4_smooth9]",
+          "overall_mae": 25.9221,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0921,
+          "overall_mse": 1205.071,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[trim5_lag-4_smooth9]",
+          "overall_mae": 25.9221,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0921,
+          "overall_mse": 1205.071,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth15_Pattern098_w0p5",
+          "overall_mae": 25.9228,
+          "valence_mae": 24.7388,
+          "arousal_mae": 27.1067,
+          "overall_mse": 1211.61,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth9]",
+          "overall_mae": 25.9228,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0935,
+          "overall_mse": 1213.0724,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth15]",
+          "overall_mae": 25.9228,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0934,
+          "overall_mse": 1209.8813,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-3_smooth9]",
+          "overall_mae": 25.923,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.0937,
+          "overall_mse": 1194.3229,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-3_smooth15]",
+          "overall_mae": 25.9264,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.1006,
+          "overall_mse": 1191.8389,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth21]",
+          "overall_mae": 25.9279,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.1037,
+          "overall_mse": 1212.0032,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag-3_smooth15_Pattern098_w0p75",
+          "overall_mae": 25.929,
+          "valence_mae": 24.7367,
+          "arousal_mae": 27.1212,
+          "overall_mse": 1211.5372,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth5_Pattern098_w0p5",
+          "overall_mae": 25.9304,
+          "valence_mae": 24.8102,
+          "arousal_mae": 27.0506,
+          "overall_mse": 1193.8926,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-2_smooth11_Pattern098_w0p75",
+          "overall_mae": 25.9321,
+          "valence_mae": 24.7476,
+          "arousal_mae": 27.1166,
+          "overall_mse": 1205.4288,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth9_Pattern098_w0p5",
+          "overall_mae": 25.9326,
+          "valence_mae": 24.8237,
+          "arousal_mae": 27.0414,
+          "overall_mse": 1192.8622,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth5]",
+          "overall_mae": 25.9334,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.1145,
+          "overall_mse": 1220.703,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth11",
+          "overall_mae": 25.9341,
+          "valence_mae": 24.7801,
+          "arousal_mae": 27.088,
+          "overall_mse": 1199.9652,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[mean_lag-3_smooth5]",
+          "overall_mae": 25.9348,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.1174,
+          "overall_mse": 1196.0515,
+          "notes": "Robust video-time aggregation prior."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "winsor20_lag2_smooth5",
+          "overall_mae": 36.4683,
+          "valence_mae": 32.5348,
+          "arousal_mae": 40.4019,
+          "overall_mse": 2391.3303,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag2_smooth5",
+          "overall_mae": 36.4702,
+          "valence_mae": 32.5357,
+          "arousal_mae": 40.4047,
+          "overall_mse": 2363.3567,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag2_smooth5",
+          "overall_mae": 36.4702,
+          "valence_mae": 32.5357,
+          "arousal_mae": 40.4047,
+          "overall_mse": 2363.3567,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag2_smooth5",
+          "overall_mae": 36.4734,
+          "valence_mae": 32.5696,
+          "arousal_mae": 40.3773,
+          "overall_mse": 2349.2771,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag2_smooth5",
+          "overall_mae": 36.4878,
+          "valence_mae": 32.6056,
+          "arousal_mae": 40.37,
+          "overall_mse": 2366.1792,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag2_smooth5",
+          "overall_mae": 36.497,
+          "valence_mae": 32.6128,
+          "arousal_mae": 40.3813,
+          "overall_mse": 2378.6484,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag2_smooth5",
+          "overall_mae": 36.5044,
+          "valence_mae": 32.5432,
+          "arousal_mae": 40.4655,
+          "overall_mse": 2385.0569,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag2_smooth5",
+          "overall_mae": 36.5044,
+          "valence_mae": 32.5432,
+          "arousal_mae": 40.4655,
+          "overall_mse": 2385.0569,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag2_smooth9",
+          "overall_mae": 36.5166,
+          "valence_mae": 32.6048,
+          "arousal_mae": 40.4284,
+          "overall_mse": 2362.7314,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag2_smooth9",
+          "overall_mae": 36.5166,
+          "valence_mae": 32.6048,
+          "arousal_mae": 40.4284,
+          "overall_mse": 2362.7314,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag2_smooth9",
+          "overall_mae": 36.5183,
+          "valence_mae": 32.6021,
+          "arousal_mae": 40.4346,
+          "overall_mse": 2390.6589,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag2_smooth9",
+          "overall_mae": 36.5188,
+          "valence_mae": 32.639,
+          "arousal_mae": 40.3985,
+          "overall_mse": 2348.5967,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim15_lag2_smooth5",
+          "overall_mae": 36.5284,
+          "valence_mae": 32.5101,
+          "arousal_mae": 40.5468,
+          "overall_mse": 2400.2605,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag1_smooth5",
+          "overall_mae": 36.5296,
+          "valence_mae": 32.5994,
+          "arousal_mae": 40.4597,
+          "overall_mse": 2355.6604,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag2_smooth9",
+          "overall_mae": 36.5373,
+          "valence_mae": 32.6769,
+          "arousal_mae": 40.3977,
+          "overall_mse": 2365.5671,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag1_smooth5",
+          "overall_mae": 36.539,
+          "valence_mae": 32.5809,
+          "arousal_mae": 40.497,
+          "overall_mse": 2370.4275,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag1_smooth5",
+          "overall_mae": 36.539,
+          "valence_mae": 32.5809,
+          "arousal_mae": 40.497,
+          "overall_mse": 2370.4275,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag2_smooth11",
+          "overall_mae": 36.5467,
+          "valence_mae": 32.6438,
+          "arousal_mae": 40.4495,
+          "overall_mse": 2362.8005,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag2_smooth11",
+          "overall_mae": 36.5467,
+          "valence_mae": 32.6438,
+          "arousal_mae": 40.4495,
+          "overall_mse": 2362.8005,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag1_smooth5",
+          "overall_mae": 36.5478,
+          "valence_mae": 32.6388,
+          "arousal_mae": 40.4567,
+          "overall_mse": 2372.7234,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag2_smooth9",
+          "overall_mae": 36.5479,
+          "valence_mae": 32.6808,
+          "arousal_mae": 40.415,
+          "overall_mse": 2378.158,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag2_smooth11",
+          "overall_mae": 36.5481,
+          "valence_mae": 32.6785,
+          "arousal_mae": 40.4177,
+          "overall_mse": 2348.6909,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag2_smooth11",
+          "overall_mae": 36.5492,
+          "valence_mae": 32.6403,
+          "arousal_mae": 40.4582,
+          "overall_mse": 2390.593,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag2_smooth9",
+          "overall_mae": 36.5528,
+          "valence_mae": 32.6119,
+          "arousal_mae": 40.4936,
+          "overall_mse": 2384.3601,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag2_smooth9",
+          "overall_mae": 36.5528,
+          "valence_mae": 32.6119,
+          "arousal_mae": 40.4936,
+          "overall_mse": 2384.3601,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag1_smooth5",
+          "overall_mae": 36.5582,
+          "valence_mae": 32.6075,
+          "arousal_mae": 40.5088,
+          "overall_mse": 2399.3958,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim20_lag2_smooth5",
+          "overall_mae": 36.5643,
+          "valence_mae": 32.4746,
+          "arousal_mae": 40.6541,
+          "overall_mse": 2414.9651,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag2_smooth11",
+          "overall_mae": 36.5687,
+          "valence_mae": 32.7163,
+          "arousal_mae": 40.421,
+          "overall_mse": 2365.7112,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag1_smooth5",
+          "overall_mae": 36.5721,
+          "valence_mae": 32.6626,
+          "arousal_mae": 40.4815,
+          "overall_mse": 2386.0203,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim15_lag2_smooth9",
+          "overall_mae": 36.5736,
+          "valence_mae": 32.5755,
+          "arousal_mae": 40.5718,
+          "overall_mse": 2399.3186,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag2_smooth11",
+          "overall_mae": 36.5798,
+          "valence_mae": 32.7193,
+          "arousal_mae": 40.4403,
+          "overall_mse": 2378.2732,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag2_smooth11",
+          "overall_mae": 36.5831,
+          "valence_mae": 32.6508,
+          "arousal_mae": 40.5153,
+          "overall_mse": 2384.3411,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag2_smooth11",
+          "overall_mae": 36.5831,
+          "valence_mae": 32.6508,
+          "arousal_mae": 40.5153,
+          "overall_mse": 2384.3411,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag1_smooth9",
+          "overall_mae": 36.5834,
+          "valence_mae": 32.6779,
+          "arousal_mae": 40.4889,
+          "overall_mse": 2355.2888,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag1_smooth5",
+          "overall_mae": 36.5897,
+          "valence_mae": 32.6095,
+          "arousal_mae": 40.5698,
+          "overall_mse": 2392.9619,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag1_smooth5",
+          "overall_mae": 36.5897,
+          "valence_mae": 32.6095,
+          "arousal_mae": 40.5698,
+          "overall_mse": 2392.9619,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag1_smooth9",
+          "overall_mae": 36.591,
+          "valence_mae": 32.6558,
+          "arousal_mae": 40.5263,
+          "overall_mse": 2370.0325,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag1_smooth9",
+          "overall_mae": 36.591,
+          "valence_mae": 32.6558,
+          "arousal_mae": 40.5263,
+          "overall_mse": 2370.0325,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim15_lag2_smooth11",
+          "overall_mae": 36.6016,
+          "valence_mae": 32.6127,
+          "arousal_mae": 40.5905,
+          "overall_mse": 2399.1013,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag1_smooth9",
+          "overall_mae": 36.6039,
+          "valence_mae": 32.7188,
+          "arousal_mae": 40.489,
+          "overall_mse": 2372.4402,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim20_lag2_smooth9",
+          "overall_mae": 36.6052,
+          "valence_mae": 32.5367,
+          "arousal_mae": 40.6738,
+          "overall_mse": 2413.5674,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag1_smooth9",
+          "overall_mae": 36.6064,
+          "valence_mae": 32.6716,
+          "arousal_mae": 40.5412,
+          "overall_mse": 2398.7476,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 36.6109,
+          "valence_mae": 31.7197,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2417.0012,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag2_smooth15",
+          "overall_mae": 36.6154,
+          "valence_mae": 32.7289,
+          "arousal_mae": 40.5019,
+          "overall_mse": 2363.3792,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag2_smooth15",
+          "overall_mae": 36.6154,
+          "valence_mae": 32.7289,
+          "arousal_mae": 40.5019,
+          "overall_mse": 2363.3792,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag2_smooth15",
+          "overall_mae": 36.6164,
+          "valence_mae": 32.7658,
+          "arousal_mae": 40.467,
+          "overall_mse": 2349.4033,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag1_smooth11",
+          "overall_mae": 36.617,
+          "valence_mae": 32.723,
+          "arousal_mae": 40.511,
+          "overall_mse": 2355.4607,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag2_smooth15",
+          "overall_mae": 36.6174,
+          "valence_mae": 32.7206,
+          "arousal_mae": 40.5141,
+          "overall_mse": 2390.696,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag0_smooth5",
+          "overall_mae": 36.6215,
+          "valence_mae": 32.6779,
+          "arousal_mae": 40.5651,
+          "overall_mse": 2364.3367,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth9]_A[Pattern098]",
+          "overall_mae": 36.6223,
+          "valence_mae": 31.7425,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2414.9727,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag1_smooth11",
+          "overall_mae": 36.6243,
+          "valence_mae": 32.6994,
+          "arousal_mae": 40.5492,
+          "overall_mse": 2370.1414,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag1_smooth11",
+          "overall_mae": 36.6243,
+          "valence_mae": 32.6994,
+          "arousal_mae": 40.5492,
+          "overall_mse": 2370.1414,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag1_smooth9",
+          "overall_mae": 36.6258,
+          "valence_mae": 32.7345,
+          "arousal_mae": 40.5171,
+          "overall_mse": 2385.7288,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6285,
+          "valence_mae": 32.6516,
+          "arousal_mae": 40.6055,
+          "overall_mse": 2368.4524,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim20_lag2_smooth11",
+          "overall_mae": 36.6307,
+          "valence_mae": 32.5725,
+          "arousal_mae": 40.6889,
+          "overall_mse": 2413.0771,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim15_lag1_smooth5",
+          "overall_mae": 36.6316,
+          "valence_mae": 32.6003,
+          "arousal_mae": 40.6629,
+          "overall_mse": 2409.1067,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth11]_A[Pattern098]",
+          "overall_mae": 36.6328,
+          "valence_mae": 31.7636,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2414.2051,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_drop1_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6365,
+          "valence_mae": 32.6446,
+          "arousal_mae": 40.6285,
+          "overall_mse": 2380.8792,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_trim5_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6365,
+          "valence_mae": 32.6446,
+          "arousal_mae": 40.6285,
+          "overall_mse": 2380.8792,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag1_smooth11",
+          "overall_mae": 36.6384,
+          "valence_mae": 32.7114,
+          "arousal_mae": 40.5654,
+          "overall_mse": 2398.6606,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag1_smooth11",
+          "overall_mae": 36.639,
+          "valence_mae": 32.7633,
+          "arousal_mae": 40.5147,
+          "overall_mse": 2372.6604,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag1_smooth9",
+          "overall_mae": 36.6394,
+          "valence_mae": 32.6798,
+          "arousal_mae": 40.599,
+          "overall_mse": 2392.3972,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag1_smooth9",
+          "overall_mae": 36.6394,
+          "valence_mae": 32.6798,
+          "arousal_mae": 40.599,
+          "overall_mse": 2392.3972,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag2_smooth15",
+          "overall_mae": 36.6396,
+          "valence_mae": 32.8013,
+          "arousal_mae": 40.478,
+          "overall_mse": 2366.4673,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor20_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6416,
+          "valence_mae": 32.6501,
+          "arousal_mae": 40.633,
+          "overall_mse": 2403.0049,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag0_smooth5",
+          "overall_mae": 36.6454,
+          "valence_mae": 32.6771,
+          "arousal_mae": 40.6137,
+          "overall_mse": 2379.8772,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag0_smooth5",
+          "overall_mae": 36.6454,
+          "valence_mae": 32.6771,
+          "arousal_mae": 40.6137,
+          "overall_mse": 2379.8772,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag0_smooth5",
+          "overall_mae": 36.6465,
+          "valence_mae": 32.724,
+          "arousal_mae": 40.569,
+          "overall_mse": 2381.6648,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor10_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6468,
+          "valence_mae": 32.6935,
+          "arousal_mae": 40.6,
+          "overall_mse": 2382.084,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag2_smooth15",
+          "overall_mae": 36.6511,
+          "valence_mae": 32.7332,
+          "arousal_mae": 40.569,
+          "overall_mse": 2384.6482,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag2_smooth15",
+          "overall_mae": 36.6511,
+          "valence_mae": 32.7332,
+          "arousal_mae": 40.569,
+          "overall_mse": 2384.6482,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth5",
+          "overall_mae": 36.6524,
+          "valence_mae": 32.4292,
+          "arousal_mae": 40.8756,
+          "overall_mse": 2452.0662,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth5",
+          "overall_mae": 36.6524,
+          "valence_mae": 32.4292,
+          "arousal_mae": 40.8756,
+          "overall_mse": 2452.0662,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag2_smooth15",
+          "overall_mae": 36.653,
+          "valence_mae": 32.8051,
+          "arousal_mae": 40.501,
+          "overall_mse": 2378.8674,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth15]_A[Pattern098]",
+          "overall_mae": 36.656,
+          "valence_mae": 31.8099,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2412.9275,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor15_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6567,
+          "valence_mae": 32.7013,
+          "arousal_mae": 40.612,
+          "overall_mse": 2392.2205,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag1_smooth11",
+          "overall_mae": 36.6599,
+          "valence_mae": 32.7768,
+          "arousal_mae": 40.5431,
+          "overall_mse": 2385.8508,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth9",
+          "overall_mae": 36.6605,
+          "valence_mae": 32.4629,
+          "arousal_mae": 40.858,
+          "overall_mse": 2446.6038,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth9",
+          "overall_mae": 36.6605,
+          "valence_mae": 32.4629,
+          "arousal_mae": 40.858,
+          "overall_mse": 2446.6038,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag2_smooth5",
+          "overall_mae": 36.6643,
+          "valence_mae": 32.8249,
+          "arousal_mae": 40.5036,
+          "overall_mse": 2356.0374,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim15_lag2_smooth15",
+          "overall_mae": 36.6657,
+          "valence_mae": 32.6922,
+          "arousal_mae": 40.6392,
+          "overall_mse": 2398.9456,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 36.6668,
+          "valence_mae": 32.7074,
+          "arousal_mae": 40.6261,
+          "overall_mse": 2368.1321,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_drop2_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6698,
+          "valence_mae": 32.6597,
+          "arousal_mae": 40.6798,
+          "overall_mse": 2398.739,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_trim10_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6698,
+          "valence_mae": 32.6597,
+          "arousal_mae": 40.6798,
+          "overall_mse": 2398.739,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop2_lag1_smooth11",
+          "overall_mae": 36.6714,
+          "valence_mae": 32.7215,
+          "arousal_mae": 40.6213,
+          "overall_mse": 2392.3674,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim10_lag1_smooth11",
+          "overall_mae": 36.6714,
+          "valence_mae": 32.7215,
+          "arousal_mae": 40.6213,
+          "overall_mse": 2392.3674,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim15_lag1_smooth9",
+          "overall_mae": 36.6745,
+          "valence_mae": 32.6624,
+          "arousal_mae": 40.6866,
+          "overall_mse": 2408.1511,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth11",
+          "overall_mae": 36.6751,
+          "valence_mae": 32.4912,
+          "arousal_mae": 40.8591,
+          "overall_mse": 2444.3904,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag0_smooth9",
+          "overall_mae": 36.6751,
+          "valence_mae": 32.7516,
+          "arousal_mae": 40.5987,
+          "overall_mse": 2364.2312,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth11",
+          "overall_mae": 36.6751,
+          "valence_mae": 32.4912,
+          "arousal_mae": 40.8591,
+          "overall_mse": 2444.3904,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_drop1_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 36.6757,
+          "valence_mae": 32.6993,
+          "arousal_mae": 40.6521,
+          "overall_mse": 2380.5938,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_trim5_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 36.6757,
+          "valence_mae": 32.6993,
+          "arousal_mae": 40.6521,
+          "overall_mse": 2380.5938,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor20_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 36.6818,
+          "valence_mae": 32.7011,
+          "arousal_mae": 40.6624,
+          "overall_mse": 2402.7517,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim20_lag1_smooth5",
+          "overall_mae": 36.6823,
+          "valence_mae": 32.5869,
+          "arousal_mae": 40.7778,
+          "overall_mse": 2424.5217,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag1_smooth5_Pattern098_w0p75",
+          "overall_mae": 36.6867,
+          "valence_mae": 32.6943,
+          "arousal_mae": 40.6791,
+          "overall_mse": 2375.1257,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor10_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 36.6878,
+          "valence_mae": 32.7492,
+          "arousal_mae": 40.6265,
+          "overall_mse": 2381.8281,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag0_smooth5",
+          "overall_mae": 36.688,
+          "valence_mae": 32.7654,
+          "arousal_mae": 40.6106,
+          "overall_mse": 2395.9426,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag1_smooth5]_A[Pattern098]",
+          "overall_mae": 36.6887,
+          "valence_mae": 31.8752,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2424.1523,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor20_lag0_smooth5",
+          "overall_mae": 36.6888,
+          "valence_mae": 32.7335,
+          "arousal_mae": 40.644,
+          "overall_mse": 2409.9712,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim20_lag2_smooth15",
+          "overall_mae": 36.6892,
+          "valence_mae": 32.6475,
+          "arousal_mae": 40.7308,
+          "overall_mse": 2412.3547,
+          "notes": "Robust video-time aggregation prior."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "q55_lag2_smooth5",
+          "overall_mae": 25.9936,
+          "valence_mae": 23.0115,
+          "arousal_mae": 28.9757,
+          "overall_mse": 1260.9139,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag2_smooth9",
+          "overall_mae": 26.0187,
+          "valence_mae": 23.0661,
+          "arousal_mae": 28.9713,
+          "overall_mse": 1257.1681,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag2_smooth11",
+          "overall_mae": 26.0431,
+          "valence_mae": 23.1091,
+          "arousal_mae": 28.9771,
+          "overall_mse": 1256.0531,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag1_smooth5",
+          "overall_mae": 26.0986,
+          "valence_mae": 23.1797,
+          "arousal_mae": 29.0176,
+          "overall_mse": 1272.1852,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag2_smooth15",
+          "overall_mae": 26.106,
+          "valence_mae": 23.216,
+          "arousal_mae": 28.9959,
+          "overall_mse": 1254.5291,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag1_smooth9",
+          "overall_mae": 26.1145,
+          "valence_mae": 23.2245,
+          "arousal_mae": 29.0045,
+          "overall_mse": 1267.9462,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag1_smooth11",
+          "overall_mae": 26.1364,
+          "valence_mae": 23.2655,
+          "arousal_mae": 29.0072,
+          "overall_mse": 1266.4067,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.1863,
+          "valence_mae": 23.2294,
+          "arousal_mae": 29.1433,
+          "overall_mse": 1265.8116,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag1_smooth15",
+          "overall_mae": 26.1935,
+          "valence_mae": 23.3687,
+          "arousal_mae": 29.0183,
+          "overall_mse": 1263.9891,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.2156,
+          "valence_mae": 23.2816,
+          "arousal_mae": 29.1496,
+          "overall_mse": 1263.8833,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag2_smooth21",
+          "overall_mae": 26.2273,
+          "valence_mae": 23.4089,
+          "arousal_mae": 29.0456,
+          "overall_mse": 1253.3008,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.2396,
+          "valence_mae": 23.3197,
+          "arousal_mae": 29.1594,
+          "overall_mse": 1263.3688,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag0_smooth9",
+          "overall_mae": 26.243,
+          "valence_mae": 23.4281,
+          "arousal_mae": 29.0579,
+          "overall_mse": 1281.6609,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag0_smooth5",
+          "overall_mae": 26.2431,
+          "valence_mae": 23.4058,
+          "arousal_mae": 29.0804,
+          "overall_mse": 1286.7631,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag0_smooth11",
+          "overall_mae": 26.2567,
+          "valence_mae": 23.4588,
+          "arousal_mae": 29.0546,
+          "overall_mse": 1279.4374,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.2799,
+          "valence_mae": 23.3702,
+          "arousal_mae": 29.1896,
+          "overall_mse": 1276.1512,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.2985,
+          "valence_mae": 23.4107,
+          "arousal_mae": 29.1863,
+          "overall_mse": 1262.6493,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag1_smooth21",
+          "overall_mae": 26.3,
+          "valence_mae": 23.5435,
+          "arousal_mae": 29.0565,
+          "overall_mse": 1261.8123,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag0_smooth15",
+          "overall_mae": 26.3013,
+          "valence_mae": 23.5474,
+          "arousal_mae": 29.0553,
+          "overall_mse": 1275.8683,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.3015,
+          "valence_mae": 23.4156,
+          "arousal_mae": 29.1875,
+          "overall_mse": 1273.8105,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.3239,
+          "valence_mae": 23.4517,
+          "arousal_mae": 29.196,
+          "overall_mse": 1272.955,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.3762,
+          "valence_mae": 23.5366,
+          "arousal_mae": 29.2158,
+          "overall_mse": 1271.4956,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag0_smooth21",
+          "overall_mae": 26.3934,
+          "valence_mae": 23.7044,
+          "arousal_mae": 29.0825,
+          "overall_mse": 1272.5398,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.3973,
+          "valence_mae": 23.551,
+          "arousal_mae": 29.2436,
+          "overall_mse": 1288.3781,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth21_Pattern098_w0p75",
+          "overall_mae": 26.4002,
+          "valence_mae": 23.5664,
+          "arousal_mae": 29.2341,
+          "overall_mse": 1261.7289,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-1_smooth9",
+          "overall_mae": 26.4014,
+          "valence_mae": 23.674,
+          "arousal_mae": 29.1287,
+          "overall_mse": 1297.8998,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-1_smooth11",
+          "overall_mae": 26.4039,
+          "valence_mae": 23.6918,
+          "arousal_mae": 29.1161,
+          "overall_mse": 1294.9581,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.4084,
+          "valence_mae": 23.5801,
+          "arousal_mae": 29.2368,
+          "overall_mse": 1285.3892,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-1_smooth5",
+          "overall_mae": 26.413,
+          "valence_mae": 23.6701,
+          "arousal_mae": 29.1558,
+          "overall_mse": 1304.2057,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.424,
+          "valence_mae": 23.6075,
+          "arousal_mae": 29.2405,
+          "overall_mse": 1284.0126,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-1_smooth15",
+          "overall_mae": 26.4313,
+          "valence_mae": 23.7573,
+          "arousal_mae": 29.1053,
+          "overall_mse": 1290.0854,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth5_Pattern098_w0p5",
+          "overall_mae": 26.4545,
+          "valence_mae": 23.5164,
+          "arousal_mae": 29.3926,
+          "overall_mse": 1278.6324,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth5",
+          "overall_mae": 26.4595,
+          "valence_mae": 23.167,
+          "arousal_mae": 29.7519,
+          "overall_mse": 1283.5696,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth5",
+          "overall_mae": 26.4595,
+          "valence_mae": 23.167,
+          "arousal_mae": 29.7519,
+          "overall_mse": 1283.5696,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth21_Pattern098_w0p75",
+          "overall_mae": 26.4645,
+          "valence_mae": 23.6783,
+          "arousal_mae": 29.2507,
+          "overall_mse": 1269.7488,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.4662,
+          "valence_mae": 23.6814,
+          "arousal_mae": 29.2511,
+          "overall_mse": 1281.647,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth9",
+          "overall_mae": 26.4774,
+          "valence_mae": 23.2137,
+          "arousal_mae": 29.7411,
+          "overall_mse": 1279.2299,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth9",
+          "overall_mae": 26.4774,
+          "valence_mae": 23.2137,
+          "arousal_mae": 29.7411,
+          "overall_mse": 1279.2299,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth9_Pattern098_w0p5",
+          "overall_mae": 26.4818,
+          "valence_mae": 23.5584,
+          "arousal_mae": 29.4053,
+          "overall_mse": 1277.9342,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth11",
+          "overall_mae": 26.4982,
+          "valence_mae": 23.2513,
+          "arousal_mae": 29.7451,
+          "overall_mse": 1277.6306,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth11",
+          "overall_mae": 26.4982,
+          "valence_mae": 23.2513,
+          "arousal_mae": 29.7451,
+          "overall_mse": 1277.6306,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth11_Pattern098_w0p5",
+          "overall_mae": 26.5014,
+          "valence_mae": 23.5869,
+          "arousal_mae": 29.4158,
+          "overall_mse": 1277.8058,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-1_smooth21",
+          "overall_mae": 26.5068,
+          "valence_mae": 23.8915,
+          "arousal_mae": 29.1222,
+          "overall_mse": 1285.4404,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth5_Pattern098_w0p5",
+          "overall_mae": 26.5247,
+          "valence_mae": 23.6213,
+          "arousal_mae": 29.4281,
+          "overall_mse": 1286.783,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-1_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.5324,
+          "valence_mae": 23.7576,
+          "arousal_mae": 29.3071,
+          "overall_mse": 1302.163,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-1_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.5331,
+          "valence_mae": 23.7705,
+          "arousal_mae": 29.2958,
+          "overall_mse": 1298.2994,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-1_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.5397,
+          "valence_mae": 23.7878,
+          "arousal_mae": 29.2916,
+          "overall_mse": 1296.3804,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth21_Pattern098_w0p75",
+          "overall_mae": 26.5418,
+          "valence_mae": 23.8066,
+          "arousal_mae": 29.277,
+          "overall_mse": 1278.9757,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth9_Pattern098_w0p5",
+          "overall_mae": 26.5457,
+          "valence_mae": 23.6571,
+          "arousal_mae": 29.4343,
+          "overall_mse": 1285.7816,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth15_Pattern098_w0p5",
+          "overall_mae": 26.5458,
+          "valence_mae": 23.6522,
+          "arousal_mae": 29.4395,
+          "overall_mse": 1277.6085,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag1_smooth5",
+          "overall_mae": 26.5463,
+          "valence_mae": 23.3172,
+          "arousal_mae": 29.7754,
+          "overall_mse": 1293.0929,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag1_smooth5",
+          "overall_mae": 26.5463,
+          "valence_mae": 23.3172,
+          "arousal_mae": 29.7754,
+          "overall_mse": 1293.0929,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 26.5479,
+          "valence_mae": 23.0115,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1301.3301,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth15",
+          "overall_mae": 26.5519,
+          "valence_mae": 23.3419,
+          "arousal_mae": 29.7619,
+          "overall_mse": 1275.1576,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag2_smooth15",
+          "overall_mae": 26.5519,
+          "valence_mae": 23.3419,
+          "arousal_mae": 29.7619,
+          "overall_mse": 1275.1576,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag1_smooth9",
+          "overall_mae": 26.5585,
+          "valence_mae": 23.3609,
+          "arousal_mae": 29.756,
+          "overall_mse": 1288.4049,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag1_smooth9",
+          "overall_mae": 26.5585,
+          "valence_mae": 23.3609,
+          "arousal_mae": 29.756,
+          "overall_mse": 1288.4049,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth11_Pattern098_w0p5",
+          "overall_mae": 26.5629,
+          "valence_mae": 23.6829,
+          "arousal_mae": 29.443,
+          "overall_mse": 1285.4108,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-1_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.5682,
+          "valence_mae": 23.8431,
+          "arousal_mae": 29.2932,
+          "overall_mse": 1293.0243,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.5694,
+          "valence_mae": 23.3533,
+          "arousal_mae": 29.7855,
+          "overall_mse": 1287.5337,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag2_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.5694,
+          "valence_mae": 23.3533,
+          "arousal_mae": 29.7855,
+          "overall_mse": 1287.5337,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-2_smooth11",
+          "overall_mae": 26.5737,
+          "valence_mae": 23.9563,
+          "arousal_mae": 29.1912,
+          "overall_mse": 1312.5793,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth9]_A[Pattern098]",
+          "overall_mae": 26.5751,
+          "valence_mae": 23.0661,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1300.1246,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag1_smooth11",
+          "overall_mae": 26.5784,
+          "valence_mae": 23.3986,
+          "arousal_mae": 29.7581,
+          "overall_mse": 1286.4694,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag1_smooth11",
+          "overall_mae": 26.5784,
+          "valence_mae": 23.3986,
+          "arousal_mae": 29.7581,
+          "overall_mse": 1286.4694,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-2_smooth9",
+          "overall_mae": 26.5789,
+          "valence_mae": 23.9491,
+          "arousal_mae": 29.2087,
+          "overall_mse": 1316.1246,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-2_smooth15",
+          "overall_mae": 26.5816,
+          "valence_mae": 23.9934,
+          "arousal_mae": 29.1699,
+          "overall_mse": 1306.4606,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.5938,
+          "valence_mae": 23.401,
+          "arousal_mae": 29.7867,
+          "overall_mse": 1285.1273,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag2_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.5938,
+          "valence_mae": 23.401,
+          "arousal_mae": 29.7867,
+          "overall_mse": 1285.1273,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth11]_A[Pattern098]",
+          "overall_mae": 26.5966,
+          "valence_mae": 23.1091,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1299.8663,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-2_smooth5",
+          "overall_mae": 26.6001,
+          "valence_mae": 23.9572,
+          "arousal_mae": 29.243,
+          "overall_mse": 1323.6576,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag1_smooth15_Pattern098_w0p5",
+          "overall_mae": 26.6024,
+          "valence_mae": 23.7436,
+          "arousal_mae": 29.4613,
+          "overall_mse": 1284.6737,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth5_Pattern098_w0p5",
+          "overall_mae": 26.607,
+          "valence_mae": 23.7473,
+          "arousal_mae": 29.4667,
+          "overall_mse": 1295.7965,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag2_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.614,
+          "valence_mae": 23.435,
+          "arousal_mae": 29.793,
+          "overall_mse": 1284.2567,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag2_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.614,
+          "valence_mae": 23.435,
+          "arousal_mae": 29.793,
+          "overall_mse": 1284.2567,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag2_smooth9]",
+          "overall_mae": 26.6166,
+          "valence_mae": 24.2619,
+          "arousal_mae": 28.9713,
+          "overall_mse": 1285.0875,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag2_smooth21_Pattern098_w0p5",
+          "overall_mae": 26.6178,
+          "valence_mae": 23.7609,
+          "arousal_mae": 29.4748,
+          "overall_mse": 1276.9955,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag2_smooth5]",
+          "overall_mae": 26.6188,
+          "valence_mae": 24.2619,
+          "arousal_mae": 28.9757,
+          "overall_mse": 1287.6278,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag2_smooth11]",
+          "overall_mae": 26.6195,
+          "valence_mae": 24.2619,
+          "arousal_mae": 28.9771,
+          "overall_mse": 1284.2307,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth9_Pattern098_w0p5",
+          "overall_mae": 26.6207,
+          "valence_mae": 23.7717,
+          "arousal_mae": 29.4697,
+          "overall_mse": 1294.3623,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 26.6256,
+          "valence_mae": 23.167,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1297.1793,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 26.6256,
+          "valence_mae": 23.167,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1297.1793,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag2_smooth15]",
+          "overall_mae": 26.6289,
+          "valence_mae": 24.2619,
+          "arousal_mae": 28.9959,
+          "overall_mse": 1282.8721,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag1_smooth15",
+          "overall_mae": 26.6291,
+          "valence_mae": 23.488,
+          "arousal_mae": 29.7702,
+          "overall_mse": 1283.2444,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag1_smooth15",
+          "overall_mae": 26.6291,
+          "valence_mae": 23.488,
+          "arousal_mae": 29.7702,
+          "overall_mse": 1283.2444,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-1_smooth21_Pattern098_w0p75",
+          "overall_mae": 26.6319,
+          "valence_mae": 23.9511,
+          "arousal_mae": 29.3126,
+          "overall_mse": 1289.3739,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag1_smooth5]_A[Pattern098]",
+          "overall_mae": 26.6319,
+          "valence_mae": 23.1797,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1309.4164,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag1_smooth9]",
+          "overall_mae": 26.6332,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.0045,
+          "overall_mse": 1288.0667,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag0_smooth11_Pattern098_w0p5",
+          "overall_mae": 26.6338,
+          "valence_mae": 23.7928,
+          "arousal_mae": 29.4747,
+          "overall_mse": 1293.6388,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag1_smooth11]",
+          "overall_mae": 26.6346,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.0072,
+          "overall_mse": 1287.0339,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag1_smooth5]",
+          "overall_mae": 26.6397,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.0176,
+          "overall_mse": 1290.8129,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag1_smooth15]",
+          "overall_mae": 26.6401,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.0183,
+          "overall_mse": 1285.3112,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-2_smooth21",
+          "overall_mae": 26.6413,
+          "valence_mae": 24.1029,
+          "arousal_mae": 29.1797,
+          "overall_mse": 1300.2748,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag2_smooth9]_A[Pattern098]",
+          "overall_mae": 26.649,
+          "valence_mae": 23.2137,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1295.9252,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag2_smooth9]_A[Pattern098]",
+          "overall_mae": 26.649,
+          "valence_mae": 23.2137,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1295.9252,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag2_smooth15]_A[Pattern098]",
+          "overall_mae": 26.6501,
+          "valence_mae": 23.216,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1299.701,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag1_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.6514,
+          "valence_mae": 23.4899,
+          "arousal_mae": 29.813,
+          "overall_mse": 1296.712,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag1_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.6514,
+          "valence_mae": 23.4899,
+          "arousal_mae": 29.813,
+          "overall_mse": 1296.712,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[q55_lag2_smooth21]",
+          "overall_mae": 26.6538,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.0456,
+          "overall_mse": 1281.6014,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag2_smooth21",
+          "overall_mae": 26.6541,
+          "valence_mae": 23.4997,
+          "arousal_mae": 29.8085,
+          "overall_mse": 1272.2595,
+          "notes": "Robust video-time aggregation prior."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "mean_lag-4_smooth11",
+          "overall_mae": 27.8049,
+          "valence_mae": 27.7436,
+          "arousal_mae": 27.8662,
+          "overall_mse": 1635.5883,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-4_smooth9",
+          "overall_mae": 27.8052,
+          "valence_mae": 27.7473,
+          "arousal_mae": 27.8632,
+          "overall_mse": 1637.6405,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-4_smooth15",
+          "overall_mae": 27.8202,
+          "valence_mae": 27.7556,
+          "arousal_mae": 27.8847,
+          "overall_mse": 1631.4277,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-4_smooth5",
+          "overall_mae": 27.822,
+          "valence_mae": 27.7723,
+          "arousal_mae": 27.8718,
+          "overall_mse": 1641.6339,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-3_smooth9",
+          "overall_mae": 27.8572,
+          "valence_mae": 27.8166,
+          "arousal_mae": 27.8978,
+          "overall_mse": 1642.4374,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-3_smooth11",
+          "overall_mae": 27.8629,
+          "valence_mae": 27.821,
+          "arousal_mae": 27.9047,
+          "overall_mse": 1640.5059,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-3_smooth5",
+          "overall_mae": 27.8637,
+          "valence_mae": 27.8287,
+          "arousal_mae": 27.8986,
+          "overall_mse": 1646.2061,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-4_smooth21",
+          "overall_mae": 27.8736,
+          "valence_mae": 27.8049,
+          "arousal_mae": 27.9423,
+          "overall_mse": 1625.2635,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-3_smooth15",
+          "overall_mae": 27.8871,
+          "valence_mae": 27.8486,
+          "arousal_mae": 27.9256,
+          "overall_mse": 1636.7716,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth21",
+          "overall_mae": 27.8959,
+          "valence_mae": 27.9839,
+          "arousal_mae": 27.808,
+          "overall_mse": 1668.4232,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth15",
+          "overall_mae": 27.8971,
+          "valence_mae": 28.007,
+          "arousal_mae": 27.7873,
+          "overall_mse": 1677.6588,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth11",
+          "overall_mae": 27.9112,
+          "valence_mae": 28.0324,
+          "arousal_mae": 27.79,
+          "overall_mse": 1683.7037,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-4_smooth9",
+          "overall_mae": 27.9134,
+          "valence_mae": 27.9771,
+          "arousal_mae": 27.8498,
+          "overall_mse": 1653.1801,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-4_smooth11",
+          "overall_mae": 27.9142,
+          "valence_mae": 27.9725,
+          "arousal_mae": 27.8559,
+          "overall_mse": 1650.9746,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.9146,
+          "valence_mae": 27.8919,
+          "arousal_mae": 27.9372,
+          "overall_mse": 1667.4082,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 27.9147,
+          "valence_mae": 27.8887,
+          "arousal_mae": 27.9407,
+          "overall_mse": 1665.923,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth15",
+          "overall_mae": 27.9172,
+          "valence_mae": 28.0482,
+          "arousal_mae": 27.7861,
+          "overall_mse": 1681.0494,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth11",
+          "overall_mae": 27.9209,
+          "valence_mae": 28.0605,
+          "arousal_mae": 27.7813,
+          "overall_mse": 1686.5914,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth9",
+          "overall_mae": 27.9233,
+          "valence_mae": 28.0526,
+          "arousal_mae": 27.7941,
+          "overall_mse": 1686.624,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 27.9255,
+          "valence_mae": 27.9096,
+          "arousal_mae": 27.9413,
+          "overall_mse": 1670.1564,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 27.9268,
+          "valence_mae": 27.8959,
+          "arousal_mae": 27.9577,
+          "overall_mse": 1662.7471,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth9",
+          "overall_mae": 27.9283,
+          "valence_mae": 28.0734,
+          "arousal_mae": 27.7831,
+          "overall_mse": 1689.3593,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-4_smooth5",
+          "overall_mae": 27.9291,
+          "valence_mae": 28.0043,
+          "arousal_mae": 27.8539,
+          "overall_mse": 1657.3788,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-4_smooth15",
+          "overall_mae": 27.9293,
+          "valence_mae": 27.9816,
+          "arousal_mae": 27.877,
+          "overall_mse": 1646.4633,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth21",
+          "overall_mae": 27.9305,
+          "valence_mae": 28.0422,
+          "arousal_mae": 27.8188,
+          "overall_mse": 1672.7611,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-2_smooth5",
+          "overall_mae": 27.9348,
+          "valence_mae": 27.9191,
+          "arousal_mae": 27.9505,
+          "overall_mse": 1652.4984,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-2_smooth9",
+          "overall_mae": 27.9363,
+          "valence_mae": 27.9188,
+          "arousal_mae": 27.9538,
+          "overall_mse": 1648.9078,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-4_smooth11",
+          "overall_mae": 27.9413,
+          "valence_mae": 28.0585,
+          "arousal_mae": 27.8241,
+          "overall_mse": 1660.9042,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-4_smooth9",
+          "overall_mae": 27.9433,
+          "valence_mae": 28.0673,
+          "arousal_mae": 27.8194,
+          "overall_mse": 1663.151,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-2_smooth11",
+          "overall_mae": 27.9455,
+          "valence_mae": 27.9301,
+          "arousal_mae": 27.961,
+          "overall_mse": 1647.1097,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-3_smooth21",
+          "overall_mae": 27.9494,
+          "valence_mae": 27.9121,
+          "arousal_mae": 27.9867,
+          "overall_mse": 1631.4928,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-4_smooth15",
+          "overall_mae": 27.9525,
+          "valence_mae": 28.0617,
+          "arousal_mae": 27.8433,
+          "overall_mse": 1656.35,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-3_smooth5",
+          "overall_mae": 27.9527,
+          "valence_mae": 28.1124,
+          "arousal_mae": 27.7929,
+          "overall_mse": 1694.7194,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth11",
+          "overall_mae": 27.9545,
+          "valence_mae": 28.121,
+          "arousal_mae": 27.788,
+          "overall_mse": 1691.1686,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth5",
+          "overall_mae": 27.9554,
+          "valence_mae": 28.1029,
+          "arousal_mae": 27.8079,
+          "overall_mse": 1692.1383,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth9",
+          "overall_mae": 27.9573,
+          "valence_mae": 28.1264,
+          "arousal_mae": 27.7881,
+          "overall_mse": 1693.8306,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.9584,
+          "valence_mae": 27.9521,
+          "arousal_mae": 27.9647,
+          "overall_mse": 1671.4342,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth15",
+          "overall_mae": 27.9613,
+          "valence_mae": 28.1209,
+          "arousal_mae": 27.8017,
+          "overall_mse": 1686.0459,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 27.9627,
+          "valence_mae": 27.9544,
+          "arousal_mae": 27.971,
+          "overall_mse": 1670.0118,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-3_smooth5_Pattern098_w0p75",
+          "overall_mae": 27.963,
+          "valence_mae": 27.9625,
+          "arousal_mae": 27.9635,
+          "overall_mse": 1674.0137,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-4_smooth5",
+          "overall_mae": 27.9633,
+          "valence_mae": 28.102,
+          "arousal_mae": 27.8246,
+          "overall_mse": 1667.5487,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-4_smooth21_Pattern098_w0p75",
+          "overall_mae": 27.9633,
+          "valence_mae": 27.9271,
+          "arousal_mae": 27.9995,
+          "overall_mse": 1657.566,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-3_smooth9",
+          "overall_mae": 27.9665,
+          "valence_mae": 28.0456,
+          "arousal_mae": 27.8874,
+          "overall_mse": 1657.999,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-3_smooth5",
+          "overall_mae": 27.9711,
+          "valence_mae": 28.0596,
+          "arousal_mae": 27.8826,
+          "overall_mse": 1661.8999,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-3_smooth11",
+          "overall_mae": 27.9725,
+          "valence_mae": 28.0485,
+          "arousal_mae": 27.8965,
+          "overall_mse": 1655.934,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth5",
+          "overall_mae": 27.9761,
+          "valence_mae": 28.153,
+          "arousal_mae": 27.7993,
+          "overall_mse": 1699.1276,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-2_smooth15",
+          "overall_mae": 27.9783,
+          "valence_mae": 27.9723,
+          "arousal_mae": 27.9843,
+          "overall_mse": 1643.7144,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-4_smooth21",
+          "overall_mae": 27.9802,
+          "valence_mae": 28.0244,
+          "arousal_mae": 27.9361,
+          "overall_mse": 1639.7959,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-3_smooth15_Pattern098_w0p75",
+          "overall_mae": 27.982,
+          "valence_mae": 27.9737,
+          "arousal_mae": 27.9902,
+          "overall_mse": 1667.0626,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-2_smooth21",
+          "overall_mae": 27.9834,
+          "valence_mae": 28.1234,
+          "arousal_mae": 27.8434,
+          "overall_mse": 1678.5288,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-3_smooth9",
+          "overall_mae": 27.9917,
+          "valence_mae": 28.1305,
+          "arousal_mae": 27.8529,
+          "overall_mse": 1667.798,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag-4_smooth11",
+          "overall_mae": 27.9929,
+          "valence_mae": 28.1293,
+          "arousal_mae": 27.8565,
+          "overall_mse": 1671.3461,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag-4_smooth11",
+          "overall_mae": 27.9929,
+          "valence_mae": 28.1293,
+          "arousal_mae": 27.8565,
+          "overall_mse": 1671.3461,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-4_smooth21",
+          "overall_mae": 27.993,
+          "valence_mae": 28.0917,
+          "arousal_mae": 27.8944,
+          "overall_mse": 1649.5854,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-3_smooth11",
+          "overall_mae": 27.9946,
+          "valence_mae": 28.1287,
+          "arousal_mae": 27.8605,
+          "overall_mse": 1665.674,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag-4_smooth9",
+          "overall_mae": 27.9952,
+          "valence_mae": 28.1381,
+          "arousal_mae": 27.8524,
+          "overall_mse": 1673.597,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag-4_smooth9",
+          "overall_mae": 27.9952,
+          "valence_mae": 28.1381,
+          "arousal_mae": 27.8524,
+          "overall_mse": 1673.597,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-3_smooth15",
+          "overall_mae": 27.9959,
+          "valence_mae": 28.0707,
+          "arousal_mae": 27.921,
+          "overall_mse": 1651.8717,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-4_smooth43",
+          "overall_mae": 27.998,
+          "valence_mae": 28.0117,
+          "arousal_mae": 27.9842,
+          "overall_mse": 1639.3652,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.9993,
+          "valence_mae": 28.0681,
+          "arousal_mae": 27.9305,
+          "overall_mse": 1679.7223,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 27.9998,
+          "valence_mae": 28.0646,
+          "arousal_mae": 27.935,
+          "overall_mse": 1678.1439,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-3_smooth5",
+          "overall_mae": 28.0016,
+          "valence_mae": 28.1538,
+          "arousal_mae": 27.8495,
+          "overall_mse": 1671.9425,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag-4_smooth15",
+          "overall_mae": 28.0018,
+          "valence_mae": 28.1297,
+          "arousal_mae": 27.8738,
+          "overall_mse": 1666.6733,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag-4_smooth15",
+          "overall_mae": 28.0018,
+          "valence_mae": 28.1297,
+          "arousal_mae": 27.8738,
+          "overall_mse": 1666.6733,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth21_Pattern098_w0p75",
+          "overall_mae": 28.0075,
+          "valence_mae": 28.0907,
+          "arousal_mae": 27.9242,
+          "overall_mse": 1693.7432,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag-4_smooth11",
+          "overall_mae": 28.0077,
+          "valence_mae": 28.216,
+          "arousal_mae": 27.7993,
+          "overall_mse": 1680.4496,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 28.0091,
+          "valence_mae": 28.0859,
+          "arousal_mae": 27.9323,
+          "overall_mse": 1682.5895,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag-4_smooth9",
+          "overall_mae": 28.011,
+          "valence_mae": 28.227,
+          "arousal_mae": 27.7949,
+          "overall_mse": 1682.7076,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 28.011,
+          "valence_mae": 28.1105,
+          "arousal_mae": 27.9115,
+          "overall_mse": 1701.0171,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 28.0111,
+          "valence_mae": 28.0691,
+          "arousal_mae": 27.9532,
+          "overall_mse": 1674.7526,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor10_lag-3_smooth15",
+          "overall_mae": 28.0139,
+          "valence_mae": 28.1449,
+          "arousal_mae": 27.8828,
+          "overall_mse": 1661.5221,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag-4_smooth5",
+          "overall_mae": 28.0154,
+          "valence_mae": 28.1716,
+          "arousal_mae": 27.8593,
+          "overall_mse": 1677.8434,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag-4_smooth5",
+          "overall_mae": 28.0154,
+          "valence_mae": 28.1716,
+          "arousal_mae": 27.8593,
+          "overall_mse": 1677.8434,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag-4_smooth15",
+          "overall_mae": 28.0173,
+          "valence_mae": 28.2148,
+          "arousal_mae": 27.8197,
+          "overall_mse": 1675.7946,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-1_smooth9",
+          "overall_mae": 28.0176,
+          "valence_mae": 28.2206,
+          "arousal_mae": 27.8147,
+          "overall_mse": 1700.0928,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-1_smooth11",
+          "overall_mae": 28.0181,
+          "valence_mae": 28.2201,
+          "arousal_mae": 27.8161,
+          "overall_mse": 1697.5465,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-2_smooth5_Pattern098_w0p75",
+          "overall_mae": 28.0185,
+          "valence_mae": 28.0365,
+          "arousal_mae": 28.0006,
+          "overall_mse": 1678.6714,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-2_smooth9_Pattern098_w0p75",
+          "overall_mae": 28.0205,
+          "valence_mae": 28.0355,
+          "arousal_mae": 28.0055,
+          "overall_mse": 1676.2211,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 28.0229,
+          "valence_mae": 28.1316,
+          "arousal_mae": 27.9143,
+          "overall_mse": 1705.4694,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor10_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 28.0238,
+          "valence_mae": 28.1329,
+          "arousal_mae": 27.9147,
+          "overall_mse": 1685.86,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor10_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 28.025,
+          "valence_mae": 28.1393,
+          "arousal_mae": 27.9106,
+          "overall_mse": 1687.4615,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-3_smooth21_Pattern098_w0p75",
+          "overall_mae": 28.0251,
+          "valence_mae": 28.016,
+          "arousal_mae": 28.0341,
+          "overall_mse": 1662.4033,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_mean_lag-2_smooth11_Pattern098_w0p75",
+          "overall_mae": 28.0278,
+          "valence_mae": 28.0433,
+          "arousal_mae": 28.0124,
+          "overall_mse": 1674.8828,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-1_smooth5",
+          "overall_mae": 28.0296,
+          "valence_mae": 28.2328,
+          "arousal_mae": 27.8264,
+          "overall_mse": 1705.2418,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "huber20_lag-1_smooth15",
+          "overall_mae": 28.0314,
+          "valence_mae": 28.2268,
+          "arousal_mae": 27.836,
+          "overall_mse": 1692.6847,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor10_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 28.0316,
+          "valence_mae": 28.133,
+          "arousal_mae": 27.9303,
+          "overall_mse": 1682.4569,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 28.0318,
+          "valence_mae": 28.1456,
+          "arousal_mae": 27.918,
+          "overall_mse": 1707.5336,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor15_lag-4_smooth5",
+          "overall_mae": 28.0342,
+          "valence_mae": 28.2638,
+          "arousal_mae": 27.8047,
+          "overall_mse": 1687.0472,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth15_Pattern098_w0p75",
+          "overall_mae": 28.0347,
+          "valence_mae": 28.1549,
+          "arousal_mae": 27.9145,
+          "overall_mse": 1704.3428,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 28.0382,
+          "valence_mae": 28.1647,
+          "arousal_mae": 27.9117,
+          "overall_mse": 1708.536,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor10_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 28.0384,
+          "valence_mae": 28.1638,
+          "arousal_mae": 27.913,
+          "overall_mse": 1690.4576,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "mean_lag-1_smooth5",
+          "overall_mae": 28.0389,
+          "valence_mae": 28.0505,
+          "arousal_mae": 28.0273,
+          "overall_mse": 1660.4791,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-3_smooth21_Pattern098_w0p75",
+          "overall_mae": 28.0415,
+          "valence_mae": 28.1476,
+          "arousal_mae": 27.9354,
+          "overall_mse": 1697.5986,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag-3_smooth9",
+          "overall_mae": 28.0416,
+          "valence_mae": 28.2013,
+          "arousal_mae": 27.8818,
+          "overall_mse": 1678.3014,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag-3_smooth9",
+          "overall_mae": 28.0416,
+          "valence_mae": 28.2013,
+          "arousal_mae": 27.8818,
+          "overall_mse": 1678.3014,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag-4_smooth43_Pattern098_w0p75",
+          "overall_mae": 28.0416,
+          "valence_mae": 28.0481,
+          "arousal_mae": 28.0351,
+          "overall_mse": 1666.6254,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "drop1_lag-4_smooth21",
+          "overall_mae": 28.0417,
+          "valence_mae": 28.1558,
+          "arousal_mae": 27.9275,
+          "overall_mse": 1659.5352,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "trim5_lag-4_smooth21",
+          "overall_mae": 28.0417,
+          "valence_mae": 28.1558,
+          "arousal_mae": 27.9275,
+          "overall_mse": 1659.5352,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "winsor5_lag-2_smooth5",
+          "overall_mae": 28.0426,
+          "valence_mae": 28.149,
+          "arousal_mae": 27.9362,
+          "overall_mse": 1668.2294,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_winsor5_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 28.0438,
+          "valence_mae": 28.1271,
+          "arousal_mae": 27.9605,
+          "overall_mse": 1683.7924,
+          "notes": "Robust video-time aggregation prior."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "V[q45_lag1_smooth9]_A[Pattern098]",
+          "overall_mae": 25.7554,
+          "valence_mae": 24.1269,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.2581,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag1_smooth5]_A[Pattern098]",
+          "overall_mae": 25.7559,
+          "valence_mae": 24.1279,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1295.6456,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag0_smooth9]_A[Pattern098]",
+          "overall_mae": 25.7624,
+          "valence_mae": 24.1409,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1295.2897,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 25.7626,
+          "valence_mae": 24.1412,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1294.8503,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag0_smooth11]_A[Pattern098]",
+          "overall_mae": 25.7659,
+          "valence_mae": 24.1478,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.9352,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag1_smooth11]_A[Pattern098]",
+          "overall_mae": 25.7678,
+          "valence_mae": 24.1516,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1292.3099,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag0_smooth5]_A[Pattern098]",
+          "overall_mae": 25.7767,
+          "valence_mae": 24.1694,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1298.4111,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag2_smooth9]_A[Pattern098]",
+          "overall_mae": 25.778,
+          "valence_mae": 24.172,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1292.9589,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-1_smooth11]_A[Pattern098]",
+          "overall_mae": 25.7884,
+          "valence_mae": 24.1928,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1297.0927,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag0_smooth15]_A[Pattern098]",
+          "overall_mae": 25.789,
+          "valence_mae": 24.1941,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1291.7223,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-1_smooth9]_A[Pattern098]",
+          "overall_mae": 25.7929,
+          "valence_mae": 24.2019,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1298.8765,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag2_smooth11]_A[Pattern098]",
+          "overall_mae": 25.7946,
+          "valence_mae": 24.2053,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1292.3411,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-1_smooth15]_A[Pattern098]",
+          "overall_mae": 25.7985,
+          "valence_mae": 24.2131,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1294.1578,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag1_smooth15]_A[Pattern098]",
+          "overall_mae": 25.8007,
+          "valence_mae": 24.2174,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1290.7892,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-1_smooth5]_A[Pattern098]",
+          "overall_mae": 25.8159,
+          "valence_mae": 24.2478,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1302.8143,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-2_smooth15]_A[Pattern098]",
+          "overall_mae": 25.8287,
+          "valence_mae": 24.2734,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1298.0677,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-2_smooth11]_A[Pattern098]",
+          "overall_mae": 25.8311,
+          "valence_mae": 24.2782,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1301.712,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag2_smooth15]_A[Pattern098]",
+          "overall_mae": 25.8332,
+          "valence_mae": 24.2824,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1291.365,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-2_smooth9]_A[Pattern098]",
+          "overall_mae": 25.8411,
+          "valence_mae": 24.2983,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1303.8436,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-1_smooth21]_A[Pattern098]",
+          "overall_mae": 25.8472,
+          "valence_mae": 24.3105,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1291.1971,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag0_smooth21]_A[Pattern098]",
+          "overall_mae": 25.8481,
+          "valence_mae": 24.3122,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1289.5815,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-2_smooth21]_A[Pattern098]",
+          "overall_mae": 25.8664,
+          "valence_mae": 24.3489,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1294.1801,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag1_smooth21]_A[Pattern098]",
+          "overall_mae": 25.8666,
+          "valence_mae": 24.3493,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1289.2985,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-2_smooth5]_A[Pattern098]",
+          "overall_mae": 25.8727,
+          "valence_mae": 24.3615,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1308.5201,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-1_smooth5]",
+          "overall_mae": 25.8734,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2144,
+          "overall_mse": 1267.2911,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-1_smooth9]",
+          "overall_mae": 25.8753,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2182,
+          "overall_mse": 1266.2395,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag0_smooth5]",
+          "overall_mae": 25.8774,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2224,
+          "overall_mse": 1264.5502,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth15]_A[Pattern098]",
+          "overall_mae": 25.8777,
+          "valence_mae": 24.3715,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1303.3247,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-2_smooth5]",
+          "overall_mae": 25.8789,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2253,
+          "overall_mse": 1270.9209,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-2_smooth9]",
+          "overall_mae": 25.8792,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2259,
+          "overall_mse": 1269.606,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-1_smooth11]",
+          "overall_mae": 25.8816,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2308,
+          "overall_mse": 1265.9174,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag0_smooth9]",
+          "overall_mae": 25.8827,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2329,
+          "overall_mse": 1263.7584,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-2_smooth11]",
+          "overall_mae": 25.8829,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2333,
+          "overall_mse": 1269.1182,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth11]_A[Pattern098]",
+          "overall_mae": 25.8887,
+          "valence_mae": 24.3934,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.6108,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-1_smooth5]",
+          "overall_mae": 25.8906,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2488,
+          "overall_mse": 1262.6061,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth9]",
+          "overall_mae": 25.8908,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2491,
+          "overall_mse": 1273.6425,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth11]",
+          "overall_mae": 25.8921,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2518,
+          "overall_mse": 1272.9972,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag0_smooth11]",
+          "overall_mae": 25.8921,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2518,
+          "overall_mse": 1263.5922,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-1_smooth9]",
+          "overall_mae": 25.8924,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2523,
+          "overall_mse": 1261.5985,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth5]",
+          "overall_mae": 25.8937,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.255,
+          "overall_mse": 1275.2064,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag1_smooth5]",
+          "overall_mae": 25.8939,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2554,
+          "overall_mse": 1262.8353,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag0_smooth5]",
+          "overall_mae": 25.8951,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2578,
+          "overall_mse": 1259.7703,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth5]",
+          "overall_mae": 25.8954,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2585,
+          "overall_mse": 1266.3291,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth9]",
+          "overall_mae": 25.8956,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2587,
+          "overall_mse": 1265.0344,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-2_smooth15]",
+          "overall_mae": 25.8967,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2609,
+          "overall_mse": 1268.3604,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-1_smooth11]",
+          "overall_mae": 25.899,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2655,
+          "overall_mse": 1261.2858,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth11]",
+          "overall_mae": 25.8991,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2659,
+          "overall_mse": 1264.5475,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth15]",
+          "overall_mae": 25.8992,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.266,
+          "overall_mse": 1271.8607,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth21]_A[Pattern098]",
+          "overall_mae": 25.9003,
+          "valence_mae": 24.4167,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1298.4738,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag0_smooth9]",
+          "overall_mae": 25.9011,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2698,
+          "overall_mse": 1259.0308,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth9]_A[Pattern098]",
+          "overall_mae": 25.9012,
+          "valence_mae": 24.4184,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1309.9965,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag2_smooth21]_A[Pattern098]",
+          "overall_mae": 25.9022,
+          "valence_mae": 24.4204,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1290.375,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-1_smooth15]",
+          "overall_mae": 25.9029,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2734,
+          "overall_mse": 1265.5265,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag1_smooth9]",
+          "overall_mae": 25.9054,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2784,
+          "overall_mse": 1262.2858,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth9]",
+          "overall_mae": 25.9058,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2792,
+          "overall_mse": 1269.0923,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth11]",
+          "overall_mae": 25.907,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2815,
+          "overall_mse": 1268.4423,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth5]",
+          "overall_mae": 25.9088,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2852,
+          "overall_mse": 1270.6671,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth11]",
+          "overall_mae": 25.9092,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.286,
+          "overall_mse": 1277.5033,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth9]",
+          "overall_mae": 25.9104,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2883,
+          "overall_mse": 1278.3141,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag0_smooth11]",
+          "overall_mae": 25.9109,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2893,
+          "overall_mse": 1258.8802,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth15]",
+          "overall_mae": 25.9111,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2897,
+          "overall_mse": 1276.0096,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-2_smooth15]",
+          "overall_mae": 25.9131,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2938,
+          "overall_mse": 1263.7893,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag1_smooth5]",
+          "overall_mae": 25.9133,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2942,
+          "overall_mse": 1257.9536,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth15]",
+          "overall_mae": 25.9143,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.2962,
+          "overall_mse": 1267.3086,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth5]",
+          "overall_mae": 25.9177,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.303,
+          "overall_mse": 1280.0398,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag1_smooth11]",
+          "overall_mae": 25.9184,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3045,
+          "overall_mse": 1262.2074,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag0_smooth15]",
+          "overall_mae": 25.9213,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3102,
+          "overall_mse": 1263.5028,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-1_smooth15]",
+          "overall_mae": 25.9213,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3102,
+          "overall_mse": 1260.9042,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth11]",
+          "overall_mae": 25.923,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3135,
+          "overall_mse": 1272.9547,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth9]",
+          "overall_mae": 25.924,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3156,
+          "overall_mse": 1273.774,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-3_smooth21]",
+          "overall_mae": 25.9242,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.316,
+          "overall_mse": 1270.5049,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth15]",
+          "overall_mae": 25.9255,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3185,
+          "overall_mse": 1271.4667,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag1_smooth9]",
+          "overall_mae": 25.9257,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.319,
+          "overall_mse": 1257.459,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-4_smooth21]",
+          "overall_mae": 25.9262,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3199,
+          "overall_mse": 1273.9674,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag2_smooth5]",
+          "overall_mae": 25.9273,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3221,
+          "overall_mse": 1262.2948,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag1_smooth5]_A[Pattern098]",
+          "overall_mae": 25.9293,
+          "valence_mae": 24.4746,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1304.0033,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag1_smooth5]_A[Pattern098]",
+          "overall_mae": 25.9293,
+          "valence_mae": 24.4746,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1304.0033,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag2_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.9294,
+          "valence_mae": 24.5516,
+          "arousal_mae": 27.3072,
+          "overall_mse": 1279.5531,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth5]",
+          "overall_mae": 25.9306,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3288,
+          "overall_mse": 1275.5314,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 25.9309,
+          "valence_mae": 24.4779,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1303.2158,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag2_smooth5]_A[Pattern098]",
+          "overall_mae": 25.9309,
+          "valence_mae": 24.4779,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1303.2158,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag1_smooth5_Pattern098_w0p5",
+          "overall_mae": 25.9312,
+          "valence_mae": 24.6185,
+          "arousal_mae": 27.2438,
+          "overall_mse": 1270.6997,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag1_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.9318,
+          "valence_mae": 24.562,
+          "arousal_mae": 27.3016,
+          "overall_mse": 1281.8812,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber15_lag-2_smooth21]",
+          "overall_mae": 25.9325,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3326,
+          "overall_mse": 1267.6315,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag2_smooth5_Pattern098_w0p5",
+          "overall_mae": 25.9335,
+          "valence_mae": 24.6073,
+          "arousal_mae": 27.2597,
+          "overall_mse": 1267.2987,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag1_smooth9]_A[Pattern098]",
+          "overall_mae": 25.934,
+          "valence_mae": 24.4841,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1301.6503,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag1_smooth9]_A[Pattern098]",
+          "overall_mae": 25.934,
+          "valence_mae": 24.4841,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1301.6503,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth5]_A[Pattern098]",
+          "overall_mae": 25.9357,
+          "valence_mae": 24.4875,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1315.1433,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag2_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.9366,
+          "valence_mae": 24.437,
+          "arousal_mae": 27.4362,
+          "overall_mse": 1296.6764,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag2_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.9366,
+          "valence_mae": 24.437,
+          "arousal_mae": 27.4362,
+          "overall_mse": 1296.6764,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag2_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.9381,
+          "valence_mae": 24.5774,
+          "arousal_mae": 27.2988,
+          "overall_mse": 1277.077,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag1_smooth11]",
+          "overall_mae": 25.9386,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3448,
+          "overall_mse": 1257.4043,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber20_lag1_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.9388,
+          "valence_mae": 24.5852,
+          "arousal_mae": 27.2925,
+          "overall_mse": 1279.3566,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_huber15_lag0_smooth5_Pattern098_w0p25",
+          "overall_mae": 25.94,
+          "valence_mae": 24.5791,
+          "arousal_mae": 27.3009,
+          "overall_mse": 1284.4435,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag0_smooth15]",
+          "overall_mae": 25.9409,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3494,
+          "overall_mse": 1258.8195,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-4_smooth15]_A[Pattern098]",
+          "overall_mae": 25.941,
+          "valence_mae": 24.4981,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1309.8656,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-3_smooth21]",
+          "overall_mae": 25.9416,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3509,
+          "overall_mse": 1265.9799,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag0_smooth9]_A[Pattern098]",
+          "overall_mae": 25.9419,
+          "valence_mae": 24.4999,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1303.6012,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[Pattern098]_A[huber20_lag-4_smooth21]",
+          "overall_mae": 25.9419,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3514,
+          "overall_mse": 1269.4508,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag0_smooth9]_A[Pattern098]",
+          "overall_mae": 25.9419,
+          "valence_mae": 24.4999,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1303.6012,
+          "notes": "Robust video-time aggregation prior."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "median_lag-4_smooth5",
+          "overall_mae": 26.7211,
+          "valence_mae": 25.4902,
+          "arousal_mae": 27.9519,
+          "overall_mse": 1414.2545,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-4_smooth5",
+          "overall_mae": 26.7211,
+          "valence_mae": 25.4902,
+          "arousal_mae": 27.9519,
+          "overall_mse": 1414.2545,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-4_smooth9",
+          "overall_mae": 26.7431,
+          "valence_mae": 25.5217,
+          "arousal_mae": 27.9645,
+          "overall_mse": 1408.6359,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-4_smooth9",
+          "overall_mae": 26.7431,
+          "valence_mae": 25.5217,
+          "arousal_mae": 27.9645,
+          "overall_mse": 1408.6359,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-4_smooth11",
+          "overall_mae": 26.7658,
+          "valence_mae": 25.5512,
+          "arousal_mae": 27.9804,
+          "overall_mse": 1406.3129,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-4_smooth11",
+          "overall_mae": 26.7658,
+          "valence_mae": 25.5512,
+          "arousal_mae": 27.9804,
+          "overall_mse": 1406.3129,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-4_smooth5",
+          "overall_mae": 26.8017,
+          "valence_mae": 25.6204,
+          "arousal_mae": 27.983,
+          "overall_mse": 1403.2471,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-4_smooth9",
+          "overall_mae": 26.82,
+          "valence_mae": 25.6597,
+          "arousal_mae": 27.9803,
+          "overall_mse": 1397.5035,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-4_smooth15",
+          "overall_mae": 26.8402,
+          "valence_mae": 25.6484,
+          "arousal_mae": 28.032,
+          "overall_mse": 1402.7809,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-4_smooth15",
+          "overall_mae": 26.8402,
+          "valence_mae": 25.6484,
+          "arousal_mae": 28.032,
+          "overall_mse": 1402.7809,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-4_smooth11",
+          "overall_mae": 26.8413,
+          "valence_mae": 25.6944,
+          "arousal_mae": 27.9882,
+          "overall_mse": 1395.2631,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.8561,
+          "valence_mae": 25.6939,
+          "arousal_mae": 28.0183,
+          "overall_mse": 1410.5397,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.8561,
+          "valence_mae": 25.6939,
+          "arousal_mae": 28.0183,
+          "overall_mse": 1410.5397,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-4_smooth5]_A[Pattern098]",
+          "overall_mae": 26.873,
+          "valence_mae": 25.4902,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1405.9443,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-4_smooth5]_A[Pattern098]",
+          "overall_mae": 26.873,
+          "valence_mae": 25.4902,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1405.9443,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.8744,
+          "valence_mae": 25.7189,
+          "arousal_mae": 28.0299,
+          "overall_mse": 1407.1748,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.8744,
+          "valence_mae": 25.7189,
+          "arousal_mae": 28.0299,
+          "overall_mse": 1407.1748,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-4_smooth9]_A[Pattern098]",
+          "overall_mae": 26.8888,
+          "valence_mae": 25.5217,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1402.7402,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-4_smooth9]_A[Pattern098]",
+          "overall_mae": 26.8888,
+          "valence_mae": 25.5217,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1402.7402,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.892,
+          "valence_mae": 25.7418,
+          "arousal_mae": 28.0423,
+          "overall_mse": 1405.724,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.892,
+          "valence_mae": 25.7418,
+          "arousal_mae": 28.0423,
+          "overall_mse": 1405.724,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-3_smooth5",
+          "overall_mae": 26.8932,
+          "valence_mae": 25.7435,
+          "arousal_mae": 28.0429,
+          "overall_mse": 1420.5563,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-3_smooth5",
+          "overall_mae": 26.8932,
+          "valence_mae": 25.7435,
+          "arousal_mae": 28.0429,
+          "overall_mse": 1420.5563,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.8953,
+          "valence_mae": 25.772,
+          "arousal_mae": 28.0186,
+          "overall_mse": 1398.0088,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-4_smooth11]_A[Pattern098]",
+          "overall_mae": 26.9035,
+          "valence_mae": 25.5512,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1401.399,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-4_smooth11]_A[Pattern098]",
+          "overall_mae": 26.9035,
+          "valence_mae": 25.5512,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1401.399,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 26.9096,
+          "valence_mae": 25.8031,
+          "arousal_mae": 28.016,
+          "overall_mse": 1394.542,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-4_smooth15",
+          "overall_mae": 26.9127,
+          "valence_mae": 25.7978,
+          "arousal_mae": 28.0275,
+          "overall_mse": 1391.98,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-3_smooth9",
+          "overall_mae": 26.9155,
+          "valence_mae": 25.774,
+          "arousal_mae": 28.057,
+          "overall_mse": 1414.6232,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-3_smooth9",
+          "overall_mae": 26.9155,
+          "valence_mae": 25.774,
+          "arousal_mae": 28.057,
+          "overall_mse": 1414.6232,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth11_Pattern098_w0p75",
+          "overall_mae": 26.9266,
+          "valence_mae": 25.83,
+          "arousal_mae": 28.0232,
+          "overall_mse": 1393.1478,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-3_smooth11",
+          "overall_mae": 26.9379,
+          "valence_mae": 25.8031,
+          "arousal_mae": 28.0727,
+          "overall_mse": 1412.0573,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-3_smooth11",
+          "overall_mae": 26.9379,
+          "valence_mae": 25.8031,
+          "arousal_mae": 28.0727,
+          "overall_mse": 1412.0573,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-4_smooth5]_A[Pattern098]",
+          "overall_mae": 26.9381,
+          "valence_mae": 25.6204,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1404.0294,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.9486,
+          "valence_mae": 25.8153,
+          "arousal_mae": 28.0819,
+          "overall_mse": 1403.4116,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.9486,
+          "valence_mae": 25.8153,
+          "arousal_mae": 28.0819,
+          "overall_mse": 1403.4116,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-4_smooth15]_A[Pattern098]",
+          "overall_mae": 26.9521,
+          "valence_mae": 25.6484,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1399.4355,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-4_smooth15]_A[Pattern098]",
+          "overall_mae": 26.9521,
+          "valence_mae": 25.6484,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1399.4355,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-4_smooth9]_A[Pattern098]",
+          "overall_mae": 26.9577,
+          "valence_mae": 25.6597,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1401.1735,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-3_smooth5",
+          "overall_mae": 26.9636,
+          "valence_mae": 25.8587,
+          "arousal_mae": 28.0685,
+          "overall_mse": 1409.2416,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-4_smooth11]_A[Pattern098]",
+          "overall_mae": 26.9751,
+          "valence_mae": 25.6944,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1400.0511,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth15_Pattern098_w0p75",
+          "overall_mae": 26.9813,
+          "valence_mae": 25.907,
+          "arousal_mae": 28.0556,
+          "overall_mse": 1391.016,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-3_smooth9",
+          "overall_mae": 26.982,
+          "valence_mae": 25.8964,
+          "arousal_mae": 28.0676,
+          "overall_mse": 1403.2607,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-3_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.9857,
+          "valence_mae": 25.8838,
+          "arousal_mae": 28.0876,
+          "overall_mse": 1416.2206,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-3_smooth5_Pattern098_w0p75",
+          "overall_mae": 26.9857,
+          "valence_mae": 25.8838,
+          "arousal_mae": 28.0876,
+          "overall_mse": 1416.2206,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth5_Pattern098_w0p5",
+          "overall_mae": 26.9969,
+          "valence_mae": 25.9028,
+          "arousal_mae": 28.091,
+          "overall_mse": 1409.2426,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth5_Pattern098_w0p5",
+          "overall_mae": 26.9969,
+          "valence_mae": 25.9028,
+          "arousal_mae": 28.091,
+          "overall_mse": 1409.2426,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag-4_smooth5]_A[Pattern098]",
+          "overall_mae": 26.9993,
+          "valence_mae": 25.7427,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1422.035,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-3_smooth5]_A[Pattern098]",
+          "overall_mae": 26.9996,
+          "valence_mae": 25.7435,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1411.307,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-3_smooth5]_A[Pattern098]",
+          "overall_mae": 26.9996,
+          "valence_mae": 25.7435,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1411.307,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-3_smooth11",
+          "overall_mae": 27.0026,
+          "valence_mae": 25.9296,
+          "arousal_mae": 28.0756,
+          "overall_mse": 1400.6913,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.0056,
+          "valence_mae": 25.9088,
+          "arousal_mae": 28.1023,
+          "overall_mse": 1412.5868,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.0056,
+          "valence_mae": 25.9088,
+          "arousal_mae": 28.1023,
+          "overall_mse": 1412.5868,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth5_Pattern098_w0p5",
+          "overall_mae": 27.0085,
+          "valence_mae": 25.9409,
+          "arousal_mae": 28.0761,
+          "overall_mse": 1398.0386,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth9_Pattern098_w0p5",
+          "overall_mae": 27.0105,
+          "valence_mae": 25.9211,
+          "arousal_mae": 28.0998,
+          "overall_mse": 1407.5653,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth9_Pattern098_w0p5",
+          "overall_mae": 27.0105,
+          "valence_mae": 25.9211,
+          "arousal_mae": 28.0998,
+          "overall_mse": 1407.5653,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag-4_smooth9]_A[Pattern098]",
+          "overall_mae": 27.0127,
+          "valence_mae": 25.7695,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1418.6871,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-3_smooth15",
+          "overall_mae": 27.0133,
+          "valence_mae": 25.9001,
+          "arousal_mae": 28.1266,
+          "overall_mse": 1408.2218,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-3_smooth15",
+          "overall_mae": 27.0133,
+          "valence_mae": 25.9001,
+          "arousal_mae": 28.1266,
+          "overall_mse": 1408.2218,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-3_smooth9]_A[Pattern098]",
+          "overall_mae": 27.0149,
+          "valence_mae": 25.774,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1408.0009,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-3_smooth9]_A[Pattern098]",
+          "overall_mae": 27.0149,
+          "valence_mae": 25.774,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1408.0009,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-3_smooth5_Pattern098_w0p75",
+          "overall_mae": 27.0174,
+          "valence_mae": 25.9503,
+          "arousal_mae": 28.0844,
+          "overall_mse": 1403.275,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth9_Pattern098_w0p5",
+          "overall_mae": 27.0179,
+          "valence_mae": 25.9592,
+          "arousal_mae": 28.0767,
+          "overall_mse": 1396.2881,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "median_lag-4_smooth21",
+          "overall_mae": 27.0213,
+          "valence_mae": 25.8845,
+          "arousal_mae": 28.1581,
+          "overall_mse": 1400.2047,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q50_lag-4_smooth21",
+          "overall_mae": 27.0213,
+          "valence_mae": 25.8845,
+          "arousal_mae": 28.1581,
+          "overall_mse": 1400.2047,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth11_Pattern098_w0p5",
+          "overall_mae": 27.0226,
+          "valence_mae": 25.9368,
+          "arousal_mae": 28.1084,
+          "overall_mse": 1406.7924,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth11_Pattern098_w0p5",
+          "overall_mae": 27.0226,
+          "valence_mae": 25.9368,
+          "arousal_mae": 28.1084,
+          "overall_mse": 1406.7924,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 27.0228,
+          "valence_mae": 25.9317,
+          "arousal_mae": 28.114,
+          "overall_mse": 1410.9069,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 27.0228,
+          "valence_mae": 25.9317,
+          "arousal_mae": 28.114,
+          "overall_mse": 1410.9069,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-4_smooth15]_A[Pattern098]",
+          "overall_mae": 27.0268,
+          "valence_mae": 25.7978,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1398.4447,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag-4_smooth11]_A[Pattern098]",
+          "overall_mae": 27.029,
+          "valence_mae": 25.8021,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1417.2871,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth11_Pattern098_w0p5",
+          "overall_mae": 27.0291,
+          "valence_mae": 25.9765,
+          "arousal_mae": 28.0817,
+          "overall_mse": 1395.5492,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-3_smooth11]_A[Pattern098]",
+          "overall_mae": 27.0295,
+          "valence_mae": 25.8031,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1406.5537,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-3_smooth11]_A[Pattern098]",
+          "overall_mae": 27.0295,
+          "valence_mae": 25.8031,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1406.5537,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-3_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.0332,
+          "valence_mae": 25.9812,
+          "arousal_mae": 28.0852,
+          "overall_mse": 1399.579,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-3_smooth11_Pattern098_w0p75",
+          "overall_mae": 27.0486,
+          "valence_mae": 26.0061,
+          "arousal_mae": 28.0911,
+          "overall_mse": 1397.8994,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-4_smooth5",
+          "overall_mae": 27.0496,
+          "valence_mae": 25.7427,
+          "arousal_mae": 28.3565,
+          "overall_mse": 1468.2692,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-4_smooth5_Pattern098_w0p75",
+          "overall_mae": 27.0507,
+          "valence_mae": 25.8366,
+          "arousal_mae": 28.2648,
+          "overall_mse": 1446.4913,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth5]_A[Pattern098]",
+          "overall_mae": 27.0573,
+          "valence_mae": 25.8587,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1409.4052,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth15_Pattern098_w0p5",
+          "overall_mae": 27.0598,
+          "valence_mae": 25.9857,
+          "arousal_mae": 28.1339,
+          "overall_mse": 1405.4752,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth15_Pattern098_w0p5",
+          "overall_mae": 27.0598,
+          "valence_mae": 25.9857,
+          "arousal_mae": 28.1339,
+          "overall_mse": 1405.4752,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-4_smooth15_Pattern098_w0p5",
+          "overall_mae": 27.0667,
+          "valence_mae": 26.0274,
+          "arousal_mae": 28.106,
+          "overall_mse": 1394.3483,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-4_smooth21]_A[Pattern098]",
+          "overall_mae": 27.0702,
+          "valence_mae": 25.8845,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1398.6161,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-4_smooth21]_A[Pattern098]",
+          "overall_mae": 27.0702,
+          "valence_mae": 25.8845,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1398.6161,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-3_smooth15",
+          "overall_mae": 27.0747,
+          "valence_mae": 26.0348,
+          "arousal_mae": 28.1146,
+          "overall_mse": 1397.1144,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q55_lag-4_smooth9_Pattern098_w0p75",
+          "overall_mae": 27.0752,
+          "valence_mae": 25.8636,
+          "arousal_mae": 28.2867,
+          "overall_mse": 1443.3754,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q55_lag-4_smooth9",
+          "overall_mae": 27.0758,
+          "valence_mae": 25.7695,
+          "arousal_mae": 28.3821,
+          "overall_mse": 1462.9697,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth9]_A[Pattern098]",
+          "overall_mae": 27.0761,
+          "valence_mae": 25.8964,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1406.391,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[median_lag-3_smooth15]_A[Pattern098]",
+          "overall_mae": 27.078,
+          "valence_mae": 25.9001,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1404.4655,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q50_lag-3_smooth15]_A[Pattern098]",
+          "overall_mae": 27.078,
+          "valence_mae": 25.9001,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1404.4655,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-3_smooth15_Pattern098_w0p75",
+          "overall_mae": 27.0792,
+          "valence_mae": 26.0047,
+          "arousal_mae": 28.1537,
+          "overall_mse": 1408.2076,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-3_smooth15_Pattern098_w0p75",
+          "overall_mae": 27.0792,
+          "valence_mae": 26.0047,
+          "arousal_mae": 28.1537,
+          "overall_mse": 1408.2076,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q55_lag-4_smooth15]_A[Pattern098]",
+          "overall_mae": 27.0797,
+          "valence_mae": 25.9037,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1415.1844,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-4_smooth21_Pattern098_w0p75",
+          "overall_mae": 27.0825,
+          "valence_mae": 25.9904,
+          "arousal_mae": 28.1745,
+          "overall_mse": 1401.3794,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-4_smooth21_Pattern098_w0p75",
+          "overall_mae": 27.0825,
+          "valence_mae": 25.9904,
+          "arousal_mae": 28.1745,
+          "overall_mse": 1401.3794,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_median_lag-3_smooth5_Pattern098_w0p5",
+          "overall_mae": 27.0837,
+          "valence_mae": 26.0289,
+          "arousal_mae": 28.1384,
+          "overall_mse": 1413.6661,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q50_lag-3_smooth5_Pattern098_w0p5",
+          "overall_mae": 27.0837,
+          "valence_mae": 26.0289,
+          "arousal_mae": 28.1384,
+          "overall_mse": 1413.6661,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "q45_lag-4_smooth21",
+          "overall_mae": 27.0852,
+          "valence_mae": 26.0291,
+          "arousal_mae": 28.1413,
+          "overall_mse": 1389.6582,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "Blend_q45_lag-3_smooth5_Pattern098_w0p5",
+          "overall_mae": 27.0901,
+          "valence_mae": 26.0595,
+          "arousal_mae": 28.1207,
+          "overall_mse": 1402.063,
+          "notes": "Robust video-time aggregation prior."
+        },
+        {
+          "method": "V[q45_lag-3_smooth11]_A[Pattern098]",
+          "overall_mae": 27.0927,
+          "valence_mae": 25.9296,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1405.1157,
+          "notes": "Robust video-time aggregation prior."
+        }
+      ]
+    }
+  ]
+}

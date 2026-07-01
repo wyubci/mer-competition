@@ -1,0 +1,948 @@
+{
+  "method": "Module mechanism analysis after 200 experiments",
+  "note": "No new base architecture. These are deterministic gates/probes over previously discovered modules.",
+  "aggregate_results": [
+    {
+      "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+      "overall_mae": 28.265,
+      "valence_mae": 26.0416,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1565.5298,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "200_CurrentManualFusion",
+      "overall_mae": 28.6956,
+      "valence_mae": 26.9028,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1593.7705,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "201_GateV_Trust188WhenUncertaintyLow",
+      "overall_mae": 28.6967,
+      "valence_mae": 26.905,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1590.9534,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "204_GateV_Trust188WhenSlopeHigh",
+      "overall_mae": 28.7008,
+      "valence_mae": 26.9132,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1590.3386,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "203_GateV_Trust188WhenSlopeLow",
+      "overall_mae": 28.7028,
+      "valence_mae": 26.9171,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1593.1714,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "202_GateV_Trust188WhenUncertaintyHigh",
+      "overall_mae": 28.7069,
+      "valence_mae": 26.9254,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1592.4828,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "206_GateV_Trust188WhenConsensusClose",
+      "overall_mae": 28.7086,
+      "valence_mae": 26.9288,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1592.1349,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "207_GateV_HybridLowRisk",
+      "overall_mae": 28.7097,
+      "valence_mae": 26.931,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1590.3262,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "205_GateV_Trust188WhenCorrectionSmall",
+      "overall_mae": 28.7102,
+      "valence_mae": 26.932,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1591.6353,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "195_ConformalBandSafeProjector",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4884,
+      "overall_mse": 1590.1746,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "167_PreviousBest_reference",
+      "overall_mae": 28.7129,
+      "valence_mae": 26.9371,
+      "arousal_mae": 30.4888,
+      "overall_mse": 1590.1758,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "188_ValenceRiskExpert",
+      "overall_mae": 28.7279,
+      "valence_mae": 26.9028,
+      "arousal_mae": 30.553,
+      "overall_mse": 1592.02,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "diagnostics": {
+    "interpretation": "Negative delta means the tested module improves absolute error relative to 167.",
+    "mean_delta_v_188_vs_167": -0.034227,
+    "mean_delta_a_195_vs_167": -0.000386,
+    "feature_bin_mean_delta_v": {
+      "candidate_std_v": [
+        0.045742,
+        -0.11148,
+        -0.089017,
+        0.021605,
+        -0.037975
+      ],
+      "slope_abs_v": [
+        -0.048327,
+        -0.054765,
+        0.052332,
+        -0.023605,
+        -0.096568
+      ],
+      "correction_abs_v": [
+        -0.017494,
+        -0.035717,
+        -0.118354,
+        -0.052419,
+        -0.018499
+      ],
+      "consensus_z_v": [
+        -0.026484,
+        0.061841,
+        -0.01919,
+        -0.045907,
+        -0.141047
+      ]
+    },
+    "video_mean_delta_v": {
+      "1": 0.259778,
+      "2": -0.01174,
+      "3": 0.03129,
+      "4": -0.382345,
+      "5": -0.260922,
+      "6": -0.038952,
+      "7": 0.139828,
+      "8": 0.002413,
+      "9": -0.137103,
+      "10": 0.002753,
+      "11": -0.15195,
+      "12": 0.001613,
+      "13": 0.127717,
+      "14": -0.154957,
+      "15": -0.098427
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+          "overall_mae": 25.5633,
+          "valence_mae": 23.9001,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1208.7073,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "195_ConformalBandSafeProjector",
+          "overall_mae": 25.9707,
+          "valence_mae": 24.7149,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1230.7996,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9711,
+          "valence_mae": 24.7152,
+          "arousal_mae": 27.227,
+          "overall_mse": 1230.8014,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "202_GateV_Trust188WhenUncertaintyHigh",
+          "overall_mae": 25.9807,
+          "valence_mae": 24.735,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1234.8246,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "205_GateV_Trust188WhenCorrectionSmall",
+          "overall_mae": 25.9984,
+          "valence_mae": 24.7703,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1233.8756,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "207_GateV_HybridLowRisk",
+          "overall_mae": 25.9998,
+          "valence_mae": 24.7731,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1231.8358,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "204_GateV_Trust188WhenSlopeHigh",
+          "overall_mae": 26.0003,
+          "valence_mae": 24.7742,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1232.5431,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "206_GateV_Trust188WhenConsensusClose",
+          "overall_mae": 26.0304,
+          "valence_mae": 24.8344,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1236.0087,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "203_GateV_Trust188WhenSlopeLow",
+          "overall_mae": 26.0655,
+          "valence_mae": 24.9046,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1239.1202,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "201_GateV_Trust188WhenUncertaintyLow",
+          "overall_mae": 26.0854,
+          "valence_mae": 24.9443,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1236.7736,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.0987,
+          "valence_mae": 24.9709,
+          "arousal_mae": 27.2264,
+          "overall_mse": 1241.3619,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "188_ValenceRiskExpert",
+          "overall_mae": 26.1182,
+          "valence_mae": 24.9709,
+          "arousal_mae": 27.2654,
+          "overall_mse": 1240.4119,
+          "notes": "Module gate mechanism analysis."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+          "overall_mae": 36.7295,
+          "valence_mae": 32.0498,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2435.1006,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 37.0178,
+          "valence_mae": 32.6264,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2456.207,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "188_ValenceRiskExpert",
+          "overall_mae": 37.063,
+          "valence_mae": 32.6264,
+          "arousal_mae": 41.4996,
+          "overall_mse": 2451.762,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "201_GateV_Trust188WhenUncertaintyLow",
+          "overall_mae": 37.0871,
+          "valence_mae": 32.765,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2457.3672,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "203_GateV_Trust188WhenSlopeLow",
+          "overall_mae": 37.1134,
+          "valence_mae": 32.8176,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2461.8044,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "204_GateV_Trust188WhenSlopeHigh",
+          "overall_mae": 37.1629,
+          "valence_mae": 32.9165,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2463.0356,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "202_GateV_Trust188WhenUncertaintyHigh",
+          "overall_mae": 37.1883,
+          "valence_mae": 32.9674,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2467.3469,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "206_GateV_Trust188WhenConsensusClose",
+          "overall_mae": 37.1925,
+          "valence_mae": 32.9758,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2466.1221,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "205_GateV_Trust188WhenCorrectionSmall",
+          "overall_mae": 37.2044,
+          "valence_mae": 32.9996,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2465.9998,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "207_GateV_HybridLowRisk",
+          "overall_mae": 37.2211,
+          "valence_mae": 33.033,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2466.1003,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "195_ConformalBandSafeProjector",
+          "overall_mae": 37.2632,
+          "valence_mae": 33.1172,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2469.0264,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 37.2633,
+          "valence_mae": 33.1172,
+          "arousal_mae": 41.4093,
+          "overall_mse": 2469.0242,
+          "notes": "Module gate mechanism analysis."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+          "overall_mae": 26.477,
+          "valence_mae": 22.8989,
+          "arousal_mae": 30.055,
+          "overall_mse": 1288.2659,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.7519,
+          "valence_mae": 23.4488,
+          "arousal_mae": 30.055,
+          "overall_mse": 1301.9203,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "188_ValenceRiskExpert",
+          "overall_mae": 26.7638,
+          "valence_mae": 23.4488,
+          "arousal_mae": 30.0788,
+          "overall_mse": 1301.1768,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "201_GateV_Trust188WhenUncertaintyLow",
+          "overall_mae": 26.8229,
+          "valence_mae": 23.5909,
+          "arousal_mae": 30.055,
+          "overall_mse": 1306.7676,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "203_GateV_Trust188WhenSlopeLow",
+          "overall_mae": 26.857,
+          "valence_mae": 23.6589,
+          "arousal_mae": 30.055,
+          "overall_mse": 1308.9044,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "206_GateV_Trust188WhenConsensusClose",
+          "overall_mae": 26.9318,
+          "valence_mae": 23.8087,
+          "arousal_mae": 30.055,
+          "overall_mse": 1312.5305,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "204_GateV_Trust188WhenSlopeHigh",
+          "overall_mae": 26.9446,
+          "valence_mae": 23.8341,
+          "arousal_mae": 30.055,
+          "overall_mse": 1312.3885,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "202_GateV_Trust188WhenUncertaintyHigh",
+          "overall_mae": 26.9774,
+          "valence_mae": 23.8998,
+          "arousal_mae": 30.055,
+          "overall_mse": 1314.4746,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "205_GateV_Trust188WhenCorrectionSmall",
+          "overall_mae": 27.0047,
+          "valence_mae": 23.9543,
+          "arousal_mae": 30.055,
+          "overall_mse": 1316.2106,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "207_GateV_HybridLowRisk",
+          "overall_mae": 27.0051,
+          "valence_mae": 23.9552,
+          "arousal_mae": 30.055,
+          "overall_mse": 1316.8107,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "195_ConformalBandSafeProjector",
+          "overall_mae": 27.0533,
+          "valence_mae": 24.0517,
+          "arousal_mae": 30.055,
+          "overall_mse": 1319.7865,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.0537,
+          "valence_mae": 24.0519,
+          "arousal_mae": 30.0554,
+          "overall_mse": 1319.7897,
+          "notes": "Module gate mechanism analysis."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+          "overall_mae": 28.3499,
+          "valence_mae": 28.3211,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1790.5797,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "195_ConformalBandSafeProjector",
+          "overall_mae": 28.6758,
+          "valence_mae": 28.9729,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1804.2758,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 28.6763,
+          "valence_mae": 28.9737,
+          "arousal_mae": 28.379,
+          "overall_mse": 1804.2782,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "207_GateV_HybridLowRisk",
+          "overall_mae": 28.7259,
+          "valence_mae": 29.0731,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1809.6715,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "204_GateV_Trust188WhenSlopeHigh",
+          "overall_mae": 28.7362,
+          "valence_mae": 29.0938,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1811.9355,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "205_GateV_Trust188WhenCorrectionSmall",
+          "overall_mae": 28.7816,
+          "valence_mae": 29.1847,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1817.5084,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "201_GateV_Trust188WhenUncertaintyLow",
+          "overall_mae": 28.7883,
+          "valence_mae": 29.1981,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1816.0934,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "206_GateV_Trust188WhenConsensusClose",
+          "overall_mae": 28.8006,
+          "valence_mae": 29.2227,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1821.6439,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "202_GateV_Trust188WhenUncertaintyHigh",
+          "overall_mae": 28.8174,
+          "valence_mae": 29.2563,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1823.111,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "203_GateV_Trust188WhenSlopeLow",
+          "overall_mae": 28.87,
+          "valence_mae": 29.3615,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1827.3668,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "188_ValenceRiskExpert",
+          "overall_mae": 28.9127,
+          "valence_mae": 29.4938,
+          "arousal_mae": 28.3316,
+          "overall_mse": 1829.4821,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 28.9362,
+          "valence_mae": 29.4938,
+          "arousal_mae": 28.3786,
+          "overall_mse": 1835.4955,
+          "notes": "Module gate mechanism analysis."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+          "overall_mae": 25.5959,
+          "valence_mae": 23.7194,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1279.3668,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "205_GateV_Trust188WhenCorrectionSmall",
+          "overall_mae": 25.9792,
+          "valence_mae": 24.4861,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1299.0497,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "202_GateV_Trust188WhenUncertaintyHigh",
+          "overall_mae": 25.9815,
+          "valence_mae": 24.4906,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1299.6124,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "204_GateV_Trust188WhenSlopeHigh",
+          "overall_mae": 25.9918,
+          "valence_mae": 24.5112,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1300.3381,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "207_GateV_HybridLowRisk",
+          "overall_mae": 25.9949,
+          "valence_mae": 24.5175,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1299.7299,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "195_ConformalBandSafeProjector",
+          "overall_mae": 26.0001,
+          "valence_mae": 24.5279,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1299.8685,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 26.0004,
+          "valence_mae": 24.5283,
+          "arousal_mae": 27.4726,
+          "overall_mse": 1299.8701,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "206_GateV_Trust188WhenConsensusClose",
+          "overall_mae": 26.007,
+          "valence_mae": 24.5417,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1301.104,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.0483,
+          "valence_mae": 24.6243,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1305.4005,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "203_GateV_Trust188WhenSlopeLow",
+          "overall_mae": 26.0503,
+          "valence_mae": 24.6283,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1304.4973,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "201_GateV_Trust188WhenUncertaintyLow",
+          "overall_mae": 26.0627,
+          "valence_mae": 24.653,
+          "arousal_mae": 27.4723,
+          "overall_mse": 1305.201,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "188_ValenceRiskExpert",
+          "overall_mae": 26.0822,
+          "valence_mae": 24.6243,
+          "arousal_mae": 27.54,
+          "overall_mse": 1303.2051,
+          "notes": "Module gate mechanism analysis."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "208_OracleRowGateV_UpperBound_NotDeployable",
+          "overall_mae": 26.8747,
+          "valence_mae": 25.3604,
+          "arousal_mae": 28.389,
+          "overall_mse": 1391.1573,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "203_GateV_Trust188WhenSlopeLow",
+          "overall_mae": 27.2604,
+          "valence_mae": 26.1318,
+          "arousal_mae": 28.389,
+          "overall_mse": 1417.3346,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "206_GateV_Trust188WhenConsensusClose",
+          "overall_mae": 27.2893,
+          "valence_mae": 26.1897,
+          "arousal_mae": 28.389,
+          "overall_mse": 1415.3999,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "205_GateV_Trust188WhenCorrectionSmall",
+          "overall_mae": 27.2931,
+          "valence_mae": 26.1973,
+          "arousal_mae": 28.389,
+          "overall_mse": 1417.167,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "202_GateV_Trust188WhenUncertaintyHigh",
+          "overall_mae": 27.2961,
+          "valence_mae": 26.2032,
+          "arousal_mae": 28.389,
+          "overall_mse": 1415.5273,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "207_GateV_HybridLowRisk",
+          "overall_mae": 27.3116,
+          "valence_mae": 26.2341,
+          "arousal_mae": 28.389,
+          "overall_mse": 1417.8086,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "195_ConformalBandSafeProjector",
+          "overall_mae": 27.3126,
+          "valence_mae": 26.2362,
+          "arousal_mae": 28.389,
+          "overall_mse": 1417.2906,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.3129,
+          "valence_mae": 26.2362,
+          "arousal_mae": 28.3896,
+          "overall_mse": 1417.2916,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 27.321,
+          "valence_mae": 26.253,
+          "arousal_mae": 28.389,
+          "overall_mse": 1422.2373,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "201_GateV_Trust188WhenUncertaintyLow",
+          "overall_mae": 27.3339,
+          "valence_mae": 26.2787,
+          "arousal_mae": 28.389,
+          "overall_mse": 1423.5172,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "204_GateV_Trust188WhenSlopeHigh",
+          "overall_mae": 27.3694,
+          "valence_mae": 26.3497,
+          "arousal_mae": 28.389,
+          "overall_mse": 1421.7914,
+          "notes": "Module gate mechanism analysis."
+        },
+        {
+          "method": "188_ValenceRiskExpert",
+          "overall_mae": 27.4278,
+          "valence_mae": 26.253,
+          "arousal_mae": 28.6026,
+          "overall_mse": 1426.0836,
+          "notes": "Module gate mechanism analysis."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2442 @@
+{
+  "device": "cuda",
+  "method": "SCEW: State-Conditioned Expert Weights + SCL + PA-BS",
+  "formula": "for each prior-slope state, use its own lag and its own two-expert residual weight before the consensus gate, state multiplier, and PA-BS",
+  "best_combined": {
+    "method": "SCEW_PABS_dimwise_best",
+    "overall_mae": 29.3455,
+    "valence_mae": 27.4134,
+    "arousal_mae": 31.2776,
+    "overall_mse": 1482.4479,
+    "notes": "State-conditioned expert weights over state-conditioned lag residuals.",
+    "valence_config": {
+      "dimension": "valence",
+      "screen_mae": 27.8932,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4134
+    },
+    "arousal_config": {
+      "dimension": "arousal",
+      "screen_mae": 31.3426,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2776
+    }
+  },
+  "top_valence": [
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8932,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4134
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8841,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.15,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4146
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8907,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4147
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8811,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.415
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8936,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4151
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8875,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.125,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4152
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8904,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.1,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4159
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8926,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.075,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4162
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8786,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4164
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8911,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4165
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8845,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.15,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4173
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8744,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.15,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4176
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8815,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4176
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8714,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4178
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8879,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.125,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4179
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8778,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.125,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4182
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8875,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4183
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8908,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.1,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4186
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.879,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4189
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8807,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.1,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4189
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.893,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.075,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4189
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.869,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4191
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8829,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.075,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4192
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8874,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.025,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4196
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8855,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.05,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4197
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8754,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4198
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8899,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.0,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4199
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8879,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.925,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4201
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8748,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.15,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4212
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8718,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4214
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8676,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.15,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4215
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8646,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.175,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4216
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8782,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.125,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4219
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.871,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.125,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4222
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8758,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.9,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4223
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8658,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4224
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8694,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4226
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8812,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.1,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4226
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8621,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.2,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4228
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8739,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.1,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4229
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8834,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.075,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4229
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8761,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.075,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4231
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8859,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.05,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4234
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8878,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.025,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4234
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8786,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.05,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4236
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8805,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.025,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4236
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8903,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.0,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4238
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.883,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.0,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.424
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8662,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.725,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.875,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.4259
+    },
+    {
+      "dimension": "valence",
+      "screen_mae": 27.8589,
+      "slope_quantile": 45.0,
+      "slope_threshold": 0.52500153,
+      "stable_first_expert_weight": 0.75,
+      "rising_first_expert_weight": 0.25,
+      "falling_first_expert_weight": 0.85,
+      "first_expert": "moddrop010_seed123",
+      "second_expert": "itransformer_hybrid_159",
+      "state_lags": {
+        "stable": -2,
+        "rising": 0,
+        "falling": -14
+      },
+      "state_multipliers": {
+        "stable": 1.25,
+        "rising": 1.1,
+        "falling": 0.75
+      },
+      "stable_fraction": 0.451823,
+      "rising_fraction": 0.277995,
+      "falling_fraction": 0.270182,
+      "mae": 27.426
+    }
+  ],
+  "top_arousal": [
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3426,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2776
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3438,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2776
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.345,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2777
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3434,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2788
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3447,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2789
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3439,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.279
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3459,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.279
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3451,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2791
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3464,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2792
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3443,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2801
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3455,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2801
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3467,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2802
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3448,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2803
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.346,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2803
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3453,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2805
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3472,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2805
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3465,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2806
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3478,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.0,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2807
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3456,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2816
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3468,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2816
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3481,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2817
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3462,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2818
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3474,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2818
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3486,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.025,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.282
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.346,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2827
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3472,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2827
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3484,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2828
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.347,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2831
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3482,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2831
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3495,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.05,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2832
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3473,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2842
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3485,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2842
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3498,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2843
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3487,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2857
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3499,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2857
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3512,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.1,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2858
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3506,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2879
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3519,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2879
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3494,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 1.0,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.288
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3508,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2894
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.352,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2894
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3532,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.9,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2894
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3534,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.9,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2908
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3522,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 1.0,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2909
+    },
+    {
+      "dimension": "arousal",
+      "screen_mae": 31.3546,
+      "slope_quantile": 50.0,
+      "slope_threshold": 0.70000076,
+      "stable_first_expert_weight": 0.8,
+      "rising_first_expert_weight": 0.8,
+      "falling_first_expert_weight": 0.2,
+      "first_expert": "nobase_itransformer_arousal_159",
+      "second_expert": "scalegated_msgm_arousal",
+      "state_lags": {
+        "stable": -16,
+        "rising": -12,
+        "falling": -10
+      },
+      "state_multipliers": {
+        "stable": 0.75,
+        "rising": 0.75,
+        "falling": 1.5
+      },
+      "stable_fraction": 0.504557,
+      "rising_fraction": 0.248698,
+      "falling_fraction": 0.246745,
+      "mae": 31.2909
+    }
+  ]
+}

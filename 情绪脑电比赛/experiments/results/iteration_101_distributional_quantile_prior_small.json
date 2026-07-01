@@ -1,0 +1,5360 @@
+{
+  "method": "Distributional quantile video-time prior",
+  "note": "Instead of assuming the conditional median is always best after smoothing, this searches conditional quantile trajectories under subject-disjoint validation.",
+  "fold_size": 4,
+  "grid": {
+    "quantiles": [
+      0.35,
+      0.45,
+      0.5,
+      0.55,
+      0.65
+    ],
+    "lags": [
+      -2,
+      -1
+    ],
+    "smooth_windows": [
+      9,
+      11,
+      15,
+      31
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "PatternPrior_098",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth11",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+      "overall_mae": 28.861,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.7052,
+      "overall_mse": 1621.8965,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+      "overall_mae": 28.8623,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1618.5743,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth9",
+      "overall_mae": 28.8635,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1625.0601,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+      "overall_mae": 28.8715,
+      "valence_mae": 27.0547,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1615.1726,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+      "overall_mae": 28.8847,
+      "valence_mae": 27.0638,
+      "arousal_mae": 30.7056,
+      "overall_mse": 1612.7474,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth11",
+      "overall_mae": 28.9047,
+      "valence_mae": 27.1195,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1629.6294,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth9",
+      "overall_mae": 28.9055,
+      "valence_mae": 27.1057,
+      "arousal_mae": 30.7052,
+      "overall_mse": 1630.3041,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth11",
+      "overall_mae": 28.9065,
+      "valence_mae": 27.1133,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1626.9985,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth9",
+      "overall_mae": 28.909,
+      "valence_mae": 27.1204,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1633.1382,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth11",
+      "overall_mae": 28.9139,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.7983,
+      "overall_mse": 1633.3527,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth15",
+      "overall_mae": 28.916,
+      "valence_mae": 27.1436,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1623.3361,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth9",
+      "overall_mae": 28.917,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8045,
+      "overall_mse": 1636.7173,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth9",
+      "overall_mae": 28.9191,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.8215,
+      "overall_mse": 1633.8174,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth11",
+      "overall_mae": 28.9218,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.8188,
+      "overall_mse": 1630.6493,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth15",
+      "overall_mae": 28.9275,
+      "valence_mae": 27.0547,
+      "arousal_mae": 30.8004,
+      "overall_mse": 1627.312,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth15",
+      "overall_mae": 28.9287,
+      "valence_mae": 27.1519,
+      "arousal_mae": 30.7056,
+      "overall_mse": 1621.187,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth15",
+      "overall_mae": 28.947,
+      "valence_mae": 27.0638,
+      "arousal_mae": 30.8301,
+      "overall_mse": 1625.1556,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth11",
+      "overall_mae": 28.9589,
+      "valence_mae": 27.1195,
+      "arousal_mae": 30.7983,
+      "overall_mse": 1641.4587,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth9",
+      "overall_mae": 28.9625,
+      "valence_mae": 27.1204,
+      "arousal_mae": 30.8045,
+      "overall_mse": 1644.7955,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth9",
+      "overall_mae": 28.9636,
+      "valence_mae": 27.1057,
+      "arousal_mae": 30.8215,
+      "overall_mse": 1642.2251,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth11",
+      "overall_mae": 28.9661,
+      "valence_mae": 27.1133,
+      "arousal_mae": 30.8188,
+      "overall_mse": 1639.0737,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth11",
+      "overall_mae": 28.9713,
+      "valence_mae": 27.2527,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1626.1632,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth9",
+      "overall_mae": 28.9718,
+      "valence_mae": 27.2383,
+      "arousal_mae": 30.7052,
+      "overall_mse": 1626.2437,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth15",
+      "overall_mae": 28.972,
+      "valence_mae": 27.1436,
+      "arousal_mae": 30.8004,
+      "overall_mse": 1635.4755,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth11",
+      "overall_mae": 28.973,
+      "valence_mae": 27.2464,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1622.8649,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth9",
+      "overall_mae": 28.9743,
+      "valence_mae": 27.2511,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1629.7589,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+      "overall_mae": 28.9852,
+      "valence_mae": 27.2821,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1619.7142,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth15",
+      "overall_mae": 28.991,
+      "valence_mae": 27.1519,
+      "arousal_mae": 30.8301,
+      "overall_mse": 1633.5952,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth15",
+      "overall_mae": 28.9977,
+      "valence_mae": 27.2898,
+      "arousal_mae": 30.7056,
+      "overall_mse": 1616.9775,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth11",
+      "overall_mae": 29.0255,
+      "valence_mae": 27.2527,
+      "arousal_mae": 30.7983,
+      "overall_mse": 1637.9928,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth9",
+      "overall_mae": 29.0278,
+      "valence_mae": 27.2511,
+      "arousal_mae": 30.8045,
+      "overall_mse": 1641.4161,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth9",
+      "overall_mae": 29.0299,
+      "valence_mae": 27.2383,
+      "arousal_mae": 30.8215,
+      "overall_mse": 1638.1644,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth11",
+      "overall_mae": 29.0326,
+      "valence_mae": 27.2464,
+      "arousal_mae": 30.8188,
+      "overall_mse": 1634.9399,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth15",
+      "overall_mae": 29.0412,
+      "valence_mae": 27.2821,
+      "arousal_mae": 30.8004,
+      "overall_mse": 1631.854,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth11",
+      "overall_mae": 29.0443,
+      "valence_mae": 27.0294,
+      "arousal_mae": 31.0593,
+      "overall_mse": 1639.0919,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth9",
+      "overall_mae": 29.0484,
+      "valence_mae": 27.0167,
+      "arousal_mae": 31.0802,
+      "overall_mse": 1639.8931,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth9",
+      "overall_mae": 29.0489,
+      "valence_mae": 27.0294,
+      "arousal_mae": 31.0684,
+      "overall_mse": 1642.6803,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth11",
+      "overall_mae": 29.0491,
+      "valence_mae": 27.0248,
+      "arousal_mae": 31.0734,
+      "overall_mse": 1636.5239,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth15",
+      "overall_mae": 29.0539,
+      "valence_mae": 27.0547,
+      "arousal_mae": 31.053,
+      "overall_mse": 1632.5856,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth15",
+      "overall_mae": 29.06,
+      "valence_mae": 27.2898,
+      "arousal_mae": 30.8301,
+      "overall_mse": 1629.3856,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth15",
+      "overall_mae": 29.0688,
+      "valence_mae": 27.0638,
+      "arousal_mae": 31.0737,
+      "overall_mse": 1630.4919,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth11",
+      "overall_mae": 29.0894,
+      "valence_mae": 27.1195,
+      "arousal_mae": 31.0593,
+      "overall_mse": 1647.1979,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth9",
+      "overall_mae": 29.093,
+      "valence_mae": 27.1057,
+      "arousal_mae": 31.0802,
+      "overall_mse": 1648.3007,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth11",
+      "overall_mae": 29.0934,
+      "valence_mae": 27.1133,
+      "arousal_mae": 31.0734,
+      "overall_mse": 1644.9485,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth9",
+      "overall_mae": 29.0944,
+      "valence_mae": 27.1204,
+      "arousal_mae": 31.0684,
+      "overall_mse": 1650.7585,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth15",
+      "overall_mae": 29.0983,
+      "valence_mae": 27.1436,
+      "arousal_mae": 31.053,
+      "overall_mse": 1640.7491,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth31",
+      "overall_mae": 29.102,
+      "valence_mae": 27.3681,
+      "arousal_mae": 30.8359,
+      "overall_mse": 1599.8965,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth15",
+      "overall_mae": 29.1128,
+      "valence_mae": 27.1519,
+      "arousal_mae": 31.0737,
+      "overall_mse": 1638.9314,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth31",
+      "overall_mae": 29.1406,
+      "valence_mae": 27.4452,
+      "arousal_mae": 30.8359,
+      "overall_mse": 1607.9443,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth31",
+      "overall_mae": 29.1421,
+      "valence_mae": 27.4067,
+      "arousal_mae": 30.8775,
+      "overall_mse": 1599.4357,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth11",
+      "overall_mae": 29.156,
+      "valence_mae": 27.2527,
+      "arousal_mae": 31.0593,
+      "overall_mse": 1643.7318,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth9",
+      "overall_mae": 29.1592,
+      "valence_mae": 27.2383,
+      "arousal_mae": 31.0802,
+      "overall_mse": 1644.24,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth9",
+      "overall_mae": 29.1597,
+      "valence_mae": 27.2511,
+      "arousal_mae": 31.0684,
+      "overall_mse": 1647.3793,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth11",
+      "overall_mae": 29.1599,
+      "valence_mae": 27.2464,
+      "arousal_mae": 31.0734,
+      "overall_mse": 1640.8147,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth15",
+      "overall_mae": 29.1675,
+      "valence_mae": 27.2821,
+      "arousal_mae": 31.053,
+      "overall_mse": 1637.1274,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth31",
+      "overall_mae": 29.1696,
+      "valence_mae": 27.3681,
+      "arousal_mae": 30.9711,
+      "overall_mse": 1614.1868,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth31",
+      "overall_mae": 29.1798,
+      "valence_mae": 27.4822,
+      "arousal_mae": 30.8775,
+      "overall_mse": 1607.6848,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth15",
+      "overall_mae": 29.1818,
+      "valence_mae": 27.2898,
+      "arousal_mae": 31.0737,
+      "overall_mse": 1634.7222,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth31",
+      "overall_mae": 29.2081,
+      "valence_mae": 27.4452,
+      "arousal_mae": 30.9711,
+      "overall_mse": 1622.2346,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth31",
+      "overall_mae": 29.2138,
+      "valence_mae": 27.4067,
+      "arousal_mae": 31.0208,
+      "overall_mse": 1614.0897,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth31",
+      "overall_mae": 29.2298,
+      "valence_mae": 27.6236,
+      "arousal_mae": 30.8359,
+      "overall_mse": 1604.4025,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth31",
+      "overall_mae": 29.2515,
+      "valence_mae": 27.4822,
+      "arousal_mae": 31.0208,
+      "overall_mse": 1622.339,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth31",
+      "overall_mae": 29.2693,
+      "valence_mae": 27.3681,
+      "arousal_mae": 31.1705,
+      "overall_mse": 1615.4653,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth31",
+      "overall_mae": 29.271,
+      "valence_mae": 27.6646,
+      "arousal_mae": 30.8775,
+      "overall_mse": 1603.8405,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth31",
+      "overall_mae": 29.2974,
+      "valence_mae": 27.6236,
+      "arousal_mae": 30.9711,
+      "overall_mse": 1618.6927,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth31",
+      "overall_mae": 29.3078,
+      "valence_mae": 27.4452,
+      "arousal_mae": 31.1705,
+      "overall_mse": 1623.5132,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth31",
+      "overall_mae": 29.309,
+      "valence_mae": 27.4067,
+      "arousal_mae": 31.2113,
+      "overall_mse": 1615.302,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth31",
+      "overall_mae": 29.3427,
+      "valence_mae": 27.6646,
+      "arousal_mae": 31.0208,
+      "overall_mse": 1618.4946,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth31",
+      "overall_mae": 29.3467,
+      "valence_mae": 27.4822,
+      "arousal_mae": 31.2113,
+      "overall_mse": 1623.551,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth31",
+      "overall_mae": 29.3971,
+      "valence_mae": 27.6236,
+      "arousal_mae": 31.1705,
+      "overall_mse": 1619.9714,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth31",
+      "overall_mae": 29.438,
+      "valence_mae": 27.6646,
+      "arousal_mae": 31.2113,
+      "overall_mse": 1619.7069,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth11",
+      "overall_mae": 29.4952,
+      "valence_mae": 28.3005,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1690.7794,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth9",
+      "overall_mae": 29.5007,
+      "valence_mae": 28.3038,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1694.1969,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth15",
+      "overall_mae": 29.5017,
+      "valence_mae": 28.3151,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1684.5476,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth11",
+      "overall_mae": 29.5105,
+      "valence_mae": 28.3212,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1689.6306,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth9",
+      "overall_mae": 29.512,
+      "valence_mae": 28.3188,
+      "arousal_mae": 30.7052,
+      "overall_mse": 1692.8911,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth15",
+      "overall_mae": 29.525,
+      "valence_mae": 28.3444,
+      "arousal_mae": 30.7056,
+      "overall_mse": 1683.7811,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth11",
+      "overall_mae": 29.5494,
+      "valence_mae": 28.3005,
+      "arousal_mae": 30.7983,
+      "overall_mse": 1702.6089,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "dimwise_results": [
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[PatternPrior_098]",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7472,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.7677,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.0415,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.7677,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.0415,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.7677,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.0415,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.7677,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.0415,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.7677,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.0415,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.7717,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1602.3857,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.7717,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1602.3857,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.7717,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1602.3857,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.7717,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1602.3857,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.7717,
+      "valence_mae": 27.0248,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1602.3857,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-2_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.2981,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-2_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.2981,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-2_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.2981,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-2_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.2981,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-2_smooth11]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1604.2981,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-2_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1606.1516,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-2_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1606.1516,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-2_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1606.1516,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-2_smooth9]__A[PatternPrior_098]",
+      "overall_mae": 28.774,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1606.1516,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8311,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1604.8826,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8311,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1604.8826,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8311,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1604.8826,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8311,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1604.8826,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8311,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1604.8826,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8318,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1607.9724,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8318,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1607.9724,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8318,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1607.9724,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8318,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1607.9724,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8318,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1607.9724,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth9]",
+      "overall_mae": 28.8357,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1609.6556,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth9]",
+      "overall_mae": 28.8357,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1609.6556,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth9]",
+      "overall_mae": 28.8357,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1609.6556,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth9]",
+      "overall_mae": 28.8357,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1609.6556,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth9]",
+      "overall_mae": 28.8357,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6976,
+      "overall_mse": 1609.6556,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p35_qa0p5_lag-1_smooth11]",
+      "overall_mae": 28.8367,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1606.9359,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p45_qa0p5_lag-1_smooth11]",
+      "overall_mae": 28.8367,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1606.9359,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p5_qa0p5_lag-1_smooth11]",
+      "overall_mae": 28.8367,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1606.9359,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[PatternPrior_098]__A[QuantilePrior_qv0p55_qa0p5_lag-1_smooth11]",
+      "overall_mae": 28.8367,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.6997,
+      "overall_mse": 1606.9359,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p65_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth15]",
+      "overall_mae": 28.8525,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6884,
+      "overall_mse": 1618.1769,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p35_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p45_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p45_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p5_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p55_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p5_lag-1_smooth9]__A[QuantilePrior_qv0p65_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    },
+    {
+      "method": "QuantileDimwise_V[QuantilePrior_qv0p5_qa0p55_lag-1_smooth9]__A[QuantilePrior_qv0p35_qa0p5_lag-2_smooth11]",
+      "overall_mae": 28.8533,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.2667,
+      "notes": "Metric-composed quantile dimwise candidate."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "candidate_count": 201,
+      "results": [
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.2372,
+          "valence_mae": 24.6292,
+          "arousal_mae": 27.8453,
+          "overall_mse": 1312.7478,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.2391,
+          "valence_mae": 24.61,
+          "arousal_mae": 27.8682,
+          "overall_mse": 1316.2516,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.2606,
+          "valence_mae": 24.61,
+          "arousal_mae": 27.9112,
+          "overall_mse": 1285.1553,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.2608,
+          "valence_mae": 24.6292,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1281.7343,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.2627,
+          "valence_mae": 24.6992,
+          "arousal_mae": 27.8262,
+          "overall_mse": 1306.3585,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.2855,
+          "valence_mae": 24.6992,
+          "arousal_mae": 27.8718,
+          "overall_mse": 1275.4346,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.299,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8453,
+          "overall_mse": 1308.9818,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.2994,
+          "valence_mae": 24.7306,
+          "arousal_mae": 27.8682,
+          "overall_mse": 1312.5464,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.3209,
+          "valence_mae": 24.7306,
+          "arousal_mae": 27.9112,
+          "overall_mse": 1281.4501,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.3263,
+          "valence_mae": 24.8264,
+          "arousal_mae": 27.8262,
+          "overall_mse": 1302.479,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.3491,
+          "valence_mae": 24.8264,
+          "arousal_mae": 27.8718,
+          "overall_mse": 1271.5551,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.3619,
+          "valence_mae": 24.6902,
+          "arousal_mae": 28.0337,
+          "overall_mse": 1320.2697,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.3682,
+          "valence_mae": 24.7164,
+          "arousal_mae": 28.02,
+          "overall_mse": 1316.856,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.3867,
+          "valence_mae": 24.6902,
+          "arousal_mae": 28.0832,
+          "overall_mse": 1289.2963,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.3928,
+          "valence_mae": 24.7164,
+          "arousal_mae": 28.0692,
+          "overall_mse": 1285.9196,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.409,
+          "valence_mae": 24.8,
+          "arousal_mae": 28.0179,
+          "overall_mse": 1311.0253,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.4253,
+          "valence_mae": 24.8168,
+          "arousal_mae": 28.0337,
+          "overall_mse": 1316.088,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.4331,
+          "valence_mae": 24.8462,
+          "arousal_mae": 28.02,
+          "overall_mse": 1312.6549,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.4341,
+          "valence_mae": 24.8,
+          "arousal_mae": 28.0683,
+          "overall_mse": 1280.1923,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.45,
+          "valence_mae": 24.8168,
+          "arousal_mae": 28.0832,
+          "overall_mse": 1285.1147,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.4577,
+          "valence_mae": 24.8462,
+          "arousal_mae": 28.0692,
+          "overall_mse": 1281.7184,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.4734,
+          "valence_mae": 24.929,
+          "arousal_mae": 28.0179,
+          "overall_mse": 1306.7723,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.4986,
+          "valence_mae": 24.929,
+          "arousal_mae": 28.0683,
+          "overall_mse": 1275.9395,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.5294,
+          "valence_mae": 25.2135,
+          "arousal_mae": 27.8453,
+          "overall_mse": 1318.2357,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.5295,
+          "valence_mae": 25.1908,
+          "arousal_mae": 27.8682,
+          "overall_mse": 1322.0148,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.5438,
+          "valence_mae": 25.2423,
+          "arousal_mae": 27.8453,
+          "overall_mse": 1356.0381,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth9",
+          "overall_mae": 26.548,
+          "valence_mae": 24.61,
+          "arousal_mae": 28.486,
+          "overall_mse": 1282.7363,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.5498,
+          "valence_mae": 25.181,
+          "arousal_mae": 27.9187,
+          "overall_mse": 1294.1477,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth11",
+          "overall_mae": 26.5507,
+          "valence_mae": 24.6292,
+          "arousal_mae": 28.4722,
+          "overall_mse": 1279.6958,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.551,
+          "valence_mae": 25.1908,
+          "arousal_mae": 27.9112,
+          "overall_mse": 1290.9185,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.5525,
+          "valence_mae": 25.2367,
+          "arousal_mae": 27.8682,
+          "overall_mse": 1359.6001,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.553,
+          "valence_mae": 25.2135,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1287.2223,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.5548,
+          "valence_mae": 25.2834,
+          "arousal_mae": 27.8262,
+          "overall_mse": 1349.6365,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.5576,
+          "valence_mae": 25.2889,
+          "arousal_mae": 27.8262,
+          "overall_mse": 1311.3342,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.5674,
+          "valence_mae": 25.2423,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1325.0245,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.5739,
+          "valence_mae": 25.2367,
+          "arousal_mae": 27.9112,
+          "overall_mse": 1328.5035,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth15",
+          "overall_mae": 26.5754,
+          "valence_mae": 24.6992,
+          "arousal_mae": 28.4516,
+          "overall_mse": 1274.1606,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.5776,
+          "valence_mae": 25.2834,
+          "arousal_mae": 27.8718,
+          "overall_mse": 1318.7125,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.5804,
+          "valence_mae": 25.2889,
+          "arousal_mae": 27.8718,
+          "overall_mse": 1280.4103,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.5877,
+          "valence_mae": 25.181,
+          "arousal_mae": 27.9944,
+          "overall_mse": 1262.1677,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.6048,
+          "valence_mae": 25.2909,
+          "arousal_mae": 27.9187,
+          "overall_mse": 1290.3126,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth9",
+          "overall_mae": 26.6083,
+          "valence_mae": 24.7306,
+          "arousal_mae": 28.486,
+          "overall_mse": 1279.031,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth11",
+          "overall_mae": 26.6125,
+          "valence_mae": 24.7528,
+          "arousal_mae": 28.4722,
+          "overall_mse": 1275.9299,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth15",
+          "overall_mae": 26.639,
+          "valence_mae": 24.8264,
+          "arousal_mae": 28.4516,
+          "overall_mse": 1270.2811,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.6427,
+          "valence_mae": 25.2909,
+          "arousal_mae": 27.9944,
+          "overall_mse": 1258.3325,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.6574,
+          "valence_mae": 25.2811,
+          "arousal_mae": 28.0337,
+          "overall_mse": 1325.204,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.6639,
+          "valence_mae": 25.3078,
+          "arousal_mae": 28.02,
+          "overall_mse": 1321.6099,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.6675,
+          "valence_mae": 25.3149,
+          "arousal_mae": 28.02,
+          "overall_mse": 1360.927,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.6699,
+          "valence_mae": 25.3062,
+          "arousal_mae": 28.0337,
+          "overall_mse": 1364.4528,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth9",
+          "overall_mae": 26.6791,
+          "valence_mae": 24.6902,
+          "arousal_mae": 28.6679,
+          "overall_mse": 1287.3228,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.6821,
+          "valence_mae": 25.2811,
+          "arousal_mae": 28.0832,
+          "overall_mse": 1294.2306,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth11",
+          "overall_mae": 26.686,
+          "valence_mae": 24.7164,
+          "arousal_mae": 28.6555,
+          "overall_mse": 1284.314,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.6885,
+          "valence_mae": 25.3078,
+          "arousal_mae": 28.0692,
+          "overall_mse": 1290.6735,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.6916,
+          "valence_mae": 25.3653,
+          "arousal_mae": 28.0179,
+          "overall_mse": 1354.9677,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.6921,
+          "valence_mae": 25.3149,
+          "arousal_mae": 28.0692,
+          "overall_mse": 1329.9906,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.6947,
+          "valence_mae": 25.3062,
+          "arousal_mae": 28.0832,
+          "overall_mse": 1333.4795,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.7054,
+          "valence_mae": 25.3929,
+          "arousal_mae": 28.0179,
+          "overall_mse": 1315.4039,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.7158,
+          "valence_mae": 25.3012,
+          "arousal_mae": 28.1304,
+          "overall_mse": 1299.8995,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.7168,
+          "valence_mae": 25.3653,
+          "arousal_mae": 28.0683,
+          "overall_mse": 1324.1346,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth15",
+          "overall_mae": 26.7247,
+          "valence_mae": 24.8,
+          "arousal_mae": 28.6494,
+          "overall_mse": 1279.2603,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.7306,
+          "valence_mae": 25.3929,
+          "arousal_mae": 28.0683,
+          "overall_mse": 1284.5709,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth9",
+          "overall_mae": 26.7424,
+          "valence_mae": 24.8168,
+          "arousal_mae": 28.6679,
+          "overall_mse": 1283.1412,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth11",
+          "overall_mae": 26.7508,
+          "valence_mae": 24.8462,
+          "arousal_mae": 28.6555,
+          "overall_mse": 1280.1129,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth31",
+          "overall_mae": 26.7587,
+          "valence_mae": 25.3012,
+          "arousal_mae": 28.2163,
+          "overall_mse": 1268.0741,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.7722,
+          "valence_mae": 25.414,
+          "arousal_mae": 28.1304,
+          "overall_mse": 1295.8422,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth15",
+          "overall_mae": 26.7892,
+          "valence_mae": 24.929,
+          "arousal_mae": 28.6494,
+          "overall_mse": 1275.0073,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.7932,
+          "valence_mae": 25.6676,
+          "arousal_mae": 27.9187,
+          "overall_mse": 1336.5548,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth31",
+          "overall_mae": 26.8151,
+          "valence_mae": 25.414,
+          "arousal_mae": 28.2163,
+          "overall_mse": 1264.0166,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.831,
+          "valence_mae": 25.6676,
+          "arousal_mae": 27.9944,
+          "overall_mse": 1304.5746,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.8374,
+          "valence_mae": 25.756,
+          "arousal_mae": 27.9187,
+          "overall_mse": 1298.6532,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth9",
+          "overall_mae": 26.8384,
+          "valence_mae": 25.1908,
+          "arousal_mae": 28.486,
+          "overall_mse": 1288.4994,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth11",
+          "overall_mae": 26.8429,
+          "valence_mae": 25.2135,
+          "arousal_mae": 28.4722,
+          "overall_mse": 1285.1837,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth11",
+          "overall_mae": 26.8573,
+          "valence_mae": 25.2423,
+          "arousal_mae": 28.4722,
+          "overall_mse": 1322.9862,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth9",
+          "overall_mae": 26.8613,
+          "valence_mae": 25.2367,
+          "arousal_mae": 28.486,
+          "overall_mse": 1326.0847,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth15",
+          "overall_mae": 26.8675,
+          "valence_mae": 25.2834,
+          "arousal_mae": 28.4516,
+          "overall_mse": 1317.4386,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth31",
+          "overall_mae": 26.8678,
+          "valence_mae": 25.181,
+          "arousal_mae": 28.5546,
+          "overall_mse": 1261.8374,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth15",
+          "overall_mae": 26.8703,
+          "valence_mae": 25.2889,
+          "arousal_mae": 28.4516,
+          "overall_mse": 1279.1364,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.8752,
+          "valence_mae": 25.756,
+          "arousal_mae": 27.9944,
+          "overall_mse": 1266.673,
+          "notes": "Distributional quantile video-time prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "candidate_count": 201,
+      "results": [
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-1_smooth9",
+          "overall_mae": 36.3187,
+          "valence_mae": 31.5954,
+          "arousal_mae": 41.042,
+          "overall_mse": 2435.1357,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-1_smooth11",
+          "overall_mae": 36.3217,
+          "valence_mae": 31.6055,
+          "arousal_mae": 41.0379,
+          "overall_mse": 2432.3464,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-1_smooth15",
+          "overall_mae": 36.3434,
+          "valence_mae": 31.643,
+          "arousal_mae": 41.0437,
+          "overall_mse": 2427.918,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-1_smooth9",
+          "overall_mae": 36.479,
+          "valence_mae": 31.5954,
+          "arousal_mae": 41.3625,
+          "overall_mse": 2411.8115,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-1_smooth11",
+          "overall_mae": 36.4813,
+          "valence_mae": 31.6055,
+          "arousal_mae": 41.3571,
+          "overall_mse": 2409.0891,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-1_smooth11",
+          "overall_mae": 36.496,
+          "valence_mae": 31.6055,
+          "arousal_mae": 41.3866,
+          "overall_mse": 2571.0032,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-1_smooth9",
+          "overall_mae": 36.4969,
+          "valence_mae": 31.5954,
+          "arousal_mae": 41.3983,
+          "overall_mse": 2574.25,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-1_smooth15",
+          "overall_mae": 36.4993,
+          "valence_mae": 31.643,
+          "arousal_mae": 41.3555,
+          "overall_mse": 2404.8679,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-1_smooth15",
+          "overall_mae": 36.5064,
+          "valence_mae": 31.643,
+          "arousal_mae": 41.3698,
+          "overall_mse": 2565.3613,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-2_smooth11",
+          "overall_mae": 36.543,
+          "valence_mae": 31.8288,
+          "arousal_mae": 41.2572,
+          "overall_mse": 2449.8728,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-2_smooth9",
+          "overall_mae": 36.5461,
+          "valence_mae": 31.8298,
+          "arousal_mae": 41.2623,
+          "overall_mse": 2452.8955,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-2_smooth15",
+          "overall_mae": 36.5584,
+          "valence_mae": 31.8572,
+          "arousal_mae": 41.2595,
+          "overall_mse": 2444.9148,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-1_smooth31",
+          "overall_mae": 36.5884,
+          "valence_mae": 31.9836,
+          "arousal_mae": 41.1931,
+          "overall_mse": 2417.2776,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth11",
+          "overall_mae": 36.6744,
+          "valence_mae": 32.311,
+          "arousal_mae": 41.0379,
+          "overall_mse": 2469.4802,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth9",
+          "overall_mae": 36.6782,
+          "valence_mae": 32.3144,
+          "arousal_mae": 41.042,
+          "overall_mse": 2472.3979,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth15",
+          "overall_mae": 36.6816,
+          "valence_mae": 32.3194,
+          "arousal_mae": 41.0437,
+          "overall_mse": 2464.6726,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-2_smooth11",
+          "overall_mae": 36.6943,
+          "valence_mae": 31.8288,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2427.0574,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-2_smooth9",
+          "overall_mae": 36.6973,
+          "valence_mae": 31.8298,
+          "arousal_mae": 41.5647,
+          "overall_mse": 2429.9724,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-2_smooth11",
+          "overall_mae": 36.7024,
+          "valence_mae": 31.8288,
+          "arousal_mae": 41.576,
+          "overall_mse": 2586.2412,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-1_smooth31",
+          "overall_mae": 36.7046,
+          "valence_mae": 31.9836,
+          "arousal_mae": 41.4255,
+          "overall_mse": 2547.843,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-2_smooth15",
+          "overall_mae": 36.705,
+          "valence_mae": 31.8572,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2422.2566,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-2_smooth9",
+          "overall_mae": 36.7081,
+          "valence_mae": 31.8298,
+          "arousal_mae": 41.5863,
+          "overall_mse": 2589.6536,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-2_smooth15",
+          "overall_mae": 36.7092,
+          "valence_mae": 31.8572,
+          "arousal_mae": 41.5612,
+          "overall_mse": 2580.2966,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-1_smooth31",
+          "overall_mae": 36.729,
+          "valence_mae": 31.9836,
+          "arousal_mae": 41.4744,
+          "overall_mse": 2396.0908,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p45_lag-2_smooth31",
+          "overall_mae": 36.766,
+          "valence_mae": 32.1424,
+          "arousal_mae": 41.3897,
+          "overall_mse": 2431.4429,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth11",
+          "overall_mae": 36.834,
+          "valence_mae": 32.311,
+          "arousal_mae": 41.3571,
+          "overall_mse": 2446.2229,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth15",
+          "overall_mae": 36.8375,
+          "valence_mae": 32.3194,
+          "arousal_mae": 41.3555,
+          "overall_mse": 2441.6223,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth9",
+          "overall_mae": 36.8385,
+          "valence_mae": 32.3144,
+          "arousal_mae": 41.3625,
+          "overall_mse": 2449.074,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-1_smooth15",
+          "overall_mae": 36.8446,
+          "valence_mae": 32.3194,
+          "arousal_mae": 41.3698,
+          "overall_mse": 2602.1162,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth9",
+          "overall_mae": 36.845,
+          "valence_mae": 31.5954,
+          "arousal_mae": 42.0945,
+          "overall_mse": 2418.9114,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth11",
+          "overall_mae": 36.847,
+          "valence_mae": 31.6055,
+          "arousal_mae": 42.0886,
+          "overall_mse": 2416.3303,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-1_smooth11",
+          "overall_mae": 36.8488,
+          "valence_mae": 32.311,
+          "arousal_mae": 41.3866,
+          "overall_mse": 2608.1375,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-1_smooth9",
+          "overall_mae": 36.8563,
+          "valence_mae": 32.3144,
+          "arousal_mae": 41.3983,
+          "overall_mse": 2611.5125,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth15",
+          "overall_mae": 36.8653,
+          "valence_mae": 31.643,
+          "arousal_mae": 42.0876,
+          "overall_mse": 2412.3337,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p35_lag-2_smooth31",
+          "overall_mae": 36.8714,
+          "valence_mae": 32.1424,
+          "arousal_mae": 41.6004,
+          "overall_mse": 2560.2366,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth31",
+          "overall_mae": 36.8766,
+          "valence_mae": 32.56,
+          "arousal_mae": 41.1931,
+          "overall_mse": 2451.2268,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p5_lag-2_smooth31",
+          "overall_mae": 36.8927,
+          "valence_mae": 32.1424,
+          "arousal_mae": 41.6431,
+          "overall_mse": 2410.3887,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth15",
+          "overall_mae": 36.9133,
+          "valence_mae": 32.5671,
+          "arousal_mae": 41.2595,
+          "overall_mse": 2481.8005,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth11",
+          "overall_mae": 36.9146,
+          "valence_mae": 32.5721,
+          "arousal_mae": 41.2572,
+          "overall_mse": 2487.2961,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth9",
+          "overall_mae": 36.9218,
+          "valence_mae": 32.5814,
+          "arousal_mae": 41.2623,
+          "overall_mse": 2490.3972,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-1_smooth31",
+          "overall_mae": 36.9927,
+          "valence_mae": 32.56,
+          "arousal_mae": 41.4255,
+          "overall_mse": 2581.7922,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth31",
+          "overall_mae": 37.0172,
+          "valence_mae": 32.56,
+          "arousal_mae": 41.4744,
+          "overall_mse": 2430.0398,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth11",
+          "overall_mae": 37.0305,
+          "valence_mae": 33.0231,
+          "arousal_mae": 41.0379,
+          "overall_mse": 2505.3691,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth9",
+          "overall_mae": 37.0338,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.042,
+          "overall_mse": 2508.303,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth15",
+          "overall_mae": 37.0388,
+          "valence_mae": 33.0338,
+          "arousal_mae": 41.0437,
+          "overall_mse": 2500.3813,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth11",
+          "overall_mae": 37.0424,
+          "valence_mae": 31.8288,
+          "arousal_mae": 42.256,
+          "overall_mse": 2433.6667,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth9",
+          "overall_mae": 37.0459,
+          "valence_mae": 31.8298,
+          "arousal_mae": 42.262,
+          "overall_mse": 2436.4048,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth15",
+          "overall_mae": 37.0521,
+          "valence_mae": 31.8572,
+          "arousal_mae": 42.2471,
+          "overall_mse": 2429.1106,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+          "overall_mae": 37.0599,
+          "valence_mae": 32.5671,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2459.1421,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-2_smooth15",
+          "overall_mae": 37.0642,
+          "valence_mae": 32.5671,
+          "arousal_mae": 41.5612,
+          "overall_mse": 2617.1819,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth11",
+          "overall_mae": 37.0659,
+          "valence_mae": 32.5721,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2464.4807,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth31",
+          "overall_mae": 37.0708,
+          "valence_mae": 32.7518,
+          "arousal_mae": 41.3897,
+          "overall_mse": 2465.3494,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth9",
+          "overall_mae": 37.0731,
+          "valence_mae": 32.5814,
+          "arousal_mae": 41.5647,
+          "overall_mse": 2467.4741,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-2_smooth11",
+          "overall_mae": 37.074,
+          "valence_mae": 32.5721,
+          "arousal_mae": 41.576,
+          "overall_mse": 2623.6648,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-2_smooth9",
+          "overall_mae": 37.0838,
+          "valence_mae": 32.5814,
+          "arousal_mae": 41.5863,
+          "overall_mse": 2627.1555,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth31",
+          "overall_mae": 37.0845,
+          "valence_mae": 31.9836,
+          "arousal_mae": 42.1853,
+          "overall_mse": 2405.6379,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p35_lag-2_smooth31",
+          "overall_mae": 37.1761,
+          "valence_mae": 32.7518,
+          "arousal_mae": 41.6004,
+          "overall_mse": 2594.1428,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+          "overall_mae": 37.1901,
+          "valence_mae": 33.0231,
+          "arousal_mae": 41.3571,
+          "overall_mse": 2482.1116,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+          "overall_mae": 37.1941,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.3625,
+          "overall_mse": 2484.9788,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+          "overall_mae": 37.1947,
+          "valence_mae": 33.0338,
+          "arousal_mae": 41.3555,
+          "overall_mse": 2477.3313,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth31",
+          "overall_mae": 37.1975,
+          "valence_mae": 32.7518,
+          "arousal_mae": 41.6431,
+          "overall_mse": 2444.2952,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth11",
+          "overall_mae": 37.1998,
+          "valence_mae": 32.311,
+          "arousal_mae": 42.0886,
+          "overall_mse": 2453.4646,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-1_smooth15",
+          "overall_mae": 37.2018,
+          "valence_mae": 33.0338,
+          "arousal_mae": 41.3698,
+          "overall_mse": 2637.825,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth15",
+          "overall_mae": 37.2035,
+          "valence_mae": 32.3194,
+          "arousal_mae": 42.0876,
+          "overall_mse": 2449.0884,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth9",
+          "overall_mae": 37.2044,
+          "valence_mae": 32.3144,
+          "arousal_mae": 42.0945,
+          "overall_mse": 2456.1736,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-1_smooth11",
+          "overall_mae": 37.2048,
+          "valence_mae": 33.0231,
+          "arousal_mae": 41.3866,
+          "overall_mse": 2644.0261,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-1_smooth9",
+          "overall_mae": 37.212,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.3983,
+          "overall_mse": 2647.4172,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth31",
+          "overall_mae": 37.22,
+          "valence_mae": 33.2469,
+          "arousal_mae": 41.1931,
+          "overall_mse": 2485.4297,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth31",
+          "overall_mae": 37.2257,
+          "valence_mae": 32.1424,
+          "arousal_mae": 42.3091,
+          "overall_mse": 2419.2615,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth15",
+          "overall_mae": 37.2642,
+          "valence_mae": 33.2688,
+          "arousal_mae": 41.2595,
+          "overall_mse": 2516.5703,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth11",
+          "overall_mae": 37.265,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.2572,
+          "overall_mse": 2522.1899,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth9",
+          "overall_mae": 37.2732,
+          "valence_mae": 33.2841,
+          "arousal_mae": 41.2623,
+          "overall_mse": 2525.3074,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-1_smooth31",
+          "overall_mae": 37.3362,
+          "valence_mae": 33.2469,
+          "arousal_mae": 41.4255,
+          "overall_mse": 2615.9956,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth31",
+          "overall_mae": 37.3606,
+          "valence_mae": 33.2469,
+          "arousal_mae": 41.4744,
+          "overall_mse": 2464.2432,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth31",
+          "overall_mae": 37.3726,
+          "valence_mae": 32.56,
+          "arousal_mae": 42.1853,
+          "overall_mse": 2439.5869,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth15",
+          "overall_mae": 37.4071,
+          "valence_mae": 32.5671,
+          "arousal_mae": 42.2471,
+          "overall_mse": 2465.9963,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+          "overall_mae": 37.4107,
+          "valence_mae": 33.2688,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2493.9121,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth31",
+          "overall_mae": 37.411,
+          "valence_mae": 33.4323,
+          "arousal_mae": 41.3897,
+          "overall_mse": 2498.7234,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth11",
+          "overall_mae": 37.4141,
+          "valence_mae": 32.5721,
+          "arousal_mae": 42.256,
+          "overall_mse": 2471.0901,
+          "notes": "Distributional quantile video-time prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "candidate_count": 201,
+      "results": [
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-1_smooth9",
+          "overall_mae": 26.3104,
+          "valence_mae": 23.674,
+          "arousal_mae": 28.9469,
+          "overall_mse": 1316.2555,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-1_smooth11",
+          "overall_mae": 26.3213,
+          "valence_mae": 23.6918,
+          "arousal_mae": 28.9508,
+          "overall_mse": 1313.8879,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-1_smooth9",
+          "overall_mae": 26.3648,
+          "valence_mae": 23.7828,
+          "arousal_mae": 28.9469,
+          "overall_mse": 1310.5236,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-1_smooth15",
+          "overall_mae": 26.3673,
+          "valence_mae": 23.7573,
+          "arousal_mae": 28.9772,
+          "overall_mse": 1309.9122,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-1_smooth11",
+          "overall_mae": 26.3783,
+          "valence_mae": 23.8059,
+          "arousal_mae": 28.9508,
+          "overall_mse": 1308.1738,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.4014,
+          "valence_mae": 23.674,
+          "arousal_mae": 29.1287,
+          "overall_mse": 1297.8998,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.4039,
+          "valence_mae": 23.6918,
+          "arousal_mae": 29.1161,
+          "overall_mse": 1294.9581,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-1_smooth15",
+          "overall_mae": 26.4226,
+          "valence_mae": 23.868,
+          "arousal_mae": 28.9772,
+          "overall_mse": 1304.0793,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.4313,
+          "valence_mae": 23.7573,
+          "arousal_mae": 29.1053,
+          "overall_mse": 1290.0854,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.4558,
+          "valence_mae": 23.7828,
+          "arousal_mae": 29.1287,
+          "overall_mse": 1292.1677,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.461,
+          "valence_mae": 23.8059,
+          "arousal_mae": 29.1161,
+          "overall_mse": 1289.2439,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.4866,
+          "valence_mae": 23.868,
+          "arousal_mae": 29.1053,
+          "overall_mse": 1284.2526,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-2_smooth9",
+          "overall_mae": 26.4897,
+          "valence_mae": 23.9491,
+          "arousal_mae": 29.0304,
+          "overall_mse": 1334.1323,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-2_smooth11",
+          "overall_mae": 26.4935,
+          "valence_mae": 23.9563,
+          "arousal_mae": 29.0308,
+          "overall_mse": 1331.1412,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth9",
+          "overall_mae": 26.5177,
+          "valence_mae": 24.0884,
+          "arousal_mae": 28.9469,
+          "overall_mse": 1317.3901,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-2_smooth15",
+          "overall_mae": 26.5216,
+          "valence_mae": 23.9934,
+          "arousal_mae": 29.0498,
+          "overall_mse": 1325.7983,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth11",
+          "overall_mae": 26.5293,
+          "valence_mae": 24.1078,
+          "arousal_mae": 28.9508,
+          "overall_mse": 1315.0121,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-2_smooth9",
+          "overall_mae": 26.5388,
+          "valence_mae": 24.0472,
+          "arousal_mae": 29.0304,
+          "overall_mse": 1327.8646,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-2_smooth11",
+          "overall_mae": 26.5436,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.0308,
+          "overall_mse": 1324.8995,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth15",
+          "overall_mae": 26.5705,
+          "valence_mae": 24.1638,
+          "arousal_mae": 28.9772,
+          "overall_mse": 1310.7986,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-2_smooth15",
+          "overall_mae": 26.5724,
+          "valence_mae": 24.0951,
+          "arousal_mae": 29.0498,
+          "overall_mse": 1319.5651,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.5737,
+          "valence_mae": 23.9563,
+          "arousal_mae": 29.1912,
+          "overall_mse": 1312.5793,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.5789,
+          "valence_mae": 23.9491,
+          "arousal_mae": 29.2087,
+          "overall_mse": 1316.1246,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.5816,
+          "valence_mae": 23.9934,
+          "arousal_mae": 29.1699,
+          "overall_mse": 1306.4606,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.6086,
+          "valence_mae": 24.0884,
+          "arousal_mae": 29.1287,
+          "overall_mse": 1299.0343,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.612,
+          "valence_mae": 24.1078,
+          "arousal_mae": 29.1161,
+          "overall_mse": 1296.0822,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.6238,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.1912,
+          "overall_mse": 1306.3375,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.628,
+          "valence_mae": 24.0472,
+          "arousal_mae": 29.2087,
+          "overall_mse": 1309.8571,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.6325,
+          "valence_mae": 24.0951,
+          "arousal_mae": 29.1699,
+          "overall_mse": 1300.2274,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.6346,
+          "valence_mae": 24.1638,
+          "arousal_mae": 29.1053,
+          "overall_mse": 1290.9718,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth9",
+          "overall_mae": 26.6807,
+          "valence_mae": 24.3309,
+          "arousal_mae": 29.0304,
+          "overall_mse": 1334.0942,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth11",
+          "overall_mae": 26.6837,
+          "valence_mae": 24.3367,
+          "arousal_mae": 29.0308,
+          "overall_mse": 1331.1112,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.7096,
+          "valence_mae": 24.1887,
+          "arousal_mae": 29.2305,
+          "overall_mse": 1282.4779,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth15",
+          "overall_mae": 26.7109,
+          "valence_mae": 24.3721,
+          "arousal_mae": 29.0498,
+          "overall_mse": 1325.8014,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-1_smooth31",
+          "overall_mae": 26.7176,
+          "valence_mae": 24.1887,
+          "arousal_mae": 29.2465,
+          "overall_mse": 1302.9772,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.7263,
+          "valence_mae": 24.2221,
+          "arousal_mae": 29.2305,
+          "overall_mse": 1276.1136,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-1_smooth31",
+          "overall_mae": 26.7343,
+          "valence_mae": 24.2221,
+          "arousal_mae": 29.2465,
+          "overall_mse": 1296.6129,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.7571,
+          "valence_mae": 23.674,
+          "arousal_mae": 29.8402,
+          "overall_mse": 1320.7902,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.7619,
+          "valence_mae": 23.6918,
+          "arousal_mae": 29.8319,
+          "overall_mse": 1317.7275,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.7639,
+          "valence_mae": 24.3367,
+          "arousal_mae": 29.1912,
+          "overall_mse": 1312.5491,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.7698,
+          "valence_mae": 24.3309,
+          "arousal_mae": 29.2087,
+          "overall_mse": 1316.0865,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.771,
+          "valence_mae": 24.3721,
+          "arousal_mae": 29.1699,
+          "overall_mse": 1306.4637,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.7948,
+          "valence_mae": 23.7573,
+          "arousal_mae": 29.8322,
+          "overall_mse": 1312.4706,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.8115,
+          "valence_mae": 23.7828,
+          "arousal_mae": 29.8402,
+          "overall_mse": 1315.0582,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.8189,
+          "valence_mae": 23.8059,
+          "arousal_mae": 29.8319,
+          "overall_mse": 1312.0135,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.8218,
+          "valence_mae": 24.3659,
+          "arousal_mae": 29.2777,
+          "overall_mse": 1295.248,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p65_lag-2_smooth31",
+          "overall_mae": 26.8264,
+          "valence_mae": 24.3659,
+          "arousal_mae": 29.2869,
+          "overall_mse": 1314.8558,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.8396,
+          "valence_mae": 24.4016,
+          "arousal_mae": 29.2777,
+          "overall_mse": 1288.8773,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p65_lag-2_smooth31",
+          "overall_mae": 26.8443,
+          "valence_mae": 24.4016,
+          "arousal_mae": 29.2869,
+          "overall_mse": 1308.4851,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.8475,
+          "valence_mae": 24.4645,
+          "arousal_mae": 29.2305,
+          "overall_mse": 1281.8884,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.8501,
+          "valence_mae": 23.868,
+          "arousal_mae": 29.8322,
+          "overall_mse": 1306.6377,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth31",
+          "overall_mae": 26.8555,
+          "valence_mae": 24.4645,
+          "arousal_mae": 29.2465,
+          "overall_mse": 1302.3878,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p65_lag-1_smooth9",
+          "overall_mae": 26.8993,
+          "valence_mae": 24.8518,
+          "arousal_mae": 28.9469,
+          "overall_mse": 1379.632,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p65_lag-1_smooth11",
+          "overall_mae": 26.9131,
+          "valence_mae": 24.8755,
+          "arousal_mae": 28.9508,
+          "overall_mse": 1377.2648,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.9278,
+          "valence_mae": 23.9563,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1334.6295,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.9297,
+          "valence_mae": 23.9491,
+          "arousal_mae": 29.9103,
+          "overall_mse": 1338.3138,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.9438,
+          "valence_mae": 23.9934,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1328.2965,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.9559,
+          "valence_mae": 24.6342,
+          "arousal_mae": 29.2777,
+          "overall_mse": 1294.3495,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth31",
+          "overall_mae": 26.9605,
+          "valence_mae": 24.6342,
+          "arousal_mae": 29.2869,
+          "overall_mse": 1313.9574,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p65_lag-1_smooth15",
+          "overall_mae": 26.9619,
+          "valence_mae": 24.9467,
+          "arousal_mae": 28.9772,
+          "overall_mse": 1373.2666,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.9643,
+          "valence_mae": 24.0884,
+          "arousal_mae": 29.8402,
+          "overall_mse": 1321.9247,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.9699,
+          "valence_mae": 24.1078,
+          "arousal_mae": 29.8319,
+          "overall_mse": 1318.8518,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.9787,
+          "valence_mae": 24.0472,
+          "arousal_mae": 29.9103,
+          "overall_mse": 1332.0463,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.9903,
+          "valence_mae": 24.8518,
+          "arousal_mae": 29.1287,
+          "overall_mse": 1361.2762,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.9947,
+          "valence_mae": 24.0951,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1322.0632,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.9958,
+          "valence_mae": 24.8755,
+          "arousal_mae": 29.1161,
+          "overall_mse": 1358.335,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.998,
+          "valence_mae": 24.1638,
+          "arousal_mae": 29.8322,
+          "overall_mse": 1313.3569,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-1_smooth15",
+          "overall_mae": 27.026,
+          "valence_mae": 24.9467,
+          "arousal_mae": 29.1053,
+          "overall_mse": 1353.4398,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p65_lag-2_smooth9",
+          "overall_mae": 27.061,
+          "valence_mae": 25.0916,
+          "arousal_mae": 29.0304,
+          "overall_mse": 1397.4717,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p65_lag-2_smooth11",
+          "overall_mae": 27.0664,
+          "valence_mae": 25.102,
+          "arousal_mae": 29.0308,
+          "overall_mse": 1394.4281,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth31",
+          "overall_mae": 27.0839,
+          "valence_mae": 24.1887,
+          "arousal_mae": 29.9792,
+          "overall_mse": 1303.3068,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth31",
+          "overall_mae": 27.1006,
+          "valence_mae": 24.2221,
+          "arousal_mae": 29.9792,
+          "overall_mse": 1296.9425,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p65_lag-2_smooth15",
+          "overall_mae": 27.1006,
+          "valence_mae": 25.1513,
+          "arousal_mae": 29.0498,
+          "overall_mse": 1389.0552,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth11",
+          "overall_mae": 27.118,
+          "valence_mae": 24.3367,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1334.5992,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth9",
+          "overall_mae": 27.1206,
+          "valence_mae": 24.3309,
+          "arousal_mae": 29.9103,
+          "overall_mse": 1338.2759,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth15",
+          "overall_mae": 27.1332,
+          "valence_mae": 24.3721,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1328.2996,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth11",
+          "overall_mae": 27.1466,
+          "valence_mae": 25.102,
+          "arousal_mae": 29.1912,
+          "overall_mse": 1375.8661,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth9",
+          "overall_mae": 27.1502,
+          "valence_mae": 25.0916,
+          "arousal_mae": 29.2087,
+          "overall_mse": 1379.464,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p65_qa0p55_lag-2_smooth15",
+          "overall_mae": 27.1606,
+          "valence_mae": 25.1513,
+          "arousal_mae": 29.1699,
+          "overall_mse": 1369.7177,
+          "notes": "Distributional quantile video-time prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "candidate_count": 201,
+      "results": [
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth31",
+          "overall_mae": 28.7297,
+          "valence_mae": 28.7855,
+          "arousal_mae": 28.674,
+          "overall_mse": 1821.9066,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth31",
+          "overall_mae": 28.7937,
+          "valence_mae": 28.7855,
+          "arousal_mae": 28.8019,
+          "overall_mse": 1824.7233,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth31",
+          "overall_mae": 28.8317,
+          "valence_mae": 28.9508,
+          "arousal_mae": 28.7126,
+          "overall_mse": 1832.5394,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth15",
+          "overall_mae": 28.8934,
+          "valence_mae": 28.9554,
+          "arousal_mae": 28.8315,
+          "overall_mse": 1859.8492,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth31",
+          "overall_mae": 28.8979,
+          "valence_mae": 28.9508,
+          "arousal_mae": 28.8451,
+          "overall_mse": 1835.7777,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth15",
+          "overall_mae": 28.8999,
+          "valence_mae": 28.9554,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1859.0638,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth31",
+          "overall_mae": 28.9292,
+          "valence_mae": 29.1844,
+          "arousal_mae": 28.674,
+          "overall_mse": 1820.2988,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth11",
+          "overall_mae": 28.9434,
+          "valence_mae": 29.0154,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1868.5797,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth11",
+          "overall_mae": 28.9498,
+          "valence_mae": 29.0154,
+          "arousal_mae": 28.8842,
+          "overall_mse": 1869.858,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth31",
+          "overall_mae": 28.9626,
+          "valence_mae": 29.2513,
+          "arousal_mae": 28.674,
+          "overall_mse": 1871.524,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth9",
+          "overall_mae": 28.971,
+          "valence_mae": 29.0513,
+          "arousal_mae": 28.8906,
+          "overall_mse": 1873.299,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth15",
+          "overall_mae": 28.9731,
+          "valence_mae": 29.0946,
+          "arousal_mae": 28.8515,
+          "overall_mse": 1868.5094,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth15",
+          "overall_mae": 28.9783,
+          "valence_mae": 29.0946,
+          "arousal_mae": 28.862,
+          "overall_mse": 1868.0155,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth9",
+          "overall_mae": 28.9838,
+          "valence_mae": 29.0513,
+          "arousal_mae": 28.9162,
+          "overall_mse": 1874.8281,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth31",
+          "overall_mae": 28.9932,
+          "valence_mae": 29.1844,
+          "arousal_mae": 28.8019,
+          "overall_mse": 1823.1156,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth11",
+          "overall_mae": 29.0145,
+          "valence_mae": 29.1472,
+          "arousal_mae": 28.8818,
+          "overall_mse": 1877.1162,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth11",
+          "overall_mae": 29.0211,
+          "valence_mae": 29.1472,
+          "arousal_mae": 28.8951,
+          "overall_mse": 1878.057,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-2_smooth31",
+          "overall_mae": 29.0239,
+          "valence_mae": 28.7855,
+          "arousal_mae": 29.2624,
+          "overall_mse": 1865.0719,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth31",
+          "overall_mae": 29.0266,
+          "valence_mae": 29.2513,
+          "arousal_mae": 28.8019,
+          "overall_mse": 1874.3408,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth9",
+          "overall_mae": 29.0368,
+          "valence_mae": 29.1757,
+          "arousal_mae": 28.8979,
+          "overall_mse": 1881.6211,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth31",
+          "overall_mae": 29.0405,
+          "valence_mae": 29.3684,
+          "arousal_mae": 28.7126,
+          "overall_mse": 1830.9712,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth9",
+          "overall_mae": 29.0481,
+          "valence_mae": 29.1757,
+          "arousal_mae": 28.9204,
+          "overall_mse": 1882.751,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth31",
+          "overall_mae": 29.0607,
+          "valence_mae": 29.4088,
+          "arousal_mae": 28.7126,
+          "overall_mse": 1883.2046,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth15",
+          "overall_mae": 29.0784,
+          "valence_mae": 29.3254,
+          "arousal_mae": 28.8315,
+          "overall_mse": 1858.4066,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+          "overall_mae": 29.0849,
+          "valence_mae": 29.3254,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1857.6211,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth31",
+          "overall_mae": 29.1019,
+          "valence_mae": 28.7855,
+          "arousal_mae": 29.4184,
+          "overall_mse": 1854.2236,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth31",
+          "overall_mae": 29.1067,
+          "valence_mae": 29.3684,
+          "arousal_mae": 28.8451,
+          "overall_mse": 1834.2098,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth11",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth31",
+          "overall_mae": 29.127,
+          "valence_mae": 29.4088,
+          "arousal_mae": 28.8451,
+          "overall_mse": 1886.443,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-1_smooth31",
+          "overall_mae": 29.1287,
+          "valence_mae": 28.9508,
+          "arousal_mae": 29.3066,
+          "overall_mse": 1875.3568,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth11",
+          "overall_mae": 29.1332,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8842,
+          "overall_mse": 1868.443,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth15",
+          "overall_mae": 29.1378,
+          "valence_mae": 29.4442,
+          "arousal_mae": 28.8315,
+          "overall_mse": 1909.5248,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth15",
+          "overall_mae": 29.1442,
+          "valence_mae": 29.4442,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1908.7393,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth9",
+          "overall_mae": 29.1525,
+          "valence_mae": 29.4143,
+          "arousal_mae": 28.8906,
+          "overall_mse": 1871.9476,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth15",
+          "overall_mae": 29.1645,
+          "valence_mae": 29.4775,
+          "arousal_mae": 28.8515,
+          "overall_mse": 1866.985,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth9",
+          "overall_mae": 29.1652,
+          "valence_mae": 29.4143,
+          "arousal_mae": 28.9162,
+          "overall_mse": 1873.4767,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth15",
+          "overall_mae": 29.1684,
+          "valence_mae": 28.9554,
+          "arousal_mae": 29.3814,
+          "overall_mse": 1885.9391,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+          "overall_mae": 29.1698,
+          "valence_mae": 29.4775,
+          "arousal_mae": 28.862,
+          "overall_mse": 1866.4911,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth11",
+          "overall_mae": 29.184,
+          "valence_mae": 29.4966,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1917.7194,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth11",
+          "overall_mae": 29.1904,
+          "valence_mae": 29.4966,
+          "arousal_mae": 28.8842,
+          "overall_mse": 1918.9977,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+          "overall_mae": 29.2015,
+          "valence_mae": 29.5212,
+          "arousal_mae": 28.8818,
+          "overall_mse": 1875.605,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth11",
+          "overall_mae": 29.2041,
+          "valence_mae": 29.0154,
+          "arousal_mae": 29.3928,
+          "overall_mse": 1894.7826,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth15",
+          "overall_mae": 29.2061,
+          "valence_mae": 29.5606,
+          "arousal_mae": 28.8515,
+          "overall_mse": 1919.319,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth9",
+          "overall_mae": 29.2081,
+          "valence_mae": 29.5256,
+          "arousal_mae": 28.8906,
+          "overall_mse": 1922.209,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth11",
+          "overall_mae": 29.2081,
+          "valence_mae": 29.5212,
+          "arousal_mae": 28.8951,
+          "overall_mse": 1876.5459,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth15",
+          "overall_mae": 29.2113,
+          "valence_mae": 29.5606,
+          "arousal_mae": 28.862,
+          "overall_mse": 1918.8248,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth9",
+          "overall_mae": 29.2209,
+          "valence_mae": 29.5256,
+          "arousal_mae": 28.9162,
+          "overall_mse": 1923.7383,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-2_smooth15",
+          "overall_mae": 29.221,
+          "valence_mae": 28.9554,
+          "arousal_mae": 29.4867,
+          "overall_mse": 1903.4727,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+          "overall_mae": 29.2216,
+          "valence_mae": 29.5452,
+          "arousal_mae": 28.8979,
+          "overall_mse": 1880.1605,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth31",
+          "overall_mae": 29.2219,
+          "valence_mae": 28.9508,
+          "arousal_mae": 29.4931,
+          "overall_mse": 1866.6906,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-2_smooth31",
+          "overall_mae": 29.2234,
+          "valence_mae": 29.1844,
+          "arousal_mae": 29.2624,
+          "overall_mse": 1863.4642,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth9",
+          "overall_mae": 29.2279,
+          "valence_mae": 29.0513,
+          "arousal_mae": 29.4045,
+          "overall_mse": 1899.1874,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth9",
+          "overall_mae": 29.2328,
+          "valence_mae": 29.5452,
+          "arousal_mae": 28.9204,
+          "overall_mse": 1881.2904,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth31",
+          "overall_mae": 29.2347,
+          "valence_mae": 29.7954,
+          "arousal_mae": 28.674,
+          "overall_mse": 1821.5822,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth11",
+          "overall_mae": 29.2445,
+          "valence_mae": 29.6071,
+          "arousal_mae": 28.8818,
+          "overall_mse": 1927.4213,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth11",
+          "overall_mae": 29.2511,
+          "valence_mae": 29.6071,
+          "arousal_mae": 28.8951,
+          "overall_mse": 1928.3618,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p35_lag-2_smooth31",
+          "overall_mae": 29.2568,
+          "valence_mae": 29.2513,
+          "arousal_mae": 29.2624,
+          "overall_mse": 1914.6895,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth15",
+          "overall_mae": 29.2625,
+          "valence_mae": 29.0946,
+          "arousal_mae": 29.4304,
+          "overall_mse": 1896.2623,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth9",
+          "overall_mae": 29.2643,
+          "valence_mae": 29.6306,
+          "arousal_mae": 28.8979,
+          "overall_mse": 1931.6764,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth9",
+          "overall_mae": 29.2755,
+          "valence_mae": 29.6306,
+          "arousal_mae": 28.9204,
+          "overall_mse": 1932.8063,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-2_smooth11",
+          "overall_mae": 29.2864,
+          "valence_mae": 29.0154,
+          "arousal_mae": 29.5573,
+          "overall_mse": 1913.2474,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth11",
+          "overall_mae": 29.2918,
+          "valence_mae": 29.1472,
+          "arousal_mae": 29.4364,
+          "overall_mse": 1904.7325,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-1_smooth15",
+          "overall_mae": 29.2972,
+          "valence_mae": 29.0946,
+          "arousal_mae": 29.4998,
+          "overall_mse": 1911.4941,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth31",
+          "overall_mae": 29.2987,
+          "valence_mae": 29.7954,
+          "arousal_mae": 28.8019,
+          "overall_mse": 1824.3989,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth31",
+          "overall_mae": 29.3014,
+          "valence_mae": 29.1844,
+          "arousal_mae": 29.4184,
+          "overall_mse": 1852.6162,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth9",
+          "overall_mae": 29.311,
+          "valence_mae": 29.1757,
+          "arousal_mae": 29.4464,
+          "overall_mse": 1908.9679,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-2_smooth9",
+          "overall_mae": 29.3224,
+          "valence_mae": 29.0513,
+          "arousal_mae": 29.5934,
+          "overall_mse": 1918.1422,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth31",
+          "overall_mae": 29.3348,
+          "valence_mae": 29.2513,
+          "arousal_mae": 29.4184,
+          "overall_mse": 1903.8414,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-1_smooth31",
+          "overall_mae": 29.3375,
+          "valence_mae": 29.3684,
+          "arousal_mae": 29.3066,
+          "overall_mse": 1873.7887,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth31",
+          "overall_mae": 29.3516,
+          "valence_mae": 29.9906,
+          "arousal_mae": 28.7126,
+          "overall_mse": 1832.3483,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth15",
+          "overall_mae": 29.3534,
+          "valence_mae": 29.3254,
+          "arousal_mae": 29.3814,
+          "overall_mse": 1884.4962,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-1_smooth11",
+          "overall_mae": 29.3566,
+          "valence_mae": 29.1472,
+          "arousal_mae": 29.566,
+          "overall_mse": 1920.9771,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p35_lag-1_smooth31",
+          "overall_mae": 29.3577,
+          "valence_mae": 29.4088,
+          "arousal_mae": 29.3066,
+          "overall_mse": 1926.0221,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth15",
+          "overall_mae": 29.3665,
+          "valence_mae": 29.9015,
+          "arousal_mae": 28.8315,
+          "overall_mse": 1860.3932,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+          "overall_mae": 29.3729,
+          "valence_mae": 29.9015,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1859.6075,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth11",
+          "overall_mae": 29.3874,
+          "valence_mae": 29.3821,
+          "arousal_mae": 29.3928,
+          "overall_mse": 1893.368,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-1_smooth9",
+          "overall_mae": 29.3889,
+          "valence_mae": 29.1757,
+          "arousal_mae": 29.6021,
+          "overall_mse": 1925.8018,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-2_smooth15",
+          "overall_mae": 29.406,
+          "valence_mae": 29.3254,
+          "arousal_mae": 29.4867,
+          "overall_mse": 1902.0297,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth9",
+          "overall_mae": 29.4094,
+          "valence_mae": 29.4143,
+          "arousal_mae": 29.4045,
+          "overall_mse": 1897.8359,
+          "notes": "Distributional quantile video-time prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "candidate_count": 201,
+      "results": [
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth11",
+          "overall_mae": 25.8213,
+          "valence_mae": 24.1928,
+          "arousal_mae": 27.4497,
+          "overall_mse": 1309.5331,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth9",
+          "overall_mae": 25.8243,
+          "valence_mae": 24.2019,
+          "arousal_mae": 27.4468,
+          "overall_mse": 1312.4348,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth15",
+          "overall_mae": 25.8434,
+          "valence_mae": 24.2131,
+          "arousal_mae": 27.4738,
+          "overall_mse": 1304.7316,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth11",
+          "overall_mae": 25.8727,
+          "valence_mae": 24.2782,
+          "arousal_mae": 27.4673,
+          "overall_mse": 1317.1493,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth15",
+          "overall_mae": 25.8744,
+          "valence_mae": 24.2734,
+          "arousal_mae": 27.4754,
+          "overall_mse": 1311.3171,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth9",
+          "overall_mae": 25.8835,
+          "valence_mae": 24.2983,
+          "arousal_mae": 27.4687,
+          "overall_mse": 1320.524,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth11",
+          "overall_mae": 25.954,
+          "valence_mae": 24.1928,
+          "arousal_mae": 27.7151,
+          "overall_mse": 1319.8173,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.9982,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth9",
+          "overall_mae": 25.9605,
+          "valence_mae": 24.2019,
+          "arousal_mae": 27.7192,
+          "overall_mse": 1323.0056,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth15",
+          "overall_mae": 25.9684,
+          "valence_mae": 24.2131,
+          "arousal_mae": 27.7237,
+          "overall_mse": 1314.5199,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth11",
+          "overall_mae": 25.9977,
+          "valence_mae": 24.5457,
+          "arousal_mae": 27.4497,
+          "overall_mse": 1317.9244,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth15",
+          "overall_mae": 25.9978,
+          "valence_mae": 24.2734,
+          "arousal_mae": 27.7221,
+          "overall_mse": 1320.9554,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth9",
+          "overall_mae": 25.9997,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.4468,
+          "overall_mse": 1320.7041,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.0005,
+          "valence_mae": 24.2782,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1327.2178,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.0146,
+          "valence_mae": 24.2983,
+          "arousal_mae": 27.7309,
+          "overall_mse": 1330.8505,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.0236,
+          "valence_mae": 24.5735,
+          "arousal_mae": 27.4738,
+          "overall_mse": 1313.3311,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.0454,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.4673,
+          "overall_mse": 1325.6354,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.0514,
+          "valence_mae": 24.6274,
+          "arousal_mae": 27.4754,
+          "overall_mse": 1320.0038,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.0547,
+          "valence_mae": 24.6407,
+          "arousal_mae": 27.4687,
+          "overall_mse": 1328.8595,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.1304,
+          "valence_mae": 24.5457,
+          "arousal_mae": 27.7151,
+          "overall_mse": 1328.2087,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.1359,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.7192,
+          "overall_mse": 1331.2748,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.1458,
+          "valence_mae": 24.582,
+          "arousal_mae": 27.7095,
+          "overall_mse": 1299.9752,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.1486,
+          "valence_mae": 24.5735,
+          "arousal_mae": 27.7237,
+          "overall_mse": 1323.1193,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.1662,
+          "valence_mae": 24.5795,
+          "arousal_mae": 27.7529,
+          "overall_mse": 1296.7828,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.1748,
+          "valence_mae": 24.6274,
+          "arousal_mae": 27.7221,
+          "overall_mse": 1329.6421,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.1858,
+          "valence_mae": 24.6407,
+          "arousal_mae": 27.7309,
+          "overall_mse": 1339.186,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.2307,
+          "valence_mae": 24.582,
+          "arousal_mae": 27.8794,
+          "overall_mse": 1306.076,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.2317,
+          "valence_mae": 25.0165,
+          "arousal_mae": 27.4468,
+          "overall_mse": 1357.8032,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.2332,
+          "valence_mae": 25.0167,
+          "arousal_mae": 27.4497,
+          "overall_mse": 1355.2709,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.2528,
+          "valence_mae": 25.0384,
+          "arousal_mae": 27.4673,
+          "overall_mse": 1360.7157,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth31",
+          "overall_mae": 26.2564,
+          "valence_mae": 24.5795,
+          "arousal_mae": 27.9332,
+          "overall_mse": 1302.9408,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.2567,
+          "valence_mae": 25.0395,
+          "arousal_mae": 27.4738,
+          "overall_mse": 1350.8335,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.2571,
+          "valence_mae": 25.0456,
+          "arousal_mae": 27.4687,
+          "overall_mse": 1363.6647,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.2594,
+          "valence_mae": 25.0433,
+          "arousal_mae": 27.4754,
+          "overall_mse": 1355.4152,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth11",
+          "overall_mae": 26.2815,
+          "valence_mae": 24.1928,
+          "arousal_mae": 28.3702,
+          "overall_mse": 1353.9545,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth9",
+          "overall_mae": 26.2856,
+          "valence_mae": 24.2019,
+          "arousal_mae": 28.3693,
+          "overall_mse": 1357.1936,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth15",
+          "overall_mae": 26.2997,
+          "valence_mae": 24.2131,
+          "arousal_mae": 28.3864,
+          "overall_mse": 1348.4078,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.3214,
+          "valence_mae": 24.9333,
+          "arousal_mae": 27.7095,
+          "overall_mse": 1308.3517,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth11",
+          "overall_mae": 26.3249,
+          "valence_mae": 24.2782,
+          "arousal_mae": 28.3716,
+          "overall_mse": 1360.8555,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth15",
+          "overall_mae": 26.3256,
+          "valence_mae": 24.2734,
+          "arousal_mae": 28.3778,
+          "overall_mse": 1354.4078,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth9",
+          "overall_mae": 26.3356,
+          "valence_mae": 24.2983,
+          "arousal_mae": 28.3729,
+          "overall_mse": 1364.4884,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.3448,
+          "valence_mae": 24.9367,
+          "arousal_mae": 27.7529,
+          "overall_mse": 1305.2972,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.3659,
+          "valence_mae": 25.0167,
+          "arousal_mae": 27.7151,
+          "overall_mse": 1365.5552,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.3678,
+          "valence_mae": 25.0165,
+          "arousal_mae": 27.7192,
+          "overall_mse": 1368.374,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.3806,
+          "valence_mae": 25.0384,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1370.7841,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.3816,
+          "valence_mae": 25.0395,
+          "arousal_mae": 27.7237,
+          "overall_mse": 1360.6217,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.3827,
+          "valence_mae": 25.0433,
+          "arousal_mae": 27.7221,
+          "overall_mse": 1365.0533,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.3883,
+          "valence_mae": 25.0456,
+          "arousal_mae": 27.7309,
+          "overall_mse": 1373.9912,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.4063,
+          "valence_mae": 24.9333,
+          "arousal_mae": 27.8794,
+          "overall_mse": 1314.4525,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth9",
+          "overall_mae": 26.424,
+          "valence_mae": 25.4011,
+          "arousal_mae": 27.4468,
+          "overall_mse": 1350.24,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth11",
+          "overall_mae": 26.4276,
+          "valence_mae": 25.4054,
+          "arousal_mae": 27.4497,
+          "overall_mse": 1347.441,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth31",
+          "overall_mae": 26.4349,
+          "valence_mae": 24.9367,
+          "arousal_mae": 27.9332,
+          "overall_mse": 1311.4551,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth11",
+          "overall_mae": 26.4447,
+          "valence_mae": 24.1928,
+          "arousal_mae": 28.6966,
+          "overall_mse": 1372.2809,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth9",
+          "overall_mae": 26.4448,
+          "valence_mae": 24.2019,
+          "arousal_mae": 28.6877,
+          "overall_mse": 1375.1353,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth11",
+          "overall_mae": 26.4579,
+          "valence_mae": 24.5457,
+          "arousal_mae": 28.3702,
+          "overall_mse": 1362.3461,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth9",
+          "overall_mae": 26.461,
+          "valence_mae": 24.5527,
+          "arousal_mae": 28.3693,
+          "overall_mse": 1365.4629,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth15",
+          "overall_mae": 26.4623,
+          "valence_mae": 25.4509,
+          "arousal_mae": 27.4738,
+          "overall_mse": 1342.7943,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-1_smooth15",
+          "overall_mae": 26.4691,
+          "valence_mae": 24.2131,
+          "arousal_mae": 28.7251,
+          "overall_mse": 1367.4391,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth11",
+          "overall_mae": 26.4694,
+          "valence_mae": 24.2782,
+          "arousal_mae": 28.6606,
+          "overall_mse": 1377.4171,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth11",
+          "overall_mae": 26.4719,
+          "valence_mae": 25.4765,
+          "arousal_mae": 27.4673,
+          "overall_mse": 1355.1948,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth15",
+          "overall_mae": 26.4725,
+          "valence_mae": 24.2734,
+          "arousal_mae": 28.6716,
+          "overall_mse": 1371.4025,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth9",
+          "overall_mae": 26.4745,
+          "valence_mae": 25.4804,
+          "arousal_mae": 27.4687,
+          "overall_mse": 1358.3939,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p65_lag-2_smooth9",
+          "overall_mae": 26.4798,
+          "valence_mae": 24.2983,
+          "arousal_mae": 28.6613,
+          "overall_mse": 1380.7704,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth15",
+          "overall_mae": 26.4799,
+          "valence_mae": 24.5735,
+          "arousal_mae": 28.3864,
+          "overall_mse": 1357.0073,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth15",
+          "overall_mae": 26.4881,
+          "valence_mae": 25.5007,
+          "arousal_mae": 27.4754,
+          "overall_mse": 1349.5421,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth11",
+          "overall_mae": 26.4976,
+          "valence_mae": 24.6235,
+          "arousal_mae": 28.3716,
+          "overall_mse": 1369.3417,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth15",
+          "overall_mae": 26.5026,
+          "valence_mae": 24.6274,
+          "arousal_mae": 28.3778,
+          "overall_mse": 1363.0946,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth31",
+          "overall_mae": 26.5066,
+          "valence_mae": 25.3036,
+          "arousal_mae": 27.7095,
+          "overall_mse": 1343.6975,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth9",
+          "overall_mae": 26.5068,
+          "valence_mae": 24.6407,
+          "arousal_mae": 28.3729,
+          "overall_mse": 1372.8241,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-1_smooth31",
+          "overall_mae": 26.5542,
+          "valence_mae": 25.3555,
+          "arousal_mae": 27.7529,
+          "overall_mse": 1341.9838,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth31",
+          "overall_mae": 26.5557,
+          "valence_mae": 24.582,
+          "arousal_mae": 28.5293,
+          "overall_mse": 1337.1216,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth9",
+          "overall_mae": 26.5601,
+          "valence_mae": 25.4011,
+          "arousal_mae": 27.7192,
+          "overall_mse": 1360.8108,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth11",
+          "overall_mae": 26.5603,
+          "valence_mae": 25.4054,
+          "arousal_mae": 27.7151,
+          "overall_mse": 1357.7252,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth31",
+          "overall_mae": 26.5829,
+          "valence_mae": 24.5795,
+          "arousal_mae": 28.5863,
+          "overall_mse": 1334.65,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth15",
+          "overall_mae": 26.5873,
+          "valence_mae": 25.4509,
+          "arousal_mae": 27.7237,
+          "overall_mse": 1352.5825,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth31",
+          "overall_mae": 26.5915,
+          "valence_mae": 25.3036,
+          "arousal_mae": 27.8794,
+          "overall_mse": 1349.7982,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth11",
+          "overall_mae": 26.5997,
+          "valence_mae": 25.4765,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1365.2633,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth9",
+          "overall_mae": 26.6057,
+          "valence_mae": 25.4804,
+          "arousal_mae": 27.7309,
+          "overall_mse": 1368.7203,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+          "overall_mae": 26.6114,
+          "valence_mae": 25.5007,
+          "arousal_mae": 27.7221,
+          "overall_mse": 1359.1803,
+          "notes": "Distributional quantile video-time prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "candidate_count": 201,
+      "results": [
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth9",
+          "overall_mae": 27.1186,
+          "valence_mae": 26.0595,
+          "arousal_mae": 28.1776,
+          "overall_mse": 1423.3461,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth9",
+          "overall_mae": 27.1206,
+          "valence_mae": 26.0595,
+          "arousal_mae": 28.1817,
+          "overall_mse": 1413.4186,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth11",
+          "overall_mae": 27.1397,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1908,
+          "overall_mse": 1410.4855,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth11",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth9",
+          "overall_mae": 27.1726,
+          "valence_mae": 26.1677,
+          "arousal_mae": 28.1776,
+          "overall_mse": 1421.6307,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth9",
+          "overall_mae": 27.1747,
+          "valence_mae": 26.1677,
+          "arousal_mae": 28.1817,
+          "overall_mse": 1411.7032,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth11",
+          "overall_mae": 27.1956,
+          "valence_mae": 26.2003,
+          "arousal_mae": 28.1908,
+          "overall_mse": 1408.9132,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth11",
+          "overall_mae": 27.1968,
+          "valence_mae": 26.2003,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1418.9688,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth15",
+          "overall_mae": 27.2077,
+          "valence_mae": 26.1851,
+          "arousal_mae": 28.2304,
+          "overall_mse": 1406.0656,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth15",
+          "overall_mae": 27.2151,
+          "valence_mae": 26.1851,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1416.2412,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth9",
+          "overall_mae": 27.2429,
+          "valence_mae": 26.3082,
+          "arousal_mae": 28.1776,
+          "overall_mse": 1438.9111,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth9",
+          "overall_mae": 27.245,
+          "valence_mae": 26.3082,
+          "arousal_mae": 28.1817,
+          "overall_mse": 1428.9838,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth11",
+          "overall_mae": 27.2643,
+          "valence_mae": 26.3379,
+          "arousal_mae": 28.1908,
+          "overall_mse": 1426.0153,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth11",
+          "overall_mae": 27.2656,
+          "valence_mae": 26.3379,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1436.0708,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth15",
+          "overall_mae": 27.2668,
+          "valence_mae": 26.3032,
+          "arousal_mae": 28.2304,
+          "overall_mse": 1404.8602,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth15",
+          "overall_mae": 27.2742,
+          "valence_mae": 26.3032,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1415.0358,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth15",
+          "overall_mae": 27.3356,
+          "valence_mae": 26.4408,
+          "arousal_mae": 28.2304,
+          "overall_mse": 1421.4736,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth9",
+          "overall_mae": 27.3372,
+          "valence_mae": 26.0595,
+          "arousal_mae": 28.6149,
+          "overall_mse": 1462.3881,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-2_smooth15",
+          "overall_mae": 27.343,
+          "valence_mae": 26.4408,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1431.6493,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth9",
+          "overall_mae": 27.3514,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3256,
+          "overall_mse": 1424.8026,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth9",
+          "overall_mae": 27.3527,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1434.7916,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth11",
+          "overall_mae": 27.3631,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.6376,
+          "overall_mse": 1459.8105,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth11",
+          "overall_mae": 27.3714,
+          "valence_mae": 26.4071,
+          "arousal_mae": 28.3357,
+          "overall_mse": 1421.726,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth11",
+          "overall_mae": 27.375,
+          "valence_mae": 26.4071,
+          "arousal_mae": 28.343,
+          "overall_mse": 1431.7889,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth9",
+          "overall_mae": 27.3913,
+          "valence_mae": 26.1677,
+          "arousal_mae": 28.6149,
+          "overall_mse": 1460.6729,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth9",
+          "overall_mae": 27.3968,
+          "valence_mae": 26.4679,
+          "arousal_mae": 28.3256,
+          "overall_mse": 1422.9619,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth9",
+          "overall_mae": 27.3981,
+          "valence_mae": 26.4679,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1432.9512,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth11",
+          "overall_mae": 27.419,
+          "valence_mae": 26.2003,
+          "arousal_mae": 28.6376,
+          "overall_mse": 1458.2384,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth11",
+          "overall_mae": 27.4193,
+          "valence_mae": 26.503,
+          "arousal_mae": 28.3357,
+          "overall_mse": 1420.0132,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth11",
+          "overall_mae": 27.423,
+          "valence_mae": 26.503,
+          "arousal_mae": 28.343,
+          "overall_mse": 1430.0762,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-1_smooth15",
+          "overall_mae": 27.4382,
+          "valence_mae": 26.5011,
+          "arousal_mae": 28.3754,
+          "overall_mse": 1416.7744,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-2_smooth15",
+          "overall_mae": 27.4437,
+          "valence_mae": 26.1851,
+          "arousal_mae": 28.7022,
+          "overall_mse": 1455.8993,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-1_smooth15",
+          "overall_mae": 27.4465,
+          "valence_mae": 26.5011,
+          "arousal_mae": 28.3919,
+          "overall_mse": 1426.9668,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth9",
+          "overall_mae": 27.4616,
+          "valence_mae": 26.3082,
+          "arousal_mae": 28.6149,
+          "overall_mse": 1477.9531,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth9",
+          "overall_mae": 27.4764,
+          "valence_mae": 26.6272,
+          "arousal_mae": 28.3256,
+          "overall_mse": 1440.1879,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth9",
+          "overall_mae": 27.4777,
+          "valence_mae": 26.6272,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1450.1769,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth11",
+          "overall_mae": 27.4878,
+          "valence_mae": 26.3379,
+          "arousal_mae": 28.6376,
+          "overall_mse": 1475.3405,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-1_smooth15",
+          "overall_mae": 27.4886,
+          "valence_mae": 26.6019,
+          "arousal_mae": 28.3754,
+          "overall_mse": 1415.4502,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth11",
+          "overall_mae": 27.4964,
+          "valence_mae": 26.6571,
+          "arousal_mae": 28.3357,
+          "overall_mse": 1437.0856,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-1_smooth15",
+          "overall_mae": 27.4969,
+          "valence_mae": 26.6019,
+          "arousal_mae": 28.3919,
+          "overall_mse": 1425.6426,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth11",
+          "overall_mae": 27.5001,
+          "valence_mae": 26.6571,
+          "arousal_mae": 28.343,
+          "overall_mse": 1447.1484,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-2_smooth15",
+          "overall_mae": 27.5027,
+          "valence_mae": 26.3032,
+          "arousal_mae": 28.7022,
+          "overall_mse": 1454.694,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth9",
+          "overall_mae": 27.5233,
+          "valence_mae": 26.869,
+          "arousal_mae": 28.1776,
+          "overall_mse": 1453.578,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth9",
+          "overall_mae": 27.5253,
+          "valence_mae": 26.869,
+          "arousal_mae": 28.1817,
+          "overall_mse": 1443.6504,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth11",
+          "overall_mae": 27.5405,
+          "valence_mae": 26.8901,
+          "arousal_mae": 28.1908,
+          "overall_mse": 1440.7008,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth11",
+          "overall_mae": 27.5417,
+          "valence_mae": 26.8901,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1450.7562,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-1_smooth15",
+          "overall_mae": 27.567,
+          "valence_mae": 26.7586,
+          "arousal_mae": 28.3754,
+          "overall_mse": 1432.0084,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-2_smooth15",
+          "overall_mae": 27.5715,
+          "valence_mae": 26.4408,
+          "arousal_mae": 28.7022,
+          "overall_mse": 1471.3073,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p5_lag-1_smooth15",
+          "overall_mae": 27.5752,
+          "valence_mae": 26.7586,
+          "arousal_mae": 28.3919,
+          "overall_mse": 1442.2008,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth9",
+          "overall_mae": 27.5779,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.7787,
+          "overall_mse": 1474.3584,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-2_smooth15",
+          "overall_mae": 27.6007,
+          "valence_mae": 26.971,
+          "arousal_mae": 28.2304,
+          "overall_mse": 1436.1626,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth11",
+          "overall_mae": 27.6046,
+          "valence_mae": 26.4071,
+          "arousal_mae": 28.8022,
+          "overall_mse": 1471.4989,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-2_smooth15",
+          "overall_mae": 27.6081,
+          "valence_mae": 26.971,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1446.3383,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth9",
+          "overall_mae": 27.6233,
+          "valence_mae": 26.4679,
+          "arousal_mae": 28.7787,
+          "overall_mse": 1472.5177,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth11",
+          "overall_mae": 27.6526,
+          "valence_mae": 26.503,
+          "arousal_mae": 28.8022,
+          "overall_mse": 1469.7861,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p55_lag-1_smooth15",
+          "overall_mae": 27.6834,
+          "valence_mae": 26.5011,
+          "arousal_mae": 28.8657,
+          "overall_mse": 1467.0426,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth9",
+          "overall_mae": 27.7029,
+          "valence_mae": 26.6272,
+          "arousal_mae": 28.7787,
+          "overall_mse": 1489.7437,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth11",
+          "overall_mae": 27.7297,
+          "valence_mae": 26.6571,
+          "arousal_mae": 28.8022,
+          "overall_mse": 1486.8584,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p55_lag-1_smooth15",
+          "overall_mae": 27.7338,
+          "valence_mae": 26.6019,
+          "arousal_mae": 28.8657,
+          "overall_mse": 1465.7184,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth9",
+          "overall_mae": 27.7371,
+          "valence_mae": 27.1486,
+          "arousal_mae": 28.3256,
+          "overall_mse": 1455.0737,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth9",
+          "overall_mae": 27.7384,
+          "valence_mae": 27.1486,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1465.063,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth9",
+          "overall_mae": 27.742,
+          "valence_mae": 26.869,
+          "arousal_mae": 28.6149,
+          "overall_mse": 1492.6198,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth11",
+          "overall_mae": 27.7538,
+          "valence_mae": 27.1719,
+          "arousal_mae": 28.3357,
+          "overall_mse": 1451.9403,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth11",
+          "overall_mae": 27.7575,
+          "valence_mae": 27.1719,
+          "arousal_mae": 28.343,
+          "overall_mse": 1462.0033,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth11",
+          "overall_mae": 27.7639,
+          "valence_mae": 26.8901,
+          "arousal_mae": 28.6376,
+          "overall_mse": 1490.026,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p45_lag-2_smooth31",
+          "overall_mae": 27.8082,
+          "valence_mae": 26.9661,
+          "arousal_mae": 28.6502,
+          "overall_mse": 1406.3026,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p45_lag-1_smooth15",
+          "overall_mae": 27.8112,
+          "valence_mae": 27.2471,
+          "arousal_mae": 28.3754,
+          "overall_mse": 1446.8921,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p55_lag-1_smooth15",
+          "overall_mae": 27.8122,
+          "valence_mae": 26.7586,
+          "arousal_mae": 28.8657,
+          "overall_mse": 1482.2767,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p5_lag-1_smooth15",
+          "overall_mae": 27.8195,
+          "valence_mae": 27.2471,
+          "arousal_mae": 28.3919,
+          "overall_mse": 1457.0845,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p5_lag-2_smooth31",
+          "overall_mae": 27.8249,
+          "valence_mae": 26.9661,
+          "arousal_mae": 28.6838,
+          "overall_mse": 1416.3154,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p35_qa0p55_lag-2_smooth15",
+          "overall_mae": 27.8366,
+          "valence_mae": 26.971,
+          "arousal_mae": 28.7022,
+          "overall_mse": 1485.9965,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p45_lag-2_smooth31",
+          "overall_mae": 27.861,
+          "valence_mae": 27.0717,
+          "arousal_mae": 28.6502,
+          "overall_mse": 1405.4567,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-2_smooth9",
+          "overall_mae": 27.8659,
+          "valence_mae": 26.0595,
+          "arousal_mae": 29.6722,
+          "overall_mse": 1500.0597,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-2_smooth11",
+          "overall_mae": 27.8731,
+          "valence_mae": 26.0886,
+          "arousal_mae": 29.6576,
+          "overall_mse": 1496.226,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p5_lag-2_smooth31",
+          "overall_mae": 27.8777,
+          "valence_mae": 27.0717,
+          "arousal_mae": 28.6838,
+          "overall_mse": 1415.4696,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-2_smooth9",
+          "overall_mae": 27.92,
+          "valence_mae": 26.1677,
+          "arousal_mae": 29.6722,
+          "overall_mse": 1498.3446,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p5_qa0p35_lag-2_smooth15",
+          "overall_mae": 27.9229,
+          "valence_mae": 26.1851,
+          "arousal_mae": 29.6607,
+          "overall_mse": 1489.9413,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p45_qa0p35_lag-2_smooth11",
+          "overall_mae": 27.9289,
+          "valence_mae": 26.2003,
+          "arousal_mae": 29.6576,
+          "overall_mse": 1494.6539,
+          "notes": "Distributional quantile video-time prior candidate."
+        },
+        {
+          "method": "QuantilePrior_qv0p55_qa0p45_lag-2_smooth31",
+          "overall_mae": 27.9446,
+          "valence_mae": 27.239,
+          "arousal_mae": 28.6502,
+          "overall_mse": 1421.9069,
+          "notes": "Distributional quantile video-time prior candidate."
+        }
+      ]
+    }
+  ]
+}

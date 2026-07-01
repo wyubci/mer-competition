@@ -1,0 +1,840 @@
+{
+  "method": "TBCR: Trial-Basis Coefficient Regression",
+  "feature_cache": "experiments\\features\\asac_features_nobase_20_4.npz",
+  "feature_mode": "mean_std",
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_trials": 300,
+    "val_trials": 60,
+    "val_samples": 6144
+  },
+  "results": [
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.75_clip5_smooth9",
+      "overall_mae": 29.8516,
+      "valence_mae": 28.3232,
+      "arousal_mae": 31.38,
+      "overall_mse": 1523.5026,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.75_clip5_smooth9",
+      "overall_mae": 29.8521,
+      "valence_mae": 28.3048,
+      "arousal_mae": 31.3994,
+      "overall_mse": 1523.7866,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.00_clip5_smooth9",
+      "overall_mae": 29.8531,
+      "valence_mae": 28.3058,
+      "arousal_mae": 31.4004,
+      "overall_mse": 1522.9014,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.00_clip5_smooth9",
+      "overall_mae": 29.8562,
+      "valence_mae": 28.2865,
+      "arousal_mae": 31.426,
+      "overall_mse": 1523.2006,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.50_clip5_smooth9",
+      "overall_mae": 29.8584,
+      "valence_mae": 28.3518,
+      "arousal_mae": 31.365,
+      "overall_mse": 1525.3774,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.25_clip5_smooth9",
+      "overall_mae": 29.8587,
+      "valence_mae": 28.3022,
+      "arousal_mae": 31.4152,
+      "overall_mse": 1522.89,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.75_clip5_smooth5",
+      "overall_mae": 29.8599,
+      "valence_mae": 28.3117,
+      "arousal_mae": 31.408,
+      "overall_mse": 1527.1002,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.75_clip5_smooth9",
+      "overall_mae": 29.86,
+      "valence_mae": 28.3343,
+      "arousal_mae": 31.3858,
+      "overall_mse": 1524.4067,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.50_clip5_smooth5",
+      "overall_mae": 29.8603,
+      "valence_mae": 28.3317,
+      "arousal_mae": 31.389,
+      "overall_mse": 1528.9331,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.50_clip5_smooth9",
+      "overall_mae": 29.8615,
+      "valence_mae": 28.3344,
+      "arousal_mae": 31.3885,
+      "overall_mse": 1526.0604,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.00_clip5_smooth9",
+      "overall_mae": 29.8616,
+      "valence_mae": 28.3157,
+      "arousal_mae": 31.4076,
+      "overall_mse": 1524.0386,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.50_clip5_smooth9",
+      "overall_mae": 29.8618,
+      "valence_mae": 28.2987,
+      "arousal_mae": 31.4249,
+      "overall_mse": 1522.7018,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.75_clip5_smooth5",
+      "overall_mae": 29.8628,
+      "valence_mae": 28.2954,
+      "arousal_mae": 31.4301,
+      "overall_mse": 1527.3781,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale2.00_clip5_smooth9",
+      "overall_mae": 29.8633,
+      "valence_mae": 28.2904,
+      "arousal_mae": 31.4363,
+      "overall_mse": 1522.1881,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.25_clip5_smooth9",
+      "overall_mae": 29.8645,
+      "valence_mae": 28.2839,
+      "arousal_mae": 31.4452,
+      "overall_mse": 1523.3322,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.00_clip5_smooth5",
+      "overall_mae": 29.8652,
+      "valence_mae": 28.2977,
+      "arousal_mae": 31.4327,
+      "overall_mse": 1526.5248,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.50_clip5_smooth9",
+      "overall_mae": 29.8653,
+      "valence_mae": 28.3568,
+      "arousal_mae": 31.3737,
+      "overall_mse": 1525.7682,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.50_clip5_smooth5",
+      "overall_mae": 29.8657,
+      "valence_mae": 28.3158,
+      "arousal_mae": 31.4156,
+      "overall_mse": 1529.6332,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.25_clip5_smooth9",
+      "overall_mae": 29.8658,
+      "valence_mae": 28.3111,
+      "arousal_mae": 31.4206,
+      "overall_mse": 1523.8615,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.00_clip5_smooth9",
+      "overall_mae": 29.8668,
+      "valence_mae": 28.3159,
+      "arousal_mae": 31.4177,
+      "overall_mse": 1523.3168,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.50_clip5_smooth9",
+      "overall_mae": 29.8675,
+      "valence_mae": 28.3077,
+      "arousal_mae": 31.4272,
+      "overall_mse": 1523.6979,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.25_clip5_smooth9",
+      "overall_mae": 29.8685,
+      "valence_mae": 28.3109,
+      "arousal_mae": 31.426,
+      "overall_mse": 1523.1537,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.50_clip5_smooth5",
+      "overall_mae": 29.8686,
+      "valence_mae": 28.3412,
+      "arousal_mae": 31.3959,
+      "overall_mse": 1529.3594,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.75_clip5_smooth9",
+      "overall_mae": 29.8688,
+      "valence_mae": 28.3324,
+      "arousal_mae": 31.4051,
+      "overall_mse": 1524.1146,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.50_clip5_smooth9",
+      "overall_mae": 29.8691,
+      "valence_mae": 28.2809,
+      "arousal_mae": 31.4573,
+      "overall_mse": 1523.2465,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.75_clip5_smooth5",
+      "overall_mae": 29.87,
+      "valence_mae": 28.3258,
+      "arousal_mae": 31.4141,
+      "overall_mse": 1528.1051,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.75_clip5_smooth5",
+      "overall_mae": 29.8704,
+      "valence_mae": 28.3178,
+      "arousal_mae": 31.4229,
+      "overall_mse": 1527.4927,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.00_clip5_smooth5",
+      "overall_mae": 29.8706,
+      "valence_mae": 28.2814,
+      "arousal_mae": 31.4597,
+      "overall_mse": 1526.8032,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale2.00_clip5_smooth9",
+      "overall_mae": 29.871,
+      "valence_mae": 28.3061,
+      "arousal_mae": 31.436,
+      "overall_mse": 1523.7296,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.50_clip5_smooth9",
+      "overall_mae": 29.8715,
+      "valence_mae": 28.3082,
+      "arousal_mae": 31.4347,
+      "overall_mse": 1523.1484,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.50_clip5_smooth5",
+      "overall_mae": 29.872,
+      "valence_mae": 28.3274,
+      "arousal_mae": 31.4167,
+      "overall_mse": 1529.6898,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.00_clip5_smooth5",
+      "overall_mae": 29.8722,
+      "valence_mae": 28.3076,
+      "arousal_mae": 31.4367,
+      "overall_mse": 1526.7013,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale2.00_clip5_smooth9",
+      "overall_mae": 29.8733,
+      "valence_mae": 28.2754,
+      "arousal_mae": 31.4713,
+      "overall_mse": 1522.8627,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.25_clip5_smooth5",
+      "overall_mae": 29.8737,
+      "valence_mae": 28.297,
+      "arousal_mae": 31.4504,
+      "overall_mse": 1526.564,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.50_clip5_smooth9",
+      "overall_mae": 29.8751,
+      "valence_mae": 28.3514,
+      "arousal_mae": 31.3987,
+      "overall_mse": 1526.3134,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.00_clip5_smooth5",
+      "overall_mae": 29.8761,
+      "valence_mae": 28.3113,
+      "arousal_mae": 31.4408,
+      "overall_mse": 1527.8295,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.25_clip5_smooth5",
+      "overall_mae": 29.8763,
+      "valence_mae": 28.3062,
+      "arousal_mae": 31.4464,
+      "overall_mse": 1526.5704,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.50_clip5_smooth5",
+      "overall_mae": 29.8786,
+      "valence_mae": 28.2954,
+      "arousal_mae": 31.4618,
+      "overall_mse": 1526.4144,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale2.00_clip5_smooth9",
+      "overall_mae": 29.8791,
+      "valence_mae": 28.3081,
+      "arousal_mae": 31.45,
+      "overall_mse": 1523.2061,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.50_clip5_smooth5",
+      "overall_mae": 29.88,
+      "valence_mae": 28.3041,
+      "arousal_mae": 31.4559,
+      "overall_mse": 1526.5819,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.25_clip5_smooth5",
+      "overall_mae": 29.8813,
+      "valence_mae": 28.2814,
+      "arousal_mae": 31.4812,
+      "overall_mse": 1526.9525,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.25_clip5_smooth5",
+      "overall_mae": 29.8831,
+      "valence_mae": 28.3095,
+      "arousal_mae": 31.4566,
+      "overall_mse": 1527.7256,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale2.00_clip5_smooth5",
+      "overall_mae": 29.8837,
+      "valence_mae": 28.2911,
+      "arousal_mae": 31.4763,
+      "overall_mse": 1525.9608,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.50_clip5_smooth5",
+      "overall_mae": 29.8867,
+      "valence_mae": 28.3085,
+      "arousal_mae": 31.4649,
+      "overall_mse": 1527.6318,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.50_clip5",
+      "overall_mae": 29.8872,
+      "valence_mae": 28.3477,
+      "arousal_mae": 31.4268,
+      "overall_mse": 1532.5201,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.50_clip5_smooth5",
+      "overall_mae": 29.8873,
+      "valence_mae": 28.2801,
+      "arousal_mae": 31.4945,
+      "overall_mse": 1526.8848,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale2.00_clip5_smooth5",
+      "overall_mae": 29.8887,
+      "valence_mae": 28.3045,
+      "arousal_mae": 31.4729,
+      "overall_mse": 1526.6759,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.75_clip5",
+      "overall_mae": 29.8909,
+      "valence_mae": 28.3329,
+      "arousal_mae": 31.4489,
+      "overall_mse": 1530.7578,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale2.00_clip5_smooth5",
+      "overall_mae": 29.8923,
+      "valence_mae": 28.2758,
+      "arousal_mae": 31.5088,
+      "overall_mse": 1526.5293,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale2.00_clip5_smooth5",
+      "overall_mae": 29.8932,
+      "valence_mae": 28.3097,
+      "arousal_mae": 31.4767,
+      "overall_mse": 1527.7653,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.75_clip5",
+      "overall_mae": 29.8942,
+      "valence_mae": 28.3192,
+      "arousal_mae": 31.4691,
+      "overall_mse": 1530.9908,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.50_clip5",
+      "overall_mae": 29.8946,
+      "valence_mae": 28.3346,
+      "arousal_mae": 31.4547,
+      "overall_mse": 1533.2123,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.50_clip5",
+      "overall_mae": 29.897,
+      "valence_mae": 28.3598,
+      "arousal_mae": 31.4342,
+      "overall_mse": 1532.9877,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.75_clip5",
+      "overall_mae": 29.898,
+      "valence_mae": 28.3397,
+      "arousal_mae": 31.4564,
+      "overall_mse": 1530.9738,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.50_clip5",
+      "overall_mae": 29.8985,
+      "valence_mae": 28.3465,
+      "arousal_mae": 31.4504,
+      "overall_mse": 1533.1527,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.00_clip5",
+      "overall_mae": 29.8986,
+      "valence_mae": 28.3217,
+      "arousal_mae": 31.4754,
+      "overall_mse": 1530.2321,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.00_clip5",
+      "overall_mae": 29.9004,
+      "valence_mae": 28.3312,
+      "arousal_mae": 31.4696,
+      "overall_mse": 1530.1816,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9005,
+      "valence_mae": 28.4025,
+      "arousal_mae": 31.3986,
+      "overall_mse": 1534.6719,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.75_clip5",
+      "overall_mae": 29.9026,
+      "valence_mae": 28.3484,
+      "arousal_mae": 31.4569,
+      "overall_mse": 1531.8285,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9034,
+      "valence_mae": 28.4019,
+      "arousal_mae": 31.405,
+      "overall_mse": 1534.9097,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.00_clip5",
+      "overall_mae": 29.9037,
+      "valence_mae": 28.3068,
+      "arousal_mae": 31.5006,
+      "overall_mse": 1530.4479,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.25_clip5",
+      "overall_mae": 29.9056,
+      "valence_mae": 28.332,
+      "arousal_mae": 31.4792,
+      "overall_mse": 1530.0804,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.906,
+      "valence_mae": 28.3959,
+      "arousal_mae": 31.4161,
+      "overall_mse": 1535.3434,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.25_clip5",
+      "overall_mae": 29.9092,
+      "valence_mae": 28.3234,
+      "arousal_mae": 31.495,
+      "overall_mse": 1530.306,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9102,
+      "valence_mae": 28.4356,
+      "arousal_mae": 31.3848,
+      "overall_mse": 1531.2169,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale1.50_clip5",
+      "overall_mae": 29.9103,
+      "valence_mae": 28.3315,
+      "arousal_mae": 31.4891,
+      "overall_mse": 1530.1022,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.00_clip5",
+      "overall_mae": 29.9117,
+      "valence_mae": 28.337,
+      "arousal_mae": 31.4864,
+      "overall_mse": 1531.6298,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9137,
+      "valence_mae": 28.4375,
+      "arousal_mae": 31.39,
+      "overall_mse": 1531.4606,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9139,
+      "valence_mae": 28.4106,
+      "arousal_mae": 31.4172,
+      "overall_mse": 1535.2584,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9151,
+      "valence_mae": 28.4324,
+      "arousal_mae": 31.3978,
+      "overall_mse": 1531.9127,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.25_clip5",
+      "overall_mae": 29.916,
+      "valence_mae": 28.3081,
+      "arousal_mae": 31.5239,
+      "overall_mse": 1530.624,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale1.50_clip5",
+      "overall_mae": 29.916,
+      "valence_mae": 28.3239,
+      "arousal_mae": 31.5081,
+      "overall_mse": 1530.1818,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a100p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9168,
+      "valence_mae": 28.4099,
+      "arousal_mae": 31.4238,
+      "overall_mse": 1535.1107,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a100p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4154,
+      "arousal_mae": 31.4254,
+      "overall_mse": 1535.6002,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale2.00_clip5",
+      "overall_mae": 29.9206,
+      "valence_mae": 28.3332,
+      "arousal_mae": 31.5079,
+      "overall_mse": 1530.2311,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.25_clip5",
+      "overall_mae": 29.9209,
+      "valence_mae": 28.3381,
+      "arousal_mae": 31.5036,
+      "overall_mse": 1531.6107,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a100p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9226,
+      "valence_mae": 28.4254,
+      "arousal_mae": 31.4198,
+      "overall_mse": 1536.1891,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale1.50_clip5",
+      "overall_mae": 29.9233,
+      "valence_mae": 28.3079,
+      "arousal_mae": 31.5386,
+      "overall_mse": 1530.5875,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale2.00_clip5",
+      "overall_mae": 29.9237,
+      "valence_mae": 28.3217,
+      "arousal_mae": 31.5256,
+      "overall_mse": 1529.7773,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale0.25_clip5",
+      "overall_mae": 29.9239,
+      "valence_mae": 28.414,
+      "arousal_mae": 31.4339,
+      "overall_mse": 1538.1886,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a100p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9245,
+      "valence_mae": 28.4074,
+      "arousal_mae": 31.4415,
+      "overall_mse": 1539.8037,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a100p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.925,
+      "valence_mae": 28.4196,
+      "arousal_mae": 31.4303,
+      "overall_mse": 1534.9481,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9254,
+      "valence_mae": 28.4494,
+      "arousal_mae": 31.4013,
+      "overall_mse": 1531.9337,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a100p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9264,
+      "valence_mae": 28.4002,
+      "arousal_mae": 31.4526,
+      "overall_mse": 1539.1388,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale1.50_clip5",
+      "overall_mae": 29.9269,
+      "valence_mae": 28.3396,
+      "arousal_mae": 31.5143,
+      "overall_mse": 1531.5918,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a1000p0_scale0.25_clip5",
+      "overall_mae": 29.9271,
+      "valence_mae": 28.4127,
+      "arousal_mae": 31.4416,
+      "overall_mse": 1538.413,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a100p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9292,
+      "valence_mae": 28.4032,
+      "arousal_mae": 31.4551,
+      "overall_mse": 1539.4448,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale2.00_clip5",
+      "overall_mae": 29.9296,
+      "valence_mae": 28.3052,
+      "arousal_mae": 31.554,
+      "overall_mse": 1530.2699,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k8_a1000p0_scale0.25_clip5",
+      "overall_mae": 29.9301,
+      "valence_mae": 28.4078,
+      "arousal_mae": 31.4524,
+      "overall_mse": 1538.8256,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale2.00_clip5_smooth9",
+      "overall_mae": 29.9315,
+      "valence_mae": 28.4024,
+      "arousal_mae": 31.4606,
+      "overall_mse": 1537.0228,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4245,
+      "arousal_mae": 31.4388,
+      "overall_mse": 1536.5116,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a10p0_scale0.25_clip5_smooth9",
+      "overall_mae": 29.9319,
+      "valence_mae": 28.4375,
+      "arousal_mae": 31.4263,
+      "overall_mse": 1537.5176,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale1.50_clip5_smooth9",
+      "overall_mae": 29.9329,
+      "valence_mae": 28.4068,
+      "arousal_mae": 31.4589,
+      "overall_mse": 1536.9546,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale1.00_clip5_smooth9",
+      "overall_mae": 29.933,
+      "valence_mae": 28.4118,
+      "arousal_mae": 31.4541,
+      "overall_mse": 1536.746,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k10_a100p0_scale0.25_clip5_smooth5",
+      "overall_mae": 29.9332,
+      "valence_mae": 28.4037,
+      "arousal_mae": 31.4627,
+      "overall_mse": 1538.8331,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale1.25_clip5_smooth9",
+      "overall_mae": 29.9333,
+      "valence_mae": 28.4094,
+      "arousal_mae": 31.4572,
+      "overall_mse": 1536.8571,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale0.50_clip5_smooth9",
+      "overall_mae": 29.9335,
+      "valence_mae": 28.4223,
+      "arousal_mae": 31.4447,
+      "overall_mse": 1536.7305,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1p0_scale0.75_clip5_smooth9",
+      "overall_mae": 29.934,
+      "valence_mae": 28.4164,
+      "arousal_mae": 31.4516,
+      "overall_mse": 1536.7604,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k6_a1000p0_scale0.25_clip5",
+      "overall_mae": 29.9358,
+      "valence_mae": 28.421,
+      "arousal_mae": 31.4505,
+      "overall_mse": 1538.6906,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    },
+    {
+      "method": "TBCR_mean_std_k12_a1000p0_scale2.00_clip5",
+      "overall_mae": 29.9368,
+      "valence_mae": 28.3443,
+      "arousal_mae": 31.5292,
+      "overall_mse": 1531.8483,
+      "notes": "Trial-level cosine-basis residual coefficients predicted from aggregated EEG/fNIRS features."
+    }
+  ]
+}

@@ -1,0 +1,3034 @@
+{
+  "method": "Batch 126-145: twenty distinct architectures plus 146 integration",
+  "note": "This batch avoids parameter-only variants. Each numbered model uses a different architecture family or modeling assumption.",
+  "architecture_map": {
+    "126": "Local linear LOESS trajectory smoother",
+    "127": "Gaussian-process-style time kernel smoother",
+    "128": "Hampel median outlier architecture",
+    "129": "Total-variation proximal denoiser",
+    "130": "Haar wavelet shrinkage",
+    "131": "Piecewise spline/knot trend projection",
+    "132": "Discrete HMM Viterbi trajectory decoder",
+    "133": "CRF-like anchored temporal graph smoother",
+    "134": "Local self-attention smoother",
+    "135": "Prototype residual expert via KMeans",
+    "136": "Gaussian mixture residual expert",
+    "137": "Random Fourier feature kernel residual model",
+    "138": "PLS/PCA latent residual reconstruction",
+    "139": "Quantile distribution calibration",
+    "140": "Isotonic monotone calibration",
+    "141": "Huber robust residual calibration",
+    "142": "Small MLP residual architecture",
+    "143": "Gradient-boosted residual architecture",
+    "144": "Linear stacking of prior candidates/features",
+    "145": "Rule-based mixture of heterogeneous architecture outputs"
+  },
+  "fold_size": 4,
+  "candidate_pool_size": 24,
+  "aggregate_results": [
+    {
+      "method": "128_HampelMedianFilter",
+      "overall_mae": 28.7259,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4922,
+      "overall_mse": 1590.2638,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "125_PreviousStateFusion_reference",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4924,
+      "overall_mse": 1590.3744,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+      "overall_mae": 28.7276,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4917,
+      "overall_mse": 1588.9585,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "133_AnchoredGraphSmoother",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4929,
+      "overall_mse": 1589.6179,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "134_LocalSelfAttentionSmoother",
+      "overall_mae": 28.7308,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4917,
+      "overall_mse": 1588.528,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "129_TotalVariationDenoiser",
+      "overall_mae": 28.7318,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4941,
+      "overall_mse": 1588.8247,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "104_DimwiseOOFMeta_reference",
+      "overall_mae": 28.734,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4989,
+      "overall_mse": 1588.8555,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "126_LocalLinearLOESS",
+      "overall_mae": 28.735,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4959,
+      "overall_mse": 1587.8955,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "127_GaussianTimeKernelSmoother",
+      "overall_mae": 28.7452,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4995,
+      "overall_mse": 1587.5789,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "143_GradientBoostedResidual",
+      "overall_mae": 28.7467,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.5182,
+      "overall_mse": 1590.2294,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "145_HeterogeneousRuleMOE",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.5313,
+      "overall_mse": 1593.2412,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "131_PiecewiseKnotProjection",
+      "overall_mae": 28.7567,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.5201,
+      "overall_mse": 1583.9882,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "130_HaarWaveletShrinkage",
+      "overall_mae": 28.763,
+      "valence_mae": 27.0051,
+      "arousal_mae": 30.521,
+      "overall_mse": 1588.3762,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "136_GMMResidualExpert",
+      "overall_mae": 28.763,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.5401,
+      "overall_mse": 1588.8545,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "137_RFFKernelResidual",
+      "overall_mae": 28.7646,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.5385,
+      "overall_mse": 1587.2626,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "138_PCALatentResidual",
+      "overall_mae": 28.7656,
+      "valence_mae": 27.0001,
+      "arousal_mae": 30.531,
+      "overall_mse": 1587.5684,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "139_QuantileDistributionCalibration",
+      "overall_mae": 28.7667,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.5605,
+      "overall_mse": 1609.2717,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "141_HuberResidualCalibration",
+      "overall_mae": 28.767,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.5428,
+      "overall_mse": 1589.3955,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "135_KMeansResidualExpert",
+      "overall_mae": 28.7682,
+      "valence_mae": 26.9964,
+      "arousal_mae": 30.54,
+      "overall_mse": 1587.4036,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "142_MLPResidualArchitecture",
+      "overall_mae": 28.7689,
+      "valence_mae": 26.9949,
+      "arousal_mae": 30.5429,
+      "overall_mse": 1587.8657,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "140_IsotonicCalibration",
+      "overall_mae": 28.7726,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.554,
+      "overall_mse": 1583.0262,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "144_LinearStackingArchitecture",
+      "overall_mae": 28.8078,
+      "valence_mae": 27.0272,
+      "arousal_mae": 30.5884,
+      "overall_mse": 1584.8326,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "132_HMMViterbiDecoder",
+      "overall_mae": 28.8614,
+      "valence_mae": 27.1821,
+      "arousal_mae": 30.5407,
+      "overall_mse": 1596.3135,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "dimwise_integration": [
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7256,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7256,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7259,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7259,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7262,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7262,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7262,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7264,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7267,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7274,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7276,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7276,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7277,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7278,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7279,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7281,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7281,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7281,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7282,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7283,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7284,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7287,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7287,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7292,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7293,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7295,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7296,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7297,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.73,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7302,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7305,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7305,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7306,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7306,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7307,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7308,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7308,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7308,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7309,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7309,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7312,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7313,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7314,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7315,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7315,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7318,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7319,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.732,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7323,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7323,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7324,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7325,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7325,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7326,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7327,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7328,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7328,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7328,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7328,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7329,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7329,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.733,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7331,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7332,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7332,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7332,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7334,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7334,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7335,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7335,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7335,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7338,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7339,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.734,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.734,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7341,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7341,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7342,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7343,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7343,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7343,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7345,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7347,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7347,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7347,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7349,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.735,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[145_HeterogeneousRuleMOE]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7351,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7356,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7358,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[139_QuantileDistributionCalibration]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7362,
+      "valence_mae": 26.9728,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7364,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7365,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[098_PatternPrior]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7367,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[126_LocalLinearLOESS]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7368,
+      "valence_mae": 26.9741,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7371,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[143_GradientBoostedResidual]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7374,
+      "valence_mae": 26.9753,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.7388,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7388,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7388,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[098_PatternPrior]",
+      "overall_mae": 28.739,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.739,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7392,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.7394,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7394,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[098_PatternPrior]",
+      "overall_mae": 28.7396,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[131_PiecewiseKnotProjection]",
+      "overall_mae": 28.7398,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.5201,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.74,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[128_HampelMedianFilter]__A[130_HaarWaveletShrinkage]",
+      "overall_mae": 28.7402,
+      "valence_mae": 26.9595,
+      "arousal_mae": 30.521,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[131_PiecewiseKnotProjection]",
+      "overall_mae": 28.7403,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.5201,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[125_PreviousStateFusion_reference]__A[130_HaarWaveletShrinkage]",
+      "overall_mae": 28.7408,
+      "valence_mae": 26.9606,
+      "arousal_mae": 30.521,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.7408,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7409,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[098_PatternPrior]",
+      "overall_mae": 28.741,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7412,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7412,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.7413,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7414,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7414,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[098_PatternPrior]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7416,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7416,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[131_PiecewiseKnotProjection]",
+      "overall_mae": 28.7417,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.5201,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7417,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7417,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7417,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7418,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7418,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7418,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7419,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.742,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7421,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]__A[130_HaarWaveletShrinkage]",
+      "overall_mae": 28.7422,
+      "valence_mae": 26.9634,
+      "arousal_mae": 30.521,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[131_PiecewiseKnotProjection]",
+      "overall_mae": 28.7422,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.5201,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7424,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4989,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7424,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[131_PiecewiseKnotProjection]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7425,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[131_PiecewiseKnotProjection]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7425,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7426,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7426,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[133_AnchoredGraphSmoother]__A[130_HaarWaveletShrinkage]",
+      "overall_mae": 28.7427,
+      "valence_mae": 26.9644,
+      "arousal_mae": 30.521,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[136_GMMResidualExpert]__A[127_GaussianTimeKernelSmoother]",
+      "overall_mae": 28.7427,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.4995,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7427,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[131_PiecewiseKnotProjection]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7428,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[131_PiecewiseKnotProjection]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7429,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[131_PiecewiseKnotProjection]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7431,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[137_RFFKernelResidual]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7433,
+      "valence_mae": 26.9907,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[142_MLPResidualArchitecture]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7433,
+      "valence_mae": 26.9949,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[142_MLPResidualArchitecture]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7433,
+      "valence_mae": 26.9949,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[127_GaussianTimeKernelSmoother]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7434,
+      "valence_mae": 26.991,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[141_HuberResidualCalibration]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7435,
+      "valence_mae": 26.9912,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[142_MLPResidualArchitecture]__A[128_HampelMedianFilter]",
+      "overall_mae": 28.7435,
+      "valence_mae": 26.9949,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[140_IsotonicCalibration]__A[126_LocalLinearLOESS]",
+      "overall_mae": 28.7436,
+      "valence_mae": 26.9913,
+      "arousal_mae": 30.4959,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.7437,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[131_PiecewiseKnotProjection]__A[129_TotalVariationDenoiser]",
+      "overall_mae": 28.7437,
+      "valence_mae": 26.9933,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[142_MLPResidualArchitecture]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7437,
+      "valence_mae": 26.9949,
+      "arousal_mae": 30.4924,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[104_DimwiseOOFMeta_reference]__A[098_PatternPrior]",
+      "overall_mae": 28.7439,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.7439,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[142_MLPResidualArchitecture]__A[133_AnchoredGraphSmoother]",
+      "overall_mae": 28.7439,
+      "valence_mae": 26.9949,
+      "arousal_mae": 30.4929,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[143_GradientBoostedResidual]",
+      "overall_mae": 28.744,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.5182,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[129_TotalVariationDenoiser]__A[098_PatternPrior]",
+      "overall_mae": 28.7441,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[135_KMeansResidualExpert]__A[146_FixedBatch2Fusion_VProxyMOE_ALocalAttention]",
+      "overall_mae": 28.7441,
+      "valence_mae": 26.9964,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[135_KMeansResidualExpert]__A[134_LocalSelfAttentionSmoother]",
+      "overall_mae": 28.7441,
+      "valence_mae": 26.9964,
+      "arousal_mae": 30.4917,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    },
+    {
+      "method": "146_DimwiseBatch2_V[134_LocalSelfAttentionSmoother]__A[098_PatternPrior]",
+      "overall_mae": 28.7442,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 126-145 distinct architecture batch."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "128_HampelMedianFilter",
+          "overall_mae": 25.9657,
+          "valence_mae": 24.7118,
+          "arousal_mae": 27.2196,
+          "overall_mse": 1230.4279,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 25.9658,
+          "valence_mae": 24.7115,
+          "arousal_mae": 27.2201,
+          "overall_mse": 1230.5465,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "133_AnchoredGraphSmoother",
+          "overall_mae": 25.967,
+          "valence_mae": 24.7164,
+          "arousal_mae": 27.2175,
+          "overall_mse": 1229.6395,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "129_TotalVariationDenoiser",
+          "overall_mae": 25.9689,
+          "valence_mae": 24.7227,
+          "arousal_mae": 27.2151,
+          "overall_mse": 1228.6628,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+          "overall_mae": 25.97,
+          "valence_mae": 24.7145,
+          "arousal_mae": 27.2254,
+          "overall_mse": 1229.103,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "126_LocalLinearLOESS",
+          "overall_mae": 25.9711,
+          "valence_mae": 24.7299,
+          "arousal_mae": 27.2123,
+          "overall_mse": 1227.4808,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "134_LocalSelfAttentionSmoother",
+          "overall_mae": 25.9769,
+          "valence_mae": 24.7283,
+          "arousal_mae": 27.2254,
+          "overall_mse": 1228.7823,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "140_IsotonicCalibration",
+          "overall_mae": 25.9817,
+          "valence_mae": 24.7869,
+          "arousal_mae": 27.1765,
+          "overall_mse": 1219.8528,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "127_GaussianTimeKernelSmoother",
+          "overall_mae": 25.9873,
+          "valence_mae": 24.7571,
+          "arousal_mae": 27.2175,
+          "overall_mse": 1227.3478,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "131_PiecewiseKnotProjection",
+          "overall_mae": 25.9884,
+          "valence_mae": 24.7554,
+          "arousal_mae": 27.2213,
+          "overall_mse": 1222.9829,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "130_HaarWaveletShrinkage",
+          "overall_mae": 26.0023,
+          "valence_mae": 24.7608,
+          "arousal_mae": 27.2438,
+          "overall_mse": 1228.203,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 26.0057,
+          "valence_mae": 24.7352,
+          "arousal_mae": 27.2763,
+          "overall_mse": 1231.0183,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "132_HMMViterbiDecoder",
+          "overall_mae": 26.0562,
+          "valence_mae": 24.9683,
+          "arousal_mae": 27.1441,
+          "overall_mse": 1236.5983,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "143_GradientBoostedResidual",
+          "overall_mae": 26.0698,
+          "valence_mae": 24.7637,
+          "arousal_mae": 27.3758,
+          "overall_mse": 1238.2286,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "145_HeterogeneousRuleMOE",
+          "overall_mae": 26.072,
+          "valence_mae": 24.7262,
+          "arousal_mae": 27.4178,
+          "overall_mse": 1239.1338,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "138_PCALatentResidual",
+          "overall_mae": 26.0752,
+          "valence_mae": 24.7871,
+          "arousal_mae": 27.3633,
+          "overall_mse": 1234.579,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "136_GMMResidualExpert",
+          "overall_mae": 26.0768,
+          "valence_mae": 24.7656,
+          "arousal_mae": 27.3879,
+          "overall_mse": 1235.9747,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "137_RFFKernelResidual",
+          "overall_mae": 26.0805,
+          "valence_mae": 24.768,
+          "arousal_mae": 27.393,
+          "overall_mse": 1234.5914,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "142_MLPResidualArchitecture",
+          "overall_mae": 26.0893,
+          "valence_mae": 24.7684,
+          "arousal_mae": 27.4102,
+          "overall_mse": 1236.4531,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "135_KMeansResidualExpert",
+          "overall_mae": 26.0962,
+          "valence_mae": 24.7868,
+          "arousal_mae": 27.4056,
+          "overall_mse": 1235.6412,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "141_HuberResidualCalibration",
+          "overall_mae": 26.1018,
+          "valence_mae": 24.7699,
+          "arousal_mae": 27.4338,
+          "overall_mse": 1238.4371,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "144_LinearStackingArchitecture",
+          "overall_mae": 26.1246,
+          "valence_mae": 24.8259,
+          "arousal_mae": 27.4233,
+          "overall_mse": 1231.7201,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "139_QuantileDistributionCalibration",
+          "overall_mae": 26.2162,
+          "valence_mae": 24.6462,
+          "arousal_mae": 27.7863,
+          "overall_mse": 1265.4979,
+          "notes": "Batch 126-145 distinct architecture."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "139_QuantileDistributionCalibration",
+          "overall_mae": 37.0904,
+          "valence_mae": 33.2236,
+          "arousal_mae": 40.9572,
+          "overall_mse": 2482.6858,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "145_HeterogeneousRuleMOE",
+          "overall_mae": 37.3049,
+          "valence_mae": 33.2806,
+          "arousal_mae": 41.3292,
+          "overall_mse": 2475.9819,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "132_HMMViterbiDecoder",
+          "overall_mae": 37.3103,
+          "valence_mae": 33.1515,
+          "arousal_mae": 41.469,
+          "overall_mse": 2463.0452,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 37.3555,
+          "valence_mae": 33.2646,
+          "arousal_mae": 41.4464,
+          "overall_mse": 2471.5911,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "137_RFFKernelResidual",
+          "overall_mae": 37.3728,
+          "valence_mae": 33.2673,
+          "arousal_mae": 41.4784,
+          "overall_mse": 2467.7212,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "135_KMeansResidualExpert",
+          "overall_mae": 37.3812,
+          "valence_mae": 33.2813,
+          "arousal_mae": 41.4812,
+          "overall_mse": 2468.0952,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "141_HuberResidualCalibration",
+          "overall_mae": 37.3859,
+          "valence_mae": 33.277,
+          "arousal_mae": 41.4948,
+          "overall_mse": 2470.8213,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 37.3875,
+          "valence_mae": 33.2674,
+          "arousal_mae": 41.5077,
+          "overall_mse": 2475.6121,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "128_HampelMedianFilter",
+          "overall_mae": 37.3878,
+          "valence_mae": 33.267,
+          "arousal_mae": 41.5087,
+          "overall_mse": 2475.4905,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "133_AnchoredGraphSmoother",
+          "overall_mae": 37.3892,
+          "valence_mae": 33.2705,
+          "arousal_mae": 41.5078,
+          "overall_mse": 2474.906,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+          "overall_mae": 37.3899,
+          "valence_mae": 33.271,
+          "arousal_mae": 41.5088,
+          "overall_mse": 2474.3542,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "129_TotalVariationDenoiser",
+          "overall_mae": 37.3917,
+          "valence_mae": 33.275,
+          "arousal_mae": 41.5084,
+          "overall_mse": 2474.1746,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "143_GradientBoostedResidual",
+          "overall_mae": 37.3927,
+          "valence_mae": 33.2719,
+          "arousal_mae": 41.5134,
+          "overall_mse": 2472.7188,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "140_IsotonicCalibration",
+          "overall_mae": 37.3939,
+          "valence_mae": 33.1882,
+          "arousal_mae": 41.5997,
+          "overall_mse": 2466.2124,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "126_LocalLinearLOESS",
+          "overall_mae": 37.3952,
+          "valence_mae": 33.2808,
+          "arousal_mae": 41.5096,
+          "overall_mse": 2473.3789,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "144_LinearStackingArchitecture",
+          "overall_mae": 37.3954,
+          "valence_mae": 33.2809,
+          "arousal_mae": 41.5099,
+          "overall_mse": 2463.7507,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "138_PCALatentResidual",
+          "overall_mae": 37.3966,
+          "valence_mae": 33.2903,
+          "arousal_mae": 41.5029,
+          "overall_mse": 2468.6692,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "136_GMMResidualExpert",
+          "overall_mae": 37.3968,
+          "valence_mae": 33.2879,
+          "arousal_mae": 41.5057,
+          "overall_mse": 2471.3843,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "142_MLPResidualArchitecture",
+          "overall_mae": 37.3968,
+          "valence_mae": 33.27,
+          "arousal_mae": 41.5236,
+          "overall_mse": 2468.1956,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "134_LocalSelfAttentionSmoother",
+          "overall_mae": 37.397,
+          "valence_mae": 33.2852,
+          "arousal_mae": 41.5088,
+          "overall_mse": 2474.1277,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "127_GaussianTimeKernelSmoother",
+          "overall_mae": 37.4021,
+          "valence_mae": 33.2918,
+          "arousal_mae": 41.5124,
+          "overall_mse": 2473.1201,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "131_PiecewiseKnotProjection",
+          "overall_mae": 37.4128,
+          "valence_mae": 33.2593,
+          "arousal_mae": 41.5662,
+          "overall_mse": 2469.5332,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "130_HaarWaveletShrinkage",
+          "overall_mae": 37.4199,
+          "valence_mae": 33.3063,
+          "arousal_mae": 41.5335,
+          "overall_mse": 2473.6904,
+          "notes": "Batch 126-145 distinct architecture."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "143_GradientBoostedResidual",
+          "overall_mae": 27.1743,
+          "valence_mae": 24.2589,
+          "arousal_mae": 30.0897,
+          "overall_mse": 1328.0482,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "141_HuberResidualCalibration",
+          "overall_mae": 27.1908,
+          "valence_mae": 24.2614,
+          "arousal_mae": 30.1203,
+          "overall_mse": 1326.1317,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "139_QuantileDistributionCalibration",
+          "overall_mae": 27.198,
+          "valence_mae": 24.1524,
+          "arousal_mae": 30.2437,
+          "overall_mse": 1333.8937,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.2013,
+          "valence_mae": 24.2411,
+          "arousal_mae": 30.1615,
+          "overall_mse": 1329.5614,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "137_RFFKernelResidual",
+          "overall_mae": 27.2062,
+          "valence_mae": 24.2734,
+          "arousal_mae": 30.139,
+          "overall_mse": 1326.0269,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "136_GMMResidualExpert",
+          "overall_mae": 27.2064,
+          "valence_mae": 24.2815,
+          "arousal_mae": 30.1313,
+          "overall_mse": 1327.4562,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+          "overall_mae": 27.2081,
+          "valence_mae": 24.2481,
+          "arousal_mae": 30.1681,
+          "overall_mse": 1330.4961,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 27.2084,
+          "valence_mae": 24.2435,
+          "arousal_mae": 30.1732,
+          "overall_mse": 1331.9905,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "128_HampelMedianFilter",
+          "overall_mae": 27.2096,
+          "valence_mae": 24.2458,
+          "arousal_mae": 30.1733,
+          "overall_mse": 1332.0057,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "133_AnchoredGraphSmoother",
+          "overall_mae": 27.2127,
+          "valence_mae": 24.2518,
+          "arousal_mae": 30.1736,
+          "overall_mse": 1331.5209,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "134_LocalSelfAttentionSmoother",
+          "overall_mae": 27.2129,
+          "valence_mae": 24.2577,
+          "arousal_mae": 30.1681,
+          "overall_mse": 1330.1476,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "135_KMeansResidualExpert",
+          "overall_mae": 27.2168,
+          "valence_mae": 24.2927,
+          "arousal_mae": 30.1409,
+          "overall_mse": 1326.2472,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "129_TotalVariationDenoiser",
+          "overall_mae": 27.2176,
+          "valence_mae": 24.2604,
+          "arousal_mae": 30.1748,
+          "overall_mse": 1331.0388,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "142_MLPResidualArchitecture",
+          "overall_mae": 27.2221,
+          "valence_mae": 24.3062,
+          "arousal_mae": 30.1381,
+          "overall_mse": 1327.1591,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "126_LocalLinearLOESS",
+          "overall_mae": 27.2233,
+          "valence_mae": 24.27,
+          "arousal_mae": 30.1765,
+          "overall_mse": 1330.5042,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "138_PCALatentResidual",
+          "overall_mae": 27.2266,
+          "valence_mae": 24.3022,
+          "arousal_mae": 30.1511,
+          "overall_mse": 1328.6515,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "131_PiecewiseKnotProjection",
+          "overall_mae": 27.2269,
+          "valence_mae": 24.2755,
+          "arousal_mae": 30.1784,
+          "overall_mse": 1327.4877,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "127_GaussianTimeKernelSmoother",
+          "overall_mae": 27.2329,
+          "valence_mae": 24.2849,
+          "arousal_mae": 30.1809,
+          "overall_mse": 1330.0267,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "130_HaarWaveletShrinkage",
+          "overall_mae": 27.254,
+          "valence_mae": 24.3002,
+          "arousal_mae": 30.2077,
+          "overall_mse": 1331.6903,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "145_HeterogeneousRuleMOE",
+          "overall_mae": 27.2684,
+          "valence_mae": 24.2415,
+          "arousal_mae": 30.2953,
+          "overall_mse": 1330.5433,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "144_LinearStackingArchitecture",
+          "overall_mae": 27.2788,
+          "valence_mae": 24.3179,
+          "arousal_mae": 30.2397,
+          "overall_mse": 1326.8092,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "132_HMMViterbiDecoder",
+          "overall_mae": 27.2887,
+          "valence_mae": 24.2808,
+          "arousal_mae": 30.2966,
+          "overall_mse": 1332.9061,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "140_IsotonicCalibration",
+          "overall_mae": 27.2956,
+          "valence_mae": 24.3186,
+          "arousal_mae": 30.2725,
+          "overall_mse": 1330.5944,
+          "notes": "Batch 126-145 distinct architecture."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "140_IsotonicCalibration",
+          "overall_mae": 28.4615,
+          "valence_mae": 28.6078,
+          "arousal_mae": 28.3152,
+          "overall_mse": 1777.2076,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "131_PiecewiseKnotProjection",
+          "overall_mae": 28.4989,
+          "valence_mae": 28.6448,
+          "arousal_mae": 28.353,
+          "overall_mse": 1782.8883,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "144_LinearStackingArchitecture",
+          "overall_mae": 28.5288,
+          "valence_mae": 28.6285,
+          "arousal_mae": 28.4292,
+          "overall_mse": 1778.9424,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "138_PCALatentResidual",
+          "overall_mae": 28.5343,
+          "valence_mae": 28.6256,
+          "arousal_mae": 28.4429,
+          "overall_mse": 1783.7428,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "137_RFFKernelResidual",
+          "overall_mae": 28.5391,
+          "valence_mae": 28.6372,
+          "arousal_mae": 28.4409,
+          "overall_mse": 1784.6611,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "135_KMeansResidualExpert",
+          "overall_mae": 28.546,
+          "valence_mae": 28.6369,
+          "arousal_mae": 28.4552,
+          "overall_mse": 1784.8712,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "136_GMMResidualExpert",
+          "overall_mae": 28.5597,
+          "valence_mae": 28.6481,
+          "arousal_mae": 28.4713,
+          "overall_mse": 1786.9457,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "142_MLPResidualArchitecture",
+          "overall_mae": 28.5638,
+          "valence_mae": 28.6643,
+          "arousal_mae": 28.4633,
+          "overall_mse": 1787.2582,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "134_LocalSelfAttentionSmoother",
+          "overall_mae": 28.5662,
+          "valence_mae": 28.7331,
+          "arousal_mae": 28.3993,
+          "overall_mse": 1793.817,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "126_LocalLinearLOESS",
+          "overall_mae": 28.5679,
+          "valence_mae": 28.731,
+          "arousal_mae": 28.4047,
+          "overall_mse": 1792.5908,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+          "overall_mae": 28.5705,
+          "valence_mae": 28.7416,
+          "arousal_mae": 28.3993,
+          "overall_mse": 1794.7733,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "143_GradientBoostedResidual",
+          "overall_mae": 28.5723,
+          "valence_mae": 28.6731,
+          "arousal_mae": 28.4715,
+          "overall_mse": 1791.7427,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "130_HaarWaveletShrinkage",
+          "overall_mae": 28.5728,
+          "valence_mae": 28.7248,
+          "arousal_mae": 28.4209,
+          "overall_mse": 1791.7744,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "129_TotalVariationDenoiser",
+          "overall_mae": 28.5749,
+          "valence_mae": 28.7385,
+          "arousal_mae": 28.4113,
+          "overall_mse": 1794.1654,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "127_GaussianTimeKernelSmoother",
+          "overall_mae": 28.5754,
+          "valence_mae": 28.7416,
+          "arousal_mae": 28.4093,
+          "overall_mse": 1792.1471,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 28.5768,
+          "valence_mae": 28.7066,
+          "arousal_mae": 28.4471,
+          "overall_mse": 1795.377,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "133_AnchoredGraphSmoother",
+          "overall_mae": 28.579,
+          "valence_mae": 28.7421,
+          "arousal_mae": 28.4159,
+          "overall_mse": 1795.4762,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "128_HampelMedianFilter",
+          "overall_mae": 28.5799,
+          "valence_mae": 28.7418,
+          "arousal_mae": 28.418,
+          "overall_mse": 1796.396,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 28.5828,
+          "valence_mae": 28.7452,
+          "arousal_mae": 28.4203,
+          "overall_mse": 1796.6793,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "141_HuberResidualCalibration",
+          "overall_mae": 28.5874,
+          "valence_mae": 28.6927,
+          "arousal_mae": 28.4821,
+          "overall_mse": 1791.3105,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "145_HeterogeneousRuleMOE",
+          "overall_mae": 28.6602,
+          "valence_mae": 28.7354,
+          "arousal_mae": 28.585,
+          "overall_mse": 1807.6216,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "132_HMMViterbiDecoder",
+          "overall_mae": 28.8906,
+          "valence_mae": 29.2508,
+          "arousal_mae": 28.5305,
+          "overall_mse": 1829.6678,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "139_QuantileDistributionCalibration",
+          "overall_mae": 29.1183,
+          "valence_mae": 29.2071,
+          "arousal_mae": 29.0294,
+          "overall_mse": 1856.8604,
+          "notes": "Batch 126-145 distinct architecture."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.9982,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "128_HampelMedianFilter",
+          "overall_mae": 25.9604,
+          "valence_mae": 24.5504,
+          "arousal_mae": 27.3705,
+          "overall_mse": 1296.4915,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+          "overall_mae": 25.9618,
+          "valence_mae": 24.5546,
+          "arousal_mae": 27.3691,
+          "overall_mse": 1295.3696,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 25.962,
+          "valence_mae": 24.5534,
+          "arousal_mae": 27.3705,
+          "overall_mse": 1296.6748,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "143_GradientBoostedResidual",
+          "overall_mae": 25.9633,
+          "valence_mae": 24.5442,
+          "arousal_mae": 27.3823,
+          "overall_mse": 1296.5968,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "133_AnchoredGraphSmoother",
+          "overall_mae": 25.9634,
+          "valence_mae": 24.555,
+          "arousal_mae": 27.3717,
+          "overall_mse": 1296.0494,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "134_LocalSelfAttentionSmoother",
+          "overall_mae": 25.9652,
+          "valence_mae": 24.5613,
+          "arousal_mae": 27.3691,
+          "overall_mse": 1295.0017,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 25.9666,
+          "valence_mae": 24.5489,
+          "arousal_mae": 27.3843,
+          "overall_mse": 1294.772,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "129_TotalVariationDenoiser",
+          "overall_mae": 25.9667,
+          "valence_mae": 24.5595,
+          "arousal_mae": 27.3739,
+          "overall_mse": 1295.4174,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "138_PCALatentResidual",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5642,
+          "arousal_mae": 27.3724,
+          "overall_mse": 1292.9508,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "126_LocalLinearLOESS",
+          "overall_mae": 25.9699,
+          "valence_mae": 24.5617,
+          "arousal_mae": 27.3781,
+          "overall_mse": 1294.6486,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "135_KMeansResidualExpert",
+          "overall_mae": 25.9758,
+          "valence_mae": 24.5648,
+          "arousal_mae": 27.3868,
+          "overall_mse": 1292.9764,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "127_GaussianTimeKernelSmoother",
+          "overall_mae": 25.9778,
+          "valence_mae": 24.5773,
+          "arousal_mae": 27.3783,
+          "overall_mse": 1294.4125,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "142_MLPResidualArchitecture",
+          "overall_mae": 25.9781,
+          "valence_mae": 24.5481,
+          "arousal_mae": 27.4081,
+          "overall_mse": 1294.0516,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "136_GMMResidualExpert",
+          "overall_mae": 25.9784,
+          "valence_mae": 24.5522,
+          "arousal_mae": 27.4047,
+          "overall_mse": 1294.9135,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "137_RFFKernelResidual",
+          "overall_mae": 25.9867,
+          "valence_mae": 24.5673,
+          "arousal_mae": 27.4062,
+          "overall_mse": 1293.7456,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "141_HuberResidualCalibration",
+          "overall_mae": 25.9867,
+          "valence_mae": 24.5623,
+          "arousal_mae": 27.4111,
+          "overall_mse": 1295.6815,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "139_QuantileDistributionCalibration",
+          "overall_mae": 25.9969,
+          "valence_mae": 24.4598,
+          "arousal_mae": 27.534,
+          "overall_mse": 1313.1942,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "130_HaarWaveletShrinkage",
+          "overall_mae": 26.0035,
+          "valence_mae": 24.605,
+          "arousal_mae": 27.4019,
+          "overall_mse": 1294.2592,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "145_HeterogeneousRuleMOE",
+          "overall_mae": 26.0056,
+          "valence_mae": 24.5653,
+          "arousal_mae": 27.4459,
+          "overall_mse": 1301.3035,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "144_LinearStackingArchitecture",
+          "overall_mae": 26.0363,
+          "valence_mae": 24.6134,
+          "arousal_mae": 27.4591,
+          "overall_mse": 1290.7328,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "131_PiecewiseKnotProjection",
+          "overall_mae": 26.045,
+          "valence_mae": 24.6332,
+          "arousal_mae": 27.4569,
+          "overall_mse": 1294.3309,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "140_IsotonicCalibration",
+          "overall_mae": 26.0538,
+          "valence_mae": 24.6346,
+          "arousal_mae": 27.473,
+          "overall_mse": 1289.8809,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "132_HMMViterbiDecoder",
+          "overall_mae": 26.1383,
+          "valence_mae": 24.9668,
+          "arousal_mae": 27.3097,
+          "overall_mse": 1296.3569,
+          "notes": "Batch 126-145 distinct architecture."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "139_QuantileDistributionCalibration",
+          "overall_mae": 26.9802,
+          "valence_mae": 26.1479,
+          "arousal_mae": 27.8125,
+          "overall_mse": 1403.498,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "145_HeterogeneousRuleMOE",
+          "overall_mae": 27.1943,
+          "valence_mae": 26.2743,
+          "arousal_mae": 28.1144,
+          "overall_mse": 1404.8627,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "128_HampelMedianFilter",
+          "overall_mae": 27.2519,
+          "valence_mae": 26.2404,
+          "arousal_mae": 28.2634,
+          "overall_mse": 1410.7709,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 27.2525,
+          "valence_mae": 26.2427,
+          "arousal_mae": 28.2623,
+          "overall_mse": 1410.7426,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "133_AnchoredGraphSmoother",
+          "overall_mae": 27.2607,
+          "valence_mae": 26.2507,
+          "arousal_mae": 28.2707,
+          "overall_mse": 1410.1154,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "146_FixedBatch2Fusion_VProxyMOE_ALocalAttention",
+          "overall_mae": 27.2652,
+          "valence_mae": 26.2508,
+          "arousal_mae": 28.2795,
+          "overall_mse": 1409.6548,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "134_LocalSelfAttentionSmoother",
+          "overall_mae": 27.2665,
+          "valence_mae": 26.2534,
+          "arousal_mae": 28.2795,
+          "overall_mse": 1409.291,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "129_TotalVariationDenoiser",
+          "overall_mae": 27.2708,
+          "valence_mae": 26.2608,
+          "arousal_mae": 28.2808,
+          "overall_mse": 1409.4902,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "126_LocalLinearLOESS",
+          "overall_mae": 27.2827,
+          "valence_mae": 26.2713,
+          "arousal_mae": 28.2942,
+          "overall_mse": 1408.7699,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "127_GaussianTimeKernelSmoother",
+          "overall_mae": 27.2959,
+          "valence_mae": 26.2932,
+          "arousal_mae": 28.2986,
+          "overall_mse": 1408.4186,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.2981,
+          "valence_mae": 26.3188,
+          "arousal_mae": 28.2775,
+          "overall_mse": 1410.812,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "143_GradientBoostedResidual",
+          "overall_mae": 27.3081,
+          "valence_mae": 26.3399,
+          "arousal_mae": 28.2763,
+          "overall_mse": 1414.0411,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "130_HaarWaveletShrinkage",
+          "overall_mae": 27.3258,
+          "valence_mae": 26.3335,
+          "arousal_mae": 28.3181,
+          "overall_mse": 1410.6398,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "141_HuberResidualCalibration",
+          "overall_mae": 27.3496,
+          "valence_mae": 26.3842,
+          "arousal_mae": 28.3149,
+          "overall_mse": 1413.9908,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "136_GMMResidualExpert",
+          "overall_mae": 27.3596,
+          "valence_mae": 26.3798,
+          "arousal_mae": 28.3395,
+          "overall_mse": 1416.4515,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "142_MLPResidualArchitecture",
+          "overall_mae": 27.3631,
+          "valence_mae": 26.4124,
+          "arousal_mae": 28.3138,
+          "overall_mse": 1414.0771,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "131_PiecewiseKnotProjection",
+          "overall_mae": 27.3681,
+          "valence_mae": 26.3914,
+          "arousal_mae": 28.3448,
+          "overall_mse": 1406.7067,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "138_PCALatentResidual",
+          "overall_mae": 27.3924,
+          "valence_mae": 26.4311,
+          "arousal_mae": 28.3537,
+          "overall_mse": 1416.8163,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "135_KMeansResidualExpert",
+          "overall_mae": 27.3929,
+          "valence_mae": 26.4158,
+          "arousal_mae": 28.3701,
+          "overall_mse": 1416.5892,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "137_RFFKernelResidual",
+          "overall_mae": 27.4024,
+          "valence_mae": 26.4313,
+          "arousal_mae": 28.3735,
+          "overall_mse": 1416.8297,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "140_IsotonicCalibration",
+          "overall_mae": 27.4494,
+          "valence_mae": 26.4116,
+          "arousal_mae": 28.4871,
+          "overall_mse": 1414.4108,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "144_LinearStackingArchitecture",
+          "overall_mae": 27.483,
+          "valence_mae": 26.4969,
+          "arousal_mae": 28.469,
+          "overall_mse": 1417.0406,
+          "notes": "Batch 126-145 distinct architecture."
+        },
+        {
+          "method": "132_HMMViterbiDecoder",
+          "overall_mae": 27.4844,
+          "valence_mae": 26.4744,
+          "arousal_mae": 28.4944,
+          "overall_mse": 1419.306,
+          "notes": "Batch 126-145 distinct architecture."
+        }
+      ]
+    }
+  ]
+}

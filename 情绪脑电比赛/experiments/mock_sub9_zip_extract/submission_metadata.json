@@ -1,0 +1,31 @@
+{
+  "method": "222_BCRF_onSCRF_plus_247_AgreementOverlay_v_s0p05_c1p0",
+  "local_cv_overall_mae": 28.683,
+  "local_cv_valence_mae": 26.8882,
+  "local_cv_arousal_mae": 30.4778,
+  "overlay": {
+    "scale": 0.05,
+    "clip": 1.0,
+    "mode": "valence_only",
+    "alpha": 10000.0,
+    "eeg_weight": [
+      0.5059607028961182,
+      0.5114042162895203
+    ]
+  },
+  "artifact_rows": 1536,
+  "train_rows": 36864,
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      9
+    ]
+  },
+  "note": "Video-prior 222 is the base. EEG/fNIRS residual experts are trained from public trainval OOF residuals; inference applies a tiny valence-only agreement overlay."
+}

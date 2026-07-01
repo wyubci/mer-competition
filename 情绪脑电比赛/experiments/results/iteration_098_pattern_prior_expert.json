@@ -1,0 +1,4004 @@
+{
+  "method": "Pattern-specific prior experts",
+  "note": "A TimeMixer/Pathformer-style state expert: stable and dynamic segments, defined by prior-slope quantiles, may use different fixed confidence-fusion experts.",
+  "fold_size": 4,
+  "total_samples": 36864,
+  "state_quantiles": [
+    35.0,
+    45.0,
+    55.0,
+    65.0,
+    75.0
+  ],
+  "expert_pool": [
+    "RobustMedian_lag-2_smooth11",
+    "AltRobustMedian_lag-1_smooth9",
+    "StablePriorEnsemble_baseW0p5",
+    "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+    "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+    "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+    "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+    "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+    "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+    "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+    "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+    "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+    "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+    "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+    "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+    "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+    "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+    "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+    "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+    "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+    "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+    "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+    "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+    "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55"
+  ],
+  "missing_by_fold": [],
+  "single_results": [
+    {
+      "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+      "overall_mae": 28.7992,
+      "valence_mae": 27.0154,
+      "arousal_mae": 30.5829,
+      "overall_mse": 1593.3689,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+      "overall_mae": 28.8003,
+      "valence_mae": 27.0346,
+      "arousal_mae": 30.5659,
+      "overall_mse": 1596.8765,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+      "overall_mae": 28.8005,
+      "valence_mae": 27.0075,
+      "arousal_mae": 30.5935,
+      "overall_mse": 1600.1422,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+      "overall_mae": 28.8037,
+      "valence_mae": 26.9994,
+      "arousal_mae": 30.608,
+      "overall_mse": 1605.0779,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+      "overall_mae": 28.8039,
+      "valence_mae": 27.0022,
+      "arousal_mae": 30.6056,
+      "overall_mse": 1604.0271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+      "overall_mae": 28.8067,
+      "valence_mae": 26.9847,
+      "arousal_mae": 30.6288,
+      "overall_mse": 1601.2587,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+      "overall_mae": 28.8068,
+      "valence_mae": 26.9869,
+      "arousal_mae": 30.6267,
+      "overall_mse": 1601.3939,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+      "overall_mae": 28.8069,
+      "valence_mae": 26.9859,
+      "arousal_mae": 30.6278,
+      "overall_mse": 1601.7045,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+      "overall_mae": 28.807,
+      "valence_mae": 27.0554,
+      "arousal_mae": 30.5586,
+      "overall_mse": 1591.9551,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+      "overall_mae": 28.8075,
+      "valence_mae": 27.0327,
+      "arousal_mae": 30.5822,
+      "overall_mse": 1587.6123,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+      "overall_mae": 28.8084,
+      "valence_mae": 26.9883,
+      "arousal_mae": 30.6285,
+      "overall_mse": 1597.6036,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+      "overall_mae": 28.8086,
+      "valence_mae": 26.9997,
+      "arousal_mae": 30.6174,
+      "overall_mse": 1607.8262,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+      "overall_mae": 28.8093,
+      "valence_mae": 26.987,
+      "arousal_mae": 30.6315,
+      "overall_mse": 1604.6503,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+      "overall_mae": 28.8098,
+      "valence_mae": 27.0625,
+      "arousal_mae": 30.5571,
+      "overall_mse": 1593.4993,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+      "overall_mae": 28.8127,
+      "valence_mae": 26.9884,
+      "arousal_mae": 30.637,
+      "overall_mse": 1605.8627,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+      "overall_mae": 28.8147,
+      "valence_mae": 27.0717,
+      "arousal_mae": 30.5576,
+      "overall_mse": 1590.7604,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+      "overall_mae": 28.8155,
+      "valence_mae": 27.0757,
+      "arousal_mae": 30.5553,
+      "overall_mse": 1591.4803,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+      "overall_mae": 28.8194,
+      "valence_mae": 27.0821,
+      "arousal_mae": 30.5566,
+      "overall_mse": 1592.6167,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+      "overall_mae": 28.8229,
+      "valence_mae": 27.0907,
+      "arousal_mae": 30.5551,
+      "overall_mse": 1589.6802,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+      "overall_mae": 28.8267,
+      "valence_mae": 27.0972,
+      "arousal_mae": 30.5562,
+      "overall_mse": 1590.8789,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+      "overall_mae": 28.8338,
+      "valence_mae": 27.1117,
+      "arousal_mae": 30.5559,
+      "overall_mse": 1593.9875,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "StablePriorEnsemble_baseW0p5",
+      "overall_mae": 28.8559,
+      "valence_mae": 27.0182,
+      "arousal_mae": 30.6935,
+      "overall_mse": 1621.105,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustMedian_lag-2_smooth11",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "AltRobustMedian_lag-1_smooth9",
+      "overall_mae": 28.861,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.7052,
+      "overall_mse": 1621.8964,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "top_valence_pattern": [
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9738,
+      "mse": 1365.4872
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9749,
+      "mse": 1368.0442
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9751,
+      "mse": 1367.4004
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9757,
+      "mse": 1368.4079
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9766,
+      "mse": 1367.7417
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9774,
+      "mse": 1369.7784
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9776,
+      "mse": 1369.0939
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9778,
+      "mse": 1370.3775
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.978,
+      "mse": 1371.5636
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.978,
+      "mse": 1366.7809
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9783,
+      "mse": 1368.2987
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9784,
+      "mse": 1369.2505
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9788,
+      "mse": 1367.2171
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9791,
+      "mse": 1366.5351
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9791,
+      "mse": 1368.71
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9792,
+      "mse": 1369.6868
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9794,
+      "mse": 1370.3047
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9795,
+      "mse": 1369.9638
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9795,
+      "mse": 1369.0047
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9798,
+      "mse": 1372.7743
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9799,
+      "mse": 1372.6104
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9799,
+      "mse": 1365.456
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.98,
+      "mse": 1368.07
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9802,
+      "mse": 1369.0442
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9803,
+      "mse": 1362.1248
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9803,
+      "mse": 1374.4128
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9804,
+      "mse": 1370.4406
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9804,
+      "mse": 1370.7166
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9805,
+      "mse": 1369.8875
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9806,
+      "mse": 1371.6909
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9807,
+      "mse": 1370.4768
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9807,
+      "mse": 1372.4468
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9808,
+      "mse": 1364.9708
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9808,
+      "mse": 1374.6975
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.981,
+      "mse": 1368.5467
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.981,
+      "mse": 1371.2
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9811,
+      "mse": 1367.9937
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9811,
+      "mse": 1368.1637
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9811,
+      "mse": 1375.633
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9812,
+      "mse": 1369.521
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9812,
+      "mse": 1372.4054
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9813,
+      "mse": 1368.9679
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9814,
+      "mse": 1366.9926
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9814,
+      "mse": 1364.6818
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9815,
+      "mse": 1373.667
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9816,
+      "mse": 1364.0381
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9816,
+      "mse": 1375.9177
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9819,
+      "mse": 1364.6795
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9819,
+      "mse": 1368.6
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.982,
+      "mse": 1373.7541
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.982,
+      "mse": 1367.6066
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9822,
+      "mse": 1367.918
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9822,
+      "mse": 1365.0456
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9823,
+      "mse": 1371.823
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9823,
+      "mse": 1374.9624
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9825,
+      "mse": 1371.8603
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9825,
+      "mse": 1371.6875
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9825,
+      "mse": 1374.3186
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9825,
+      "mse": 1371.6856
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9826,
+      "mse": 1367.6423
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9826,
+      "mse": 1365.1158
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9826,
+      "mse": 1365.5277
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9827,
+      "mse": 1372.8346
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9827,
+      "mse": 1374.0369
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9828,
+      "mse": 1363.9931
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9829,
+      "mse": 1364.4338
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9829,
+      "mse": 1373.2977
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.983,
+      "mse": 1366.4418
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.983,
+      "mse": 1370.2889
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9831,
+      "mse": 1375.5633
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]",
+      "dimension": "valence",
+      "mae": 26.9831,
+      "mse": 1371.0361
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9832,
+      "mse": 1366.4628
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9832,
+      "mse": 1368.2033
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9832,
+      "mse": 1375.3262
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9833,
+      "mse": 1365.939
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9833,
+      "mse": 1372.7432
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9834,
+      "mse": 1369.0883
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9834,
+      "mse": 1373.4254
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9835,
+      "mse": 1368.119
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9835,
+      "mse": 1373.2503
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9836,
+      "mse": 1366.9649
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9836,
+      "mse": 1367.5659
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9836,
+      "mse": 1371.2977
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9836,
+      "mse": 1376.8758
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9839,
+      "mse": 1376.6727
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9839,
+      "mse": 1366.416
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.984,
+      "mse": 1366.9185
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.984,
+      "mse": 1371.4729
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9841,
+      "mse": 1365.0711
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9841,
+      "mse": 1366.3655
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-55p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9841,
+      "mse": 1368.0744
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9841,
+      "mse": 1375.9335
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9841,
+      "mse": 1362.6851
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9842,
+      "mse": 1373.4615
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9842,
+      "mse": 1376.1678
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9843,
+      "mse": 1366.0454
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9843,
+      "mse": 1373.6866
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9843,
+      "mse": 1368.6956
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9844,
+      "mse": 1374.5939
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9844,
+      "mse": 1375.3002
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9844,
+      "mse": 1378.096
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-55p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9845,
+      "mse": 1370.7209
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9846,
+      "mse": 1376.1081
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9846,
+      "mse": 1373.0045
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9846,
+      "mse": 1376.0612
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9846,
+      "mse": 1374.6564
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9846,
+      "mse": 1377.4699
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1373.8546
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1373.8546
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1376.2704
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1366.3826
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1373.8546
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[RobustMedian_lag-2_smooth11]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1376.3672
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1373.8546
+    },
+    {
+      "method": "PatternExpert_valence_q75p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9847,
+      "mse": 1373.8546
+    },
+    {
+      "method": "PatternExpert_valence_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]",
+      "dimension": "valence",
+      "mae": 26.9849,
+      "mse": 1376.7741
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.9849,
+      "mse": 1376.6966
+    },
+    {
+      "method": "PatternExpert_valence_q65p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.9849,
+      "mse": 1373.211
+    },
+    {
+      "method": "PatternExpert_valence_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]",
+      "dimension": "valence",
+      "mae": 26.985,
+      "mse": 1373.9169
+    },
+    {
+      "method": "PatternExpert_valence_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]",
+      "dimension": "valence",
+      "mae": 26.985,
+      "mse": 1372.7482
+    }
+  ],
+  "top_arousal_pattern": [
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5186,
+      "mse": 1816.007
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5194,
+      "mse": 1809.6151
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5199,
+      "mse": 1813.4725
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5208,
+      "mse": 1809.9119
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5209,
+      "mse": 1816.5696
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5212,
+      "mse": 1816.5699
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5221,
+      "mse": 1810.4879
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5225,
+      "mse": 1814.0353
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5228,
+      "mse": 1810.5689
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5229,
+      "mse": 1808.4003
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5229,
+      "mse": 1809.288
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5235,
+      "mse": 1810.7847
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5235,
+      "mse": 1817.1324
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.524,
+      "mse": 1815.4178
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5242,
+      "mse": 1815.2502
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5243,
+      "mse": 1815.6529
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5247,
+      "mse": 1811.9894
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.525,
+      "mse": 1809.3001
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.525,
+      "mse": 1809.4149
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5253,
+      "mse": 1811.5514
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5253,
+      "mse": 1817.4334
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5254,
+      "mse": 1810.0744
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5255,
+      "mse": 1811.4417
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5256,
+      "mse": 1809.2731
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5256,
+      "mse": 1810.1607
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5259,
+      "mse": 1817.7225
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5261,
+      "mse": 1812.2862
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5266,
+      "mse": 1813.1826
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5266,
+      "mse": 1814.8987
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5266,
+      "mse": 1815.9805
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5267,
+      "mse": 1811.8482
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5268,
+      "mse": 1815.813
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5269,
+      "mse": 1816.2157
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.527,
+      "mse": 1818.0107
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5272,
+      "mse": 1815.1879
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5274,
+      "mse": 1812.8194
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5274,
+      "mse": 1812.6572
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5274,
+      "mse": 1818.1159
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5276,
+      "mse": 1817.9958
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5277,
+      "mse": 1810.3485
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5277,
+      "mse": 1810.1729
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5277,
+      "mse": 1810.2876
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5281,
+      "mse": 1810.9472
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5281,
+      "mse": 1812.9432
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5281,
+      "mse": 1813.5542
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5282,
+      "mse": 1810.7746
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5282,
+      "mse": 1818.2851
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5283,
+      "mse": 1811.6623
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5283,
+      "mse": 1811.345
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5283,
+      "mse": 1815.476
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5284,
+      "mse": 1818.2572
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5287,
+      "mse": 1812.5053
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5288,
+      "mse": 1813.1162
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5288,
+      "mse": 1812.954
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5289,
+      "mse": 1810.3368
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5289,
+      "mse": 1811.2243
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5289,
+      "mse": 1813.9059
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5293,
+      "mse": 1817.1267
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5293,
+      "mse": 1818.5732
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5296,
+      "mse": 1815.7226
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.53,
+      "mse": 1818.6787
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5303,
+      "mse": 1811.6743
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5303,
+      "mse": 1811.7892
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5304,
+      "mse": 1811.2214
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5304,
+      "mse": 1814.2773
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.5305,
+      "mse": 1813.5004
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5305,
+      "mse": 1813.5104
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5306,
+      "mse": 1818.8198
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5307,
+      "mse": 1812.0682
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5307,
+      "mse": 1816.844
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5308,
+      "mse": 1812.4487
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5308,
+      "mse": 1812.688
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1811.2364
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1811.3512
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1813.7732
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1813.6109
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1812.5497
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1817.3705
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1816.6765
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5309,
+      "mse": 1817.0792
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.531,
+      "mse": 1811.6047
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.531,
+      "mse": 1811.4424
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.531,
+      "mse": 1812.4924
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.531,
+      "mse": 1812.3301
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5311,
+      "mse": 1812.8224
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5312,
+      "mse": 1817.1332
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5314,
+      "mse": 1812.0107
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5314,
+      "mse": 1816.9656
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.5315,
+      "mse": 1814.5586
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5315,
+      "mse": 1817.3685
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.5317,
+      "mse": 1818.9253
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.5319,
+      "mse": 1813.7971
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5319,
+      "mse": 1817.6894
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5322,
+      "mse": 1814.5964
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5324,
+      "mse": 1817.4215
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5325,
+      "mse": 1815.2303
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5326,
+      "mse": 1817.2538
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5327,
+      "mse": 1817.6565
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5328,
+      "mse": 1814.8652
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.5329,
+      "mse": 1814.8554
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.533,
+      "mse": 1812.5044
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.533,
+      "mse": 1812.3421
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.533,
+      "mse": 1812.6192
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.533,
+      "mse": 1812.457
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.533,
+      "mse": 1816.3907
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5331,
+      "mse": 1812.7229
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5331,
+      "mse": 1814.0731
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5332,
+      "mse": 1813.4112
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5332,
+      "mse": 1811.5291
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5333,
+      "mse": 1813.2729
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5335,
+      "mse": 1813.2788
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5335,
+      "mse": 1813.1165
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5335,
+      "mse": 1809.3358
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5335,
+      "mse": 1813.5457
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5335,
+      "mse": 1817.9334
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5336,
+      "mse": 1811.3214
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5337,
+      "mse": 1812.2849
+    },
+    {
+      "method": "PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p5]",
+      "dimension": "arousal",
+      "mae": 30.5337,
+      "mse": 1817.668
+    },
+    {
+      "method": "PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-45p0_g0p45]",
+      "dimension": "arousal",
+      "mae": 30.5339,
+      "mse": 1814.4542
+    },
+    {
+      "method": "PatternExpert_arousal_q45p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-70p0_g0p55]",
+      "dimension": "arousal",
+      "mae": 30.5339,
+      "mse": 1815.7379
+    }
+  ],
+  "dimwise_results": [
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7466,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1587.5512,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7467,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.0256,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7469,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1589.4799,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7469,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1591.7037,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7471,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.2074,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7472,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.8297,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7473,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1587.6996,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7473,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.5077,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7474,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1591.0284,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7474,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.7584,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7475,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1591.0285,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7475,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.4365,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7476,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.0115,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7476,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1591.8744,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7478,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1588.9781,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7478,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.9402,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7479,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5221,
+      "overall_mse": 1587.9876,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7479,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1592.3069,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.748,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1592.307,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.748,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1588.6562,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.748,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1591.985,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.748,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.6784,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.748,
+      "valence_mae": 26.9774,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.8927,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7481,
+      "valence_mae": 26.9776,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.5505,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5225,
+      "overall_mse": 1589.7613,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1591.9851,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1589.1599,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.6071,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9778,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1593.1923,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7483,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5228,
+      "overall_mse": 1588.028,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7483,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1592.4887,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7483,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1593.7853,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7483,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1591.394,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7484,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1586.9437,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7484,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1587.3876,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7484,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1592.4889,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7484,
+      "valence_mae": 26.9774,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.6968,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7484,
+      "valence_mae": 26.9783,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.1528,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7485,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5221,
+      "overall_mse": 1589.2661,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7485,
+      "valence_mae": 26.9776,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.3545,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7485,
+      "valence_mae": 26.9784,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.6288,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7486,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1588.1359,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7486,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1591.3098,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7486,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5221,
+      "overall_mse": 1588.9442,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7486,
+      "valence_mae": 26.9774,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1591.6255,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7486,
+      "valence_mae": 26.9778,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.9963,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7487,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5225,
+      "overall_mse": 1591.0397,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7487,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1588.8268,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7487,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1590.5893,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7487,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.198,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7487,
+      "valence_mae": 26.9788,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1591.6121,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7488,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5225,
+      "overall_mse": 1590.7178,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7488,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1592.1557,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7488,
+      "valence_mae": 26.9776,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1591.2832,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7488,
+      "valence_mae": 26.9778,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1591.925,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7488,
+      "valence_mae": 26.9791,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1591.2711,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7488,
+      "valence_mae": 26.9791,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.3585,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.524,
+      "overall_mse": 1590.4525,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5228,
+      "overall_mse": 1589.3066,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1588.2223,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1588.6661,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5221,
+      "overall_mse": 1589.4479,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1592.1558,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9783,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.9569,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9784,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.4328,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7489,
+      "valence_mae": 26.9792,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.8469,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5242,
+      "overall_mse": 1590.3687,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5228,
+      "overall_mse": 1588.9846,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1587.9003,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1588.3442,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1592.5181,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.1267,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.749,
+      "valence_mae": 26.9794,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1593.1559,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5243,
+      "overall_mse": 1590.5701,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5225,
+      "overall_mse": 1591.2216,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9774,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1589.8452,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9783,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.8856,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9788,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.4161,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9795,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.9854,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7491,
+      "valence_mae": 26.9795,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.5059,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p5]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5247,
+      "overall_mse": 1588.7383,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1589.4144,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1592.5883,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth43_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5228,
+      "overall_mse": 1589.4884,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9774,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1593.174,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9776,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1589.5029,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9776,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1592.8318,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9784,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1591.3615,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9791,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1588.0751,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9791,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.1626,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9798,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1594.3907,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9799,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1594.3087,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7492,
+      "valence_mae": 26.9799,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7315,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1589.0925,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1592.2664,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1588.4041,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9757,
+      "arousal_mae": 30.5229,
+      "overall_mse": 1588.8479,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5221,
+      "overall_mse": 1589.1148,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9774,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1593.1741,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9778,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1590.1447,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9778,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1593.4736,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9788,
+      "arousal_mae": 30.5199,
+      "overall_mse": 1590.3448,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.9792,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.6509,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7493,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.0385,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.525,
+      "overall_mse": 1587.3936,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.525,
+      "overall_mse": 1587.4511,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.9776,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1592.8319,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1590.7378,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5208,
+      "overall_mse": 1588.3464,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p25]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.9794,
+      "arousal_mae": 30.5194,
+      "overall_mse": 1589.9599,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q35p0_S[UncertaintyBlend_meanPrior_q20p0-45p0_g0p35]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7494,
+      "valence_mae": 26.9802,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1592.5256,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q35p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5253,
+      "overall_mse": 1588.5193,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-50p0_g0p5]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5253,
+      "overall_mse": 1591.4603,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.524,
+      "overall_mse": 1591.731,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9749,
+      "arousal_mae": 30.5242,
+      "overall_mse": 1591.6472,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q65p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-50p0_g0p35]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9751,
+      "arousal_mae": 30.524,
+      "overall_mse": 1591.4091,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p45]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth61_q15p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9766,
+      "arousal_mae": 30.5225,
+      "overall_mse": 1590.8885,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q55p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p5]_D[UncertaintyBlend_meanPrior_q20p0-60p0_g0p55]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.9778,
+      "arousal_mae": 30.5212,
+      "overall_mse": 1593.4737,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    },
+    {
+      "method": "PatternDimwise_V[PatternExpert_valence_q45p0_S[UncertaintyBlend_meanPrior_q15p0-45p0_g0p25]_D[UncertaintyBlend_smooth51_q15p0-45p0_g0p35]]__A[PatternExpert_arousal_q55p0_S[UncertaintyBlend_smooth51_q20p0-45p0_g0p45]_D[UncertaintyBlend_meanPrior_q20p0-55p0_g0p55]]",
+      "overall_mae": 28.7495,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5209,
+      "overall_mse": 1594.0666,
+      "notes": "Metric-composed pattern-specific dimwise prior experts."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "expert_pool_size": 24,
+      "single_results": [
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+          "overall_mae": 25.9206,
+          "valence_mae": 24.7103,
+          "arousal_mae": 27.1309,
+          "overall_mse": 1220.5402,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+          "overall_mae": 25.9355,
+          "valence_mae": 24.6974,
+          "arousal_mae": 27.1737,
+          "overall_mse": 1222.906,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+          "overall_mae": 25.9409,
+          "valence_mae": 24.6671,
+          "arousal_mae": 27.2147,
+          "overall_mse": 1219.428,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+          "overall_mae": 25.9411,
+          "valence_mae": 24.7257,
+          "arousal_mae": 27.1566,
+          "overall_mse": 1223.0897,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+          "overall_mae": 25.9472,
+          "valence_mae": 24.7089,
+          "arousal_mae": 27.1855,
+          "overall_mse": 1224.458,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+          "overall_mae": 25.9505,
+          "valence_mae": 24.6893,
+          "arousal_mae": 27.2117,
+          "overall_mse": 1225.1226,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+          "overall_mae": 25.9663,
+          "valence_mae": 24.7235,
+          "arousal_mae": 27.2092,
+          "overall_mse": 1226.8325,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+          "overall_mae": 25.9761,
+          "valence_mae": 24.7088,
+          "arousal_mae": 27.2434,
+          "overall_mse": 1228.6366,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+          "overall_mae": 25.9875,
+          "valence_mae": 24.7616,
+          "arousal_mae": 27.2133,
+          "overall_mse": 1229.1654,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+          "overall_mae": 26.0089,
+          "valence_mae": 24.6764,
+          "arousal_mae": 27.3415,
+          "overall_mse": 1230.272,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+          "overall_mae": 26.0182,
+          "valence_mae": 24.696,
+          "arousal_mae": 27.3403,
+          "overall_mse": 1234.8875,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+          "overall_mae": 26.0847,
+          "valence_mae": 24.6921,
+          "arousal_mae": 27.4773,
+          "overall_mse": 1242.3533,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+          "overall_mae": 26.2211,
+          "valence_mae": 24.8169,
+          "arousal_mae": 27.6253,
+          "overall_mse": 1255.4794,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+          "overall_mae": 26.2271,
+          "valence_mae": 24.8086,
+          "arousal_mae": 27.6455,
+          "overall_mse": 1256.9539,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+          "overall_mae": 26.2346,
+          "valence_mae": 24.787,
+          "arousal_mae": 27.6822,
+          "overall_mse": 1260.5016,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+          "overall_mae": 26.2507,
+          "valence_mae": 24.8102,
+          "arousal_mae": 27.6912,
+          "overall_mse": 1253.995,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+          "overall_mae": 26.2551,
+          "valence_mae": 24.8482,
+          "arousal_mae": 27.662,
+          "overall_mse": 1249.4531,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+          "overall_mae": 26.258,
+          "valence_mae": 24.821,
+          "arousal_mae": 27.6949,
+          "overall_mse": 1254.3246,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+          "overall_mae": 26.2584,
+          "valence_mae": 24.7927,
+          "arousal_mae": 27.724,
+          "overall_mse": 1257.942,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+          "overall_mae": 26.2602,
+          "valence_mae": 24.8207,
+          "arousal_mae": 27.6996,
+          "overall_mse": 1253.9298,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+          "overall_mae": 26.2693,
+          "valence_mae": 24.7962,
+          "arousal_mae": 27.7424,
+          "overall_mse": 1259.4695,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "RobustMedian_lag-2_smooth11",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "StablePriorEnsemble_baseW0p5",
+          "overall_mae": 26.3831,
+          "valence_mae": 24.781,
+          "arousal_mae": 27.9853,
+          "overall_mse": 1280.9152,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "AltRobustMedian_lag-1_smooth9",
+          "overall_mae": 26.45,
+          "valence_mae": 24.8168,
+          "arousal_mae": 28.0832,
+          "overall_mse": 1285.1147,
+          "notes": "Pattern expert candidate pool single expert."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "expert_pool_size": 24,
+      "single_results": [
+        {
+          "method": "AltRobustMedian_lag-1_smooth9",
+          "overall_mae": 37.1941,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.3625,
+          "overall_mse": 2484.9788,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "StablePriorEnsemble_baseW0p5",
+          "overall_mae": 37.3007,
+          "valence_mae": 33.1443,
+          "arousal_mae": 41.4571,
+          "overall_mse": 2491.6074,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "RobustMedian_lag-2_smooth11",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+          "overall_mae": 37.4286,
+          "valence_mae": 33.3529,
+          "arousal_mae": 41.5043,
+          "overall_mse": 2482.6379,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+          "overall_mae": 37.441,
+          "valence_mae": 33.3943,
+          "arousal_mae": 41.4876,
+          "overall_mse": 2477.4719,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+          "overall_mae": 37.459,
+          "valence_mae": 33.4413,
+          "arousal_mae": 41.4767,
+          "overall_mse": 2473.1797,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+          "overall_mae": 37.4697,
+          "valence_mae": 33.3132,
+          "arousal_mae": 41.6261,
+          "overall_mse": 2489.762,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+          "overall_mae": 37.473,
+          "valence_mae": 33.4438,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2481.7874,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+          "overall_mae": 37.4814,
+          "valence_mae": 33.3214,
+          "arousal_mae": 41.6414,
+          "overall_mse": 2490.2197,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+          "overall_mae": 37.4999,
+          "valence_mae": 33.5044,
+          "arousal_mae": 41.4953,
+          "overall_mse": 2478.6423,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+          "overall_mae": 37.5008,
+          "valence_mae": 33.3403,
+          "arousal_mae": 41.6614,
+          "overall_mse": 2487.4717,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+          "overall_mae": 37.5066,
+          "valence_mae": 33.3445,
+          "arousal_mae": 41.6686,
+          "overall_mse": 2488.3486,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+          "overall_mae": 37.5101,
+          "valence_mae": 33.3487,
+          "arousal_mae": 41.6715,
+          "overall_mse": 2489.0544,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+          "overall_mae": 37.5126,
+          "valence_mae": 33.5108,
+          "arousal_mae": 41.5145,
+          "overall_mse": 2480.9783,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+          "overall_mae": 37.5132,
+          "valence_mae": 33.3707,
+          "arousal_mae": 41.6557,
+          "overall_mse": 2494.697,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+          "overall_mae": 37.5248,
+          "valence_mae": 33.5408,
+          "arousal_mae": 41.5088,
+          "overall_mse": 2478.8696,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+          "overall_mae": 37.5296,
+          "valence_mae": 33.5435,
+          "arousal_mae": 41.5158,
+          "overall_mse": 2479.9011,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+          "overall_mae": 37.5334,
+          "valence_mae": 33.5434,
+          "arousal_mae": 41.5234,
+          "overall_mse": 2480.9045,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+          "overall_mae": 37.5386,
+          "valence_mae": 33.3726,
+          "arousal_mae": 41.7047,
+          "overall_mse": 2486.0696,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+          "overall_mae": 37.5402,
+          "valence_mae": 33.398,
+          "arousal_mae": 41.6825,
+          "overall_mse": 2493.2551,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+          "overall_mae": 37.5484,
+          "valence_mae": 33.5775,
+          "arousal_mae": 41.5194,
+          "overall_mse": 2479.0173,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+          "overall_mae": 37.5523,
+          "valence_mae": 33.5773,
+          "arousal_mae": 41.5274,
+          "overall_mse": 2480.0842,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+          "overall_mae": 37.5598,
+          "valence_mae": 33.4191,
+          "arousal_mae": 41.7006,
+          "overall_mse": 2493.3284,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+          "overall_mae": 37.5602,
+          "valence_mae": 33.5731,
+          "arousal_mae": 41.5473,
+          "overall_mse": 2483.2461,
+          "notes": "Pattern expert candidate pool single expert."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "expert_pool_size": 24,
+      "single_results": [
+        {
+          "method": "AltRobustMedian_lag-1_smooth9",
+          "overall_mae": 26.8115,
+          "valence_mae": 23.7828,
+          "arousal_mae": 29.8402,
+          "overall_mse": 1315.0582,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "StablePriorEnsemble_baseW0p5",
+          "overall_mae": 26.891,
+          "valence_mae": 23.9165,
+          "arousal_mae": 29.8654,
+          "overall_mse": 1321.1398,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "RobustMedian_lag-2_smooth11",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+          "overall_mae": 27.0205,
+          "valence_mae": 24.1412,
+          "arousal_mae": 29.8999,
+          "overall_mse": 1322.7573,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+          "overall_mae": 27.0366,
+          "valence_mae": 24.1776,
+          "arousal_mae": 29.8957,
+          "overall_mse": 1322.1298,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+          "overall_mae": 27.0527,
+          "valence_mae": 24.1941,
+          "arousal_mae": 29.9112,
+          "overall_mse": 1322.1512,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+          "overall_mae": 27.0544,
+          "valence_mae": 24.1977,
+          "arousal_mae": 29.9111,
+          "overall_mse": 1322.705,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+          "overall_mae": 27.0588,
+          "valence_mae": 24.2254,
+          "arousal_mae": 29.892,
+          "overall_mse": 1327.4242,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+          "overall_mae": 27.0669,
+          "valence_mae": 24.2276,
+          "arousal_mae": 29.9062,
+          "overall_mse": 1321.8904,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+          "overall_mae": 27.0789,
+          "valence_mae": 24.2563,
+          "arousal_mae": 29.9015,
+          "overall_mse": 1328.3914,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+          "overall_mae": 27.0945,
+          "valence_mae": 24.2571,
+          "arousal_mae": 29.9319,
+          "overall_mse": 1322.4857,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+          "overall_mae": 27.0974,
+          "valence_mae": 24.2865,
+          "arousal_mae": 29.9083,
+          "overall_mse": 1329.1384,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+          "overall_mae": 27.1433,
+          "valence_mae": 24.2051,
+          "arousal_mae": 30.0814,
+          "overall_mse": 1329.2185,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+          "overall_mae": 27.219,
+          "valence_mae": 24.2907,
+          "arousal_mae": 30.1473,
+          "overall_mse": 1334.6514,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+          "overall_mae": 27.2321,
+          "valence_mae": 24.2863,
+          "arousal_mae": 30.178,
+          "overall_mse": 1331.1652,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+          "overall_mae": 27.305,
+          "valence_mae": 24.3919,
+          "arousal_mae": 30.2181,
+          "overall_mse": 1338.9662,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+          "overall_mae": 27.3138,
+          "valence_mae": 24.3846,
+          "arousal_mae": 30.2431,
+          "overall_mse": 1338.326,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+          "overall_mae": 27.3331,
+          "valence_mae": 24.3793,
+          "arousal_mae": 30.287,
+          "overall_mse": 1334.0342,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+          "overall_mae": 27.3447,
+          "valence_mae": 24.4392,
+          "arousal_mae": 30.2502,
+          "overall_mse": 1341.1183,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+          "overall_mae": 27.3526,
+          "valence_mae": 24.4416,
+          "arousal_mae": 30.2636,
+          "overall_mse": 1341.0956,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+          "overall_mae": 27.36,
+          "valence_mae": 24.4387,
+          "arousal_mae": 30.2814,
+          "overall_mse": 1340.9652,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+          "overall_mae": 27.3628,
+          "valence_mae": 24.4741,
+          "arousal_mae": 30.2515,
+          "overall_mse": 1342.7832,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+          "overall_mae": 27.3929,
+          "valence_mae": 24.4907,
+          "arousal_mae": 30.2951,
+          "overall_mse": 1343.3975,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+          "overall_mae": 27.4021,
+          "valence_mae": 24.4938,
+          "arousal_mae": 30.3105,
+          "overall_mse": 1343.4156,
+          "notes": "Pattern expert candidate pool single expert."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "expert_pool_size": 24,
+      "single_results": [
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+          "overall_mae": 28.4297,
+          "valence_mae": 28.52,
+          "arousal_mae": 28.3393,
+          "overall_mse": 1763.3981,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+          "overall_mae": 28.4404,
+          "valence_mae": 28.5505,
+          "arousal_mae": 28.3304,
+          "overall_mse": 1769.3073,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+          "overall_mae": 28.4588,
+          "valence_mae": 28.5672,
+          "arousal_mae": 28.3504,
+          "overall_mse": 1769.7164,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+          "overall_mae": 28.463,
+          "valence_mae": 28.5633,
+          "arousal_mae": 28.3628,
+          "overall_mse": 1767.0875,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+          "overall_mae": 28.4785,
+          "valence_mae": 28.5863,
+          "arousal_mae": 28.3708,
+          "overall_mse": 1771.7852,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+          "overall_mae": 28.4964,
+          "valence_mae": 28.6224,
+          "arousal_mae": 28.3704,
+          "overall_mse": 1776.8379,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+          "overall_mae": 28.5095,
+          "valence_mae": 28.6265,
+          "arousal_mae": 28.3924,
+          "overall_mse": 1775.1913,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+          "overall_mae": 28.5298,
+          "valence_mae": 28.6555,
+          "arousal_mae": 28.4041,
+          "overall_mse": 1780.3813,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+          "overall_mae": 28.5392,
+          "valence_mae": 28.6752,
+          "arousal_mae": 28.4033,
+          "overall_mse": 1777.1154,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+          "overall_mae": 28.567,
+          "valence_mae": 28.7159,
+          "arousal_mae": 28.4181,
+          "overall_mse": 1789.3687,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+          "overall_mae": 28.6036,
+          "valence_mae": 28.6892,
+          "arousal_mae": 28.518,
+          "overall_mse": 1805.9365,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+          "overall_mae": 28.6131,
+          "valence_mae": 28.7757,
+          "arousal_mae": 28.4506,
+          "overall_mse": 1795.3566,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+          "overall_mae": 28.7023,
+          "valence_mae": 28.8248,
+          "arousal_mae": 28.5798,
+          "overall_mse": 1817.6787,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+          "overall_mae": 28.7052,
+          "valence_mae": 28.8189,
+          "arousal_mae": 28.5915,
+          "overall_mse": 1819.084,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+          "overall_mae": 28.7061,
+          "valence_mae": 28.8939,
+          "arousal_mae": 28.5184,
+          "overall_mse": 1810.3929,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+          "overall_mae": 28.7078,
+          "valence_mae": 28.8291,
+          "arousal_mae": 28.5865,
+          "overall_mse": 1818.2504,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+          "overall_mae": 28.7204,
+          "valence_mae": 28.8458,
+          "arousal_mae": 28.595,
+          "overall_mse": 1818.92,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+          "overall_mae": 28.7399,
+          "valence_mae": 28.8681,
+          "arousal_mae": 28.6118,
+          "overall_mse": 1823.1293,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+          "overall_mae": 28.7979,
+          "valence_mae": 28.9511,
+          "arousal_mae": 28.6446,
+          "overall_mse": 1828.2906,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+          "overall_mae": 28.8107,
+          "valence_mae": 28.9705,
+          "arousal_mae": 28.6509,
+          "overall_mse": 1830.4865,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+          "overall_mae": 28.8269,
+          "valence_mae": 28.985,
+          "arousal_mae": 28.6687,
+          "overall_mse": 1832.4452,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "RobustMedian_lag-2_smooth11",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "StablePriorEnsemble_baseW0p5",
+          "overall_mae": 29.167,
+          "valence_mae": 29.4553,
+          "arousal_mae": 28.8788,
+          "overall_mse": 1873.0114,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "AltRobustMedian_lag-1_smooth9",
+          "overall_mae": 29.2216,
+          "valence_mae": 29.5452,
+          "arousal_mae": 28.8979,
+          "overall_mse": 1880.1605,
+          "notes": "Pattern expert candidate pool single expert."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "expert_pool_size": 24,
+      "single_results": [
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+          "overall_mae": 25.9908,
+          "valence_mae": 24.7397,
+          "arousal_mae": 27.2418,
+          "overall_mse": 1292.1929,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+          "overall_mae": 25.9975,
+          "valence_mae": 24.7526,
+          "arousal_mae": 27.2425,
+          "overall_mse": 1290.3724,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+          "overall_mae": 25.9995,
+          "valence_mae": 24.7276,
+          "arousal_mae": 27.2715,
+          "overall_mse": 1293.2189,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+          "overall_mae": 26.0035,
+          "valence_mae": 24.7637,
+          "arousal_mae": 27.2434,
+          "overall_mse": 1289.7051,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+          "overall_mae": 26.0044,
+          "valence_mae": 24.7372,
+          "arousal_mae": 27.2717,
+          "overall_mse": 1292.5573,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+          "overall_mae": 26.0063,
+          "valence_mae": 24.7117,
+          "arousal_mae": 27.301,
+          "overall_mse": 1295.6753,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+          "overall_mae": 26.0073,
+          "valence_mae": 24.7424,
+          "arousal_mae": 27.2721,
+          "overall_mse": 1292.2339,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+          "overall_mae": 26.0133,
+          "valence_mae": 24.725,
+          "arousal_mae": 27.3017,
+          "overall_mse": 1295.0074,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+          "overall_mae": 26.0185,
+          "valence_mae": 24.6734,
+          "arousal_mae": 27.3636,
+          "overall_mse": 1302.1063,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+          "overall_mae": 26.0406,
+          "valence_mae": 24.6884,
+          "arousal_mae": 27.3929,
+          "overall_mse": 1299.5634,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+          "overall_mae": 26.0425,
+          "valence_mae": 24.7455,
+          "arousal_mae": 27.3396,
+          "overall_mse": 1291.9048,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+          "overall_mae": 26.0525,
+          "valence_mae": 24.6444,
+          "arousal_mae": 27.4607,
+          "overall_mse": 1308.4073,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+          "overall_mae": 26.0858,
+          "valence_mae": 24.5766,
+          "arousal_mae": 27.5949,
+          "overall_mse": 1319.2208,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+          "overall_mae": 26.0876,
+          "valence_mae": 24.5756,
+          "arousal_mae": 27.5996,
+          "overall_mse": 1320.1808,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+          "overall_mae": 26.0922,
+          "valence_mae": 24.563,
+          "arousal_mae": 27.6214,
+          "overall_mse": 1316.4469,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+          "overall_mae": 26.0946,
+          "valence_mae": 24.5729,
+          "arousal_mae": 27.6163,
+          "overall_mse": 1323.0577,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+          "overall_mae": 26.1007,
+          "valence_mae": 24.5678,
+          "arousal_mae": 27.6336,
+          "overall_mse": 1319.549,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+          "overall_mae": 26.1027,
+          "valence_mae": 24.5758,
+          "arousal_mae": 27.6295,
+          "overall_mse": 1312.9562,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+          "overall_mae": 26.1033,
+          "valence_mae": 24.5735,
+          "arousal_mae": 27.6331,
+          "overall_mse": 1316.7682,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+          "overall_mae": 26.1041,
+          "valence_mae": 24.5736,
+          "arousal_mae": 27.6347,
+          "overall_mse": 1316.4186,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+          "overall_mae": 26.1148,
+          "valence_mae": 24.5797,
+          "arousal_mae": 27.65,
+          "overall_mse": 1320.7911,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "AltRobustMedian_lag-1_smooth9",
+          "overall_mae": 26.1359,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.7192,
+          "overall_mse": 1331.2748,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "StablePriorEnsemble_baseW0p5",
+          "overall_mae": 26.1494,
+          "valence_mae": 24.5819,
+          "arousal_mae": 27.717,
+          "overall_mse": 1332.8928,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "RobustMedian_lag-2_smooth11",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "Pattern expert candidate pool single expert."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "expert_pool_size": 24,
+      "single_results": [
+        {
+          "method": "UncertaintyBlend_smooth43_q20p0-45p0_g0p45",
+          "overall_mae": 27.1233,
+          "valence_mae": 26.0573,
+          "arousal_mae": 28.1893,
+          "overall_mse": 1408.8315,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "RobustMedian_lag-2_smooth11",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p45",
+          "overall_mae": 27.1484,
+          "valence_mae": 26.0896,
+          "arousal_mae": 28.2071,
+          "overall_mse": 1408.557,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+          "overall_mae": 27.1541,
+          "valence_mae": 26.0951,
+          "arousal_mae": 28.2131,
+          "overall_mse": 1407.9117,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p35",
+          "overall_mae": 27.1805,
+          "valence_mae": 26.1112,
+          "arousal_mae": 28.2499,
+          "overall_mse": 1409.7705,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p25",
+          "overall_mae": 27.1912,
+          "valence_mae": 26.1298,
+          "arousal_mae": 28.2527,
+          "overall_mse": 1411.9095,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth51_q15p0-45p0_g0p45",
+          "overall_mae": 27.2005,
+          "valence_mae": 26.1264,
+          "arousal_mae": 28.2746,
+          "overall_mse": 1408.0566,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-50p0_g0p35",
+          "overall_mae": 27.2112,
+          "valence_mae": 26.1498,
+          "arousal_mae": 28.2727,
+          "overall_mse": 1409.8301,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p35",
+          "overall_mae": 27.2202,
+          "valence_mae": 26.1546,
+          "arousal_mae": 28.2858,
+          "overall_mse": 1409.902,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "StablePriorEnsemble_baseW0p5",
+          "overall_mae": 27.2439,
+          "valence_mae": 26.2304,
+          "arousal_mae": 28.2574,
+          "overall_mse": 1427.0638,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45",
+          "overall_mae": 27.2559,
+          "valence_mae": 26.1867,
+          "arousal_mae": 28.3251,
+          "overall_mse": 1408.7203,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "AltRobustMedian_lag-1_smooth9",
+          "overall_mae": 27.3527,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1434.7916,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+          "overall_mae": 27.3879,
+          "valence_mae": 26.2568,
+          "arousal_mae": 28.519,
+          "overall_mse": 1427.8436,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p35",
+          "overall_mae": 27.4597,
+          "valence_mae": 26.328,
+          "arousal_mae": 28.5914,
+          "overall_mse": 1432.4701,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p35",
+          "overall_mae": 27.5053,
+          "valence_mae": 26.3312,
+          "arousal_mae": 28.6793,
+          "overall_mse": 1432.3724,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p45",
+          "overall_mae": 27.5291,
+          "valence_mae": 26.3963,
+          "arousal_mae": 28.6618,
+          "overall_mse": 1436.3578,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-70p0_g0p55",
+          "overall_mae": 27.5624,
+          "valence_mae": 26.4466,
+          "arousal_mae": 28.6782,
+          "overall_mse": 1439.4225,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p5",
+          "overall_mae": 27.5627,
+          "valence_mae": 26.4324,
+          "arousal_mae": 28.693,
+          "overall_mse": 1438.4351,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-45p0_g0p45",
+          "overall_mae": 27.5683,
+          "valence_mae": 26.4069,
+          "arousal_mae": 28.7296,
+          "overall_mse": 1437.7939,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p5",
+          "overall_mae": 27.5806,
+          "valence_mae": 26.437,
+          "arousal_mae": 28.7241,
+          "overall_mse": 1439.0845,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-50p0_g0p5",
+          "overall_mae": 27.6015,
+          "valence_mae": 26.4435,
+          "arousal_mae": 28.7595,
+          "overall_mse": 1439.8707,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-60p0_g0p55",
+          "overall_mae": 27.6131,
+          "valence_mae": 26.4735,
+          "arousal_mae": 28.7527,
+          "overall_mse": 1441.2416,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p45",
+          "overall_mae": 27.6288,
+          "valence_mae": 26.4126,
+          "arousal_mae": 28.845,
+          "overall_mse": 1437.8203,
+          "notes": "Pattern expert candidate pool single expert."
+        },
+        {
+          "method": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55",
+          "overall_mae": 27.633,
+          "valence_mae": 26.4791,
+          "arousal_mae": 28.7869,
+          "overall_mse": 1442.005,
+          "notes": "Pattern expert candidate pool single expert."
+        }
+      ]
+    }
+  ]
+}

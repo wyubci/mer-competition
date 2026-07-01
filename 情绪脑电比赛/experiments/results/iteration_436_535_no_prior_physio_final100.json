@@ -1,0 +1,5945 @@
+{
+  "method": "No-video-prior physiological final 100 module search",
+  "iteration_range": "436-535",
+  "note": "No candidate uses video/time label priors. The final 100 candidates cover arousal probes, multi-expert fusion, subject reliability gates, state-space filters, and final RAVC combinations.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "511_StateTrialStartCenterBlend40",
+      "overall_mae": 46.4686,
+      "valence_mae": 50.0025,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3547.8064,
+      "notes": "Blend early trial prediction toward center."
+    },
+    {
+      "method": "510_StateTrialStartCenterBlend20",
+      "overall_mae": 46.5249,
+      "valence_mae": 50.1152,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3549.5466,
+      "notes": "Blend early trial prediction toward center."
+    },
+    {
+      "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+      "overall_mae": 46.5306,
+      "valence_mae": 50.1265,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3519.7292,
+      "notes": "Light subject mean recentering."
+    },
+    {
+      "method": "506_StateSlopeLimit2ThenExp",
+      "overall_mae": 46.5316,
+      "valence_mae": 50.1287,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3545.8239,
+      "notes": "Slope limit then EMA."
+    },
+    {
+      "method": "498_StateExp02Asym",
+      "overall_mae": 46.5329,
+      "valence_mae": 50.1313,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3544.0416,
+      "notes": "EMA state filter."
+    },
+    {
+      "method": "483_ReliabilitySubjectStdShrink18",
+      "overall_mae": 46.5361,
+      "valence_mae": 50.1376,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3540.07,
+      "notes": "Shrink high-variance subject predictions."
+    },
+    {
+      "method": "514_StateCenteredEMAResidual",
+      "overall_mae": 46.5479,
+      "valence_mae": 50.1611,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3546.7173,
+      "notes": "EMA on residual around center."
+    },
+    {
+      "method": "502_StateSlopeLimit2",
+      "overall_mae": 46.5484,
+      "valence_mae": 50.1621,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3548.4124,
+      "notes": "Limit per-second prediction slope."
+    },
+    {
+      "method": "507_StateSlopeLimit4ThenExp",
+      "overall_mae": 46.5509,
+      "valence_mae": 50.1671,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3547.5331,
+      "notes": "Slope limit then EMA."
+    },
+    {
+      "method": "458_ValenceWeightedHRE_721",
+      "overall_mae": 46.5523,
+      "valence_mae": 50.17,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3533.5036,
+      "notes": "Weighted Huber-dominant fusion."
+    },
+    {
+      "method": "499_StateExp03Asym",
+      "overall_mae": 46.5556,
+      "valence_mae": 50.1767,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3547.8556,
+      "notes": "EMA state filter."
+    },
+    {
+      "method": "521_FinalNeg060Exp03",
+      "overall_mae": 46.5556,
+      "valence_mae": 50.1767,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3547.8556,
+      "notes": "Final asymmetry with EMA."
+    },
+    {
+      "method": "523_FinalNeg060Blend75",
+      "overall_mae": 46.5556,
+      "valence_mae": 50.1765,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3536.0978,
+      "notes": "Final Huber/Ridge asymmetric blend."
+    },
+    {
+      "method": "497_StateSmooth13Asym",
+      "overall_mae": 46.5574,
+      "valence_mae": 50.1801,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3547.0226,
+      "notes": "Longer moving-average state filter."
+    },
+    {
+      "method": "459_ValenceWeightedHRE_811",
+      "overall_mae": 46.5585,
+      "valence_mae": 50.1823,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3538.8752,
+      "notes": "More Huber-dominant fusion."
+    },
+    {
+      "method": "472_ValenceHuberBayes82",
+      "overall_mae": 46.5592,
+      "valence_mae": 50.1837,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3538.894,
+      "notes": "Huber plus Bayesian Ridge expert."
+    },
+    {
+      "method": "509_StateTrendDamp50",
+      "overall_mae": 46.5609,
+      "valence_mae": 50.1871,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3548.6405,
+      "notes": "Dampen rapid trend component."
+    },
+    {
+      "method": "496_StateSmooth11Asym",
+      "overall_mae": 46.5617,
+      "valence_mae": 50.1887,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3547.9156,
+      "notes": "Longer moving-average state filter."
+    },
+    {
+      "method": "517_FinalNeg050",
+      "overall_mae": 46.5621,
+      "valence_mae": 50.1897,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3549.9844,
+      "notes": "Final RAVC negative scale search."
+    },
+    {
+      "method": "456_ValenceMeanHuberRidgeElastic",
+      "overall_mae": 46.5637,
+      "valence_mae": 50.1928,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3519.6639,
+      "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+    },
+    {
+      "method": "515_StateMedianExpBlend",
+      "overall_mae": 46.5662,
+      "valence_mae": 50.1978,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3549.4696,
+      "notes": "Blend median and EMA state filters."
+    },
+    {
+      "method": "530_FinalNeg060MedianExp",
+      "overall_mae": 46.5662,
+      "valence_mae": 50.1978,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3549.4696,
+      "notes": "Final median/EMA blend."
+    },
+    {
+      "method": "522_FinalNeg060Smooth9",
+      "overall_mae": 46.5673,
+      "valence_mae": 50.2,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3548.9993,
+      "notes": "Final asymmetry with long smoothing."
+    },
+    {
+      "method": "527_FinalNeg060SubjectStd14",
+      "overall_mae": 46.5678,
+      "valence_mae": 50.201,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3538.7398,
+      "notes": "Final subject reliability shrink."
+    },
+    {
+      "method": "525_FinalNeg060ElasticBlend90",
+      "overall_mae": 46.5679,
+      "valence_mae": 50.2012,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3544.9331,
+      "notes": "Final Huber/Elastic asymmetric blend."
+    },
+    {
+      "method": "508_StateTrendDamp30",
+      "overall_mae": 46.5684,
+      "valence_mae": 50.2022,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3549.7153,
+      "notes": "Dampen rapid trend component."
+    },
+    {
+      "method": "524_FinalNeg060Blend90",
+      "overall_mae": 46.5685,
+      "valence_mae": 50.2025,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3544.9215,
+      "notes": "Final Huber/Ridge asymmetric blend."
+    },
+    {
+      "method": "500_StateExp04Asym",
+      "overall_mae": 46.5696,
+      "valence_mae": 50.2045,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.0515,
+      "notes": "EMA state filter."
+    },
+    {
+      "method": "503_StateSlopeLimit4",
+      "overall_mae": 46.5716,
+      "valence_mae": 50.2085,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.4491,
+      "notes": "Limit per-second prediction slope."
+    },
+    {
+      "method": "528_FinalNeg060Slope4",
+      "overall_mae": 46.5716,
+      "valence_mae": 50.2085,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.4491,
+      "notes": "Final state-space slope limit."
+    },
+    {
+      "method": "516_FinalNeg055",
+      "overall_mae": 46.572,
+      "valence_mae": 50.2094,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.807,
+      "notes": "Final RAVC negative scale search."
+    },
+    {
+      "method": "482_ReliabilitySubjectStdShrink14",
+      "overall_mae": 46.5731,
+      "valence_mae": 50.2116,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3529.4206,
+      "notes": "Shrink high-variance subject predictions."
+    },
+    {
+      "method": "504_StateSlopeLimit6",
+      "overall_mae": 46.5765,
+      "valence_mae": 50.2184,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.8993,
+      "notes": "Limit per-second prediction slope."
+    },
+    {
+      "method": "529_FinalNeg060Slope6",
+      "overall_mae": 46.5765,
+      "valence_mae": 50.2184,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.8993,
+      "notes": "Final state-space slope limit."
+    },
+    {
+      "method": "505_StateSlopeLimit8",
+      "overall_mae": 46.5791,
+      "valence_mae": 50.2236,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.2394,
+      "notes": "Limit per-second prediction slope."
+    },
+    {
+      "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+      "overall_mae": 46.5819,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.6596,
+      "notes": "Current best physiological-only RAVC reference."
+    },
+    {
+      "method": "436_RAVC_CenterArousal",
+      "overall_mae": 46.5819,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.6596,
+      "notes": "Arousal probe reference: RAVC valence, center arousal."
+    },
+    {
+      "method": "486_ReliabilitySubjectNegMeanBrake",
+      "overall_mae": 46.5819,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.6596,
+      "notes": "Brake subjects with negative mean residual."
+    },
+    {
+      "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+      "overall_mae": 46.5819,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.6596,
+      "notes": "Stronger brake for negative subject residual."
+    },
+    {
+      "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+      "overall_mae": 46.5819,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.6596,
+      "notes": "Subject signed mean gate."
+    },
+    {
+      "method": "452_RAVC_ArousalPositiveOnlyScale10",
+      "overall_mae": 46.5835,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9378,
+      "overall_mse": 3545.1232,
+      "notes": "Only positive arousal residual."
+    },
+    {
+      "method": "519_FinalPos095Neg060",
+      "overall_mae": 46.585,
+      "valence_mae": 50.2353,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3543.0232,
+      "notes": "Final asymmetric scale search."
+    },
+    {
+      "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+      "overall_mae": 46.5867,
+      "valence_mae": 50.2387,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.2677,
+      "notes": "Shrink Huber/fNIRS disagreement."
+    },
+    {
+      "method": "501_StateMedianAsym",
+      "overall_mae": 46.588,
+      "valence_mae": 50.2414,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3552.4762,
+      "notes": "Median state filter."
+    },
+    {
+      "method": "520_FinalPos105Neg060",
+      "overall_mae": 46.5881,
+      "valence_mae": 50.2417,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3561.7992,
+      "notes": "Final asymmetric scale search."
+    },
+    {
+      "method": "438_RAVC_RidgeArousalScale0p03",
+      "overall_mae": 46.591,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.953,
+      "overall_mse": 3549.8363,
+      "notes": "Tiny Ridge arousal residual over center."
+    },
+    {
+      "method": "531_FinalNeg060ArousalScale03",
+      "overall_mae": 46.591,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.953,
+      "overall_mse": 3549.8363,
+      "notes": "Final tiny arousal residual."
+    },
+    {
+      "method": "475_ValenceHuberRidgeMaxAgreement",
+      "overall_mae": 46.5917,
+      "valence_mae": 50.2487,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.7279,
+      "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+    },
+    {
+      "method": "518_FinalNeg065",
+      "overall_mae": 46.5917,
+      "valence_mae": 50.2489,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3552.5419,
+      "notes": "Final RAVC negative scale search."
+    },
+    {
+      "method": "532_FinalNeg060ArousalAgree05",
+      "overall_mae": 46.5921,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9551,
+      "overall_mse": 3548.6896,
+      "notes": "Final agreement-gated arousal residual."
+    },
+    {
+      "method": "448_RAVC_FNIRSArousalScale05",
+      "overall_mae": 46.593,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.957,
+      "overall_mse": 3547.4976,
+      "notes": "Tiny fNIRS-only arousal residual."
+    },
+    {
+      "method": "442_RAVC_HuberArousalScale0p03",
+      "overall_mae": 46.595,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.961,
+      "overall_mse": 3549.6143,
+      "notes": "Tiny Huber arousal residual over center."
+    },
+    {
+      "method": "439_RAVC_RidgeArousalScale0p05",
+      "overall_mae": 46.5971,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9652,
+      "overall_mse": 3548.6816,
+      "notes": "Tiny Ridge arousal residual over center."
+    },
+    {
+      "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+      "overall_mae": 46.5976,
+      "valence_mae": 50.2605,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3541.7399,
+      "notes": "Shrink Huber/neuro disagreement."
+    },
+    {
+      "method": "474_ValenceHuberRidgeMinMagnitude",
+      "overall_mae": 46.5986,
+      "valence_mae": 50.2625,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3514.7727,
+      "notes": "Conservative Huber/Ridge intersection."
+    },
+    {
+      "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+      "overall_mae": 46.6,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.971,
+      "overall_mse": 3548.5069,
+      "notes": "Tiny average arousal residual."
+    },
+    {
+      "method": "462_ValenceHuberNeuro82",
+      "overall_mae": 46.6006,
+      "valence_mae": 50.2666,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3551.6056,
+      "notes": "Huber plus neurovascular expert."
+    },
+    {
+      "method": "485_ReliabilityTrialStdShrink12",
+      "overall_mae": 46.6009,
+      "valence_mae": 50.2673,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3542.3,
+      "notes": "Shrink high-variance trial predictions."
+    },
+    {
+      "method": "533_FinalNeg060MeanShift",
+      "overall_mae": 46.6011,
+      "valence_mae": 50.2676,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3556.2788,
+      "notes": "Final light train mean shift."
+    },
+    {
+      "method": "450_RAVC_ArousalAgreementScale10",
+      "overall_mae": 46.6024,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9757,
+      "overall_mse": 3545.9884,
+      "notes": "Use arousal residual only when Ridge and Huber agree."
+    },
+    {
+      "method": "460_ValenceHuberFNIRS82",
+      "overall_mae": 46.6027,
+      "valence_mae": 50.2707,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3552.7301,
+      "notes": "Huber plus fNIRS expert."
+    },
+    {
+      "method": "443_RAVC_HuberArousalScale0p05",
+      "overall_mae": 46.6039,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9786,
+      "overall_mse": 3548.3408,
+      "notes": "Tiny Huber arousal residual over center."
+    },
+    {
+      "method": "447_RAVC_EEGArousalScale05",
+      "overall_mae": 46.6079,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9866,
+      "overall_mse": 3551.6305,
+      "notes": "Tiny EEG-only arousal residual."
+    },
+    {
+      "method": "453_RAVC_ArousalNegativeOnlyScale10",
+      "overall_mae": 46.6109,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9926,
+      "overall_mse": 3552.5942,
+      "notes": "Only negative arousal residual."
+    },
+    {
+      "method": "455_RAVC_ArousalMedianScale10",
+      "overall_mae": 46.6122,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9953,
+      "overall_mse": 3546.0502,
+      "notes": "Median-smoothed arousal residual."
+    },
+    {
+      "method": "454_RAVC_ArousalExpScale10",
+      "overall_mae": 46.6123,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9956,
+      "overall_mse": 3546.2403,
+      "notes": "Smoothed arousal residual."
+    },
+    {
+      "method": "440_RAVC_RidgeArousalScale0p1",
+      "overall_mae": 46.6125,
+      "valence_mae": 50.2291,
+      "arousal_mae": 42.9958,
+      "overall_mse": 3546.0565,
+      "notes": "Tiny Ridge arousal residual over center."
+    },
+    {
+      "method": "451_RAVC_ArousalSmallOnlyScale15",
+      "overall_mae": 46.6161,
+      "valence_mae": 50.2291,
+      "arousal_mae": 43.003,
+      "overall_mse": 3550.2931,
+      "notes": "Use arousal residual only when predicted residual is small."
+    },
+    {
+      "method": "464_ValenceAllExpertTrimmed",
+      "overall_mae": 46.6186,
+      "valence_mae": 50.3026,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3522.9699,
+      "notes": "Trimmed mean over all physiological experts."
+    },
+    {
+      "method": "449_RAVC_NeuroArousalScale05",
+      "overall_mae": 46.6191,
+      "valence_mae": 50.2291,
+      "arousal_mae": 43.0092,
+      "overall_mse": 3548.9352,
+      "notes": "Tiny neurovascular arousal residual."
+    },
+    {
+      "method": "484_ReliabilityTrialStdShrink8",
+      "overall_mae": 46.6193,
+      "valence_mae": 50.3039,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3540.3473,
+      "notes": "Shrink high-variance trial predictions."
+    },
+    {
+      "method": "471_ValencePCA8PCA16PCA24Median",
+      "overall_mae": 46.6199,
+      "valence_mae": 50.3052,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3556.0439,
+      "notes": "Low-rank dimension median ensemble."
+    },
+    {
+      "method": "457_ValenceMedianHuberRidgeElastic",
+      "overall_mae": 46.6219,
+      "valence_mae": 50.3091,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3515.0328,
+      "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+    },
+    {
+      "method": "535_FinalNeg060ExpertMedian",
+      "overall_mae": 46.6219,
+      "valence_mae": 50.3091,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3515.0328,
+      "notes": "Final expert median."
+    },
+    {
+      "method": "473_ValenceHuberBayesElasticMedian",
+      "overall_mae": 46.6226,
+      "valence_mae": 50.3105,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3515.0738,
+      "notes": "Median of robust linear heads."
+    },
+    {
+      "method": "444_RAVC_HuberArousalScale0p1",
+      "overall_mae": 46.626,
+      "valence_mae": 50.2291,
+      "arousal_mae": 43.0229,
+      "overall_mse": 3545.5342,
+      "notes": "Tiny Huber arousal residual over center."
+    },
+    {
+      "method": "441_RAVC_RidgeArousalScale0p15",
+      "overall_mae": 46.6284,
+      "valence_mae": 50.2291,
+      "arousal_mae": 43.0278,
+      "overall_mse": 3543.8071,
+      "notes": "Tiny Ridge arousal residual over center."
+    },
+    {
+      "method": "470_ValencePCA8PCA16PCA24Mean",
+      "overall_mae": 46.6401,
+      "valence_mae": 50.3455,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3556.9943,
+      "notes": "Low-rank dimension ensemble."
+    },
+    {
+      "method": "534_FinalNeg060PCAEnsemble",
+      "overall_mae": 46.6401,
+      "valence_mae": 50.3455,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3556.9943,
+      "notes": "Final low-rank ensemble."
+    },
+    {
+      "method": "461_ValenceHuberEEG82",
+      "overall_mae": 46.6419,
+      "valence_mae": 50.3491,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3543.7287,
+      "notes": "Huber plus EEG expert."
+    },
+    {
+      "method": "445_RAVC_HuberArousalScale0p15",
+      "overall_mae": 46.649,
+      "valence_mae": 50.2291,
+      "arousal_mae": 43.0689,
+      "overall_mse": 3543.2618,
+      "notes": "Tiny Huber arousal residual over center."
+    },
+    {
+      "method": "481_ReliabilitySubjectStdShrink10",
+      "overall_mae": 46.6587,
+      "valence_mae": 50.3828,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3530.5006,
+      "notes": "Shrink high-variance subject predictions."
+    },
+    {
+      "method": "526_FinalNeg060DisagreeShrink",
+      "overall_mae": 46.6639,
+      "valence_mae": 50.3932,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3534.8124,
+      "notes": "Final disagreement shrink."
+    },
+    {
+      "method": "495_ReliabilitySubjectMeanToCenterMedium",
+      "overall_mae": 46.6657,
+      "valence_mae": 50.3967,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3514.0838,
+      "notes": "Medium subject mean recentering."
+    },
+    {
+      "method": "468_ValenceAgreementHuberFNIRST8",
+      "overall_mae": 46.6707,
+      "valence_mae": 50.4068,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3568.9131,
+      "notes": "Huber/fNIRS agreement gate."
+    },
+    {
+      "method": "512_StateLateResidualShrink20",
+      "overall_mae": 46.6872,
+      "valence_mae": 50.4397,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3543.039,
+      "notes": "Shrink late-trial residuals."
+    },
+    {
+      "method": "463_ValenceAllExpertMedian",
+      "overall_mae": 46.6992,
+      "valence_mae": 50.4638,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3523.8927,
+      "notes": "Median over all physiological experts."
+    },
+    {
+      "method": "489_ReliabilityAbsResidualShrink20",
+      "overall_mae": 46.73,
+      "valence_mae": 50.5254,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3534.915,
+      "notes": "Shrink large residuals."
+    },
+    {
+      "method": "476_ReliabilityDisagreeShrinkT4S70",
+      "overall_mae": 46.7367,
+      "valence_mae": 50.5388,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3524.0116,
+      "notes": "Shrink if Huber/Ridge disagree."
+    },
+    {
+      "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+      "overall_mae": 46.7467,
+      "valence_mae": 50.5588,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3529.8306,
+      "notes": "Shrink Huber/Elastic disagreement."
+    },
+    {
+      "method": "490_ReliabilityAbsResidualShrink28",
+      "overall_mae": 46.7473,
+      "valence_mae": 50.56,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3540.6288,
+      "notes": "Shrink very large residuals."
+    },
+    {
+      "method": "478_ReliabilityDisagreeShrinkT8S70",
+      "overall_mae": 46.7948,
+      "valence_mae": 50.655,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3532.3233,
+      "notes": "Shrink if Huber/Ridge disagree."
+    },
+    {
+      "method": "477_ReliabilityDisagreeShrinkT6S70",
+      "overall_mae": 46.8132,
+      "valence_mae": 50.6917,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3530.4662,
+      "notes": "Shrink if Huber/Ridge disagree."
+    },
+    {
+      "method": "513_StateLateResidualShrink40",
+      "overall_mae": 46.816,
+      "valence_mae": 50.6974,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3538.8506,
+      "notes": "Shrink late-trial residuals."
+    },
+    {
+      "method": "465_ValenceMinMagnitudeAll",
+      "overall_mae": 46.8718,
+      "valence_mae": 50.809,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3535.3895,
+      "notes": "Choose most conservative expert residual."
+    },
+    {
+      "method": "437_RAVC_TrainMeanArousal",
+      "overall_mae": 47.0587,
+      "valence_mae": 50.2291,
+      "arousal_mae": 43.8883,
+      "overall_mse": 3545.4445,
+      "notes": "Use train global arousal mean."
+    },
+    {
+      "method": "469_ValenceAgreementHuberNeuroT8",
+      "overall_mae": 47.0831,
+      "valence_mae": 51.2316,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3611.5566,
+      "notes": "Huber/neurovascular agreement gate."
+    },
+    {
+      "method": "Reference_321_Center128_noPrior",
+      "overall_mae": 47.5663,
+      "valence_mae": 52.198,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.896,
+      "notes": "Reference center-only baseline."
+    },
+    {
+      "method": "479_ReliabilityDisagreeCenterT4",
+      "overall_mae": 47.7517,
+      "valence_mae": 52.5689,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3667.1776,
+      "notes": "Center fallback if Huber/Ridge disagree."
+    },
+    {
+      "method": "467_ValenceAgreementHuberElasticT6",
+      "overall_mae": 47.8651,
+      "valence_mae": 52.7956,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3665.3866,
+      "notes": "Huber/Elastic agreement gate."
+    },
+    {
+      "method": "480_ReliabilityDisagreeCenterT8",
+      "overall_mae": 47.8691,
+      "valence_mae": 52.8035,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.6841,
+      "notes": "Center fallback if Huber/Ridge disagree."
+    },
+    {
+      "method": "466_ValenceAgreementHuberRidgeT6",
+      "overall_mae": 47.8987,
+      "valence_mae": 52.8627,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3668.8353,
+      "notes": "Huber/Ridge agreement gate."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "468_ValenceAgreementHuberFNIRST8",
+          "overall_mae": 38.4832,
+          "valence_mae": 45.3709,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2865.4216,
+          "notes": "Huber/fNIRS agreement gate."
+        },
+        {
+          "method": "511_StateTrialStartCenterBlend40",
+          "overall_mae": 38.5644,
+          "valence_mae": 45.5333,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2885.8733,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "506_StateSlopeLimit2ThenExp",
+          "overall_mae": 38.6023,
+          "valence_mae": 45.6091,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.3242,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "445_RAVC_HuberArousalScale0p15",
+          "overall_mae": 38.6077,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.4753,
+          "overall_mse": 2868.6719,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "502_StateSlopeLimit2",
+          "overall_mae": 38.616,
+          "valence_mae": 45.6364,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2882.3953,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "510_StateTrialStartCenterBlend20",
+          "overall_mae": 38.6161,
+          "valence_mae": 45.6367,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2887.2537,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "441_RAVC_RidgeArousalScale0p15",
+          "overall_mae": 38.6172,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.4943,
+          "overall_mse": 2871.834,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+          "overall_mae": 38.6172,
+          "valence_mae": 45.6388,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2881.5867,
+          "notes": "Shrink Huber/fNIRS disagreement."
+        },
+        {
+          "method": "475_ValenceHuberRidgeMaxAgreement",
+          "overall_mae": 38.6176,
+          "valence_mae": 45.6396,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2881.7683,
+          "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+        },
+        {
+          "method": "520_FinalPos105Neg060",
+          "overall_mae": 38.6216,
+          "valence_mae": 45.6476,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2894.6838,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "498_StateExp02Asym",
+          "overall_mae": 38.6218,
+          "valence_mae": 45.6481,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2878.7786,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "452_RAVC_ArousalPositiveOnlyScale10",
+          "overall_mae": 38.6242,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5082,
+          "overall_mse": 2877.6521,
+          "notes": "Only positive arousal residual."
+        },
+        {
+          "method": "507_StateSlopeLimit4ThenExp",
+          "overall_mae": 38.6255,
+          "valence_mae": 45.6554,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2881.9453,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "444_RAVC_HuberArousalScale0p1",
+          "overall_mae": 38.6272,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5142,
+          "overall_mse": 2875.0813,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "454_RAVC_ArousalExpScale10",
+          "overall_mae": 38.6324,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5245,
+          "overall_mse": 2877.2688,
+          "notes": "Smoothed arousal residual."
+        },
+        {
+          "method": "455_RAVC_ArousalMedianScale10",
+          "overall_mae": 38.6332,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5262,
+          "overall_mse": 2877.2629,
+          "notes": "Median-smoothed arousal residual."
+        },
+        {
+          "method": "440_RAVC_RidgeArousalScale0p1",
+          "overall_mae": 38.6335,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5269,
+          "overall_mse": 2877.2673,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "503_StateSlopeLimit4",
+          "overall_mae": 38.6411,
+          "valence_mae": 45.6866,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2885.1765,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "528_FinalNeg060Slope4",
+          "overall_mae": 38.6411,
+          "valence_mae": 45.6866,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2885.1765,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "514_StateCenteredEMAResidual",
+          "overall_mae": 38.6431,
+          "valence_mae": 45.6908,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.2122,
+          "notes": "EMA on residual around center."
+        },
+        {
+          "method": "499_StateExp03Asym",
+          "overall_mae": 38.6447,
+          "valence_mae": 45.6938,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.8953,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "521_FinalNeg060Exp03",
+          "overall_mae": 38.6447,
+          "valence_mae": 45.6938,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.8953,
+          "notes": "Final asymmetry with EMA."
+        },
+        {
+          "method": "443_RAVC_HuberArousalScale0p05",
+          "overall_mae": 38.6474,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5546,
+          "overall_mse": 2881.8347,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+          "overall_mae": 38.6476,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.555,
+          "overall_mse": 2882.3977,
+          "notes": "Tiny average arousal residual."
+        },
+        {
+          "method": "448_RAVC_FNIRSArousalScale05",
+          "overall_mae": 38.6479,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5556,
+          "overall_mse": 2882.2449,
+          "notes": "Tiny fNIRS-only arousal residual."
+        },
+        {
+          "method": "504_StateSlopeLimit6",
+          "overall_mae": 38.65,
+          "valence_mae": 45.7045,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.2336,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "529_FinalNeg060Slope6",
+          "overall_mae": 38.65,
+          "valence_mae": 45.7045,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.2336,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "439_RAVC_RidgeArousalScale0p05",
+          "overall_mae": 38.6506,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5611,
+          "overall_mse": 2882.9666,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "450_RAVC_ArousalAgreementScale10",
+          "overall_mae": 38.6521,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.564,
+          "overall_mse": 2880.0518,
+          "notes": "Use arousal residual only when Ridge and Huber agree."
+        },
+        {
+          "method": "515_StateMedianExpBlend",
+          "overall_mae": 38.6527,
+          "valence_mae": 45.7099,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.2449,
+          "notes": "Blend median and EMA state filters."
+        },
+        {
+          "method": "530_FinalNeg060MedianExp",
+          "overall_mae": 38.6527,
+          "valence_mae": 45.7099,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.2449,
+          "notes": "Final median/EMA blend."
+        },
+        {
+          "method": "509_StateTrendDamp50",
+          "overall_mae": 38.6536,
+          "valence_mae": 45.7117,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2885.7004,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "505_StateSlopeLimit8",
+          "overall_mae": 38.6552,
+          "valence_mae": 45.7148,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.9226,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "442_RAVC_HuberArousalScale0p03",
+          "overall_mae": 38.6556,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.571,
+          "overall_mse": 2884.6318,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "500_StateExp04Asym",
+          "overall_mae": 38.6559,
+          "valence_mae": 45.7162,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.4851,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "438_RAVC_RidgeArousalScale0p03",
+          "overall_mae": 38.6575,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5749,
+          "overall_mse": 2885.3203,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "531_FinalNeg060ArousalScale03",
+          "overall_mae": 38.6575,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5749,
+          "overall_mse": 2885.3203,
+          "notes": "Final tiny arousal residual."
+        },
+        {
+          "method": "508_StateTrendDamp30",
+          "overall_mae": 38.6586,
+          "valence_mae": 45.7217,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.9041,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "532_FinalNeg060ArousalAgree05",
+          "overall_mae": 38.6599,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5796,
+          "overall_mse": 2884.3701,
+          "notes": "Final agreement-gated arousal residual."
+        },
+        {
+          "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+          "overall_mae": 38.6612,
+          "valence_mae": 45.7269,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2858.0823,
+          "notes": "Light subject mean recentering."
+        },
+        {
+          "method": "496_StateSmooth11Asym",
+          "overall_mae": 38.6625,
+          "valence_mae": 45.7294,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.4246,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "522_FinalNeg060Smooth9",
+          "overall_mae": 38.6628,
+          "valence_mae": 45.7301,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2887.0378,
+          "notes": "Final asymmetry with long smoothing."
+        },
+        {
+          "method": "497_StateSmooth13Asym",
+          "overall_mae": 38.663,
+          "valence_mae": 45.7305,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.0039,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "449_RAVC_NeuroArousalScale05",
+          "overall_mae": 38.6659,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5916,
+          "overall_mse": 2884.6318,
+          "notes": "Tiny neurovascular arousal residual."
+        },
+        {
+          "method": "517_FinalNeg050",
+          "overall_mae": 38.6666,
+          "valence_mae": 45.7376,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9792,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "525_FinalNeg060ElasticBlend90",
+          "overall_mae": 38.6669,
+          "valence_mae": 45.7383,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.7861,
+          "notes": "Final Huber/Elastic asymmetric blend."
+        },
+        {
+          "method": "516_FinalNeg055",
+          "overall_mae": 38.6672,
+          "valence_mae": 45.7389,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9551,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 38.6678,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9314,
+          "notes": "Current best physiological-only RAVC reference."
+        },
+        {
+          "method": "436_RAVC_CenterArousal",
+          "overall_mae": 38.6678,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9314,
+          "notes": "Arousal probe reference: RAVC valence, center arousal."
+        },
+        {
+          "method": "483_ReliabilitySubjectStdShrink18",
+          "overall_mae": 38.6678,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9314,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "486_ReliabilitySubjectNegMeanBrake",
+          "overall_mae": 38.6678,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9314,
+          "notes": "Brake subjects with negative mean residual."
+        },
+        {
+          "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+          "overall_mae": 38.6678,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9314,
+          "notes": "Stronger brake for negative subject residual."
+        },
+        {
+          "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+          "overall_mae": 38.6678,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9314,
+          "notes": "Subject signed mean gate."
+        },
+        {
+          "method": "518_FinalNeg065",
+          "overall_mae": 38.6685,
+          "valence_mae": 45.7414,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.9089,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "524_FinalNeg060Blend90",
+          "overall_mae": 38.6688,
+          "valence_mae": 45.742,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.845,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "501_StateMedianAsym",
+          "overall_mae": 38.6693,
+          "valence_mae": 45.7431,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2889.5508,
+          "notes": "Median state filter."
+        },
+        {
+          "method": "459_ValenceWeightedHRE_811",
+          "overall_mae": 38.6698,
+          "valence_mae": 45.744,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.155,
+          "notes": "More Huber-dominant fusion."
+        },
+        {
+          "method": "472_ValenceHuberBayes82",
+          "overall_mae": 38.6717,
+          "valence_mae": 45.7479,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.2356,
+          "notes": "Huber plus Bayesian Ridge expert."
+        },
+        {
+          "method": "523_FinalNeg060Blend75",
+          "overall_mae": 38.6735,
+          "valence_mae": 45.7514,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2877.0798,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "458_ValenceWeightedHRE_721",
+          "overall_mae": 38.674,
+          "valence_mae": 45.7525,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2874.9851,
+          "notes": "Weighted Huber-dominant fusion."
+        },
+        {
+          "method": "453_RAVC_ArousalNegativeOnlyScale10",
+          "overall_mae": 38.6772,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.6142,
+          "overall_mse": 2888.5466,
+          "notes": "Only negative arousal residual."
+        },
+        {
+          "method": "460_ValenceHuberFNIRS82",
+          "overall_mae": 38.6828,
+          "valence_mae": 45.7701,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.2234,
+          "notes": "Huber plus fNIRS expert."
+        },
+        {
+          "method": "471_ValencePCA8PCA16PCA24Median",
+          "overall_mae": 38.6838,
+          "valence_mae": 45.772,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.7903,
+          "notes": "Low-rank dimension median ensemble."
+        },
+        {
+          "method": "533_FinalNeg060MeanShift",
+          "overall_mae": 38.6919,
+          "valence_mae": 45.7882,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2894.3997,
+          "notes": "Final light train mean shift."
+        },
+        {
+          "method": "447_RAVC_EEGArousalScale05",
+          "overall_mae": 38.6922,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.6442,
+          "overall_mse": 2887.7786,
+          "notes": "Tiny EEG-only arousal residual."
+        },
+        {
+          "method": "470_ValencePCA8PCA16PCA24Mean",
+          "overall_mae": 38.6938,
+          "valence_mae": 45.7921,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2890.0872,
+          "notes": "Low-rank dimension ensemble."
+        },
+        {
+          "method": "534_FinalNeg060PCAEnsemble",
+          "overall_mae": 38.6938,
+          "valence_mae": 45.7921,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2890.0872,
+          "notes": "Final low-rank ensemble."
+        },
+        {
+          "method": "456_ValenceMeanHuberRidgeElastic",
+          "overall_mae": 38.7033,
+          "valence_mae": 45.8111,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2863.4297,
+          "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "485_ReliabilityTrialStdShrink12",
+          "overall_mae": 38.7072,
+          "valence_mae": 45.8189,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2880.4268,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "519_FinalPos095Neg060",
+          "overall_mae": 38.7199,
+          "valence_mae": 45.8443,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2884.5488,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "451_RAVC_ArousalSmallOnlyScale15",
+          "overall_mae": 38.7284,
+          "valence_mae": 45.7402,
+          "arousal_mae": 31.7167,
+          "overall_mse": 2887.9792,
+          "notes": "Use arousal residual only when predicted residual is small."
+        },
+        {
+          "method": "462_ValenceHuberNeuro82",
+          "overall_mae": 38.7415,
+          "valence_mae": 45.8875,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2894.1787,
+          "notes": "Huber plus neurovascular expert."
+        },
+        {
+          "method": "457_ValenceMedianHuberRidgeElastic",
+          "overall_mae": 38.748,
+          "valence_mae": 45.9005,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2858.2109,
+          "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "535_FinalNeg060ExpertMedian",
+          "overall_mae": 38.748,
+          "valence_mae": 45.9005,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2858.2109,
+          "notes": "Final expert median."
+        },
+        {
+          "method": "473_ValenceHuberBayesElasticMedian",
+          "overall_mae": 38.7481,
+          "valence_mae": 45.9006,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2858.2275,
+          "notes": "Median of robust linear heads."
+        },
+        {
+          "method": "474_ValenceHuberRidgeMinMagnitude",
+          "overall_mae": 38.7566,
+          "valence_mae": 45.9177,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2859.9651,
+          "notes": "Conservative Huber/Ridge intersection."
+        },
+        {
+          "method": "463_ValenceAllExpertMedian",
+          "overall_mae": 38.7709,
+          "valence_mae": 45.9462,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2868.0391,
+          "notes": "Median over all physiological experts."
+        },
+        {
+          "method": "527_FinalNeg060SubjectStd14",
+          "overall_mae": 38.7709,
+          "valence_mae": 45.9463,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2883.196,
+          "notes": "Final subject reliability shrink."
+        },
+        {
+          "method": "484_ReliabilityTrialStdShrink8",
+          "overall_mae": 38.774,
+          "valence_mae": 45.9526,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2874.3093,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "495_ReliabilitySubjectMeanToCenterMedium",
+          "overall_mae": 38.8031,
+          "valence_mae": 46.0107,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2854.2703,
+          "notes": "Medium subject mean recentering."
+        },
+        {
+          "method": "464_ValenceAllExpertTrimmed",
+          "overall_mae": 38.8198,
+          "valence_mae": 46.044,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2874.2913,
+          "notes": "Trimmed mean over all physiological experts."
+        },
+        {
+          "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+          "overall_mae": 38.8366,
+          "valence_mae": 46.0777,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2887.6013,
+          "notes": "Shrink Huber/neuro disagreement."
+        },
+        {
+          "method": "512_StateLateResidualShrink20",
+          "overall_mae": 38.8556,
+          "valence_mae": 46.1157,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2886.9211,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "481_ReliabilitySubjectStdShrink10",
+          "overall_mae": 38.8777,
+          "valence_mae": 46.1598,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2881.3252,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "482_ReliabilitySubjectStdShrink14",
+          "overall_mae": 38.8777,
+          "valence_mae": 46.1598,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2881.3252,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "526_FinalNeg060DisagreeShrink",
+          "overall_mae": 38.9135,
+          "valence_mae": 46.2315,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2887.5486,
+          "notes": "Final disagreement shrink."
+        },
+        {
+          "method": "461_ValenceHuberEEG82",
+          "overall_mae": 38.9452,
+          "valence_mae": 46.2948,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2904.7874,
+          "notes": "Huber plus EEG expert."
+        },
+        {
+          "method": "489_ReliabilityAbsResidualShrink20",
+          "overall_mae": 38.9697,
+          "valence_mae": 46.344,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2884.3284,
+          "notes": "Shrink large residuals."
+        },
+        {
+          "method": "490_ReliabilityAbsResidualShrink28",
+          "overall_mae": 39.0158,
+          "valence_mae": 46.4361,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2895.3777,
+          "notes": "Shrink very large residuals."
+        },
+        {
+          "method": "513_StateLateResidualShrink40",
+          "overall_mae": 39.048,
+          "valence_mae": 46.5005,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2889.0813,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "476_ReliabilityDisagreeShrinkT4S70",
+          "overall_mae": 39.0539,
+          "valence_mae": 46.5122,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2884.4453,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+          "overall_mae": 39.0547,
+          "valence_mae": 46.5138,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2890.2468,
+          "notes": "Shrink Huber/Elastic disagreement."
+        },
+        {
+          "method": "478_ReliabilityDisagreeShrinkT8S70",
+          "overall_mae": 39.0865,
+          "valence_mae": 46.5774,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2890.3301,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "465_ValenceMinMagnitudeAll",
+          "overall_mae": 39.1444,
+          "valence_mae": 46.6933,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2902.0051,
+          "notes": "Choose most conservative expert residual."
+        },
+        {
+          "method": "477_ReliabilityDisagreeShrinkT6S70",
+          "overall_mae": 39.1695,
+          "valence_mae": 46.7434,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2896.4075,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "469_ValenceAgreementHuberNeuroT8",
+          "overall_mae": 39.4702,
+          "valence_mae": 47.3449,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2990.5322,
+          "notes": "Huber/neurovascular agreement gate."
+        },
+        {
+          "method": "437_RAVC_TrainMeanArousal",
+          "overall_mae": 39.4845,
+          "valence_mae": 45.7402,
+          "arousal_mae": 33.2289,
+          "overall_mse": 2891.623,
+          "notes": "Use train global arousal mean."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "Reference center-only baseline."
+        },
+        {
+          "method": "480_ReliabilityDisagreeCenterT8",
+          "overall_mae": 40.1212,
+          "valence_mae": 48.6468,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3012.6797,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "479_ReliabilityDisagreeCenterT4",
+          "overall_mae": 40.1429,
+          "valence_mae": 48.6902,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.458,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "467_ValenceAgreementHuberElasticT6",
+          "overall_mae": 40.1858,
+          "valence_mae": 48.7761,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3045.6379,
+          "notes": "Huber/Elastic agreement gate."
+        },
+        {
+          "method": "466_ValenceAgreementHuberRidgeT6",
+          "overall_mae": 40.2832,
+          "valence_mae": 48.9709,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3057.4397,
+          "notes": "Huber/Ridge agreement gate."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "483_ReliabilitySubjectStdShrink18",
+          "overall_mae": 57.5678,
+          "valence_mae": 59.1771,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4704.1274,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "482_ReliabilitySubjectStdShrink14",
+          "overall_mae": 57.5952,
+          "valence_mae": 59.2319,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4678.7231,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+          "overall_mae": 57.6374,
+          "valence_mae": 59.3162,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4710.5571,
+          "notes": "Shrink Huber/neuro disagreement."
+        },
+        {
+          "method": "511_StateTrialStartCenterBlend40",
+          "overall_mae": 57.6375,
+          "valence_mae": 59.3165,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4744.3975,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "484_ReliabilityTrialStdShrink8",
+          "overall_mae": 57.6557,
+          "valence_mae": 59.3528,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4703.7388,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "527_FinalNeg060SubjectStd14",
+          "overall_mae": 57.6661,
+          "valence_mae": 59.3737,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4711.2944,
+          "notes": "Final subject reliability shrink."
+        },
+        {
+          "method": "498_StateExp02Asym",
+          "overall_mae": 57.6707,
+          "valence_mae": 59.3828,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4734.999,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "506_StateSlopeLimit2ThenExp",
+          "overall_mae": 57.6761,
+          "valence_mae": 59.3938,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4740.7593,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "462_ValenceHuberNeuro82",
+          "overall_mae": 57.6934,
+          "valence_mae": 59.4283,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4749.4292,
+          "notes": "Huber plus neurovascular expert."
+        },
+        {
+          "method": "507_StateSlopeLimit4ThenExp",
+          "overall_mae": 57.7034,
+          "valence_mae": 59.4483,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4742.0083,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "510_StateTrialStartCenterBlend20",
+          "overall_mae": 57.7038,
+          "valence_mae": 59.449,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4747.2207,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "514_StateCenteredEMAResidual",
+          "overall_mae": 57.7062,
+          "valence_mae": 59.4539,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4740.3774,
+          "notes": "EMA on residual around center."
+        },
+        {
+          "method": "499_StateExp03Asym",
+          "overall_mae": 57.7077,
+          "valence_mae": 59.457,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4741.8423,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "521_FinalNeg060Exp03",
+          "overall_mae": 57.7077,
+          "valence_mae": 59.457,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4741.8423,
+          "notes": "Final asymmetry with EMA."
+        },
+        {
+          "method": "502_StateSlopeLimit2",
+          "overall_mae": 57.7101,
+          "valence_mae": 59.4617,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4746.2202,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "500_StateExp04Asym",
+          "overall_mae": 57.7317,
+          "valence_mae": 59.5049,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4745.9697,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "509_StateTrendDamp50",
+          "overall_mae": 57.7334,
+          "valence_mae": 59.5082,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4744.647,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "515_StateMedianExpBlend",
+          "overall_mae": 57.7351,
+          "valence_mae": 59.5118,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4745.9565,
+          "notes": "Blend median and EMA state filters."
+        },
+        {
+          "method": "530_FinalNeg060MedianExp",
+          "overall_mae": 57.7351,
+          "valence_mae": 59.5118,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4745.9565,
+          "notes": "Final median/EMA blend."
+        },
+        {
+          "method": "503_StateSlopeLimit4",
+          "overall_mae": 57.7449,
+          "valence_mae": 59.5313,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4748.0493,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "528_FinalNeg060Slope4",
+          "overall_mae": 57.7449,
+          "valence_mae": 59.5313,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4748.0493,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "497_StateSmooth13Asym",
+          "overall_mae": 57.7459,
+          "valence_mae": 59.5332,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4742.7393,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "508_StateTrendDamp30",
+          "overall_mae": 57.7472,
+          "valence_mae": 59.536,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4746.8159,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "496_StateSmooth11Asym",
+          "overall_mae": 57.7499,
+          "valence_mae": 59.5413,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4744.394,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "522_FinalNeg060Smooth9",
+          "overall_mae": 57.7555,
+          "valence_mae": 59.5525,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4746.3188,
+          "notes": "Final asymmetry with long smoothing."
+        },
+        {
+          "method": "533_FinalNeg060MeanShift",
+          "overall_mae": 57.7557,
+          "valence_mae": 59.5529,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4752.3936,
+          "notes": "Final light train mean shift."
+        },
+        {
+          "method": "504_StateSlopeLimit6",
+          "overall_mae": 57.7594,
+          "valence_mae": 59.5604,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4748.9116,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "529_FinalNeg060Slope6",
+          "overall_mae": 57.7594,
+          "valence_mae": 59.5604,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4748.9116,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "453_RAVC_ArousalNegativeOnlyScale10",
+          "overall_mae": 57.7646,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9458,
+          "overall_mse": 4749.521,
+          "notes": "Only negative arousal residual."
+        },
+        {
+          "method": "517_FinalNeg050",
+          "overall_mae": 57.7646,
+          "valence_mae": 59.5706,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.1714,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "516_FinalNeg055",
+          "overall_mae": 57.7678,
+          "valence_mae": 59.5771,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.3633,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "505_StateSlopeLimit8",
+          "overall_mae": 57.7686,
+          "valence_mae": 59.5787,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.1353,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "520_FinalPos105Neg060",
+          "overall_mae": 57.7706,
+          "valence_mae": 59.5828,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4766.8833,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 57.771,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.562,
+          "notes": "Current best physiological-only RAVC reference."
+        },
+        {
+          "method": "436_RAVC_CenterArousal",
+          "overall_mae": 57.771,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.562,
+          "notes": "Arousal probe reference: RAVC valence, center arousal."
+        },
+        {
+          "method": "486_ReliabilitySubjectNegMeanBrake",
+          "overall_mae": 57.771,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.562,
+          "notes": "Brake subjects with negative mean residual."
+        },
+        {
+          "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+          "overall_mae": 57.771,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.562,
+          "notes": "Stronger brake for negative subject residual."
+        },
+        {
+          "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+          "overall_mae": 57.771,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.562,
+          "notes": "Subject signed mean gate."
+        },
+        {
+          "method": "461_ValenceHuberEEG82",
+          "overall_mae": 57.774,
+          "valence_mae": 59.5895,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4730.8765,
+          "notes": "Huber plus EEG expert."
+        },
+        {
+          "method": "518_FinalNeg065",
+          "overall_mae": 57.7742,
+          "valence_mae": 59.5899,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4750.7676,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "485_ReliabilityTrialStdShrink12",
+          "overall_mae": 57.7751,
+          "valence_mae": 59.5916,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4724.0571,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "451_RAVC_ArousalSmallOnlyScale15",
+          "overall_mae": 57.776,
+          "valence_mae": 59.5835,
+          "arousal_mae": 55.9685,
+          "overall_mse": 4748.7485,
+          "notes": "Use arousal residual only when predicted residual is small."
+        },
+        {
+          "method": "501_StateMedianAsym",
+          "overall_mae": 57.7762,
+          "valence_mae": 59.5938,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4752.0562,
+          "notes": "Median state filter."
+        },
+        {
+          "method": "490_ReliabilityAbsResidualShrink28",
+          "overall_mae": 57.777,
+          "valence_mae": 59.5955,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4693.2524,
+          "notes": "Shrink very large residuals."
+        },
+        {
+          "method": "460_ValenceHuberFNIRS82",
+          "overall_mae": 57.7791,
+          "valence_mae": 59.5998,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4751.3604,
+          "notes": "Huber plus fNIRS expert."
+        },
+        {
+          "method": "519_FinalPos095Neg060",
+          "overall_mae": 57.7832,
+          "valence_mae": 59.608,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4736.5483,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "524_FinalNeg060Blend90",
+          "overall_mae": 57.7962,
+          "valence_mae": 59.6339,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4742.7847,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "525_FinalNeg060ElasticBlend90",
+          "overall_mae": 57.7969,
+          "valence_mae": 59.6354,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4742.9507,
+          "notes": "Final Huber/Elastic asymmetric blend."
+        },
+        {
+          "method": "438_RAVC_RidgeArousalScale0p03",
+          "overall_mae": 57.7987,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.0139,
+          "overall_mse": 4749.5806,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "531_FinalNeg060ArousalScale03",
+          "overall_mae": 57.7987,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.0139,
+          "overall_mse": 4749.5806,
+          "notes": "Final tiny arousal residual."
+        },
+        {
+          "method": "442_RAVC_HuberArousalScale0p03",
+          "overall_mae": 57.7993,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.0151,
+          "overall_mse": 4749.3101,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+          "overall_mae": 57.8035,
+          "valence_mae": 59.6486,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4753.6475,
+          "notes": "Shrink Huber/fNIRS disagreement."
+        },
+        {
+          "method": "532_FinalNeg060ArousalAgree05",
+          "overall_mae": 57.8122,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.041,
+          "overall_mse": 4749.4878,
+          "notes": "Final agreement-gated arousal residual."
+        },
+        {
+          "method": "448_RAVC_FNIRSArousalScale05",
+          "overall_mae": 57.815,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.0465,
+          "overall_mse": 4748.8096,
+          "notes": "Tiny fNIRS-only arousal residual."
+        },
+        {
+          "method": "447_RAVC_EEGArousalScale05",
+          "overall_mae": 57.8172,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.0508,
+          "overall_mse": 4751.8379,
+          "notes": "Tiny EEG-only arousal residual."
+        },
+        {
+          "method": "439_RAVC_RidgeArousalScale0p05",
+          "overall_mae": 57.8173,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.051,
+          "overall_mse": 4749.1519,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+          "overall_mae": 57.8177,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.052,
+          "overall_mse": 4748.958,
+          "notes": "Tiny average arousal residual."
+        },
+        {
+          "method": "443_RAVC_HuberArousalScale0p05",
+          "overall_mae": 57.8183,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.0531,
+          "overall_mse": 4748.7729,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "472_ValenceHuberBayes82",
+          "overall_mae": 57.827,
+          "valence_mae": 59.6954,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4736.3354,
+          "notes": "Huber plus Bayesian Ridge expert."
+        },
+        {
+          "method": "459_ValenceWeightedHRE_811",
+          "overall_mae": 57.8272,
+          "valence_mae": 59.6959,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4736.3975,
+          "notes": "More Huber-dominant fusion."
+        },
+        {
+          "method": "475_ValenceHuberRidgeMaxAgreement",
+          "overall_mae": 57.8391,
+          "valence_mae": 59.7198,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4757.0361,
+          "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+        },
+        {
+          "method": "526_FinalNeg060DisagreeShrink",
+          "overall_mae": 57.8427,
+          "valence_mae": 59.727,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4716.1753,
+          "notes": "Final disagreement shrink."
+        },
+        {
+          "method": "523_FinalNeg060Blend75",
+          "overall_mae": 57.8434,
+          "valence_mae": 59.7284,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4733.4302,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "471_ValencePCA8PCA16PCA24Median",
+          "overall_mae": 57.8444,
+          "valence_mae": 59.7304,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4762.4214,
+          "notes": "Low-rank dimension median ensemble."
+        },
+        {
+          "method": "450_RAVC_ArousalAgreementScale10",
+          "overall_mae": 57.8537,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.1239,
+          "overall_mse": 4749.2251,
+          "notes": "Use arousal residual only when Ridge and Huber agree."
+        },
+        {
+          "method": "458_ValenceWeightedHRE_721",
+          "overall_mae": 57.8621,
+          "valence_mae": 59.7656,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4731.0771,
+          "notes": "Weighted Huber-dominant fusion."
+        },
+        {
+          "method": "440_RAVC_RidgeArousalScale0p1",
+          "overall_mae": 57.8637,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.1439,
+          "overall_mse": 4748.8667,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "455_RAVC_ArousalMedianScale10",
+          "overall_mae": 57.8638,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.1442,
+          "overall_mse": 4748.876,
+          "notes": "Median-smoothed arousal residual."
+        },
+        {
+          "method": "454_RAVC_ArousalExpScale10",
+          "overall_mae": 57.8643,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.1451,
+          "overall_mse": 4749.3438,
+          "notes": "Smoothed arousal residual."
+        },
+        {
+          "method": "444_RAVC_HuberArousalScale0p1",
+          "overall_mae": 57.8658,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.1481,
+          "overall_mse": 4748.4683,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "512_StateLateResidualShrink20",
+          "overall_mae": 57.8689,
+          "valence_mae": 59.7793,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4735.0337,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "452_RAVC_ArousalPositiveOnlyScale10",
+          "overall_mae": 57.87,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.1566,
+          "overall_mse": 4749.9077,
+          "notes": "Only positive arousal residual."
+        },
+        {
+          "method": "469_ValenceAgreementHuberNeuroT8",
+          "overall_mae": 57.8725,
+          "valence_mae": 59.7866,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4733.2646,
+          "notes": "Huber/neurovascular agreement gate."
+        },
+        {
+          "method": "481_ReliabilitySubjectStdShrink10",
+          "overall_mae": 57.879,
+          "valence_mae": 59.7995,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4707.8838,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "489_ReliabilityAbsResidualShrink20",
+          "overall_mae": 57.8803,
+          "valence_mae": 59.802,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4706.9302,
+          "notes": "Shrink large residuals."
+        },
+        {
+          "method": "470_ValencePCA8PCA16PCA24Mean",
+          "overall_mae": 57.8843,
+          "valence_mae": 59.8101,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4771.4062,
+          "notes": "Low-rank dimension ensemble."
+        },
+        {
+          "method": "534_FinalNeg060PCAEnsemble",
+          "overall_mae": 57.8843,
+          "valence_mae": 59.8101,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4771.4062,
+          "notes": "Final low-rank ensemble."
+        },
+        {
+          "method": "478_ReliabilityDisagreeShrinkT8S70",
+          "overall_mae": 57.8864,
+          "valence_mae": 59.8144,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4685.6621,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "449_RAVC_NeuroArousalScale05",
+          "overall_mae": 57.893,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.2026,
+          "overall_mse": 4750.8521,
+          "notes": "Tiny neurovascular arousal residual."
+        },
+        {
+          "method": "441_RAVC_RidgeArousalScale0p15",
+          "overall_mae": 57.9125,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.2414,
+          "overall_mse": 4749.707,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "445_RAVC_HuberArousalScale0p15",
+          "overall_mae": 57.9172,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.2509,
+          "overall_mse": 4749.6489,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "468_ValenceAgreementHuberFNIRST8",
+          "overall_mae": 57.9356,
+          "valence_mae": 59.9128,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4770.7544,
+          "notes": "Huber/fNIRS agreement gate."
+        },
+        {
+          "method": "464_ValenceAllExpertTrimmed",
+          "overall_mae": 57.9416,
+          "valence_mae": 59.9247,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4717.0439,
+          "notes": "Trimmed mean over all physiological experts."
+        },
+        {
+          "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+          "overall_mae": 57.9473,
+          "valence_mae": 59.9361,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4703.6421,
+          "notes": "Shrink Huber/Elastic disagreement."
+        },
+        {
+          "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+          "overall_mae": 57.9485,
+          "valence_mae": 59.9385,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4720.3071,
+          "notes": "Light subject mean recentering."
+        },
+        {
+          "method": "513_StateLateResidualShrink40",
+          "overall_mae": 58.0018,
+          "valence_mae": 60.045,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4726.0845,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "456_ValenceMeanHuberRidgeElastic",
+          "overall_mae": 58.0299,
+          "valence_mae": 60.1013,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4722.3921,
+          "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "477_ReliabilityDisagreeShrinkT6S70",
+          "overall_mae": 58.0306,
+          "valence_mae": 60.1027,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4702.2344,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "476_ReliabilityDisagreeShrinkT4S70",
+          "overall_mae": 58.0346,
+          "valence_mae": 60.1106,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4703.3149,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "437_RAVC_TrainMeanArousal",
+          "overall_mae": 58.1747,
+          "valence_mae": 59.5835,
+          "arousal_mae": 56.7659,
+          "overall_mse": 4756.6367,
+          "notes": "Use train global arousal mean."
+        },
+        {
+          "method": "463_ValenceAllExpertMedian",
+          "overall_mae": 58.1923,
+          "valence_mae": 60.426,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4726.9663,
+          "notes": "Median over all physiological experts."
+        },
+        {
+          "method": "474_ValenceHuberRidgeMinMagnitude",
+          "overall_mae": 58.2077,
+          "valence_mae": 60.4569,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4727.8179,
+          "notes": "Conservative Huber/Ridge intersection."
+        },
+        {
+          "method": "457_ValenceMedianHuberRidgeElastic",
+          "overall_mae": 58.2369,
+          "valence_mae": 60.5153,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4728.8745,
+          "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "535_FinalNeg060ExpertMedian",
+          "overall_mae": 58.2369,
+          "valence_mae": 60.5153,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4728.8745,
+          "notes": "Final expert median."
+        },
+        {
+          "method": "473_ValenceHuberBayesElasticMedian",
+          "overall_mae": 58.2378,
+          "valence_mae": 60.5171,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4728.9653,
+          "notes": "Median of robust linear heads."
+        },
+        {
+          "method": "495_ReliabilitySubjectMeanToCenterMedium",
+          "overall_mae": 58.3435,
+          "valence_mae": 60.7286,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4733.1226,
+          "notes": "Medium subject mean recentering."
+        },
+        {
+          "method": "465_ValenceMinMagnitudeAll",
+          "overall_mae": 58.619,
+          "valence_mae": 61.2795,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4736.2554,
+          "notes": "Choose most conservative expert residual."
+        },
+        {
+          "method": "480_ReliabilityDisagreeCenterT8",
+          "overall_mae": 59.4569,
+          "valence_mae": 62.9553,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4836.5454,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "Reference center-only baseline."
+        },
+        {
+          "method": "467_ValenceAgreementHuberElasticT6",
+          "overall_mae": 59.9588,
+          "valence_mae": 63.9592,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4905.1377,
+          "notes": "Huber/Elastic agreement gate."
+        },
+        {
+          "method": "479_ReliabilityDisagreeCenterT4",
+          "overall_mae": 59.9831,
+          "valence_mae": 64.0077,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4915.1499,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "466_ValenceAgreementHuberRidgeT6",
+          "overall_mae": 59.9846,
+          "valence_mae": 64.0108,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4908.5625,
+          "notes": "Huber/Ridge agreement gate."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "468_ValenceAgreementHuberFNIRST8",
+          "overall_mae": 50.3605,
+          "valence_mae": 55.548,
+          "arousal_mae": 45.173,
+          "overall_mse": 4029.1951,
+          "notes": "Huber/fNIRS agreement gate."
+        },
+        {
+          "method": "511_StateTrialStartCenterBlend40",
+          "overall_mae": 50.4511,
+          "valence_mae": 55.7291,
+          "arousal_mae": 45.173,
+          "overall_mse": 4033.5574,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+          "overall_mae": 50.4918,
+          "valence_mae": 55.8106,
+          "arousal_mae": 45.173,
+          "overall_mse": 4030.168,
+          "notes": "Shrink Huber/fNIRS disagreement."
+        },
+        {
+          "method": "510_StateTrialStartCenterBlend20",
+          "overall_mae": 50.504,
+          "valence_mae": 55.835,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.8923,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "506_StateSlopeLimit2ThenExp",
+          "overall_mae": 50.5276,
+          "valence_mae": 55.8823,
+          "arousal_mae": 45.173,
+          "overall_mse": 4031.884,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "502_StateSlopeLimit2",
+          "overall_mae": 50.5367,
+          "valence_mae": 55.9004,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.3145,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "452_RAVC_ArousalPositiveOnlyScale10",
+          "overall_mae": 50.5374,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.1327,
+          "overall_mse": 4028.3333,
+          "notes": "Only positive arousal residual."
+        },
+        {
+          "method": "498_StateExp02Asym",
+          "overall_mae": 50.539,
+          "valence_mae": 55.905,
+          "arousal_mae": 45.173,
+          "overall_mse": 4030.5508,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "520_FinalPos105Neg060",
+          "overall_mae": 50.5396,
+          "valence_mae": 55.9063,
+          "arousal_mae": 45.173,
+          "overall_mse": 4048.7122,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "514_StateCenteredEMAResidual",
+          "overall_mae": 50.5419,
+          "valence_mae": 55.9108,
+          "arousal_mae": 45.173,
+          "overall_mse": 4032.7383,
+          "notes": "EMA on residual around center."
+        },
+        {
+          "method": "507_StateSlopeLimit4ThenExp",
+          "overall_mae": 50.5479,
+          "valence_mae": 55.9228,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.1257,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "509_StateTrendDamp50",
+          "overall_mae": 50.5479,
+          "valence_mae": 55.9227,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.2158,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "515_StateMedianExpBlend",
+          "overall_mae": 50.5503,
+          "valence_mae": 55.9275,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.5098,
+          "notes": "Blend median and EMA state filters."
+        },
+        {
+          "method": "530_FinalNeg060MedianExp",
+          "overall_mae": 50.5503,
+          "valence_mae": 55.9275,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.5098,
+          "notes": "Final median/EMA blend."
+        },
+        {
+          "method": "499_StateExp03Asym",
+          "overall_mae": 50.5505,
+          "valence_mae": 55.9279,
+          "arousal_mae": 45.173,
+          "overall_mse": 4033.5801,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "521_FinalNeg060Exp03",
+          "overall_mae": 50.5505,
+          "valence_mae": 55.9279,
+          "arousal_mae": 45.173,
+          "overall_mse": 4033.5801,
+          "notes": "Final asymmetry with EMA."
+        },
+        {
+          "method": "517_FinalNeg050",
+          "overall_mae": 50.5512,
+          "valence_mae": 55.9295,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5613,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "508_StateTrendDamp30",
+          "overall_mae": 50.5514,
+          "valence_mae": 55.9298,
+          "arousal_mae": 45.173,
+          "overall_mse": 4035.0576,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "497_StateSmooth13Asym",
+          "overall_mae": 50.5518,
+          "valence_mae": 55.9306,
+          "arousal_mae": 45.173,
+          "overall_mse": 4033.2246,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "496_StateSmooth11Asym",
+          "overall_mae": 50.5519,
+          "valence_mae": 55.9309,
+          "arousal_mae": 45.173,
+          "overall_mse": 4033.7988,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "522_FinalNeg060Smooth9",
+          "overall_mae": 50.5529,
+          "valence_mae": 55.9328,
+          "arousal_mae": 45.173,
+          "overall_mse": 4034.5554,
+          "notes": "Final asymmetry with long smoothing."
+        },
+        {
+          "method": "475_ValenceHuberRidgeMaxAgreement",
+          "overall_mae": 50.5536,
+          "valence_mae": 55.9342,
+          "arousal_mae": 45.173,
+          "overall_mse": 4035.9241,
+          "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+        },
+        {
+          "method": "516_FinalNeg055",
+          "overall_mae": 50.5544,
+          "valence_mae": 55.9358,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5725,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "500_StateExp04Asym",
+          "overall_mae": 50.5565,
+          "valence_mae": 55.9401,
+          "arousal_mae": 45.173,
+          "overall_mse": 4035.324,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "501_StateMedianAsym",
+          "overall_mae": 50.5568,
+          "valence_mae": 55.9405,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.614,
+          "notes": "Median state filter."
+        },
+        {
+          "method": "503_StateSlopeLimit4",
+          "overall_mae": 50.5573,
+          "valence_mae": 55.9416,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5742,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "528_FinalNeg060Slope4",
+          "overall_mae": 50.5573,
+          "valence_mae": 55.9416,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5742,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Current best physiological-only RAVC reference."
+        },
+        {
+          "method": "436_RAVC_CenterArousal",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Arousal probe reference: RAVC valence, center arousal."
+        },
+        {
+          "method": "486_ReliabilitySubjectNegMeanBrake",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Brake subjects with negative mean residual."
+        },
+        {
+          "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Stronger brake for negative subject residual."
+        },
+        {
+          "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Subject signed mean gate."
+        },
+        {
+          "method": "504_StateSlopeLimit6",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "505_StateSlopeLimit8",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "529_FinalNeg060Slope6",
+          "overall_mae": 50.5575,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.5898,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "518_FinalNeg065",
+          "overall_mae": 50.5607,
+          "valence_mae": 55.9483,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.614,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "525_FinalNeg060ElasticBlend90",
+          "overall_mae": 50.5636,
+          "valence_mae": 55.9541,
+          "arousal_mae": 45.173,
+          "overall_mse": 4029.344,
+          "notes": "Final Huber/Elastic asymmetric blend."
+        },
+        {
+          "method": "449_RAVC_NeuroArousalScale05",
+          "overall_mae": 50.5639,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.1857,
+          "overall_mse": 4030.6589,
+          "notes": "Tiny neurovascular arousal residual."
+        },
+        {
+          "method": "524_FinalNeg060Blend90",
+          "overall_mae": 50.5646,
+          "valence_mae": 55.9561,
+          "arousal_mae": 45.173,
+          "overall_mse": 4029.3591,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "447_RAVC_EEGArousalScale05",
+          "overall_mae": 50.5649,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.1877,
+          "overall_mse": 4035.3652,
+          "notes": "Tiny EEG-only arousal residual."
+        },
+        {
+          "method": "533_FinalNeg060MeanShift",
+          "overall_mae": 50.5699,
+          "valence_mae": 55.9668,
+          "arousal_mae": 45.173,
+          "overall_mse": 4042.2285,
+          "notes": "Final light train mean shift."
+        },
+        {
+          "method": "438_RAVC_RidgeArousalScale0p03",
+          "overall_mae": 50.5701,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.1981,
+          "overall_mse": 4035.0486,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "531_FinalNeg060ArousalScale03",
+          "overall_mae": 50.5701,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.1981,
+          "overall_mse": 4035.0486,
+          "notes": "Final tiny arousal residual."
+        },
+        {
+          "method": "462_ValenceHuberNeuro82",
+          "overall_mae": 50.5707,
+          "valence_mae": 55.9684,
+          "arousal_mae": 45.173,
+          "overall_mse": 4029.155,
+          "notes": "Huber plus neurovascular expert."
+        },
+        {
+          "method": "448_RAVC_FNIRSArousalScale05",
+          "overall_mae": 50.5715,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2009,
+          "overall_mse": 4032.1064,
+          "notes": "Tiny fNIRS-only arousal residual."
+        },
+        {
+          "method": "442_RAVC_HuberArousalScale0p03",
+          "overall_mae": 50.5734,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2047,
+          "overall_mse": 4034.7703,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "459_ValenceWeightedHRE_811",
+          "overall_mae": 50.5744,
+          "valence_mae": 55.9757,
+          "arousal_mae": 45.173,
+          "overall_mse": 4022.7266,
+          "notes": "More Huber-dominant fusion."
+        },
+        {
+          "method": "472_ValenceHuberBayes82",
+          "overall_mae": 50.5751,
+          "valence_mae": 55.9771,
+          "arousal_mae": 45.173,
+          "overall_mse": 4022.7402,
+          "notes": "Huber plus Bayesian Ridge expert."
+        },
+        {
+          "method": "471_ValencePCA8PCA16PCA24Median",
+          "overall_mae": 50.5763,
+          "valence_mae": 55.9795,
+          "arousal_mae": 45.173,
+          "overall_mse": 4039.832,
+          "notes": "Low-rank dimension median ensemble."
+        },
+        {
+          "method": "439_RAVC_RidgeArousalScale0p05",
+          "overall_mae": 50.5784,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2148,
+          "overall_mse": 4034.0742,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "532_FinalNeg060ArousalAgree05",
+          "overall_mae": 50.5804,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2188,
+          "overall_mse": 4034.959,
+          "notes": "Final agreement-gated arousal residual."
+        },
+        {
+          "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+          "overall_mae": 50.5811,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2202,
+          "overall_mse": 4033.8538,
+          "notes": "Tiny average arousal residual."
+        },
+        {
+          "method": "523_FinalNeg060Blend75",
+          "overall_mae": 50.5812,
+          "valence_mae": 55.9893,
+          "arousal_mae": 45.173,
+          "overall_mse": 4019.666,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "443_RAVC_HuberArousalScale0p05",
+          "overall_mae": 50.584,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2258,
+          "overall_mse": 4033.637,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "458_ValenceWeightedHRE_721",
+          "overall_mae": 50.5862,
+          "valence_mae": 55.9993,
+          "arousal_mae": 45.173,
+          "overall_mse": 4016.7239,
+          "notes": "Weighted Huber-dominant fusion."
+        },
+        {
+          "method": "519_FinalPos095Neg060",
+          "overall_mae": 50.5929,
+          "valence_mae": 56.0127,
+          "arousal_mae": 45.173,
+          "overall_mse": 4026.0046,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "460_ValenceHuberFNIRS82",
+          "overall_mae": 50.5984,
+          "valence_mae": 56.0238,
+          "arousal_mae": 45.173,
+          "overall_mse": 4041.7566,
+          "notes": "Huber plus fNIRS expert."
+        },
+        {
+          "method": "455_RAVC_ArousalMedianScale10",
+          "overall_mae": 50.5992,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2563,
+          "overall_mse": 4031.8044,
+          "notes": "Median-smoothed arousal residual."
+        },
+        {
+          "method": "440_RAVC_RidgeArousalScale0p1",
+          "overall_mae": 50.5994,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2567,
+          "overall_mse": 4031.8252,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "454_RAVC_ArousalExpScale10",
+          "overall_mae": 50.6004,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2589,
+          "overall_mse": 4031.968,
+          "notes": "Smoothed arousal residual."
+        },
+        {
+          "method": "527_FinalNeg060SubjectStd14",
+          "overall_mae": 50.6029,
+          "valence_mae": 56.0328,
+          "arousal_mae": 45.173,
+          "overall_mse": 4029.0559,
+          "notes": "Final subject reliability shrink."
+        },
+        {
+          "method": "450_RAVC_ArousalAgreementScale10",
+          "overall_mae": 50.6034,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2648,
+          "overall_mse": 4033.5066,
+          "notes": "Use arousal residual only when Ridge and Huber agree."
+        },
+        {
+          "method": "470_ValencePCA8PCA16PCA24Mean",
+          "overall_mae": 50.6103,
+          "valence_mae": 56.0476,
+          "arousal_mae": 45.173,
+          "overall_mse": 4042.0859,
+          "notes": "Low-rank dimension ensemble."
+        },
+        {
+          "method": "534_FinalNeg060PCAEnsemble",
+          "overall_mae": 50.6103,
+          "valence_mae": 56.0476,
+          "arousal_mae": 45.173,
+          "overall_mse": 4042.0859,
+          "notes": "Final low-rank ensemble."
+        },
+        {
+          "method": "444_RAVC_HuberArousalScale0p1",
+          "overall_mae": 50.6104,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2788,
+          "overall_mse": 4031.084,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "451_RAVC_ArousalSmallOnlyScale15",
+          "overall_mae": 50.6167,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2913,
+          "overall_mse": 4037.7012,
+          "notes": "Use arousal residual only when predicted residual is small."
+        },
+        {
+          "method": "453_RAVC_ArousalNegativeOnlyScale10",
+          "overall_mae": 50.6195,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.297,
+          "overall_mse": 4040.082,
+          "notes": "Only negative arousal residual."
+        },
+        {
+          "method": "441_RAVC_RidgeArousalScale0p15",
+          "overall_mae": 50.6204,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.2987,
+          "overall_mse": 4029.8438,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+          "overall_mae": 50.6217,
+          "valence_mae": 56.0703,
+          "arousal_mae": 45.173,
+          "overall_mse": 4001.8928,
+          "notes": "Light subject mean recentering."
+        },
+        {
+          "method": "456_ValenceMeanHuberRidgeElastic",
+          "overall_mae": 50.6345,
+          "valence_mae": 56.096,
+          "arousal_mae": 45.173,
+          "overall_mse": 3999.9207,
+          "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "445_RAVC_HuberArousalScale0p15",
+          "overall_mae": 50.637,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.332,
+          "overall_mse": 4028.9297,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "485_ReliabilityTrialStdShrink12",
+          "overall_mae": 50.6436,
+          "valence_mae": 56.1141,
+          "arousal_mae": 45.173,
+          "overall_mse": 4027.4375,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "482_ReliabilitySubjectStdShrink14",
+          "overall_mae": 50.6553,
+          "valence_mae": 56.1377,
+          "arousal_mae": 45.173,
+          "overall_mse": 4024.2913,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "483_ReliabilitySubjectStdShrink18",
+          "overall_mae": 50.6553,
+          "valence_mae": 56.1377,
+          "arousal_mae": 45.173,
+          "overall_mse": 4024.2913,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "484_ReliabilityTrialStdShrink8",
+          "overall_mae": 50.6587,
+          "valence_mae": 56.1443,
+          "arousal_mae": 45.173,
+          "overall_mse": 4016.426,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "437_RAVC_TrainMeanArousal",
+          "overall_mae": 50.6649,
+          "valence_mae": 55.942,
+          "arousal_mae": 45.3878,
+          "overall_mse": 4003.3125,
+          "notes": "Use train global arousal mean."
+        },
+        {
+          "method": "461_ValenceHuberEEG82",
+          "overall_mae": 50.68,
+          "valence_mae": 56.1871,
+          "arousal_mae": 45.173,
+          "overall_mse": 4023.6687,
+          "notes": "Huber plus EEG expert."
+        },
+        {
+          "method": "474_ValenceHuberRidgeMinMagnitude",
+          "overall_mae": 50.6918,
+          "valence_mae": 56.2107,
+          "arousal_mae": 45.173,
+          "overall_mse": 3992.1179,
+          "notes": "Conservative Huber/Ridge intersection."
+        },
+        {
+          "method": "464_ValenceAllExpertTrimmed",
+          "overall_mae": 50.6923,
+          "valence_mae": 56.2116,
+          "arousal_mae": 45.173,
+          "overall_mse": 4000.325,
+          "notes": "Trimmed mean over all physiological experts."
+        },
+        {
+          "method": "457_ValenceMedianHuberRidgeElastic",
+          "overall_mae": 50.6966,
+          "valence_mae": 56.2202,
+          "arousal_mae": 45.173,
+          "overall_mse": 3991.6746,
+          "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "535_FinalNeg060ExpertMedian",
+          "overall_mae": 50.6966,
+          "valence_mae": 56.2202,
+          "arousal_mae": 45.173,
+          "overall_mse": 3991.6746,
+          "notes": "Final expert median."
+        },
+        {
+          "method": "473_ValenceHuberBayesElasticMedian",
+          "overall_mae": 50.6968,
+          "valence_mae": 56.2207,
+          "arousal_mae": 45.173,
+          "overall_mse": 3991.678,
+          "notes": "Median of robust linear heads."
+        },
+        {
+          "method": "512_StateLateResidualShrink20",
+          "overall_mae": 50.7099,
+          "valence_mae": 56.2468,
+          "arousal_mae": 45.173,
+          "overall_mse": 4023.2097,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "526_FinalNeg060DisagreeShrink",
+          "overall_mae": 50.7229,
+          "valence_mae": 56.2728,
+          "arousal_mae": 45.173,
+          "overall_mse": 4012.6143,
+          "notes": "Final disagreement shrink."
+        },
+        {
+          "method": "463_ValenceAllExpertMedian",
+          "overall_mae": 50.739,
+          "valence_mae": 56.3051,
+          "arousal_mae": 45.173,
+          "overall_mse": 3997.8359,
+          "notes": "Median over all physiological experts."
+        },
+        {
+          "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+          "overall_mae": 50.7429,
+          "valence_mae": 56.3129,
+          "arousal_mae": 45.173,
+          "overall_mse": 4042.6887,
+          "notes": "Shrink Huber/neuro disagreement."
+        },
+        {
+          "method": "490_ReliabilityAbsResidualShrink28",
+          "overall_mae": 50.7584,
+          "valence_mae": 56.3438,
+          "arousal_mae": 45.173,
+          "overall_mse": 4015.4124,
+          "notes": "Shrink very large residuals."
+        },
+        {
+          "method": "489_ReliabilityAbsResidualShrink20",
+          "overall_mae": 50.7619,
+          "valence_mae": 56.3508,
+          "arousal_mae": 45.173,
+          "overall_mse": 4007.752,
+          "notes": "Shrink large residuals."
+        },
+        {
+          "method": "481_ReliabilitySubjectStdShrink10",
+          "overall_mae": 50.8087,
+          "valence_mae": 56.4445,
+          "arousal_mae": 45.173,
+          "overall_mse": 4008.2371,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "495_ReliabilitySubjectMeanToCenterMedium",
+          "overall_mae": 50.8248,
+          "valence_mae": 56.4766,
+          "arousal_mae": 45.173,
+          "overall_mse": 3992.7285,
+          "notes": "Medium subject mean recentering."
+        },
+        {
+          "method": "476_ReliabilityDisagreeShrinkT4S70",
+          "overall_mae": 50.8368,
+          "valence_mae": 56.5005,
+          "arousal_mae": 45.173,
+          "overall_mse": 3995.6355,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+          "overall_mae": 50.8422,
+          "valence_mae": 56.5113,
+          "arousal_mae": 45.173,
+          "overall_mse": 4003.4954,
+          "notes": "Shrink Huber/Elastic disagreement."
+        },
+        {
+          "method": "478_ReliabilityDisagreeShrinkT8S70",
+          "overall_mae": 50.8593,
+          "valence_mae": 56.5456,
+          "arousal_mae": 45.173,
+          "overall_mse": 4010.9883,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "513_StateLateResidualShrink40",
+          "overall_mae": 50.871,
+          "valence_mae": 56.5689,
+          "arousal_mae": 45.173,
+          "overall_mse": 4014.4893,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "477_ReliabilityDisagreeShrinkT6S70",
+          "overall_mae": 50.9133,
+          "valence_mae": 56.6536,
+          "arousal_mae": 45.173,
+          "overall_mse": 4001.7961,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "465_ValenceMinMagnitudeAll",
+          "overall_mae": 51.0687,
+          "valence_mae": 56.9644,
+          "arousal_mae": 45.173,
+          "overall_mse": 4020.8152,
+          "notes": "Choose most conservative expert residual."
+        },
+        {
+          "method": "469_ValenceAgreementHuberNeuroT8",
+          "overall_mae": 51.429,
+          "valence_mae": 57.685,
+          "arousal_mae": 45.173,
+          "overall_mse": 4139.5913,
+          "notes": "Huber/neurovascular agreement gate."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 51.7127,
+          "valence_mae": 58.2524,
+          "arousal_mae": 45.173,
+          "overall_mse": 4117.0942,
+          "notes": "Reference center-only baseline."
+        },
+        {
+          "method": "479_ReliabilityDisagreeCenterT4",
+          "overall_mae": 51.803,
+          "valence_mae": 58.433,
+          "arousal_mae": 45.173,
+          "overall_mse": 4114.6523,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "480_ReliabilityDisagreeCenterT8",
+          "overall_mae": 51.8626,
+          "valence_mae": 58.5522,
+          "arousal_mae": 45.173,
+          "overall_mse": 4123.436,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "467_ValenceAgreementHuberElasticT6",
+          "overall_mae": 51.9563,
+          "valence_mae": 58.7396,
+          "arousal_mae": 45.173,
+          "overall_mse": 4118.2051,
+          "notes": "Huber/Elastic agreement gate."
+        },
+        {
+          "method": "466_ValenceAgreementHuberRidgeT6",
+          "overall_mae": 51.976,
+          "valence_mae": 58.779,
+          "arousal_mae": 45.173,
+          "overall_mse": 4120.2778,
+          "notes": "Huber/Ridge agreement gate."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "483_ReliabilitySubjectStdShrink18",
+          "overall_mae": 39.8565,
+          "valence_mae": 39.7961,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2537.2051,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+          "overall_mae": 39.8779,
+          "valence_mae": 39.839,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2524.8203,
+          "notes": "Shrink Huber/neuro disagreement."
+        },
+        {
+          "method": "482_ReliabilitySubjectStdShrink14",
+          "overall_mae": 39.894,
+          "valence_mae": 39.8712,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2529.218,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "511_StateTrialStartCenterBlend40",
+          "overall_mae": 39.9175,
+          "valence_mae": 39.9181,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2544.7468,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "527_FinalNeg060SubjectStd14",
+          "overall_mae": 39.9289,
+          "valence_mae": 39.941,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2536.3967,
+          "notes": "Final subject reliability shrink."
+        },
+        {
+          "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+          "overall_mae": 39.9353,
+          "valence_mae": 39.9538,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2506.8818,
+          "notes": "Light subject mean recentering."
+        },
+        {
+          "method": "461_ValenceHuberEEG82",
+          "overall_mae": 39.9581,
+          "valence_mae": 39.9994,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2536.6389,
+          "notes": "Huber plus EEG expert."
+        },
+        {
+          "method": "458_ValenceWeightedHRE_721",
+          "overall_mae": 39.9696,
+          "valence_mae": 40.0223,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2525.4702,
+          "notes": "Weighted Huber-dominant fusion."
+        },
+        {
+          "method": "510_StateTrialStartCenterBlend20",
+          "overall_mae": 39.9709,
+          "valence_mae": 40.025,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.1853,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "523_FinalNeg060Blend75",
+          "overall_mae": 39.9754,
+          "valence_mae": 40.0339,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2528.7024,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "485_ReliabilityTrialStdShrink12",
+          "overall_mae": 39.9769,
+          "valence_mae": 40.037,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2538.9919,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "459_ValenceWeightedHRE_811",
+          "overall_mae": 39.9824,
+          "valence_mae": 40.0479,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2532.2947,
+          "notes": "More Huber-dominant fusion."
+        },
+        {
+          "method": "472_ValenceHuberBayes82",
+          "overall_mae": 39.9827,
+          "valence_mae": 40.0485,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2532.2371,
+          "notes": "Huber plus Bayesian Ridge expert."
+        },
+        {
+          "method": "525_FinalNeg060ElasticBlend90",
+          "overall_mae": 40.0012,
+          "valence_mae": 40.0856,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2539.8459,
+          "notes": "Final Huber/Elastic asymmetric blend."
+        },
+        {
+          "method": "524_FinalNeg060Blend90",
+          "overall_mae": 40.0016,
+          "valence_mae": 40.0864,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2539.7417,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "456_ValenceMeanHuberRidgeElastic",
+          "overall_mae": 40.0081,
+          "valence_mae": 40.0994,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2506.7798,
+          "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "517_FinalNeg050",
+          "overall_mae": 40.0094,
+          "valence_mae": 40.1019,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2545.3127,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "519_FinalPos095Neg060",
+          "overall_mae": 40.0099,
+          "valence_mae": 40.1031,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2536.7063,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "450_RAVC_ArousalAgreementScale10",
+          "overall_mae": 40.0102,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.886,
+          "overall_mse": 2539.7971,
+          "notes": "Use arousal residual only when Ridge and Huber agree."
+        },
+        {
+          "method": "452_RAVC_ArousalPositiveOnlyScale10",
+          "overall_mae": 40.0103,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.8862,
+          "overall_mse": 2540.7732,
+          "notes": "Only positive arousal residual."
+        },
+        {
+          "method": "448_RAVC_FNIRSArousalScale05",
+          "overall_mae": 40.0127,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.891,
+          "overall_mse": 2543.9822,
+          "notes": "Tiny fNIRS-only arousal residual."
+        },
+        {
+          "method": "496_StateSmooth11Asym",
+          "overall_mae": 40.0159,
+          "valence_mae": 40.1151,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2544.5352,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "497_StateSmooth13Asym",
+          "overall_mae": 40.016,
+          "valence_mae": 40.1152,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2543.7058,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "516_FinalNeg055",
+          "overall_mae": 40.0175,
+          "valence_mae": 40.1181,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.6533,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "522_FinalNeg060Smooth9",
+          "overall_mae": 40.0175,
+          "valence_mae": 40.1181,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2545.5374,
+          "notes": "Final asymmetry with long smoothing."
+        },
+        {
+          "method": "532_FinalNeg060ArousalAgree05",
+          "overall_mae": 40.0179,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9014,
+          "overall_mse": 2543.7898,
+          "notes": "Final agreement-gated arousal residual."
+        },
+        {
+          "method": "503_StateSlopeLimit4",
+          "overall_mae": 40.0209,
+          "valence_mae": 40.1251,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2547.3528,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "528_FinalNeg060Slope4",
+          "overall_mae": 40.0209,
+          "valence_mae": 40.1251,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2547.3528,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "509_StateTrendDamp50",
+          "overall_mae": 40.0226,
+          "valence_mae": 40.1283,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.0073,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "504_StateSlopeLimit6",
+          "overall_mae": 40.023,
+          "valence_mae": 40.1291,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2547.7979,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "508_StateTrendDamp30",
+          "overall_mae": 40.023,
+          "valence_mae": 40.1292,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.675,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "529_FinalNeg060Slope6",
+          "overall_mae": 40.023,
+          "valence_mae": 40.1291,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2547.7979,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "505_StateSlopeLimit8",
+          "overall_mae": 40.0242,
+          "valence_mae": 40.1316,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2547.9246,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+          "overall_mae": 40.0247,
+          "valence_mae": 40.1326,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2544.5862,
+          "notes": "Shrink Huber/fNIRS disagreement."
+        },
+        {
+          "method": "507_StateSlopeLimit4ThenExp",
+          "overall_mae": 40.0252,
+          "valence_mae": 40.1335,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2545.7219,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 40.0256,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.0098,
+          "notes": "Current best physiological-only RAVC reference."
+        },
+        {
+          "method": "436_RAVC_CenterArousal",
+          "overall_mae": 40.0256,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.0098,
+          "notes": "Arousal probe reference: RAVC valence, center arousal."
+        },
+        {
+          "method": "486_ReliabilitySubjectNegMeanBrake",
+          "overall_mae": 40.0256,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.0098,
+          "notes": "Brake subjects with negative mean residual."
+        },
+        {
+          "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+          "overall_mae": 40.0256,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.0098,
+          "notes": "Stronger brake for negative subject residual."
+        },
+        {
+          "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+          "overall_mae": 40.0256,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.0098,
+          "notes": "Subject signed mean gate."
+        },
+        {
+          "method": "502_StateSlopeLimit2",
+          "overall_mae": 40.0262,
+          "valence_mae": 40.1356,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.4045,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "515_StateMedianExpBlend",
+          "overall_mae": 40.0264,
+          "valence_mae": 40.136,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.5801,
+          "notes": "Blend median and EMA state filters."
+        },
+        {
+          "method": "530_FinalNeg060MedianExp",
+          "overall_mae": 40.0264,
+          "valence_mae": 40.136,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.5801,
+          "notes": "Final median/EMA blend."
+        },
+        {
+          "method": "514_StateCenteredEMAResidual",
+          "overall_mae": 40.0266,
+          "valence_mae": 40.1364,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2545.1169,
+          "notes": "EMA on residual around center."
+        },
+        {
+          "method": "501_StateMedianAsym",
+          "overall_mae": 40.0296,
+          "valence_mae": 40.1423,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.2795,
+          "notes": "Median state filter."
+        },
+        {
+          "method": "500_StateExp04Asym",
+          "overall_mae": 40.0317,
+          "valence_mae": 40.1465,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2547.4524,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "475_ValenceHuberRidgeMaxAgreement",
+          "overall_mae": 40.0318,
+          "valence_mae": 40.1467,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2549.0525,
+          "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+        },
+        {
+          "method": "471_ValencePCA8PCA16PCA24Median",
+          "overall_mae": 40.0319,
+          "valence_mae": 40.147,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2548.0847,
+          "notes": "Low-rank dimension median ensemble."
+        },
+        {
+          "method": "438_RAVC_RidgeArousalScale0p03",
+          "overall_mae": 40.0328,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9312,
+          "overall_mse": 2546.814,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "442_RAVC_HuberArousalScale0p03",
+          "overall_mae": 40.0328,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9314,
+          "overall_mse": 2546.6228,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "531_FinalNeg060ArousalScale03",
+          "overall_mae": 40.0328,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9312,
+          "overall_mse": 2546.814,
+          "notes": "Final tiny arousal residual."
+        },
+        {
+          "method": "499_StateExp03Asym",
+          "overall_mae": 40.0329,
+          "valence_mae": 40.149,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.2859,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "521_FinalNeg060Exp03",
+          "overall_mae": 40.0329,
+          "valence_mae": 40.149,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2546.2859,
+          "notes": "Final asymmetry with EMA."
+        },
+        {
+          "method": "518_FinalNeg065",
+          "overall_mae": 40.0337,
+          "valence_mae": 40.1505,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2549.3826,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "533_FinalNeg060MeanShift",
+          "overall_mae": 40.0349,
+          "valence_mae": 40.153,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2553.4258,
+          "notes": "Final light train mean shift."
+        },
+        {
+          "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+          "overall_mae": 40.0374,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9405,
+          "overall_mse": 2545.9219,
+          "notes": "Tiny average arousal residual."
+        },
+        {
+          "method": "439_RAVC_RidgeArousalScale0p05",
+          "overall_mae": 40.0376,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9408,
+          "overall_mse": 2546.072,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "443_RAVC_HuberArousalScale0p05",
+          "overall_mae": 40.0377,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9411,
+          "overall_mse": 2545.7776,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "506_StateSlopeLimit2ThenExp",
+          "overall_mae": 40.0377,
+          "valence_mae": 40.1585,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2545.4241,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "460_ValenceHuberFNIRS82",
+          "overall_mae": 40.0393,
+          "valence_mae": 40.1618,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2540.5833,
+          "notes": "Huber plus fNIRS expert."
+        },
+        {
+          "method": "498_StateExp02Asym",
+          "overall_mae": 40.0441,
+          "valence_mae": 40.1714,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2544.7104,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "455_RAVC_ArousalMedianScale10",
+          "overall_mae": 40.0492,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.964,
+          "overall_mse": 2544.387,
+          "notes": "Median-smoothed arousal residual."
+        },
+        {
+          "method": "454_RAVC_ArousalExpScale10",
+          "overall_mae": 40.0496,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.965,
+          "overall_mse": 2544.5759,
+          "notes": "Smoothed arousal residual."
+        },
+        {
+          "method": "440_RAVC_RidgeArousalScale0p1",
+          "overall_mae": 40.0497,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.965,
+          "overall_mse": 2544.4102,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "444_RAVC_HuberArousalScale0p1",
+          "overall_mae": 40.0501,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9659,
+          "overall_mse": 2543.9441,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "520_FinalPos105Neg060",
+          "overall_mae": 40.0523,
+          "valence_mae": 40.1879,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2561.0212,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "447_RAVC_EEGArousalScale05",
+          "overall_mae": 40.0526,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9709,
+          "overall_mse": 2547.9512,
+          "notes": "Tiny EEG-only arousal residual."
+        },
+        {
+          "method": "526_FinalNeg060DisagreeShrink",
+          "overall_mae": 40.055,
+          "valence_mae": 40.1932,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2525.9207,
+          "notes": "Final disagreement shrink."
+        },
+        {
+          "method": "484_ReliabilityTrialStdShrink8",
+          "overall_mae": 40.0584,
+          "valence_mae": 40.1999,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2553.8772,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "481_ReliabilitySubjectStdShrink10",
+          "overall_mae": 40.0602,
+          "valence_mae": 40.2036,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2524.8401,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "441_RAVC_RidgeArousalScale0p15",
+          "overall_mae": 40.062,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9897,
+          "overall_mse": 2543.0247,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "445_RAVC_HuberArousalScale0p15",
+          "overall_mae": 40.0628,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9912,
+          "overall_mse": 2542.5088,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "470_ValencePCA8PCA16PCA24Mean",
+          "overall_mae": 40.0631,
+          "valence_mae": 40.2095,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2538.4231,
+          "notes": "Low-rank dimension ensemble."
+        },
+        {
+          "method": "534_FinalNeg060PCAEnsemble",
+          "overall_mae": 40.0631,
+          "valence_mae": 40.2095,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2538.4231,
+          "notes": "Final low-rank ensemble."
+        },
+        {
+          "method": "453_RAVC_ArousalNegativeOnlyScale10",
+          "overall_mae": 40.065,
+          "valence_mae": 40.1343,
+          "arousal_mae": 39.9956,
+          "overall_mse": 2551.6472,
+          "notes": "Only negative arousal residual."
+        },
+        {
+          "method": "451_RAVC_ArousalSmallOnlyScale15",
+          "overall_mae": 40.0698,
+          "valence_mae": 40.1343,
+          "arousal_mae": 40.0053,
+          "overall_mse": 2547.7769,
+          "notes": "Use arousal residual only when predicted residual is small."
+        },
+        {
+          "method": "512_StateLateResidualShrink20",
+          "overall_mae": 40.0715,
+          "valence_mae": 40.2263,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2534.3936,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "462_ValenceHuberNeuro82",
+          "overall_mae": 40.075,
+          "valence_mae": 40.2332,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2555.4685,
+          "notes": "Huber plus neurovascular expert."
+        },
+        {
+          "method": "449_RAVC_NeuroArousalScale05",
+          "overall_mae": 40.081,
+          "valence_mae": 40.1343,
+          "arousal_mae": 40.0276,
+          "overall_mse": 2548.7761,
+          "notes": "Tiny neurovascular arousal residual."
+        },
+        {
+          "method": "464_ValenceAllExpertTrimmed",
+          "overall_mae": 40.0853,
+          "valence_mae": 40.2538,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2513.0405,
+          "notes": "Trimmed mean over all physiological experts."
+        },
+        {
+          "method": "474_ValenceHuberRidgeMinMagnitude",
+          "overall_mae": 40.1216,
+          "valence_mae": 40.3264,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2495.9492,
+          "notes": "Conservative Huber/Ridge intersection."
+        },
+        {
+          "method": "457_ValenceMedianHuberRidgeElastic",
+          "overall_mae": 40.1328,
+          "valence_mae": 40.3487,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2497.9524,
+          "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "535_FinalNeg060ExpertMedian",
+          "overall_mae": 40.1328,
+          "valence_mae": 40.3487,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2497.9524,
+          "notes": "Final expert median."
+        },
+        {
+          "method": "473_ValenceHuberBayesElasticMedian",
+          "overall_mae": 40.1331,
+          "valence_mae": 40.3494,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2497.9888,
+          "notes": "Median of robust linear heads."
+        },
+        {
+          "method": "463_ValenceAllExpertMedian",
+          "overall_mae": 40.1509,
+          "valence_mae": 40.385,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2506.6206,
+          "notes": "Median over all physiological experts."
+        },
+        {
+          "method": "495_ReliabilitySubjectMeanToCenterMedium",
+          "overall_mae": 40.1544,
+          "valence_mae": 40.392,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2494.6228,
+          "notes": "Medium subject mean recentering."
+        },
+        {
+          "method": "489_ReliabilityAbsResidualShrink20",
+          "overall_mae": 40.1564,
+          "valence_mae": 40.396,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2531.5156,
+          "notes": "Shrink large residuals."
+        },
+        {
+          "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+          "overall_mae": 40.1709,
+          "valence_mae": 40.4251,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2519.01,
+          "notes": "Shrink Huber/Elastic disagreement."
+        },
+        {
+          "method": "490_ReliabilityAbsResidualShrink28",
+          "overall_mae": 40.1722,
+          "valence_mae": 40.4275,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2539.9841,
+          "notes": "Shrink very large residuals."
+        },
+        {
+          "method": "513_StateLateResidualShrink40",
+          "overall_mae": 40.1727,
+          "valence_mae": 40.4285,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2525.8342,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "476_ReliabilityDisagreeShrinkT4S70",
+          "overall_mae": 40.2001,
+          "valence_mae": 40.4833,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2506.4094,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "468_ValenceAgreementHuberFNIRST8",
+          "overall_mae": 40.2233,
+          "valence_mae": 40.5297,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2544.917,
+          "notes": "Huber/fNIRS agreement gate."
+        },
+        {
+          "method": "478_ReliabilityDisagreeShrinkT8S70",
+          "overall_mae": 40.2352,
+          "valence_mae": 40.5536,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2532.6946,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "477_ReliabilityDisagreeShrinkT6S70",
+          "overall_mae": 40.2563,
+          "valence_mae": 40.5958,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2517.9558,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "465_ValenceMinMagnitudeAll",
+          "overall_mae": 40.5574,
+          "valence_mae": 41.1979,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2505.8445,
+          "notes": "Choose most conservative expert residual."
+        },
+        {
+          "method": "437_RAVC_TrainMeanArousal",
+          "overall_mae": 40.5692,
+          "valence_mae": 40.1343,
+          "arousal_mae": 41.0041,
+          "overall_mse": 2549.6626,
+          "notes": "Use train global arousal mean."
+        },
+        {
+          "method": "469_ValenceAgreementHuberNeuroT8",
+          "overall_mae": 40.7453,
+          "valence_mae": 41.5738,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2597.9592,
+          "notes": "Huber/neurovascular agreement gate."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 41.9163,
+          "valence_mae": 43.9157,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2631.1885,
+          "notes": "Reference center-only baseline."
+        },
+        {
+          "method": "480_ReliabilityDisagreeCenterT8",
+          "overall_mae": 41.9659,
+          "valence_mae": 44.015,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2688.6638,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "479_ReliabilityDisagreeCenterT4",
+          "overall_mae": 42.0088,
+          "valence_mae": 44.1007,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2644.0554,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "467_ValenceAgreementHuberElasticT6",
+          "overall_mae": 42.0632,
+          "valence_mae": 44.2097,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2659.4485,
+          "notes": "Huber/Elastic agreement gate."
+        },
+        {
+          "method": "466_ValenceAgreementHuberRidgeT6",
+          "overall_mae": 42.0867,
+          "valence_mae": 44.2567,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2660.1072,
+          "notes": "Huber/Ridge agreement gate."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 45.2909,
+          "valence_mae": 50.6307,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3066,
+          "notes": "Reference center-only baseline."
+        },
+        {
+          "method": "465_ValenceMinMagnitudeAll",
+          "overall_mae": 45.3472,
+          "valence_mae": 50.7432,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3376.0583,
+          "notes": "Choose most conservative expert residual."
+        },
+        {
+          "method": "469_ValenceAgreementHuberNeuroT8",
+          "overall_mae": 45.5965,
+          "valence_mae": 51.2419,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3421.009,
+          "notes": "Huber/neurovascular agreement gate."
+        },
+        {
+          "method": "474_ValenceHuberRidgeMinMagnitude",
+          "overall_mae": 45.5975,
+          "valence_mae": 51.2438,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3390.5344,
+          "notes": "Conservative Huber/Ridge intersection."
+        },
+        {
+          "method": "481_ReliabilitySubjectStdShrink10",
+          "overall_mae": 45.6325,
+          "valence_mae": 51.3138,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3389.0535,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "461_ValenceHuberEEG82",
+          "overall_mae": 45.6423,
+          "valence_mae": 51.3335,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3392.0996,
+          "notes": "Huber plus EEG expert."
+        },
+        {
+          "method": "464_ValenceAllExpertTrimmed",
+          "overall_mae": 45.6604,
+          "valence_mae": 51.3697,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3392.6531,
+          "notes": "Trimmed mean over all physiological experts."
+        },
+        {
+          "method": "479_ReliabilityDisagreeCenterT4",
+          "overall_mae": 45.6741,
+          "valence_mae": 51.3971,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3447.4163,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "457_ValenceMedianHuberRidgeElastic",
+          "overall_mae": 45.6833,
+          "valence_mae": 51.4154,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3391.2664,
+          "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "535_FinalNeg060ExpertMedian",
+          "overall_mae": 45.6833,
+          "valence_mae": 51.4154,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3391.2664,
+          "notes": "Final expert median."
+        },
+        {
+          "method": "473_ValenceHuberBayesElasticMedian",
+          "overall_mae": 45.6863,
+          "valence_mae": 51.4214,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3391.3762,
+          "notes": "Median of robust linear heads."
+        },
+        {
+          "method": "484_ReliabilityTrialStdShrink8",
+          "overall_mae": 45.6864,
+          "valence_mae": 51.4217,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3396.7356,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "456_ValenceMeanHuberRidgeElastic",
+          "overall_mae": 45.6928,
+          "valence_mae": 51.4345,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3395.8105,
+          "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "476_ReliabilityDisagreeShrinkT4S70",
+          "overall_mae": 45.6996,
+          "valence_mae": 51.448,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3397.3982,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "463_ValenceAllExpertMedian",
+          "overall_mae": 45.7164,
+          "valence_mae": 51.4816,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3392.1504,
+          "notes": "Median over all physiological experts."
+        },
+        {
+          "method": "482_ReliabilitySubjectStdShrink14",
+          "overall_mae": 45.7258,
+          "valence_mae": 51.5004,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3397.5022,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "511_StateTrialStartCenterBlend40",
+          "overall_mae": 45.7274,
+          "valence_mae": 51.5036,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.6367,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "477_ReliabilityDisagreeShrinkT6S70",
+          "overall_mae": 45.7276,
+          "valence_mae": 51.5041,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3398.7893,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+          "overall_mae": 45.7365,
+          "valence_mae": 51.5219,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3410.094,
+          "notes": "Shrink Huber/neuro disagreement."
+        },
+        {
+          "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+          "overall_mae": 45.7371,
+          "valence_mae": 51.523,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3400.1721,
+          "notes": "Shrink Huber/Elastic disagreement."
+        },
+        {
+          "method": "517_FinalNeg050",
+          "overall_mae": 45.7453,
+          "valence_mae": 51.5394,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3412.4348,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "458_ValenceWeightedHRE_721",
+          "overall_mae": 45.7477,
+          "valence_mae": 51.5442,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3405.9236,
+          "notes": "Weighted Huber-dominant fusion."
+        },
+        {
+          "method": "485_ReliabilityTrialStdShrink12",
+          "overall_mae": 45.7495,
+          "valence_mae": 51.5478,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3407.6824,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "466_ValenceAgreementHuberRidgeT6",
+          "overall_mae": 45.7535,
+          "valence_mae": 51.5559,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3446.2068,
+          "notes": "Huber/Ridge agreement gate."
+        },
+        {
+          "method": "497_StateSmooth13Asym",
+          "overall_mae": 45.7544,
+          "valence_mae": 51.5576,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.0156,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "467_ValenceAgreementHuberElasticT6",
+          "overall_mae": 45.7564,
+          "valence_mae": 51.5617,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3446.0264,
+          "notes": "Huber/Elastic agreement gate."
+        },
+        {
+          "method": "523_FinalNeg060Blend75",
+          "overall_mae": 45.7576,
+          "valence_mae": 51.564,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3407.7031,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "526_FinalNeg060DisagreeShrink",
+          "overall_mae": 45.7655,
+          "valence_mae": 51.5799,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3405.5364,
+          "notes": "Final disagreement shrink."
+        },
+        {
+          "method": "527_FinalNeg060SubjectStd14",
+          "overall_mae": 45.7675,
+          "valence_mae": 51.5838,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3406.6746,
+          "notes": "Final subject reliability shrink."
+        },
+        {
+          "method": "472_ValenceHuberBayes82",
+          "overall_mae": 45.7688,
+          "valence_mae": 51.5863,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3409.6504,
+          "notes": "Huber plus Bayesian Ridge expert."
+        },
+        {
+          "method": "459_ValenceWeightedHRE_811",
+          "overall_mae": 45.769,
+          "valence_mae": 51.5868,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3409.6697,
+          "notes": "More Huber-dominant fusion."
+        },
+        {
+          "method": "496_StateSmooth11Asym",
+          "overall_mae": 45.7694,
+          "valence_mae": 51.5876,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3414.1526,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "510_StateTrialStartCenterBlend20",
+          "overall_mae": 45.772,
+          "valence_mae": 51.5928,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3416.8733,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "498_StateExp02Asym",
+          "overall_mae": 45.7728,
+          "valence_mae": 51.5945,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3412.1711,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "506_StateSlopeLimit2ThenExp",
+          "overall_mae": 45.7733,
+          "valence_mae": 51.5954,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.7441,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "516_FinalNeg055",
+          "overall_mae": 45.7812,
+          "valence_mae": 51.6112,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.3262,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "514_StateCenteredEMAResidual",
+          "overall_mae": 45.7844,
+          "valence_mae": 51.6176,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3414.4446,
+          "notes": "EMA on residual around center."
+        },
+        {
+          "method": "522_FinalNeg060Smooth9",
+          "overall_mae": 45.7855,
+          "valence_mae": 51.6199,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.4294,
+          "notes": "Final asymmetry with long smoothing."
+        },
+        {
+          "method": "502_StateSlopeLimit2",
+          "overall_mae": 45.7892,
+          "valence_mae": 51.6273,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.834,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "478_ReliabilityDisagreeShrinkT8S70",
+          "overall_mae": 45.7903,
+          "valence_mae": 51.6294,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3398.2981,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "524_FinalNeg060Blend90",
+          "overall_mae": 45.7919,
+          "valence_mae": 51.6327,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.7854,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "525_FinalNeg060ElasticBlend90",
+          "overall_mae": 45.7925,
+          "valence_mae": 51.6338,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.8274,
+          "notes": "Final Huber/Elastic asymmetric blend."
+        },
+        {
+          "method": "509_StateTrendDamp50",
+          "overall_mae": 45.7937,
+          "valence_mae": 51.6362,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.8269,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "519_FinalPos095Neg060",
+          "overall_mae": 45.7948,
+          "valence_mae": 51.6385,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.2605,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "507_StateSlopeLimit4ThenExp",
+          "overall_mae": 45.7969,
+          "valence_mae": 51.6425,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.875,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "452_RAVC_ArousalPositiveOnlyScale10",
+          "overall_mae": 45.8011,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9191,
+          "overall_mse": 3412.0476,
+          "notes": "Only positive arousal residual."
+        },
+        {
+          "method": "508_StateTrendDamp30",
+          "overall_mae": 45.8017,
+          "valence_mae": 51.6522,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3416.7004,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "499_StateExp03Asym",
+          "overall_mae": 45.8032,
+          "valence_mae": 51.6552,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.8586,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "521_FinalNeg060Exp03",
+          "overall_mae": 45.8032,
+          "valence_mae": 51.6552,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.8586,
+          "notes": "Final asymmetry with EMA."
+        },
+        {
+          "method": "451_RAVC_ArousalSmallOnlyScale15",
+          "overall_mae": 45.8063,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9296,
+          "overall_mse": 3412.6487,
+          "notes": "Use arousal residual only when predicted residual is small."
+        },
+        {
+          "method": "515_StateMedianExpBlend",
+          "overall_mae": 45.8103,
+          "valence_mae": 51.6693,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3416.9727,
+          "notes": "Blend median and EMA state filters."
+        },
+        {
+          "method": "530_FinalNeg060MedianExp",
+          "overall_mae": 45.8103,
+          "valence_mae": 51.6693,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3416.9727,
+          "notes": "Final median/EMA blend."
+        },
+        {
+          "method": "503_StateSlopeLimit4",
+          "overall_mae": 45.8154,
+          "valence_mae": 51.6797,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.1594,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "528_FinalNeg060Slope4",
+          "overall_mae": 45.8154,
+          "valence_mae": 51.6797,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.1594,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Current best physiological-only RAVC reference."
+        },
+        {
+          "method": "436_RAVC_CenterArousal",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Arousal probe reference: RAVC valence, center arousal."
+        },
+        {
+          "method": "483_ReliabilitySubjectStdShrink18",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "486_ReliabilitySubjectNegMeanBrake",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Brake subjects with negative mean residual."
+        },
+        {
+          "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Stronger brake for negative subject residual."
+        },
+        {
+          "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Subject signed mean gate."
+        },
+        {
+          "method": "504_StateSlopeLimit6",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3542,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "505_StateSlopeLimit8",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3555,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "529_FinalNeg060Slope6",
+          "overall_mae": 45.8171,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.3542,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "500_StateExp04Asym",
+          "overall_mae": 45.8199,
+          "valence_mae": 51.6885,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3417.8171,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "533_FinalNeg060MeanShift",
+          "overall_mae": 45.8208,
+          "valence_mae": 51.6904,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3420.0149,
+          "notes": "Final light train mean shift."
+        },
+        {
+          "method": "532_FinalNeg060ArousalAgree05",
+          "overall_mae": 45.8228,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9625,
+          "overall_mse": 3415.3181,
+          "notes": "Final agreement-gated arousal residual."
+        },
+        {
+          "method": "470_ValencePCA8PCA16PCA24Mean",
+          "overall_mae": 45.8248,
+          "valence_mae": 51.6984,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3421.8242,
+          "notes": "Low-rank dimension ensemble."
+        },
+        {
+          "method": "534_FinalNeg060PCAEnsemble",
+          "overall_mae": 45.8248,
+          "valence_mae": 51.6984,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3421.8242,
+          "notes": "Final low-rank ensemble."
+        },
+        {
+          "method": "489_ReliabilityAbsResidualShrink20",
+          "overall_mae": 45.8261,
+          "valence_mae": 51.701,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3407.3867,
+          "notes": "Shrink large residuals."
+        },
+        {
+          "method": "438_RAVC_RidgeArousalScale0p03",
+          "overall_mae": 45.8262,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9693,
+          "overall_mse": 3416.6887,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "531_FinalNeg060ArousalScale03",
+          "overall_mae": 45.8262,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9693,
+          "overall_mse": 3416.6887,
+          "notes": "Final tiny arousal residual."
+        },
+        {
+          "method": "450_RAVC_ArousalAgreementScale10",
+          "overall_mae": 45.8285,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9739,
+          "overall_mse": 3412.427,
+          "notes": "Use arousal residual only when Ridge and Huber agree."
+        },
+        {
+          "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+          "overall_mae": 45.8302,
+          "valence_mae": 51.7092,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.9895,
+          "notes": "Shrink Huber/fNIRS disagreement."
+        },
+        {
+          "method": "460_ValenceHuberFNIRS82",
+          "overall_mae": 45.8318,
+          "valence_mae": 51.7125,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3423.2468,
+          "notes": "Huber plus fNIRS expert."
+        },
+        {
+          "method": "439_RAVC_RidgeArousalScale0p05",
+          "overall_mae": 45.8322,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9814,
+          "overall_mse": 3415.6133,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "442_RAVC_HuberArousalScale0p03",
+          "overall_mae": 45.8346,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9861,
+          "overall_mse": 3416.6824,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "501_StateMedianAsym",
+          "overall_mae": 45.8346,
+          "valence_mae": 51.7179,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3419.5537,
+          "notes": "Median state filter."
+        },
+        {
+          "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+          "overall_mae": 45.8389,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9948,
+          "overall_mse": 3415.6184,
+          "notes": "Tiny average arousal residual."
+        },
+        {
+          "method": "447_RAVC_EEGArousalScale05",
+          "overall_mae": 45.8401,
+          "valence_mae": 51.6831,
+          "arousal_mae": 39.9971,
+          "overall_mse": 3419.3547,
+          "notes": "Tiny EEG-only arousal residual."
+        },
+        {
+          "method": "520_FinalPos105Neg060",
+          "overall_mae": 45.8417,
+          "valence_mae": 51.7323,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3424.1504,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "462_ValenceHuberNeuro82",
+          "overall_mae": 45.8419,
+          "valence_mae": 51.7326,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3418.75,
+          "notes": "Huber plus neurovascular expert."
+        },
+        {
+          "method": "512_StateLateResidualShrink20",
+          "overall_mae": 45.8437,
+          "valence_mae": 51.7362,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3412.9011,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "448_RAVC_FNIRSArousalScale05",
+          "overall_mae": 45.8441,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0051,
+          "overall_mse": 3415.2952,
+          "notes": "Tiny fNIRS-only arousal residual."
+        },
+        {
+          "method": "443_RAVC_HuberArousalScale0p05",
+          "overall_mae": 45.8462,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0093,
+          "overall_mse": 3415.6309,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "454_RAVC_ArousalExpScale10",
+          "overall_mae": 45.8469,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0107,
+          "overall_mse": 3413.1643,
+          "notes": "Smoothed arousal residual."
+        },
+        {
+          "method": "455_RAVC_ArousalMedianScale10",
+          "overall_mae": 45.8471,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0111,
+          "overall_mse": 3413.0566,
+          "notes": "Median-smoothed arousal residual."
+        },
+        {
+          "method": "440_RAVC_RidgeArousalScale0p1",
+          "overall_mae": 45.8474,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0117,
+          "overall_mse": 3413.0496,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+          "overall_mae": 45.85,
+          "valence_mae": 51.7488,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3410.1262,
+          "notes": "Light subject mean recentering."
+        },
+        {
+          "method": "518_FinalNeg065",
+          "overall_mae": 45.8531,
+          "valence_mae": 51.7551,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3421.5222,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "490_ReliabilityAbsResidualShrink28",
+          "overall_mae": 45.8572,
+          "valence_mae": 51.7632,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3412.8796,
+          "notes": "Shrink very large residuals."
+        },
+        {
+          "method": "441_RAVC_RidgeArousalScale0p15",
+          "overall_mae": 45.8626,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0421,
+          "overall_mse": 3410.6633,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "453_RAVC_ArousalNegativeOnlyScale10",
+          "overall_mae": 45.8634,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0437,
+          "overall_mse": 3419.3574,
+          "notes": "Only negative arousal residual."
+        },
+        {
+          "method": "449_RAVC_NeuroArousalScale05",
+          "overall_mae": 45.8643,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0455,
+          "overall_mse": 3417.4348,
+          "notes": "Tiny neurovascular arousal residual."
+        },
+        {
+          "method": "471_ValencePCA8PCA16PCA24Median",
+          "overall_mae": 45.8659,
+          "valence_mae": 51.7806,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3293,
+          "notes": "Low-rank dimension median ensemble."
+        },
+        {
+          "method": "444_RAVC_HuberArousalScale0p1",
+          "overall_mae": 45.8753,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.0676,
+          "overall_mse": 3413.2273,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "513_StateLateResidualShrink40",
+          "overall_mae": 45.8794,
+          "valence_mae": 51.8076,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3409.5779,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "475_ValenceHuberRidgeMaxAgreement",
+          "overall_mae": 45.882,
+          "valence_mae": 51.8128,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3420.5681,
+          "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+        },
+        {
+          "method": "480_ReliabilityDisagreeCenterT8",
+          "overall_mae": 45.8957,
+          "valence_mae": 51.8403,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3429.5964,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "445_RAVC_HuberArousalScale0p15",
+          "overall_mae": 45.9047,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.1263,
+          "overall_mse": 3411.1436,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "468_ValenceAgreementHuberFNIRST8",
+          "overall_mae": 45.9142,
+          "valence_mae": 51.8771,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3454.5442,
+          "notes": "Huber/fNIRS agreement gate."
+        },
+        {
+          "method": "495_ReliabilitySubjectMeanToCenterMedium",
+          "overall_mae": 45.9323,
+          "valence_mae": 51.9135,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3409.6458,
+          "notes": "Medium subject mean recentering."
+        },
+        {
+          "method": "437_RAVC_TrainMeanArousal",
+          "overall_mae": 46.0573,
+          "valence_mae": 51.6831,
+          "arousal_mae": 40.4315,
+          "overall_mse": 3396.1133,
+          "notes": "Use train global arousal mean."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "495_ReliabilitySubjectMeanToCenterMedium",
+          "overall_mae": 45.9359,
+          "valence_mae": 46.859,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3600.2764,
+          "notes": "Medium subject mean recentering."
+        },
+        {
+          "method": "494_ReliabilitySubjectMeanToTrainMeanLight",
+          "overall_mae": 46.1667,
+          "valence_mae": 47.3208,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3621.259,
+          "notes": "Light subject mean recentering."
+        },
+        {
+          "method": "474_ValenceHuberRidgeMinMagnitude",
+          "overall_mae": 46.216,
+          "valence_mae": 47.4192,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3622.4231,
+          "notes": "Conservative Huber/Ridge intersection."
+        },
+        {
+          "method": "473_ValenceHuberBayesElasticMedian",
+          "overall_mae": 46.2333,
+          "valence_mae": 47.4539,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3622.376,
+          "notes": "Median of robust linear heads."
+        },
+        {
+          "method": "457_ValenceMedianHuberRidgeElastic",
+          "overall_mae": 46.2335,
+          "valence_mae": 47.4543,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3622.3938,
+          "notes": "Median fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "535_FinalNeg060ExpertMedian",
+          "overall_mae": 46.2335,
+          "valence_mae": 47.4543,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3622.3938,
+          "notes": "Final expert median."
+        },
+        {
+          "method": "456_ValenceMeanHuberRidgeElastic",
+          "overall_mae": 46.3137,
+          "valence_mae": 47.6147,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3629.8118,
+          "notes": "Mean fusion of Huber/Ridge/Elastic valence experts."
+        },
+        {
+          "method": "458_ValenceWeightedHRE_721",
+          "overall_mae": 46.4743,
+          "valence_mae": 47.936,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3647.0149,
+          "notes": "Weighted Huber-dominant fusion."
+        },
+        {
+          "method": "465_ValenceMinMagnitudeAll",
+          "overall_mae": 46.4943,
+          "valence_mae": 47.9759,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3671.5283,
+          "notes": "Choose most conservative expert residual."
+        },
+        {
+          "method": "523_FinalNeg060Blend75",
+          "overall_mae": 46.5023,
+          "valence_mae": 47.9919,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3650.1711,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 46.5051,
+          "valence_mae": 47.9976,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3796.8098,
+          "notes": "Reference center-only baseline."
+        },
+        {
+          "method": "464_ValenceAllExpertTrimmed",
+          "overall_mae": 46.5122,
+          "valence_mae": 48.0118,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3640.6394,
+          "notes": "Trimmed mean over all physiological experts."
+        },
+        {
+          "method": "511_StateTrialStartCenterBlend40",
+          "overall_mae": 46.5137,
+          "valence_mae": 48.0147,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3662.7996,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "459_ValenceWeightedHRE_811",
+          "overall_mae": 46.528,
+          "valence_mae": 48.0434,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3653.177,
+          "notes": "More Huber-dominant fusion."
+        },
+        {
+          "method": "472_ValenceHuberBayes82",
+          "overall_mae": 46.5297,
+          "valence_mae": 48.0467,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3653.3318,
+          "notes": "Huber plus Bayesian Ridge expert."
+        },
+        {
+          "method": "498_StateExp02Asym",
+          "overall_mae": 46.5491,
+          "valence_mae": 48.0856,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3663.209,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "506_StateSlopeLimit2ThenExp",
+          "overall_mae": 46.5728,
+          "valence_mae": 48.1329,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3663.9727,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "510_StateTrialStartCenterBlend20",
+          "overall_mae": 46.5829,
+          "valence_mae": 48.153,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.0266,
+          "notes": "Blend early trial prediction toward center."
+        },
+        {
+          "method": "514_StateCenteredEMAResidual",
+          "overall_mae": 46.5849,
+          "valence_mae": 48.1571,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3664.5859,
+          "notes": "EMA on residual around center."
+        },
+        {
+          "method": "525_FinalNeg060ElasticBlend90",
+          "overall_mae": 46.5863,
+          "valence_mae": 48.1599,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3660.0117,
+          "notes": "Final Huber/Elastic asymmetric blend."
+        },
+        {
+          "method": "524_FinalNeg060Blend90",
+          "overall_mae": 46.5881,
+          "valence_mae": 48.1635,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3660.1726,
+          "notes": "Final Huber/Ridge asymmetric blend."
+        },
+        {
+          "method": "499_StateExp03Asym",
+          "overall_mae": 46.5948,
+          "valence_mae": 48.1769,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.8369,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "521_FinalNeg060Exp03",
+          "overall_mae": 46.5948,
+          "valence_mae": 48.1769,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.8369,
+          "notes": "Final asymmetry with EMA."
+        },
+        {
+          "method": "476_ReliabilityDisagreeShrinkT4S70",
+          "overall_mae": 46.5954,
+          "valence_mae": 48.178,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3657.041,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "507_StateSlopeLimit4ThenExp",
+          "overall_mae": 46.6063,
+          "valence_mae": 48.1998,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.6875,
+          "notes": "Slope limit then EMA."
+        },
+        {
+          "method": "519_FinalPos095Neg060",
+          "overall_mae": 46.609,
+          "valence_mae": 48.2052,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3661.2422,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "502_StateSlopeLimit2",
+          "overall_mae": 46.6123,
+          "valence_mae": 48.2119,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.4688,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "497_StateSmooth13Asym",
+          "overall_mae": 46.6131,
+          "valence_mae": 48.2135,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3663.6008,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "509_StateTrendDamp50",
+          "overall_mae": 46.6141,
+          "valence_mae": 48.2156,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.6133,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "496_StateSmooth11Asym",
+          "overall_mae": 46.6204,
+          "valence_mae": 48.2281,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3664.3523,
+          "notes": "Longer moving-average state filter."
+        },
+        {
+          "method": "500_StateExp04Asym",
+          "overall_mae": 46.622,
+          "valence_mae": 48.2313,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.4182,
+          "notes": "EMA state filter."
+        },
+        {
+          "method": "515_StateMedianExpBlend",
+          "overall_mae": 46.6223,
+          "valence_mae": 48.2319,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3666.7175,
+          "notes": "Blend median and EMA state filters."
+        },
+        {
+          "method": "530_FinalNeg060MedianExp",
+          "overall_mae": 46.6223,
+          "valence_mae": 48.2319,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3666.7175,
+          "notes": "Final median/EMA blend."
+        },
+        {
+          "method": "463_ValenceAllExpertMedian",
+          "overall_mae": 46.6258,
+          "valence_mae": 48.2389,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3651.9355,
+          "notes": "Median over all physiological experts."
+        },
+        {
+          "method": "475_ValenceHuberRidgeMaxAgreement",
+          "overall_mae": 46.626,
+          "valence_mae": 48.2394,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3666.2117,
+          "notes": "Use stronger residual only when Huber/Ridge agree in sign."
+        },
+        {
+          "method": "508_StateTrendDamp30",
+          "overall_mae": 46.6284,
+          "valence_mae": 48.2441,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3666.3152,
+          "notes": "Dampen rapid trend component."
+        },
+        {
+          "method": "522_FinalNeg060Smooth9",
+          "overall_mae": 46.6298,
+          "valence_mae": 48.2469,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.2795,
+          "notes": "Final asymmetry with long smoothing."
+        },
+        {
+          "method": "517_FinalNeg050",
+          "overall_mae": 46.6359,
+          "valence_mae": 48.2592,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3666.6201,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "516_FinalNeg055",
+          "overall_mae": 46.6441,
+          "valence_mae": 48.2754,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.1445,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "449_RAVC_NeuroArousalScale05",
+          "overall_mae": 46.647,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0022,
+          "overall_mse": 3661.2981,
+          "notes": "Tiny neurovascular arousal residual."
+        },
+        {
+          "method": "503_StateSlopeLimit4",
+          "overall_mae": 46.6498,
+          "valence_mae": 48.287,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.554,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "528_FinalNeg060Slope4",
+          "overall_mae": 46.6498,
+          "valence_mae": 48.287,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.554,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "Reference_416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Current best physiological-only RAVC reference."
+        },
+        {
+          "method": "436_RAVC_CenterArousal",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Arousal probe reference: RAVC valence, center arousal."
+        },
+        {
+          "method": "483_ReliabilitySubjectStdShrink18",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "486_ReliabilitySubjectNegMeanBrake",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Brake subjects with negative mean residual."
+        },
+        {
+          "method": "487_ReliabilitySubjectNegMeanBrakeStrong",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Stronger brake for negative subject residual."
+        },
+        {
+          "method": "488_ReliabilitySubjectPosMeanKeepNegBrake",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Subject signed mean gate."
+        },
+        {
+          "method": "504_StateSlopeLimit6",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "505_StateSlopeLimit8",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Limit per-second prediction slope."
+        },
+        {
+          "method": "529_FinalNeg060Slope6",
+          "overall_mae": 46.6522,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3667.6804,
+          "notes": "Final state-space slope limit."
+        },
+        {
+          "method": "452_RAVC_ArousalPositiveOnlyScale10",
+          "overall_mae": 46.6579,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0242,
+          "overall_mse": 3662.0583,
+          "notes": "Only positive arousal residual."
+        },
+        {
+          "method": "532_FinalNeg060ArousalAgree05",
+          "overall_mae": 46.6594,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0271,
+          "overall_mse": 3664.2644,
+          "notes": "Final agreement-gated arousal residual."
+        },
+        {
+          "method": "518_FinalNeg065",
+          "overall_mae": 46.6604,
+          "valence_mae": 48.308,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3668.2283,
+          "notes": "Final RAVC negative scale search."
+        },
+        {
+          "method": "438_RAVC_RidgeArousalScale0p03",
+          "overall_mae": 46.661,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0302,
+          "overall_mse": 3665.5984,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "531_FinalNeg060ArousalScale03",
+          "overall_mae": 46.661,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0302,
+          "overall_mse": 3665.5984,
+          "notes": "Final tiny arousal residual."
+        },
+        {
+          "method": "501_StateMedianAsym",
+          "overall_mae": 46.6618,
+          "valence_mae": 48.3109,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3668.9641,
+          "notes": "Median state filter."
+        },
+        {
+          "method": "450_RAVC_ArousalAgreementScale10",
+          "overall_mae": 46.6666,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0414,
+          "overall_mse": 3660.9695,
+          "notes": "Use arousal residual only when Ridge and Huber agree."
+        },
+        {
+          "method": "439_RAVC_RidgeArousalScale0p05",
+          "overall_mae": 46.6668,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0419,
+          "overall_mse": 3664.2395,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "448_RAVC_FNIRSArousalScale05",
+          "overall_mae": 46.6672,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0428,
+          "overall_mse": 3662.575,
+          "notes": "Tiny fNIRS-only arousal residual."
+        },
+        {
+          "method": "527_FinalNeg060SubjectStd14",
+          "overall_mae": 46.6708,
+          "valence_mae": 48.3288,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3666.0012,
+          "notes": "Final subject reliability shrink."
+        },
+        {
+          "method": "442_RAVC_HuberArousalScale0p03",
+          "overall_mae": 46.6747,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0577,
+          "overall_mse": 3665.6956,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "453_RAVC_ArousalNegativeOnlyScale10",
+          "overall_mae": 46.6756,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0596,
+          "overall_mse": 3666.5684,
+          "notes": "Only negative arousal residual."
+        },
+        {
+          "method": "446_RAVC_RidgeHuberArousalAvgScale05",
+          "overall_mae": 46.6774,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0632,
+          "overall_mse": 3664.3271,
+          "notes": "Tiny average arousal residual."
+        },
+        {
+          "method": "447_RAVC_EEGArousalScale05",
+          "overall_mae": 46.6802,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0687,
+          "overall_mse": 3667.532,
+          "notes": "Tiny EEG-only arousal residual."
+        },
+        {
+          "method": "454_RAVC_ArousalExpScale10",
+          "overall_mae": 46.6806,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0694,
+          "overall_mse": 3661.1592,
+          "notes": "Smoothed arousal residual."
+        },
+        {
+          "method": "455_RAVC_ArousalMedianScale10",
+          "overall_mae": 46.681,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0703,
+          "overall_mse": 3660.9431,
+          "notes": "Median-smoothed arousal residual."
+        },
+        {
+          "method": "462_ValenceHuberNeuro82",
+          "overall_mae": 46.6812,
+          "valence_mae": 48.3497,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3662.8184,
+          "notes": "Huber plus neurovascular expert."
+        },
+        {
+          "method": "440_RAVC_RidgeArousalScale0p1",
+          "overall_mae": 46.6814,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0711,
+          "overall_mse": 3660.9463,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "526_FinalNeg060DisagreeShrink",
+          "overall_mae": 46.684,
+          "valence_mae": 48.3552,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3661.2517,
+          "notes": "Final disagreement shrink."
+        },
+        {
+          "method": "460_ValenceHuberFNIRS82",
+          "overall_mae": 46.6845,
+          "valence_mae": 48.3563,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3671.373,
+          "notes": "Huber plus fNIRS expert."
+        },
+        {
+          "method": "443_RAVC_HuberArousalScale0p05",
+          "overall_mae": 46.6897,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.0876,
+          "overall_mse": 3664.425,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "482_ReliabilitySubjectStdShrink14",
+          "overall_mae": 46.6905,
+          "valence_mae": 48.3683,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.6453,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "481_ReliabilitySubjectStdShrink10",
+          "overall_mae": 46.6939,
+          "valence_mae": 48.3751,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3671.8391,
+          "notes": "Shrink high-variance subject predictions."
+        },
+        {
+          "method": "441_RAVC_RidgeArousalScale0p15",
+          "overall_mae": 46.696,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.1003,
+          "overall_mse": 3657.8008,
+          "notes": "Tiny Ridge arousal residual over center."
+        },
+        {
+          "method": "451_RAVC_ArousalSmallOnlyScale15",
+          "overall_mae": 46.6992,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.1067,
+          "overall_mse": 3667.0371,
+          "notes": "Use arousal residual only when predicted residual is small."
+        },
+        {
+          "method": "520_FinalPos105Neg060",
+          "overall_mae": 46.7029,
+          "valence_mae": 48.3932,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3675.5059,
+          "notes": "Final asymmetric scale search."
+        },
+        {
+          "method": "471_ValencePCA8PCA16PCA24Median",
+          "overall_mae": 46.7172,
+          "valence_mae": 48.4216,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3674.9739,
+          "notes": "Low-rank dimension median ensemble."
+        },
+        {
+          "method": "444_RAVC_HuberArousalScale0p1",
+          "overall_mae": 46.7271,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.1626,
+          "overall_mse": 3661.4316,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "491_ReliabilityHuberElasticDisagreeShrink6",
+          "overall_mae": 46.7283,
+          "valence_mae": 48.4438,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3662.5891,
+          "notes": "Shrink Huber/Elastic disagreement."
+        },
+        {
+          "method": "533_FinalNeg060MeanShift",
+          "overall_mae": 46.7335,
+          "valence_mae": 48.4543,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3675.3752,
+          "notes": "Final light train mean shift."
+        },
+        {
+          "method": "492_ReliabilityHuberFNIRSDisagreeShrink8",
+          "overall_mae": 46.7526,
+          "valence_mae": 48.4925,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3674.8,
+          "notes": "Shrink Huber/fNIRS disagreement."
+        },
+        {
+          "method": "485_ReliabilityTrialStdShrink12",
+          "overall_mae": 46.7535,
+          "valence_mae": 48.4944,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3675.375,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "493_ReliabilityHuberNeuroDisagreeShrink8",
+          "overall_mae": 46.7541,
+          "valence_mae": 48.4955,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3674.8503,
+          "notes": "Shrink Huber/neuro disagreement."
+        },
+        {
+          "method": "470_ValencePCA8PCA16PCA24Mean",
+          "overall_mae": 46.7641,
+          "valence_mae": 48.5155,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3678.3132,
+          "notes": "Low-rank dimension ensemble."
+        },
+        {
+          "method": "534_FinalNeg060PCAEnsemble",
+          "overall_mae": 46.7641,
+          "valence_mae": 48.5155,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3678.3132,
+          "notes": "Final low-rank ensemble."
+        },
+        {
+          "method": "445_RAVC_HuberArousalScale0p15",
+          "overall_mae": 46.7646,
+          "valence_mae": 48.2917,
+          "arousal_mae": 45.2375,
+          "overall_mse": 3658.7012,
+          "notes": "Tiny Huber arousal residual over center."
+        },
+        {
+          "method": "512_StateLateResidualShrink20",
+          "overall_mae": 46.7734,
+          "valence_mae": 48.5341,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.9524,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "477_ReliabilityDisagreeShrinkT6S70",
+          "overall_mae": 46.7817,
+          "valence_mae": 48.5506,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3665.7908,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "489_ReliabilityAbsResidualShrink20",
+          "overall_mae": 46.7857,
+          "valence_mae": 48.5588,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3671.7568,
+          "notes": "Shrink large residuals."
+        },
+        {
+          "method": "461_ValenceHuberEEG82",
+          "overall_mae": 46.8516,
+          "valence_mae": 48.6904,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3674.4539,
+          "notes": "Huber plus EEG expert."
+        },
+        {
+          "method": "484_ReliabilityTrialStdShrink8",
+          "overall_mae": 46.8825,
+          "valence_mae": 48.7524,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3697.1707,
+          "notes": "Shrink high-variance trial predictions."
+        },
+        {
+          "method": "479_ReliabilityDisagreeCenterT4",
+          "overall_mae": 46.8985,
+          "valence_mae": 48.7843,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3820.8643,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        },
+        {
+          "method": "490_ReliabilityAbsResidualShrink28",
+          "overall_mae": 46.9032,
+          "valence_mae": 48.7936,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3687.0422,
+          "notes": "Shrink very large residuals."
+        },
+        {
+          "method": "478_ReliabilityDisagreeShrinkT8S70",
+          "overall_mae": 46.9112,
+          "valence_mae": 48.8097,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3676.1445,
+          "notes": "Shrink if Huber/Ridge disagree."
+        },
+        {
+          "method": "513_StateLateResidualShrink40",
+          "overall_mae": 46.9231,
+          "valence_mae": 48.8334,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3668.2063,
+          "notes": "Shrink late-trial residuals."
+        },
+        {
+          "method": "468_ValenceAgreementHuberFNIRST8",
+          "overall_mae": 47.1076,
+          "valence_mae": 49.2025,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3748.8347,
+          "notes": "Huber/fNIRS agreement gate."
+        },
+        {
+          "method": "467_ValenceAgreementHuberElasticT6",
+          "overall_mae": 47.27,
+          "valence_mae": 49.5273,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3818.3145,
+          "notes": "Huber/Elastic agreement gate."
+        },
+        {
+          "method": "466_ValenceAgreementHuberRidgeT6",
+          "overall_mae": 47.308,
+          "valence_mae": 49.6033,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3820.866,
+          "notes": "Huber/Ridge agreement gate."
+        },
+        {
+          "method": "469_ValenceAgreementHuberNeuroT8",
+          "overall_mae": 47.3849,
+          "valence_mae": 49.7571,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3787.2742,
+          "notes": "Huber/neurovascular agreement gate."
+        },
+        {
+          "method": "437_RAVC_TrainMeanArousal",
+          "overall_mae": 47.4006,
+          "valence_mae": 48.2917,
+          "arousal_mae": 46.5094,
+          "overall_mse": 3675.2939,
+          "notes": "Use train global arousal mean."
+        },
+        {
+          "method": "480_ReliabilityDisagreeCenterT8",
+          "overall_mae": 47.9122,
+          "valence_mae": 50.8117,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3843.5369,
+          "notes": "Center fallback if Huber/Ridge disagree."
+        }
+      ]
+    }
+  ]
+}

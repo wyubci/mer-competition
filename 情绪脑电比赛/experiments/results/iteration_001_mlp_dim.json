@@ -1,0 +1,211 @@
+{
+  "feature_cache": "experiments/features/asac_features_20_4.npz",
+  "feature_summary": {
+    "subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20",
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "samples": 36864,
+    "feature_dim": 779,
+    "eeg_shape": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs_shape": [
+      36864,
+      51,
+      9
+    ],
+    "standardization_keys": [
+      "eeg_mean",
+      "eeg_std",
+      "fnirs_mean",
+      "fnirs_std"
+    ]
+  },
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_samples": 30720,
+    "val_samples": 6144
+  },
+  "results": [
+    {
+      "method": "MLPFeatureResidual_valence_only_smooth9",
+      "overall_mae": 29.9949,
+      "valence_mae": 28.5791,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.6639,
+      "notes": "Use smoothed MLPFeatureResidual only for valence; keep VideoTimeMean arousal.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_valence_only_smooth5",
+      "overall_mae": 30.0141,
+      "valence_mae": 28.6175,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1525.7026,
+      "notes": "Use smoothed MLPFeatureResidual only for valence; keep VideoTimeMean arousal.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_valence_only_smooth3",
+      "overall_mae": 30.046,
+      "valence_mae": 28.6813,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.6095,
+      "notes": "Use smoothed MLPFeatureResidual only for valence; keep VideoTimeMean arousal.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_arousal_only_smooth9",
+      "overall_mae": 30.4161,
+      "valence_mae": 28.5041,
+      "arousal_mae": 32.3282,
+      "overall_mse": 1586.1527,
+      "notes": "Use smoothed MLPFeatureResidual only for arousal; keep VideoTimeMean valence.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_best_smooth9",
+      "overall_mae": 30.4536,
+      "valence_mae": 28.5791,
+      "arousal_mae": 32.3282,
+      "overall_mse": 1578.6855,
+      "notes": "Best MLPFeatureResidual prediction with moving-average smoothing window=9.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_arousal_only_smooth5",
+      "overall_mae": 30.4843,
+      "valence_mae": 28.5041,
+      "arousal_mae": 32.4645,
+      "overall_mse": 1593.1608,
+      "notes": "Use smoothed MLPFeatureResidual only for arousal; keep VideoTimeMean valence.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_best_smooth5",
+      "overall_mae": 30.541,
+      "valence_mae": 28.6175,
+      "arousal_mae": 32.4645,
+      "overall_mse": 1589.7324,
+      "notes": "Best MLPFeatureResidual prediction with moving-average smoothing window=5.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_arousal_only_smooth3",
+      "overall_mae": 30.5502,
+      "valence_mae": 28.5041,
+      "arousal_mae": 32.5964,
+      "overall_mse": 1599.7133,
+      "notes": "Use smoothed MLPFeatureResidual only for arousal; keep VideoTimeMean valence.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual_best_smooth3",
+      "overall_mae": 30.6388,
+      "valence_mae": 28.6813,
+      "arousal_mae": 32.5964,
+      "overall_mse": 1600.1918,
+      "notes": "Best MLPFeatureResidual prediction with moving-average smoothing window=3.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureResidual",
+      "overall_mae": 31.0473,
+      "valence_mae": 28.9587,
+      "arousal_mae": 33.1359,
+      "overall_mse": 1636.4756,
+      "notes": "residual MLP on cached EEG/fNIRS ASAC features.",
+      "epoch": 1,
+      "train_loss": 0.038601
+    },
+    {
+      "method": "MLPFeatureRaw_best_smooth9",
+      "overall_mae": 47.2992,
+      "valence_mae": 48.8159,
+      "arousal_mae": 45.7824,
+      "overall_mse": 3607.634,
+      "notes": "Best MLPFeatureRaw prediction with moving-average smoothing window=9.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureRaw_best_smooth5",
+      "overall_mae": 47.4905,
+      "valence_mae": 49.0666,
+      "arousal_mae": 45.9143,
+      "overall_mse": 3629.4021,
+      "notes": "Best MLPFeatureRaw prediction with moving-average smoothing window=5.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureRaw_best_smooth3",
+      "overall_mae": 47.7187,
+      "valence_mae": 49.3734,
+      "arousal_mae": 46.064,
+      "overall_mse": 3654.3176,
+      "notes": "Best MLPFeatureRaw prediction with moving-average smoothing window=3.",
+      "source_epoch": 1
+    },
+    {
+      "method": "MLPFeatureRaw",
+      "overall_mae": 48.6164,
+      "valence_mae": 50.576,
+      "arousal_mae": 46.6567,
+      "overall_mse": 3763.2969,
+      "notes": "raw MLP on cached EEG/fNIRS ASAC features.",
+      "epoch": 1,
+      "train_loss": 0.031617
+    }
+  ]
+}

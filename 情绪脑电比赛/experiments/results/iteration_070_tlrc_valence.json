@@ -1,0 +1,840 @@
+{
+  "method": "TLRC: Temporal-Lag Ridge Correction",
+  "feature_cache": "experiments\\features\\asac_features_20_4.npz",
+  "target_mode": "valence",
+  "lag_definition": "negative lag uses future features x(t-lag); positive lag uses earlier features",
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_samples": 30720,
+    "val_samples": 6144
+  },
+  "results": [
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.50_clip2_smooth5",
+      "overall_mae": 29.935,
+      "valence_mae": 28.4807,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1524.045,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.25_clip2_smooth5",
+      "overall_mae": 29.9375,
+      "valence_mae": 28.4858,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1524.2611,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.50_clip2_smooth5",
+      "overall_mae": 29.9492,
+      "valence_mae": 28.5093,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1524.6195,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.50_clip2_smooth9",
+      "overall_mae": 29.9511,
+      "valence_mae": 28.5125,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1520.8258,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.25_clip2_smooth5",
+      "overall_mae": 29.9518,
+      "valence_mae": 28.5143,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1524.755,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.25_clip2_smooth9",
+      "overall_mae": 29.9544,
+      "valence_mae": 28.5191,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1521.0494,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "VideoTimeMean",
+      "overall_mae": 29.9574,
+      "valence_mae": 28.5041,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.131,
+      "notes": "Mean trajectory by video and timestamp."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.10_clip2_smooth5",
+      "overall_mae": 29.958,
+      "valence_mae": 28.5268,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.9652,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.25_clip2_smooth5",
+      "overall_mae": 29.9604,
+      "valence_mae": 28.5315,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.2172,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.50_clip2_smooth5",
+      "overall_mae": 29.9646,
+      "valence_mae": 28.5401,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.3905,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.50_clip2_smooth9",
+      "overall_mae": 29.9657,
+      "valence_mae": 28.5417,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1521.431,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.10_clip2_smooth5",
+      "overall_mae": 29.9684,
+      "valence_mae": 28.5477,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.0967,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.25_clip2_smooth9",
+      "overall_mae": 29.9688,
+      "valence_mae": 28.5479,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1521.5752,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.10_clip2_smooth5",
+      "overall_mae": 29.9694,
+      "valence_mae": 28.5496,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.8851,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.05_clip2_smooth5",
+      "overall_mae": 29.9741,
+      "valence_mae": 28.5589,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.5739,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.25_clip2_smooth9",
+      "overall_mae": 29.976,
+      "valence_mae": 28.5624,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.0492,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.50_clip2_smooth5",
+      "overall_mae": 29.9762,
+      "valence_mae": 28.5633,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1524.2565,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.10_clip2_smooth9",
+      "overall_mae": 29.9765,
+      "valence_mae": 28.5633,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.7682,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.25_clip2_smooth5",
+      "overall_mae": 29.9769,
+      "valence_mae": 28.5645,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1524.4752,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.25_clip2_smooth5",
+      "overall_mae": 29.9787,
+      "valence_mae": 28.5682,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.8519,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.50_clip2_smooth5",
+      "overall_mae": 29.9792,
+      "valence_mae": 28.5692,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.8759,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.50_clip2_smooth9",
+      "overall_mae": 29.9797,
+      "valence_mae": 28.5697,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.2279,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.25_clip2_smooth5",
+      "overall_mae": 29.984,
+      "valence_mae": 28.5788,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.4976,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.05_smooth5",
+      "overall_mae": 29.9861,
+      "valence_mae": 28.583,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.8717,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.05_clip5_smooth5",
+      "overall_mae": 29.9861,
+      "valence_mae": 28.583,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.8717,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.50_clip2_smooth5",
+      "overall_mae": 29.9866,
+      "valence_mae": 28.5841,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.5883,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.10_clip2_smooth9",
+      "overall_mae": 29.9874,
+      "valence_mae": 28.5852,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.722,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.10_clip2_smooth9",
+      "overall_mae": 29.9874,
+      "valence_mae": 28.5852,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.9248,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.05_clip2_smooth5",
+      "overall_mae": 29.9877,
+      "valence_mae": 28.5863,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.7689,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.05_clip2_smooth5",
+      "overall_mae": 29.9877,
+      "valence_mae": 28.5863,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.692,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.10_clip2_smooth5",
+      "overall_mae": 29.9878,
+      "valence_mae": 28.5864,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.786,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.10_clip2_smooth5",
+      "overall_mae": 29.9882,
+      "valence_mae": 28.5871,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.774,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.10_clip2_smooth5",
+      "overall_mae": 29.9898,
+      "valence_mae": 28.5903,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.5939,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.05_clip2_smooth5",
+      "overall_mae": 29.9909,
+      "valence_mae": 28.5927,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1527.684,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.50_clip2_smooth9",
+      "overall_mae": 29.9915,
+      "valence_mae": 28.5934,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1521.0117,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.05_clip2_smooth5",
+      "overall_mae": 29.9918,
+      "valence_mae": 28.5945,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.4027,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.25_clip2_smooth9",
+      "overall_mae": 29.9929,
+      "valence_mae": 28.5962,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1521.2461,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.05_clip2_smooth9",
+      "overall_mae": 29.9932,
+      "valence_mae": 28.5967,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.4122,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.05_smooth5",
+      "overall_mae": 29.9946,
+      "valence_mae": 28.6,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.9628,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.05_clip5_smooth5",
+      "overall_mae": 29.9946,
+      "valence_mae": 28.6,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1526.9628,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.50_clip2_smooth9",
+      "overall_mae": 29.995,
+      "valence_mae": 28.6004,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.6685,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.25_clip2_smooth9",
+      "overall_mae": 29.9951,
+      "valence_mae": 28.6004,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.6583,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.05_clip2_smooth5",
+      "overall_mae": 29.9963,
+      "valence_mae": 28.6034,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1527.9615,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.05_smooth5",
+      "overall_mae": 29.9966,
+      "valence_mae": 28.604,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.0576,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.05_clip5_smooth5",
+      "overall_mae": 29.9966,
+      "valence_mae": 28.604,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.0576,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.50_clip5_smooth5",
+      "overall_mae": 29.9966,
+      "valence_mae": 28.6041,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.0599,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.25_clip2_smooth9",
+      "overall_mae": 30.0007,
+      "valence_mae": 28.6118,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.276,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.50_clip5_smooth9",
+      "overall_mae": 30.0021,
+      "valence_mae": 28.6145,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1524.65,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.50_clip2_smooth9",
+      "overall_mae": 30.0029,
+      "valence_mae": 28.6161,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.3607,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.05_smooth9",
+      "overall_mae": 30.0047,
+      "valence_mae": 28.6198,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.7084,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.05_clip5_smooth9",
+      "overall_mae": 30.0047,
+      "valence_mae": 28.6198,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.7084,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.10_clip2_smooth9",
+      "overall_mae": 30.006,
+      "valence_mae": 28.6224,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.5527,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.10_clip2_smooth9",
+      "overall_mae": 30.0069,
+      "valence_mae": 28.624,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.5903,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.05_clip2_smooth9",
+      "overall_mae": 30.0071,
+      "valence_mae": 28.6246,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.5615,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.05_clip2_smooth9",
+      "overall_mae": 30.0073,
+      "valence_mae": 28.625,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.4994,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.10_clip2_smooth9",
+      "overall_mae": 30.008,
+      "valence_mae": 28.6263,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.4125,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.05_clip5_smooth5",
+      "overall_mae": 30.0088,
+      "valence_mae": 28.6285,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.8715,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.05_smooth5",
+      "overall_mae": 30.0093,
+      "valence_mae": 28.6295,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.9166,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.05_clip2_smooth9",
+      "overall_mae": 30.0112,
+      "valence_mae": 28.6327,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1524.5195,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.05_clip2_smooth9",
+      "overall_mae": 30.0124,
+      "valence_mae": 28.6352,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.2426,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.05_smooth9",
+      "overall_mae": 30.014,
+      "valence_mae": 28.6383,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.7523,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.05_clip5_smooth9",
+      "overall_mae": 30.014,
+      "valence_mae": 28.6383,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1523.7523,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.05_smooth9",
+      "overall_mae": 30.0167,
+      "valence_mae": 28.6437,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1524.8916,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.05_clip5_smooth9",
+      "overall_mae": 30.0167,
+      "valence_mae": 28.6437,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1524.8916,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.05_clip2_smooth9",
+      "overall_mae": 30.0168,
+      "valence_mae": 28.6439,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1524.7955,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.50_clip5_smooth5",
+      "overall_mae": 30.0281,
+      "valence_mae": 28.6669,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.9303,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.05_clip5_smooth9",
+      "overall_mae": 30.0292,
+      "valence_mae": 28.6687,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.6996,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.05_smooth9",
+      "overall_mae": 30.0297,
+      "valence_mae": 28.6697,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.7456,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.25_clip5_smooth5",
+      "overall_mae": 30.0334,
+      "valence_mae": 28.6776,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1531.1191,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.50_clip5_smooth9",
+      "overall_mae": 30.0341,
+      "valence_mae": 28.6786,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.5677,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.10_clip5_smooth5",
+      "overall_mae": 30.0379,
+      "valence_mae": 28.6865,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1529.2889,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.25_clip5_smooth9",
+      "overall_mae": 30.0419,
+      "valence_mae": 28.6941,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1527.7793,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.10_smooth5",
+      "overall_mae": 30.0497,
+      "valence_mae": 28.7102,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1529.5557,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.05_clip5_smooth5",
+      "overall_mae": 30.0505,
+      "valence_mae": 28.7119,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1532.1523,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.10_clip5_smooth5",
+      "overall_mae": 30.0531,
+      "valence_mae": 28.717,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1529.0931,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.25_clip5_smooth5",
+      "overall_mae": 30.0534,
+      "valence_mae": 28.7176,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1531.0736,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.10_clip5_smooth9",
+      "overall_mae": 30.0542,
+      "valence_mae": 28.7188,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1526.106,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.50_clip5_smooth5",
+      "overall_mae": 30.0567,
+      "valence_mae": 28.7243,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1530.1937,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.25_clip5_smooth5",
+      "overall_mae": 30.0574,
+      "valence_mae": 28.7256,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1530.4116,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.10_smooth5",
+      "overall_mae": 30.0599,
+      "valence_mae": 28.7307,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1529.2412,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.10_clip5_smooth5",
+      "overall_mae": 30.0606,
+      "valence_mae": 28.732,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1531.3419,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.25_clip5_smooth9",
+      "overall_mae": 30.0629,
+      "valence_mae": 28.7362,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1527.7754,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.05_smooth5",
+      "overall_mae": 30.0634,
+      "valence_mae": 28.7377,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1532.951,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.10_smooth5",
+      "overall_mae": 30.0634,
+      "valence_mae": 28.7376,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1531.4814,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.10_smooth9",
+      "overall_mae": 30.0657,
+      "valence_mae": 28.7417,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1526.3629,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.50_clip5_smooth9",
+      "overall_mae": 30.066,
+      "valence_mae": 28.7422,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1526.9512,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.10_clip5_smooth9",
+      "overall_mae": 30.0686,
+      "valence_mae": 28.7475,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.7875,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a10000p0_valence_scale0.25_clip5_smooth9",
+      "overall_mae": 30.0696,
+      "valence_mae": 28.7495,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1527.1968,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.05_clip5_smooth9",
+      "overall_mae": 30.0704,
+      "valence_mae": 28.7512,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1528.9561,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.10_smooth9",
+      "overall_mae": 30.0751,
+      "valence_mae": 28.7606,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1525.9279,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.10_clip5_smooth9",
+      "overall_mae": 30.0775,
+      "valence_mae": 28.7653,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1528.1412,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.10_clip5_smooth5",
+      "overall_mae": 30.0785,
+      "valence_mae": 28.7678,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1532.465,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a10000p0_valence_scale0.10_smooth9",
+      "overall_mae": 30.0803,
+      "valence_mae": 28.771,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1528.2819,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a1000p0_valence_scale0.05_clip5_smooth5",
+      "overall_mae": 30.0815,
+      "valence_mae": 28.7739,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1535.125,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.05_smooth9",
+      "overall_mae": 30.0834,
+      "valence_mae": 28.7771,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1529.7516,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.50_clip5_smooth5",
+      "overall_mae": 30.0898,
+      "valence_mae": 28.7904,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1531.326,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.10_smooth5",
+      "overall_mae": 30.0906,
+      "valence_mae": 28.792,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1533.3781,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsp0_a1000p0_valence_scale0.50_clip5_smooth5",
+      "overall_mae": 30.0909,
+      "valence_mae": 28.7927,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1528.1334,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm12_m8_m4_p0_p4_a10000p0_valence_scale0.10_clip5_smooth9",
+      "overall_mae": 30.0957,
+      "valence_mae": 28.8018,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1529.2653,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    },
+    {
+      "method": "TLRC_lagsm8_p0_p8_a1000p0_valence_scale0.10_clip5_smooth5",
+      "overall_mae": 30.0964,
+      "valence_mae": 28.8037,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1535.4503,
+      "notes": "Ridge residual model over concatenated temporal-lag EEG/fNIRS features."
+    }
+  ]
+}

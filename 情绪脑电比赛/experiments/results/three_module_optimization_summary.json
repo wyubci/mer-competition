@@ -1,0 +1,193 @@
+{
+  "data_preprocessing": [
+    {
+      "name": "D1: 3 fNIRS types + baseline mean subtraction",
+      "reason": "Baseline subtraction removes pre-video offset; only HbO/HbR/HbT are used.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_263_276_ccmi_neurovascular.json",
+      "overall_mae": 28.7176,
+      "valence_mae": 26.9206,
+      "arousal_mae": 30.5146,
+      "conclusion": "Strong reference for CCMI.",
+      "recommended": false
+    },
+    {
+      "name": "D2: 6 fNIRS types + baseline mean subtraction",
+      "reason": "Adds Abs 780/805/830; extra raw absorption evidence is controlled by CCMI gates.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_293_306_ccmi_fnirs_all6.json",
+      "overall_mae": 28.7145,
+      "valence_mae": 26.9144,
+      "arousal_mae": 30.5146,
+      "conclusion": "Best data preprocessing choice.",
+      "recommended": true
+    },
+    {
+      "name": "D3: 6 fNIRS types + no baseline subtraction",
+      "reason": "Keeps slow drift and absolute offset; tests whether baseline mean contains emotion signal.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_307_320_ccmi_fnirs_all6_nobase.json",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "conclusion": "Does not generalize; falls back to 098.",
+      "recommended": false
+    },
+    {
+      "name": "D4: 6 fNIRS types + trial z-score",
+      "reason": "Removes trial-level amplitude and keeps within-video shape only.",
+      "validation": "4-subject smoke",
+      "source": "smoke_ccmi_fnirs_all6_trialz.json",
+      "overall_mae": 28.3478,
+      "valence_mae": 25.502,
+      "arousal_mae": 31.1936,
+      "conclusion": "Bad smoke result; do not run full CV.",
+      "recommended": false
+    },
+    {
+      "name": "D5: 6 fNIRS types + subject z-score",
+      "reason": "Removes subject-level amplitude shift; tests cross-subject scale drift.",
+      "validation": "4-subject smoke",
+      "source": "smoke_ccmi_fnirs_all6_subjectz.json",
+      "overall_mae": 28.3259,
+      "valence_mae": 25.4582,
+      "arousal_mae": 31.1936,
+      "conclusion": "Bad smoke result; subject amplitude has useful signal.",
+      "recommended": false
+    }
+  ],
+  "ccmi_fusion": [
+    {
+      "name": "C1: OOF agreement weighted",
+      "reason": "Weights EEG and fNIRS residual experts by OOF MSE and requires sign agreement.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_240_246_neurovascular_oof_gate.json",
+      "overall_mae": 28.7352,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.5186,
+      "conclusion": "First stable multimodal residual improvement.",
+      "recommended": false
+    },
+    {
+      "name": "C2: MinMagnitudeAgreement",
+      "reason": "Uses sign agreement and min(|EEG|, |fNIRS|) to avoid single-modality overreach.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_247_262_neurovascular_fusion_v2.json",
+      "overall_mae": 28.7297,
+      "valence_mae": 26.9408,
+      "arousal_mae": 30.5186,
+      "conclusion": "Simple intersection beats attention-style fusion.",
+      "recommended": false
+    },
+    {
+      "name": "C3: CCMI MinOverlap",
+      "reason": "Formalizes C2 as conservative cross-modal intersection with stronger scale/clip range.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_293_306_ccmi_fnirs_all6.json",
+      "overall_mae": 28.7186,
+      "valence_mae": 26.9226,
+      "arousal_mae": 30.5146,
+      "conclusion": "Good, but slightly weaker than slope-gated CCMI.",
+      "recommended": false
+    },
+    {
+      "name": "C4: CCMI HRFDelayedFNIRS",
+      "reason": "Confirms fast EEG residual with delayed fNIRS residual to match hemodynamic lag.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_293_306_ccmi_fnirs_all6.json",
+      "overall_mae": 28.7178,
+      "valence_mae": 26.9211,
+      "arousal_mae": 30.5146,
+      "conclusion": "HRF lag helps, but less than prior-slope gate.",
+      "recommended": false
+    },
+    {
+      "name": "C5: CCMI PriorSlopeGate",
+      "reason": "Learns when signal residual is helpful by prior trajectory slope bucket.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_293_306_ccmi_fnirs_all6.json",
+      "overall_mae": 28.7145,
+      "valence_mae": 26.9144,
+      "arousal_mae": 30.5146,
+      "conclusion": "Best EEG-fNIRS fusion module.",
+      "recommended": true
+    }
+  ],
+  "output_head": [
+    {
+      "name": "H1: 200 manual dimwise fusion",
+      "reason": "Valence uses risk expert; arousal uses conformal median band.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_221_228_bcrf_module_seed2026.json",
+      "overall_mae": 28.6912,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4777,
+      "conclusion": "Strong output-head baseline.",
+      "recommended": false
+    },
+    {
+      "name": "H2: 218 SCRF",
+      "reason": "Applies sign-consistent hierarchical residual field only on valence.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_221_228_bcrf_module_seed2026.json",
+      "overall_mae": 28.6869,
+      "valence_mae": 26.8961,
+      "arousal_mae": 30.4777,
+      "conclusion": "Best interpretable output calibration.",
+      "recommended": false
+    },
+    {
+      "name": "H3: 222 BCRF on SCRF",
+      "reason": "Adds Bayesian credible residual field to SCRF with confidence scaling.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_221_228_bcrf_module_seed2026.json",
+      "overall_mae": 28.6868,
+      "valence_mae": 26.8958,
+      "arousal_mae": 30.4777,
+      "conclusion": "Current global best, but tiny gain over SCRF.",
+      "recommended": true
+    },
+    {
+      "name": "H4: 224 BCRF brake disagreement",
+      "reason": "Uses SCRF correction only when BCRF and SCRF agree.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_221_228_bcrf_module_seed2026.json",
+      "overall_mae": 28.688,
+      "valence_mae": 26.8983,
+      "arousal_mae": 30.4777,
+      "conclusion": "Safer than raw BCRF but not best.",
+      "recommended": false
+    },
+    {
+      "name": "H5: arousal residual probe",
+      "reason": "Tests whether output residual fields should modify arousal.",
+      "validation": "Full 24-subject CV",
+      "source": "iteration_221_228_bcrf_module_seed2026.json",
+      "overall_mae": 28.6912,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4778,
+      "conclusion": "Arousal correction is not useful; keep arousal conservative.",
+      "recommended": false
+    }
+  ],
+  "combined_recommendation": [
+    {
+      "component": "Best signal-only framework",
+      "choice": "D2 + C5 over 098",
+      "verified_overall_mae": 28.7145,
+      "meaning": "Best verified EEG-fNIRS path: 6 fNIRS types, baseline subtraction, CCMI PriorSlopeGate."
+    },
+    {
+      "component": "Best output-head framework",
+      "choice": "H3: 222 BCRF on SCRF",
+      "verified_overall_mae": 28.6868,
+      "meaning": "Best verified non-signal output calibration."
+    },
+    {
+      "component": "Target combined framework",
+      "choice": "H3 + small CCMI residual",
+      "verified_overall_mae": null,
+      "meaning": "Not yet verified because sample-level 222 cache is required; previous direct overlay timed out."
+    }
+  ]
+}

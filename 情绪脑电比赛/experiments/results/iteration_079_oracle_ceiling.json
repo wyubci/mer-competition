@@ -1,0 +1,84 @@
+{
+  "method": "Oracle ceiling diagnostics",
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "val_samples": 6144
+  },
+  "results": [
+    {
+      "method": "TrialMeanOffset_oracle",
+      "overall_mae": 18.8194,
+      "valence_mae": 17.092,
+      "arousal_mae": 20.5468,
+      "overall_mse": 649.9531,
+      "notes": "Oracle: add each validation trial's mean residual offset."
+    },
+    {
+      "method": "SubjectAffine_oracle",
+      "overall_mae": 28.1609,
+      "valence_mae": 27.1781,
+      "arousal_mae": 29.1438,
+      "overall_mse": 1238.3712,
+      "notes": "Oracle: per-validation-subject affine calibration against labels."
+    },
+    {
+      "method": "All24_VideoTimeMean_leaky_oracle",
+      "overall_mae": 28.2976,
+      "valence_mae": 27.0675,
+      "arousal_mae": 29.5278,
+      "overall_mse": 1395.0455,
+      "notes": "Leaky oracle: average includes the target subject."
+    },
+    {
+      "method": "LOSO24_VideoTimeMean_oracle",
+      "overall_mae": 29.5279,
+      "valence_mae": 28.2443,
+      "arousal_mae": 30.8116,
+      "overall_mse": 1518.9911,
+      "notes": "Oracle: use all other public subjects including validation subjects."
+    },
+    {
+      "method": "SubjectMeanOffset_oracle",
+      "overall_mae": 29.6049,
+      "valence_mae": 27.753,
+      "arousal_mae": 31.4568,
+      "overall_mse": 1396.5205,
+      "notes": "Oracle: add each validation subject's mean residual offset."
+    },
+    {
+      "method": "Train20_VideoTimeMean",
+      "overall_mae": 29.9574,
+      "valence_mae": 28.5041,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.131,
+      "notes": "Allowed train-subject video-time prior."
+    }
+  ]
+}
