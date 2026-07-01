@@ -1,0 +1,1521 @@
+{
+  "method": "No-video-prior Huber physiological module batch",
+  "iteration_range": "376-395",
+  "note": "No candidate uses video/time label priors. This batch studies the Huber valence head: PCA dimension, modality source, subject/trial alignment, agreement gating, residual caps/shrinkage, and tree/boosted references.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+      "overall_mae": 46.6619,
+      "valence_mae": 50.3892,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3559.555,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+      "overall_mae": 46.6701,
+      "valence_mae": 50.4055,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3550.714,
+      "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+    },
+    {
+      "method": "392_HuberShrink80Valence_CenterArousal",
+      "overall_mae": 46.6792,
+      "valence_mae": 50.4239,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3529.8311,
+      "notes": "Constrain Huber residual magnitude around the center."
+    },
+    {
+      "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+      "overall_mae": 46.7142,
+      "valence_mae": 50.4937,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3527.7887,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+      "overall_mae": 46.7446,
+      "valence_mae": 50.5545,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3560.5353,
+      "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+    },
+    {
+      "method": "377_HuberPCA24Valence_CenterArousal",
+      "overall_mae": 46.7465,
+      "valence_mae": 50.5584,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3570.5445,
+      "notes": "Huber valence head with changed low-rank dimensionality."
+    },
+    {
+      "method": "376_HuberPCA8Valence_CenterArousal",
+      "overall_mae": 46.7666,
+      "valence_mae": 50.5987,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3568.2033,
+      "notes": "Huber valence head with changed low-rank dimensionality."
+    },
+    {
+      "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+      "overall_mae": 46.7911,
+      "valence_mae": 50.6476,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3569.0276,
+      "notes": "Huber valence head with changed low-rank dimensionality."
+    },
+    {
+      "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+      "overall_mae": 46.7953,
+      "valence_mae": 50.656,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3569.2087,
+      "notes": "Huber valence head on temporal-difference physiological representation."
+    },
+    {
+      "method": "378_HuberPCA32Valence_CenterArousal",
+      "overall_mae": 46.8243,
+      "valence_mae": 50.714,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3582.7947,
+      "notes": "Huber valence head with changed low-rank dimensionality."
+    },
+    {
+      "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+      "overall_mae": 46.9576,
+      "valence_mae": 50.9806,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3587.4603,
+      "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+    },
+    {
+      "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+      "overall_mae": 46.9669,
+      "valence_mae": 50.9992,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3571.1908,
+      "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+    },
+    {
+      "method": "395_GBRHuberPCA16Valence_CenterArousal",
+      "overall_mae": 46.97,
+      "valence_mae": 51.0053,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3564.3171,
+      "notes": "Tree-based nonlinear reference over low-rank physiological features."
+    },
+    {
+      "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+      "overall_mae": 46.9953,
+      "valence_mae": 51.0559,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3600.6095,
+      "notes": "Huber valence head with changed low-rank dimensionality."
+    },
+    {
+      "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+      "overall_mae": 47.0484,
+      "valence_mae": 51.1622,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3577.4078,
+      "notes": "Tree-based nonlinear reference over low-rank physiological features."
+    },
+    {
+      "method": "382_HuberEEGPCA8Valence_CenterArousal",
+      "overall_mae": 47.43,
+      "valence_mae": 51.9253,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3599.658,
+      "notes": "Huber valence head with changed low-rank dimensionality."
+    },
+    {
+      "method": "391_HuberCap12Valence_CenterArousal",
+      "overall_mae": 47.5533,
+      "valence_mae": 52.172,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3588.1151,
+      "notes": "Constrain Huber residual magnitude around the center."
+    },
+    {
+      "method": "Reference_321_Center128_noPrior",
+      "overall_mae": 47.5663,
+      "valence_mae": 52.198,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3655.896,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "390_HuberCap8Valence_CenterArousal",
+      "overall_mae": 47.5989,
+      "valence_mae": 52.2632,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3602.6484,
+      "notes": "Constrain Huber residual magnitude around the center."
+    },
+    {
+      "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+      "overall_mae": 47.7293,
+      "valence_mae": 52.5241,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3633.1366,
+      "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+    },
+    {
+      "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+      "overall_mae": 47.8164,
+      "valence_mae": 52.6981,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3648.6763,
+      "notes": "Use Huber only when another physiological expert agrees."
+    },
+    {
+      "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+      "overall_mae": 47.8661,
+      "valence_mae": 52.7975,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3653.4154,
+      "notes": "Use Huber only when another physiological expert agrees."
+    },
+    {
+      "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+      "overall_mae": 47.8675,
+      "valence_mae": 52.8003,
+      "arousal_mae": 42.9346,
+      "overall_mse": 3619.2744,
+      "notes": "Huber valence head on temporal-difference physiological representation."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "378_HuberPCA32Valence_CenterArousal",
+          "overall_mae": 38.614,
+          "valence_mae": 45.6324,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2925.5945,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 38.6649,
+          "valence_mae": 45.7343,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2851.5403,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 38.6729,
+          "valence_mae": 45.7503,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.7688,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "377_HuberPCA24Valence_CenterArousal",
+          "overall_mae": 38.7084,
+          "valence_mae": 45.8212,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2898.7832,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "376_HuberPCA8Valence_CenterArousal",
+          "overall_mae": 38.7455,
+          "valence_mae": 45.8954,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2888.1218,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+          "overall_mae": 38.7682,
+          "valence_mae": 45.9409,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2890.3604,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+          "overall_mae": 38.7851,
+          "valence_mae": 45.9748,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2890.9744,
+          "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+        },
+        {
+          "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 38.8771,
+          "valence_mae": 46.1586,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2895.0652,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "392_HuberShrink80Valence_CenterArousal",
+          "overall_mae": 38.8966,
+          "valence_mae": 46.1978,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2879.5342,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+          "overall_mae": 38.9979,
+          "valence_mae": 46.4003,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2898.3096,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 39.0109,
+          "valence_mae": 46.4263,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2910.74,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+          "overall_mae": 39.2026,
+          "valence_mae": 46.8097,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2949.2402,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "395_GBRHuberPCA16Valence_CenterArousal",
+          "overall_mae": 39.2041,
+          "valence_mae": 46.8127,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2919.4707,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 39.2562,
+          "valence_mae": 46.9169,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2934.9805,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+          "overall_mae": 39.906,
+          "valence_mae": 48.2165,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2983.5977,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "391_HuberCap12Valence_CenterArousal",
+          "overall_mae": 39.9665,
+          "valence_mae": 48.3376,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2982.615,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+          "overall_mae": 39.9937,
+          "valence_mae": 48.3919,
+          "arousal_mae": 31.5955,
+          "overall_mse": 2996.8145,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "390_HuberCap8Valence_CenterArousal",
+          "overall_mae": 40.0857,
+          "valence_mae": 48.5759,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3004.7385,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "382_HuberEEGPCA8Valence_CenterArousal",
+          "overall_mae": 40.1554,
+          "valence_mae": 48.7152,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3020.155,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+          "overall_mae": 40.3992,
+          "valence_mae": 49.2028,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3067.7998,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 40.6155,
+          "valence_mae": 49.6354,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3092.0574,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 40.6195,
+          "valence_mae": 49.6434,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3058.7864,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 57.5077,
+          "valence_mae": 59.057,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4615.3623,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+          "overall_mae": 57.5684,
+          "valence_mae": 59.1784,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4782.4727,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+          "overall_mae": 57.6823,
+          "valence_mae": 59.4062,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4715.0005,
+          "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 57.7967,
+          "valence_mae": 59.6349,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4752.397,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+          "overall_mae": 57.8486,
+          "valence_mae": 59.7388,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4760.3335,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "376_HuberPCA8Valence_CenterArousal",
+          "overall_mae": 57.8876,
+          "valence_mae": 59.8167,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4778.6431,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 57.8941,
+          "valence_mae": 59.8296,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4778.5776,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "392_HuberShrink80Valence_CenterArousal",
+          "overall_mae": 57.8996,
+          "valence_mae": 59.8406,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4709.2129,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "377_HuberPCA24Valence_CenterArousal",
+          "overall_mae": 58.0669,
+          "valence_mae": 60.1752,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4797.2397,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 58.1221,
+          "valence_mae": 60.2858,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4711.5952,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "378_HuberPCA32Valence_CenterArousal",
+          "overall_mae": 58.2351,
+          "valence_mae": 60.5117,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4827.2471,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 58.353,
+          "valence_mae": 60.7474,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4741.4336,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 58.3732,
+          "valence_mae": 60.7878,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4704.2017,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+          "overall_mae": 58.465,
+          "valence_mae": 60.9714,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4707.8569,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "395_GBRHuberPCA16Valence_CenterArousal",
+          "overall_mae": 58.4657,
+          "valence_mae": 60.9728,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4788.5552,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "382_HuberEEGPCA8Valence_CenterArousal",
+          "overall_mae": 58.5665,
+          "valence_mae": 61.1746,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4777.9585,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 58.604,
+          "valence_mae": 61.2495,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4701.7046,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+          "overall_mae": 58.8205,
+          "valence_mae": 61.6825,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4795.9585,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "391_HuberCap12Valence_CenterArousal",
+          "overall_mae": 58.9265,
+          "valence_mae": 61.8946,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4721.1992,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "390_HuberCap8Valence_CenterArousal",
+          "overall_mae": 59.2199,
+          "valence_mae": 62.4813,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4765.8857,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+          "overall_mae": 59.5764,
+          "valence_mae": 63.1943,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4850.4585,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+          "overall_mae": 59.6005,
+          "valence_mae": 63.2426,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4852.7393,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "Reference from previous physiological-only batches."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+          "overall_mae": 50.4634,
+          "valence_mae": 55.7538,
+          "arousal_mae": 45.173,
+          "overall_mse": 4007.3372,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "377_HuberPCA24Valence_CenterArousal",
+          "overall_mae": 50.5521,
+          "valence_mae": 55.9312,
+          "arousal_mae": 45.173,
+          "overall_mse": 4022.6633,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 50.5827,
+          "valence_mae": 55.9923,
+          "arousal_mae": 45.173,
+          "overall_mse": 4036.9531,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+          "overall_mae": 50.6272,
+          "valence_mae": 56.0815,
+          "arousal_mae": 45.173,
+          "overall_mse": 4029.1746,
+          "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+        },
+        {
+          "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+          "overall_mae": 50.7175,
+          "valence_mae": 56.2619,
+          "arousal_mae": 45.173,
+          "overall_mse": 4026.179,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "378_HuberPCA32Valence_CenterArousal",
+          "overall_mae": 50.7304,
+          "valence_mae": 56.2878,
+          "arousal_mae": 45.173,
+          "overall_mse": 4037.9375,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "392_HuberShrink80Valence_CenterArousal",
+          "overall_mae": 50.7344,
+          "valence_mae": 56.2957,
+          "arousal_mae": 45.173,
+          "overall_mse": 4003.6008,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 50.781,
+          "valence_mae": 56.389,
+          "arousal_mae": 45.173,
+          "overall_mse": 4003.8958,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "376_HuberPCA8Valence_CenterArousal",
+          "overall_mae": 50.7938,
+          "valence_mae": 56.4146,
+          "arousal_mae": 45.173,
+          "overall_mse": 4072.6387,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 50.8055,
+          "valence_mae": 56.438,
+          "arousal_mae": 45.173,
+          "overall_mse": 4071.3418,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+          "overall_mae": 50.8174,
+          "valence_mae": 56.4618,
+          "arousal_mae": 45.173,
+          "overall_mse": 4068.5808,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "395_GBRHuberPCA16Valence_CenterArousal",
+          "overall_mae": 50.8978,
+          "valence_mae": 56.6226,
+          "arousal_mae": 45.173,
+          "overall_mse": 4035.094,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+          "overall_mae": 51.0677,
+          "valence_mae": 56.9624,
+          "arousal_mae": 45.173,
+          "overall_mse": 4082.5305,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 51.1183,
+          "valence_mae": 57.0636,
+          "arousal_mae": 45.173,
+          "overall_mse": 4071.0168,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 51.3849,
+          "valence_mae": 57.5968,
+          "arousal_mae": 45.173,
+          "overall_mse": 4122.1636,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "382_HuberEEGPCA8Valence_CenterArousal",
+          "overall_mae": 51.4856,
+          "valence_mae": 57.7982,
+          "arousal_mae": 45.173,
+          "overall_mse": 4062.1377,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "391_HuberCap12Valence_CenterArousal",
+          "overall_mae": 51.6542,
+          "valence_mae": 58.1354,
+          "arousal_mae": 45.173,
+          "overall_mse": 4053.708,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 51.7127,
+          "valence_mae": 58.2524,
+          "arousal_mae": 45.173,
+          "overall_mse": 4117.0942,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "390_HuberCap8Valence_CenterArousal",
+          "overall_mae": 51.7411,
+          "valence_mae": 58.3091,
+          "arousal_mae": 45.173,
+          "overall_mse": 4066.488,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+          "overall_mae": 51.7946,
+          "valence_mae": 58.4161,
+          "arousal_mae": 45.173,
+          "overall_mse": 4110.2266,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+          "overall_mae": 51.8322,
+          "valence_mae": 58.4914,
+          "arousal_mae": 45.173,
+          "overall_mse": 4112.3711,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 51.8806,
+          "valence_mae": 58.5882,
+          "arousal_mae": 45.173,
+          "overall_mse": 4110.5278,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 52.0201,
+          "valence_mae": 58.8671,
+          "arousal_mae": 45.173,
+          "overall_mse": 4094.6599,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 39.8581,
+          "valence_mae": 39.7993,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2571.6665,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 40.0514,
+          "valence_mae": 40.1861,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2571.3909,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+          "overall_mae": 40.0692,
+          "valence_mae": 40.2215,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2551.7344,
+          "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 40.0881,
+          "valence_mae": 40.2593,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2487.7498,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 40.0904,
+          "valence_mae": 40.2639,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2559.4417,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "392_HuberShrink80Valence_CenterArousal",
+          "overall_mae": 40.0986,
+          "valence_mae": 40.2803,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2518.6289,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "377_HuberPCA24Valence_CenterArousal",
+          "overall_mae": 40.1012,
+          "valence_mae": 40.2856,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2561.1501,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+          "overall_mae": 40.2021,
+          "valence_mae": 40.4873,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2525.5835,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "376_HuberPCA8Valence_CenterArousal",
+          "overall_mae": 40.2125,
+          "valence_mae": 40.5082,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2529.1736,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 40.2132,
+          "valence_mae": 40.5095,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2529.5244,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+          "overall_mae": 40.2748,
+          "valence_mae": 40.6329,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2521.4319,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "378_HuberPCA32Valence_CenterArousal",
+          "overall_mae": 40.2956,
+          "valence_mae": 40.6744,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2572.6892,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+          "overall_mae": 40.3205,
+          "valence_mae": 40.7241,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2504.8896,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "395_GBRHuberPCA16Valence_CenterArousal",
+          "overall_mae": 40.4513,
+          "valence_mae": 40.9858,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2517.7346,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "382_HuberEEGPCA8Valence_CenterArousal",
+          "overall_mae": 40.6621,
+          "valence_mae": 41.4074,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2587.7134,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 40.8289,
+          "valence_mae": 41.7411,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2578.8145,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 40.9822,
+          "valence_mae": 42.0476,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2572.0889,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+          "overall_mae": 41.0228,
+          "valence_mae": 42.1288,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2691.7539,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "391_HuberCap12Valence_CenterArousal",
+          "overall_mae": 41.3264,
+          "valence_mae": 42.7359,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2584.6633,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "390_HuberCap8Valence_CenterArousal",
+          "overall_mae": 41.4575,
+          "valence_mae": 42.9981,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2591.0818,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+          "overall_mae": 41.8678,
+          "valence_mae": 43.8188,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2674.2214,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 41.9163,
+          "valence_mae": 43.9157,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2631.1885,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+          "overall_mae": 41.9916,
+          "valence_mae": 44.0663,
+          "arousal_mae": 39.9168,
+          "overall_mse": 2680.0891,
+          "notes": "Use Huber only when another physiological expert agrees."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 45.2909,
+          "valence_mae": 50.6307,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3422.3066,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "395_GBRHuberPCA16Valence_CenterArousal",
+          "overall_mae": 45.4774,
+          "valence_mae": 51.0037,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3367.8054,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+          "overall_mae": 45.7185,
+          "valence_mae": 51.4858,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3396.7156,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "390_HuberCap8Valence_CenterArousal",
+          "overall_mae": 45.7719,
+          "valence_mae": 51.5927,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3413.0652,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "382_HuberEEGPCA8Valence_CenterArousal",
+          "overall_mae": 45.8008,
+          "valence_mae": 51.6504,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3384.543,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 45.8607,
+          "valence_mae": 51.7703,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3403.8923,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "392_HuberShrink80Valence_CenterArousal",
+          "overall_mae": 45.8877,
+          "valence_mae": 51.8243,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3415.6736,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+          "overall_mae": 45.9046,
+          "valence_mae": 51.858,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3465.7063,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 45.9068,
+          "valence_mae": 51.8625,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3456.5889,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "391_HuberCap12Valence_CenterArousal",
+          "overall_mae": 45.9498,
+          "valence_mae": 51.9484,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3419.0771,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+          "overall_mae": 46.0121,
+          "valence_mae": 52.0731,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3434.4998,
+          "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+        },
+        {
+          "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 46.0274,
+          "valence_mae": 52.1036,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3446.0032,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "376_HuberPCA8Valence_CenterArousal",
+          "overall_mae": 46.0298,
+          "valence_mae": 52.1084,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3446.9775,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+          "overall_mae": 46.1057,
+          "valence_mae": 52.2601,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3452.5811,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 46.1112,
+          "valence_mae": 52.2713,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3447.5481,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+          "overall_mae": 46.125,
+          "valence_mae": 52.2988,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3454.0977,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 46.1718,
+          "valence_mae": 52.3924,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3457.5828,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+          "overall_mae": 46.1858,
+          "valence_mae": 52.4204,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3469.8684,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "377_HuberPCA24Valence_CenterArousal",
+          "overall_mae": 46.1862,
+          "valence_mae": 52.4213,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3453.583,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "378_HuberPCA32Valence_CenterArousal",
+          "overall_mae": 46.2189,
+          "valence_mae": 52.4866,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3456.8359,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 46.2685,
+          "valence_mae": 52.5859,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3451.0833,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 46.4466,
+          "valence_mae": 52.942,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3508.9563,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+          "overall_mae": 46.4536,
+          "valence_mae": 52.956,
+          "arousal_mae": 39.9512,
+          "overall_mse": 3479.1824,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "389_HuberSubjectAgreementGateValence_CenterArousal",
+          "overall_mae": 46.2945,
+          "valence_mae": 47.5763,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3657.3464,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 46.5051,
+          "valence_mae": 47.9976,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3796.8098,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "Reference_354_AgreementGatedPCA16Valence_CenterArousal",
+          "overall_mae": 46.5373,
+          "valence_mae": 48.062,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3678.4128,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "392_HuberShrink80Valence_CenterArousal",
+          "overall_mae": 46.5585,
+          "valence_mae": 48.1043,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3652.5107,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "379_HuberSubjectZPCA16Valence_CenterArousal",
+          "overall_mae": 46.6055,
+          "valence_mae": 48.1983,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3687.1328,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "Reference_364_HuberPCA16Valence_CenterArousal",
+          "overall_mae": 46.7176,
+          "valence_mae": 48.4225,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3672.3918,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "393_WinsorTargetHuberPCA16Valence_CenterArousal",
+          "overall_mae": 46.8445,
+          "valence_mae": 48.6763,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3683.0837,
+          "notes": "Train Huber on winsorized valence targets to reduce label-tail influence."
+        },
+        {
+          "method": "378_HuberPCA32Valence_CenterArousal",
+          "overall_mae": 46.852,
+          "valence_mae": 48.6913,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3676.6299,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "377_HuberPCA24Valence_CenterArousal",
+          "overall_mae": 46.8643,
+          "valence_mae": 48.716,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3690.0176,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "383_HuberFNIRSPCA8Valence_CenterArousal",
+          "overall_mae": 46.9246,
+          "valence_mae": 48.8366,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3699.6145,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "376_HuberPCA8Valence_CenterArousal",
+          "overall_mae": 46.9307,
+          "valence_mae": 48.8488,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3693.8274,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "380_HuberSubjectCenterPCA16Valence_CenterArousal",
+          "overall_mae": 46.9443,
+          "valence_mae": 48.876,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3726.709,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "386_HuberLevelDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 46.9547,
+          "valence_mae": 48.8968,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3694.9082,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        },
+        {
+          "method": "384_HuberNeuroPCA8Valence_CenterArousal",
+          "overall_mae": 47.0068,
+          "valence_mae": 49.001,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3675.0032,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "390_HuberCap8Valence_CenterArousal",
+          "overall_mae": 47.3174,
+          "valence_mae": 49.622,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3775.1316,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "395_GBRHuberPCA16Valence_CenterArousal",
+          "overall_mae": 47.3236,
+          "valence_mae": 49.6345,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3757.4041,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "394_ExtraTreesPCA16Valence_CenterArousal",
+          "overall_mae": 47.3654,
+          "valence_mae": 49.718,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3786.2097,
+          "notes": "Tree-based nonlinear reference over low-rank physiological features."
+        },
+        {
+          "method": "391_HuberCap12Valence_CenterArousal",
+          "overall_mae": 47.4964,
+          "valence_mae": 49.9802,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3767.8689,
+          "notes": "Constrain Huber residual magnitude around the center."
+        },
+        {
+          "method": "388_HuberElasticAgreementGateValence_CenterArousal",
+          "overall_mae": 47.6284,
+          "valence_mae": 50.2441,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3819.7988,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "387_HuberRidgeAgreementGateValence_CenterArousal",
+          "overall_mae": 47.6727,
+          "valence_mae": 50.3327,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3826.249,
+          "notes": "Use Huber only when another physiological expert agrees."
+        },
+        {
+          "method": "382_HuberEEGPCA8Valence_CenterArousal",
+          "overall_mae": 47.9096,
+          "valence_mae": 50.8064,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3765.614,
+          "notes": "Huber valence head with changed low-rank dimensionality."
+        },
+        {
+          "method": "381_HuberTrialCenterPCA16Valence_CenterArousal",
+          "overall_mae": 48.5062,
+          "valence_mae": 51.9996,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3855.8027,
+          "notes": "Huber valence head under unlabeled subject/trial feature alignment."
+        },
+        {
+          "method": "385_HuberDeltaPCA16Valence_CenterArousal",
+          "overall_mae": 48.7102,
+          "valence_mae": 52.4078,
+          "arousal_mae": 45.0127,
+          "overall_mse": 3837.4854,
+          "notes": "Huber valence head on temporal-difference physiological representation."
+        }
+      ]
+    }
+  ]
+}

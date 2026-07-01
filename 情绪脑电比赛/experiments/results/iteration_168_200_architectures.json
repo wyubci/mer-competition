@@ -1,0 +1,4095 @@
+{
+  "method": "Experiments 168-200: new architectures, 188 batch integration, and 200 milestone synthesis",
+  "note": "168-187 are the next 20 architecture families; 188 integrates that batch; 189-199 are additional distinct families; 200 is the milestone synthesis.",
+  "architecture_map": {
+    "168": "Piecewise affine prior-value calibration",
+    "169": "Monotone PCHIP residual-bias calibration",
+    "170": "Video-time residual surface correction",
+    "171": "Lag-aligned trial prototype retrieval",
+    "172": "Uncertainty-gated calibration/prototype router",
+    "173": "Linear covariance transport calibration",
+    "174": "Uncertainty-aware Kalman smoother",
+    "175": "Student-t robust Kalman smoother",
+    "176": "Chebyshev temporal graph filter",
+    "177": "Lagged ridge temporal-convolution residual decoder",
+    "178": "Landmark RBF residual decoder",
+    "179": "Video-level residual prior correction",
+    "180": "Temporal-rank calibration",
+    "181": "Deterministic feature-bagging ridge residual ensemble",
+    "182": "ExtraTrees residual decoder",
+    "183": "GaussianNB residual-bin expectation decoder",
+    "184": "Nystroem kernel ridge residual decoder",
+    "185": "Robust Mahalanobis KNN residual retrieval",
+    "186": "PLS latent residual decoder",
+    "187": "Temporal basis ridge residual model",
+    "188": "Batch-4 fixed integration",
+    "189": "Adaptive uncertainty candidate mixture",
+    "190": "Huberized slope limiter",
+    "191": "Residual sign-memory correction",
+    "192": "Low-rank video-time residual factorization",
+    "193": "Per-video affine copula-lite calibration",
+    "194": "Identity-mixed Wasserstein histogram calibration",
+    "195": "Conformal median-band projector",
+    "196": "Derivative-template residual retrieval",
+    "197": "Dimension-coupled arousal-from-valence correction",
+    "198": "Multi-resolution expert switch",
+    "199": "Jackknife uncertainty shrinkage",
+    "200": "Milestone synthesis fusion"
+  },
+  "fold_size": 4,
+  "candidate_pool_size": 24,
+  "aggregate_results": [
+    {
+      "method": "195_ConformalMedianBandProjector",
+      "overall_mae": 28.7072,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1589.5159,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "167_PreviousBest_reference",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4782,
+      "overall_mse": 1589.5186,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "176_ChebyshevTemporalGraphFilter",
+      "overall_mae": 28.7077,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4781,
+      "overall_mse": 1589.3956,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "174_KalmanUncertaintySmoother",
+      "overall_mae": 28.7079,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4779,
+      "overall_mse": 1589.6434,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "190_HuberizedSlopeLimiter",
+      "overall_mae": 28.7079,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4784,
+      "overall_mse": 1589.6661,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "191_ResidualSignMemoryCorrection",
+      "overall_mae": 28.709,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4811,
+      "overall_mse": 1589.6582,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "189_AdaptiveUncertaintyCandidateMixture",
+      "overall_mae": 28.7105,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4823,
+      "overall_mse": 1589.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "198_MultiResolutionExpertSwitch",
+      "overall_mae": 28.7113,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.5103,
+      "overall_mse": 1594.0123,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "199_JackknifeUncertaintyShrinkage",
+      "overall_mae": 28.7141,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4887,
+      "overall_mse": 1590.3099,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "183_GaussianNBResidualBinExpectation",
+      "overall_mae": 28.7151,
+      "valence_mae": 26.9473,
+      "arousal_mae": 30.4829,
+      "overall_mse": 1590.7631,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "169_MonotonePCHIPBiasCalibration",
+      "overall_mae": 28.7171,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.5149,
+      "overall_mse": 1597.344,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "170_VideoTimeResidualSurface",
+      "overall_mae": 28.7186,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.5021,
+      "overall_mse": 1595.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "125_PreviousStateFusion_reference",
+      "overall_mae": 28.7247,
+      "valence_mae": 26.9594,
+      "arousal_mae": 30.4901,
+      "overall_mse": 1590.1289,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "184_NystroemKernelRidgeResidual",
+      "overall_mae": 28.7251,
+      "valence_mae": 26.9509,
+      "arousal_mae": 30.4993,
+      "overall_mse": 1586.255,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "194_IdentityMixedWassersteinCalibration",
+      "overall_mae": 28.726,
+      "valence_mae": 26.9551,
+      "arousal_mae": 30.497,
+      "overall_mse": 1602.1479,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "187_TemporalBasisRidgeResidual",
+      "overall_mae": 28.7278,
+      "valence_mae": 26.9673,
+      "arousal_mae": 30.4883,
+      "overall_mse": 1588.4498,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "173_CovarianceTransportCalibration",
+      "overall_mae": 28.7282,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.5414,
+      "overall_mse": 1605.85,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "188_FixedBatch4Fusion",
+      "overall_mae": 28.7282,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5518,
+      "overall_mse": 1592.1255,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "182_ExtraTreesResidualDecoder",
+      "overall_mae": 28.7309,
+      "valence_mae": 26.9463,
+      "arousal_mae": 30.5156,
+      "overall_mse": 1586.4849,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "172_UncertaintyGatedRouter",
+      "overall_mae": 28.7314,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.5478,
+      "overall_mse": 1587.6837,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "104_DimwiseOOFMeta_reference",
+      "overall_mae": 28.7323,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4966,
+      "overall_mse": 1588.6221,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "181_FeatureBaggingRidgeResidual",
+      "overall_mae": 28.7373,
+      "valence_mae": 26.9697,
+      "arousal_mae": 30.505,
+      "overall_mse": 1582.8442,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "192_LowRankVideoTimeResidualFactor",
+      "overall_mae": 28.7373,
+      "valence_mae": 26.958,
+      "arousal_mae": 30.5165,
+      "overall_mse": 1582.3357,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "185_MahalanobisKNNResidualRetrieval",
+      "overall_mae": 28.7398,
+      "valence_mae": 26.9574,
+      "arousal_mae": 30.5222,
+      "overall_mse": 1587.8845,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "178_LandmarkRBFResidualDecoder",
+      "overall_mae": 28.7422,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.5244,
+      "overall_mse": 1584.5698,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "197_DimensionCoupledArousalCorrection",
+      "overall_mae": 28.7429,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.5489,
+      "overall_mse": 1582.9019,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "179_VideoLevelResidualPrior",
+      "overall_mae": 28.7541,
+      "valence_mae": 26.9934,
+      "arousal_mae": 30.5148,
+      "overall_mse": 1585.4906,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "200_MilestoneSynthesisFusion",
+      "overall_mae": 28.7589,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.6006,
+      "overall_mse": 1593.0886,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "186_PLSLatentResidualDecoder",
+      "overall_mae": 28.7613,
+      "valence_mae": 26.9722,
+      "arousal_mae": 30.5504,
+      "overall_mse": 1583.2892,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "168_PiecewiseAffineCalibration",
+      "overall_mae": 28.7953,
+      "valence_mae": 26.9874,
+      "arousal_mae": 30.6033,
+      "overall_mse": 1580.708,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "171_LagAlignedTrialPrototype",
+      "overall_mae": 28.7958,
+      "valence_mae": 27.0338,
+      "arousal_mae": 30.5578,
+      "overall_mse": 1584.6083,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "193_PerVideoAffineCalibration",
+      "overall_mae": 28.8062,
+      "valence_mae": 27.027,
+      "arousal_mae": 30.5853,
+      "overall_mse": 1578.6454,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "177_LaggedRidgeTCNResidual",
+      "overall_mae": 28.815,
+      "valence_mae": 27.0236,
+      "arousal_mae": 30.6063,
+      "overall_mse": 1578.7847,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "196_DerivativeTemplateRetrieval",
+      "overall_mae": 28.8275,
+      "valence_mae": 27.0245,
+      "arousal_mae": 30.6306,
+      "overall_mse": 1592.3823,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "180_TemporalRankCalibration",
+      "overall_mae": 28.909,
+      "valence_mae": 27.2202,
+      "arousal_mae": 30.5977,
+      "overall_mse": 1575.2523,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "175_StudentTRobustKalmanSmoother",
+      "overall_mae": 30.2777,
+      "valence_mae": 29.1173,
+      "arousal_mae": 31.4381,
+      "overall_mse": 1649.1304,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "dimwise_integration": [
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.6912,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.6913,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.6913,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.6914,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.6915,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.6928,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.6934,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.6938,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.6949,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.6951,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.6951,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.6952,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.6953,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.6963,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.6963,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.6964,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.6964,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.6964,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.6967,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.6967,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.6972,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.6974,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.6974,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.6975,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.6975,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.6977,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.6977,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.6978,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.6981,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.6981,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.6985,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.6987,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.6987,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.6987,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.6988,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.6988,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.6989,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.6989,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.6989,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.6992,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.6998,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7001,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7002,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7003,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7005,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7006,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4966,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[194_IdentityMixedWassersteinCalibration]",
+      "overall_mae": 28.7008,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.497,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7008,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7011,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7011,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7017,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7017,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7019,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7019,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[184_NystroemKernelRidgeResidual]",
+      "overall_mae": 28.702,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7026,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7026,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7028,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.703,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[170_VideoTimeResidualSurface]",
+      "overall_mae": 28.7034,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5021,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7037,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7038,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7041,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7044,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4966,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[194_IdentityMixedWassersteinCalibration]",
+      "overall_mae": 28.7046,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.497,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[181_FeatureBaggingRidgeResidual]",
+      "overall_mae": 28.7048,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.505,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7048,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[184_NystroemKernelRidgeResidual]",
+      "overall_mae": 28.7058,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7058,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4966,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7058,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4966,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[194_IdentityMixedWassersteinCalibration]",
+      "overall_mae": 28.706,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.497,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[194_IdentityMixedWassersteinCalibration]",
+      "overall_mae": 28.706,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.497,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7064,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7065,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7066,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7066,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7067,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7069,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4966,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[170_VideoTimeResidualSurface]",
+      "overall_mae": 28.7071,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.5021,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[184_NystroemKernelRidgeResidual]",
+      "overall_mae": 28.7071,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[184_NystroemKernelRidgeResidual]",
+      "overall_mae": 28.7071,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[194_IdentityMixedWassersteinCalibration]",
+      "overall_mae": 28.7071,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.497,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7071,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7073,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7073,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7073,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7073,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7073,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7074,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7074,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7074,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7074,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[198_MultiResolutionExpertSwitch]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5103,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7076,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7076,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7076,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7076,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7076,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7077,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7077,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7077,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7077,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7078,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7078,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7078,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7079,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7079,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7079,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.708,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4966,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.708,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.708,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7081,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7081,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7081,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[184_NystroemKernelRidgeResidual]",
+      "overall_mae": 28.7082,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[194_IdentityMixedWassersteinCalibration]",
+      "overall_mae": 28.7082,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.497,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7082,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7083,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7084,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7084,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[170_VideoTimeResidualSurface]",
+      "overall_mae": 28.7085,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.5021,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[170_VideoTimeResidualSurface]",
+      "overall_mae": 28.7085,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.5021,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[181_FeatureBaggingRidgeResidual]",
+      "overall_mae": 28.7086,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.505,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7086,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7086,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7086,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7087,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7088,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7088,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7088,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.709,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.709,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.709,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.709,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.709,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7092,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7093,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[184_NystroemKernelRidgeResidual]",
+      "overall_mae": 28.7094,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7094,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7095,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[170_VideoTimeResidualSurface]",
+      "overall_mae": 28.7096,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.5021,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7096,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7096,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7096,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[179_VideoLevelResidualPrior]",
+      "overall_mae": 28.7097,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5148,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[169_MonotonePCHIPBiasCalibration]",
+      "overall_mae": 28.7097,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5149,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7097,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7098,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7099,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7099,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7099,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7099,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7099,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[181_FeatureBaggingRidgeResidual]",
+      "overall_mae": 28.71,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.505,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[181_FeatureBaggingRidgeResidual]",
+      "overall_mae": 28.71,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.505,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[182_ExtraTreesResidualDecoder]",
+      "overall_mae": 28.7101,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5156,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7101,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7101,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7102,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[191_ResidualSignMemoryCorrection]",
+      "overall_mae": 28.7103,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4811,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7104,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[192_LowRankVideoTimeResidualFactor]",
+      "overall_mae": 28.7105,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5165,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7105,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[170_VideoTimeResidualSurface]",
+      "overall_mae": 28.7107,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.5021,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7108,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[189_AdaptiveUncertaintyCandidateMixture]",
+      "overall_mae": 28.7109,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4823,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[200_MilestoneSynthesisFusion]__A[181_FeatureBaggingRidgeResidual]",
+      "overall_mae": 28.7111,
+      "valence_mae": 26.9172,
+      "arousal_mae": 30.505,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[198_MultiResolutionExpertSwitch]",
+      "overall_mae": 28.7112,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.5103,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[199_JackknifeUncertaintyShrinkage]__A[183_GaussianNBResidualBinExpectation]",
+      "overall_mae": 28.7112,
+      "valence_mae": 26.9395,
+      "arousal_mae": 30.4829,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[098_PatternPrior]",
+      "overall_mae": 28.7116,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7116,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7118,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[182_ExtraTreesResidualDecoder]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.712,
+      "valence_mae": 26.9463,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[182_ExtraTreesResidualDecoder]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7121,
+      "valence_mae": 26.9463,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[169_MonotonePCHIPBiasCalibration]__A[181_FeatureBaggingRidgeResidual]",
+      "overall_mae": 28.7122,
+      "valence_mae": 26.9194,
+      "arousal_mae": 30.505,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[182_ExtraTreesResidualDecoder]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7122,
+      "valence_mae": 26.9463,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[182_ExtraTreesResidualDecoder]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7123,
+      "valence_mae": 26.9463,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7124,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[182_ExtraTreesResidualDecoder]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7124,
+      "valence_mae": 26.9463,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[183_GaussianNBResidualBinExpectation]__A[195_ConformalMedianBandProjector]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9473,
+      "arousal_mae": 30.4777,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[170_VideoTimeResidualSurface]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.935,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[183_GaussianNBResidualBinExpectation]__A[174_KalmanUncertaintySmoother]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9473,
+      "arousal_mae": 30.4779,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[173_CovarianceTransportCalibration]__A[198_MultiResolutionExpertSwitch]",
+      "overall_mae": 28.7127,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.5103,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[172_UncertaintyGatedRouter]__A[198_MultiResolutionExpertSwitch]",
+      "overall_mae": 28.7127,
+      "valence_mae": 26.915,
+      "arousal_mae": 30.5103,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7127,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7127,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[183_GaussianNBResidualBinExpectation]__A[176_ChebyshevTemporalGraphFilter]",
+      "overall_mae": 28.7127,
+      "valence_mae": 26.9473,
+      "arousal_mae": 30.4781,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[183_GaussianNBResidualBinExpectation]__A[167_PreviousBest_reference]",
+      "overall_mae": 28.7127,
+      "valence_mae": 26.9473,
+      "arousal_mae": 30.4782,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7128,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7128,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7128,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[183_GaussianNBResidualBinExpectation]__A[190_HuberizedSlopeLimiter]",
+      "overall_mae": 28.7128,
+      "valence_mae": 26.9473,
+      "arousal_mae": 30.4784,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7129,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[176_ChebyshevTemporalGraphFilter]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.713,
+      "valence_mae": 26.9373,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[190_HuberizedSlopeLimiter]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7131,
+      "valence_mae": 26.9375,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7131,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[195_ConformalMedianBandProjector]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7133,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[174_KalmanUncertaintySmoother]__A[199_JackknifeUncertaintyShrinkage]",
+      "overall_mae": 28.7133,
+      "valence_mae": 26.9379,
+      "arousal_mae": 30.4887,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[188_FixedBatch4Fusion]__A[185_MahalanobisKNNResidualRetrieval]",
+      "overall_mae": 28.7134,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5222,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[179_VideoLevelResidualPrior]",
+      "overall_mae": 28.7135,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.5148,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[198_MultiResolutionExpertSwitch]__A[169_MonotonePCHIPBiasCalibration]",
+      "overall_mae": 28.7135,
+      "valence_mae": 26.9122,
+      "arousal_mae": 30.5149,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[191_ResidualSignMemoryCorrection]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7135,
+      "valence_mae": 26.9368,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_PreviousBest_reference]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7135,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[197_DimensionCoupledArousalCorrection]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7135,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4901,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[189_AdaptiveUncertaintyCandidateMixture]__A[187_TemporalBasisRidgeResidual]",
+      "overall_mae": 28.7135,
+      "valence_mae": 26.9387,
+      "arousal_mae": 30.4883,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "197_DimensionCoupledArousalCorrection",
+          "overall_mae": 25.7405,
+          "valence_mae": 24.7061,
+          "arousal_mae": 26.7749,
+          "overall_mse": 1207.1884,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "180_TemporalRankCalibration",
+          "overall_mae": 25.749,
+          "valence_mae": 24.8178,
+          "arousal_mae": 26.6802,
+          "overall_mse": 1188.3976,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "181_FeatureBaggingRidgeResidual",
+          "overall_mae": 25.9626,
+          "valence_mae": 24.7519,
+          "arousal_mae": 27.1733,
+          "overall_mse": 1222.0739,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "184_NystroemKernelRidgeResidual",
+          "overall_mae": 25.9641,
+          "valence_mae": 24.7206,
+          "arousal_mae": 27.2076,
+          "overall_mse": 1226.3356,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "174_KalmanUncertaintySmoother",
+          "overall_mae": 25.9704,
+          "valence_mae": 24.7024,
+          "arousal_mae": 27.2385,
+          "overall_mse": 1231.7054,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "182_ExtraTreesResidualDecoder",
+          "overall_mae": 25.9714,
+          "valence_mae": 24.7298,
+          "arousal_mae": 27.213,
+          "overall_mse": 1226.3444,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "178_LandmarkRBFResidualDecoder",
+          "overall_mae": 25.9718,
+          "valence_mae": 24.7367,
+          "arousal_mae": 27.207,
+          "overall_mse": 1223.3506,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "190_HuberizedSlopeLimiter",
+          "overall_mae": 25.9726,
+          "valence_mae": 24.7028,
+          "arousal_mae": 27.2424,
+          "overall_mse": 1231.8019,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "195_ConformalMedianBandProjector",
+          "overall_mae": 25.9752,
+          "valence_mae": 24.7058,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1231.8507,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9756,
+          "valence_mae": 24.7061,
+          "arousal_mae": 27.2452,
+          "overall_mse": 1231.8525,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "176_ChebyshevTemporalGraphFilter",
+          "overall_mae": 25.9756,
+          "valence_mae": 24.7066,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1231.7047,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 25.9781,
+          "valence_mae": 24.6991,
+          "arousal_mae": 27.2572,
+          "overall_mse": 1232.1163,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "191_ResidualSignMemoryCorrection",
+          "overall_mae": 25.9797,
+          "valence_mae": 24.7067,
+          "arousal_mae": 27.2527,
+          "overall_mse": 1232.1337,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "187_TemporalBasisRidgeResidual",
+          "overall_mae": 25.9804,
+          "valence_mae": 24.7562,
+          "arousal_mae": 27.2047,
+          "overall_mse": 1229.5027,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "189_AdaptiveUncertaintyCandidateMixture",
+          "overall_mae": 25.9808,
+          "valence_mae": 24.7073,
+          "arousal_mae": 27.2543,
+          "overall_mse": 1231.9824,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "192_LowRankVideoTimeResidualFactor",
+          "overall_mae": 25.986,
+          "valence_mae": 24.7246,
+          "arousal_mae": 27.2475,
+          "overall_mse": 1222.1654,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "183_GaussianNBResidualBinExpectation",
+          "overall_mae": 25.9884,
+          "valence_mae": 24.7088,
+          "arousal_mae": 27.268,
+          "overall_mse": 1233.3773,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "199_JackknifeUncertaintyShrinkage",
+          "overall_mae": 25.9891,
+          "valence_mae": 24.7067,
+          "arousal_mae": 27.2715,
+          "overall_mse": 1232.5934,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "179_VideoLevelResidualPrior",
+          "overall_mae": 26.0134,
+          "valence_mae": 24.7638,
+          "arousal_mae": 27.263,
+          "overall_mse": 1226.0336,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "186_PLSLatentResidualDecoder",
+          "overall_mae": 26.0149,
+          "valence_mae": 24.7675,
+          "arousal_mae": 27.2624,
+          "overall_mse": 1223.2465,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 26.0173,
+          "valence_mae": 24.723,
+          "arousal_mae": 27.3116,
+          "overall_mse": 1232.5822,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "168_PiecewiseAffineCalibration",
+          "overall_mae": 26.0204,
+          "valence_mae": 24.8319,
+          "arousal_mae": 27.2088,
+          "overall_mse": 1217.1899,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "171_LagAlignedTrialPrototype",
+          "overall_mae": 26.0255,
+          "valence_mae": 24.7975,
+          "arousal_mae": 27.2536,
+          "overall_mse": 1226.092,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "196_DerivativeTemplateRetrieval",
+          "overall_mae": 26.042,
+          "valence_mae": 24.8148,
+          "arousal_mae": 27.2692,
+          "overall_mse": 1226.5364,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "185_MahalanobisKNNResidualRetrieval",
+          "overall_mae": 26.0445,
+          "valence_mae": 24.7335,
+          "arousal_mae": 27.3556,
+          "overall_mse": 1232.858,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "177_LaggedRidgeTCNResidual",
+          "overall_mae": 26.053,
+          "valence_mae": 24.8266,
+          "arousal_mae": 27.2794,
+          "overall_mse": 1217.7301,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "193_PerVideoAffineCalibration",
+          "overall_mae": 26.0572,
+          "valence_mae": 24.7863,
+          "arousal_mae": 27.3282,
+          "overall_mse": 1219.8961,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "200_MilestoneSynthesisFusion",
+          "overall_mae": 26.0635,
+          "valence_mae": 24.8613,
+          "arousal_mae": 27.2657,
+          "overall_mse": 1234.4952,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "170_VideoTimeResidualSurface",
+          "overall_mae": 26.0804,
+          "valence_mae": 24.7363,
+          "arousal_mae": 27.4244,
+          "overall_mse": 1243.0372,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "188_FixedBatch4Fusion",
+          "overall_mae": 26.1106,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.255,
+          "overall_mse": 1240.4178,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "172_UncertaintyGatedRouter",
+          "overall_mae": 26.1162,
+          "valence_mae": 24.975,
+          "arousal_mae": 27.2574,
+          "overall_mse": 1235.3403,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "194_IdentityMixedWassersteinCalibration",
+          "overall_mae": 26.1314,
+          "valence_mae": 24.6416,
+          "arousal_mae": 27.6212,
+          "overall_mse": 1255.4376,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "198_MultiResolutionExpertSwitch",
+          "overall_mae": 26.1727,
+          "valence_mae": 24.9643,
+          "arousal_mae": 27.3811,
+          "overall_mse": 1244.8146,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "169_MonotonePCHIPBiasCalibration",
+          "overall_mae": 26.2772,
+          "valence_mae": 24.9804,
+          "arousal_mae": 27.574,
+          "overall_mse": 1253.5778,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "173_CovarianceTransportCalibration",
+          "overall_mae": 26.316,
+          "valence_mae": 24.7291,
+          "arousal_mae": 27.903,
+          "overall_mse": 1268.396,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "175_StudentTRobustKalmanSmoother",
+          "overall_mae": 26.3172,
+          "valence_mae": 26.622,
+          "arousal_mae": 26.0124,
+          "overall_mse": 1242.4818,
+          "notes": "Experiments 168-200 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "173_CovarianceTransportCalibration",
+          "overall_mae": 36.9169,
+          "valence_mae": 32.8666,
+          "arousal_mae": 40.9673,
+          "overall_mse": 2474.7312,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "169_MonotonePCHIPBiasCalibration",
+          "overall_mae": 37.0117,
+          "valence_mae": 32.6103,
+          "arousal_mae": 41.4131,
+          "overall_mse": 2456.1785,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "188_FixedBatch4Fusion",
+          "overall_mae": 37.067,
+          "valence_mae": 32.6338,
+          "arousal_mae": 41.5002,
+          "overall_mse": 2453.1199,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "198_MultiResolutionExpertSwitch",
+          "overall_mae": 37.0681,
+          "valence_mae": 32.6633,
+          "arousal_mae": 41.473,
+          "overall_mse": 2458.303,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "194_IdentityMixedWassersteinCalibration",
+          "overall_mae": 37.0975,
+          "valence_mae": 33.1476,
+          "arousal_mae": 41.0474,
+          "overall_mse": 2476.7412,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "172_UncertaintyGatedRouter",
+          "overall_mae": 37.1228,
+          "valence_mae": 32.7554,
+          "arousal_mae": 41.4902,
+          "overall_mse": 2451.2598,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "200_MilestoneSynthesisFusion",
+          "overall_mae": 37.1547,
+          "valence_mae": 32.7623,
+          "arousal_mae": 41.5471,
+          "overall_mse": 2460.73,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "170_VideoTimeResidualSurface",
+          "overall_mae": 37.1629,
+          "valence_mae": 32.9962,
+          "arousal_mae": 41.3296,
+          "overall_mse": 2469.075,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "185_MahalanobisKNNResidualRetrieval",
+          "overall_mae": 37.1852,
+          "valence_mae": 33.0276,
+          "arousal_mae": 41.3428,
+          "overall_mse": 2462.4568,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "179_VideoLevelResidualPrior",
+          "overall_mae": 37.1909,
+          "valence_mae": 33.0524,
+          "arousal_mae": 41.3293,
+          "overall_mse": 2458.2158,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "192_LowRankVideoTimeResidualFactor",
+          "overall_mae": 37.2028,
+          "valence_mae": 33.0632,
+          "arousal_mae": 41.3423,
+          "overall_mse": 2457.2676,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "187_TemporalBasisRidgeResidual",
+          "overall_mae": 37.2588,
+          "valence_mae": 33.0977,
+          "arousal_mae": 41.4199,
+          "overall_mse": 2467.0166,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "183_GaussianNBResidualBinExpectation",
+          "overall_mae": 37.2695,
+          "valence_mae": 33.1116,
+          "arousal_mae": 41.4273,
+          "overall_mse": 2471.24,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "186_PLSLatentResidualDecoder",
+          "overall_mae": 37.2699,
+          "valence_mae": 33.1037,
+          "arousal_mae": 41.4361,
+          "overall_mse": 2459.8015,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "191_ResidualSignMemoryCorrection",
+          "overall_mae": 37.273,
+          "valence_mae": 33.117,
+          "arousal_mae": 41.4291,
+          "overall_mse": 2470.4373,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "177_LaggedRidgeTCNResidual",
+          "overall_mae": 37.2752,
+          "valence_mae": 33.1069,
+          "arousal_mae": 41.4434,
+          "overall_mse": 2451.9841,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "195_ConformalMedianBandProjector",
+          "overall_mae": 37.2763,
+          "valence_mae": 33.1216,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2470.5532,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 37.2764,
+          "valence_mae": 33.1216,
+          "arousal_mae": 41.4312,
+          "overall_mse": 2470.552,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "176_ChebyshevTemporalGraphFilter",
+          "overall_mae": 37.2766,
+          "valence_mae": 33.1219,
+          "arousal_mae": 41.4313,
+          "overall_mse": 2470.4424,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "184_NystroemKernelRidgeResidual",
+          "overall_mae": 37.2787,
+          "valence_mae": 33.1304,
+          "arousal_mae": 41.4271,
+          "overall_mse": 2465.7791,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "190_HuberizedSlopeLimiter",
+          "overall_mae": 37.2804,
+          "valence_mae": 33.1268,
+          "arousal_mae": 41.4341,
+          "overall_mse": 2470.9138,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "189_AdaptiveUncertaintyCandidateMixture",
+          "overall_mae": 37.2813,
+          "valence_mae": 33.1281,
+          "arousal_mae": 41.4345,
+          "overall_mse": 2470.7812,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "174_KalmanUncertaintySmoother",
+          "overall_mae": 37.2835,
+          "valence_mae": 33.1301,
+          "arousal_mae": 41.4369,
+          "overall_mse": 2471.0803,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "199_JackknifeUncertaintyShrinkage",
+          "overall_mae": 37.2844,
+          "valence_mae": 33.1313,
+          "arousal_mae": 41.4376,
+          "overall_mse": 2471.5046,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "181_FeatureBaggingRidgeResidual",
+          "overall_mae": 37.2855,
+          "valence_mae": 33.1227,
+          "arousal_mae": 41.4483,
+          "overall_mse": 2460.8625,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "178_LandmarkRBFResidualDecoder",
+          "overall_mae": 37.2928,
+          "valence_mae": 33.1511,
+          "arousal_mae": 41.4344,
+          "overall_mse": 2463.9744,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "193_PerVideoAffineCalibration",
+          "overall_mae": 37.2982,
+          "valence_mae": 33.1384,
+          "arousal_mae": 41.458,
+          "overall_mse": 2454.8303,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "182_ExtraTreesResidualDecoder",
+          "overall_mae": 37.3046,
+          "valence_mae": 33.1354,
+          "arousal_mae": 41.4738,
+          "overall_mse": 2467.0125,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "196_DerivativeTemplateRetrieval",
+          "overall_mae": 37.3229,
+          "valence_mae": 33.067,
+          "arousal_mae": 41.5788,
+          "overall_mse": 2466.821,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "168_PiecewiseAffineCalibration",
+          "overall_mae": 37.3581,
+          "valence_mae": 33.007,
+          "arousal_mae": 41.7092,
+          "overall_mse": 2463.2234,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 37.3723,
+          "valence_mae": 33.269,
+          "arousal_mae": 41.4756,
+          "overall_mse": 2471.123,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 37.4024,
+          "valence_mae": 33.2717,
+          "arousal_mae": 41.5332,
+          "overall_mse": 2475.0222,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "197_DimensionCoupledArousalCorrection",
+          "overall_mae": 37.4858,
+          "valence_mae": 33.1216,
+          "arousal_mae": 41.85,
+          "overall_mse": 2465.386,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "171_LagAlignedTrialPrototype",
+          "overall_mae": 37.5667,
+          "valence_mae": 33.6271,
+          "arousal_mae": 41.5064,
+          "overall_mse": 2475.6687,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "180_TemporalRankCalibration",
+          "overall_mae": 38.0483,
+          "valence_mae": 34.113,
+          "arousal_mae": 41.9835,
+          "overall_mse": 2479.8049,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "175_StudentTRobustKalmanSmoother",
+          "overall_mae": 40.722,
+          "valence_mae": 37.7539,
+          "arousal_mae": 43.6901,
+          "overall_mse": 2648.0588,
+          "notes": "Experiments 168-200 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "169_MonotonePCHIPBiasCalibration",
+          "overall_mae": 26.621,
+          "valence_mae": 23.4955,
+          "arousal_mae": 29.7465,
+          "overall_mse": 1294.1193,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "198_MultiResolutionExpertSwitch",
+          "overall_mae": 26.7122,
+          "valence_mae": 23.5177,
+          "arousal_mae": 29.9067,
+          "overall_mse": 1298.6086,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "188_FixedBatch4Fusion",
+          "overall_mae": 26.7839,
+          "valence_mae": 23.4502,
+          "arousal_mae": 30.1176,
+          "overall_mse": 1301.2145,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "173_CovarianceTransportCalibration",
+          "overall_mae": 26.8187,
+          "valence_mae": 23.7245,
+          "arousal_mae": 29.9129,
+          "overall_mse": 1307.9861,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "200_MilestoneSynthesisFusion",
+          "overall_mae": 26.8938,
+          "valence_mae": 23.6458,
+          "arousal_mae": 30.1417,
+          "overall_mse": 1306.1224,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "172_UncertaintyGatedRouter",
+          "overall_mae": 26.8982,
+          "valence_mae": 23.675,
+          "arousal_mae": 30.1213,
+          "overall_mse": 1307.7455,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "170_VideoTimeResidualSurface",
+          "overall_mae": 26.9348,
+          "valence_mae": 23.8863,
+          "arousal_mae": 29.9832,
+          "overall_mse": 1312.8776,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "183_GaussianNBResidualBinExpectation",
+          "overall_mae": 27.0511,
+          "valence_mae": 24.0477,
+          "arousal_mae": 30.0546,
+          "overall_mse": 1318.2382,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "191_ResidualSignMemoryCorrection",
+          "overall_mae": 27.0549,
+          "valence_mae": 24.0451,
+          "arousal_mae": 30.0646,
+          "overall_mse": 1318.4956,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "195_ConformalMedianBandProjector",
+          "overall_mae": 27.0561,
+          "valence_mae": 24.0516,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1318.745,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.0564,
+          "valence_mae": 24.0518,
+          "arousal_mae": 30.061,
+          "overall_mse": 1318.7485,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "176_ChebyshevTemporalGraphFilter",
+          "overall_mae": 27.0568,
+          "valence_mae": 24.0528,
+          "arousal_mae": 30.0609,
+          "overall_mse": 1318.6722,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "194_IdentityMixedWassersteinCalibration",
+          "overall_mae": 27.0579,
+          "valence_mae": 24.0749,
+          "arousal_mae": 30.0409,
+          "overall_mse": 1321.7012,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "189_AdaptiveUncertaintyCandidateMixture",
+          "overall_mae": 27.0583,
+          "valence_mae": 24.0574,
+          "arousal_mae": 30.0593,
+          "overall_mse": 1318.9575,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "199_JackknifeUncertaintyShrinkage",
+          "overall_mae": 27.0598,
+          "valence_mae": 24.0582,
+          "arousal_mae": 30.0615,
+          "overall_mse": 1319.353,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "190_HuberizedSlopeLimiter",
+          "overall_mae": 27.0606,
+          "valence_mae": 24.0588,
+          "arousal_mae": 30.0624,
+          "overall_mse": 1319.2513,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "174_KalmanUncertaintySmoother",
+          "overall_mae": 27.0627,
+          "valence_mae": 24.0624,
+          "arousal_mae": 30.0631,
+          "overall_mse": 1319.4308,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "184_NystroemKernelRidgeResidual",
+          "overall_mae": 27.108,
+          "valence_mae": 24.0782,
+          "arousal_mae": 30.1377,
+          "overall_mse": 1318.2135,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "192_LowRankVideoTimeResidualFactor",
+          "overall_mae": 27.1182,
+          "valence_mae": 24.0606,
+          "arousal_mae": 30.1759,
+          "overall_mse": 1314.2094,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "187_TemporalBasisRidgeResidual",
+          "overall_mae": 27.1192,
+          "valence_mae": 24.0944,
+          "arousal_mae": 30.1441,
+          "overall_mse": 1320.427,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "185_MahalanobisKNNResidualRetrieval",
+          "overall_mae": 27.1222,
+          "valence_mae": 24.0961,
+          "arousal_mae": 30.1483,
+          "overall_mse": 1317.2993,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "182_ExtraTreesResidualDecoder",
+          "overall_mae": 27.1262,
+          "valence_mae": 24.084,
+          "arousal_mae": 30.1683,
+          "overall_mse": 1319.9054,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "196_DerivativeTemplateRetrieval",
+          "overall_mae": 27.1371,
+          "valence_mae": 24.1116,
+          "arousal_mae": 30.1627,
+          "overall_mse": 1319.3702,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "178_LandmarkRBFResidualDecoder",
+          "overall_mae": 27.1467,
+          "valence_mae": 24.097,
+          "arousal_mae": 30.1965,
+          "overall_mse": 1317.8573,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "179_VideoLevelResidualPrior",
+          "overall_mae": 27.1564,
+          "valence_mae": 24.0864,
+          "arousal_mae": 30.2264,
+          "overall_mse": 1319.9703,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "181_FeatureBaggingRidgeResidual",
+          "overall_mae": 27.1649,
+          "valence_mae": 24.1285,
+          "arousal_mae": 30.2014,
+          "overall_mse": 1319.873,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "186_PLSLatentResidualDecoder",
+          "overall_mae": 27.1664,
+          "valence_mae": 24.0907,
+          "arousal_mae": 30.2421,
+          "overall_mse": 1317.505,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.1853,
+          "valence_mae": 24.2437,
+          "arousal_mae": 30.1268,
+          "overall_mse": 1327.9393,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 27.1935,
+          "valence_mae": 24.2465,
+          "arousal_mae": 30.1406,
+          "overall_mse": 1330.5287,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "193_PerVideoAffineCalibration",
+          "overall_mae": 27.2314,
+          "valence_mae": 24.1953,
+          "arousal_mae": 30.2676,
+          "overall_mse": 1314.6656,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "168_PiecewiseAffineCalibration",
+          "overall_mae": 27.254,
+          "valence_mae": 24.278,
+          "arousal_mae": 30.23,
+          "overall_mse": 1321.8851,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "177_LaggedRidgeTCNResidual",
+          "overall_mae": 27.2589,
+          "valence_mae": 24.1567,
+          "arousal_mae": 30.3611,
+          "overall_mse": 1317.0975,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "197_DimensionCoupledArousalCorrection",
+          "overall_mae": 27.2595,
+          "valence_mae": 24.0518,
+          "arousal_mae": 30.4672,
+          "overall_mse": 1329.6842,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "171_LagAlignedTrialPrototype",
+          "overall_mae": 27.3188,
+          "valence_mae": 24.5193,
+          "arousal_mae": 30.1184,
+          "overall_mse": 1330.1864,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "180_TemporalRankCalibration",
+          "overall_mae": 27.8826,
+          "valence_mae": 25.2057,
+          "arousal_mae": 30.5595,
+          "overall_mse": 1374.3784,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "175_StudentTRobustKalmanSmoother",
+          "overall_mae": 30.8178,
+          "valence_mae": 29.6405,
+          "arousal_mae": 31.9952,
+          "overall_mse": 1578.6552,
+          "notes": "Experiments 168-200 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "175_StudentTRobustKalmanSmoother",
+          "overall_mae": 26.8418,
+          "valence_mae": 25.632,
+          "arousal_mae": 28.0516,
+          "overall_mse": 1527.4371,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "180_TemporalRankCalibration",
+          "overall_mae": 27.7547,
+          "valence_mae": 27.5574,
+          "arousal_mae": 27.9519,
+          "overall_mse": 1681.1749,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "171_LagAlignedTrialPrototype",
+          "overall_mae": 28.37,
+          "valence_mae": 28.4122,
+          "arousal_mae": 28.3278,
+          "overall_mse": 1769.1107,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "168_PiecewiseAffineCalibration",
+          "overall_mae": 28.4441,
+          "valence_mae": 28.714,
+          "arousal_mae": 28.1742,
+          "overall_mse": 1771.3988,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "197_DimensionCoupledArousalCorrection",
+          "overall_mae": 28.5056,
+          "valence_mae": 28.971,
+          "arousal_mae": 28.0403,
+          "overall_mse": 1777.5098,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "181_FeatureBaggingRidgeResidual",
+          "overall_mae": 28.5628,
+          "valence_mae": 28.8415,
+          "arousal_mae": 28.2841,
+          "overall_mse": 1786.9175,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 28.5667,
+          "valence_mae": 28.7031,
+          "arousal_mae": 28.4304,
+          "overall_mse": 1794.9869,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "177_LaggedRidgeTCNResidual",
+          "overall_mae": 28.5683,
+          "valence_mae": 28.8563,
+          "arousal_mae": 28.2803,
+          "overall_mse": 1778.6771,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 28.5716,
+          "valence_mae": 28.7413,
+          "arousal_mae": 28.402,
+          "overall_mse": 1796.1864,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "193_PerVideoAffineCalibration",
+          "overall_mae": 28.5829,
+          "valence_mae": 28.8616,
+          "arousal_mae": 28.3042,
+          "overall_mse": 1778.954,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "192_LowRankVideoTimeResidualFactor",
+          "overall_mae": 28.5874,
+          "valence_mae": 28.8836,
+          "arousal_mae": 28.2911,
+          "overall_mse": 1789.5819,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "178_LandmarkRBFResidualDecoder",
+          "overall_mae": 28.5958,
+          "valence_mae": 28.8645,
+          "arousal_mae": 28.3272,
+          "overall_mse": 1790.2167,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "186_PLSLatentResidualDecoder",
+          "overall_mae": 28.6019,
+          "valence_mae": 28.8924,
+          "arousal_mae": 28.3114,
+          "overall_mse": 1789.6537,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "182_ExtraTreesResidualDecoder",
+          "overall_mae": 28.6037,
+          "valence_mae": 28.8943,
+          "arousal_mae": 28.3131,
+          "overall_mse": 1794.9379,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "184_NystroemKernelRidgeResidual",
+          "overall_mae": 28.6216,
+          "valence_mae": 28.9072,
+          "arousal_mae": 28.3359,
+          "overall_mse": 1795.0533,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "187_TemporalBasisRidgeResidual",
+          "overall_mae": 28.6592,
+          "valence_mae": 28.9693,
+          "arousal_mae": 28.349,
+          "overall_mse": 1800.4215,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "179_VideoLevelResidualPrior",
+          "overall_mae": 28.6712,
+          "valence_mae": 28.9922,
+          "arousal_mae": 28.3503,
+          "overall_mse": 1794.6432,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "174_KalmanUncertaintySmoother",
+          "overall_mae": 28.6714,
+          "valence_mae": 28.9644,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1803.3975,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "189_AdaptiveUncertaintyCandidateMixture",
+          "overall_mae": 28.6725,
+          "valence_mae": 28.9641,
+          "arousal_mae": 28.3808,
+          "overall_mse": 1803.61,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "190_HuberizedSlopeLimiter",
+          "overall_mae": 28.6735,
+          "valence_mae": 28.9681,
+          "arousal_mae": 28.379,
+          "overall_mse": 1803.6588,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "176_ChebyshevTemporalGraphFilter",
+          "overall_mae": 28.6742,
+          "valence_mae": 28.9701,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1803.6229,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "195_ConformalMedianBandProjector",
+          "overall_mae": 28.6743,
+          "valence_mae": 28.9702,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1803.8046,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "199_JackknifeUncertaintyShrinkage",
+          "overall_mae": 28.6747,
+          "valence_mae": 28.9646,
+          "arousal_mae": 28.3848,
+          "overall_mse": 1804.3688,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 28.6749,
+          "valence_mae": 28.971,
+          "arousal_mae": 28.3789,
+          "overall_mse": 1803.8141,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "191_ResidualSignMemoryCorrection",
+          "overall_mae": 28.681,
+          "valence_mae": 28.9792,
+          "arousal_mae": 28.3827,
+          "overall_mse": 1804.5739,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "185_MahalanobisKNNResidualRetrieval",
+          "overall_mae": 28.7147,
+          "valence_mae": 29.0399,
+          "arousal_mae": 28.3894,
+          "overall_mse": 1803.5176,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "183_GaussianNBResidualBinExpectation",
+          "overall_mae": 28.7275,
+          "valence_mae": 29.0512,
+          "arousal_mae": 28.4038,
+          "overall_mse": 1809.5573,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "172_UncertaintyGatedRouter",
+          "overall_mae": 28.742,
+          "valence_mae": 29.1319,
+          "arousal_mae": 28.352,
+          "overall_mse": 1807.0303,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "196_DerivativeTemplateRetrieval",
+          "overall_mae": 28.8047,
+          "valence_mae": 29.0945,
+          "arousal_mae": 28.515,
+          "overall_mse": 1819.8613,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "170_VideoTimeResidualSurface",
+          "overall_mae": 28.8308,
+          "valence_mae": 29.1854,
+          "arousal_mae": 28.4762,
+          "overall_mse": 1825.6016,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "188_FixedBatch4Fusion",
+          "overall_mae": 28.9158,
+          "valence_mae": 29.4881,
+          "arousal_mae": 28.3436,
+          "overall_mse": 1830.5356,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "200_MilestoneSynthesisFusion",
+          "overall_mae": 28.9178,
+          "valence_mae": 29.3601,
+          "arousal_mae": 28.4754,
+          "overall_mse": 1831.5431,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "198_MultiResolutionExpertSwitch",
+          "overall_mae": 28.9505,
+          "valence_mae": 29.459,
+          "arousal_mae": 28.4419,
+          "overall_mse": 1837.3477,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "194_IdentityMixedWassersteinCalibration",
+          "overall_mae": 28.9917,
+          "valence_mae": 29.217,
+          "arousal_mae": 28.7664,
+          "overall_mse": 1840.9359,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "169_MonotonePCHIPBiasCalibration",
+          "overall_mae": 29.0308,
+          "valence_mae": 29.5426,
+          "arousal_mae": 28.519,
+          "overall_mse": 1853.3134,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "173_CovarianceTransportCalibration",
+          "overall_mae": 29.1567,
+          "valence_mae": 29.411,
+          "arousal_mae": 28.9023,
+          "overall_mse": 1859.7906,
+          "notes": "Experiments 168-200 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.9982,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "197_DimensionCoupledArousalCorrection",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5334,
+          "arousal_mae": 27.383,
+          "overall_mse": 1288.5363,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 25.9594,
+          "valence_mae": 24.5574,
+          "arousal_mae": 27.3614,
+          "overall_mse": 1296.6637,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 25.963,
+          "valence_mae": 24.5521,
+          "arousal_mae": 27.374,
+          "overall_mse": 1294.7286,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "183_GaussianNBResidualBinExpectation",
+          "overall_mae": 25.9877,
+          "valence_mae": 24.5243,
+          "arousal_mae": 27.4511,
+          "overall_mse": 1299.2484,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "195_ConformalMedianBandProjector",
+          "overall_mae": 25.991,
+          "valence_mae": 24.5329,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1298.603,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "191_ResidualSignMemoryCorrection",
+          "overall_mae": 25.9911,
+          "valence_mae": 24.5287,
+          "arousal_mae": 27.4534,
+          "overall_mse": 1298.5786,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9914,
+          "valence_mae": 24.5334,
+          "arousal_mae": 27.4494,
+          "overall_mse": 1298.6046,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "176_ChebyshevTemporalGraphFilter",
+          "overall_mae": 25.9914,
+          "valence_mae": 24.5334,
+          "arousal_mae": 27.4494,
+          "overall_mse": 1298.4982,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "189_AdaptiveUncertaintyCandidateMixture",
+          "overall_mae": 25.9943,
+          "valence_mae": 24.5367,
+          "arousal_mae": 27.4518,
+          "overall_mse": 1298.9739,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "174_KalmanUncertaintySmoother",
+          "overall_mae": 25.9953,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.4512,
+          "overall_mse": 1299.0521,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "190_HuberizedSlopeLimiter",
+          "overall_mae": 25.9954,
+          "valence_mae": 24.5402,
+          "arousal_mae": 27.4505,
+          "overall_mse": 1299.0645,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "171_LagAlignedTrialPrototype",
+          "overall_mae": 26.0028,
+          "valence_mae": 24.4891,
+          "arousal_mae": 27.5165,
+          "overall_mse": 1289.5931,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "187_TemporalBasisRidgeResidual",
+          "overall_mae": 26.0033,
+          "valence_mae": 24.571,
+          "arousal_mae": 27.4356,
+          "overall_mse": 1296.3055,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "194_IdentityMixedWassersteinCalibration",
+          "overall_mae": 26.0036,
+          "valence_mae": 24.4759,
+          "arousal_mae": 27.5314,
+          "overall_mse": 1309.4624,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "199_JackknifeUncertaintyShrinkage",
+          "overall_mae": 26.004,
+          "valence_mae": 24.5434,
+          "arousal_mae": 27.4646,
+          "overall_mse": 1300.0812,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "170_VideoTimeResidualSurface",
+          "overall_mae": 26.0063,
+          "valence_mae": 24.519,
+          "arousal_mae": 27.4937,
+          "overall_mse": 1304.6523,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "178_LandmarkRBFResidualDecoder",
+          "overall_mae": 26.0114,
+          "valence_mae": 24.5601,
+          "arousal_mae": 27.4627,
+          "overall_mse": 1292.907,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "184_NystroemKernelRidgeResidual",
+          "overall_mae": 26.0117,
+          "valence_mae": 24.5586,
+          "arousal_mae": 27.4649,
+          "overall_mse": 1295.3259,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "181_FeatureBaggingRidgeResidual",
+          "overall_mae": 26.0197,
+          "valence_mae": 24.5944,
+          "arousal_mae": 27.4449,
+          "overall_mse": 1290.5289,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "182_ExtraTreesResidualDecoder",
+          "overall_mae": 26.0212,
+          "valence_mae": 24.5556,
+          "arousal_mae": 27.4869,
+          "overall_mse": 1295.4716,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "198_MultiResolutionExpertSwitch",
+          "overall_mae": 26.0302,
+          "valence_mae": 24.6227,
+          "arousal_mae": 27.4376,
+          "overall_mse": 1300.9098,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "185_MahalanobisKNNResidualRetrieval",
+          "overall_mae": 26.0374,
+          "valence_mae": 24.5433,
+          "arousal_mae": 27.5315,
+          "overall_mse": 1297.1908,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "192_LowRankVideoTimeResidualFactor",
+          "overall_mae": 26.0501,
+          "valence_mae": 24.5941,
+          "arousal_mae": 27.5062,
+          "overall_mse": 1291.2505,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "169_MonotonePCHIPBiasCalibration",
+          "overall_mae": 26.0517,
+          "valence_mae": 24.6277,
+          "arousal_mae": 27.4757,
+          "overall_mse": 1302.7067,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "200_MilestoneSynthesisFusion",
+          "overall_mae": 26.0601,
+          "valence_mae": 24.5801,
+          "arousal_mae": 27.5401,
+          "overall_mse": 1299.2285,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "186_PLSLatentResidualDecoder",
+          "overall_mae": 26.0618,
+          "valence_mae": 24.5939,
+          "arousal_mae": 27.5297,
+          "overall_mse": 1292.7572,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "188_FixedBatch4Fusion",
+          "overall_mae": 26.0658,
+          "valence_mae": 24.631,
+          "arousal_mae": 27.5007,
+          "overall_mse": 1301.9877,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "179_VideoLevelResidualPrior",
+          "overall_mae": 26.068,
+          "valence_mae": 24.6648,
+          "arousal_mae": 27.4711,
+          "overall_mse": 1295.3966,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "196_DerivativeTemplateRetrieval",
+          "overall_mae": 26.0709,
+          "valence_mae": 24.5807,
+          "arousal_mae": 27.5611,
+          "overall_mse": 1291.7743,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "172_UncertaintyGatedRouter",
+          "overall_mae": 26.0732,
+          "valence_mae": 24.6559,
+          "arousal_mae": 27.4905,
+          "overall_mse": 1300.0479,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "193_PerVideoAffineCalibration",
+          "overall_mae": 26.1118,
+          "valence_mae": 24.6708,
+          "arousal_mae": 27.5527,
+          "overall_mse": 1287.3768,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "173_CovarianceTransportCalibration",
+          "overall_mae": 26.1135,
+          "valence_mae": 24.5121,
+          "arousal_mae": 27.715,
+          "overall_mse": 1319.5735,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "168_PiecewiseAffineCalibration",
+          "overall_mae": 26.1181,
+          "valence_mae": 24.6058,
+          "arousal_mae": 27.6305,
+          "overall_mse": 1290.6173,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "177_LaggedRidgeTCNResidual",
+          "overall_mae": 26.1266,
+          "valence_mae": 24.6664,
+          "arousal_mae": 27.5867,
+          "overall_mse": 1287.0551,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "180_TemporalRankCalibration",
+          "overall_mae": 26.312,
+          "valence_mae": 25.0388,
+          "arousal_mae": 27.5852,
+          "overall_mse": 1298.5924,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "175_StudentTRobustKalmanSmoother",
+          "overall_mae": 27.6494,
+          "valence_mae": 26.6774,
+          "arousal_mae": 28.6214,
+          "overall_mse": 1385.7764,
+          "notes": "Experiments 168-200 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "173_CovarianceTransportCalibration",
+          "overall_mae": 27.0472,
+          "valence_mae": 26.2466,
+          "arousal_mae": 27.8478,
+          "overall_mse": 1404.6219,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "194_IdentityMixedWassersteinCalibration",
+          "overall_mae": 27.0741,
+          "valence_mae": 26.1734,
+          "arousal_mae": 27.9749,
+          "overall_mse": 1408.61,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 27.2432,
+          "valence_mae": 26.2403,
+          "arousal_mae": 28.2461,
+          "overall_mse": 1410.2554,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "174_KalmanUncertaintySmoother",
+          "overall_mae": 27.2639,
+          "valence_mae": 26.2287,
+          "arousal_mae": 28.2992,
+          "overall_mse": 1413.194,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "190_HuberizedSlopeLimiter",
+          "overall_mae": 27.265,
+          "valence_mae": 26.2283,
+          "arousal_mae": 28.3018,
+          "overall_mse": 1413.3073,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "183_GaussianNBResidualBinExpectation",
+          "overall_mae": 27.2664,
+          "valence_mae": 26.2404,
+          "arousal_mae": 28.2923,
+          "overall_mse": 1412.917,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "195_ConformalMedianBandProjector",
+          "overall_mae": 27.2702,
+          "valence_mae": 26.2376,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1413.5391,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.2705,
+          "valence_mae": 26.2376,
+          "arousal_mae": 28.3034,
+          "overall_mse": 1413.5402,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "176_ChebyshevTemporalGraphFilter",
+          "overall_mae": 27.2716,
+          "valence_mae": 26.2388,
+          "arousal_mae": 28.3043,
+          "overall_mse": 1413.433,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "199_JackknifeUncertaintyShrinkage",
+          "overall_mae": 27.2725,
+          "valence_mae": 26.2328,
+          "arousal_mae": 28.3121,
+          "overall_mse": 1413.9585,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "191_ResidualSignMemoryCorrection",
+          "overall_mae": 27.274,
+          "valence_mae": 26.2439,
+          "arousal_mae": 28.3042,
+          "overall_mse": 1413.7299,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "189_AdaptiveUncertaintyCandidateMixture",
+          "overall_mae": 27.2758,
+          "valence_mae": 26.2387,
+          "arousal_mae": 28.3129,
+          "overall_mse": 1414.0582,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.2889,
+          "valence_mae": 26.3166,
+          "arousal_mae": 28.2611,
+          "overall_mse": 1410.3717,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "170_VideoTimeResidualSurface",
+          "overall_mae": 27.2962,
+          "valence_mae": 26.2867,
+          "arousal_mae": 28.3056,
+          "overall_mse": 1419.016,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "169_MonotonePCHIPBiasCalibration",
+          "overall_mae": 27.3103,
+          "valence_mae": 26.26,
+          "arousal_mae": 28.3607,
+          "overall_mse": 1424.1675,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "198_MultiResolutionExpertSwitch",
+          "overall_mae": 27.3339,
+          "valence_mae": 26.2463,
+          "arousal_mae": 28.4214,
+          "overall_mse": 1424.0902,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "185_MahalanobisKNNResidualRetrieval",
+          "overall_mae": 27.3349,
+          "valence_mae": 26.3039,
+          "arousal_mae": 28.3658,
+          "overall_mse": 1413.9858,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "187_TemporalBasisRidgeResidual",
+          "overall_mae": 27.3457,
+          "valence_mae": 26.3149,
+          "arousal_mae": 28.3766,
+          "overall_mse": 1417.0267,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "182_ExtraTreesResidualDecoder",
+          "overall_mae": 27.3585,
+          "valence_mae": 26.2785,
+          "arousal_mae": 28.4384,
+          "overall_mse": 1415.2373,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "184_NystroemKernelRidgeResidual",
+          "overall_mae": 27.3666,
+          "valence_mae": 26.3103,
+          "arousal_mae": 28.4229,
+          "overall_mse": 1416.8224,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "179_VideoLevelResidualPrior",
+          "overall_mae": 27.4248,
+          "valence_mae": 26.4008,
+          "arousal_mae": 28.4487,
+          "overall_mse": 1418.684,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "188_FixedBatch4Fusion",
+          "overall_mae": 27.4261,
+          "valence_mae": 26.2585,
+          "arousal_mae": 28.5936,
+          "overall_mse": 1425.4781,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "181_FeatureBaggingRidgeResidual",
+          "overall_mae": 27.4285,
+          "valence_mae": 26.379,
+          "arousal_mae": 28.478,
+          "overall_mse": 1416.8104,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "178_LandmarkRBFResidualDecoder",
+          "overall_mae": 27.4344,
+          "valence_mae": 26.3501,
+          "arousal_mae": 28.5186,
+          "overall_mse": 1419.1141,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "172_UncertaintyGatedRouter",
+          "overall_mae": 27.436,
+          "valence_mae": 26.2964,
+          "arousal_mae": 28.5756,
+          "overall_mse": 1424.6787,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "186_PLSLatentResidualDecoder",
+          "overall_mae": 27.4529,
+          "valence_mae": 26.3849,
+          "arousal_mae": 28.5209,
+          "overall_mse": 1416.7715,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "200_MilestoneSynthesisFusion",
+          "overall_mae": 27.4635,
+          "valence_mae": 26.2935,
+          "arousal_mae": 28.6335,
+          "overall_mse": 1426.4132,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "192_LowRankVideoTimeResidualFactor",
+          "overall_mae": 27.479,
+          "valence_mae": 26.4218,
+          "arousal_mae": 28.5362,
+          "overall_mse": 1419.54,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "171_LagAlignedTrialPrototype",
+          "overall_mae": 27.4907,
+          "valence_mae": 26.3573,
+          "arousal_mae": 28.624,
+          "overall_mse": 1416.998,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "197_DimensionCoupledArousalCorrection",
+          "overall_mae": 27.5077,
+          "valence_mae": 26.2376,
+          "arousal_mae": 28.7779,
+          "overall_mse": 1429.1061,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "193_PerVideoAffineCalibration",
+          "overall_mae": 27.5555,
+          "valence_mae": 26.5099,
+          "arousal_mae": 28.601,
+          "overall_mse": 1416.1489,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "168_PiecewiseAffineCalibration",
+          "overall_mae": 27.5773,
+          "valence_mae": 26.4875,
+          "arousal_mae": 28.6671,
+          "overall_mse": 1419.9332,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "196_DerivativeTemplateRetrieval",
+          "overall_mae": 27.5877,
+          "valence_mae": 26.4782,
+          "arousal_mae": 28.6971,
+          "overall_mse": 1429.9307,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "177_LaggedRidgeTCNResidual",
+          "overall_mae": 27.6079,
+          "valence_mae": 26.5288,
+          "arousal_mae": 28.6871,
+          "overall_mse": 1420.1647,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "180_TemporalRankCalibration",
+          "overall_mae": 27.7072,
+          "valence_mae": 26.5887,
+          "arousal_mae": 28.8257,
+          "overall_mse": 1429.165,
+          "notes": "Experiments 168-200 architecture model."
+        },
+        {
+          "method": "175_StudentTRobustKalmanSmoother",
+          "overall_mae": 29.3181,
+          "valence_mae": 28.378,
+          "arousal_mae": 30.2581,
+          "overall_mse": 1512.3729,
+          "notes": "Experiments 168-200 architecture model."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2449 @@
+{
+  "method": "Subject-similarity robust median prior",
+  "note": "Validation subject labels are not used. Unlabeled EEG/fNIRS feature summaries select nearest training subjects, then robust median video-time prior is built from those subjects.",
+  "fold_size": 4,
+  "feature_mode": "mean_std",
+  "prior": {
+    "estimator": "median",
+    "lag": -2,
+    "smooth_window": 11
+  },
+  "neighbors": [
+    3,
+    5,
+    8,
+    10,
+    15,
+    20
+  ],
+  "aggregate_results": [
+    {
+      "method": "RobustMedianPrior_all20",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SubjectSimilarityMedian_k20",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SubjectSimilarityMedian_k15",
+      "overall_mae": 28.9908,
+      "valence_mae": 27.1572,
+      "arousal_mae": 30.8244,
+      "overall_mse": 1657.8782,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SubjectSimilarityMedian_k10",
+      "overall_mae": 29.1873,
+      "valence_mae": 27.07,
+      "arousal_mae": 31.3046,
+      "overall_mse": 1679.0287,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SubjectSimilarityMedian_k8",
+      "overall_mae": 29.5769,
+      "valence_mae": 27.4449,
+      "arousal_mae": 31.709,
+      "overall_mse": 1716.2659,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SubjectSimilarityMedian_k5",
+      "overall_mae": 30.7296,
+      "valence_mae": 28.0688,
+      "arousal_mae": 33.3903,
+      "overall_mse": 1875.8967,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SubjectSimilarityMedian_k3",
+      "overall_mae": 32.4301,
+      "valence_mae": 29.6064,
+      "arousal_mae": 35.2538,
+      "overall_mse": 2039.7706,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "neighbor_log": {
+        "SubjectSimilarityMedian_k3": {
+          "test_1": [
+            "test_17",
+            "test_5",
+            "test_20"
+          ],
+          "test_2": [
+            "test_16",
+            "test_22",
+            "test_17"
+          ],
+          "test_3": [
+            "test_20",
+            "test_16",
+            "test_11"
+          ],
+          "test_4": [
+            "test_22",
+            "test_9",
+            "test_16"
+          ]
+        },
+        "SubjectSimilarityMedian_k5": {
+          "test_1": [
+            "test_17",
+            "test_5",
+            "test_20",
+            "test_21",
+            "test_6"
+          ],
+          "test_2": [
+            "test_16",
+            "test_22",
+            "test_17",
+            "test_24",
+            "test_20"
+          ],
+          "test_3": [
+            "test_20",
+            "test_16",
+            "test_11",
+            "test_13",
+            "test_17"
+          ],
+          "test_4": [
+            "test_22",
+            "test_9",
+            "test_16",
+            "test_11",
+            "test_24"
+          ]
+        },
+        "SubjectSimilarityMedian_k8": {
+          "test_1": [
+            "test_17",
+            "test_5",
+            "test_20",
+            "test_21",
+            "test_6",
+            "test_7",
+            "test_13",
+            "test_15"
+          ],
+          "test_2": [
+            "test_16",
+            "test_22",
+            "test_17",
+            "test_24",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_13"
+          ],
+          "test_3": [
+            "test_20",
+            "test_16",
+            "test_11",
+            "test_13",
+            "test_17",
+            "test_22",
+            "test_24",
+            "test_6"
+          ],
+          "test_4": [
+            "test_22",
+            "test_9",
+            "test_16",
+            "test_11",
+            "test_24",
+            "test_12",
+            "test_13",
+            "test_17"
+          ]
+        },
+        "SubjectSimilarityMedian_k10": {
+          "test_1": [
+            "test_17",
+            "test_5",
+            "test_20",
+            "test_21",
+            "test_6",
+            "test_7",
+            "test_13",
+            "test_15",
+            "test_14",
+            "test_8"
+          ],
+          "test_2": [
+            "test_16",
+            "test_22",
+            "test_17",
+            "test_24",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_13",
+            "test_9",
+            "test_6"
+          ],
+          "test_3": [
+            "test_20",
+            "test_16",
+            "test_11",
+            "test_13",
+            "test_17",
+            "test_22",
+            "test_24",
+            "test_6",
+            "test_12",
+            "test_9"
+          ],
+          "test_4": [
+            "test_22",
+            "test_9",
+            "test_16",
+            "test_11",
+            "test_24",
+            "test_12",
+            "test_13",
+            "test_17",
+            "test_10",
+            "test_18"
+          ]
+        },
+        "SubjectSimilarityMedian_k15": {
+          "test_1": [
+            "test_17",
+            "test_5",
+            "test_20",
+            "test_21",
+            "test_6",
+            "test_7",
+            "test_13",
+            "test_15",
+            "test_14",
+            "test_8",
+            "test_10",
+            "test_23",
+            "test_11",
+            "test_24",
+            "test_19"
+          ],
+          "test_2": [
+            "test_16",
+            "test_22",
+            "test_17",
+            "test_24",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_13",
+            "test_9",
+            "test_6",
+            "test_19",
+            "test_7",
+            "test_10",
+            "test_5",
+            "test_18"
+          ],
+          "test_3": [
+            "test_20",
+            "test_16",
+            "test_11",
+            "test_13",
+            "test_17",
+            "test_22",
+            "test_24",
+            "test_6",
+            "test_12",
+            "test_9",
+            "test_10",
+            "test_23",
+            "test_5",
+            "test_19",
+            "test_21"
+          ],
+          "test_4": [
+            "test_22",
+            "test_9",
+            "test_16",
+            "test_11",
+            "test_24",
+            "test_12",
+            "test_13",
+            "test_17",
+            "test_10",
+            "test_18",
+            "test_20",
+            "test_7",
+            "test_5",
+            "test_6",
+            "test_23"
+          ]
+        },
+        "SubjectSimilarityMedian_k20": {
+          "test_1": [
+            "test_17",
+            "test_5",
+            "test_20",
+            "test_21",
+            "test_6",
+            "test_7",
+            "test_13",
+            "test_15",
+            "test_14",
+            "test_8",
+            "test_10",
+            "test_23",
+            "test_11",
+            "test_24",
+            "test_19",
+            "test_9",
+            "test_12",
+            "test_16",
+            "test_22",
+            "test_18"
+          ],
+          "test_2": [
+            "test_16",
+            "test_22",
+            "test_17",
+            "test_24",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_13",
+            "test_9",
+            "test_6",
+            "test_19",
+            "test_7",
+            "test_10",
+            "test_5",
+            "test_18",
+            "test_23",
+            "test_14",
+            "test_21",
+            "test_15",
+            "test_8"
+          ],
+          "test_3": [
+            "test_20",
+            "test_16",
+            "test_11",
+            "test_13",
+            "test_17",
+            "test_22",
+            "test_24",
+            "test_6",
+            "test_12",
+            "test_9",
+            "test_10",
+            "test_23",
+            "test_5",
+            "test_19",
+            "test_21",
+            "test_7",
+            "test_18",
+            "test_15",
+            "test_8",
+            "test_14"
+          ],
+          "test_4": [
+            "test_22",
+            "test_9",
+            "test_16",
+            "test_11",
+            "test_24",
+            "test_12",
+            "test_13",
+            "test_17",
+            "test_10",
+            "test_18",
+            "test_20",
+            "test_7",
+            "test_5",
+            "test_6",
+            "test_23",
+            "test_19",
+            "test_15",
+            "test_14",
+            "test_8",
+            "test_21"
+          ]
+        }
+      },
+      "results": [
+        {
+          "method": "RobustMedianPrior_all20",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k20",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k10",
+          "overall_mae": 26.4497,
+          "valence_mae": 25.1833,
+          "arousal_mae": 27.7161,
+          "overall_mse": 1275.0867,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k8",
+          "overall_mae": 26.5047,
+          "valence_mae": 25.3426,
+          "arousal_mae": 27.6667,
+          "overall_mse": 1296.4027,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k15",
+          "overall_mae": 26.5206,
+          "valence_mae": 25.1743,
+          "arousal_mae": 27.867,
+          "overall_mse": 1300.2942,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k5",
+          "overall_mae": 27.2093,
+          "valence_mae": 25.7634,
+          "arousal_mae": 28.6551,
+          "overall_mse": 1452.4673,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k3",
+          "overall_mae": 27.5349,
+          "valence_mae": 25.7952,
+          "arousal_mae": 29.2745,
+          "overall_mse": 1485.3192,
+          "notes": "Subject-similarity robust median prior."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "neighbor_log": {
+        "SubjectSimilarityMedian_k3": {
+          "test_5": [
+            "test_11",
+            "test_12",
+            "test_17"
+          ],
+          "test_6": [
+            "test_21",
+            "test_23",
+            "test_17"
+          ],
+          "test_7": [
+            "test_10",
+            "test_18",
+            "test_12"
+          ],
+          "test_8": [
+            "test_21",
+            "test_23",
+            "test_11"
+          ]
+        },
+        "SubjectSimilarityMedian_k5": {
+          "test_5": [
+            "test_11",
+            "test_12",
+            "test_17",
+            "test_16",
+            "test_10"
+          ],
+          "test_6": [
+            "test_21",
+            "test_23",
+            "test_17",
+            "test_16",
+            "test_11"
+          ],
+          "test_7": [
+            "test_10",
+            "test_18",
+            "test_12",
+            "test_20",
+            "test_11"
+          ],
+          "test_8": [
+            "test_21",
+            "test_23",
+            "test_11",
+            "test_10",
+            "test_15"
+          ]
+        },
+        "SubjectSimilarityMedian_k8": {
+          "test_5": [
+            "test_11",
+            "test_12",
+            "test_17",
+            "test_16",
+            "test_10",
+            "test_24",
+            "test_20",
+            "test_1"
+          ],
+          "test_6": [
+            "test_21",
+            "test_23",
+            "test_17",
+            "test_16",
+            "test_11",
+            "test_20",
+            "test_13",
+            "test_22"
+          ],
+          "test_7": [
+            "test_10",
+            "test_18",
+            "test_12",
+            "test_20",
+            "test_11",
+            "test_9",
+            "test_17",
+            "test_16"
+          ],
+          "test_8": [
+            "test_21",
+            "test_23",
+            "test_11",
+            "test_10",
+            "test_15",
+            "test_20",
+            "test_16",
+            "test_17"
+          ]
+        },
+        "SubjectSimilarityMedian_k10": {
+          "test_5": [
+            "test_11",
+            "test_12",
+            "test_17",
+            "test_16",
+            "test_10",
+            "test_24",
+            "test_20",
+            "test_1",
+            "test_4",
+            "test_15"
+          ],
+          "test_6": [
+            "test_21",
+            "test_23",
+            "test_17",
+            "test_16",
+            "test_11",
+            "test_20",
+            "test_13",
+            "test_22",
+            "test_10",
+            "test_12"
+          ],
+          "test_7": [
+            "test_10",
+            "test_18",
+            "test_12",
+            "test_20",
+            "test_11",
+            "test_9",
+            "test_17",
+            "test_16",
+            "test_4",
+            "test_19"
+          ],
+          "test_8": [
+            "test_21",
+            "test_23",
+            "test_11",
+            "test_10",
+            "test_15",
+            "test_20",
+            "test_16",
+            "test_17",
+            "test_14",
+            "test_1"
+          ]
+        },
+        "SubjectSimilarityMedian_k15": {
+          "test_5": [
+            "test_11",
+            "test_12",
+            "test_17",
+            "test_16",
+            "test_10",
+            "test_24",
+            "test_20",
+            "test_1",
+            "test_4",
+            "test_15",
+            "test_22",
+            "test_13",
+            "test_2",
+            "test_9",
+            "test_18"
+          ],
+          "test_6": [
+            "test_21",
+            "test_23",
+            "test_17",
+            "test_16",
+            "test_11",
+            "test_20",
+            "test_13",
+            "test_22",
+            "test_10",
+            "test_12",
+            "test_9",
+            "test_2",
+            "test_15",
+            "test_1",
+            "test_3"
+          ],
+          "test_7": [
+            "test_10",
+            "test_18",
+            "test_12",
+            "test_20",
+            "test_11",
+            "test_9",
+            "test_17",
+            "test_16",
+            "test_4",
+            "test_19",
+            "test_24",
+            "test_22",
+            "test_15",
+            "test_13",
+            "test_2"
+          ],
+          "test_8": [
+            "test_21",
+            "test_23",
+            "test_11",
+            "test_10",
+            "test_15",
+            "test_20",
+            "test_16",
+            "test_17",
+            "test_14",
+            "test_1",
+            "test_12",
+            "test_3",
+            "test_19",
+            "test_18",
+            "test_22"
+          ]
+        },
+        "SubjectSimilarityMedian_k20": {
+          "test_5": [
+            "test_11",
+            "test_12",
+            "test_17",
+            "test_16",
+            "test_10",
+            "test_24",
+            "test_20",
+            "test_1",
+            "test_4",
+            "test_15",
+            "test_22",
+            "test_13",
+            "test_2",
+            "test_9",
+            "test_18",
+            "test_23",
+            "test_14",
+            "test_3",
+            "test_19",
+            "test_21"
+          ],
+          "test_6": [
+            "test_21",
+            "test_23",
+            "test_17",
+            "test_16",
+            "test_11",
+            "test_20",
+            "test_13",
+            "test_22",
+            "test_10",
+            "test_12",
+            "test_9",
+            "test_2",
+            "test_15",
+            "test_1",
+            "test_3",
+            "test_19",
+            "test_4",
+            "test_24",
+            "test_14",
+            "test_18"
+          ],
+          "test_7": [
+            "test_10",
+            "test_18",
+            "test_12",
+            "test_20",
+            "test_11",
+            "test_9",
+            "test_17",
+            "test_16",
+            "test_4",
+            "test_19",
+            "test_24",
+            "test_22",
+            "test_15",
+            "test_13",
+            "test_2",
+            "test_23",
+            "test_14",
+            "test_1",
+            "test_21",
+            "test_3"
+          ],
+          "test_8": [
+            "test_21",
+            "test_23",
+            "test_11",
+            "test_10",
+            "test_15",
+            "test_20",
+            "test_16",
+            "test_17",
+            "test_14",
+            "test_1",
+            "test_12",
+            "test_3",
+            "test_19",
+            "test_18",
+            "test_22",
+            "test_13",
+            "test_24",
+            "test_9",
+            "test_2",
+            "test_4"
+          ]
+        }
+      },
+      "results": [
+        {
+          "method": "SubjectSimilarityMedian_k8",
+          "overall_mae": 36.6763,
+          "valence_mae": 30.998,
+          "arousal_mae": 42.3545,
+          "overall_mse": 2514.4419,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k10",
+          "overall_mae": 36.683,
+          "valence_mae": 31.1772,
+          "arousal_mae": 42.1888,
+          "overall_mse": 2499.1814,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k5",
+          "overall_mae": 36.8285,
+          "valence_mae": 30.6074,
+          "arousal_mae": 43.0496,
+          "overall_mse": 2535.2939,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k15",
+          "overall_mae": 37.361,
+          "valence_mae": 33.0692,
+          "arousal_mae": 41.6529,
+          "overall_mse": 2542.8167,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "RobustMedianPrior_all20",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k20",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k3",
+          "overall_mae": 38.2489,
+          "valence_mae": 31.5672,
+          "arousal_mae": 44.9305,
+          "overall_mse": 2720.291,
+          "notes": "Subject-similarity robust median prior."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "neighbor_log": {
+        "SubjectSimilarityMedian_k3": {
+          "test_9": [
+            "test_4",
+            "test_18",
+            "test_22"
+          ],
+          "test_10": [
+            "test_7",
+            "test_16",
+            "test_20"
+          ],
+          "test_11": [
+            "test_4",
+            "test_22",
+            "test_20"
+          ],
+          "test_12": [
+            "test_4",
+            "test_22",
+            "test_16"
+          ]
+        },
+        "SubjectSimilarityMedian_k5": {
+          "test_9": [
+            "test_4",
+            "test_18",
+            "test_22",
+            "test_24",
+            "test_20"
+          ],
+          "test_10": [
+            "test_7",
+            "test_16",
+            "test_20",
+            "test_4",
+            "test_18"
+          ],
+          "test_11": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_16",
+            "test_24"
+          ],
+          "test_12": [
+            "test_4",
+            "test_22",
+            "test_16",
+            "test_13",
+            "test_5"
+          ]
+        },
+        "SubjectSimilarityMedian_k8": {
+          "test_9": [
+            "test_4",
+            "test_18",
+            "test_22",
+            "test_24",
+            "test_20",
+            "test_7",
+            "test_16",
+            "test_19"
+          ],
+          "test_10": [
+            "test_7",
+            "test_16",
+            "test_20",
+            "test_4",
+            "test_18",
+            "test_13",
+            "test_24",
+            "test_22"
+          ],
+          "test_11": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_16",
+            "test_24",
+            "test_5",
+            "test_17",
+            "test_13"
+          ],
+          "test_12": [
+            "test_4",
+            "test_22",
+            "test_16",
+            "test_13",
+            "test_5",
+            "test_7",
+            "test_17",
+            "test_24"
+          ]
+        },
+        "SubjectSimilarityMedian_k10": {
+          "test_9": [
+            "test_4",
+            "test_18",
+            "test_22",
+            "test_24",
+            "test_20",
+            "test_7",
+            "test_16",
+            "test_19",
+            "test_2",
+            "test_13"
+          ],
+          "test_10": [
+            "test_7",
+            "test_16",
+            "test_20",
+            "test_4",
+            "test_18",
+            "test_13",
+            "test_24",
+            "test_22",
+            "test_5",
+            "test_17"
+          ],
+          "test_11": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_16",
+            "test_24",
+            "test_5",
+            "test_17",
+            "test_13",
+            "test_7",
+            "test_2"
+          ],
+          "test_12": [
+            "test_4",
+            "test_22",
+            "test_16",
+            "test_13",
+            "test_5",
+            "test_7",
+            "test_17",
+            "test_24",
+            "test_2",
+            "test_20"
+          ]
+        },
+        "SubjectSimilarityMedian_k15": {
+          "test_9": [
+            "test_4",
+            "test_18",
+            "test_22",
+            "test_24",
+            "test_20",
+            "test_7",
+            "test_16",
+            "test_19",
+            "test_2",
+            "test_13",
+            "test_17",
+            "test_23",
+            "test_5",
+            "test_3",
+            "test_15"
+          ],
+          "test_10": [
+            "test_7",
+            "test_16",
+            "test_20",
+            "test_4",
+            "test_18",
+            "test_13",
+            "test_24",
+            "test_22",
+            "test_5",
+            "test_17",
+            "test_15",
+            "test_2",
+            "test_23",
+            "test_3",
+            "test_6"
+          ],
+          "test_11": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_16",
+            "test_24",
+            "test_5",
+            "test_17",
+            "test_13",
+            "test_7",
+            "test_2",
+            "test_18",
+            "test_23",
+            "test_3",
+            "test_6",
+            "test_15"
+          ],
+          "test_12": [
+            "test_4",
+            "test_22",
+            "test_16",
+            "test_13",
+            "test_5",
+            "test_7",
+            "test_17",
+            "test_24",
+            "test_2",
+            "test_20",
+            "test_15",
+            "test_18",
+            "test_23",
+            "test_6",
+            "test_19"
+          ]
+        },
+        "SubjectSimilarityMedian_k20": {
+          "test_9": [
+            "test_4",
+            "test_18",
+            "test_22",
+            "test_24",
+            "test_20",
+            "test_7",
+            "test_16",
+            "test_19",
+            "test_2",
+            "test_13",
+            "test_17",
+            "test_23",
+            "test_5",
+            "test_3",
+            "test_15",
+            "test_6",
+            "test_14",
+            "test_1",
+            "test_8",
+            "test_21"
+          ],
+          "test_10": [
+            "test_7",
+            "test_16",
+            "test_20",
+            "test_4",
+            "test_18",
+            "test_13",
+            "test_24",
+            "test_22",
+            "test_5",
+            "test_17",
+            "test_15",
+            "test_2",
+            "test_23",
+            "test_3",
+            "test_6",
+            "test_1",
+            "test_19",
+            "test_8",
+            "test_14",
+            "test_21"
+          ],
+          "test_11": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_16",
+            "test_24",
+            "test_5",
+            "test_17",
+            "test_13",
+            "test_7",
+            "test_2",
+            "test_18",
+            "test_23",
+            "test_3",
+            "test_6",
+            "test_15",
+            "test_19",
+            "test_1",
+            "test_8",
+            "test_21",
+            "test_14"
+          ],
+          "test_12": [
+            "test_4",
+            "test_22",
+            "test_16",
+            "test_13",
+            "test_5",
+            "test_7",
+            "test_17",
+            "test_24",
+            "test_2",
+            "test_20",
+            "test_15",
+            "test_18",
+            "test_23",
+            "test_6",
+            "test_19",
+            "test_3",
+            "test_14",
+            "test_1",
+            "test_8",
+            "test_21"
+          ]
+        }
+      },
+      "results": [
+        {
+          "method": "RobustMedianPrior_all20",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k20",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k15",
+          "overall_mae": 27.1063,
+          "valence_mae": 24.0866,
+          "arousal_mae": 30.1259,
+          "overall_mse": 1369.6982,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k10",
+          "overall_mae": 27.47,
+          "valence_mae": 24.2934,
+          "arousal_mae": 30.6466,
+          "overall_mse": 1409.6346,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k8",
+          "overall_mae": 28.2504,
+          "valence_mae": 24.8098,
+          "arousal_mae": 31.6911,
+          "overall_mse": 1490.5289,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k5",
+          "overall_mae": 28.8567,
+          "valence_mae": 24.8693,
+          "arousal_mae": 32.844,
+          "overall_mse": 1610.1738,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k3",
+          "overall_mae": 29.7572,
+          "valence_mae": 26.0518,
+          "arousal_mae": 33.4626,
+          "overall_mse": 1703.0802,
+          "notes": "Subject-similarity robust median prior."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "neighbor_log": {
+        "SubjectSimilarityMedian_k3": {
+          "test_13": [
+            "test_4",
+            "test_22",
+            "test_20"
+          ],
+          "test_14": [
+            "test_7",
+            "test_17",
+            "test_23"
+          ],
+          "test_15": [
+            "test_12",
+            "test_5",
+            "test_7"
+          ],
+          "test_16": [
+            "test_4",
+            "test_2",
+            "test_22"
+          ]
+        },
+        "SubjectSimilarityMedian_k5": {
+          "test_13": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_12",
+            "test_11"
+          ],
+          "test_14": [
+            "test_7",
+            "test_17",
+            "test_23",
+            "test_19",
+            "test_12"
+          ],
+          "test_15": [
+            "test_12",
+            "test_5",
+            "test_7",
+            "test_10",
+            "test_11"
+          ],
+          "test_16": [
+            "test_4",
+            "test_2",
+            "test_22",
+            "test_12",
+            "test_10"
+          ]
+        },
+        "SubjectSimilarityMedian_k8": {
+          "test_13": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_10",
+            "test_17",
+            "test_2"
+          ],
+          "test_14": [
+            "test_7",
+            "test_17",
+            "test_23",
+            "test_19",
+            "test_12",
+            "test_11",
+            "test_20",
+            "test_5"
+          ],
+          "test_15": [
+            "test_12",
+            "test_5",
+            "test_7",
+            "test_10",
+            "test_11",
+            "test_20",
+            "test_18",
+            "test_24"
+          ],
+          "test_16": [
+            "test_4",
+            "test_2",
+            "test_22",
+            "test_12",
+            "test_10",
+            "test_3",
+            "test_11",
+            "test_17"
+          ]
+        },
+        "SubjectSimilarityMedian_k10": {
+          "test_13": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_10",
+            "test_17",
+            "test_2",
+            "test_3",
+            "test_9"
+          ],
+          "test_14": [
+            "test_7",
+            "test_17",
+            "test_23",
+            "test_19",
+            "test_12",
+            "test_11",
+            "test_20",
+            "test_5",
+            "test_24",
+            "test_1"
+          ],
+          "test_15": [
+            "test_12",
+            "test_5",
+            "test_7",
+            "test_10",
+            "test_11",
+            "test_20",
+            "test_18",
+            "test_24",
+            "test_4",
+            "test_22"
+          ],
+          "test_16": [
+            "test_4",
+            "test_2",
+            "test_22",
+            "test_12",
+            "test_10",
+            "test_3",
+            "test_11",
+            "test_17",
+            "test_24",
+            "test_20"
+          ]
+        },
+        "SubjectSimilarityMedian_k15": {
+          "test_13": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_10",
+            "test_17",
+            "test_2",
+            "test_3",
+            "test_9",
+            "test_6",
+            "test_24",
+            "test_7",
+            "test_5",
+            "test_18"
+          ],
+          "test_14": [
+            "test_7",
+            "test_17",
+            "test_23",
+            "test_19",
+            "test_12",
+            "test_11",
+            "test_20",
+            "test_5",
+            "test_24",
+            "test_1",
+            "test_22",
+            "test_10",
+            "test_6",
+            "test_2",
+            "test_4"
+          ],
+          "test_15": [
+            "test_12",
+            "test_5",
+            "test_7",
+            "test_10",
+            "test_11",
+            "test_20",
+            "test_18",
+            "test_24",
+            "test_4",
+            "test_22",
+            "test_23",
+            "test_17",
+            "test_9",
+            "test_1",
+            "test_19"
+          ],
+          "test_16": [
+            "test_4",
+            "test_2",
+            "test_22",
+            "test_12",
+            "test_10",
+            "test_3",
+            "test_11",
+            "test_17",
+            "test_24",
+            "test_20",
+            "test_9",
+            "test_5",
+            "test_6",
+            "test_7",
+            "test_18"
+          ]
+        },
+        "SubjectSimilarityMedian_k20": {
+          "test_13": [
+            "test_4",
+            "test_22",
+            "test_20",
+            "test_12",
+            "test_11",
+            "test_10",
+            "test_17",
+            "test_2",
+            "test_3",
+            "test_9",
+            "test_6",
+            "test_24",
+            "test_7",
+            "test_5",
+            "test_18",
+            "test_1",
+            "test_23",
+            "test_19",
+            "test_21",
+            "test_8"
+          ],
+          "test_14": [
+            "test_7",
+            "test_17",
+            "test_23",
+            "test_19",
+            "test_12",
+            "test_11",
+            "test_20",
+            "test_5",
+            "test_24",
+            "test_1",
+            "test_22",
+            "test_10",
+            "test_6",
+            "test_2",
+            "test_4",
+            "test_21",
+            "test_18",
+            "test_9",
+            "test_8",
+            "test_3"
+          ],
+          "test_15": [
+            "test_12",
+            "test_5",
+            "test_7",
+            "test_10",
+            "test_11",
+            "test_20",
+            "test_18",
+            "test_24",
+            "test_4",
+            "test_22",
+            "test_23",
+            "test_17",
+            "test_9",
+            "test_1",
+            "test_19",
+            "test_6",
+            "test_8",
+            "test_2",
+            "test_3",
+            "test_21"
+          ],
+          "test_16": [
+            "test_4",
+            "test_2",
+            "test_22",
+            "test_12",
+            "test_10",
+            "test_3",
+            "test_11",
+            "test_17",
+            "test_24",
+            "test_20",
+            "test_9",
+            "test_5",
+            "test_6",
+            "test_7",
+            "test_18",
+            "test_23",
+            "test_1",
+            "test_19",
+            "test_21",
+            "test_8"
+          ]
+        }
+      },
+      "results": [
+        {
+          "method": "RobustMedianPrior_all20",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k20",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k15",
+          "overall_mae": 29.5475,
+          "valence_mae": 29.5434,
+          "arousal_mae": 29.5516,
+          "overall_mse": 1926.3624,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k10",
+          "overall_mae": 30.2533,
+          "valence_mae": 30.1681,
+          "arousal_mae": 30.3386,
+          "overall_mse": 2013.4755,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k8",
+          "overall_mae": 30.4437,
+          "valence_mae": 30.5366,
+          "arousal_mae": 30.3508,
+          "overall_mse": 2010.775,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k5",
+          "overall_mae": 32.9087,
+          "valence_mae": 32.2156,
+          "arousal_mae": 33.6019,
+          "overall_mse": 2195.2908,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k3",
+          "overall_mae": 35.8678,
+          "valence_mae": 35.4891,
+          "arousal_mae": 36.2466,
+          "overall_mse": 2545.3816,
+          "notes": "Subject-similarity robust median prior."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "neighbor_log": {
+        "SubjectSimilarityMedian_k3": {
+          "test_17": [
+            "test_16",
+            "test_22",
+            "test_2"
+          ],
+          "test_18": [
+            "test_7",
+            "test_9",
+            "test_4"
+          ],
+          "test_19": [
+            "test_9",
+            "test_7",
+            "test_22"
+          ],
+          "test_20": [
+            "test_11",
+            "test_9",
+            "test_16"
+          ]
+        },
+        "SubjectSimilarityMedian_k5": {
+          "test_17": [
+            "test_16",
+            "test_22",
+            "test_2",
+            "test_4",
+            "test_11"
+          ],
+          "test_18": [
+            "test_7",
+            "test_9",
+            "test_4",
+            "test_22",
+            "test_10"
+          ],
+          "test_19": [
+            "test_9",
+            "test_7",
+            "test_22",
+            "test_2",
+            "test_12"
+          ],
+          "test_20": [
+            "test_11",
+            "test_9",
+            "test_16",
+            "test_10",
+            "test_4"
+          ]
+        },
+        "SubjectSimilarityMedian_k8": {
+          "test_17": [
+            "test_16",
+            "test_22",
+            "test_2",
+            "test_4",
+            "test_11",
+            "test_12",
+            "test_5",
+            "test_13"
+          ],
+          "test_18": [
+            "test_7",
+            "test_9",
+            "test_4",
+            "test_22",
+            "test_10",
+            "test_11",
+            "test_12",
+            "test_16"
+          ],
+          "test_19": [
+            "test_9",
+            "test_7",
+            "test_22",
+            "test_2",
+            "test_12",
+            "test_14",
+            "test_4",
+            "test_11"
+          ],
+          "test_20": [
+            "test_11",
+            "test_9",
+            "test_16",
+            "test_10",
+            "test_4",
+            "test_24",
+            "test_2",
+            "test_13"
+          ]
+        },
+        "SubjectSimilarityMedian_k10": {
+          "test_17": [
+            "test_16",
+            "test_22",
+            "test_2",
+            "test_4",
+            "test_11",
+            "test_12",
+            "test_5",
+            "test_13",
+            "test_7",
+            "test_6"
+          ],
+          "test_18": [
+            "test_7",
+            "test_9",
+            "test_4",
+            "test_22",
+            "test_10",
+            "test_11",
+            "test_12",
+            "test_16",
+            "test_24",
+            "test_15"
+          ],
+          "test_19": [
+            "test_9",
+            "test_7",
+            "test_22",
+            "test_2",
+            "test_12",
+            "test_14",
+            "test_4",
+            "test_11",
+            "test_23",
+            "test_16"
+          ],
+          "test_20": [
+            "test_11",
+            "test_9",
+            "test_16",
+            "test_10",
+            "test_4",
+            "test_24",
+            "test_2",
+            "test_13",
+            "test_3",
+            "test_22"
+          ]
+        },
+        "SubjectSimilarityMedian_k15": {
+          "test_17": [
+            "test_16",
+            "test_22",
+            "test_2",
+            "test_4",
+            "test_11",
+            "test_12",
+            "test_5",
+            "test_13",
+            "test_7",
+            "test_6",
+            "test_24",
+            "test_10",
+            "test_3",
+            "test_14",
+            "test_1"
+          ],
+          "test_18": [
+            "test_7",
+            "test_9",
+            "test_4",
+            "test_22",
+            "test_10",
+            "test_11",
+            "test_12",
+            "test_16",
+            "test_24",
+            "test_15",
+            "test_5",
+            "test_23",
+            "test_2",
+            "test_13",
+            "test_3"
+          ],
+          "test_19": [
+            "test_9",
+            "test_7",
+            "test_22",
+            "test_2",
+            "test_12",
+            "test_14",
+            "test_4",
+            "test_11",
+            "test_23",
+            "test_16",
+            "test_6",
+            "test_5",
+            "test_13",
+            "test_24",
+            "test_10"
+          ],
+          "test_20": [
+            "test_11",
+            "test_9",
+            "test_16",
+            "test_10",
+            "test_4",
+            "test_24",
+            "test_2",
+            "test_13",
+            "test_3",
+            "test_22",
+            "test_12",
+            "test_7",
+            "test_5",
+            "test_6",
+            "test_23"
+          ]
+        },
+        "SubjectSimilarityMedian_k20": {
+          "test_17": [
+            "test_16",
+            "test_22",
+            "test_2",
+            "test_4",
+            "test_11",
+            "test_12",
+            "test_5",
+            "test_13",
+            "test_7",
+            "test_6",
+            "test_24",
+            "test_10",
+            "test_3",
+            "test_14",
+            "test_1",
+            "test_9",
+            "test_23",
+            "test_15",
+            "test_21",
+            "test_8"
+          ],
+          "test_18": [
+            "test_7",
+            "test_9",
+            "test_4",
+            "test_22",
+            "test_10",
+            "test_11",
+            "test_12",
+            "test_16",
+            "test_24",
+            "test_15",
+            "test_5",
+            "test_23",
+            "test_2",
+            "test_13",
+            "test_3",
+            "test_14",
+            "test_6",
+            "test_1",
+            "test_21",
+            "test_8"
+          ],
+          "test_19": [
+            "test_9",
+            "test_7",
+            "test_22",
+            "test_2",
+            "test_12",
+            "test_14",
+            "test_4",
+            "test_11",
+            "test_23",
+            "test_16",
+            "test_6",
+            "test_5",
+            "test_13",
+            "test_24",
+            "test_10",
+            "test_3",
+            "test_15",
+            "test_1",
+            "test_21",
+            "test_8"
+          ],
+          "test_20": [
+            "test_11",
+            "test_9",
+            "test_16",
+            "test_10",
+            "test_4",
+            "test_24",
+            "test_2",
+            "test_13",
+            "test_3",
+            "test_22",
+            "test_12",
+            "test_7",
+            "test_5",
+            "test_6",
+            "test_23",
+            "test_15",
+            "test_1",
+            "test_14",
+            "test_21",
+            "test_8"
+          ]
+        }
+      },
+      "results": [
+        {
+          "method": "RobustMedianPrior_all20",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k20",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k10",
+          "overall_mae": 26.3226,
+          "valence_mae": 25.0411,
+          "arousal_mae": 27.6042,
+          "overall_mse": 1360.2322,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k15",
+          "overall_mae": 26.4287,
+          "valence_mae": 24.8571,
+          "arousal_mae": 28.0002,
+          "overall_mse": 1363.7767,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k8",
+          "overall_mae": 27.2805,
+          "valence_mae": 26.2486,
+          "arousal_mae": 28.3124,
+          "overall_mse": 1416.3353,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k5",
+          "overall_mae": 28.409,
+          "valence_mae": 27.7211,
+          "arousal_mae": 29.0968,
+          "overall_mse": 1624.3217,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k3",
+          "overall_mae": 31.4907,
+          "valence_mae": 30.0175,
+          "arousal_mae": 32.9639,
+          "overall_mse": 1891.2012,
+          "notes": "Subject-similarity robust median prior."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "neighbor_log": {
+        "SubjectSimilarityMedian_k3": {
+          "test_21": [
+            "test_6",
+            "test_5",
+            "test_7"
+          ],
+          "test_22": [
+            "test_4",
+            "test_16",
+            "test_11"
+          ],
+          "test_23": [
+            "test_11",
+            "test_17",
+            "test_12"
+          ],
+          "test_24": [
+            "test_4",
+            "test_9",
+            "test_20"
+          ]
+        },
+        "SubjectSimilarityMedian_k5": {
+          "test_21": [
+            "test_6",
+            "test_5",
+            "test_7",
+            "test_11",
+            "test_13"
+          ],
+          "test_22": [
+            "test_4",
+            "test_16",
+            "test_11",
+            "test_12",
+            "test_9"
+          ],
+          "test_23": [
+            "test_11",
+            "test_17",
+            "test_12",
+            "test_7",
+            "test_10"
+          ],
+          "test_24": [
+            "test_4",
+            "test_9",
+            "test_20",
+            "test_11",
+            "test_16"
+          ]
+        },
+        "SubjectSimilarityMedian_k8": {
+          "test_21": [
+            "test_6",
+            "test_5",
+            "test_7",
+            "test_11",
+            "test_13",
+            "test_20",
+            "test_1",
+            "test_17"
+          ],
+          "test_22": [
+            "test_4",
+            "test_16",
+            "test_11",
+            "test_12",
+            "test_9",
+            "test_2",
+            "test_17",
+            "test_20"
+          ],
+          "test_23": [
+            "test_11",
+            "test_17",
+            "test_12",
+            "test_7",
+            "test_10",
+            "test_15",
+            "test_5",
+            "test_6"
+          ],
+          "test_24": [
+            "test_4",
+            "test_9",
+            "test_20",
+            "test_11",
+            "test_16",
+            "test_2",
+            "test_12",
+            "test_10"
+          ]
+        },
+        "SubjectSimilarityMedian_k10": {
+          "test_21": [
+            "test_6",
+            "test_5",
+            "test_7",
+            "test_11",
+            "test_13",
+            "test_20",
+            "test_1",
+            "test_17",
+            "test_12",
+            "test_8"
+          ],
+          "test_22": [
+            "test_4",
+            "test_16",
+            "test_11",
+            "test_12",
+            "test_9",
+            "test_2",
+            "test_17",
+            "test_20",
+            "test_18",
+            "test_13"
+          ],
+          "test_23": [
+            "test_11",
+            "test_17",
+            "test_12",
+            "test_7",
+            "test_10",
+            "test_15",
+            "test_5",
+            "test_6",
+            "test_20",
+            "test_16"
+          ],
+          "test_24": [
+            "test_4",
+            "test_9",
+            "test_20",
+            "test_11",
+            "test_16",
+            "test_2",
+            "test_12",
+            "test_10",
+            "test_5",
+            "test_17"
+          ]
+        },
+        "SubjectSimilarityMedian_k15": {
+          "test_21": [
+            "test_6",
+            "test_5",
+            "test_7",
+            "test_11",
+            "test_13",
+            "test_20",
+            "test_1",
+            "test_17",
+            "test_12",
+            "test_8",
+            "test_16",
+            "test_15",
+            "test_10",
+            "test_2",
+            "test_3"
+          ],
+          "test_22": [
+            "test_4",
+            "test_16",
+            "test_11",
+            "test_12",
+            "test_9",
+            "test_2",
+            "test_17",
+            "test_20",
+            "test_18",
+            "test_13",
+            "test_10",
+            "test_19",
+            "test_3",
+            "test_7",
+            "test_5"
+          ],
+          "test_23": [
+            "test_11",
+            "test_17",
+            "test_12",
+            "test_7",
+            "test_10",
+            "test_15",
+            "test_5",
+            "test_6",
+            "test_20",
+            "test_16",
+            "test_4",
+            "test_8",
+            "test_9",
+            "test_3",
+            "test_19"
+          ],
+          "test_24": [
+            "test_4",
+            "test_9",
+            "test_20",
+            "test_11",
+            "test_16",
+            "test_2",
+            "test_12",
+            "test_10",
+            "test_5",
+            "test_17",
+            "test_7",
+            "test_3",
+            "test_13",
+            "test_18",
+            "test_15"
+          ]
+        },
+        "SubjectSimilarityMedian_k20": {
+          "test_21": [
+            "test_6",
+            "test_5",
+            "test_7",
+            "test_11",
+            "test_13",
+            "test_20",
+            "test_1",
+            "test_17",
+            "test_12",
+            "test_8",
+            "test_16",
+            "test_15",
+            "test_10",
+            "test_2",
+            "test_3",
+            "test_14",
+            "test_9",
+            "test_19",
+            "test_18",
+            "test_4"
+          ],
+          "test_22": [
+            "test_4",
+            "test_16",
+            "test_11",
+            "test_12",
+            "test_9",
+            "test_2",
+            "test_17",
+            "test_20",
+            "test_18",
+            "test_13",
+            "test_10",
+            "test_19",
+            "test_3",
+            "test_7",
+            "test_5",
+            "test_6",
+            "test_15",
+            "test_1",
+            "test_14",
+            "test_8"
+          ],
+          "test_23": [
+            "test_11",
+            "test_17",
+            "test_12",
+            "test_7",
+            "test_10",
+            "test_15",
+            "test_5",
+            "test_6",
+            "test_20",
+            "test_16",
+            "test_4",
+            "test_8",
+            "test_9",
+            "test_3",
+            "test_19",
+            "test_13",
+            "test_2",
+            "test_18",
+            "test_14",
+            "test_1"
+          ],
+          "test_24": [
+            "test_4",
+            "test_9",
+            "test_20",
+            "test_11",
+            "test_16",
+            "test_2",
+            "test_12",
+            "test_10",
+            "test_5",
+            "test_17",
+            "test_7",
+            "test_3",
+            "test_13",
+            "test_18",
+            "test_15",
+            "test_1",
+            "test_6",
+            "test_14",
+            "test_19",
+            "test_8"
+          ]
+        }
+      },
+      "results": [
+        {
+          "method": "SubjectSimilarityMedian_k15",
+          "overall_mae": 26.9808,
+          "valence_mae": 26.2128,
+          "arousal_mae": 27.7488,
+          "overall_mse": 1444.3209,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "RobustMedianPrior_all20",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k20",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k10",
+          "overall_mae": 27.9451,
+          "valence_mae": 26.5568,
+          "arousal_mae": 29.3334,
+          "overall_mse": 1516.5612,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k8",
+          "overall_mae": 28.3061,
+          "valence_mae": 26.7339,
+          "arousal_mae": 29.8782,
+          "overall_mse": 1569.1107,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k5",
+          "overall_mae": 30.1652,
+          "valence_mae": 27.2359,
+          "arousal_mae": 33.0946,
+          "overall_mse": 1837.8331,
+          "notes": "Subject-similarity robust median prior."
+        },
+        {
+          "method": "SubjectSimilarityMedian_k3",
+          "overall_mae": 31.6812,
+          "valence_mae": 28.7179,
+          "arousal_mae": 34.6445,
+          "overall_mse": 1893.3502,
+          "notes": "Subject-similarity robust median prior."
+        }
+      ]
+    }
+  ]
+}

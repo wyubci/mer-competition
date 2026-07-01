@@ -1,0 +1,309 @@
+{
+  "method": "Trial-Affine Physiological Adapter",
+  "note": "Physiology predicts one offset and one prior-amplitude scale per trial/dimension. This constrains EEG/fNIRS to low-frequency calibration instead of per-second residuals.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      9
+    ]
+  },
+  "views": [
+    "eeg_scalar",
+    "fnirs_scalar",
+    "eeg_hrf_scalar",
+    "fnirs_roll_scalar",
+    "neurovascular",
+    "coherence"
+  ],
+  "include_p200": false,
+  "aggregate_results": [
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+      "overall_mae": 36.9087,
+      "valence_mae": 33.9024,
+      "arousal_mae": 39.9149,
+      "overall_mse": 2250.2305,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference",
+      "overall_mae": 36.9172,
+      "valence_mae": 33.9024,
+      "arousal_mae": 39.932,
+      "overall_mse": 2254.5706,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+      "overall_mae": 36.9245,
+      "valence_mae": 33.9024,
+      "arousal_mae": 39.9466,
+      "overall_mse": 2251.5618,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+      "overall_mae": 36.9333,
+      "valence_mae": 33.9516,
+      "arousal_mae": 39.9149,
+      "overall_mse": 2251.6057,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+      "overall_mae": 36.9418,
+      "valence_mae": 33.9516,
+      "arousal_mae": 39.932,
+      "overall_mse": 2255.946,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+      "overall_mae": 36.9446,
+      "valence_mae": 33.9024,
+      "arousal_mae": 39.9869,
+      "overall_mse": 2255.9023,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+      "overall_mae": 36.968,
+      "valence_mae": 34.0039,
+      "arousal_mae": 39.932,
+      "overall_mse": 2258.0105,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+      "overall_mae": 36.9856,
+      "valence_mae": 34.0392,
+      "arousal_mae": 39.932,
+      "overall_mse": 2259.3879,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+      "overall_mae": 36.9929,
+      "valence_mae": 34.0392,
+      "arousal_mae": 39.9466,
+      "overall_mse": 2256.3792,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+      "overall_mae": 36.9954,
+      "valence_mae": 34.0039,
+      "arousal_mae": 39.9869,
+      "overall_mse": 2259.3423,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "trial_count_train": 60,
+      "trial_feature_dim": 322,
+      "results": [
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 33.3459,
+          "valence_mae": 32.006,
+          "arousal_mae": 34.6859,
+          "overall_mse": 1801.9922,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 33.3685,
+          "valence_mae": 32.006,
+          "arousal_mae": 34.731,
+          "overall_mse": 1801.3368,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 33.3867,
+          "valence_mae": 32.0424,
+          "arousal_mae": 34.731,
+          "overall_mse": 1802.4248,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+          "overall_mae": 33.3937,
+          "valence_mae": 32.006,
+          "arousal_mae": 34.7814,
+          "overall_mse": 1809.4989,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 33.4029,
+          "valence_mae": 32.006,
+          "arousal_mae": 34.7998,
+          "overall_mse": 1808.8438,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 33.4211,
+          "valence_mae": 32.0424,
+          "arousal_mae": 34.7998,
+          "overall_mse": 1809.9316,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 33.4517,
+          "valence_mae": 32.2174,
+          "arousal_mae": 34.6859,
+          "overall_mse": 1809.4117,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+          "overall_mae": 33.486,
+          "valence_mae": 32.1907,
+          "arousal_mae": 34.7814,
+          "overall_mse": 1815.8297,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+          "overall_mae": 33.4952,
+          "valence_mae": 32.1907,
+          "arousal_mae": 34.7998,
+          "overall_mse": 1815.1747,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 33.5086,
+          "valence_mae": 32.2174,
+          "arousal_mae": 34.7998,
+          "overall_mse": 1816.2633,
+          "notes": "Trial-level affine physiological adapter."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "trial_count_train": 60,
+      "trial_feature_dim": 322,
+      "results": [
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 40.4315,
+          "valence_mae": 35.7989,
+          "arousal_mae": 45.0642,
+          "overall_mse": 2700.2971,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+          "overall_mae": 40.4407,
+          "valence_mae": 35.8172,
+          "arousal_mae": 45.0642,
+          "overall_mse": 2700.8464,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 40.4488,
+          "valence_mae": 35.7989,
+          "arousal_mae": 45.0988,
+          "overall_mse": 2699.124,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 40.4625,
+          "valence_mae": 35.8609,
+          "arousal_mae": 45.0642,
+          "overall_mse": 2701.96,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_v_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 40.4626,
+          "valence_mae": 35.861,
+          "arousal_mae": 45.0642,
+          "overall_mse": 2702.5127,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p0_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 40.4799,
+          "valence_mae": 35.8609,
+          "arousal_mae": 45.0988,
+          "overall_mse": 2700.7869,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+          "overall_mae": 40.4956,
+          "valence_mae": 35.7989,
+          "arousal_mae": 45.1924,
+          "overall_mse": 2702.3059,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_a_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 40.503,
+          "valence_mae": 35.7989,
+          "arousal_mae": 45.2072,
+          "overall_mse": 2701.1316,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p05_ss0p0_oc2p0_sc1p0",
+          "overall_mae": 40.5048,
+          "valence_mae": 35.8172,
+          "arousal_mae": 45.1924,
+          "overall_mse": 2702.8547,
+          "notes": "Trial-level affine physiological adapter."
+        },
+        {
+          "method": "098_PatternPrior_reference_TrialAffine_both_a1000p0_os0p05_ss0p05_oc2p0_sc1p0",
+          "overall_mae": 40.5341,
+          "valence_mae": 35.861,
+          "arousal_mae": 45.2072,
+          "overall_mse": 2703.3469,
+          "notes": "Trial-level affine physiological adapter."
+        }
+      ]
+    }
+  ]
+}

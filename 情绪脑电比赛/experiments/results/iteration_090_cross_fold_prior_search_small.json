@@ -1,0 +1,3032 @@
+{
+  "method": "Robust video-time prior cross-fold search",
+  "fold_size": 4,
+  "lags": [
+    -1,
+    0,
+    1
+  ],
+  "trims": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "shrinks": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "smooth_windows": [
+    0,
+    5,
+    9
+  ],
+  "aggregate_results": [
+    {
+      "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth9",
+      "overall_mae": 28.861,
+      "valence_mae": 27.0167,
+      "arousal_mae": 30.7052,
+      "overall_mse": 1621.8965,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth5",
+      "overall_mae": 28.8793,
+      "valence_mae": 27.0288,
+      "arousal_mae": 30.7298,
+      "overall_mse": 1629.1343,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth9",
+      "overall_mae": 28.8855,
+      "valence_mae": 27.0369,
+      "arousal_mae": 30.7341,
+      "overall_mse": 1621.0178,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth5",
+      "overall_mae": 28.8956,
+      "valence_mae": 27.121,
+      "arousal_mae": 30.6703,
+      "overall_mse": 1583.7593,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth5",
+      "overall_mae": 28.8968,
+      "valence_mae": 27.0361,
+      "arousal_mae": 30.7574,
+      "overall_mse": 1627.9147,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth9",
+      "overall_mae": 28.9077,
+      "valence_mae": 27.1429,
+      "arousal_mae": 30.6725,
+      "overall_mse": 1580.5747,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag-1_shrink0p0",
+      "overall_mae": 28.9082,
+      "valence_mae": 27.1289,
+      "arousal_mae": 30.6875,
+      "overall_mse": 1586.8558,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag-1_shrink0p0",
+      "overall_mae": 28.9256,
+      "valence_mae": 27.0716,
+      "arousal_mae": 30.7797,
+      "overall_mse": 1637.0386,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth5",
+      "overall_mae": 28.9306,
+      "valence_mae": 27.1431,
+      "arousal_mae": 30.7182,
+      "overall_mse": 1582.4989,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag0_shrink0p0",
+      "overall_mae": 28.938,
+      "valence_mae": 27.0721,
+      "arousal_mae": 30.8038,
+      "overall_mse": 1635.7839,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag0_shrink0p0",
+      "overall_mae": 28.9389,
+      "valence_mae": 27.1445,
+      "arousal_mae": 30.7332,
+      "overall_mse": 1585.4878,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth9",
+      "overall_mae": 28.9392,
+      "valence_mae": 27.0934,
+      "arousal_mae": 30.785,
+      "overall_mse": 1622.4872,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth5",
+      "overall_mae": 28.9418,
+      "valence_mae": 27.0786,
+      "arousal_mae": 30.805,
+      "overall_mse": 1629.0704,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth9",
+      "overall_mae": 28.9499,
+      "valence_mae": 27.1763,
+      "arousal_mae": 30.7235,
+      "overall_mse": 1579.6641,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag1_shrink0p0",
+      "overall_mae": 28.9788,
+      "valence_mae": 27.1076,
+      "arousal_mae": 30.8499,
+      "overall_mse": 1636.7107,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth5",
+      "overall_mae": 28.9967,
+      "valence_mae": 27.2054,
+      "arousal_mae": 30.788,
+      "overall_mse": 1583.5331,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag1_shrink0p0",
+      "overall_mae": 28.9994,
+      "valence_mae": 27.1994,
+      "arousal_mae": 30.7994,
+      "overall_mse": 1586.3004,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth5",
+      "overall_mae": 29.0096,
+      "valence_mae": 27.1981,
+      "arousal_mae": 30.8211,
+      "overall_mse": 1563.642,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag-1_shrink0p0",
+      "overall_mae": 29.0163,
+      "valence_mae": 27.1985,
+      "arousal_mae": 30.8342,
+      "overall_mse": 1566.1704,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth9",
+      "overall_mae": 29.0222,
+      "valence_mae": 27.248,
+      "arousal_mae": 30.7964,
+      "overall_mse": 1580.9528,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth9",
+      "overall_mae": 29.0312,
+      "valence_mae": 27.2326,
+      "arousal_mae": 30.8297,
+      "overall_mse": 1561.3171,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth5",
+      "overall_mae": 29.06,
+      "valence_mae": 27.2359,
+      "arousal_mae": 30.884,
+      "overall_mse": 1562.813,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag0_shrink0p0",
+      "overall_mae": 29.0614,
+      "valence_mae": 27.2284,
+      "arousal_mae": 30.8945,
+      "overall_mse": 1565.2236,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth9",
+      "overall_mae": 29.0805,
+      "valence_mae": 27.3693,
+      "arousal_mae": 30.7917,
+      "overall_mse": 1584.2334,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth5",
+      "overall_mae": 29.087,
+      "valence_mae": 27.3678,
+      "arousal_mae": 30.8061,
+      "overall_mse": 1589.2911,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth5",
+      "overall_mae": 29.0888,
+      "valence_mae": 27.3545,
+      "arousal_mae": 30.8232,
+      "overall_mse": 1586.405,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth9",
+      "overall_mae": 29.0895,
+      "valence_mae": 27.2827,
+      "arousal_mae": 30.8962,
+      "overall_mse": 1560.8055,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth9",
+      "overall_mae": 29.0909,
+      "valence_mae": 27.3692,
+      "arousal_mae": 30.8126,
+      "overall_mse": 1581.6035,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth9",
+      "overall_mae": 29.0961,
+      "valence_mae": 27.4017,
+      "arousal_mae": 30.7906,
+      "overall_mse": 1588.9595,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth5",
+      "overall_mae": 29.1086,
+      "valence_mae": 27.4107,
+      "arousal_mae": 30.8065,
+      "overall_mse": 1594.2979,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag1_shrink0p1",
+      "overall_mae": 29.1218,
+      "valence_mae": 27.3796,
+      "arousal_mae": 30.8639,
+      "overall_mse": 1592.365,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag0_shrink0p1",
+      "overall_mae": 29.1225,
+      "valence_mae": 27.3978,
+      "arousal_mae": 30.8471,
+      "overall_mse": 1595.4479,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag1_shrink0p0",
+      "overall_mae": 29.1413,
+      "valence_mae": 27.3041,
+      "arousal_mae": 30.9785,
+      "overall_mse": 1566.6202,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth5",
+      "overall_mae": 29.1431,
+      "valence_mae": 27.316,
+      "arousal_mae": 30.9703,
+      "overall_mse": 1564.3455,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_median_trim0p0_lag-1_shrink0p1",
+      "overall_mae": 29.1473,
+      "valence_mae": 27.4459,
+      "arousal_mae": 30.8487,
+      "overall_mse": 1600.494,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth9",
+      "overall_mae": 29.177,
+      "valence_mae": 27.3696,
+      "arousal_mae": 30.9844,
+      "overall_mse": 1562.5085,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth5",
+      "overall_mae": 29.2264,
+      "valence_mae": 27.5858,
+      "arousal_mae": 30.8671,
+      "overall_mse": 1561.7487,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag-1_shrink0p1_smooth5",
+      "overall_mae": 29.2313,
+      "valence_mae": 27.6147,
+      "arousal_mae": 30.848,
+      "overall_mse": 1566.5386,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag0_shrink0p1",
+      "overall_mae": 29.2343,
+      "valence_mae": 27.588,
+      "arousal_mae": 30.8807,
+      "overall_mse": 1563.953,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag-1_shrink0p1_smooth9",
+      "overall_mae": 29.2419,
+      "valence_mae": 27.6337,
+      "arousal_mae": 30.85,
+      "overall_mse": 1564.483,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag-1_shrink0p1",
+      "overall_mae": 29.242,
+      "valence_mae": 27.622,
+      "arousal_mae": 30.862,
+      "overall_mse": 1568.848,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth9",
+      "overall_mae": 29.2431,
+      "valence_mae": 27.6141,
+      "arousal_mae": 30.8722,
+      "overall_mse": 1559.9628,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag1_shrink0p1_smooth5",
+      "overall_mae": 29.2485,
+      "valence_mae": 27.591,
+      "arousal_mae": 30.9059,
+      "overall_mse": 1559.0093,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag1_shrink0p1",
+      "overall_mae": 29.2517,
+      "valence_mae": 27.5868,
+      "arousal_mae": 30.9166,
+      "overall_mse": 1561.0201,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p2_lag1_shrink0p1_smooth9",
+      "overall_mae": 29.2715,
+      "valence_mae": 27.629,
+      "arousal_mae": 30.9141,
+      "overall_mse": 1557.4158,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_mean_trim0p0_lag-1_shrink0p0_smooth5",
+      "overall_mae": 29.3447,
+      "valence_mae": 27.5112,
+      "arousal_mae": 31.1782,
+      "overall_mse": 1555.3491,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p0_lag-1_shrink0p0_smooth5",
+      "overall_mae": 29.3447,
+      "valence_mae": 27.5112,
+      "arousal_mae": 31.1782,
+      "overall_mse": 1555.3491,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_mean_trim0p0_lag-1_shrink0p0",
+      "overall_mae": 29.3527,
+      "valence_mae": 27.5104,
+      "arousal_mae": 31.1951,
+      "overall_mse": 1557.6376,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_trim_trim0p0_lag-1_shrink0p0",
+      "overall_mae": 29.3527,
+      "valence_mae": 27.5104,
+      "arousal_mae": 31.1951,
+      "overall_mse": 1557.6376,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_mean_trim0p0_lag-1_shrink0p0_smooth9",
+      "overall_mae": 29.3739,
+      "valence_mae": 27.5574,
+      "arousal_mae": 31.1903,
+      "overall_mse": 1553.6593,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]__A[Prior_trim_trim0p2_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5332,
+          "valence_mae": 24.7987,
+          "arousal_mae": 26.2678,
+          "overall_mse": 1184.993,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]__A[Prior_mean_trim0p0_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5338,
+          "valence_mae": 24.7987,
+          "arousal_mae": 26.2688,
+          "overall_mse": 1176.1,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]__A[Prior_trim_trim0p0_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5338,
+          "valence_mae": 24.7987,
+          "arousal_mae": 26.2688,
+          "overall_mse": 1176.1,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5423,
+          "valence_mae": 24.8168,
+          "arousal_mae": 26.2678,
+          "overall_mse": 1182.0656,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]__A[Prior_mean_trim0p0_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5428,
+          "valence_mae": 24.8168,
+          "arousal_mae": 26.2688,
+          "overall_mse": 1173.1725,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]__A[Prior_trim_trim0p0_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5428,
+          "valence_mae": 24.8168,
+          "arousal_mae": 26.2688,
+          "overall_mse": 1173.1725,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0]__A[Prior_trim_trim0p2_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.5474,
+          "valence_mae": 24.8271,
+          "arousal_mae": 26.2678,
+          "overall_mse": 1188.545,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0]__A[Prior_mean_trim0p0_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.548,
+          "valence_mae": 24.8271,
+          "arousal_mae": 26.2688,
+          "overall_mse": 1179.6521,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0]__A[Prior_trim_trim0p0_lag-1_shrink0p2_smooth9]",
+          "overall_mae": 25.548,
+          "valence_mae": 24.8271,
+          "arousal_mae": 26.2688,
+          "overall_mse": 1179.6521,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p1_smooth5",
+          "overall_mae": 26.0856,
+          "valence_mae": 25.244,
+          "arousal_mae": 26.9273,
+          "overall_mse": 1187.7482,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p1_smooth9",
+          "overall_mae": 26.094,
+          "valence_mae": 25.2796,
+          "arousal_mae": 26.9083,
+          "overall_mse": 1185.5792,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p1",
+          "overall_mae": 26.0964,
+          "valence_mae": 25.2434,
+          "arousal_mae": 26.9494,
+          "overall_mse": 1190.1295,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 26.1124,
+          "valence_mae": 25.1417,
+          "arousal_mae": 27.0832,
+          "overall_mse": 1219.0007,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.1235,
+          "valence_mae": 25.8923,
+          "arousal_mae": 26.3548,
+          "overall_mse": 1206.2596,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 26.1322,
+          "valence_mae": 25.1326,
+          "arousal_mae": 27.1318,
+          "overall_mse": 1224.901,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.1417,
+          "valence_mae": 25.8867,
+          "arousal_mae": 26.3967,
+          "overall_mse": 1210.4242,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p1_smooth5",
+          "overall_mae": 26.146,
+          "valence_mae": 25.3874,
+          "arousal_mae": 26.9047,
+          "overall_mse": 1174.5605,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p1_smooth9",
+          "overall_mae": 26.1577,
+          "valence_mae": 25.4226,
+          "arousal_mae": 26.8928,
+          "overall_mse": 1172.851,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p1",
+          "overall_mae": 26.1597,
+          "valence_mae": 25.3886,
+          "arousal_mae": 26.9308,
+          "overall_mse": 1176.6987,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.1791,
+          "valence_mae": 26.0703,
+          "arousal_mae": 26.2878,
+          "overall_mse": 1190.7466,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.1842,
+          "valence_mae": 26.1006,
+          "arousal_mae": 26.2678,
+          "overall_mse": 1189.5502,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p2_smooth9",
+          "overall_mae": 26.191,
+          "valence_mae": 25.9215,
+          "arousal_mae": 26.4605,
+          "overall_mse": 1203.9977,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p2",
+          "overall_mae": 26.1923,
+          "valence_mae": 26.0719,
+          "arousal_mae": 26.3126,
+          "overall_mse": 1192.4293,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth5",
+          "overall_mae": 26.1931,
+          "valence_mae": 25.3109,
+          "arousal_mae": 27.0753,
+          "overall_mse": 1188.3285,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 26.1946,
+          "valence_mae": 25.1662,
+          "arousal_mae": 27.2229,
+          "overall_mse": 1231.8766,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1",
+          "overall_mae": 26.2014,
+          "valence_mae": 25.3064,
+          "arousal_mae": 27.0964,
+          "overall_mse": 1190.7977,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p2",
+          "overall_mae": 26.2023,
+          "valence_mae": 25.926,
+          "arousal_mae": 26.4785,
+          "overall_mse": 1215.7531,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth9",
+          "overall_mae": 26.2061,
+          "valence_mae": 25.3486,
+          "arousal_mae": 27.0636,
+          "overall_mse": 1186.1598,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p2_smooth5",
+          "overall_mae": 26.2074,
+          "valence_mae": 25.9147,
+          "arousal_mae": 26.5002,
+          "overall_mse": 1208.3378,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth9",
+          "overall_mae": 26.2244,
+          "valence_mae": 25.2208,
+          "arousal_mae": 27.228,
+          "overall_mse": 1220.4276,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth5",
+          "overall_mae": 26.2416,
+          "valence_mae": 25.2084,
+          "arousal_mae": 27.2748,
+          "overall_mse": 1226.5031,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p2_smooth5",
+          "overall_mae": 26.2469,
+          "valence_mae": 26.0977,
+          "arousal_mae": 26.396,
+          "overall_mse": 1187.9772,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p2_smooth9",
+          "overall_mae": 26.2569,
+          "valence_mae": 26.13,
+          "arousal_mae": 26.3839,
+          "overall_mse": 1186.7388,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p2",
+          "overall_mae": 26.2583,
+          "valence_mae": 26.0958,
+          "arousal_mae": 26.4207,
+          "overall_mse": 1189.7295,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p1_smooth5",
+          "overall_mae": 26.2586,
+          "valence_mae": 25.4599,
+          "arousal_mae": 27.0572,
+          "overall_mse": 1175.0026,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p2",
+          "overall_mae": 26.2633,
+          "valence_mae": 25.948,
+          "arousal_mae": 26.5786,
+          "overall_mse": 1213.7098,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p1",
+          "overall_mae": 26.2683,
+          "valence_mae": 25.4559,
+          "arousal_mae": 27.0807,
+          "overall_mse": 1177.276,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p1_smooth9",
+          "overall_mae": 26.275,
+          "valence_mae": 25.4986,
+          "arousal_mae": 27.0515,
+          "overall_mse": 1173.309,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 26.2756,
+          "valence_mae": 25.7787,
+          "arousal_mae": 26.7725,
+          "overall_mse": 1166.7716,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 26.2756,
+          "valence_mae": 25.7787,
+          "arousal_mae": 26.7725,
+          "overall_mse": 1166.7716,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p2_smooth9",
+          "overall_mae": 26.2861,
+          "valence_mae": 25.985,
+          "arousal_mae": 26.5872,
+          "overall_mse": 1203.6569,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.287,
+          "valence_mae": 26.2662,
+          "arousal_mae": 26.3077,
+          "overall_mse": 1187.5856,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 26.29,
+          "valence_mae": 25.8222,
+          "arousal_mae": 26.7578,
+          "overall_mse": 1165.5497,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 26.29,
+          "valence_mae": 25.8222,
+          "arousal_mae": 26.7578,
+          "overall_mse": 1165.5497,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 26.2929,
+          "valence_mae": 25.7832,
+          "arousal_mae": 26.8027,
+          "overall_mse": 1168.7197,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 26.2929,
+          "valence_mae": 25.7832,
+          "arousal_mae": 26.8027,
+          "overall_mse": 1168.7197,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p2_smooth5",
+          "overall_mae": 26.2957,
+          "valence_mae": 25.9739,
+          "arousal_mae": 26.6176,
+          "overall_mse": 1207.9276,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.2958,
+          "valence_mae": 26.2981,
+          "arousal_mae": 26.2936,
+          "overall_mse": 1186.7526,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1",
+          "overall_mae": 26.2978,
+          "valence_mae": 25.2326,
+          "arousal_mae": 27.363,
+          "overall_mse": 1233.5399,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p2",
+          "overall_mae": 26.2988,
+          "valence_mae": 26.2652,
+          "arousal_mae": 26.3324,
+          "overall_mse": 1189.0756,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "DimwiseV[Prior_trim_trim0p2_lag1_shrink0p0]__A[Prior_trim_trim0p1_lag1_shrink0p0]",
+          "overall_mae": 36.5593,
+          "valence_mae": 32.5576,
+          "arousal_mae": 40.5611,
+          "overall_mse": 2405.7368,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p2_lag1_shrink0p0]__A[Prior_trim_trim0p1_lag1_shrink0p0_smooth5]",
+          "overall_mae": 36.5637,
+          "valence_mae": 32.5576,
+          "arousal_mae": 40.5698,
+          "overall_mse": 2404.9377,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0",
+          "overall_mae": 36.567,
+          "valence_mae": 32.573,
+          "arousal_mae": 40.5611,
+          "overall_mse": 2394.2708,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p1_lag1_shrink0p0]__A[Prior_trim_trim0p1_lag1_shrink0p0]",
+          "overall_mae": 36.567,
+          "valence_mae": 32.573,
+          "arousal_mae": 40.5611,
+          "overall_mse": 2394.2708,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p2_lag1_shrink0p0]__A[Prior_mean_trim0p0_lag1_shrink0p0]",
+          "overall_mae": 36.5682,
+          "valence_mae": 32.5576,
+          "arousal_mae": 40.5789,
+          "overall_mse": 2382.9114,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p1_lag1_shrink0p0]__A[Prior_trim_trim0p1_lag1_shrink0p0_smooth5]",
+          "overall_mae": 36.5714,
+          "valence_mae": 32.573,
+          "arousal_mae": 40.5698,
+          "overall_mse": 2393.4717,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p2_lag1_shrink0p0_smooth5]__A[Prior_trim_trim0p1_lag1_shrink0p0]",
+          "overall_mae": 36.574,
+          "valence_mae": 32.5869,
+          "arousal_mae": 40.5611,
+          "overall_mse": 2404.9297,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p1_lag1_shrink0p0]__A[Prior_mean_trim0p0_lag1_shrink0p0]",
+          "overall_mae": 36.576,
+          "valence_mae": 32.573,
+          "arousal_mae": 40.5789,
+          "overall_mse": 2371.4456,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p2_lag1_shrink0p0_smooth5]__A[Prior_trim_trim0p1_lag1_shrink0p0_smooth5]",
+          "overall_mae": 36.5784,
+          "valence_mae": 32.5869,
+          "arousal_mae": 40.5698,
+          "overall_mse": 2404.1301,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p2_lag1_shrink0p0_smooth5]__A[Prior_mean_trim0p0_lag1_shrink0p0]",
+          "overall_mae": 36.5829,
+          "valence_mae": 32.5869,
+          "arousal_mae": 40.5789,
+          "overall_mse": 2382.1042,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth5",
+          "overall_mae": 36.5897,
+          "valence_mae": 32.6095,
+          "arousal_mae": 40.5698,
+          "overall_mse": 2392.9619,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth9",
+          "overall_mae": 36.6394,
+          "valence_mae": 32.6798,
+          "arousal_mae": 40.599,
+          "overall_mse": 2392.3972,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0",
+          "overall_mae": 36.6664,
+          "valence_mae": 32.5576,
+          "arousal_mae": 40.7751,
+          "overall_mse": 2426.3997,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth5",
+          "overall_mae": 36.6823,
+          "valence_mae": 32.5869,
+          "arousal_mae": 40.7778,
+          "overall_mse": 2424.5217,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0",
+          "overall_mae": 36.6999,
+          "valence_mae": 32.7063,
+          "arousal_mae": 40.6935,
+          "overall_mse": 2404.6262,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag1_shrink0p0",
+          "overall_mae": 36.7015,
+          "valence_mae": 32.8241,
+          "arousal_mae": 40.5789,
+          "overall_mse": 2363.6516,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag1_shrink0p0",
+          "overall_mae": 36.7015,
+          "valence_mae": 32.8241,
+          "arousal_mae": 40.5789,
+          "overall_mse": 2363.6516,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth5",
+          "overall_mae": 36.7143,
+          "valence_mae": 32.7292,
+          "arousal_mae": 40.6995,
+          "overall_mse": 2403.3452,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth9",
+          "overall_mae": 36.7185,
+          "valence_mae": 32.6423,
+          "arousal_mae": 40.7946,
+          "overall_mse": 2423.0056,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag1_shrink0p0_smooth5",
+          "overall_mae": 36.7209,
+          "valence_mae": 32.8583,
+          "arousal_mae": 40.5836,
+          "overall_mse": 2362.3772,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag1_shrink0p0_smooth5",
+          "overall_mae": 36.7209,
+          "valence_mae": 32.8583,
+          "arousal_mae": 40.5836,
+          "overall_mse": 2362.3772,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth9",
+          "overall_mae": 36.758,
+          "valence_mae": 32.7883,
+          "arousal_mae": 40.7277,
+          "overall_mse": 2402.7795,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag1_shrink0p0_smooth9",
+          "overall_mae": 36.7762,
+          "valence_mae": 32.9373,
+          "arousal_mae": 40.6151,
+          "overall_mse": 2362.2847,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag1_shrink0p0_smooth9",
+          "overall_mae": 36.7762,
+          "valence_mae": 32.9373,
+          "arousal_mae": 40.6151,
+          "overall_mse": 2362.2847,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag0_shrink0p0",
+          "overall_mae": 36.7935,
+          "valence_mae": 32.9099,
+          "arousal_mae": 40.6771,
+          "overall_mse": 2372.0303,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag0_shrink0p0",
+          "overall_mae": 36.7935,
+          "valence_mae": 32.9099,
+          "arousal_mae": 40.6771,
+          "overall_mse": 2372.0303,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth9",
+          "overall_mae": 36.8064,
+          "valence_mae": 32.6058,
+          "arousal_mae": 41.007,
+          "overall_mse": 2456.8892,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth5",
+          "overall_mae": 36.8074,
+          "valence_mae": 32.5878,
+          "arousal_mae": 41.027,
+          "overall_mse": 2462.5911,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag0_shrink0p0_smooth5",
+          "overall_mae": 36.8125,
+          "valence_mae": 32.9393,
+          "arousal_mae": 40.6857,
+          "overall_mse": 2371.0569,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag0_shrink0p0_smooth5",
+          "overall_mae": 36.8125,
+          "valence_mae": 32.9393,
+          "arousal_mae": 40.6857,
+          "overall_mse": 2371.0569,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0",
+          "overall_mae": 36.8301,
+          "valence_mae": 32.6038,
+          "arousal_mae": 41.0563,
+          "overall_mse": 2469.4573,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0",
+          "overall_mae": 36.8356,
+          "valence_mae": 32.7465,
+          "arousal_mae": 40.9247,
+          "overall_mse": 2438.614,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth5",
+          "overall_mae": 36.8394,
+          "valence_mae": 32.7544,
+          "arousal_mae": 40.9244,
+          "overall_mse": 2436.55,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth9",
+          "overall_mae": 36.8653,
+          "valence_mae": 32.7927,
+          "arousal_mae": 40.938,
+          "overall_mse": 2434.7871,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag0_shrink0p0_smooth9",
+          "overall_mae": 36.8681,
+          "valence_mae": 33.0143,
+          "arousal_mae": 40.7219,
+          "overall_mse": 2371.1658,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag0_shrink0p0_smooth9",
+          "overall_mae": 36.8681,
+          "valence_mae": 33.0143,
+          "arousal_mae": 40.7219,
+          "overall_mse": 2371.1658,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth5",
+          "overall_mae": 36.8785,
+          "valence_mae": 32.9029,
+          "arousal_mae": 40.854,
+          "overall_mse": 2416.3538,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0",
+          "overall_mae": 36.8792,
+          "valence_mae": 32.9004,
+          "arousal_mae": 40.8579,
+          "overall_mse": 2418.0779,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth9",
+          "overall_mae": 36.9113,
+          "valence_mae": 32.9431,
+          "arousal_mae": 40.8794,
+          "overall_mse": 2415.4509,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p0",
+          "overall_mae": 36.9425,
+          "valence_mae": 33.0669,
+          "arousal_mae": 40.8181,
+          "overall_mse": 2383.7097,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p0",
+          "overall_mae": 36.9425,
+          "valence_mae": 33.0669,
+          "arousal_mae": 40.8181,
+          "overall_mse": 2383.7097,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p0_smooth5",
+          "overall_mae": 36.9455,
+          "valence_mae": 33.0753,
+          "arousal_mae": 40.8158,
+          "overall_mse": 2382.3708,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p0_smooth5",
+          "overall_mae": 36.9455,
+          "valence_mae": 33.0753,
+          "arousal_mae": 40.8158,
+          "overall_mse": 2382.3708,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth9",
+          "overall_mae": 36.986,
+          "valence_mae": 32.7962,
+          "arousal_mae": 41.1758,
+          "overall_mse": 2469.7498,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p0_smooth9",
+          "overall_mae": 36.9932,
+          "valence_mae": 33.1345,
+          "arousal_mae": 40.8519,
+          "overall_mse": 2382.3352,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p0_smooth9",
+          "overall_mae": 36.9932,
+          "valence_mae": 33.1345,
+          "arousal_mae": 40.8519,
+          "overall_mse": 2382.3352,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth5",
+          "overall_mae": 36.9951,
+          "valence_mae": 32.7995,
+          "arousal_mae": 41.1907,
+          "overall_mse": 2475.624,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0",
+          "overall_mae": 37.0218,
+          "valence_mae": 32.8302,
+          "arousal_mae": 41.2134,
+          "overall_mse": 2482.0828,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth5",
+          "overall_mae": 37.0303,
+          "valence_mae": 32.969,
+          "arousal_mae": 41.0916,
+          "overall_mse": 2450.9868,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0",
+          "overall_mae": 37.0404,
+          "valence_mae": 32.9795,
+          "arousal_mae": 41.1013,
+          "overall_mse": 2453.6702,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth5]__A[Prior_median_trim0p0_lag1_shrink0p0_smooth9]",
+          "overall_mae": 26.5366,
+          "valence_mae": 23.3172,
+          "arousal_mae": 29.756,
+          "overall_mse": 1289.8052,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0]__A[Prior_median_trim0p0_lag1_shrink0p0_smooth9]",
+          "overall_mae": 26.5402,
+          "valence_mae": 23.3244,
+          "arousal_mae": 29.756,
+          "overall_mse": 1291.7198,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth5",
+          "overall_mae": 26.5463,
+          "valence_mae": 23.3172,
+          "arousal_mae": 29.7754,
+          "overall_mse": 1293.0929,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth5]__A[Prior_median_trim0p0_lag1_shrink0p0_smooth5]",
+          "overall_mae": 26.5463,
+          "valence_mae": 23.3172,
+          "arousal_mae": 29.7754,
+          "overall_mse": 1293.0929,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0]__A[Prior_median_trim0p0_lag1_shrink0p0_smooth5]",
+          "overall_mae": 26.5499,
+          "valence_mae": 23.3244,
+          "arousal_mae": 29.7754,
+          "overall_mse": 1295.0077,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth5]__A[Prior_median_trim0p0_lag0_shrink0p0_smooth9]",
+          "overall_mae": 26.5536,
+          "valence_mae": 23.3172,
+          "arousal_mae": 29.79,
+          "overall_mse": 1292.7953,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0]__A[Prior_median_trim0p0_lag0_shrink0p0_smooth9]",
+          "overall_mae": 26.5572,
+          "valence_mae": 23.3244,
+          "arousal_mae": 29.79,
+          "overall_mse": 1294.7101,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth9",
+          "overall_mae": 26.5585,
+          "valence_mae": 23.3609,
+          "arousal_mae": 29.756,
+          "overall_mse": 1288.4049,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth9]__A[Prior_median_trim0p0_lag1_shrink0p0_smooth9]",
+          "overall_mae": 26.5585,
+          "valence_mae": 23.3609,
+          "arousal_mae": 29.756,
+          "overall_mse": 1288.4049,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth9]__A[Prior_median_trim0p0_lag1_shrink0p0_smooth5]",
+          "overall_mae": 26.5682,
+          "valence_mae": 23.3609,
+          "arousal_mae": 29.7754,
+          "overall_mse": 1291.6927,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0",
+          "overall_mae": 26.5688,
+          "valence_mae": 23.3244,
+          "arousal_mae": 29.8132,
+          "overall_mse": 1298.9857,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth9]__A[Prior_median_trim0p0_lag0_shrink0p0_smooth9]",
+          "overall_mae": 26.5755,
+          "valence_mae": 23.3609,
+          "arousal_mae": 29.79,
+          "overall_mse": 1291.395,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth5",
+          "overall_mae": 26.6672,
+          "valence_mae": 23.5209,
+          "arousal_mae": 29.8135,
+          "overall_mse": 1305.8712,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth9",
+          "overall_mae": 26.6705,
+          "valence_mae": 23.5509,
+          "arousal_mae": 29.79,
+          "overall_mse": 1300.45,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0",
+          "overall_mae": 26.6984,
+          "valence_mae": 23.5428,
+          "arousal_mae": 29.854,
+          "overall_mse": 1312.4706,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth9",
+          "overall_mae": 26.8115,
+          "valence_mae": 23.7828,
+          "arousal_mae": 29.8402,
+          "overall_mse": 1315.0582,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth5",
+          "overall_mae": 26.8176,
+          "valence_mae": 23.7688,
+          "arousal_mae": 29.8665,
+          "overall_mse": 1321.4219,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0",
+          "overall_mae": 26.8492,
+          "valence_mae": 23.7912,
+          "arousal_mae": 29.9072,
+          "overall_mse": 1328.0304,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0",
+          "overall_mae": 26.8532,
+          "valence_mae": 23.5227,
+          "arousal_mae": 30.1838,
+          "overall_mse": 1276.8153,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth5",
+          "overall_mae": 26.862,
+          "valence_mae": 23.5393,
+          "arousal_mae": 30.1847,
+          "overall_mse": 1274.8906,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth9",
+          "overall_mae": 26.9067,
+          "valence_mae": 23.6072,
+          "arousal_mae": 30.2062,
+          "overall_mse": 1273.7133,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth5",
+          "overall_mae": 26.951,
+          "valence_mae": 23.7075,
+          "arousal_mae": 30.1944,
+          "overall_mse": 1286.657,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0",
+          "overall_mae": 26.9513,
+          "valence_mae": 23.7034,
+          "arousal_mae": 30.1993,
+          "overall_mse": 1288.9502,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth9",
+          "overall_mae": 26.9873,
+          "valence_mae": 23.7652,
+          "arousal_mae": 30.2094,
+          "overall_mse": 1285.0245,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth5",
+          "overall_mae": 27.0712,
+          "valence_mae": 23.9228,
+          "arousal_mae": 30.2195,
+          "overall_mse": 1301.0598,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0",
+          "overall_mae": 27.0725,
+          "valence_mae": 23.9181,
+          "arousal_mae": 30.2269,
+          "overall_mse": 1303.3301,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth9",
+          "overall_mae": 27.0966,
+          "valence_mae": 23.9645,
+          "arousal_mae": 30.2287,
+          "overall_mse": 1298.7091,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0",
+          "overall_mae": 27.3404,
+          "valence_mae": 23.9276,
+          "arousal_mae": 30.7532,
+          "overall_mse": 1283.7501,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth5",
+          "overall_mae": 27.3539,
+          "valence_mae": 23.9526,
+          "arousal_mae": 30.7551,
+          "overall_mse": 1282.3107,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth9",
+          "overall_mae": 27.4072,
+          "valence_mae": 24.0358,
+          "arousal_mae": 30.7787,
+          "overall_mse": 1281.7639,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0",
+          "overall_mae": 27.4117,
+          "valence_mae": 24.0771,
+          "arousal_mae": 30.7464,
+          "overall_mse": 1294.4701,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth5",
+          "overall_mae": 27.4172,
+          "valence_mae": 24.0909,
+          "arousal_mae": 30.7434,
+          "overall_mse": 1292.7699,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth9",
+          "overall_mae": 27.4619,
+          "valence_mae": 24.1636,
+          "arousal_mae": 30.7603,
+          "overall_mse": 1291.8577,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0",
+          "overall_mae": 27.5102,
+          "valence_mae": 24.2653,
+          "arousal_mae": 30.7551,
+          "overall_mse": 1307.7645,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth5",
+          "overall_mae": 27.513,
+          "valence_mae": 24.2766,
+          "arousal_mae": 30.7494,
+          "overall_mse": 1305.9403,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth9",
+          "overall_mae": 27.5455,
+          "valence_mae": 24.3302,
+          "arousal_mae": 30.7609,
+          "overall_mse": 1304.4069,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth5",
+          "overall_mae": 27.5988,
+          "valence_mae": 24.9163,
+          "arousal_mae": 30.2814,
+          "overall_mse": 1342.8816,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1",
+          "overall_mae": 27.611,
+          "valence_mae": 24.9136,
+          "arousal_mae": 30.3083,
+          "overall_mse": 1347.3529,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth9",
+          "overall_mae": 27.6191,
+          "valence_mae": 24.9625,
+          "arousal_mae": 30.2757,
+          "overall_mse": 1339.7242,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth5",
+          "overall_mae": 27.7445,
+          "valence_mae": 25.1559,
+          "arousal_mae": 30.3331,
+          "overall_mse": 1358.1658,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth9",
+          "overall_mae": 27.7544,
+          "valence_mae": 25.186,
+          "arousal_mae": 30.3228,
+          "overall_mse": 1354.389,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1",
+          "overall_mae": 27.7653,
+          "valence_mae": 25.1654,
+          "arousal_mae": 30.3652,
+          "overall_mse": 1363.2681,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 27.9133,
+          "valence_mae": 25.4278,
+          "arousal_mae": 30.3988,
+          "overall_mse": 1375.9316,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 27.9144,
+          "valence_mae": 25.4421,
+          "arousal_mae": 30.3867,
+          "overall_mse": 1371.3359,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 27.933,
+          "valence_mae": 25.4358,
+          "arousal_mae": 30.4302,
+          "overall_mse": 1381.0507,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p1",
+          "overall_mae": 27.9861,
+          "valence_mae": 25.2376,
+          "arousal_mae": 30.7347,
+          "overall_mse": 1340.2651,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p1_smooth5",
+          "overall_mae": 27.9931,
+          "valence_mae": 25.2517,
+          "arousal_mae": 30.7345,
+          "overall_mse": 1338.9711,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p1_smooth9",
+          "overall_mae": 28.0323,
+          "valence_mae": 25.3121,
+          "arousal_mae": 30.7524,
+          "overall_mse": 1338.5895,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth5",
+          "overall_mae": 28.1028,
+          "valence_mae": 25.4489,
+          "arousal_mae": 30.7567,
+          "overall_mse": 1353.0803,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1",
+          "overall_mae": 28.103,
+          "valence_mae": 25.4443,
+          "arousal_mae": 30.7617,
+          "overall_mse": 1354.7028,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "DimwiseV[Prior_mean_trim0p0_lag-1_shrink0p2_smooth5]__A[Prior_trim_trim0p1_lag-1_shrink0p1_smooth5]",
+          "overall_mae": 26.7328,
+          "valence_mae": 25.7515,
+          "arousal_mae": 27.7142,
+          "overall_mse": 1489.3507,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p0_lag-1_shrink0p2_smooth5]__A[Prior_trim_trim0p1_lag-1_shrink0p1_smooth5]",
+          "overall_mae": 26.7328,
+          "valence_mae": 25.7515,
+          "arousal_mae": 27.7142,
+          "overall_mse": 1489.3507,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_mean_trim0p0_lag-1_shrink0p2_smooth5]__A[Prior_trim_trim0p1_lag-1_shrink0p1_smooth9]",
+          "overall_mae": 26.7358,
+          "valence_mae": 25.7515,
+          "arousal_mae": 27.7201,
+          "overall_mse": 1488.0127,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p0_lag-1_shrink0p2_smooth5]__A[Prior_trim_trim0p1_lag-1_shrink0p1_smooth9]",
+          "overall_mae": 26.7358,
+          "valence_mae": 25.7515,
+          "arousal_mae": 27.7201,
+          "overall_mse": 1488.0127,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_mean_trim0p0_lag-1_shrink0p2]__A[Prior_trim_trim0p1_lag-1_shrink0p1_smooth5]",
+          "overall_mae": 26.7365,
+          "valence_mae": 25.7587,
+          "arousal_mae": 27.7142,
+          "overall_mse": 1490.0826,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_mean_trim0p0_lag-1_shrink0p2_smooth5]__A[Prior_trim_trim0p1_lag-1_shrink0p1]",
+          "overall_mae": 26.7385,
+          "valence_mae": 25.7515,
+          "arousal_mae": 27.7255,
+          "overall_mse": 1490.6436,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_trim_trim0p0_lag-1_shrink0p2_smooth5]__A[Prior_trim_trim0p1_lag-1_shrink0p1]",
+          "overall_mae": 26.7385,
+          "valence_mae": 25.7515,
+          "arousal_mae": 27.7255,
+          "overall_mse": 1490.6436,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_mean_trim0p0_lag-1_shrink0p2]__A[Prior_trim_trim0p1_lag-1_shrink0p1_smooth9]",
+          "overall_mae": 26.7394,
+          "valence_mae": 25.7587,
+          "arousal_mae": 27.7201,
+          "overall_mse": 1488.7448,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_mean_trim0p0_lag-1_shrink0p2]__A[Prior_trim_trim0p1_lag-1_shrink0p1]",
+          "overall_mae": 26.7421,
+          "valence_mae": 25.7587,
+          "arousal_mae": 27.7255,
+          "overall_mse": 1491.3756,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.8541,
+          "valence_mae": 25.9132,
+          "arousal_mae": 27.7951,
+          "overall_mse": 1485.85,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p2_smooth5",
+          "overall_mae": 26.8592,
+          "valence_mae": 25.9128,
+          "arousal_mae": 27.8056,
+          "overall_mse": 1486.6993,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.8593,
+          "valence_mae": 25.9222,
+          "arousal_mae": 27.7964,
+          "overall_mse": 1484.1434,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p2_smooth9",
+          "overall_mae": 26.8652,
+          "valence_mae": 25.9266,
+          "arousal_mae": 27.8038,
+          "overall_mse": 1485.0697,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p2",
+          "overall_mae": 26.8662,
+          "valence_mae": 25.9256,
+          "arousal_mae": 27.8068,
+          "overall_mse": 1487.6627,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p2",
+          "overall_mae": 26.8742,
+          "valence_mae": 25.9244,
+          "arousal_mae": 27.8241,
+          "overall_mse": 1488.6117,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p2_smooth5",
+          "overall_mae": 26.8908,
+          "valence_mae": 25.9499,
+          "arousal_mae": 27.8316,
+          "overall_mse": 1489.0775,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p2_smooth9",
+          "overall_mae": 26.8975,
+          "valence_mae": 25.9677,
+          "arousal_mae": 27.8272,
+          "overall_mse": 1487.4684,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.8978,
+          "valence_mae": 25.7515,
+          "arousal_mae": 28.0442,
+          "overall_mse": 1464.704,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.8978,
+          "valence_mae": 25.7515,
+          "arousal_mae": 28.0442,
+          "overall_mse": 1464.704,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p2_smooth9",
+          "overall_mae": 26.9041,
+          "valence_mae": 26.0198,
+          "arousal_mae": 27.7884,
+          "overall_mse": 1513.6068,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p2_smooth5",
+          "overall_mae": 26.9046,
+          "valence_mae": 26.012,
+          "arousal_mae": 27.7971,
+          "overall_mse": 1515.8246,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p2",
+          "overall_mae": 26.9049,
+          "valence_mae": 25.9619,
+          "arousal_mae": 27.8479,
+          "overall_mse": 1490.932,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p2",
+          "overall_mae": 26.9093,
+          "valence_mae": 25.7587,
+          "arousal_mae": 28.0599,
+          "overall_mse": 1466.4443,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p2",
+          "overall_mae": 26.9093,
+          "valence_mae": 25.7587,
+          "arousal_mae": 28.0599,
+          "overall_mse": 1466.4443,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.9107,
+          "valence_mae": 26.0245,
+          "arousal_mae": 27.797,
+          "overall_mse": 1512.8348,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p2_smooth5",
+          "overall_mae": 26.9132,
+          "valence_mae": 26.0227,
+          "arousal_mae": 27.8037,
+          "overall_mse": 1515.1154,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.9152,
+          "valence_mae": 25.7765,
+          "arousal_mae": 28.054,
+          "overall_mse": 1463.3217,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p2_smooth9",
+          "overall_mae": 26.9152,
+          "valence_mae": 25.7765,
+          "arousal_mae": 28.054,
+          "overall_mse": 1463.3217,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag0_shrink0p2_smooth5",
+          "overall_mae": 26.9207,
+          "valence_mae": 25.7695,
+          "arousal_mae": 28.0719,
+          "overall_mse": 1466.0284,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag0_shrink0p2_smooth5",
+          "overall_mae": 26.9207,
+          "valence_mae": 25.7695,
+          "arousal_mae": 28.0719,
+          "overall_mse": 1466.0284,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p2",
+          "overall_mae": 26.9211,
+          "valence_mae": 26.0251,
+          "arousal_mae": 27.8172,
+          "overall_mse": 1518.1426,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p2_smooth5",
+          "overall_mae": 26.9226,
+          "valence_mae": 26.0404,
+          "arousal_mae": 27.8049,
+          "overall_mse": 1518.024,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p2_smooth9",
+          "overall_mae": 26.9233,
+          "valence_mae": 26.0518,
+          "arousal_mae": 27.7947,
+          "overall_mse": 1515.8502,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p2",
+          "overall_mae": 26.9264,
+          "valence_mae": 26.0372,
+          "arousal_mae": 27.8156,
+          "overall_mse": 1517.297,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag0_shrink0p2",
+          "overall_mae": 26.937,
+          "valence_mae": 25.7766,
+          "arousal_mae": 28.0975,
+          "overall_mse": 1467.853,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag0_shrink0p2",
+          "overall_mae": 26.937,
+          "valence_mae": 25.7766,
+          "arousal_mae": 28.0975,
+          "overall_mse": 1467.853,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag0_shrink0p2_smooth9",
+          "overall_mae": 26.9373,
+          "valence_mae": 25.7985,
+          "arousal_mae": 28.076,
+          "overall_mse": 1464.7181,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag0_shrink0p2_smooth9",
+          "overall_mae": 26.9373,
+          "valence_mae": 25.7985,
+          "arousal_mae": 28.076,
+          "overall_mse": 1464.7181,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p2",
+          "overall_mae": 26.9382,
+          "valence_mae": 26.0531,
+          "arousal_mae": 27.8232,
+          "overall_mse": 1520.226,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag1_shrink0p2_smooth5",
+          "overall_mae": 26.9706,
+          "valence_mae": 25.8238,
+          "arousal_mae": 28.1175,
+          "overall_mse": 1468.8647,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag1_shrink0p2_smooth5",
+          "overall_mae": 26.9706,
+          "valence_mae": 25.8238,
+          "arousal_mae": 28.1175,
+          "overall_mse": 1468.8647,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag1_shrink0p2_smooth9",
+          "overall_mae": 26.9851,
+          "valence_mae": 25.8531,
+          "arousal_mae": 28.1172,
+          "overall_mse": 1467.556,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag1_shrink0p2_smooth9",
+          "overall_mae": 26.9851,
+          "valence_mae": 25.8531,
+          "arousal_mae": 28.1172,
+          "overall_mse": 1467.556,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag1_shrink0p2",
+          "overall_mae": 26.9856,
+          "valence_mae": 25.8313,
+          "arousal_mae": 28.1399,
+          "overall_mse": 1470.6222,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag1_shrink0p2",
+          "overall_mae": 26.9856,
+          "valence_mae": 25.8313,
+          "arousal_mae": 28.1399,
+          "overall_mse": 1470.6222,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 27.1881,
+          "valence_mae": 26.5317,
+          "arousal_mae": 27.8446,
+          "overall_mse": 1539.0973,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 27.1881,
+          "valence_mae": 26.5317,
+          "arousal_mae": 27.8446,
+          "overall_mse": 1539.0973,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 27.1976,
+          "valence_mae": 26.5487,
+          "arousal_mae": 27.8465,
+          "overall_mse": 1536.7963,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 27.1976,
+          "valence_mae": 26.5487,
+          "arousal_mae": 27.8465,
+          "overall_mse": 1536.7963,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_mean_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 27.2023,
+          "valence_mae": 26.5423,
+          "arousal_mae": 27.8623,
+          "overall_mse": 1541.5189,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth5]__A[Prior_trim_trim0p2_lag0_shrink0p1_smooth5]",
+          "overall_mae": 25.9523,
+          "valence_mae": 24.4746,
+          "arousal_mae": 27.4301,
+          "overall_mse": 1270.8026,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth5]__A[Prior_trim_trim0p2_lag0_shrink0p1]",
+          "overall_mae": 25.9544,
+          "valence_mae": 24.4746,
+          "arousal_mae": 27.4342,
+          "overall_mse": 1271.6376,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth5]__A[Prior_trim_trim0p2_lag-1_shrink0p1_smooth5]",
+          "overall_mae": 25.9552,
+          "valence_mae": 24.4746,
+          "arousal_mae": 27.4358,
+          "overall_mse": 1274.0184,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag0_shrink0p1_smooth5]",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.4841,
+          "arousal_mae": 27.4301,
+          "overall_mse": 1268.4497,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag0_shrink0p1]",
+          "overall_mae": 25.9592,
+          "valence_mae": 24.4841,
+          "arousal_mae": 27.4342,
+          "overall_mse": 1269.2845,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag1_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag-1_shrink0p1_smooth5]",
+          "overall_mae": 25.9599,
+          "valence_mae": 24.4841,
+          "arousal_mae": 27.4358,
+          "overall_mse": 1271.6654,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag0_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag0_shrink0p1_smooth5]",
+          "overall_mae": 25.965,
+          "valence_mae": 24.4999,
+          "arousal_mae": 27.4301,
+          "overall_mse": 1270.4005,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag0_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag0_shrink0p1]",
+          "overall_mae": 25.9671,
+          "valence_mae": 24.4999,
+          "arousal_mae": 27.4342,
+          "overall_mse": 1271.2355,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag0_shrink0p0_smooth9]__A[Prior_trim_trim0p2_lag-1_shrink0p1_smooth5]",
+          "overall_mae": 25.9678,
+          "valence_mae": 24.4999,
+          "arousal_mae": 27.4358,
+          "overall_mse": 1273.6162,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth9",
+          "overall_mae": 26.1132,
+          "valence_mae": 24.4999,
+          "arousal_mae": 27.7264,
+          "overall_mse": 1325.7323,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth5",
+          "overall_mae": 26.1191,
+          "valence_mae": 24.4746,
+          "arousal_mae": 27.7637,
+          "overall_mse": 1327.7921,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth9",
+          "overall_mae": 26.1198,
+          "valence_mae": 24.4841,
+          "arousal_mae": 27.7555,
+          "overall_mse": 1322.7073,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth5",
+          "overall_mae": 26.1353,
+          "valence_mae": 24.5248,
+          "arousal_mae": 27.7457,
+          "overall_mse": 1331.9354,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth9",
+          "overall_mae": 26.1359,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.7192,
+          "overall_mse": 1331.2748,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0",
+          "overall_mae": 26.1568,
+          "valence_mae": 24.5151,
+          "arousal_mae": 27.7985,
+          "overall_mse": 1334.9847,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth5",
+          "overall_mae": 26.1727,
+          "valence_mae": 24.6025,
+          "arousal_mae": 27.7428,
+          "overall_mse": 1338.6598,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0",
+          "overall_mae": 26.1838,
+          "valence_mae": 24.5882,
+          "arousal_mae": 27.7793,
+          "overall_mse": 1339.8788,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth5",
+          "overall_mae": 26.2207,
+          "valence_mae": 24.936,
+          "arousal_mae": 27.5055,
+          "overall_mse": 1281.6489,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0",
+          "overall_mae": 26.2275,
+          "valence_mae": 24.9414,
+          "arousal_mae": 27.5136,
+          "overall_mse": 1283.9174,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth5",
+          "overall_mae": 26.2336,
+          "valence_mae": 24.9867,
+          "arousal_mae": 27.4806,
+          "overall_mse": 1287.9508,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0",
+          "overall_mae": 26.2337,
+          "valence_mae": 24.6802,
+          "arousal_mae": 27.7873,
+          "overall_mse": 1347.181,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0",
+          "overall_mae": 26.2391,
+          "valence_mae": 24.9115,
+          "arousal_mae": 27.5667,
+          "overall_mse": 1279.8571,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth5",
+          "overall_mae": 26.2423,
+          "valence_mae": 24.9228,
+          "arousal_mae": 27.5618,
+          "overall_mse": 1278.0153,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth9",
+          "overall_mae": 26.2427,
+          "valence_mae": 24.9647,
+          "arousal_mae": 27.5206,
+          "overall_mse": 1280.0055,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth9",
+          "overall_mae": 26.2433,
+          "valence_mae": 24.9963,
+          "arousal_mae": 27.4903,
+          "overall_mse": 1285.5781,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0",
+          "overall_mae": 26.2505,
+          "valence_mae": 25.0078,
+          "arousal_mae": 27.4932,
+          "overall_mse": 1290.7648,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth5",
+          "overall_mae": 26.2564,
+          "valence_mae": 24.957,
+          "arousal_mae": 27.5559,
+          "overall_mse": 1290.4886,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth9",
+          "overall_mae": 26.2713,
+          "valence_mae": 24.9808,
+          "arousal_mae": 27.5618,
+          "overall_mse": 1287.0249,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth9",
+          "overall_mae": 26.275,
+          "valence_mae": 24.9695,
+          "arousal_mae": 27.5805,
+          "overall_mse": 1276.8781,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1",
+          "overall_mae": 26.283,
+          "valence_mae": 24.9765,
+          "arousal_mae": 27.5894,
+          "overall_mse": 1296.0052,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth9",
+          "overall_mae": 26.3037,
+          "valence_mae": 25.0477,
+          "arousal_mae": 27.5597,
+          "overall_mse": 1293.7545,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth5",
+          "overall_mae": 26.3102,
+          "valence_mae": 25.0561,
+          "arousal_mae": 27.5643,
+          "overall_mse": 1298.2091,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1",
+          "overall_mae": 26.3458,
+          "valence_mae": 25.0964,
+          "arousal_mae": 27.5952,
+          "overall_mse": 1304.3945,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth5",
+          "overall_mae": 26.3527,
+          "valence_mae": 25.1147,
+          "arousal_mae": 27.5907,
+          "overall_mse": 1267.0391,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0",
+          "overall_mae": 26.3603,
+          "valence_mae": 25.0764,
+          "arousal_mae": 27.6441,
+          "overall_mse": 1263.1469,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0",
+          "overall_mae": 26.3612,
+          "valence_mae": 25.1237,
+          "arousal_mae": 27.5988,
+          "overall_mse": 1269.1792,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 26.3638,
+          "valence_mae": 25.1518,
+          "arousal_mae": 27.5758,
+          "overall_mse": 1302.7451,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth5",
+          "overall_mae": 26.3642,
+          "valence_mae": 25.0873,
+          "arousal_mae": 27.6411,
+          "overall_mse": 1261.5347,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth9",
+          "overall_mae": 26.376,
+          "valence_mae": 25.1443,
+          "arousal_mae": 27.6077,
+          "overall_mse": 1265.631,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 26.383,
+          "valence_mae": 25.1782,
+          "arousal_mae": 27.5877,
+          "overall_mse": 1308.2329,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth9",
+          "overall_mae": 26.3995,
+          "valence_mae": 25.1346,
+          "arousal_mae": 27.6644,
+          "overall_mse": 1260.7573,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0",
+          "overall_mae": 26.4037,
+          "valence_mae": 25.0822,
+          "arousal_mae": 27.7253,
+          "overall_mse": 1260.1478,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth5",
+          "overall_mae": 26.4114,
+          "valence_mae": 25.1,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1258.7806,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 26.4265,
+          "valence_mae": 25.2285,
+          "arousal_mae": 27.6244,
+          "overall_mse": 1314.9508,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag1_shrink0p0_smooth9",
+          "overall_mae": 26.4542,
+          "valence_mae": 25.161,
+          "arousal_mae": 27.7473,
+          "overall_mse": 1258.3619,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p1",
+          "overall_mae": 26.4987,
+          "valence_mae": 25.5423,
+          "arousal_mae": 27.4551,
+          "overall_mse": 1263.417,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p1_smooth5",
+          "overall_mae": 26.5023,
+          "valence_mae": 25.5531,
+          "arousal_mae": 27.4514,
+          "overall_mse": 1262.2255,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth5",
+          "overall_mae": 26.5195,
+          "valence_mae": 25.609,
+          "arousal_mae": 27.4301,
+          "overall_mse": 1269.202,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1",
+          "overall_mae": 26.5246,
+          "valence_mae": 25.6149,
+          "arousal_mae": 27.4342,
+          "overall_mse": 1270.77,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p1_smooth9",
+          "overall_mae": 26.5381,
+          "valence_mae": 25.5972,
+          "arousal_mae": 27.4789,
+          "overall_mse": 1261.9146,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth5",
+          "overall_mae": 27.335,
+          "valence_mae": 26.3507,
+          "arousal_mae": 28.3193,
+          "overall_mse": 1441.4277,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]__A[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]",
+          "overall_mae": 27.335,
+          "valence_mae": 26.3507,
+          "arousal_mae": 28.3193,
+          "overall_mse": 1441.4277,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]__A[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]",
+          "overall_mae": 27.3395,
+          "valence_mae": 26.3507,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1438.4342,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0]__A[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]",
+          "overall_mae": 27.3402,
+          "valence_mae": 26.361,
+          "arousal_mae": 28.3193,
+          "overall_mse": 1445.0599,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0]__A[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]",
+          "overall_mae": 27.3446,
+          "valence_mae": 26.361,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1442.0663,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]__A[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]",
+          "overall_mae": 27.3482,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3193,
+          "overall_mse": 1437.7855,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth5]__A[Prior_median_trim0p0_lag-1_shrink0p0]",
+          "overall_mae": 27.3484,
+          "valence_mae": 26.3507,
+          "arousal_mae": 28.3462,
+          "overall_mse": 1445.6649,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0_smooth9",
+          "overall_mae": 27.3527,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1434.7916,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]__A[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]",
+          "overall_mae": 27.3527,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3283,
+          "overall_mse": 1434.7916,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p0",
+          "overall_mae": 27.3536,
+          "valence_mae": 26.361,
+          "arousal_mae": 28.3462,
+          "overall_mse": 1449.297,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0]__A[Prior_median_trim0p0_lag-1_shrink0p0]",
+          "overall_mae": 27.3536,
+          "valence_mae": 26.361,
+          "arousal_mae": 28.3462,
+          "overall_mse": 1449.297,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "DimwiseV[Prior_median_trim0p0_lag-1_shrink0p0_smooth9]__A[Prior_median_trim0p0_lag-1_shrink0p0]",
+          "overall_mae": 27.3617,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.3462,
+          "overall_mse": 1442.0225,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth5",
+          "overall_mae": 27.5965,
+          "valence_mae": 26.6928,
+          "arousal_mae": 28.5003,
+          "overall_mse": 1455.6475,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0_smooth9",
+          "overall_mae": 27.613,
+          "valence_mae": 26.7187,
+          "arousal_mae": 28.5073,
+          "overall_mse": 1448.63,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p0",
+          "overall_mae": 27.6154,
+          "valence_mae": 26.7061,
+          "arousal_mae": 28.5247,
+          "overall_mse": 1463.9497,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth5",
+          "overall_mae": 27.8813,
+          "valence_mae": 27.0582,
+          "arousal_mae": 28.7044,
+          "overall_mse": 1472.1312,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0",
+          "overall_mae": 27.8958,
+          "valence_mae": 27.0736,
+          "arousal_mae": 28.7179,
+          "overall_mse": 1480.2589,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p0_smooth9",
+          "overall_mae": 27.8986,
+          "valence_mae": 27.0873,
+          "arousal_mae": 28.7098,
+          "overall_mse": 1464.7041,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth5",
+          "overall_mae": 28.0051,
+          "valence_mae": 26.8669,
+          "arousal_mae": 29.1433,
+          "overall_mse": 1452.7885,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1_smooth9",
+          "overall_mae": 28.02,
+          "valence_mae": 26.8869,
+          "arousal_mae": 29.1532,
+          "overall_mse": 1447.9823,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p1",
+          "overall_mae": 28.0299,
+          "valence_mae": 26.8891,
+          "arousal_mae": 29.1707,
+          "overall_mse": 1458.9469,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth5",
+          "overall_mae": 28.0579,
+          "valence_mae": 26.8825,
+          "arousal_mae": 29.2333,
+          "overall_mse": 1441.1256,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0",
+          "overall_mae": 28.0698,
+          "valence_mae": 26.8796,
+          "arousal_mae": 29.2601,
+          "overall_mse": 1444.8578,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p0_smooth9",
+          "overall_mae": 28.0777,
+          "valence_mae": 26.9195,
+          "arousal_mae": 29.2358,
+          "overall_mse": 1437.1107,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth5",
+          "overall_mae": 28.2136,
+          "valence_mae": 27.1395,
+          "arousal_mae": 29.2877,
+          "overall_mse": 1461.7529,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1_smooth9",
+          "overall_mae": 28.2252,
+          "valence_mae": 27.157,
+          "arousal_mae": 29.2933,
+          "overall_mse": 1456.5664,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag0_shrink0p1",
+          "overall_mae": 28.2402,
+          "valence_mae": 27.1652,
+          "arousal_mae": 29.3152,
+          "overall_mse": 1468.2936,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth5",
+          "overall_mae": 28.3241,
+          "valence_mae": 27.2159,
+          "arousal_mae": 29.4323,
+          "overall_mse": 1454.0697,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0",
+          "overall_mae": 28.3367,
+          "valence_mae": 27.2157,
+          "arousal_mae": 29.4576,
+          "overall_mse": 1457.9984,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p0_smooth9",
+          "overall_mae": 28.3442,
+          "valence_mae": 27.2542,
+          "arousal_mae": 29.4342,
+          "overall_mse": 1450.0034,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth5",
+          "overall_mae": 28.443,
+          "valence_mae": 27.4327,
+          "arousal_mae": 29.4532,
+          "overall_mse": 1472.7324,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1_smooth9",
+          "overall_mae": 28.4546,
+          "valence_mae": 27.4516,
+          "arousal_mae": 29.4575,
+          "overall_mse": 1467.1488,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag1_shrink0p1",
+          "overall_mae": 28.4665,
+          "valence_mae": 27.4592,
+          "arousal_mae": 29.4738,
+          "overall_mse": 1479.1315,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth5",
+          "overall_mae": 28.6121,
+          "valence_mae": 27.5736,
+          "arousal_mae": 29.6506,
+          "overall_mse": 1469.0771,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0",
+          "overall_mae": 28.6186,
+          "valence_mae": 27.5718,
+          "arousal_mae": 29.6654,
+          "overall_mse": 1472.7529,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag1_shrink0p0_smooth9",
+          "overall_mae": 28.6336,
+          "valence_mae": 27.6144,
+          "arousal_mae": 29.6529,
+          "overall_mse": 1464.9795,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth5",
+          "overall_mae": 28.6588,
+          "valence_mae": 27.2799,
+          "arousal_mae": 30.0378,
+          "overall_mse": 1458.5836,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0",
+          "overall_mae": 28.6664,
+          "valence_mae": 27.2741,
+          "arousal_mae": 30.0587,
+          "overall_mse": 1461.8507,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag-1_shrink0p0_smooth9",
+          "overall_mae": 28.6803,
+          "valence_mae": 27.3209,
+          "arousal_mae": 30.0398,
+          "overall_mse": 1455.1797,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p1_smooth5",
+          "overall_mae": 28.7894,
+          "valence_mae": 27.4917,
+          "arousal_mae": 30.0872,
+          "overall_mse": 1463.4164,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p1",
+          "overall_mae": 28.8022,
+          "valence_mae": 27.4938,
+          "arousal_mae": 30.1105,
+          "overall_mse": 1466.2572,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag-1_shrink0p1_smooth9",
+          "overall_mae": 28.8046,
+          "valence_mae": 27.5237,
+          "arousal_mae": 30.0855,
+          "overall_mse": 1460.6713,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth5",
+          "overall_mae": 28.9246,
+          "valence_mae": 27.6071,
+          "arousal_mae": 30.2421,
+          "overall_mse": 1471.1113,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0",
+          "overall_mae": 28.9316,
+          "valence_mae": 27.603,
+          "arousal_mae": 30.2602,
+          "overall_mse": 1474.4668,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p1_lag0_shrink0p0_smooth9",
+          "overall_mae": 28.9484,
+          "valence_mae": 27.6501,
+          "arousal_mae": 30.2467,
+          "overall_mse": 1467.7194,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth5",
+          "overall_mae": 29.0034,
+          "valence_mae": 27.7585,
+          "arousal_mae": 30.2484,
+          "overall_mse": 1471.4878,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1",
+          "overall_mae": 29.017,
+          "valence_mae": 27.7628,
+          "arousal_mae": 30.2712,
+          "overall_mse": 1474.5044,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_trim_trim0p2_lag0_shrink0p1_smooth9",
+          "overall_mae": 29.0174,
+          "valence_mae": 27.7886,
+          "arousal_mae": 30.2462,
+          "overall_mse": 1468.6412,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p2_smooth5",
+          "overall_mae": 29.1401,
+          "valence_mae": 28.0491,
+          "arousal_mae": 30.231,
+          "overall_mse": 1513.8442,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        },
+        {
+          "method": "Prior_median_trim0p0_lag-1_shrink0p2_smooth9",
+          "overall_mae": 29.1603,
+          "valence_mae": 28.0783,
+          "arousal_mae": 30.2423,
+          "overall_mse": 1510.609,
+          "notes": "Subject-disjoint fold robust prior candidate."
+        }
+      ]
+    }
+  ]
+}

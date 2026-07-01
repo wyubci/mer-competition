@@ -1,0 +1,1014 @@
+{
+  "device": "cuda",
+  "lag_definition": "positive lag uses an earlier residual r(t-lag), negative lag uses a later residual r(t-lag)",
+  "valence_checkpoints": [
+    "experiments/checkpoints/graph_mamba/moddrop010_seed123.pt",
+    "experiments/checkpoints/graph_mamba/itransformer_hybrid_159.pt"
+  ],
+  "arousal_checkpoints": [
+    "experiments/checkpoints/graph_mamba/nobase_itransformer_arousal_159.pt",
+    "experiments/checkpoints/graph_mamba/scalegated_msgm_arousal.pt"
+  ],
+  "results": [
+    {
+      "method": "LaggedDPRG_vlag-8_alag-12",
+      "overall_mae": 29.5823,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.4873,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -12
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-11",
+      "overall_mae": 29.5823,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.4882,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -11
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-10",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1494.4889,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -10
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-9",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1494.4901,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -9
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-8",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.4908,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -8
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-7",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.4921,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -7
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-6",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.4932,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -6
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-5",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.494,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -5
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-4",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.4945,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -4
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-3",
+      "overall_mae": 29.5824,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.4952,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -3
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-2",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.4961,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -2
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag-1",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.4971,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": -1
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+0",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.4977,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 0
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+1",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.4987,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 1
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+2",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.4996,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 2
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+3",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.501,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 3
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+4",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.5026,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 4
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+5",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.5045,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 5
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+6",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.5055,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 6
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+11",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.5092,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 11
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+12",
+      "overall_mae": 29.5825,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.5078,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 12
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+7",
+      "overall_mae": 29.5826,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.5074,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 7
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+8",
+      "overall_mae": 29.5826,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.5089,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 8
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+9",
+      "overall_mae": 29.5826,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.5098,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 9
+    },
+    {
+      "method": "LaggedDPRG_vlag-8_alag+10",
+      "overall_mae": 29.5826,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.5094,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -8,
+      "arousal_lag": 10
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-12",
+      "overall_mae": 29.5836,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.1757,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -12
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-11",
+      "overall_mae": 29.5836,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.1764,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -11
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-10",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1494.1774,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -10
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-9",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1494.1783,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -9
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-8",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.1793,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -8
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-7",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.1803,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -7
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-6",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.1813,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -6
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-5",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.1823,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -5
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-4",
+      "overall_mae": 29.5837,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.1827,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -4
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-3",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.1835,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -3
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-2",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.1844,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -2
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag-1",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.1852,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": -1
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+0",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.186,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 0
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+1",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.1869,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 1
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+2",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.1881,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 2
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+3",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.1891,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 3
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+4",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.1909,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 4
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+5",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.1927,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 5
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+6",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.1937,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 6
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+11",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.1973,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 11
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+12",
+      "overall_mae": 29.5838,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.1963,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 12
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+7",
+      "overall_mae": 29.5839,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.1957,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 7
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+8",
+      "overall_mae": 29.5839,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.1971,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 8
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+9",
+      "overall_mae": 29.5839,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.1981,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 9
+    },
+    {
+      "method": "LaggedDPRG_vlag-9_alag+10",
+      "overall_mae": 29.5839,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.1978,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -9,
+      "arousal_lag": 10
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-12",
+      "overall_mae": 29.5841,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.8423,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -12
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-11",
+      "overall_mae": 29.5841,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.8431,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -11
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-10",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1494.8439,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -10
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-9",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1494.8451,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -9
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-8",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.8461,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -8
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-7",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.847,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -7
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-6",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.848,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -6
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-5",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.849,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -5
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-4",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.8495,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -4
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-3",
+      "overall_mae": 29.5842,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1494.8502,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -3
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-2",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.851,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -2
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag-1",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.8519,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": -1
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+0",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.8527,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 0
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+1",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.8535,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 1
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+2",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1494.8545,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 2
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+3",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.8558,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 3
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+4",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.8574,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 4
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+5",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.8594,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 5
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+6",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.8604,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 6
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+11",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.8639,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 11
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+12",
+      "overall_mae": 29.5843,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1494.8628,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 12
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+7",
+      "overall_mae": 29.5844,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.8623,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 7
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+8",
+      "overall_mae": 29.5844,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.8639,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 8
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+9",
+      "overall_mae": 29.5844,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.8647,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 9
+    },
+    {
+      "method": "LaggedDPRG_vlag-7_alag+10",
+      "overall_mae": 29.5844,
+      "valence_mae": 27.8072,
+      "arousal_mae": 31.3615,
+      "overall_mse": 1494.8643,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -7,
+      "arousal_lag": 10
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-12",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.361,
+      "overall_mse": 1493.8883,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -12
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-11",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.361,
+      "overall_mse": 1493.889,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -11
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-10",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1493.89,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -10
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-9",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1493.8912,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -9
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-12",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.361,
+      "overall_mse": 1495.1729,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -12
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-11",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.361,
+      "overall_mse": 1495.1737,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -11
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-10",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1495.1747,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -10
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-9",
+      "overall_mae": 29.5869,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1495.1758,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -9
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-8",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1493.8921,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -8
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-7",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1493.8929,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -7
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-6",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1493.894,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -6
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-5",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1493.8949,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -5
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-4",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1493.8955,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -4
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-3",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1493.8961,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -3
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-2",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1493.8971,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -2
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag-1",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1493.8978,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": -1
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag+0",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1493.8988,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": 0
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag+1",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1493.8995,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": 1
+    },
+    {
+      "method": "LaggedDPRG_vlag-10_alag+2",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1493.9008,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -10,
+      "arousal_lag": 2
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-8",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1495.1766,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -8
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-7",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1495.1776,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -7
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-6",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1495.1787,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -6
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-5",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1495.1793,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -5
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-4",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1495.1802,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -4
+    },
+    {
+      "method": "LaggedDPRG_vlag-6_alag-3",
+      "overall_mae": 29.587,
+      "valence_mae": 27.8128,
+      "arousal_mae": 31.3612,
+      "overall_mse": 1495.1807,
+      "notes": "DPRG residuals shifted within each trial before scale/clip/smooth.",
+      "valence_lag": -6,
+      "arousal_lag": -3
+    }
+  ]
+}

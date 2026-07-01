@@ -1,0 +1,608 @@
+{
+  "method": "Subject-disjoint cross-fold validation for prior-only TBCR/LRAG",
+  "important_note": "This validates TBCR/LRAG residual correction over VideoTimeMean only. It does not validate SCEW deep checkpoints, which require retraining each fold.",
+  "fold_size": 4,
+  "basis_count": 4,
+  "alpha_stable": 0.25,
+  "alpha_aggressive": 0.01,
+  "aggregate_results": [
+    {
+      "method": "VideoTimeMean",
+      "overall_mae": 29.4119,
+      "valence_mae": 27.5585,
+      "arousal_mae": 31.2652,
+      "overall_mse": 1557.1219,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_LRAG_aggressive_087params",
+      "overall_mae": 29.6193,
+      "valence_mae": 27.6674,
+      "arousal_mae": 31.5711,
+      "overall_mse": 1564.1021,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_LRAG_stable_087params",
+      "overall_mae": 29.6194,
+      "valence_mae": 27.6679,
+      "arousal_mae": 31.5709,
+      "overall_mse": 1564.1417,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_DualTBCR_stable_085params",
+      "overall_mae": 29.6482,
+      "valence_mae": 27.7094,
+      "arousal_mae": 31.587,
+      "overall_mse": 1566.4652,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_DualTBCR_aggressive_085params",
+      "overall_mae": 29.6482,
+      "valence_mae": 27.7091,
+      "arousal_mae": 31.5873,
+      "overall_mse": 1566.4297,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_DualTBCR_stable_084params",
+      "overall_mae": 29.6742,
+      "valence_mae": 27.7417,
+      "arousal_mae": 31.6067,
+      "overall_mse": 1567.9427,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "Prior_DualTBCR_aggressive_084params",
+      "overall_mae": 29.6742,
+      "valence_mae": 27.7414,
+      "arousal_mae": 31.607,
+      "overall_mse": 1567.9066,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "VideoTimeMean",
+          "overall_mae": 26.5094,
+          "valence_mae": 25.3613,
+          "arousal_mae": 27.6575,
+          "overall_mse": 1184.2321,
+          "notes": "Mean trajectory by video/time from train subjects."
+        },
+        {
+          "method": "Prior_LRAG_stable_087params",
+          "overall_mae": 26.6292,
+          "valence_mae": 25.1528,
+          "arousal_mae": 28.1056,
+          "overall_mse": 1181.0677,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_LRAG_aggressive_087params",
+          "overall_mae": 26.6302,
+          "valence_mae": 25.1545,
+          "arousal_mae": 28.1059,
+          "overall_mse": 1181.1331,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_085params",
+          "overall_mae": 26.6622,
+          "valence_mae": 25.2146,
+          "arousal_mae": 28.1099,
+          "overall_mse": 1182.3241,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_085params",
+          "overall_mae": 26.6633,
+          "valence_mae": 25.2164,
+          "arousal_mae": 28.1102,
+          "overall_mse": 1182.3937,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_084params",
+          "overall_mae": 26.6781,
+          "valence_mae": 25.2302,
+          "arousal_mae": 28.126,
+          "overall_mse": 1182.9355,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_084params",
+          "overall_mae": 26.6792,
+          "valence_mae": 25.2321,
+          "arousal_mae": 28.1264,
+          "overall_mse": 1183.0015,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "VideoTimeMean",
+          "overall_mae": 36.7935,
+          "valence_mae": 32.9099,
+          "arousal_mae": 40.6771,
+          "overall_mse": 2372.0303,
+          "notes": "Mean trajectory by video/time from train subjects."
+        },
+        {
+          "method": "Prior_LRAG_aggressive_087params",
+          "overall_mae": 37.0852,
+          "valence_mae": 32.9189,
+          "arousal_mae": 41.2516,
+          "overall_mse": 2375.5247,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_LRAG_stable_087params",
+          "overall_mae": 37.0854,
+          "valence_mae": 32.9195,
+          "arousal_mae": 41.2513,
+          "overall_mse": 2375.5798,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_085params",
+          "overall_mae": 37.1384,
+          "valence_mae": 32.9729,
+          "arousal_mae": 41.304,
+          "overall_mse": 2380.2988,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_085params",
+          "overall_mae": 37.1385,
+          "valence_mae": 32.9734,
+          "arousal_mae": 41.3037,
+          "overall_mse": 2380.3467,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_084params",
+          "overall_mae": 37.1791,
+          "valence_mae": 32.9937,
+          "arousal_mae": 41.3645,
+          "overall_mse": 2382.4617,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_084params",
+          "overall_mae": 37.1793,
+          "valence_mae": 32.9943,
+          "arousal_mae": 41.3642,
+          "overall_mse": 2382.5144,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "VideoTimeMean",
+          "overall_mae": 28.2175,
+          "valence_mae": 24.8002,
+          "arousal_mae": 31.6348,
+          "overall_mse": 1326.6499,
+          "notes": "Mean trajectory by video/time from train subjects."
+        },
+        {
+          "method": "Prior_LRAG_stable_087params",
+          "overall_mae": 28.8271,
+          "valence_mae": 25.82,
+          "arousal_mae": 31.8341,
+          "overall_mse": 1375.3607,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_LRAG_aggressive_087params",
+          "overall_mae": 28.8271,
+          "valence_mae": 25.82,
+          "arousal_mae": 31.8343,
+          "overall_mse": 1375.3218,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_085params",
+          "overall_mae": 28.8726,
+          "valence_mae": 25.8771,
+          "arousal_mae": 31.8681,
+          "overall_mse": 1378.8945,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_085params",
+          "overall_mae": 28.873,
+          "valence_mae": 25.8777,
+          "arousal_mae": 31.8683,
+          "overall_mse": 1378.8839,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_084params",
+          "overall_mae": 28.9243,
+          "valence_mae": 25.9816,
+          "arousal_mae": 31.8671,
+          "overall_mse": 1382.9767,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_084params",
+          "overall_mae": 28.9247,
+          "valence_mae": 25.9821,
+          "arousal_mae": 31.8673,
+          "overall_mse": 1382.9625,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "VideoTimeMean",
+          "overall_mae": 28.1977,
+          "valence_mae": 28.2301,
+          "arousal_mae": 28.1653,
+          "overall_mse": 1673.5641,
+          "notes": "Mean trajectory by video/time from train subjects."
+        },
+        {
+          "method": "Prior_LRAG_aggressive_087params",
+          "overall_mae": 28.5527,
+          "valence_mae": 28.5751,
+          "arousal_mae": 28.5304,
+          "overall_mse": 1668.5961,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_LRAG_stable_087params",
+          "overall_mae": 28.5532,
+          "valence_mae": 28.5761,
+          "arousal_mae": 28.5303,
+          "overall_mse": 1668.7096,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_085params",
+          "overall_mae": 28.5838,
+          "valence_mae": 28.6287,
+          "arousal_mae": 28.539,
+          "overall_mse": 1670.7744,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_085params",
+          "overall_mae": 28.5842,
+          "valence_mae": 28.6296,
+          "arousal_mae": 28.5388,
+          "overall_mse": 1670.8907,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_084params",
+          "overall_mae": 28.6145,
+          "valence_mae": 28.6745,
+          "arousal_mae": 28.5546,
+          "overall_mse": 1670.8597,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_084params",
+          "overall_mae": 28.6151,
+          "valence_mae": 28.6757,
+          "arousal_mae": 28.5544,
+          "overall_mse": 1671.0045,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "VideoTimeMean",
+          "overall_mae": 26.7956,
+          "valence_mae": 25.5454,
+          "arousal_mae": 28.0458,
+          "overall_mse": 1257.1244,
+          "notes": "Mean trajectory by video/time from train subjects."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_085params",
+          "overall_mae": 27.027,
+          "valence_mae": 25.4821,
+          "arousal_mae": 28.572,
+          "overall_mse": 1284.8667,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_085params",
+          "overall_mae": 27.0273,
+          "valence_mae": 25.4822,
+          "arousal_mae": 28.5724,
+          "overall_mse": 1284.8761,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_LRAG_stable_087params",
+          "overall_mae": 27.0278,
+          "valence_mae": 25.4755,
+          "arousal_mae": 28.5801,
+          "overall_mse": 1283.7726,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_LRAG_aggressive_087params",
+          "overall_mae": 27.028,
+          "valence_mae": 25.4753,
+          "arousal_mae": 28.5806,
+          "overall_mse": 1283.776,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_084params",
+          "overall_mae": 27.0517,
+          "valence_mae": 25.5024,
+          "arousal_mae": 28.601,
+          "overall_mse": 1287.1117,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_084params",
+          "overall_mae": 27.0519,
+          "valence_mae": 25.5024,
+          "arousal_mae": 28.6015,
+          "overall_mse": 1287.1294,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Prior_LRAG_aggressive_087params",
+          "overall_mae": 29.5922,
+          "valence_mae": 28.0608,
+          "arousal_mae": 31.1237,
+          "overall_mse": 1500.2607,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_LRAG_stable_087params",
+          "overall_mae": 29.5934,
+          "valence_mae": 28.0632,
+          "arousal_mae": 31.1237,
+          "overall_mse": 1500.3588,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction and LRAG attention."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_084params",
+          "overall_mae": 29.5956,
+          "valence_mae": 28.0636,
+          "arousal_mae": 31.1275,
+          "overall_mse": 1501.024,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_084params",
+          "overall_mae": 29.5969,
+          "valence_mae": 28.0663,
+          "arousal_mae": 31.1276,
+          "overall_mse": 1501.1132,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 084 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_aggressive_085params",
+          "overall_mae": 29.6033,
+          "valence_mae": 28.0768,
+          "arousal_mae": 31.1297,
+          "overall_mse": 1501.3514,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "Prior_DualTBCR_stable_085params",
+          "overall_mae": 29.6048,
+          "valence_mae": 28.0798,
+          "arousal_mae": 31.1297,
+          "overall_mse": 1501.4686,
+          "notes": "VideoTimeMean plus fixed Dual-TBCR correction using 085 parameters."
+        },
+        {
+          "method": "VideoTimeMean",
+          "overall_mae": 29.9574,
+          "valence_mae": 28.5041,
+          "arousal_mae": 31.4107,
+          "overall_mse": 1529.131,
+          "notes": "Mean trajectory by video/time from train subjects."
+        }
+      ]
+    }
+  ]
+}

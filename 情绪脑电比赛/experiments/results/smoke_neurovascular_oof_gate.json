@@ -1,0 +1,288 @@
+{
+  "method": "Nested OOF neurovascular reliability gates",
+  "note": "For each outer fold, EEG/fNIRS/neurovascular experts are predicted for training rows by inner leave-one-subject-out models. Fusion gates are trained only on these OOF expert predictions, then applied to validation expert predictions.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      9
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "245_NeurovascularHelpfulGate_v_s0p03_c1p0",
+      "overall_mae": 28.3367,
+      "valence_mae": 25.4541,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1491.3704,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "244_OOFHelpfulGateConsensus_v_s0p03_c1p0",
+      "overall_mae": 28.351,
+      "valence_mae": 25.4826,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1492.8886,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "242_OOFAgreementWeighted_v_s0p03_c1p0",
+      "overall_mae": 28.3513,
+      "valence_mae": 25.4832,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1492.8345,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "246_ConsensusConfidenceShrink_v_s0p03_c1p0",
+      "overall_mae": 28.3549,
+      "valence_mae": 25.4904,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1493.2364,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "244_OOFHelpfulGateConsensus_both_s0p03_c1p0",
+      "overall_mae": 28.3588,
+      "valence_mae": 25.4826,
+      "arousal_mae": 31.2349,
+      "overall_mse": 1493.6082,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "242_OOFAgreementWeighted_both_s0p03_c1p0",
+      "overall_mae": 28.365,
+      "valence_mae": 25.4832,
+      "arousal_mae": 31.2469,
+      "overall_mse": 1494.0152,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "098_PatternPrior_reference",
+      "overall_mae": 28.3673,
+      "valence_mae": 25.5152,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1494.4644,
+      "notes": "Strong non-signal prior."
+    },
+    {
+      "method": "246_ConsensusConfidenceShrink_both_s0p03_c1p0",
+      "overall_mae": 28.3676,
+      "valence_mae": 25.4904,
+      "arousal_mae": 31.2447,
+      "overall_mse": 1494.3222,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "240_OOFLinearStack_EEG_FNIRS_v_s0p03_c1p0",
+      "overall_mae": 28.3693,
+      "valence_mae": 25.5193,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1493.9191,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "243_OOFDisagreementAwareStack_v_s0p03_c1p0",
+      "overall_mae": 28.3724,
+      "valence_mae": 25.5256,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1494.0138,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "245_NeurovascularHelpfulGate_v_s0p03_c1p0",
+          "overall_mae": 28.2607,
+          "valence_mae": 26.651,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1414.1051,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "240_OOFLinearStack_EEG_FNIRS_v_s0p03_c1p0",
+          "overall_mae": 28.272,
+          "valence_mae": 26.6735,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.0913,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "241_OOFLinearStack_EEG_FNIRS_NV_v_s0p03_c1p0",
+          "overall_mae": 28.2735,
+          "valence_mae": 26.6766,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.2269,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "243_OOFDisagreementAwareStack_v_s0p03_c1p0",
+          "overall_mae": 28.2739,
+          "valence_mae": 26.6774,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.2584,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "246_ConsensusConfidenceShrink_v_s0p03_c1p0",
+          "overall_mae": 28.2784,
+          "valence_mae": 26.6864,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.8094,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "242_OOFAgreementWeighted_v_s0p03_c1p0",
+          "overall_mae": 28.2788,
+          "valence_mae": 26.6873,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.8304,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "244_OOFHelpfulGateConsensus_v_s0p03_c1p0",
+          "overall_mae": 28.2796,
+          "valence_mae": 26.6888,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.9061,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 28.2869,
+          "valence_mae": 26.7033,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1416.6064,
+          "notes": "Strong non-signal prior."
+        },
+        {
+          "method": "244_OOFHelpfulGateConsensus_both_s0p03_c1p0",
+          "overall_mae": 28.2951,
+          "valence_mae": 26.6888,
+          "arousal_mae": 29.9015,
+          "overall_mse": 1417.3677,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "244_OOFHelpfulGateConsensus_a_s0p03_c1p0",
+          "overall_mae": 28.3024,
+          "valence_mae": 26.7033,
+          "arousal_mae": 29.9015,
+          "overall_mse": 1418.068,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "245_NeurovascularHelpfulGate_v_s0p03_c1p0",
+          "overall_mae": 28.4127,
+          "valence_mae": 24.2573,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1568.6356,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "245_NeurovascularHelpfulGate_both_s0p03_c1p0",
+          "overall_mae": 28.4217,
+          "valence_mae": 24.2573,
+          "arousal_mae": 32.5861,
+          "overall_mse": 1569.1791,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "244_OOFHelpfulGateConsensus_v_s0p03_c1p0",
+          "overall_mae": 28.4224,
+          "valence_mae": 24.2765,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1569.8711,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "244_OOFHelpfulGateConsensus_both_s0p03_c1p0",
+          "overall_mae": 28.4224,
+          "valence_mae": 24.2765,
+          "arousal_mae": 32.5683,
+          "overall_mse": 1569.8486,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "242_OOFAgreementWeighted_v_s0p03_c1p0",
+          "overall_mae": 28.4237,
+          "valence_mae": 24.2791,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1569.8385,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "242_OOFAgreementWeighted_both_s0p03_c1p0",
+          "overall_mae": 28.4242,
+          "valence_mae": 24.2791,
+          "arousal_mae": 32.5694,
+          "overall_mse": 1569.8169,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "243_OOFDisagreementAwareStack_a_s0p03_c1p0",
+          "overall_mae": 28.4289,
+          "valence_mae": 24.3272,
+          "arousal_mae": 32.5307,
+          "overall_mse": 1567.9141,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "246_ConsensusConfidenceShrink_v_s0p03_c1p0",
+          "overall_mae": 28.4313,
+          "valence_mae": 24.2944,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1570.6635,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "246_ConsensusConfidenceShrink_both_s0p03_c1p0",
+          "overall_mae": 28.4318,
+          "valence_mae": 24.2944,
+          "arousal_mae": 32.5692,
+          "overall_mse": 1570.6577,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "241_OOFLinearStack_EEG_FNIRS_NV_a_s0p03_c1p0",
+          "overall_mae": 28.4366,
+          "valence_mae": 24.3272,
+          "arousal_mae": 32.5461,
+          "overall_mse": 1567.8175,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        }
+      ]
+    }
+  ]
+}

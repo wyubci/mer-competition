@@ -1,0 +1,3018 @@
+{
+  "method": "Batch 105-124: twenty new low-capacity models plus 125 dimwise integration",
+  "note": "Each outer fold uses strict inner leave-one-subject-out prior features. The 20 models are fixed low-capacity adaptations of state-space, graph/diffusion, robust calibration, and residual meta-learning ideas.",
+  "paper_inspirations": [
+    "Mamba/state-space time-series models: low-parameter state smoothing and local residual dynamics.",
+    "Graph EEG emotion models: Laplacian/diffusion smoothing over temporal or video-time graphs.",
+    "Time-series decomposition models: DCT, SSA, Savitzky-Golay, derivative-constrained postprocessing.",
+    "Robust MAE-aligned calibration: small HGB/Huber/Bayesian/KNN residual correction."
+  ],
+  "fold_size": 4,
+  "candidate_pool_size": 24,
+  "aggregate_results": [
+    {
+      "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+      "overall_mae": 28.7231,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4866,
+      "overall_mse": 1589.8694,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "105_AlphaBetaStateFilter_104",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4975,
+      "overall_mse": 1591.1313,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "106_SlopeAdaptiveEMA_104",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4866,
+      "overall_mse": 1588.5574,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "115_UncertaintySmoothGate_104",
+      "overall_mae": 28.7298,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4928,
+      "overall_mse": 1588.106,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "111_KalmanCV_104",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.5003,
+      "overall_mse": 1591.4999,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4928,
+      "overall_mse": 1588.2311,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "104_DimwiseOOFMeta_reference",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4941,
+      "overall_mse": 1588.3658,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "112_TemporalGraphDiffusion_104",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.494,
+      "overall_mse": 1587.8593,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "107_SavitzkyGolay_w7p2_104",
+      "overall_mae": 28.7319,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.494,
+      "overall_mse": 1588.2151,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "114_UncertaintyShrink_104_to_098",
+      "overall_mae": 28.7336,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4993,
+      "overall_mse": 1588.5942,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "108_DCTSoftShrink_104",
+      "overall_mae": 28.7392,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4984,
+      "overall_mse": 1588.1632,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "117_TimeBinBiasCalibrated_098",
+      "overall_mae": 28.7574,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.5329,
+      "overall_mse": 1590.5144,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "124_RandomForestResidual_d6_scale0p05",
+      "overall_mae": 28.7581,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.5336,
+      "overall_mse": 1588.3566,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "119_KNNResidual_k96_scale0p06",
+      "overall_mae": 28.7592,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.5345,
+      "overall_mse": 1586.0654,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+      "overall_mae": 28.7677,
+      "valence_mae": 26.9953,
+      "arousal_mae": 30.5401,
+      "overall_mse": 1585.7772,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "118_VideoTimeBinBiasCalibrated_098",
+      "overall_mae": 28.7804,
+      "valence_mae": 27.0084,
+      "arousal_mae": 30.5524,
+      "overall_mse": 1589.0916,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "123_HuberResidual_scale0p05",
+      "overall_mae": 28.7814,
+      "valence_mae": 27.001,
+      "arousal_mae": 30.5619,
+      "overall_mse": 1588.256,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "116_VideoBiasCalibrated_098",
+      "overall_mae": 28.7824,
+      "valence_mae": 27.0134,
+      "arousal_mae": 30.5514,
+      "overall_mse": 1590.2257,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "109_HankelSSA_w15r2_104",
+      "overall_mae": 28.7927,
+      "valence_mae": 27.0566,
+      "arousal_mae": 30.5288,
+      "overall_mse": 1586.7881,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "121_PLSResidual_c8_scale0p06",
+      "overall_mae": 28.7953,
+      "valence_mae": 27.0067,
+      "arousal_mae": 30.5839,
+      "overall_mse": 1585.1639,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "122_BayesianRidgeResidual_scale0p05",
+      "overall_mae": 28.7977,
+      "valence_mae": 27.017,
+      "arousal_mae": 30.5783,
+      "overall_mse": 1585.7643,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "113_CrossVideoTimestampDiffusion_104",
+      "overall_mae": 28.8738,
+      "valence_mae": 27.1866,
+      "arousal_mae": 30.5609,
+      "overall_mse": 1576.8059,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "110_DerivativeClip_q90_104",
+      "overall_mae": 42.5378,
+      "valence_mae": 48.7619,
+      "arousal_mae": 36.3137,
+      "overall_mse": 3114.1956,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "dimwise_integration": [
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7232,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7232,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7232,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7232,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7235,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7235,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7263,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7263,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7263,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7263,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7266,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7266,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7266,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7266,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7269,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7269,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7272,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7272,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7272,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7272,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7272,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7273,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7273,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7273,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7273,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.728,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.728,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7282,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7282,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7286,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7289,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7291,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7291,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7294,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7295,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7295,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7297,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7297,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7298,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[111_KalmanCV_104]",
+      "overall_mae": 28.73,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.73,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7302,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7302,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7304,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7309,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7309,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.731,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7313,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7313,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7317,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7318,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7319,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7319,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7319,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7321,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7323,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7323,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7324,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7325,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7327,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7327,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7327,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.733,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7332,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7332,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7332,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7333,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7333,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7333,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7333,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7335,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7335,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7336,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7336,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7337,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7337,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7339,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7339,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.734,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.734,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.734,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7341,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7341,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7341,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7341,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7342,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7342,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7344,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7345,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7345,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7346,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7346,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7349,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.735,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7351,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7353,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7353,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[106_SlopeAdaptiveEMA_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7355,
+      "valence_mae": 26.9706,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7356,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7361,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7364,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7364,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7366,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[098_PatternPrior]__A[111_KalmanCV_104]",
+      "overall_mae": 28.737,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.737,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.737,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.737,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7373,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7373,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7377,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7377,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7379,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7379,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7379,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7383,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7383,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7383,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7383,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7384,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7387,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[112_TemporalGraphDiffusion_104]",
+      "overall_mae": 28.7389,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[107_SavitzkyGolay_w7p2_104]",
+      "overall_mae": 28.7389,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.494,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.739,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4941,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]__A[098_PatternPrior]",
+      "overall_mae": 28.7392,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[105_AlphaBetaStateFilter_104]__A[098_PatternPrior]",
+      "overall_mae": 28.7392,
+      "valence_mae": 26.9597,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7392,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[111_KalmanCV_104]__A[098_PatternPrior]",
+      "overall_mae": 28.7395,
+      "valence_mae": 26.9604,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7396,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7397,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[108_DCTSoftShrink_104]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7401,
+      "valence_mae": 26.98,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7401,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7401,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7405,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7405,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[105_AlphaBetaStateFilter_104]",
+      "overall_mae": 28.7407,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4975,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[120_NystroemRidgeResidual_rbf_scale0p06]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7409,
+      "valence_mae": 26.9953,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[120_NystroemRidgeResidual_rbf_scale0p06]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7409,
+      "valence_mae": 26.9953,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.741,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[117_TimeBinBiasCalibrated_098]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7411,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[108_DCTSoftShrink_104]",
+      "overall_mae": 28.7411,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4984,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[124_RandomForestResidual_d6_scale0p05]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7415,
+      "valence_mae": 26.9826,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[114_UncertaintyShrink_104_to_098]",
+      "overall_mae": 28.7416,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.4993,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[119_KNNResidual_k96_scale0p06]__A[111_KalmanCV_104]",
+      "overall_mae": 28.7421,
+      "valence_mae": 26.9839,
+      "arousal_mae": 30.5003,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[115_UncertaintySmoothGate_104]__A[098_PatternPrior]",
+      "overall_mae": 28.7426,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[114_UncertaintyShrink_104_to_098]__A[098_PatternPrior]",
+      "overall_mae": 28.7432,
+      "valence_mae": 26.9679,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]__A[098_PatternPrior]",
+      "overall_mae": 28.7433,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[104_DimwiseOOFMeta_reference]__A[098_PatternPrior]",
+      "overall_mae": 28.7433,
+      "valence_mae": 26.968,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[123_HuberResidual_scale0p05]__A[125_DimwiseBatch20_VAlphaBeta_ASlopeEMA]",
+      "overall_mae": 28.7438,
+      "valence_mae": 27.001,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[123_HuberResidual_scale0p05]__A[106_SlopeAdaptiveEMA_104]",
+      "overall_mae": 28.7438,
+      "valence_mae": 27.001,
+      "arousal_mae": 30.4866,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[112_TemporalGraphDiffusion_104]__A[098_PatternPrior]",
+      "overall_mae": 28.7441,
+      "valence_mae": 26.9695,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[120_NystroemRidgeResidual_rbf_scale0p06]__A[115_UncertaintySmoothGate_104]",
+      "overall_mae": 28.7441,
+      "valence_mae": 26.9953,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[120_NystroemRidgeResidual_rbf_scale0p06]__A[125_FixedBatch20Fusion_VHGB_AUncertaintySmooth]",
+      "overall_mae": 28.7441,
+      "valence_mae": 26.9953,
+      "arousal_mae": 30.4928,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    },
+    {
+      "method": "125_DimwiseBatch20_V[107_SavitzkyGolay_w7p2_104]__A[098_PatternPrior]",
+      "overall_mae": 28.7442,
+      "valence_mae": 26.9698,
+      "arousal_mae": 30.5186,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 20-model batch."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "113_CrossVideoTimestampDiffusion_104",
+          "overall_mae": 25.8489,
+          "valence_mae": 24.8507,
+          "arousal_mae": 26.8471,
+          "overall_mse": 1201.8428,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+          "overall_mae": 25.9812,
+          "valence_mae": 24.7094,
+          "arousal_mae": 27.2529,
+          "overall_mse": 1231.9196,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "106_SlopeAdaptiveEMA_104",
+          "overall_mae": 25.9875,
+          "valence_mae": 24.722,
+          "arousal_mae": 27.2529,
+          "overall_mse": 1231.0114,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "105_AlphaBetaStateFilter_104",
+          "overall_mae": 26.0093,
+          "valence_mae": 24.7094,
+          "arousal_mae": 27.3092,
+          "overall_mse": 1234.8422,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "115_UncertaintySmoothGate_104",
+          "overall_mae": 26.0189,
+          "valence_mae": 24.7325,
+          "arousal_mae": 27.3053,
+          "overall_mse": 1232.0275,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+          "overall_mae": 26.0189,
+          "valence_mae": 24.7326,
+          "arousal_mae": 27.3053,
+          "overall_mse": 1232.087,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "112_TemporalGraphDiffusion_104",
+          "overall_mae": 26.0209,
+          "valence_mae": 24.7349,
+          "arousal_mae": 27.3068,
+          "overall_mse": 1231.7593,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 26.021,
+          "valence_mae": 24.7326,
+          "arousal_mae": 27.3094,
+          "overall_mse": 1232.348,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "111_KalmanCV_104",
+          "overall_mae": 26.0214,
+          "valence_mae": 24.7213,
+          "arousal_mae": 27.3215,
+          "overall_mse": 1235.8578,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "107_SavitzkyGolay_w7p2_104",
+          "overall_mae": 26.0231,
+          "valence_mae": 24.7371,
+          "arousal_mae": 27.309,
+          "overall_mse": 1232.2216,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "108_DCTSoftShrink_104",
+          "overall_mae": 26.0322,
+          "valence_mae": 24.7511,
+          "arousal_mae": 27.3132,
+          "overall_mse": 1232.1859,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "114_UncertaintyShrink_104_to_098",
+          "overall_mae": 26.038,
+          "valence_mae": 24.7378,
+          "arousal_mae": 27.3381,
+          "overall_mse": 1233.9432,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "124_RandomForestResidual_d6_scale0p05",
+          "overall_mae": 26.0525,
+          "valence_mae": 24.7691,
+          "arousal_mae": 27.3358,
+          "overall_mse": 1234.1844,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+          "overall_mae": 26.0814,
+          "valence_mae": 24.7772,
+          "arousal_mae": 27.3856,
+          "overall_mse": 1232.9689,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "117_TimeBinBiasCalibrated_098",
+          "overall_mae": 26.0907,
+          "valence_mae": 24.7618,
+          "arousal_mae": 27.4197,
+          "overall_mse": 1239.644,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "109_HankelSSA_w15r2_104",
+          "overall_mae": 26.0997,
+          "valence_mae": 24.8524,
+          "arousal_mae": 27.3471,
+          "overall_mse": 1230.963,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "119_KNNResidual_k96_scale0p06",
+          "overall_mae": 26.1014,
+          "valence_mae": 24.7835,
+          "arousal_mae": 27.4194,
+          "overall_mse": 1236.0214,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "121_PLSResidual_c8_scale0p06",
+          "overall_mae": 26.1169,
+          "valence_mae": 24.8113,
+          "arousal_mae": 27.4224,
+          "overall_mse": 1232.0948,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "122_BayesianRidgeResidual_scale0p05",
+          "overall_mae": 26.1198,
+          "valence_mae": 24.8155,
+          "arousal_mae": 27.424,
+          "overall_mse": 1233.3197,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "123_HuberResidual_scale0p05",
+          "overall_mae": 26.1228,
+          "valence_mae": 24.7871,
+          "arousal_mae": 27.4585,
+          "overall_mse": 1237.4154,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "118_VideoTimeBinBiasCalibrated_098",
+          "overall_mae": 26.1287,
+          "valence_mae": 24.8424,
+          "arousal_mae": 27.415,
+          "overall_mse": 1240.3187,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "116_VideoBiasCalibrated_098",
+          "overall_mae": 26.1354,
+          "valence_mae": 24.8407,
+          "arousal_mae": 27.4301,
+          "overall_mse": 1241.5808,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "110_DerivativeClip_q90_104",
+          "overall_mae": 40.0127,
+          "valence_mae": 48.4304,
+          "arousal_mae": 31.5951,
+          "overall_mse": 3053.9597,
+          "notes": "Batch 105-124 low-capacity model."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "119_KNNResidual_k96_scale0p06",
+          "overall_mae": 37.3066,
+          "valence_mae": 33.226,
+          "arousal_mae": 41.3871,
+          "overall_mse": 2463.5247,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "114_UncertaintyShrink_104_to_098",
+          "overall_mae": 37.3549,
+          "valence_mae": 33.2558,
+          "arousal_mae": 41.454,
+          "overall_mse": 2470.7585,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 37.3565,
+          "valence_mae": 33.2572,
+          "arousal_mae": 41.4558,
+          "overall_mse": 2470.5867,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "112_TemporalGraphDiffusion_104",
+          "overall_mae": 37.3572,
+          "valence_mae": 33.2587,
+          "arousal_mae": 41.4556,
+          "overall_mse": 2470.1055,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "107_SavitzkyGolay_w7p2_104",
+          "overall_mae": 37.3577,
+          "valence_mae": 33.26,
+          "arousal_mae": 41.4555,
+          "overall_mse": 2470.4309,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+          "overall_mae": 37.3577,
+          "valence_mae": 33.2572,
+          "arousal_mae": 41.4582,
+          "overall_mse": 2470.5986,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "115_UncertaintySmoothGate_104",
+          "overall_mae": 37.3581,
+          "valence_mae": 33.2579,
+          "arousal_mae": 41.4582,
+          "overall_mse": 2470.499,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "111_KalmanCV_104",
+          "overall_mae": 37.3594,
+          "valence_mae": 33.2505,
+          "arousal_mae": 41.4682,
+          "overall_mse": 2473.7405,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "108_DCTSoftShrink_104",
+          "overall_mae": 37.3627,
+          "valence_mae": 33.267,
+          "arousal_mae": 41.4585,
+          "overall_mse": 2470.4033,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+          "overall_mae": 37.3635,
+          "valence_mae": 33.2654,
+          "arousal_mae": 41.4617,
+          "overall_mse": 2465.156,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "105_AlphaBetaStateFilter_104",
+          "overall_mae": 37.3666,
+          "valence_mae": 33.2609,
+          "arousal_mae": 41.4722,
+          "overall_mse": 2474.1335,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "116_VideoBiasCalibrated_098",
+          "overall_mae": 37.3733,
+          "valence_mae": 33.2699,
+          "arousal_mae": 41.4766,
+          "overall_mse": 2467.5671,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "118_VideoTimeBinBiasCalibrated_098",
+          "overall_mae": 37.3779,
+          "valence_mae": 33.2743,
+          "arousal_mae": 41.4816,
+          "overall_mse": 2466.0154,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "123_HuberResidual_scale0p05",
+          "overall_mae": 37.3801,
+          "valence_mae": 33.2707,
+          "arousal_mae": 41.4896,
+          "overall_mse": 2468.6318,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "117_TimeBinBiasCalibrated_098",
+          "overall_mae": 37.3835,
+          "valence_mae": 33.2649,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2472.2937,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+          "overall_mae": 37.3877,
+          "valence_mae": 33.2609,
+          "arousal_mae": 41.5146,
+          "overall_mse": 2474.479,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "109_HankelSSA_w15r2_104",
+          "overall_mae": 37.3887,
+          "valence_mae": 33.3087,
+          "arousal_mae": 41.4687,
+          "overall_mse": 2468.3169,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "121_PLSResidual_c8_scale0p06",
+          "overall_mae": 37.3887,
+          "valence_mae": 33.2692,
+          "arousal_mae": 41.5082,
+          "overall_mse": 2464.3223,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "122_BayesianRidgeResidual_scale0p05",
+          "overall_mae": 37.3914,
+          "valence_mae": 33.2732,
+          "arousal_mae": 41.5096,
+          "overall_mse": 2465.3411,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "124_RandomForestResidual_d6_scale0p05",
+          "overall_mae": 37.4056,
+          "valence_mae": 33.2972,
+          "arousal_mae": 41.514,
+          "overall_mse": 2470.3118,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "106_SlopeAdaptiveEMA_104",
+          "overall_mae": 37.4227,
+          "valence_mae": 33.3309,
+          "arousal_mae": 41.5146,
+          "overall_mse": 2474.9412,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "113_CrossVideoTimestampDiffusion_104",
+          "overall_mae": 38.0132,
+          "valence_mae": 34.075,
+          "arousal_mae": 41.9514,
+          "overall_mse": 2482.1912,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "110_DerivativeClip_q90_104",
+          "overall_mae": 59.867,
+          "valence_mae": 63.7763,
+          "arousal_mae": 55.9577,
+          "overall_mse": 4899.2124,
+          "notes": "Batch 105-124 low-capacity model."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+          "overall_mae": 27.1885,
+          "valence_mae": 24.2491,
+          "arousal_mae": 30.1279,
+          "overall_mse": 1327.9336,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.1887,
+          "valence_mae": 24.2491,
+          "arousal_mae": 30.1282,
+          "overall_mse": 1328.0411,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "111_KalmanCV_104",
+          "overall_mae": 27.1892,
+          "valence_mae": 24.2419,
+          "arousal_mae": 30.1364,
+          "overall_mse": 1330.807,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "107_SavitzkyGolay_w7p2_104",
+          "overall_mae": 27.1902,
+          "valence_mae": 24.2526,
+          "arousal_mae": 30.1279,
+          "overall_mse": 1327.9266,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "114_UncertaintyShrink_104_to_098",
+          "overall_mae": 27.1908,
+          "valence_mae": 24.2507,
+          "arousal_mae": 30.1308,
+          "overall_mse": 1328.3158,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "115_UncertaintySmoothGate_104",
+          "overall_mae": 27.191,
+          "valence_mae": 24.2541,
+          "arousal_mae": 30.1279,
+          "overall_mse": 1328.0035,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "112_TemporalGraphDiffusion_104",
+          "overall_mae": 27.1917,
+          "valence_mae": 24.255,
+          "arousal_mae": 30.1284,
+          "overall_mse": 1327.7397,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "105_AlphaBetaStateFilter_104",
+          "overall_mae": 27.1926,
+          "valence_mae": 24.2512,
+          "arousal_mae": 30.1341,
+          "overall_mse": 1330.8514,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+          "overall_mae": 27.1956,
+          "valence_mae": 24.2512,
+          "arousal_mae": 30.1399,
+          "overall_mse": 1330.6415,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "108_DCTSoftShrink_104",
+          "overall_mae": 27.1961,
+          "valence_mae": 24.2569,
+          "arousal_mae": 30.1353,
+          "overall_mse": 1327.9313,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "117_TimeBinBiasCalibrated_098",
+          "overall_mae": 27.1975,
+          "valence_mae": 24.2677,
+          "arousal_mae": 30.1273,
+          "overall_mse": 1329.1017,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "119_KNNResidual_k96_scale0p06",
+          "overall_mae": 27.2093,
+          "valence_mae": 24.2449,
+          "arousal_mae": 30.1737,
+          "overall_mse": 1323.9623,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "123_HuberResidual_scale0p05",
+          "overall_mae": 27.213,
+          "valence_mae": 24.2657,
+          "arousal_mae": 30.1602,
+          "overall_mse": 1325.7421,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+          "overall_mae": 27.2176,
+          "valence_mae": 24.2793,
+          "arousal_mae": 30.156,
+          "overall_mse": 1325.3925,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "106_SlopeAdaptiveEMA_104",
+          "overall_mae": 27.2188,
+          "valence_mae": 24.2976,
+          "arousal_mae": 30.1399,
+          "overall_mse": 1331.2394,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "124_RandomForestResidual_d6_scale0p05",
+          "overall_mae": 27.2279,
+          "valence_mae": 24.2962,
+          "arousal_mae": 30.1596,
+          "overall_mse": 1329.5446,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "109_HankelSSA_w15r2_104",
+          "overall_mae": 27.2362,
+          "valence_mae": 24.317,
+          "arousal_mae": 30.1554,
+          "overall_mse": 1326.8685,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "118_VideoTimeBinBiasCalibrated_098",
+          "overall_mae": 27.2375,
+          "valence_mae": 24.3098,
+          "arousal_mae": 30.1652,
+          "overall_mse": 1328.7655,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "116_VideoBiasCalibrated_098",
+          "overall_mae": 27.2419,
+          "valence_mae": 24.2968,
+          "arousal_mae": 30.1871,
+          "overall_mse": 1329.8514,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "122_BayesianRidgeResidual_scale0p05",
+          "overall_mae": 27.2554,
+          "valence_mae": 24.2948,
+          "arousal_mae": 30.2159,
+          "overall_mse": 1326.542,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "121_PLSResidual_c8_scale0p06",
+          "overall_mae": 27.2654,
+          "valence_mae": 24.2956,
+          "arousal_mae": 30.2352,
+          "overall_mse": 1326.8848,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "113_CrossVideoTimestampDiffusion_104",
+          "overall_mae": 27.7672,
+          "valence_mae": 25.1747,
+          "arousal_mae": 30.3597,
+          "overall_mse": 1363.9976,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "110_DerivativeClip_q90_104",
+          "overall_mae": 51.6003,
+          "valence_mae": 58.0554,
+          "arousal_mae": 45.1452,
+          "overall_mse": 4098.3667,
+          "notes": "Batch 105-124 low-capacity model."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "113_CrossVideoTimestampDiffusion_104",
+          "overall_mae": 27.8529,
+          "valence_mae": 27.573,
+          "arousal_mae": 28.1328,
+          "overall_mse": 1702.7882,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "106_SlopeAdaptiveEMA_104",
+          "overall_mae": 28.5121,
+          "valence_mae": 28.6368,
+          "arousal_mae": 28.3874,
+          "overall_mse": 1789.1285,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+          "overall_mae": 28.5222,
+          "valence_mae": 28.6211,
+          "arousal_mae": 28.4234,
+          "overall_mse": 1781.4967,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "121_PLSResidual_c8_scale0p06",
+          "overall_mae": 28.5223,
+          "valence_mae": 28.6185,
+          "arousal_mae": 28.4261,
+          "overall_mse": 1779.8678,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "122_BayesianRidgeResidual_scale0p05",
+          "overall_mae": 28.5441,
+          "valence_mae": 28.6451,
+          "arousal_mae": 28.443,
+          "overall_mse": 1781.5812,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "124_RandomForestResidual_d6_scale0p05",
+          "overall_mae": 28.5449,
+          "valence_mae": 28.6433,
+          "arousal_mae": 28.4465,
+          "overall_mse": 1787.8105,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "119_KNNResidual_k96_scale0p06",
+          "overall_mae": 28.5455,
+          "valence_mae": 28.6472,
+          "arousal_mae": 28.4438,
+          "overall_mse": 1785.163,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "115_UncertaintySmoothGate_104",
+          "overall_mae": 28.5529,
+          "valence_mae": 28.6925,
+          "arousal_mae": 28.4133,
+          "overall_mse": 1793.0111,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "112_TemporalGraphDiffusion_104",
+          "overall_mae": 28.5543,
+          "valence_mae": 28.6949,
+          "arousal_mae": 28.4137,
+          "overall_mse": 1792.8197,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "114_UncertaintyShrink_104_to_098",
+          "overall_mae": 28.5554,
+          "valence_mae": 28.6867,
+          "arousal_mae": 28.4241,
+          "overall_mse": 1792.683,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+          "overall_mae": 28.5555,
+          "valence_mae": 28.6977,
+          "arousal_mae": 28.4133,
+          "overall_mse": 1793.4027,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 28.5569,
+          "valence_mae": 28.6977,
+          "arousal_mae": 28.4161,
+          "overall_mse": 1793.6084,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "107_SavitzkyGolay_w7p2_104",
+          "overall_mae": 28.5582,
+          "valence_mae": 28.6999,
+          "arousal_mae": 28.4166,
+          "overall_mse": 1793.4312,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+          "overall_mae": 28.5617,
+          "valence_mae": 28.7359,
+          "arousal_mae": 28.3874,
+          "overall_mse": 1794.7435,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "108_DCTSoftShrink_104",
+          "overall_mae": 28.5635,
+          "valence_mae": 28.7063,
+          "arousal_mae": 28.4208,
+          "overall_mse": 1793.3431,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "117_TimeBinBiasCalibrated_098",
+          "overall_mae": 28.5793,
+          "valence_mae": 28.6775,
+          "arousal_mae": 28.4811,
+          "overall_mse": 1791.1205,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "123_HuberResidual_scale0p05",
+          "overall_mae": 28.5832,
+          "valence_mae": 28.6946,
+          "arousal_mae": 28.4718,
+          "overall_mse": 1789.3068,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "111_KalmanCV_104",
+          "overall_mae": 28.5884,
+          "valence_mae": 28.7293,
+          "arousal_mae": 28.4475,
+          "overall_mse": 1798.7759,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "105_AlphaBetaStateFilter_104",
+          "overall_mae": 28.5924,
+          "valence_mae": 28.7359,
+          "arousal_mae": 28.4488,
+          "overall_mse": 1798.4966,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "109_HankelSSA_w15r2_104",
+          "overall_mae": 28.5999,
+          "valence_mae": 28.7595,
+          "arousal_mae": 28.4402,
+          "overall_mse": 1791.8359,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "118_VideoTimeBinBiasCalibrated_098",
+          "overall_mae": 28.6113,
+          "valence_mae": 28.6899,
+          "arousal_mae": 28.5328,
+          "overall_mse": 1791.1327,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "116_VideoBiasCalibrated_098",
+          "overall_mae": 28.6233,
+          "valence_mae": 28.6946,
+          "arousal_mae": 28.552,
+          "overall_mse": 1792.7379,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "110_DerivativeClip_q90_104",
+          "overall_mae": 36.0238,
+          "valence_mae": 43.6406,
+          "arousal_mae": 28.407,
+          "overall_mse": 2276.5354,
+          "notes": "Batch 105-124 low-capacity model."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.9982,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "124_RandomForestResidual_d6_scale0p05",
+          "overall_mae": 25.9667,
+          "valence_mae": 24.5424,
+          "arousal_mae": 27.391,
+          "overall_mse": 1293.8843,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5526,
+          "arousal_mae": 27.384,
+          "overall_mse": 1297.1451,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "107_SavitzkyGolay_w7p2_104",
+          "overall_mae": 25.971,
+          "valence_mae": 24.5442,
+          "arousal_mae": 27.3978,
+          "overall_mse": 1295.0391,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "115_UncertaintySmoothGate_104",
+          "overall_mae": 25.971,
+          "valence_mae": 24.546,
+          "arousal_mae": 27.3961,
+          "overall_mse": 1295.0562,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+          "overall_mae": 25.9719,
+          "valence_mae": 24.5477,
+          "arousal_mae": 27.3961,
+          "overall_mse": 1295.079,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "112_TemporalGraphDiffusion_104",
+          "overall_mae": 25.9721,
+          "valence_mae": 24.5461,
+          "arousal_mae": 27.3982,
+          "overall_mse": 1294.7688,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 25.973,
+          "valence_mae": 24.5477,
+          "arousal_mae": 27.3983,
+          "overall_mse": 1295.2144,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "114_UncertaintyShrink_104_to_098",
+          "overall_mae": 25.9742,
+          "valence_mae": 24.5482,
+          "arousal_mae": 27.4002,
+          "overall_mse": 1295.6075,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "117_TimeBinBiasCalibrated_098",
+          "overall_mae": 25.9768,
+          "valence_mae": 24.557,
+          "arousal_mae": 27.3967,
+          "overall_mse": 1296.8937,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "106_SlopeAdaptiveEMA_104",
+          "overall_mae": 25.9795,
+          "valence_mae": 24.575,
+          "arousal_mae": 27.384,
+          "overall_mse": 1296.207,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "108_DCTSoftShrink_104",
+          "overall_mae": 25.981,
+          "valence_mae": 24.5604,
+          "arousal_mae": 27.4016,
+          "overall_mse": 1295.015,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "111_KalmanCV_104",
+          "overall_mae": 25.9824,
+          "valence_mae": 24.5516,
+          "arousal_mae": 27.4133,
+          "overall_mse": 1298.6,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "105_AlphaBetaStateFilter_104",
+          "overall_mae": 25.983,
+          "valence_mae": 24.5526,
+          "arousal_mae": 27.4135,
+          "overall_mse": 1298.6803,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+          "overall_mae": 25.99,
+          "valence_mae": 24.5779,
+          "arousal_mae": 27.4021,
+          "overall_mse": 1292.1674,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "119_KNNResidual_k96_scale0p06",
+          "overall_mae": 25.9903,
+          "valence_mae": 24.5646,
+          "arousal_mae": 27.4161,
+          "overall_mse": 1292.8253,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "118_VideoTimeBinBiasCalibrated_098",
+          "overall_mae": 25.9919,
+          "valence_mae": 24.5947,
+          "arousal_mae": 27.3891,
+          "overall_mse": 1294.9934,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "123_HuberResidual_scale0p05",
+          "overall_mae": 26.0052,
+          "valence_mae": 24.578,
+          "arousal_mae": 27.4323,
+          "overall_mse": 1294.5067,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "121_PLSResidual_c8_scale0p06",
+          "overall_mae": 26.0143,
+          "valence_mae": 24.5749,
+          "arousal_mae": 27.4537,
+          "overall_mse": 1291.0745,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "116_VideoBiasCalibrated_098",
+          "overall_mae": 26.0195,
+          "valence_mae": 24.6265,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1298.1149,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "122_BayesianRidgeResidual_scale0p05",
+          "overall_mae": 26.0218,
+          "valence_mae": 24.5987,
+          "arousal_mae": 27.4448,
+          "overall_mse": 1291.5641,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "109_HankelSSA_w15r2_104",
+          "overall_mae": 26.0494,
+          "valence_mae": 24.6573,
+          "arousal_mae": 27.4416,
+          "overall_mse": 1293.4927,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "113_CrossVideoTimestampDiffusion_104",
+          "overall_mae": 26.158,
+          "valence_mae": 24.907,
+          "arousal_mae": 27.409,
+          "overall_mse": 1289.1993,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "110_DerivativeClip_q90_104",
+          "overall_mae": 39.5459,
+          "valence_mae": 50.5604,
+          "arousal_mae": 28.5315,
+          "overall_mse": 2849.2317,
+          "notes": "Batch 105-124 low-capacity model."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "105_AlphaBetaStateFilter_104",
+          "overall_mae": 27.2277,
+          "valence_mae": 26.2479,
+          "arousal_mae": 28.2075,
+          "overall_mse": 1409.7836,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "111_KalmanCV_104",
+          "overall_mae": 27.2413,
+          "valence_mae": 26.2678,
+          "arousal_mae": 28.2148,
+          "overall_mse": 1411.2183,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_DimwiseBatch20_VAlphaBeta_ASlopeEMA",
+          "overall_mae": 27.2444,
+          "valence_mae": 26.2479,
+          "arousal_mae": 28.2409,
+          "overall_mse": 1410.2875,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "106_SlopeAdaptiveEMA_104",
+          "overall_mae": 27.2511,
+          "valence_mae": 26.2614,
+          "arousal_mae": 28.2409,
+          "overall_mse": 1408.8173,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "115_UncertaintySmoothGate_104",
+          "overall_mae": 27.2868,
+          "valence_mae": 26.3173,
+          "arousal_mae": 28.2562,
+          "overall_mse": 1410.0386,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "114_UncertaintyShrink_104_to_098",
+          "overall_mae": 27.2881,
+          "valence_mae": 26.3278,
+          "arousal_mae": 28.2483,
+          "overall_mse": 1410.257,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "125_FixedBatch20Fusion_VHGB_AUncertaintySmooth",
+          "overall_mae": 27.2901,
+          "valence_mae": 26.3239,
+          "arousal_mae": 28.2562,
+          "overall_mse": 1410.2865,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.2904,
+          "valence_mae": 26.3239,
+          "arousal_mae": 28.2568,
+          "overall_mse": 1410.3971,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "107_SavitzkyGolay_w7p2_104",
+          "overall_mae": 27.2913,
+          "valence_mae": 26.3252,
+          "arousal_mae": 28.2573,
+          "overall_mse": 1410.2406,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "112_TemporalGraphDiffusion_104",
+          "overall_mae": 27.2943,
+          "valence_mae": 26.3271,
+          "arousal_mae": 28.2616,
+          "overall_mse": 1409.9619,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "108_DCTSoftShrink_104",
+          "overall_mae": 27.2999,
+          "valence_mae": 26.3386,
+          "arousal_mae": 28.2613,
+          "overall_mse": 1410.1011,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "116_VideoBiasCalibrated_098",
+          "overall_mae": 27.3011,
+          "valence_mae": 26.352,
+          "arousal_mae": 28.2501,
+          "overall_mse": 1411.5026,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "117_TimeBinBiasCalibrated_098",
+          "overall_mae": 27.3162,
+          "valence_mae": 26.362,
+          "arousal_mae": 28.2705,
+          "overall_mse": 1414.0337,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "118_VideoTimeBinBiasCalibrated_098",
+          "overall_mae": 27.335,
+          "valence_mae": 26.3394,
+          "arousal_mae": 28.3305,
+          "overall_mse": 1413.3242,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "124_RandomForestResidual_d6_scale0p05",
+          "overall_mae": 27.3511,
+          "valence_mae": 26.3476,
+          "arousal_mae": 28.3546,
+          "overall_mse": 1414.4037,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "109_HankelSSA_w15r2_104",
+          "overall_mae": 27.3825,
+          "valence_mae": 26.4448,
+          "arousal_mae": 28.3202,
+          "overall_mse": 1409.252,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "123_HuberResidual_scale0p05",
+          "overall_mae": 27.3844,
+          "valence_mae": 26.4096,
+          "arousal_mae": 28.3592,
+          "overall_mse": 1413.9335,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "119_KNNResidual_k96_scale0p06",
+          "overall_mae": 27.4018,
+          "valence_mae": 26.4369,
+          "arousal_mae": 28.3668,
+          "overall_mse": 1414.8951,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "120_NystroemRidgeResidual_rbf_scale0p06",
+          "overall_mae": 27.4316,
+          "valence_mae": 26.451,
+          "arousal_mae": 28.4122,
+          "overall_mse": 1417.4813,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "122_BayesianRidgeResidual_scale0p05",
+          "overall_mae": 27.4536,
+          "valence_mae": 26.4749,
+          "arousal_mae": 28.4322,
+          "overall_mse": 1416.2369,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "121_PLSResidual_c8_scale0p06",
+          "overall_mae": 27.4642,
+          "valence_mae": 26.4705,
+          "arousal_mae": 28.4579,
+          "overall_mse": 1416.7401,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "113_CrossVideoTimestampDiffusion_104",
+          "overall_mae": 27.6024,
+          "valence_mae": 26.5393,
+          "arousal_mae": 28.6656,
+          "overall_mse": 1420.8159,
+          "notes": "Batch 105-124 low-capacity model."
+        },
+        {
+          "method": "110_DerivativeClip_q90_104",
+          "overall_mae": 28.177,
+          "valence_mae": 28.1084,
+          "arousal_mae": 28.2455,
+          "overall_mse": 1507.8687,
+          "notes": "Batch 105-124 low-capacity model."
+        }
+      ]
+    }
+  ]
+}

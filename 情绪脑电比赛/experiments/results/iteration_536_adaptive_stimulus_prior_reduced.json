@@ -1,0 +1,4080 @@
+{
+  "method": "Adaptive Stimulus-Response Prior",
+  "note": "The model treats sample_id video/time as a stimulus-response curve problem. For each outer fold, each candidate prior is scored only by inner leave-one-subject-out training subjects, then hard-selected or soft-ensembled per dimension/video before evaluating held-out subjects.",
+  "fold_size": 4,
+  "subjects": [
+    "test_1",
+    "test_2",
+    "test_3",
+    "test_4",
+    "test_5",
+    "test_6",
+    "test_7",
+    "test_8",
+    "test_9",
+    "test_10",
+    "test_11",
+    "test_12",
+    "test_13",
+    "test_14",
+    "test_15",
+    "test_16",
+    "test_17",
+    "test_18",
+    "test_19",
+    "test_20",
+    "test_21",
+    "test_22",
+    "test_23",
+    "test_24"
+  ],
+  "candidate_count": 84,
+  "spec_grid": {
+    "lags": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "smooths": [
+      5,
+      9,
+      11,
+      15,
+      21,
+      43
+    ],
+    "estimators": [
+      "median",
+      "mean"
+    ]
+  },
+  "include_p200": false,
+  "aggregate_results": [
+    {
+      "method": "098_PatternPrior_reference",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalHard]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top3_t0p15]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top3_t0p3]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top3_t0p6]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top3_t1p0]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top3_t2p0]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top5_t0p15]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top5_t0p3]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top5_t0p6]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top5_t1p0]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top5_t2p0]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top9_t0p15]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top9_t0p3]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top9_t0p6]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top9_t1p0]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveGlobalSoft_top9_t2p0]_A[098]",
+      "overall_mae": 28.7905,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1605.7271,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalHard]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p15]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p3]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p6]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top3_t1p0]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top3_t2p0]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7094,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p15]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p3]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p6]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top5_t1p0]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top5_t2p0]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7094,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p15]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p3]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p6]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top9_t1p0]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[098]_A[AdaptiveGlobalSoft_top9_t2p0]",
+      "overall_mae": 28.8392,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1605.7094,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top5_t0p6]_A[098]",
+      "overall_mae": 28.8653,
+      "valence_mae": 27.2121,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9243,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top5_t1p0]_A[098]",
+      "overall_mae": 28.8653,
+      "valence_mae": 27.212,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9132,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top5_t2p0]_A[098]",
+      "overall_mae": 28.8653,
+      "valence_mae": 27.212,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.906,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top5_t0p3]_A[098]",
+      "overall_mae": 28.8654,
+      "valence_mae": 27.2122,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9575,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top5_t0p15]_A[098]",
+      "overall_mae": 28.8656,
+      "valence_mae": 27.2127,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1599.0438,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top9_t0p15]_A[098]",
+      "overall_mae": 28.8688,
+      "valence_mae": 27.2189,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9536,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top9_t0p3]_A[098]",
+      "overall_mae": 28.8709,
+      "valence_mae": 27.2233,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9294,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top3_t2p0]_A[098]",
+      "overall_mae": 28.871,
+      "valence_mae": 27.2235,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1599.3983,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top3_t0p6]_A[098]",
+      "overall_mae": 28.8711,
+      "valence_mae": 27.2237,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1599.4408,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top3_t1p0]_A[098]",
+      "overall_mae": 28.8711,
+      "valence_mae": 27.2235,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1599.4166,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top3_t0p3]_A[098]",
+      "overall_mae": 28.8713,
+      "valence_mae": 27.2239,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1599.4983,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top3_t0p15]_A[098]",
+      "overall_mae": 28.8715,
+      "valence_mae": 27.2243,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1599.6005,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top9_t0p6]_A[098]",
+      "overall_mae": 28.8723,
+      "valence_mae": 27.2259,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9335,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top9_t1p0]_A[098]",
+      "overall_mae": 28.8728,
+      "valence_mae": 27.2271,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.9381,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimSoft_top9_t2p0]_A[098]",
+      "overall_mae": 28.8733,
+      "valence_mae": 27.2279,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1598.943,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "V[AdaptiveVideoDimHard]_A[098]",
+      "overall_mae": 28.8775,
+      "valence_mae": 27.2364,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1600.7081,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "AdaptiveGlobalHard",
+      "overall_mae": 28.8835,
+      "valence_mae": 27.0623,
+      "arousal_mae": 30.7047,
+      "overall_mse": 1620.6897,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "selector_summaries": [
+    {
+      "global_best": {
+        "valence": {
+          "spec": "median_lag-1_s9",
+          "inner_mae": 27.037
+        },
+        "arousal": {
+          "spec": "median_lag-2_s15",
+          "inner_mae": 31.5927
+        }
+      },
+      "video_dim_best": {
+        "valence": [
+          {
+            "video": 1,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 27.3181
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 33.2501
+          },
+          {
+            "video": 3,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 31.3278
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 21.7693
+          },
+          {
+            "video": 5,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 25.4387
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-2_s43",
+            "inner_mae": 28.3417
+          },
+          {
+            "video": 7,
+            "spec": "median_lag0_s5",
+            "inner_mae": 27.3743
+          },
+          {
+            "video": 8,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 28.9872
+          },
+          {
+            "video": 9,
+            "spec": "median_lag0_s5",
+            "inner_mae": 22.0674
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-4_s15",
+            "inner_mae": 23.9566
+          },
+          {
+            "video": 11,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 31.3602
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 17.7246
+          },
+          {
+            "video": 13,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 25.0612
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 27.2765
+          },
+          {
+            "video": 15,
+            "spec": "median_lag0_s5",
+            "inner_mae": 24.8874
+          }
+        ],
+        "arousal": [
+          {
+            "video": 1,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 33.0229
+          },
+          {
+            "video": 2,
+            "spec": "median_lag0_s15",
+            "inner_mae": 22.6615
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s9",
+            "inner_mae": 21.6007
+          },
+          {
+            "video": 4,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 28.3705
+          },
+          {
+            "video": 5,
+            "spec": "median_lag-3_s21",
+            "inner_mae": 35.9445
+          },
+          {
+            "video": 6,
+            "spec": "mean_lag2_s43",
+            "inner_mae": 34.2717
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 29.3097
+          },
+          {
+            "video": 8,
+            "spec": "mean_lag-4_s43",
+            "inner_mae": 57.2994
+          },
+          {
+            "video": 9,
+            "spec": "median_lag0_s5",
+            "inner_mae": 27.6649
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 23.5875
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 25.1113
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 15.6033
+          },
+          {
+            "video": 13,
+            "spec": "mean_lag-4_s9",
+            "inner_mae": 22.1907
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 47.3971
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 29.7937
+          }
+        ]
+      }
+    },
+    {
+      "global_best": {
+        "valence": {
+          "spec": "median_lag-1_s9",
+          "inner_mae": 25.5005
+        },
+        "arousal": {
+          "spec": "median_lag-2_s15",
+          "inner_mae": 28.7658
+        }
+      },
+      "video_dim_best": {
+        "valence": [
+          {
+            "video": 1,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 22.7008
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 32.9901
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s5",
+            "inner_mae": 26.3273
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 25.0171
+          },
+          {
+            "video": 5,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 25.0212
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-1_s43",
+            "inner_mae": 29.1561
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 25.9461
+          },
+          {
+            "video": 8,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 28.0684
+          },
+          {
+            "video": 9,
+            "spec": "median_lag0_s5",
+            "inner_mae": 19.7707
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 15.5863
+          },
+          {
+            "video": 11,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 29.0709
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 13.6706
+          },
+          {
+            "video": 13,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 25.6942
+          },
+          {
+            "video": 14,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 27.631
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 24.6301
+          }
+        ],
+        "arousal": [
+          {
+            "video": 1,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 35.4179
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 20.7178
+          },
+          {
+            "video": 3,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 20.8547
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-3_s5",
+            "inner_mae": 31.9754
+          },
+          {
+            "video": 5,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 33.2209
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 27.9444
+          },
+          {
+            "video": 7,
+            "spec": "mean_lag-4_s9",
+            "inner_mae": 26.3547
+          },
+          {
+            "video": 8,
+            "spec": "mean_lag-4_s43",
+            "inner_mae": 52.1453
+          },
+          {
+            "video": 9,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 31.4112
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-2_s11",
+            "inner_mae": 17.2262
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-3_s5",
+            "inner_mae": 25.5171
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 9.279
+          },
+          {
+            "video": 13,
+            "spec": "median_lag0_s11",
+            "inner_mae": 18.7253
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-2_s9",
+            "inner_mae": 39.154
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 24.9585
+          }
+        ]
+      }
+    },
+    {
+      "global_best": {
+        "valence": {
+          "spec": "median_lag-2_s11",
+          "inner_mae": 27.4961
+        },
+        "arousal": {
+          "spec": "median_lag-2_s15",
+          "inner_mae": 31.2854
+        }
+      },
+      "video_dim_best": {
+        "valence": [
+          {
+            "video": 1,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 24.4952
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 36.075
+          },
+          {
+            "video": 3,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 32.5929
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 23.1741
+          },
+          {
+            "video": 5,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 26.1967
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 28.6852
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-2_s15",
+            "inner_mae": 25.7026
+          },
+          {
+            "video": 8,
+            "spec": "median_lag-2_s9",
+            "inner_mae": 28.1068
+          },
+          {
+            "video": 9,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 25.576
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 23.1571
+          },
+          {
+            "video": 11,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 30.3607
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 18.0024
+          },
+          {
+            "video": 13,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 27.1649
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 27.4893
+          },
+          {
+            "video": 15,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 27.0797
+          }
+        ],
+        "arousal": [
+          {
+            "video": 1,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 32.4222
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 23.8152
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s9",
+            "inner_mae": 21.4749
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-3_s5",
+            "inner_mae": 30.3129
+          },
+          {
+            "video": 5,
+            "spec": "mean_lag-4_s15",
+            "inner_mae": 38.2019
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 28.7062
+          },
+          {
+            "video": 7,
+            "spec": "mean_lag-3_s11",
+            "inner_mae": 29.2111
+          },
+          {
+            "video": 8,
+            "spec": "mean_lag-4_s43",
+            "inner_mae": 57.9651
+          },
+          {
+            "video": 9,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 27.9506
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 24.0615
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 26.0847
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 16.8937
+          },
+          {
+            "video": 13,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 21.9652
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 43.8624
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 27.1026
+          }
+        ]
+      }
+    },
+    {
+      "global_best": {
+        "valence": {
+          "spec": "median_lag-1_s9",
+          "inner_mae": 26.1032
+        },
+        "arousal": {
+          "spec": "median_lag-2_s15",
+          "inner_mae": 31.0996
+        }
+      },
+      "video_dim_best": {
+        "valence": [
+          {
+            "video": 1,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 26.0619
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 27.677
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s5",
+            "inner_mae": 29.5441
+          },
+          {
+            "video": 4,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 25.4846
+          },
+          {
+            "video": 5,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 28.0071
+          },
+          {
+            "video": 6,
+            "spec": "median_lag0_s9",
+            "inner_mae": 23.6776
+          },
+          {
+            "video": 7,
+            "spec": "median_lag0_s11",
+            "inner_mae": 26.9789
+          },
+          {
+            "video": 8,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 29.9901
+          },
+          {
+            "video": 9,
+            "spec": "median_lag0_s5",
+            "inner_mae": 21.8575
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 23.423
+          },
+          {
+            "video": 11,
+            "spec": "median_lag0_s5",
+            "inner_mae": 32.5067
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 16.8159
+          },
+          {
+            "video": 13,
+            "spec": "median_lag0_s9",
+            "inner_mae": 24.3468
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 26.8382
+          },
+          {
+            "video": 15,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 23.4142
+          }
+        ],
+        "arousal": [
+          {
+            "video": 1,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 34.7068
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 20.4964
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s9",
+            "inner_mae": 22.7128
+          },
+          {
+            "video": 4,
+            "spec": "median_lag0_s9",
+            "inner_mae": 29.9892
+          },
+          {
+            "video": 5,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 40.1077
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-3_s43",
+            "inner_mae": 29.4149
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 28.4217
+          },
+          {
+            "video": 8,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 54.6267
+          },
+          {
+            "video": 9,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 26.1343
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 22.908
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 25.5457
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 14.1917
+          },
+          {
+            "video": 13,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 22.9903
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 43.1793
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 32.5515
+          }
+        ]
+      }
+    },
+    {
+      "global_best": {
+        "valence": {
+          "spec": "median_lag-1_s9",
+          "inner_mae": 27.4482
+        },
+        "arousal": {
+          "spec": "median_lag-2_s15",
+          "inner_mae": 31.6093
+        }
+      },
+      "video_dim_best": {
+        "valence": [
+          {
+            "video": 1,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 27.1217
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-3_s43",
+            "inner_mae": 36.3116
+          },
+          {
+            "video": 3,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 30.1796
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 23.6078
+          },
+          {
+            "video": 5,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 26.9348
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 26.7805
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 26.2585
+          },
+          {
+            "video": 8,
+            "spec": "median_lag-2_s9",
+            "inner_mae": 28.9179
+          },
+          {
+            "video": 9,
+            "spec": "median_lag0_s5",
+            "inner_mae": 24.3901
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 22.099
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 32.841
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 16.154
+          },
+          {
+            "video": 13,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 27.325
+          },
+          {
+            "video": 14,
+            "spec": "mean_lag-3_s5",
+            "inner_mae": 25.287
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-1_s15",
+            "inner_mae": 24.9956
+          }
+        ],
+        "arousal": [
+          {
+            "video": 1,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 31.5196
+          },
+          {
+            "video": 2,
+            "spec": "median_lag0_s21",
+            "inner_mae": 22.726
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s9",
+            "inner_mae": 22.403
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-4_s9",
+            "inner_mae": 31.1394
+          },
+          {
+            "video": 5,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 36.001
+          },
+          {
+            "video": 6,
+            "spec": "mean_lag-4_s43",
+            "inner_mae": 30.9561
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 30.1446
+          },
+          {
+            "video": 8,
+            "spec": "mean_lag-4_s43",
+            "inner_mae": 57.2038
+          },
+          {
+            "video": 9,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 29.7523
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 23.2984
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 27.2382
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s43",
+            "inner_mae": 15.7163
+          },
+          {
+            "video": 13,
+            "spec": "mean_lag-4_s11",
+            "inner_mae": 23.3599
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-4_s21",
+            "inner_mae": 41.7352
+          },
+          {
+            "video": 15,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 33.4388
+          }
+        ]
+      }
+    },
+    {
+      "global_best": {
+        "valence": {
+          "spec": "median_lag-1_s9",
+          "inner_mae": 26.898
+        },
+        "arousal": {
+          "spec": "median_lag-1_s11",
+          "inner_mae": 31.2561
+        }
+      },
+      "video_dim_best": {
+        "valence": [
+          {
+            "video": 1,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 25.0239
+          },
+          {
+            "video": 2,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 34.9071
+          },
+          {
+            "video": 3,
+            "spec": "median_lag0_s5",
+            "inner_mae": 28.3139
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 24.3225
+          },
+          {
+            "video": 5,
+            "spec": "mean_lag-4_s5",
+            "inner_mae": 23.9732
+          },
+          {
+            "video": 6,
+            "spec": "median_lag0_s21",
+            "inner_mae": 29.5389
+          },
+          {
+            "video": 7,
+            "spec": "median_lag-2_s11",
+            "inner_mae": 23.971
+          },
+          {
+            "video": 8,
+            "spec": "median_lag-1_s5",
+            "inner_mae": 26.5021
+          },
+          {
+            "video": 9,
+            "spec": "mean_lag1_s5",
+            "inner_mae": 24.8462
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-1_s9",
+            "inner_mae": 25.4321
+          },
+          {
+            "video": 11,
+            "spec": "median_lag0_s5",
+            "inner_mae": 25.561
+          },
+          {
+            "video": 12,
+            "spec": "median_lag-4_s5",
+            "inner_mae": 19.7556
+          },
+          {
+            "video": 13,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 28.5512
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-1_s11",
+            "inner_mae": 25.9372
+          },
+          {
+            "video": 15,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 26.1044
+          }
+        ],
+        "arousal": [
+          {
+            "video": 1,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 34.2049
+          },
+          {
+            "video": 2,
+            "spec": "median_lag0_s21",
+            "inner_mae": 24.4281
+          },
+          {
+            "video": 3,
+            "spec": "mean_lag-1_s5",
+            "inner_mae": 21.5633
+          },
+          {
+            "video": 4,
+            "spec": "mean_lag-3_s9",
+            "inner_mae": 30.4865
+          },
+          {
+            "video": 5,
+            "spec": "median_lag-2_s43",
+            "inner_mae": 33.5154
+          },
+          {
+            "video": 6,
+            "spec": "median_lag-3_s9",
+            "inner_mae": 29.5222
+          },
+          {
+            "video": 7,
+            "spec": "median_lag0_s15",
+            "inner_mae": 29.9379
+          },
+          {
+            "video": 8,
+            "spec": "mean_lag-4_s11",
+            "inner_mae": 53.5816
+          },
+          {
+            "video": 9,
+            "spec": "median_lag0_s5",
+            "inner_mae": 30.5699
+          },
+          {
+            "video": 10,
+            "spec": "median_lag-2_s21",
+            "inner_mae": 23.0315
+          },
+          {
+            "video": 11,
+            "spec": "mean_lag-2_s5",
+            "inner_mae": 25.7475
+          },
+          {
+            "video": 12,
+            "spec": "mean_lag-4_s21",
+            "inner_mae": 17.0169
+          },
+          {
+            "video": 13,
+            "spec": "mean_lag-4_s11",
+            "inner_mae": 23.9081
+          },
+          {
+            "video": 14,
+            "spec": "median_lag-1_s21",
+            "inner_mae": 44.5048
+          },
+          {
+            "video": 15,
+            "spec": "median_lag0_s15",
+            "inner_mae": 30.2945
+          }
+        ]
+      }
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "candidate_count": 84,
+      "val_samples": 6144,
+      "best_results": [
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t2p0]_A[098]",
+          "overall_mae": 25.9658,
+          "valence_mae": 24.5317,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.5305,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p6]_A[098]",
+          "overall_mae": 25.9659,
+          "valence_mae": 24.5318,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.5518,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t1p0]_A[098]",
+          "overall_mae": 25.9659,
+          "valence_mae": 24.5317,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.5397,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p3]_A[098]",
+          "overall_mae": 25.966,
+          "valence_mae": 24.532,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.58,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p15]_A[098]",
+          "overall_mae": 25.9661,
+          "valence_mae": 24.5322,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.6278,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t2p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5367,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.7755,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t1p0]_A[098]",
+          "overall_mae": 25.9685,
+          "valence_mae": 24.5369,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.7843,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p6]_A[098]",
+          "overall_mae": 25.9686,
+          "valence_mae": 24.5372,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.7961,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p15]_A[098]",
+          "overall_mae": 25.9687,
+          "valence_mae": 24.5374,
+          "arousal_mae": 27.4,
+          "overall_mse": 1232.0264,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p3]_A[098]",
+          "overall_mae": 25.9689,
+          "valence_mae": 24.5377,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.8264,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p15]_A[098]",
+          "overall_mae": 25.9692,
+          "valence_mae": 24.5385,
+          "arousal_mae": 27.4,
+          "overall_mse": 1231.8833,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p3]_A[098]",
+          "overall_mae": 25.9704,
+          "valence_mae": 24.5408,
+          "arousal_mae": 27.4,
+          "overall_mse": 1232.0245,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p6]_A[098]",
+          "overall_mae": 25.9715,
+          "valence_mae": 24.543,
+          "arousal_mae": 27.4,
+          "overall_mse": 1232.0369,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t1p0]_A[098]",
+          "overall_mae": 25.972,
+          "valence_mae": 24.5439,
+          "arousal_mae": 27.4,
+          "overall_mse": 1232.0448,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t2p0]_A[098]",
+          "overall_mae": 25.9723,
+          "valence_mae": 24.5447,
+          "arousal_mae": 27.4,
+          "overall_mse": 1232.052,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimHard]_A[098]",
+          "overall_mae": 25.9741,
+          "valence_mae": 24.5482,
+          "arousal_mae": 27.4,
+          "overall_mse": 1232.4652,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalHard]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p15]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p3]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p6]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t1p0]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t2p0]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p15]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p3]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p6]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t1p0]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t2p0]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p15]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p3]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p6]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t1p0]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t2p0]_A[098]",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.8168,
+          "arousal_mae": 27.4,
+          "overall_mse": 1251.6915,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t2p0",
+          "overall_mae": 26.2116,
+          "valence_mae": 24.5317,
+          "arousal_mae": 27.8916,
+          "overall_mse": 1251.1403,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t1p0",
+          "overall_mae": 26.2118,
+          "valence_mae": 24.5317,
+          "arousal_mae": 27.8919,
+          "overall_mse": 1251.1503,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimHard",
+          "overall_mae": 26.212,
+          "valence_mae": 24.5482,
+          "arousal_mae": 27.8758,
+          "overall_mse": 1251.0786,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t0p6",
+          "overall_mae": 26.2121,
+          "valence_mae": 24.5318,
+          "arousal_mae": 27.8924,
+          "overall_mse": 1251.1632,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t0p3",
+          "overall_mae": 26.2127,
+          "valence_mae": 24.532,
+          "arousal_mae": 27.8935,
+          "overall_mse": 1251.193,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t0p15",
+          "overall_mae": 26.2139,
+          "valence_mae": 24.5322,
+          "arousal_mae": 27.8956,
+          "overall_mse": 1251.241,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top5_t2p0",
+          "overall_mae": 26.2163,
+          "valence_mae": 24.5367,
+          "arousal_mae": 27.896,
+          "overall_mse": 1251.2643,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top5_t1p0",
+          "overall_mae": 26.2164,
+          "valence_mae": 24.5369,
+          "arousal_mae": 27.8959,
+          "overall_mse": 1251.2623,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top5_t0p6",
+          "overall_mae": 26.2165,
+          "valence_mae": 24.5372,
+          "arousal_mae": 27.8958,
+          "overall_mse": 1251.2601,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top5_t0p3",
+          "overall_mae": 26.2166,
+          "valence_mae": 24.5377,
+          "arousal_mae": 27.8955,
+          "overall_mse": 1251.256,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top5_t0p15",
+          "overall_mae": 26.2168,
+          "valence_mae": 24.5385,
+          "arousal_mae": 27.8952,
+          "overall_mse": 1251.2485,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top9_t0p15",
+          "overall_mae": 26.2173,
+          "valence_mae": 24.5374,
+          "arousal_mae": 27.8972,
+          "overall_mse": 1251.1884,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top9_t0p3",
+          "overall_mae": 26.2182,
+          "valence_mae": 24.5408,
+          "arousal_mae": 27.8957,
+          "overall_mse": 1251.1622,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top9_t0p6",
+          "overall_mae": 26.2189,
+          "valence_mae": 24.543,
+          "arousal_mae": 27.8947,
+          "overall_mse": 1251.1566,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top9_t1p0",
+          "overall_mae": 26.2191,
+          "valence_mae": 24.5439,
+          "arousal_mae": 27.8943,
+          "overall_mse": 1251.1566,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top9_t2p0",
+          "overall_mae": 26.2194,
+          "valence_mae": 24.5447,
+          "arousal_mae": 27.894,
+          "overall_mse": 1251.1575,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalHard]",
+          "overall_mae": 26.312,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.8718,
+          "overall_mse": 1262.1866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "candidate_count": 84,
+      "val_samples": 6144,
+      "best_results": [
+        {
+          "method": "V[AdaptiveGlobalHard]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p15]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p3]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p6]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t1p0]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t2p0]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p15]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p3]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p6]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t1p0]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t2p0]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p15]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p3]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p6]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t1p0]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t2p0]_A[098]",
+          "overall_mae": 37.2639,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.9939,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalHard",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p15",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p3",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p6",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t1p0",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t2p0",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p15",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p3",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p6",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t1p0",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t2p0",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p15",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p3",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p6",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t1p0",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t2p0",
+          "overall_mae": 37.2892,
+          "valence_mae": 33.0257,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2488.6023,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalHard]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p15]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p3]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p6]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t1p0]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t2p0]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p15]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p3]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p6]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t1p0]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t2p0]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p15]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p3]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p6]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t1p0]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t2p0]",
+          "overall_mae": 37.4176,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5527,
+          "overall_mse": 2486.2773,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t2p0]",
+          "overall_mae": 37.4859,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.6894,
+          "overall_mse": 2484.4155,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "candidate_count": 84,
+      "val_samples": 6144,
+      "best_results": [
+        {
+          "method": "AdaptiveGlobalHard",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p15",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p3",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p6",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t1p0",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t2p0",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p15",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p3",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p6",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t1p0",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t2p0",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p15",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p3",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p6",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t1p0",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t2p0",
+          "overall_mae": 26.9753,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1325.2352,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalHard]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p15]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p3]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p6]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t1p0]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t2p0]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p15]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p3]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p6]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t1p0]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t2p0]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p15]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p3]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p6]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t1p0]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t2p0]_A[098]",
+          "overall_mae": 27.0703,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1333.0018,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalHard]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p15]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p3]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p6]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t1p0]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t2p0]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p15]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p3]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p6]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t1p0]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t2p0]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p15]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p3]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p6]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t1p0]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t2p0]",
+          "overall_mae": 27.0781,
+          "valence_mae": 24.2619,
+          "arousal_mae": 29.8942,
+          "overall_mse": 1320.2775,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t2p0]_A[098]",
+          "overall_mae": 27.2633,
+          "valence_mae": 24.4425,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1330.7736,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "candidate_count": 84,
+      "val_samples": 6144,
+      "best_results": [
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t0p15]",
+          "overall_mae": 28.6752,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6761,
+          "overall_mse": 1806.6797,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t0p3]",
+          "overall_mae": 28.6758,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6773,
+          "overall_mse": 1806.8164,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t0p6]",
+          "overall_mae": 28.6762,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.678,
+          "overall_mse": 1806.89,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t1p0]",
+          "overall_mae": 28.6763,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6783,
+          "overall_mse": 1806.9198,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t2p0]",
+          "overall_mae": 28.6764,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6785,
+          "overall_mse": 1806.9424,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t0p15]",
+          "overall_mae": 28.6797,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6851,
+          "overall_mse": 1806.6274,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t0p3]",
+          "overall_mae": 28.68,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6857,
+          "overall_mse": 1806.6879,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t0p6]",
+          "overall_mae": 28.6802,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.686,
+          "overall_mse": 1806.7203,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t1p0]",
+          "overall_mae": 28.6802,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6861,
+          "overall_mse": 1806.7338,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t2p0]",
+          "overall_mae": 28.6803,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.6862,
+          "overall_mse": 1806.7437,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t0p15]",
+          "overall_mae": 28.6897,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.7051,
+          "overall_mse": 1806.942,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t0p3]",
+          "overall_mae": 28.6901,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.706,
+          "overall_mse": 1807.0107,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t0p6]",
+          "overall_mae": 28.6904,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.7065,
+          "overall_mse": 1807.0482,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t1p0]",
+          "overall_mae": 28.6905,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.7067,
+          "overall_mse": 1807.0636,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t2p0]",
+          "overall_mae": 28.6906,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.7069,
+          "overall_mse": 1807.0753,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimHard]",
+          "overall_mae": 28.7263,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.7784,
+          "overall_mse": 1812.3876,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalHard]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p15]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p3]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p6]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t1p0]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t2p0]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6039,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p15]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p3]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p6]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t1p0]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t2p0]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6039,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p15]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p3]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p6]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t1p0]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6071,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t2p0]",
+          "overall_mae": 28.7593,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.8443,
+          "overall_mse": 1821.6039,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t2p0]_A[098]",
+          "overall_mae": 28.8279,
+          "valence_mae": 29.1701,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1821.8229,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t1p0]_A[098]",
+          "overall_mae": 28.8282,
+          "valence_mae": 29.1707,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1821.8579,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p6]_A[098]",
+          "overall_mae": 28.8285,
+          "valence_mae": 29.1714,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1821.9047,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p3]_A[098]",
+          "overall_mae": 28.8295,
+          "valence_mae": 29.1733,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1822.0228,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p15]_A[098]",
+          "overall_mae": 28.8314,
+          "valence_mae": 29.1772,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1822.2623,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t2p0]_A[098]",
+          "overall_mae": 28.8497,
+          "valence_mae": 29.2137,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1824.603,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t1p0]_A[098]",
+          "overall_mae": 28.8498,
+          "valence_mae": 29.214,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1824.6193,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p6]_A[098]",
+          "overall_mae": 28.85,
+          "valence_mae": 29.2143,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1824.6411,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p3]_A[098]",
+          "overall_mae": 28.8505,
+          "valence_mae": 29.2153,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1824.6963,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p15]_A[098]",
+          "overall_mae": 28.8514,
+          "valence_mae": 29.2172,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1824.8086,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p15]_A[098]",
+          "overall_mae": 28.8531,
+          "valence_mae": 29.2205,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1823.5033,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimHard]_A[098]",
+          "overall_mae": 28.8543,
+          "valence_mae": 29.223,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1826.1801,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p3]_A[098]",
+          "overall_mae": 28.8562,
+          "valence_mae": 29.2268,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1823.5748,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p6]_A[098]",
+          "overall_mae": 28.8581,
+          "valence_mae": 29.2306,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1823.6373,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t1p0]_A[098]",
+          "overall_mae": 28.8589,
+          "valence_mae": 29.2323,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1823.668,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t2p0]_A[098]",
+          "overall_mae": 28.8596,
+          "valence_mae": 29.2335,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1823.6927,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top5_t2p0",
+          "overall_mae": 28.9282,
+          "valence_mae": 29.1701,
+          "arousal_mae": 28.6862,
+          "overall_mse": 1836.3287,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "candidate_count": 84,
+      "val_samples": 6144,
+      "best_results": [
+        {
+          "method": "V[098]_A[AdaptiveVideoDimHard]",
+          "overall_mae": 25.9436,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3548,
+          "overall_mse": 1288.4563,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.9982,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalHard]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p15]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p3]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p6]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t1p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t2p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p15]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p3]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p6]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t1p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t2p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p15]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p3]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p6]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t1p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t2p0]_A[098]",
+          "overall_mae": 25.9683,
+          "valence_mae": 24.5527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1307.1459,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t2p0]",
+          "overall_mae": 25.9722,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4121,
+          "overall_mse": 1290.5394,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t1p0]",
+          "overall_mae": 25.9725,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1290.5397,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t0p6]",
+          "overall_mae": 25.9727,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4131,
+          "overall_mse": 1290.5402,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t0p3]",
+          "overall_mae": 25.9734,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4144,
+          "overall_mse": 1290.5414,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top3_t0p15]",
+          "overall_mae": 25.9746,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4169,
+          "overall_mse": 1290.5435,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t0p15]",
+          "overall_mae": 25.9838,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4352,
+          "overall_mse": 1288.6591,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t0p3]",
+          "overall_mae": 25.9886,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4448,
+          "overall_mse": 1288.4214,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimHard",
+          "overall_mae": 25.9894,
+          "valence_mae": 24.624,
+          "arousal_mae": 27.3548,
+          "overall_mse": 1285.3048,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t0p6]",
+          "overall_mae": 25.9913,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4501,
+          "overall_mse": 1288.3206,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t1p0]",
+          "overall_mae": 25.9923,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4522,
+          "overall_mse": 1288.2842,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top5_t2p0]",
+          "overall_mae": 25.9931,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.4538,
+          "overall_mse": 1288.2585,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p15]_A[098]",
+          "overall_mae": 25.9985,
+          "valence_mae": 24.6131,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.5365,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t2p0]_A[098]",
+          "overall_mae": 25.9991,
+          "valence_mae": 24.6142,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1292.9149,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t1p0]_A[098]",
+          "overall_mae": 25.9993,
+          "valence_mae": 24.6147,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1292.9388,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p6]_A[098]",
+          "overall_mae": 25.9996,
+          "valence_mae": 24.6153,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1292.9698,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p3]_A[098]",
+          "overall_mae": 26.0001,
+          "valence_mae": 24.6162,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.6538,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p3]_A[098]",
+          "overall_mae": 26.0003,
+          "valence_mae": 24.6166,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.0435,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t0p6]_A[098]",
+          "overall_mae": 26.0013,
+          "valence_mae": 24.6187,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.7498,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top3_t0p15]_A[098]",
+          "overall_mae": 26.0014,
+          "valence_mae": 24.6189,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.1715,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t1p0]_A[098]",
+          "overall_mae": 26.0019,
+          "valence_mae": 24.6198,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.7955,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top5_t2p0]_A[098]",
+          "overall_mae": 26.0023,
+          "valence_mae": 24.6207,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.8323,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p15]_A[098]",
+          "overall_mae": 26.0023,
+          "valence_mae": 24.6207,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.5277,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimHard]_A[098]",
+          "overall_mae": 26.004,
+          "valence_mae": 24.624,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.8467,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p3]_A[098]",
+          "overall_mae": 26.0055,
+          "valence_mae": 24.6272,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.6149,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t0p6]_A[098]",
+          "overall_mae": 26.0076,
+          "valence_mae": 24.6313,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.6748,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t1p0]_A[098]",
+          "overall_mae": 26.0085,
+          "valence_mae": 24.633,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.7006,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveVideoDimSoft_top9_t2p0]_A[098]",
+          "overall_mae": 26.0091,
+          "valence_mae": 24.6343,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1293.7203,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t2p0",
+          "overall_mae": 26.0131,
+          "valence_mae": 24.6142,
+          "arousal_mae": 27.4121,
+          "overall_mse": 1286.4562,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t1p0",
+          "overall_mae": 26.0136,
+          "valence_mae": 24.6147,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1286.4803,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t0p6",
+          "overall_mae": 26.0142,
+          "valence_mae": 24.6153,
+          "arousal_mae": 27.4131,
+          "overall_mse": 1286.512,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t0p3",
+          "overall_mae": 26.0155,
+          "valence_mae": 24.6166,
+          "arousal_mae": 27.4144,
+          "overall_mse": 1286.5865,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveVideoDimSoft_top3_t0p15",
+          "overall_mae": 26.0179,
+          "valence_mae": 24.6189,
+          "arousal_mae": 27.4169,
+          "overall_mse": 1286.7168,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "candidate_count": 84,
+      "val_samples": 6144,
+      "best_results": [
+        {
+          "method": "098_PatternPrior_reference",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalHard]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p15]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p3]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t0p6]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t1p0]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top3_t2p0]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p15]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p3]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t0p6]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t1p0]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top5_t2p0]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p15]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p3]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t0p6]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t1p0]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[AdaptiveGlobalSoft_top9_t2p0]_A[098]",
+          "overall_mae": 27.3165,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1423.2866,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalHard]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p15]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p3]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t0p6]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t1p0]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top3_t2p0]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p15]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p3]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t0p6]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t1p0]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top5_t2p0]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p15]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p3]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t0p6]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t1p0]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveGlobalSoft_top9_t2p0]",
+          "overall_mae": 27.3412,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.343,
+          "overall_mse": 1424.024,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalHard",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p15",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p3",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t0p6",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t1p0",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top3_t2p0",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p15",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p3",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t0p6",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t1p0",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top5_t2p0",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p15",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p3",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t0p6",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t1p0",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "AdaptiveGlobalSoft_top9_t2p0",
+          "overall_mae": 27.3601,
+          "valence_mae": 26.3772,
+          "arousal_mae": 28.343,
+          "overall_mse": 1433.4088,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        },
+        {
+          "method": "V[098]_A[AdaptiveVideoDimSoft_top9_t2p0]",
+          "overall_mae": 27.5578,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.7762,
+          "overall_mse": 1416.3917,
+          "notes": "Adaptive stimulus-response prior with inner train-fold CV."
+        }
+      ]
+    }
+  ]
+}

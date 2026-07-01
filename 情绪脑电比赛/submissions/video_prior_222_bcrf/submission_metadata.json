@@ -1,0 +1,17 @@
+{
+  "method": "222_BCRF_onSCRF",
+  "local_cv_overall_mae": 28.6868,
+  "local_cv_valence_mae": 26.8958,
+  "local_cv_arousal_mae": 30.4777,
+  "artifact_rows": 1536,
+  "train_rows": 36864,
+  "seed": 2026,
+  "note": "Video-time prior trained from public trainval labels; inference maps sample_id video/time to the learned trajectory.",
+  "component_reference": {
+    "p200": "manual milestone fusion",
+    "p218": "SCRF valence consensus residual field",
+    "p222": "BCRF credible residual on SCRF",
+    "p188": "valence risk expert",
+    "p195": "arousal conformal median-band projector"
+  }
+}

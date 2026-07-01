@@ -1,0 +1,1451 @@
+{
+  "model": "GraphMambaResidualRegressor",
+  "target_mode": "valence",
+  "input_modality": "both",
+  "fusion_mode": "pool",
+  "modality_dropout": 0.0,
+  "teacher_cache": null,
+  "teacher_keys": [],
+  "teacher_dim": 0,
+  "distill_weight": 0.0,
+  "pretrained_graph": null,
+  "pretrained_info": null,
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_trials": 300,
+    "val_trials": 60,
+    "train_samples": 30720,
+    "val_samples": 6144
+  },
+  "feature_summary": {
+    "subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20",
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "samples": 36864,
+    "feature_dim": 779,
+    "eeg_shape": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs_shape": [
+      36864,
+      51,
+      9
+    ],
+    "standardization_keys": [
+      "eeg_mean",
+      "eeg_std",
+      "fnirs_mean",
+      "fnirs_std"
+    ],
+    "multiscale_windows": [
+      1,
+      5,
+      9
+    ],
+    "feature_norm": "none",
+    "eeg_feature_dim": 15,
+    "fnirs_feature_dim": 27,
+    "teacher_dim": 0
+  },
+  "best": {
+    "method": "GraphMambaResidual_valence",
+    "overall_mae": 29.8948,
+    "valence_mae": 28.3788,
+    "arousal_mae": 31.4107,
+    "overall_mse": 1521.4056,
+    "notes": "Adaptive channel graph encoders plus Mamba-like SSM temporal residual model.",
+    "epoch": 1,
+    "train_loss": 0.037378
+  },
+  "smoothing_results": [
+    {
+      "method": "GraphMambaResidual_smooth3",
+      "overall_mae": 29.8813,
+      "valence_mae": 28.3669,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1519.7101,
+      "notes": "Graph-Mamba residual with moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Graph-Mamba residual with moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Graph-Mamba residual with moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.00",
+      "overall_mae": 29.9574,
+      "valence_mae": 28.5041,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.131,
+      "notes": "Scale residual by 0.00 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.00_smooth3",
+      "overall_mae": 29.946,
+      "valence_mae": 28.4963,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1527.4351,
+      "notes": "Scale residual by 0.00, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.00_smooth5",
+      "overall_mae": 29.9461,
+      "valence_mae": 28.503,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1525.8004,
+      "notes": "Scale residual by 0.00, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.00_smooth9",
+      "overall_mae": 29.9699,
+      "valence_mae": 28.5501,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1522.6476,
+      "notes": "Scale residual by 0.00, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.25",
+      "overall_mae": 29.9353,
+      "valence_mae": 28.46,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1526.8291,
+      "notes": "Scale residual by 0.25 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.25_smooth3",
+      "overall_mae": 29.9223,
+      "valence_mae": 28.449,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1525.1332,
+      "notes": "Scale residual by 0.25, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.25_smooth5",
+      "overall_mae": 29.9209,
+      "valence_mae": 28.4527,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1523.4966,
+      "notes": "Scale residual by 0.25, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.25_smooth9",
+      "overall_mae": 29.9426,
+      "valence_mae": 28.4956,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1520.3369,
+      "notes": "Scale residual by 0.25, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.50",
+      "overall_mae": 29.9177,
+      "valence_mae": 28.4247,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1524.774,
+      "notes": "Scale residual by 0.50 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.50_smooth3",
+      "overall_mae": 29.9049,
+      "valence_mae": 28.4142,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1523.0786,
+      "notes": "Scale residual by 0.50, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.50_smooth5",
+      "overall_mae": 29.9016,
+      "valence_mae": 28.414,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1521.4396,
+      "notes": "Scale residual by 0.50, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.50_smooth9",
+      "overall_mae": 29.9215,
+      "valence_mae": 28.4533,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1518.2729,
+      "notes": "Scale residual by 0.50, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.75",
+      "overall_mae": 29.9046,
+      "valence_mae": 28.3985,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1522.9664,
+      "notes": "Scale residual by 0.75 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.75_smooth3",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.3869,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1521.2709,
+      "notes": "Scale residual by 0.75, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.75_smooth5",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3859,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1519.6295,
+      "notes": "Scale residual by 0.75, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale0.75_smooth9",
+      "overall_mae": 29.9045,
+      "valence_mae": 28.4194,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1516.4561,
+      "notes": "Scale residual by 0.75, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_smooth3",
+      "overall_mae": 29.8813,
+      "valence_mae": 28.3669,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1519.7101,
+      "notes": "Scale residual by 1.00, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.25",
+      "overall_mae": 29.8879,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1520.0923,
+      "notes": "Scale residual by 1.25 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.25_smooth3",
+      "overall_mae": 29.8745,
+      "valence_mae": 28.3534,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1518.3965,
+      "notes": "Scale residual by 1.25, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.25_smooth5",
+      "overall_mae": 29.8692,
+      "valence_mae": 28.3491,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1516.7505,
+      "notes": "Scale residual by 1.25, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.25_smooth9",
+      "overall_mae": 29.8802,
+      "valence_mae": 28.3708,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1513.5629,
+      "notes": "Scale residual by 1.25, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_smooth3",
+      "overall_mae": 29.8717,
+      "valence_mae": 28.3478,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1517.3297,
+      "notes": "Scale residual by 1.50, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.75",
+      "overall_mae": 29.8857,
+      "valence_mae": 28.3608,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1518.2065,
+      "notes": "Scale residual by 1.75 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.75_smooth3",
+      "overall_mae": 29.8731,
+      "valence_mae": 28.3505,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1516.5101,
+      "notes": "Scale residual by 1.75, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.75_smooth5",
+      "overall_mae": 29.8654,
+      "valence_mae": 28.3416,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.8594,
+      "notes": "Scale residual by 1.75, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.75_smooth9",
+      "overall_mae": 29.871,
+      "valence_mae": 28.3524,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.6576,
+      "notes": "Scale residual by 1.75, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_smooth3",
+      "overall_mae": 29.8784,
+      "valence_mae": 28.361,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1515.9371,
+      "notes": "Scale residual by 2.00, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.25",
+      "overall_mae": 29.9008,
+      "valence_mae": 28.3909,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.3094,
+      "notes": "Scale residual by 2.25 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.25_smooth3",
+      "overall_mae": 29.887,
+      "valence_mae": 28.3784,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1515.6117,
+      "notes": "Scale residual by 2.25, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.25_smooth5",
+      "overall_mae": 29.8788,
+      "valence_mae": 28.3685,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.9562,
+      "notes": "Scale residual by 2.25, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.25_smooth9",
+      "overall_mae": 29.8778,
+      "valence_mae": 28.366,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.7399,
+      "notes": "Scale residual by 2.25, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50",
+      "overall_mae": 29.9146,
+      "valence_mae": 28.4185,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2316,
+      "notes": "Scale residual by 2.50 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_smooth3",
+      "overall_mae": 29.8999,
+      "valence_mae": 28.4042,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1515.5328,
+      "notes": "Scale residual by 2.50, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_smooth5",
+      "overall_mae": 29.8904,
+      "valence_mae": 28.3916,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.875,
+      "notes": "Scale residual by 2.50, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_smooth9",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3853,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6514,
+      "notes": "Scale residual by 2.50, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4525,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.4009,
+      "notes": "Scale residual by 2.75 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_smooth3",
+      "overall_mae": 29.9165,
+      "valence_mae": 28.4373,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1515.7012,
+      "notes": "Scale residual by 2.75, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_smooth5",
+      "overall_mae": 29.9064,
+      "valence_mae": 28.4237,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.0409,
+      "notes": "Scale residual by 2.75, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_smooth9",
+      "overall_mae": 29.902,
+      "valence_mae": 28.4143,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.8099,
+      "notes": "Scale residual by 2.75, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00",
+      "overall_mae": 29.9522,
+      "valence_mae": 28.4937,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.8173,
+      "notes": "Scale residual by 3.00 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_smooth3",
+      "overall_mae": 29.9364,
+      "valence_mae": 28.477,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1516.1163,
+      "notes": "Scale residual by 3.00, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_smooth5",
+      "overall_mae": 29.9263,
+      "valence_mae": 28.4635,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.4537,
+      "notes": "Scale residual by 3.00, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4511,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.2155,
+      "notes": "Scale residual by 3.00, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale4.00",
+      "overall_mae": 30.0791,
+      "valence_mae": 28.7474,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.9541,
+      "notes": "Scale residual by 4.00 before optional smoothing."
+    },
+    {
+      "method": "GraphMambaResidual_scale4.00_smooth3",
+      "overall_mae": 30.061,
+      "valence_mae": 28.7263,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1520.2477,
+      "notes": "Scale residual by 4.00, then moving-average smoothing window=3."
+    },
+    {
+      "method": "GraphMambaResidual_scale4.00_smooth5",
+      "overall_mae": 30.0493,
+      "valence_mae": 28.7094,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.5747,
+      "notes": "Scale residual by 4.00, then moving-average smoothing window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale4.00_smooth9",
+      "overall_mae": 30.0384,
+      "valence_mae": 28.6871,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1515.3066,
+      "notes": "Scale residual by 4.00, then moving-average smoothing window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip5",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00, clip raw residual to +/-5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip5_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, clip to +/-5, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip5_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, clip to +/-5, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip10",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00, clip raw residual to +/-10."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip10_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, clip to +/-10, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip10_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, clip to +/-10, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip15",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00, clip raw residual to +/-15."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip15_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, clip to +/-15, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip15_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, clip to +/-15, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip20",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00, clip raw residual to +/-20."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip20_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, clip to +/-20, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip20_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, clip to +/-20, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip30",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00, clip raw residual to +/-30."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip30_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, clip to +/-30, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip30_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, clip to +/-30, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip40",
+      "overall_mae": 29.8948,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1521.4056,
+      "notes": "Scale residual by 1.00, clip raw residual to +/-40."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip40_smooth5",
+      "overall_mae": 29.8772,
+      "valence_mae": 28.3651,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1518.0665,
+      "notes": "Scale residual by 1.00, clip to +/-40, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.00_clip40_smooth9",
+      "overall_mae": 29.8907,
+      "valence_mae": 28.3917,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1514.8859,
+      "notes": "Scale residual by 1.00, clip to +/-40, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip5",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50, clip raw residual to +/-5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip5_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, clip to +/-5, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip5_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, clip to +/-5, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip10",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50, clip raw residual to +/-10."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip10_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, clip to +/-10, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip10_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, clip to +/-10, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip15",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50, clip raw residual to +/-15."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip15_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, clip to +/-15, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip15_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, clip to +/-15, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip20",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50, clip raw residual to +/-20."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip20_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, clip to +/-20, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip20_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, clip to +/-20, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip30",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50, clip raw residual to +/-30."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip30_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, clip to +/-30, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip30_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, clip to +/-30, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip40",
+      "overall_mae": 29.8849,
+      "valence_mae": 28.3591,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1519.0258,
+      "notes": "Scale residual by 1.50, clip raw residual to +/-40."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip40_smooth5",
+      "overall_mae": 29.8648,
+      "valence_mae": 28.3405,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1515.6815,
+      "notes": "Scale residual by 1.50, clip to +/-40, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale1.50_clip40_smooth9",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3573,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1512.4867,
+      "notes": "Scale residual by 1.50, clip to +/-40, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip5",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00, clip raw residual to +/-5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip5_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, clip to +/-5, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip5_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, clip to +/-5, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip10",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00, clip raw residual to +/-10."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip10_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, clip to +/-10, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip10_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, clip to +/-10, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip15",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00, clip raw residual to +/-15."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip15_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, clip to +/-15, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip15_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, clip to +/-15, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip20",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00, clip raw residual to +/-20."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip20_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, clip to +/-20, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip20_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, clip to +/-20, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip30",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00, clip raw residual to +/-30."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip30_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, clip to +/-30, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip30_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, clip to +/-30, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip40",
+      "overall_mae": 29.8913,
+      "valence_mae": 28.372,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.6344,
+      "notes": "Scale residual by 2.00, clip raw residual to +/-40."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip40_smooth5",
+      "overall_mae": 29.8705,
+      "valence_mae": 28.3517,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.2843,
+      "notes": "Scale residual by 2.00, clip to +/-40, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.00_clip40_smooth9",
+      "overall_mae": 29.8725,
+      "valence_mae": 28.3554,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.0753,
+      "notes": "Scale residual by 2.00, clip to +/-40, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip5",
+      "overall_mae": 29.9099,
+      "valence_mae": 28.4091,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2513,
+      "notes": "Scale residual by 2.50, clip raw residual to +/-5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip5_smooth5",
+      "overall_mae": 29.8864,
+      "valence_mae": 28.3835,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.8989,
+      "notes": "Scale residual by 2.50, clip to +/-5, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip5_smooth9",
+      "overall_mae": 29.8841,
+      "valence_mae": 28.3786,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6807,
+      "notes": "Scale residual by 2.50, clip to +/-5, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip10",
+      "overall_mae": 29.9146,
+      "valence_mae": 28.4185,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2316,
+      "notes": "Scale residual by 2.50, clip raw residual to +/-10."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip10_smooth5",
+      "overall_mae": 29.8904,
+      "valence_mae": 28.3916,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.875,
+      "notes": "Scale residual by 2.50, clip to +/-10, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip10_smooth9",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3853,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6514,
+      "notes": "Scale residual by 2.50, clip to +/-10, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip15",
+      "overall_mae": 29.9146,
+      "valence_mae": 28.4185,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2316,
+      "notes": "Scale residual by 2.50, clip raw residual to +/-15."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip15_smooth5",
+      "overall_mae": 29.8904,
+      "valence_mae": 28.3916,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.875,
+      "notes": "Scale residual by 2.50, clip to +/-15, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip15_smooth9",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3853,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6514,
+      "notes": "Scale residual by 2.50, clip to +/-15, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip20",
+      "overall_mae": 29.9146,
+      "valence_mae": 28.4185,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2316,
+      "notes": "Scale residual by 2.50, clip raw residual to +/-20."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip20_smooth5",
+      "overall_mae": 29.8904,
+      "valence_mae": 28.3916,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.875,
+      "notes": "Scale residual by 2.50, clip to +/-20, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip20_smooth9",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3853,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6514,
+      "notes": "Scale residual by 2.50, clip to +/-20, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip30",
+      "overall_mae": 29.9146,
+      "valence_mae": 28.4185,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2316,
+      "notes": "Scale residual by 2.50, clip raw residual to +/-30."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip30_smooth5",
+      "overall_mae": 29.8904,
+      "valence_mae": 28.3916,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.875,
+      "notes": "Scale residual by 2.50, clip to +/-30, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip30_smooth9",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3853,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6514,
+      "notes": "Scale residual by 2.50, clip to +/-30, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip40",
+      "overall_mae": 29.9146,
+      "valence_mae": 28.4185,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.2316,
+      "notes": "Scale residual by 2.50, clip raw residual to +/-40."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip40_smooth5",
+      "overall_mae": 29.8904,
+      "valence_mae": 28.3916,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.875,
+      "notes": "Scale residual by 2.50, clip to +/-40, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.50_clip40_smooth9",
+      "overall_mae": 29.8875,
+      "valence_mae": 28.3853,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.6514,
+      "notes": "Scale residual by 2.50, clip to +/-40, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip5",
+      "overall_mae": 29.9105,
+      "valence_mae": 28.4103,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.1758,
+      "notes": "Scale residual by 2.75, clip raw residual to +/-5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip5_smooth5",
+      "overall_mae": 29.8867,
+      "valence_mae": 28.3843,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.8173,
+      "notes": "Scale residual by 2.75, clip to +/-5, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip5_smooth9",
+      "overall_mae": 29.8842,
+      "valence_mae": 28.3788,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.5928,
+      "notes": "Scale residual by 2.75, clip to +/-5, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip10",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4525,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.4009,
+      "notes": "Scale residual by 2.75, clip raw residual to +/-10."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip10_smooth5",
+      "overall_mae": 29.9064,
+      "valence_mae": 28.4237,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.0409,
+      "notes": "Scale residual by 2.75, clip to +/-10, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip10_smooth9",
+      "overall_mae": 29.902,
+      "valence_mae": 28.4143,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.8099,
+      "notes": "Scale residual by 2.75, clip to +/-10, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip15",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4525,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.4009,
+      "notes": "Scale residual by 2.75, clip raw residual to +/-15."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip15_smooth5",
+      "overall_mae": 29.9064,
+      "valence_mae": 28.4237,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.0409,
+      "notes": "Scale residual by 2.75, clip to +/-15, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip15_smooth9",
+      "overall_mae": 29.902,
+      "valence_mae": 28.4143,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.8099,
+      "notes": "Scale residual by 2.75, clip to +/-15, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip20",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4525,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.4009,
+      "notes": "Scale residual by 2.75, clip raw residual to +/-20."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip20_smooth5",
+      "overall_mae": 29.9064,
+      "valence_mae": 28.4237,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.0409,
+      "notes": "Scale residual by 2.75, clip to +/-20, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip20_smooth9",
+      "overall_mae": 29.902,
+      "valence_mae": 28.4143,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.8099,
+      "notes": "Scale residual by 2.75, clip to +/-20, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip30",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4525,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.4009,
+      "notes": "Scale residual by 2.75, clip raw residual to +/-30."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip30_smooth5",
+      "overall_mae": 29.9064,
+      "valence_mae": 28.4237,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.0409,
+      "notes": "Scale residual by 2.75, clip to +/-30, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip30_smooth9",
+      "overall_mae": 29.902,
+      "valence_mae": 28.4143,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.8099,
+      "notes": "Scale residual by 2.75, clip to +/-30, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip40",
+      "overall_mae": 29.9316,
+      "valence_mae": 28.4525,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.4009,
+      "notes": "Scale residual by 2.75, clip raw residual to +/-40."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip40_smooth5",
+      "overall_mae": 29.9064,
+      "valence_mae": 28.4237,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.0409,
+      "notes": "Scale residual by 2.75, clip to +/-40, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale2.75_clip40_smooth9",
+      "overall_mae": 29.902,
+      "valence_mae": 28.4143,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.8099,
+      "notes": "Scale residual by 2.75, clip to +/-40, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip5",
+      "overall_mae": 29.9099,
+      "valence_mae": 28.4091,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.1578,
+      "notes": "Scale residual by 3.00, clip raw residual to +/-5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip5_smooth5",
+      "overall_mae": 29.8862,
+      "valence_mae": 28.3832,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1513.799,
+      "notes": "Scale residual by 3.00, clip to +/-5, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip5_smooth9",
+      "overall_mae": 29.8838,
+      "valence_mae": 28.3779,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1510.576,
+      "notes": "Scale residual by 3.00, clip to +/-5, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip10",
+      "overall_mae": 29.9522,
+      "valence_mae": 28.4937,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.8173,
+      "notes": "Scale residual by 3.00, clip raw residual to +/-10."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip10_smooth5",
+      "overall_mae": 29.9263,
+      "valence_mae": 28.4635,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.4537,
+      "notes": "Scale residual by 3.00, clip to +/-10, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip10_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4511,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.2155,
+      "notes": "Scale residual by 3.00, clip to +/-10, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip15",
+      "overall_mae": 29.9522,
+      "valence_mae": 28.4937,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.8173,
+      "notes": "Scale residual by 3.00, clip raw residual to +/-15."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip15_smooth5",
+      "overall_mae": 29.9263,
+      "valence_mae": 28.4635,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.4537,
+      "notes": "Scale residual by 3.00, clip to +/-15, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip15_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4511,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.2155,
+      "notes": "Scale residual by 3.00, clip to +/-15, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip20",
+      "overall_mae": 29.9522,
+      "valence_mae": 28.4937,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.8173,
+      "notes": "Scale residual by 3.00, clip raw residual to +/-20."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip20_smooth5",
+      "overall_mae": 29.9263,
+      "valence_mae": 28.4635,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.4537,
+      "notes": "Scale residual by 3.00, clip to +/-20, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip20_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4511,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.2155,
+      "notes": "Scale residual by 3.00, clip to +/-20, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip30",
+      "overall_mae": 29.9522,
+      "valence_mae": 28.4937,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.8173,
+      "notes": "Scale residual by 3.00, clip raw residual to +/-30."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip30_smooth5",
+      "overall_mae": 29.9263,
+      "valence_mae": 28.4635,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.4537,
+      "notes": "Scale residual by 3.00, clip to +/-30, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip30_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4511,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.2155,
+      "notes": "Scale residual by 3.00, clip to +/-30, then smooth window=9."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip40",
+      "overall_mae": 29.9522,
+      "valence_mae": 28.4937,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1517.8173,
+      "notes": "Scale residual by 3.00, clip raw residual to +/-40."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip40_smooth5",
+      "overall_mae": 29.9263,
+      "valence_mae": 28.4635,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1514.4537,
+      "notes": "Scale residual by 3.00, clip to +/-40, then smooth window=5."
+    },
+    {
+      "method": "GraphMambaResidual_scale3.00_clip40_smooth9",
+      "overall_mae": 29.9204,
+      "valence_mae": 28.4511,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1511.2155,
+      "notes": "Scale residual by 3.00, clip to +/-40, then smooth window=9."
+    }
+  ],
+  "checkpoint": "experiments\\checkpoints\\graph_mamba\\hybrid_temporal_159.pt"
+}

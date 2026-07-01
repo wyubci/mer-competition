@@ -1,0 +1,886 @@
+{
+  "method": "Tree residual expert over selected EEG/fNIRS tabular features",
+  "feature_cache": "experiments/features/asac_features_20_4.npz",
+  "feature_summary": {
+    "subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20",
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "samples": 36864,
+    "feature_dim": 779,
+    "eeg_shape": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs_shape": [
+      36864,
+      51,
+      9
+    ],
+    "standardization_keys": [
+      "eeg_mean",
+      "eeg_std",
+      "fnirs_mean",
+      "fnirs_std"
+    ]
+  },
+  "selected_feature_count": 220,
+  "context_feature_dim": 23,
+  "split": {
+    "train_subjects": [
+      "test_1",
+      "test_2",
+      "test_3",
+      "test_4",
+      "test_5",
+      "test_6",
+      "test_7",
+      "test_8",
+      "test_9",
+      "test_10",
+      "test_11",
+      "test_12",
+      "test_13",
+      "test_14",
+      "test_15",
+      "test_16",
+      "test_17",
+      "test_18",
+      "test_19",
+      "test_20"
+    ],
+    "val_subjects": [
+      "test_21",
+      "test_22",
+      "test_23",
+      "test_24"
+    ],
+    "train_samples": 30720,
+    "val_samples": 6144
+  },
+  "results": [
+    {
+      "method": "VideoTimeMean",
+      "overall_mae": 29.9574,
+      "valence_mae": 28.5041,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.131,
+      "notes": "No signal prior."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs13_sigma7p5",
+      "overall_mae": 30.032,
+      "valence_mae": 28.5628,
+      "arousal_mae": 31.5013,
+      "overall_mse": 1532.6113,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs13_sigma10p0",
+      "overall_mae": 30.0327,
+      "valence_mae": 28.5661,
+      "arousal_mae": 31.4993,
+      "overall_mse": 1531.8512,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs13_sigma15p0",
+      "overall_mae": 30.0349,
+      "valence_mae": 28.571,
+      "arousal_mae": 31.4988,
+      "overall_mse": 1530.7692,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs17_sigma7p5",
+      "overall_mae": 30.0364,
+      "valence_mae": 28.5684,
+      "arousal_mae": 31.5043,
+      "overall_mse": 1532.265,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_smooth5",
+      "overall_mae": 30.0382,
+      "valence_mae": 28.5665,
+      "arousal_mae": 31.5098,
+      "overall_mse": 1532.35,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs13_sigma20p0",
+      "overall_mae": 30.0387,
+      "valence_mae": 28.5773,
+      "arousal_mae": 31.5002,
+      "overall_mse": 1530.0968,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs17_sigma10p0",
+      "overall_mae": 30.0397,
+      "valence_mae": 28.5759,
+      "arousal_mae": 31.5034,
+      "overall_mse": 1531.2477,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs21_sigma7p5",
+      "overall_mae": 30.0436,
+      "valence_mae": 28.5762,
+      "arousal_mae": 31.5111,
+      "overall_mse": 1532.1283,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs17_sigma15p0",
+      "overall_mae": 30.0463,
+      "valence_mae": 28.5885,
+      "arousal_mae": 31.504,
+      "overall_mse": 1529.7572,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs21_sigma10p0",
+      "overall_mae": 30.0506,
+      "valence_mae": 28.5894,
+      "arousal_mae": 31.5119,
+      "overall_mse": 1530.903,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_smooth9",
+      "overall_mae": 30.0543,
+      "valence_mae": 28.5994,
+      "arousal_mae": 31.5092,
+      "overall_mse": 1529.127,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs17_sigma20p0",
+      "overall_mae": 30.0545,
+      "valence_mae": 28.6022,
+      "arousal_mae": 31.5069,
+      "overall_mse": 1528.7871,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25",
+      "overall_mae": 30.058,
+      "valence_mae": 28.5767,
+      "arousal_mae": 31.5392,
+      "overall_mse": 1535.7806,
+      "notes": "Tree residual expert over VideoTimeMean prior."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs21_sigma15p0",
+      "overall_mae": 30.0635,
+      "valence_mae": 28.6124,
+      "arousal_mae": 31.5146,
+      "overall_mse": 1529.0864,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_pabs21_sigma20p0",
+      "overall_mae": 30.0778,
+      "valence_mae": 28.6358,
+      "arousal_mae": 31.5197,
+      "overall_mse": 1527.8929,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_smooth13",
+      "overall_mae": 30.1029,
+      "valence_mae": 28.6762,
+      "arousal_mae": 31.5295,
+      "overall_mse": 1526.6559,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs13_sigma7p5",
+      "overall_mae": 30.1351,
+      "valence_mae": 28.5271,
+      "arousal_mae": 31.743,
+      "overall_mse": 1542.9193,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs13_sigma10p0",
+      "overall_mae": 30.1371,
+      "valence_mae": 28.5314,
+      "arousal_mae": 31.7429,
+      "overall_mse": 1542.1549,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs13_sigma15p0",
+      "overall_mae": 30.14,
+      "valence_mae": 28.5362,
+      "arousal_mae": 31.7439,
+      "overall_mse": 1541.0635,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_smooth5",
+      "overall_mae": 30.1404,
+      "valence_mae": 28.5277,
+      "arousal_mae": 31.7531,
+      "overall_mse": 1542.7543,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs17_sigma7p5",
+      "overall_mae": 30.1409,
+      "valence_mae": 28.5347,
+      "arousal_mae": 31.7471,
+      "overall_mse": 1542.5553,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs13_sigma20p0",
+      "overall_mae": 30.1438,
+      "valence_mae": 28.542,
+      "arousal_mae": 31.7455,
+      "overall_mse": 1540.3827,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs17_sigma10p0",
+      "overall_mae": 30.1459,
+      "valence_mae": 28.5436,
+      "arousal_mae": 31.7482,
+      "overall_mse": 1541.5375,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs21_sigma7p5",
+      "overall_mae": 30.1493,
+      "valence_mae": 28.5439,
+      "arousal_mae": 31.7546,
+      "overall_mse": 1542.4166,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs17_sigma15p0",
+      "overall_mae": 30.1536,
+      "valence_mae": 28.556,
+      "arousal_mae": 31.7512,
+      "overall_mse": 1540.0376,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs21_sigma10p0",
+      "overall_mae": 30.1583,
+      "valence_mae": 28.5588,
+      "arousal_mae": 31.7578,
+      "overall_mse": 1541.1947,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_smooth9",
+      "overall_mae": 30.1599,
+      "valence_mae": 28.565,
+      "arousal_mae": 31.7548,
+      "overall_mse": 1539.3795,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs17_sigma20p0",
+      "overall_mae": 30.1619,
+      "valence_mae": 28.5691,
+      "arousal_mae": 31.7547,
+      "overall_mse": 1539.0555,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25",
+      "overall_mae": 30.1687,
+      "valence_mae": 28.5403,
+      "arousal_mae": 31.7971,
+      "overall_mse": 1546.833,
+      "notes": "Tree residual expert over VideoTimeMean prior."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs21_sigma15p0",
+      "overall_mae": 30.1726,
+      "valence_mae": 28.5818,
+      "arousal_mae": 31.7633,
+      "overall_mse": 1539.3734,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p25_smooth17",
+      "overall_mae": 30.1766,
+      "valence_mae": 28.7834,
+      "arousal_mae": 31.5698,
+      "overall_mse": 1525.5474,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs13_sigma7p5",
+      "overall_mae": 30.185,
+      "valence_mae": 28.6587,
+      "arousal_mae": 31.7112,
+      "overall_mse": 1539.9897,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs13_sigma10p0",
+      "overall_mae": 30.1852,
+      "valence_mae": 28.7053,
+      "arousal_mae": 31.6651,
+      "overall_mse": 1544.4049,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs13_sigma7p5",
+      "overall_mae": 30.1853,
+      "valence_mae": 28.7029,
+      "arousal_mae": 31.6676,
+      "overall_mse": 1545.1742,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs13_sigma10p0",
+      "overall_mae": 30.1862,
+      "valence_mae": 28.6617,
+      "arousal_mae": 31.7107,
+      "overall_mse": 1539.2281,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs13_sigma15p0",
+      "overall_mae": 30.1868,
+      "valence_mae": 28.7087,
+      "arousal_mae": 31.6649,
+      "overall_mse": 1543.3101,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_pabs21_sigma20p0",
+      "overall_mae": 30.1869,
+      "valence_mae": 28.6044,
+      "arousal_mae": 31.7694,
+      "overall_mse": 1538.1674,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs13_sigma15p0",
+      "overall_mae": 30.1882,
+      "valence_mae": 28.665,
+      "arousal_mae": 31.7113,
+      "overall_mse": 1538.1371,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs17_sigma7p5",
+      "overall_mae": 30.1886,
+      "valence_mae": 28.7073,
+      "arousal_mae": 31.6699,
+      "overall_mse": 1544.8016,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs13_sigma20p0",
+      "overall_mae": 30.1897,
+      "valence_mae": 28.7133,
+      "arousal_mae": 31.6662,
+      "overall_mse": 1542.6283,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs17_sigma7p5",
+      "overall_mae": 30.1908,
+      "valence_mae": 28.6674,
+      "arousal_mae": 31.7143,
+      "overall_mse": 1539.6422,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs17_sigma10p0",
+      "overall_mae": 30.191,
+      "valence_mae": 28.7136,
+      "arousal_mae": 31.6684,
+      "overall_mse": 1543.7758,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs13_sigma20p0",
+      "overall_mae": 30.1913,
+      "valence_mae": 28.6697,
+      "arousal_mae": 31.7129,
+      "overall_mse": 1537.4561,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_smooth5",
+      "overall_mae": 30.1916,
+      "valence_mae": 28.6584,
+      "arousal_mae": 31.7248,
+      "overall_mse": 1539.873,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_smooth5",
+      "overall_mae": 30.1925,
+      "valence_mae": 28.7083,
+      "arousal_mae": 31.6766,
+      "overall_mse": 1544.9567,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs17_sigma10p0",
+      "overall_mae": 30.1948,
+      "valence_mae": 28.6743,
+      "arousal_mae": 31.7153,
+      "overall_mse": 1538.6224,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs21_sigma7p5",
+      "overall_mae": 30.1955,
+      "valence_mae": 28.7147,
+      "arousal_mae": 31.6762,
+      "overall_mse": 1544.6429,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs17_sigma15p0",
+      "overall_mae": 30.1975,
+      "valence_mae": 28.7248,
+      "arousal_mae": 31.6701,
+      "overall_mse": 1542.2705,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs21_sigma7p5",
+      "overall_mae": 30.1998,
+      "valence_mae": 28.6787,
+      "arousal_mae": 31.7208,
+      "overall_mse": 1539.5089,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs17_sigma15p0",
+      "overall_mae": 30.2014,
+      "valence_mae": 28.6846,
+      "arousal_mae": 31.7182,
+      "overall_mse": 1537.1182,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs21_sigma10p0",
+      "overall_mae": 30.202,
+      "valence_mae": 28.727,
+      "arousal_mae": 31.677,
+      "overall_mse": 1543.4092,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_smooth9",
+      "overall_mae": 30.2045,
+      "valence_mae": 28.7353,
+      "arousal_mae": 31.6737,
+      "overall_mse": 1541.6382,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs17_sigma20p0",
+      "overall_mae": 30.2046,
+      "valence_mae": 28.7363,
+      "arousal_mae": 31.6729,
+      "overall_mse": 1541.2889,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_smooth9",
+      "overall_mae": 30.2065,
+      "valence_mae": 28.6926,
+      "arousal_mae": 31.7205,
+      "overall_mse": 1536.4435,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs21_sigma10p0",
+      "overall_mae": 30.2078,
+      "valence_mae": 28.6914,
+      "arousal_mae": 31.7243,
+      "overall_mse": 1538.2794,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs17_sigma20p0",
+      "overall_mae": 30.2085,
+      "valence_mae": 28.696,
+      "arousal_mae": 31.7211,
+      "overall_mse": 1536.1354,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_smooth13",
+      "overall_mae": 30.2117,
+      "valence_mae": 28.6453,
+      "arousal_mae": 31.7781,
+      "overall_mse": 1536.8716,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs21_sigma15p0",
+      "overall_mae": 30.2146,
+      "valence_mae": 28.7478,
+      "arousal_mae": 31.6813,
+      "overall_mse": 1541.5778,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5",
+      "overall_mae": 30.218,
+      "valence_mae": 28.7251,
+      "arousal_mae": 31.7109,
+      "overall_mse": 1548.6407,
+      "notes": "Tree residual expert over VideoTimeMean prior."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs21_sigma15p0",
+      "overall_mae": 30.2207,
+      "valence_mae": 28.7112,
+      "arousal_mae": 31.7303,
+      "overall_mse": 1536.4434,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_pabs21_sigma20p0",
+      "overall_mae": 30.2272,
+      "valence_mae": 28.7682,
+      "arousal_mae": 31.6863,
+      "overall_mse": 1540.3712,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25",
+      "overall_mae": 30.2305,
+      "valence_mae": 28.6833,
+      "arousal_mae": 31.7778,
+      "overall_mse": 1544.4772,
+      "notes": "Tree residual expert over VideoTimeMean prior."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_pabs21_sigma20p0",
+      "overall_mae": 30.2336,
+      "valence_mae": 28.7313,
+      "arousal_mae": 31.7358,
+      "overall_mse": 1535.2334,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_smooth13",
+      "overall_mae": 30.2519,
+      "valence_mae": 28.81,
+      "arousal_mae": 31.6939,
+      "overall_mse": 1539.1246,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_smooth13",
+      "overall_mae": 30.2592,
+      "valence_mae": 28.773,
+      "arousal_mae": 31.7453,
+      "overall_mse": 1534.0117,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p25_smooth17",
+      "overall_mae": 30.2876,
+      "valence_mae": 28.7549,
+      "arousal_mae": 31.8204,
+      "overall_mse": 1535.7784,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p5_smooth17",
+      "overall_mae": 30.3235,
+      "valence_mae": 28.9131,
+      "arousal_mae": 31.7339,
+      "overall_mse": 1537.9893,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l2_residual_scale0p25_smooth17",
+      "overall_mae": 30.334,
+      "valence_mae": 28.8789,
+      "arousal_mae": 31.7891,
+      "overall_mse": 1532.8815,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs13_sigma15p0",
+      "overall_mae": 30.4085,
+      "valence_mae": 28.9536,
+      "arousal_mae": 31.8633,
+      "overall_mse": 1561.8813,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs13_sigma10p0",
+      "overall_mae": 30.4086,
+      "valence_mae": 28.9525,
+      "arousal_mae": 31.8648,
+      "overall_mse": 1562.9902,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs13_sigma7p5",
+      "overall_mae": 30.4098,
+      "valence_mae": 28.9514,
+      "arousal_mae": 31.8682,
+      "overall_mse": 1563.7692,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs13_sigma20p0",
+      "overall_mae": 30.4102,
+      "valence_mae": 28.9566,
+      "arousal_mae": 31.8639,
+      "overall_mse": 1561.1901,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs17_sigma7p5",
+      "overall_mae": 30.4108,
+      "valence_mae": 28.9529,
+      "arousal_mae": 31.8687,
+      "overall_mse": 1563.3627,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs17_sigma10p0",
+      "overall_mae": 30.411,
+      "valence_mae": 28.9565,
+      "arousal_mae": 31.8654,
+      "overall_mse": 1562.3268,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs17_sigma15p0",
+      "overall_mae": 30.4139,
+      "valence_mae": 28.9629,
+      "arousal_mae": 31.8649,
+      "overall_mse": 1560.8063,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs21_sigma7p5",
+      "overall_mae": 30.4159,
+      "valence_mae": 28.9594,
+      "arousal_mae": 31.8725,
+      "overall_mse": 1563.1766,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_smooth5",
+      "overall_mae": 30.4186,
+      "valence_mae": 28.9618,
+      "arousal_mae": 31.8754,
+      "overall_mse": 1563.6206,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs21_sigma10p0",
+      "overall_mae": 30.4191,
+      "valence_mae": 28.9675,
+      "arousal_mae": 31.8707,
+      "overall_mse": 1561.9332,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs17_sigma20p0",
+      "overall_mae": 30.4194,
+      "valence_mae": 28.9724,
+      "arousal_mae": 31.8664,
+      "overall_mse": 1559.8126,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_smooth9",
+      "overall_mae": 30.4235,
+      "valence_mae": 28.9767,
+      "arousal_mae": 31.8703,
+      "overall_mse": 1560.1818,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs21_sigma15p0",
+      "overall_mae": 30.4275,
+      "valence_mae": 28.9826,
+      "arousal_mae": 31.8723,
+      "overall_mse": 1560.0858,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_pabs21_sigma20p0",
+      "overall_mae": 30.4383,
+      "valence_mae": 29.0011,
+      "arousal_mae": 31.8755,
+      "overall_mse": 1558.8661,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "extratrees_residual_scale0p75",
+      "overall_mae": 30.4478,
+      "valence_mae": 28.9814,
+      "arousal_mae": 31.9141,
+      "overall_mse": 1567.7111,
+      "notes": "Tree residual expert over VideoTimeMean prior."
+    },
+    {
+      "method": "extratrees_residual_scale0p75_smooth13",
+      "overall_mae": 30.4633,
+      "valence_mae": 29.0426,
+      "arousal_mae": 31.884,
+      "overall_mse": 1557.6146,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs13_sigma7p5",
+      "overall_mae": 30.4703,
+      "valence_mae": 28.7268,
+      "arousal_mae": 32.2139,
+      "overall_mse": 1573.8843,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs13_sigma10p0",
+      "overall_mae": 30.4712,
+      "valence_mae": 28.7298,
+      "arousal_mae": 32.2126,
+      "overall_mse": 1573.0895,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs13_sigma15p0",
+      "overall_mae": 30.4728,
+      "valence_mae": 28.7331,
+      "arousal_mae": 32.2126,
+      "overall_mse": 1571.9606,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs17_sigma7p5",
+      "overall_mae": 30.4736,
+      "valence_mae": 28.7337,
+      "arousal_mae": 32.2134,
+      "overall_mse": 1573.3741,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs13_sigma20p0",
+      "overall_mae": 30.4751,
+      "valence_mae": 28.7364,
+      "arousal_mae": 32.2138,
+      "overall_mse": 1571.2555,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs17_sigma10p0",
+      "overall_mae": 30.4768,
+      "valence_mae": 28.7402,
+      "arousal_mae": 32.2133,
+      "overall_mse": 1572.3247,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_smooth5",
+      "overall_mae": 30.4783,
+      "valence_mae": 28.7239,
+      "arousal_mae": 32.2326,
+      "overall_mse": 1574.0944,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs21_sigma7p5",
+      "overall_mae": 30.4796,
+      "valence_mae": 28.7425,
+      "arousal_mae": 32.2167,
+      "overall_mse": 1573.1332,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs17_sigma15p0",
+      "overall_mae": 30.4825,
+      "valence_mae": 28.7499,
+      "arousal_mae": 32.215,
+      "overall_mse": 1570.7814,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs21_sigma10p0",
+      "overall_mae": 30.486,
+      "valence_mae": 28.7539,
+      "arousal_mae": 32.2181,
+      "overall_mse": 1571.88,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs17_sigma20p0",
+      "overall_mae": 30.4884,
+      "valence_mae": 28.7594,
+      "arousal_mae": 32.2174,
+      "overall_mse": 1569.7662,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_smooth9",
+      "overall_mae": 30.4892,
+      "valence_mae": 28.7558,
+      "arousal_mae": 32.2225,
+      "overall_mse": 1570.2164,
+      "notes": "Tree residual expert with moving average."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs21_sigma15p0",
+      "overall_mae": 30.4978,
+      "valence_mae": 28.7732,
+      "arousal_mae": 32.2224,
+      "overall_mse": 1570.0137,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5_pabs21_sigma20p0",
+      "overall_mae": 30.5093,
+      "valence_mae": 28.7912,
+      "arousal_mae": 32.2273,
+      "overall_mse": 1568.7699,
+      "notes": "Tree residual expert with PA-BS smoothing."
+    },
+    {
+      "method": "hgb_l1_residual_scale0p5",
+      "overall_mae": 30.5264,
+      "valence_mae": 28.747,
+      "arousal_mae": 32.3058,
+      "overall_mse": 1580.2084,
+      "notes": "Tree residual expert over VideoTimeMean prior."
+    }
+  ]
+}

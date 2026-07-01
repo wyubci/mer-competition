@@ -1,0 +1,4700 @@
+{
+  "method": "RobustMedianPrior + TBCR residual validation",
+  "note": "Training residual targets use leave-subject-out RobustMedianPrior inside each outer training fold to reduce train-prior leakage.",
+  "fold_size": 4,
+  "prior": {
+    "estimator": "median",
+    "lag": -2,
+    "smooth_window": 11
+  },
+  "basis_count": 4,
+  "alpha": 0.25,
+  "aggregate_results": [
+    {
+      "method": "RobustMedianPrior",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+      "overall_mae": 28.8596,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1621.5233,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.9081,
+      "valence_mae": 27.1264,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.214,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.9081,
+      "valence_mae": 27.1264,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.214,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.9081,
+      "valence_mae": 27.1264,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.214,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.9081,
+      "valence_mae": 27.1264,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.214,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca2p0",
+      "overall_mae": 28.9122,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.795,
+      "overall_mse": 1622.1398,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca2p0",
+      "overall_mae": 28.9122,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.795,
+      "overall_mse": 1622.1398,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca2p0",
+      "overall_mae": 28.9122,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.795,
+      "overall_mse": 1622.1398,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca2p0",
+      "overall_mae": 28.9122,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.795,
+      "overall_mse": 1622.1398,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca2p0",
+      "overall_mae": 28.9213,
+      "valence_mae": 27.1528,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.6816,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca4p0",
+      "overall_mae": 28.9213,
+      "valence_mae": 27.1528,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.6816,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca6p0",
+      "overall_mae": 28.9213,
+      "valence_mae": 27.1528,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.6816,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca8p0",
+      "overall_mae": 28.9213,
+      "valence_mae": 27.1528,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.6816,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca4p0",
+      "overall_mae": 28.9262,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.823,
+      "overall_mse": 1621.9089,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca4p0",
+      "overall_mae": 28.9262,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.823,
+      "overall_mse": 1621.9089,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca4p0",
+      "overall_mae": 28.9262,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.823,
+      "overall_mse": 1621.9089,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca4p0",
+      "overall_mae": 28.9262,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.823,
+      "overall_mse": 1621.9089,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca6p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca8p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca6p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca8p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca6p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca8p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca6p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca8p0",
+      "overall_mae": 28.9267,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8241,
+      "overall_mse": 1621.8467,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.9291,
+      "valence_mae": 27.1684,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.1353,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.9291,
+      "valence_mae": 27.1684,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.1353,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.9291,
+      "valence_mae": 27.1684,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.1353,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.9291,
+      "valence_mae": 27.1684,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.1353,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca2p0",
+      "overall_mae": 28.9362,
+      "valence_mae": 27.1825,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.3202,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca4p0",
+      "overall_mae": 28.9362,
+      "valence_mae": 27.1825,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.3202,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca6p0",
+      "overall_mae": 28.9362,
+      "valence_mae": 27.1825,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.3202,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca8p0",
+      "overall_mae": 28.9362,
+      "valence_mae": 27.1825,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.3202,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca2p0",
+      "overall_mae": 28.9458,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8622,
+      "overall_mse": 1622.854,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca2p0",
+      "overall_mae": 28.9458,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8622,
+      "overall_mse": 1622.854,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca2p0",
+      "overall_mae": 28.9458,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8622,
+      "overall_mse": 1622.854,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca2p0",
+      "overall_mae": 28.9458,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.8622,
+      "overall_mse": 1622.854,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.9503,
+      "valence_mae": 27.2107,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.3715,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.9503,
+      "valence_mae": 27.2107,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.3715,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.9503,
+      "valence_mae": 27.2107,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.3715,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.9503,
+      "valence_mae": 27.2107,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.3715,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca2p0",
+      "overall_mae": 28.9518,
+      "valence_mae": 27.2138,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.5045,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca4p0",
+      "overall_mae": 28.9518,
+      "valence_mae": 27.2138,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.5045,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca6p0",
+      "overall_mae": 28.9518,
+      "valence_mae": 27.2138,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.5045,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca8p0",
+      "overall_mae": 28.9518,
+      "valence_mae": 27.2138,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1618.5045,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca2p0",
+      "overall_mae": 28.957,
+      "valence_mae": 27.2242,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.0621,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca4p0",
+      "overall_mae": 28.957,
+      "valence_mae": 27.2242,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.0621,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca6p0",
+      "overall_mae": 28.957,
+      "valence_mae": 27.2242,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.0621,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca8p0",
+      "overall_mae": 28.957,
+      "valence_mae": 27.2242,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.0621,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.9571,
+      "valence_mae": 27.2244,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4219,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.9571,
+      "valence_mae": 27.2244,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4219,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.9571,
+      "valence_mae": 27.2244,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4219,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.9571,
+      "valence_mae": 27.2244,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4219,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.9591,
+      "valence_mae": 27.2284,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4258,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.9591,
+      "valence_mae": 27.2284,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4258,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.9591,
+      "valence_mae": 27.2284,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4258,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.9591,
+      "valence_mae": 27.2284,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4258,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.9601,
+      "valence_mae": 27.2303,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4259,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca4p0",
+      "overall_mae": 28.9601,
+      "valence_mae": 27.2303,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4259,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca6p0",
+      "overall_mae": 28.9601,
+      "valence_mae": 27.2303,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4259,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca8p0",
+      "overall_mae": 28.9601,
+      "valence_mae": 27.2303,
+      "arousal_mae": 30.6899,
+      "overall_mse": 1619.4259,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca2p0",
+      "overall_mae": 28.9607,
+      "valence_mae": 27.1264,
+      "arousal_mae": 30.795,
+      "overall_mse": 1619.8306,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca2p0",
+      "overall_mae": 28.9658,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.9023,
+      "overall_mse": 1623.1113,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca2p0",
+      "overall_mae": 28.9658,
+      "valence_mae": 27.0294,
+      "arousal_mae": 30.9023,
+      "overall_mse": 1623.1113,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "RobustMedianPrior",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 26.3227,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1277.9683,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3354,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1275.5978,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3354,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1275.5978,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3354,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1275.5978,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3354,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1275.5978,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3356,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.2433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3356,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.2433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3356,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.2433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3356,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.2433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.3489,
+          "valence_mae": 24.8052,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.1522,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.3489,
+          "valence_mae": 24.8052,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.1522,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.3489,
+          "valence_mae": 24.8052,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.1522,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.3489,
+          "valence_mae": 24.8052,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1274.1522,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3508,
+          "valence_mae": 24.8091,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.8922,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3508,
+          "valence_mae": 24.8091,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.8922,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3508,
+          "valence_mae": 24.8091,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.8922,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3508,
+          "valence_mae": 24.8091,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.8922,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3563,
+          "valence_mae": 24.8201,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3563,
+          "valence_mae": 24.8201,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3563,
+          "valence_mae": 24.8201,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3563,
+          "valence_mae": 24.8201,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3564,
+          "valence_mae": 24.8204,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.516,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3564,
+          "valence_mae": 24.8204,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.516,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3564,
+          "valence_mae": 24.8204,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.516,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3564,
+          "valence_mae": 24.8204,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.516,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.3567,
+          "valence_mae": 24.8209,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.6339,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.3567,
+          "valence_mae": 24.8209,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.6339,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.3567,
+          "valence_mae": 24.8209,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.6339,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.3567,
+          "valence_mae": 24.8209,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.6339,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.3598,
+          "valence_mae": 24.8272,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1276.9656,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.3598,
+          "valence_mae": 24.8272,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1276.9656,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.3598,
+          "valence_mae": 24.8272,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1276.9656,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.3598,
+          "valence_mae": 24.8272,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1276.9656,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca6p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca8p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca6p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca8p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca6p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca8p0",
+          "overall_mae": 26.3618,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1274.9058,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 26.3622,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9716,
+          "overall_mse": 1276.2584,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 26.3622,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9716,
+          "overall_mse": 1276.2584,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 26.3622,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9716,
+          "overall_mse": 1276.2584,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 26.3622,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9716,
+          "overall_mse": 1276.2584,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 26.3625,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9721,
+          "overall_mse": 1275.0507,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca4p0",
+          "overall_mae": 26.3625,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9721,
+          "overall_mse": 1275.0507,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca4p0",
+          "overall_mae": 26.3625,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9721,
+          "overall_mse": 1275.0507,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca4p0",
+          "overall_mae": 26.3625,
+          "valence_mae": 24.7528,
+          "arousal_mae": 27.9721,
+          "overall_mse": 1275.0507,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.3694,
+          "valence_mae": 24.8463,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.2643,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.3694,
+          "valence_mae": 24.8463,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.2643,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.3694,
+          "valence_mae": 24.8463,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.2643,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.3694,
+          "valence_mae": 24.8463,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.2643,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 26.3746,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1272.5354,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 26.3746,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1272.5354,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 26.3748,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1271.1808,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 26.3748,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.9708,
+          "overall_mse": 1271.1808,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 26.375,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.9716,
+          "overall_mse": 1273.8881,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 26.3752,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.9716,
+          "overall_mse": 1272.5336,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 26.3753,
+          "valence_mae": 24.7784,
+          "arousal_mae": 27.9721,
+          "overall_mse": 1272.6803,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 26.3755,
+          "valence_mae": 24.7788,
+          "arousal_mae": 27.9721,
+          "overall_mse": 1271.3257,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.3853,
+          "valence_mae": 24.8781,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.1582,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.3853,
+          "valence_mae": 24.8781,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.1582,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.3853,
+          "valence_mae": 24.8781,
+          "arousal_mae": 27.8925,
+          "overall_mse": 1273.1582,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4079,
+          "valence_mae": 33.2561,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2491.2163,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4079,
+          "valence_mae": 33.2561,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2491.2163,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4079,
+          "valence_mae": 33.2561,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2491.2163,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4079,
+          "valence_mae": 33.2561,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2491.2163,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4106,
+          "valence_mae": 33.2614,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2490.248,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4106,
+          "valence_mae": 33.2614,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2490.248,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4106,
+          "valence_mae": 33.2614,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2490.248,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4106,
+          "valence_mae": 33.2614,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2490.248,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4121,
+          "valence_mae": 33.2646,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.6379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4121,
+          "valence_mae": 33.2646,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.6379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4121,
+          "valence_mae": 33.2646,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.6379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4121,
+          "valence_mae": 33.2646,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.6379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4141,
+          "valence_mae": 33.2685,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4141,
+          "valence_mae": 33.2685,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4141,
+          "valence_mae": 33.2685,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4141,
+          "valence_mae": 33.2685,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustMedianPrior",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 37.4163,
+          "valence_mae": 33.2729,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2499.3743,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4166,
+          "valence_mae": 33.2735,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3481,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4166,
+          "valence_mae": 33.2735,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3481,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4166,
+          "valence_mae": 33.2735,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3481,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4166,
+          "valence_mae": 33.2735,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3481,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4171,
+          "valence_mae": 33.2745,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2487.8625,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4171,
+          "valence_mae": 33.2745,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2487.8625,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4171,
+          "valence_mae": 33.2745,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2487.8625,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4171,
+          "valence_mae": 33.2745,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2487.8625,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4177,
+          "valence_mae": 33.2757,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3818,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4177,
+          "valence_mae": 33.2757,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3818,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4177,
+          "valence_mae": 33.2757,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3818,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4177,
+          "valence_mae": 33.2757,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.3818,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4181,
+          "valence_mae": 33.2764,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.4004,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 37.4181,
+          "valence_mae": 33.2764,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.4004,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 37.4181,
+          "valence_mae": 33.2764,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.4004,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 37.4181,
+          "valence_mae": 33.2764,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2489.4004,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4236,
+          "valence_mae": 33.2874,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2486.072,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4236,
+          "valence_mae": 33.2874,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2486.072,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4236,
+          "valence_mae": 33.2874,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2486.072,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4236,
+          "valence_mae": 33.2874,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2486.072,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4277,
+          "valence_mae": 33.2958,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.782,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4277,
+          "valence_mae": 33.2958,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.782,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4277,
+          "valence_mae": 33.2958,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.782,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4277,
+          "valence_mae": 33.2958,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.782,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4303,
+          "valence_mae": 33.3009,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8108,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4303,
+          "valence_mae": 33.3009,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8108,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4303,
+          "valence_mae": 33.3009,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8108,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4303,
+          "valence_mae": 33.3009,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8108,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 37.4316,
+          "valence_mae": 33.3035,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8508,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 37.4316,
+          "valence_mae": 33.3035,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8508,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 37.4316,
+          "valence_mae": 33.3035,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8508,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 37.4316,
+          "valence_mae": 33.3035,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.8508,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 37.4374,
+          "valence_mae": 33.3151,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.2039,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 37.4374,
+          "valence_mae": 33.3151,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.2039,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 37.4374,
+          "valence_mae": 33.3151,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.2039,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 37.4374,
+          "valence_mae": 33.3151,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2485.2039,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 37.4498,
+          "valence_mae": 33.3399,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2483.521,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 37.4498,
+          "valence_mae": 33.3399,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2483.521,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 37.4498,
+          "valence_mae": 33.3399,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2483.521,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 37.4498,
+          "valence_mae": 33.3399,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2483.521,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 37.4532,
+          "valence_mae": 33.3466,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.9812,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 37.4532,
+          "valence_mae": 33.3466,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.9812,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 37.4532,
+          "valence_mae": 33.3466,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.9812,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 37.4532,
+          "valence_mae": 33.3466,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2488.9812,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 37.4565,
+          "valence_mae": 33.3532,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2482.2756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 37.4565,
+          "valence_mae": 33.3532,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2482.2756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 37.4565,
+          "valence_mae": 33.3532,
+          "arousal_mae": 41.5597,
+          "overall_mse": 2482.2756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "RobustMedianPrior",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 26.9779,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.8994,
+          "overall_mse": 1328.3876,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca4p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca6p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca8p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca4p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca6p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca8p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca4p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca6p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca8p0",
+          "overall_mae": 27.0177,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9789,
+          "overall_mse": 1331.4578,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 27.0182,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9801,
+          "overall_mse": 1331.4784,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 27.0182,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9801,
+          "overall_mse": 1331.4784,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 27.0182,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9801,
+          "overall_mse": 1331.4784,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 27.0182,
+          "valence_mae": 24.0564,
+          "arousal_mae": 29.9801,
+          "overall_mse": 1331.4784,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca2p0",
+          "overall_mae": 27.0609,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0655,
+          "overall_mse": 1333.433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca2p0",
+          "overall_mae": 27.0609,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0655,
+          "overall_mse": 1333.433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca2p0",
+          "overall_mae": 27.0609,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0655,
+          "overall_mse": 1333.433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca2p0",
+          "overall_mae": 27.0609,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0655,
+          "overall_mse": 1333.433,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca6p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca8p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca6p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca8p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca6p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca8p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca6p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca8p0",
+          "overall_mae": 27.0658,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0753,
+          "overall_mse": 1335.0665,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca4p0",
+          "overall_mae": 27.067,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0775,
+          "overall_mse": 1335.1027,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca4p0",
+          "overall_mae": 27.067,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0775,
+          "overall_mse": 1335.1027,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca4p0",
+          "overall_mae": 27.067,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0775,
+          "overall_mse": 1335.1027,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca4p0",
+          "overall_mae": 27.067,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.0775,
+          "overall_mse": 1335.1027,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca2p0",
+          "overall_mae": 27.0904,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1244,
+          "overall_mse": 1334.053,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca2p0",
+          "overall_mae": 27.0904,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1244,
+          "overall_mse": 1334.053,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca2p0",
+          "overall_mae": 27.0904,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1244,
+          "overall_mse": 1334.053,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca2p0",
+          "overall_mae": 27.0904,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1244,
+          "overall_mse": 1334.053,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv2p0_ca2p0",
+          "overall_mae": 27.1137,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1711,
+          "overall_mse": 1334.3657,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv3p0_ca2p0",
+          "overall_mae": 27.1137,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1711,
+          "overall_mse": 1334.3657,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv4p5_ca2p0",
+          "overall_mae": 27.1137,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1711,
+          "overall_mse": 1334.3657,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv6p0_ca2p0",
+          "overall_mae": 27.1137,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1711,
+          "overall_mse": 1334.3657,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca4p0",
+          "overall_mae": 27.121,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1856,
+          "overall_mse": 1338.1581,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca4p0",
+          "overall_mae": 27.121,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1856,
+          "overall_mse": 1338.1581,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca4p0",
+          "overall_mae": 27.121,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1856,
+          "overall_mse": 1338.1581,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca4p0",
+          "overall_mae": 27.121,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1856,
+          "overall_mse": 1338.1581,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca8p0",
+          "overall_mae": 27.1223,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1881,
+          "overall_mse": 1339.2137,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca8p0",
+          "overall_mae": 27.1223,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1881,
+          "overall_mse": 1339.2137,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca8p0",
+          "overall_mae": 27.1223,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1881,
+          "overall_mse": 1339.2137,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca8p0",
+          "overall_mae": 27.1223,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1881,
+          "overall_mse": 1339.2137,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca6p0",
+          "overall_mae": 27.1239,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1915,
+          "overall_mse": 1339.2605,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca6p0",
+          "overall_mae": 27.1239,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1915,
+          "overall_mse": 1339.2605,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca6p0",
+          "overall_mae": 27.1239,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1915,
+          "overall_mse": 1339.2605,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca6p0",
+          "overall_mae": 27.1239,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.1915,
+          "overall_mse": 1339.2605,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p15_cv2p0_ca2p0",
+          "overall_mae": 27.1312,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2059,
+          "overall_mse": 1334.0094,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p15_cv3p0_ca2p0",
+          "overall_mae": 27.1312,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2059,
+          "overall_mse": 1334.0094,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p15_cv4p5_ca2p0",
+          "overall_mae": 27.1312,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2059,
+          "overall_mse": 1334.0094,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p15_cv6p0_ca2p0",
+          "overall_mae": 27.1312,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2059,
+          "overall_mse": 1334.0094,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p25_cv2p0_ca2p0",
+          "overall_mae": 27.1428,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2292,
+          "overall_mse": 1333.391,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p25_cv3p0_ca2p0",
+          "overall_mae": 27.1428,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2292,
+          "overall_mse": 1333.391,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p25_cv4p5_ca2p0",
+          "overall_mae": 27.1428,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2292,
+          "overall_mse": 1333.391,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p25_cv6p0_ca2p0",
+          "overall_mae": 27.1428,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2292,
+          "overall_mse": 1333.391,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv2p0_ca4p0",
+          "overall_mae": 27.1644,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2724,
+          "overall_mse": 1339.9766,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv3p0_ca4p0",
+          "overall_mae": 27.1644,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2724,
+          "overall_mse": 1339.9766,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p1_cv4p5_ca4p0",
+          "overall_mae": 27.1644,
+          "valence_mae": 24.0564,
+          "arousal_mae": 30.2724,
+          "overall_mse": 1339.9766,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "RobustMedianPrior",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 29.1267,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1867.1652,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 29.1407,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1846.2181,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 29.1407,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1846.2181,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 29.1407,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1846.2181,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 29.1407,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1846.2181,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 29.1597,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1850.7797,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 29.1597,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1850.7797,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 29.1597,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1850.7797,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 29.1597,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1850.7797,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca6p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca8p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca6p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca8p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca6p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca8p0",
+          "overall_mae": 29.1729,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1859.5839,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 29.1748,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1860.192,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca4p0",
+          "overall_mae": 29.1748,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1860.192,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca4p0",
+          "overall_mae": 29.1748,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1860.192,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca4p0",
+          "overall_mae": 29.1748,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1860.192,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 29.186,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1856.3734,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 29.186,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1856.3734,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 29.186,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1856.3734,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 29.186,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1856.3734,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv6p0_ca6p0",
+          "overall_mae": 29.1869,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1838.6368,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv6p0_ca8p0",
+          "overall_mae": 29.1869,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1838.6368,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv6p0_ca4p0",
+          "overall_mae": 29.1888,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1839.2451,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 29.1891,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.996,
+          "overall_mse": 1864.1354,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 29.1891,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.996,
+          "overall_mse": 1864.1354,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 29.1891,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.996,
+          "overall_mse": 1864.1354,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 29.1891,
+          "valence_mae": 29.3821,
+          "arousal_mae": 28.996,
+          "overall_mse": 1864.1354,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 29.1916,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1860.001,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 29.1916,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1860.001,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 29.1916,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1860.001,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 29.1916,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1860.001,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 29.2031,
+          "valence_mae": 29.4102,
+          "arousal_mae": 28.996,
+          "overall_mse": 1843.1885,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv4p5_ca6p0",
+          "overall_mae": 29.2058,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1843.1986,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv4p5_ca8p0",
+          "overall_mae": 29.2058,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1843.1986,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv4p5_ca4p0",
+          "overall_mae": 29.2078,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1843.8066,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 29.2132,
+          "valence_mae": 29.5552,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.9264,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 29.2132,
+          "valence_mae": 29.5552,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.9264,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 29.2132,
+          "valence_mae": 29.5552,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.9264,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 29.2132,
+          "valence_mae": 29.5552,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.9264,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 29.222,
+          "valence_mae": 29.448,
+          "arousal_mae": 28.996,
+          "overall_mse": 1847.75,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv3p0_ca6p0",
+          "overall_mae": 29.2322,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1848.792,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv3p0_ca8p0",
+          "overall_mae": 29.2322,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1848.792,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 29.2332,
+          "valence_mae": 29.5951,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.3756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 29.2332,
+          "valence_mae": 29.5951,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.3756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 29.2332,
+          "valence_mae": 29.5951,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.3756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 29.2332,
+          "valence_mae": 29.5951,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.3756,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv3p0_ca4p0",
+          "overall_mae": 29.2341,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1849.4004,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 29.2377,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1852.4199,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 29.2377,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.9636,
+          "overall_mse": 1852.4199,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 29.2397,
+          "valence_mae": 29.5118,
+          "arousal_mae": 28.9675,
+          "overall_mse": 1853.028,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 29.2427,
+          "valence_mae": 29.614,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.5502,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 29.2427,
+          "valence_mae": 29.614,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.5502,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 29.2427,
+          "valence_mae": 29.614,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.5502,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 29.2427,
+          "valence_mae": 29.614,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.5502,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca8p0",
+          "overall_mae": 29.2436,
+          "valence_mae": 29.3821,
+          "arousal_mae": 29.1051,
+          "overall_mse": 1855.2523,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca8p0",
+          "overall_mae": 29.2436,
+          "valence_mae": 29.3821,
+          "arousal_mae": 29.1051,
+          "overall_mse": 1855.2523,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca8p0",
+          "overall_mae": 29.2436,
+          "valence_mae": 29.3821,
+          "arousal_mae": 29.1051,
+          "overall_mse": 1855.2523,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca8p0",
+          "overall_mae": 29.2436,
+          "valence_mae": 29.3821,
+          "arousal_mae": 29.1051,
+          "overall_mse": 1855.2523,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 29.2458,
+          "valence_mae": 29.6204,
+          "arousal_mae": 28.8713,
+          "overall_mse": 1858.6229,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.167,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.5194,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.167,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.5194,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.167,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.5194,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.167,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.5194,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.1691,
+          "valence_mae": 24.6154,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7651,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.1691,
+          "valence_mae": 24.6154,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7651,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.1691,
+          "valence_mae": 24.6154,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7651,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.1691,
+          "valence_mae": 24.6154,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7651,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 26.17,
+          "valence_mae": 24.6171,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.6947,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 26.17,
+          "valence_mae": 24.6171,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.6947,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 26.17,
+          "valence_mae": 24.6171,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.6947,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 26.17,
+          "valence_mae": 24.6171,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.6947,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustMedianPrior",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 26.1732,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.704,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 26.1752,
+          "valence_mae": 24.6275,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.88,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 26.1752,
+          "valence_mae": 24.6275,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.88,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 26.1752,
+          "valence_mae": 24.6275,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.88,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 26.1752,
+          "valence_mae": 24.6275,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.88,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 26.1902,
+          "valence_mae": 24.6575,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.8313,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 26.1902,
+          "valence_mae": 24.6575,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.8313,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 26.1902,
+          "valence_mae": 24.6575,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.8313,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 26.1902,
+          "valence_mae": 24.6575,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.8313,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.192,
+          "valence_mae": 24.6611,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.3934,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.192,
+          "valence_mae": 24.6611,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.3934,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.192,
+          "valence_mae": 24.6611,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.3934,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.192,
+          "valence_mae": 24.6611,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.3934,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.1956,
+          "valence_mae": 24.6683,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7292,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.1956,
+          "valence_mae": 24.6683,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7292,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.1956,
+          "valence_mae": 24.6683,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7292,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.1956,
+          "valence_mae": 24.6683,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1333.7292,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 26.2079,
+          "valence_mae": 24.693,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.2412,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 26.2079,
+          "valence_mae": 24.693,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.2412,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 26.2079,
+          "valence_mae": 24.693,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.2412,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 26.2079,
+          "valence_mae": 24.693,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.2412,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.224,
+          "valence_mae": 24.7251,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.7736,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.224,
+          "valence_mae": 24.7251,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.7736,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.224,
+          "valence_mae": 24.7251,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.7736,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.224,
+          "valence_mae": 24.7251,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.7736,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.2314,
+          "valence_mae": 24.7399,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.8917,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.2314,
+          "valence_mae": 24.7399,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.8917,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.2314,
+          "valence_mae": 24.7399,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.8917,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p5_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.2314,
+          "valence_mae": 24.7399,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.8917,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.2346,
+          "valence_mae": 24.7464,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9183,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.2346,
+          "valence_mae": 24.7464,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9183,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.2346,
+          "valence_mae": 24.7464,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9183,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p75_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.2346,
+          "valence_mae": 24.7464,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9183,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.2366,
+          "valence_mae": 24.7502,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9552,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 26.2366,
+          "valence_mae": 24.7502,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9552,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 26.2366,
+          "valence_mae": 24.7502,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9552,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv1p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 26.2366,
+          "valence_mae": 24.7502,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1334.9552,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 26.253,
+          "valence_mae": 24.7831,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.0778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 26.253,
+          "valence_mae": 24.7831,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.0778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 26.253,
+          "valence_mae": 24.7831,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.0778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p25_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 26.253,
+          "valence_mae": 24.7831,
+          "arousal_mae": 27.7229,
+          "overall_mse": 1335.0778,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 26.2584,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1338.9536,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 26.2605,
+          "valence_mae": 24.6154,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1339.1992,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 26.2614,
+          "valence_mae": 24.6171,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1339.1289,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 26.2646,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1341.1379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 26.2646,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1341.1379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 26.2646,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1341.1379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 26.2646,
+          "valence_mae": 24.6235,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1341.1379,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 26.2666,
+          "valence_mae": 24.6275,
+          "arousal_mae": 27.9056,
+          "overall_mse": 1339.3141,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 26.2681,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.9251,
+          "overall_mse": 1339.6249,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 26.2681,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.9251,
+          "overall_mse": 1339.6249,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 26.2681,
+          "valence_mae": 24.6112,
+          "arousal_mae": 27.9251,
+          "overall_mse": 1339.6249,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 27.1327,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1417.9972,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 27.1327,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1417.9972,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca2p0",
+          "overall_mae": 27.1327,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1417.9972,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca2p0",
+          "overall_mae": 27.1327,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1417.9972,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustMedianPrior",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca2p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca4p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca6p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv3p0_ca8p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca2p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca4p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca6p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv4p5_ca8p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca2p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca4p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca6p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p0_cv6p0_ca8p0",
+          "overall_mae": 27.1409,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1420.541,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca4p0",
+          "overall_mae": 27.141,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1934,
+          "overall_mse": 1416.8866,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca4p0",
+          "overall_mae": 27.141,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1934,
+          "overall_mse": 1416.8866,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca4p0",
+          "overall_mae": 27.141,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1934,
+          "overall_mse": 1416.8866,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca4p0",
+          "overall_mae": 27.141,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.1934,
+          "overall_mse": 1416.8866,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 27.1517,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2147,
+          "overall_mse": 1417.6693,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca4p0",
+          "overall_mae": 27.1517,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2147,
+          "overall_mse": 1417.6693,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca4p0",
+          "overall_mae": 27.1517,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2147,
+          "overall_mse": 1417.6693,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca4p0",
+          "overall_mae": 27.1517,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2147,
+          "overall_mse": 1417.6693,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca6p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv3p0_ca8p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca6p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv4p5_ca8p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca6p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p025_cv6p0_ca8p0",
+          "overall_mae": 27.1531,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1417.6805,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca2p0",
+          "overall_mae": 27.1569,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2253,
+          "overall_mse": 1418.077,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca2p0",
+          "overall_mae": 27.1569,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2253,
+          "overall_mse": 1418.077,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca2p0",
+          "overall_mae": 27.1569,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2253,
+          "overall_mse": 1418.077,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca2p0",
+          "overall_mae": 27.1569,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2253,
+          "overall_mse": 1418.077,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 27.16,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1414.5245,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca6p0",
+          "overall_mae": 27.1629,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2371,
+          "overall_mse": 1417.3304,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca6p0",
+          "overall_mae": 27.1629,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2371,
+          "overall_mse": 1417.3304,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca6p0",
+          "overall_mae": 27.1629,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2371,
+          "overall_mse": 1417.3304,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca6p0",
+          "overall_mae": 27.1629,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2371,
+          "overall_mse": 1417.3304,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca6p0",
+          "overall_mae": 27.1643,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2401,
+          "overall_mse": 1417.2086,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca6p0",
+          "overall_mae": 27.1643,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2401,
+          "overall_mse": 1417.2086,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca6p0",
+          "overall_mae": 27.1643,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2401,
+          "overall_mse": 1417.2086,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca6p0",
+          "overall_mae": 27.1643,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2401,
+          "overall_mse": 1417.2086,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.1683,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1417.0684,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 27.1683,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1417.0684,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 27.1683,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1417.0684,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 27.1683,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1417.0684,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p05_cv2p0_ca4p0",
+          "overall_mae": 27.1684,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.1934,
+          "overall_mse": 1413.4141,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca4p0",
+          "overall_mae": 27.1695,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2504,
+          "overall_mse": 1417.0591,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca4p0",
+          "overall_mae": 27.1695,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2504,
+          "overall_mse": 1417.0591,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca4p0",
+          "overall_mae": 27.1695,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2504,
+          "overall_mse": 1417.0591,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca4p0",
+          "overall_mae": 27.1695,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2504,
+          "overall_mse": 1417.0591,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p025_cv2p0_ca2p0",
+          "overall_mae": 27.1724,
+          "valence_mae": 26.1681,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1414.224,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca2p0",
+          "overall_mae": 27.1775,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2663,
+          "overall_mse": 1418.6348,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca2p0",
+          "overall_mae": 27.1775,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2663,
+          "overall_mse": 1418.6348,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv4p5_ca2p0",
+          "overall_mae": 27.1775,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2663,
+          "overall_mse": 1418.6348,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv6p0_ca2p0",
+          "overall_mae": 27.1775,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2663,
+          "overall_mse": 1418.6348,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca4p0",
+          "overall_mae": 27.179,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.2147,
+          "overall_mse": 1414.1968,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca6p0",
+          "overall_mae": 27.1805,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1414.208,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv2p0_ca8p0",
+          "overall_mae": 27.1805,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.2177,
+          "overall_mse": 1414.208,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.1807,
+          "valence_mae": 26.1681,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1416.7676,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca4p0",
+          "overall_mae": 27.1807,
+          "valence_mae": 26.1681,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1416.7676,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca6p0",
+          "overall_mae": 27.1807,
+          "valence_mae": 26.1681,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1416.7676,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p0_cv2p0_ca8p0",
+          "overall_mae": 27.1807,
+          "valence_mae": 26.1681,
+          "arousal_mae": 28.1933,
+          "overall_mse": 1416.7676,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p1_sa0p05_cv2p0_ca4p0",
+          "overall_mae": 27.1807,
+          "valence_mae": 26.1681,
+          "arousal_mae": 28.1934,
+          "overall_mse": 1413.1133,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv2p0_ca8p0",
+          "overall_mae": 27.1808,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2729,
+          "overall_mse": 1417.1279,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv3p0_ca8p0",
+          "overall_mae": 27.1808,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2729,
+          "overall_mse": 1417.1279,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv4p5_ca8p0",
+          "overall_mae": 27.1808,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2729,
+          "overall_mse": 1417.1279,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p05_cv6p0_ca8p0",
+          "overall_mae": 27.1808,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2729,
+          "overall_mse": 1417.1279,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p025_cv3p0_ca2p0",
+          "overall_mae": 27.1821,
+          "valence_mae": 26.1875,
+          "arousal_mae": 28.1767,
+          "overall_mse": 1414.3019,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p05_sa0p05_cv2p0_ca2p0",
+          "overall_mae": 27.1843,
+          "valence_mae": 26.1433,
+          "arousal_mae": 28.2253,
+          "overall_mse": 1414.6045,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv2p0_ca8p0",
+          "overall_mae": 27.1866,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2847,
+          "overall_mse": 1418.2301,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        },
+        {
+          "method": "RobustPrior_TBCR_sv0p0_sa0p075_cv3p0_ca8p0",
+          "overall_mae": 27.1866,
+          "valence_mae": 26.0886,
+          "arousal_mae": 28.2847,
+          "overall_mse": 1418.2301,
+          "notes": "RobustMedianPrior plus TBCR correction."
+        }
+      ]
+    }
+  ]
+}

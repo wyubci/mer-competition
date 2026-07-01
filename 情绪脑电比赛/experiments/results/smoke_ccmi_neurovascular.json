@@ -1,0 +1,528 @@
+{
+  "method": "CCMI: Conservative Cross-Modal Intersection",
+  "note": "CCMI treats EEG and fNIRS residual experts as two noisy measurements of the same hidden affective correction. A residual is trusted when signs agree, amplitudes overlap, and optional neurovascular/temporal gates do not veto it.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      9
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "270_CCMI_HelpfulProbabilityGate_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.159,
+      "valence_mae": 25.1244,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.5367,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "270_CCMI_HelpfulProbabilityGate_VOnly_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.159,
+      "valence_mae": 25.1244,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.5367,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "270_CCMI_HelpfulProbabilityGate_VOnly_both_s0p6_c8p0_smooth5",
+      "overall_mae": 28.159,
+      "valence_mae": 25.1244,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.5367,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "276_CCMI_VetoHelpfulBlend_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1634,
+      "valence_mae": 25.1332,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.8711,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "276_CCMI_VetoHelpfulBlend_VOnly_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1634,
+      "valence_mae": 25.1332,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.8711,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "276_CCMI_VetoHelpfulBlend_VOnly_both_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1634,
+      "valence_mae": 25.1332,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.8711,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "267_CCMI_NeurovascularVeto_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1642,
+      "valence_mae": 25.1347,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1470.3152,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "267_CCMI_NeurovascularVeto_VOnly_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1642,
+      "valence_mae": 25.1347,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1470.3152,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "267_CCMI_NeurovascularVeto_VOnly_both_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1642,
+      "valence_mae": 25.1347,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1470.3152,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "273_CCMI_PriorSlopeGate_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1658,
+      "valence_mae": 25.138,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.1437,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "273_CCMI_PriorSlopeGate_VOnly_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1658,
+      "valence_mae": 25.138,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.1437,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "273_CCMI_PriorSlopeGate_VOnly_both_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1658,
+      "valence_mae": 25.138,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.1437,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "270_CCMI_HelpfulProbabilityGate_both_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1664,
+      "valence_mae": 25.1244,
+      "arousal_mae": 31.2084,
+      "overall_mse": 1473.7572,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "266_CCMI_NeurovascularConfirm_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1691,
+      "valence_mae": 25.1446,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.3189,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "266_CCMI_NeurovascularConfirm_VOnly_v_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1691,
+      "valence_mae": 25.1446,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.3189,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "266_CCMI_NeurovascularConfirm_VOnly_both_s0p6_c8p0_smooth5",
+      "overall_mae": 28.1691,
+      "valence_mae": 25.1446,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1471.3189,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "273_CCMI_PriorSlopeGate_v_s0p45_c8p0_smooth5",
+      "overall_mae": 28.1694,
+      "valence_mae": 25.1452,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.1398,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "273_CCMI_PriorSlopeGate_VOnly_v_s0p45_c8p0_smooth5",
+      "overall_mae": 28.1694,
+      "valence_mae": 25.1452,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.1398,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "273_CCMI_PriorSlopeGate_VOnly_both_s0p45_c8p0_smooth5",
+      "overall_mae": 28.1694,
+      "valence_mae": 25.1452,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.1398,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    },
+    {
+      "method": "276_CCMI_VetoHelpfulBlend_v_s0p45_c8p0_smooth5",
+      "overall_mae": 28.1708,
+      "valence_mae": 25.1479,
+      "arousal_mae": 31.1936,
+      "overall_mse": 1473.3656,
+      "notes": "Smoothed EEG-fNIRS residual correction."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "271_CCMI_LeakyIntegrator_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0488,
+          "valence_mae": 26.2573,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.8643,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "271_CCMI_LeakyIntegrator_VOnly_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0488,
+          "valence_mae": 26.2573,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.8643,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "271_CCMI_LeakyIntegrator_VOnly_both_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0488,
+          "valence_mae": 26.2573,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.8643,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "263_CCMI_MinOverlap_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0496,
+          "valence_mae": 26.2588,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.9912,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "263_CCMI_MinOverlap_VOnly_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0496,
+          "valence_mae": 26.2588,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.9912,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "263_CCMI_MinOverlap_VOnly_both_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0496,
+          "valence_mae": 26.2588,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.9912,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "268_CCMI_EarlyExpertVeto_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0504,
+          "valence_mae": 26.2605,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.1206,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "268_CCMI_EarlyExpertVeto_VOnly_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0504,
+          "valence_mae": 26.2605,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.1206,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "268_CCMI_EarlyExpertVeto_VOnly_both_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0504,
+          "valence_mae": 26.2605,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.1206,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "274_CCMI_HRFDelayedFNIRS_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0525,
+          "valence_mae": 26.2648,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.9391,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "274_CCMI_HRFDelayedFNIRS_VOnly_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0525,
+          "valence_mae": 26.2648,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.9391,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "274_CCMI_HRFDelayedFNIRS_VOnly_both_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0525,
+          "valence_mae": 26.2648,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1391.9391,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "271_CCMI_LeakyIntegrator_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0566,
+          "valence_mae": 26.273,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.689,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "271_CCMI_LeakyIntegrator_VOnly_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0566,
+          "valence_mae": 26.273,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.689,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "271_CCMI_LeakyIntegrator_VOnly_both_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0566,
+          "valence_mae": 26.273,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.689,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "263_CCMI_MinOverlap_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0574,
+          "valence_mae": 26.2746,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.9291,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "263_CCMI_MinOverlap_VOnly_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0574,
+          "valence_mae": 26.2746,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.9291,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "263_CCMI_MinOverlap_VOnly_both_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0574,
+          "valence_mae": 26.2746,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1392.9291,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "268_CCMI_EarlyExpertVeto_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0583,
+          "valence_mae": 26.2763,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1393.0585,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "268_CCMI_EarlyExpertVeto_VOnly_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.0583,
+          "valence_mae": 26.2763,
+          "arousal_mae": 29.8403,
+          "overall_mse": 1393.0585,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0488,
+          "valence_mae": 23.5506,
+          "arousal_mae": 32.547,
+          "overall_mse": 1533.9512,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_v_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0488,
+          "valence_mae": 23.5506,
+          "arousal_mae": 32.547,
+          "overall_mse": 1533.9512,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_both_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0488,
+          "valence_mae": 23.5506,
+          "arousal_mae": 32.547,
+          "overall_mse": 1533.9512,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_both_s0p6_c8p0_smooth5",
+          "overall_mae": 28.0628,
+          "valence_mae": 23.5506,
+          "arousal_mae": 32.5751,
+          "overall_mse": 1534.3151,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_v_s0p6_c8p0",
+          "overall_mae": 28.0658,
+          "valence_mae": 23.5634,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1536.5338,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_v_s0p6_c8p0",
+          "overall_mae": 28.0658,
+          "valence_mae": 23.5634,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1536.5338,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_both_s0p6_c8p0",
+          "overall_mae": 28.0658,
+          "valence_mae": 23.5634,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1536.5338,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_v_s0p45_c8p0_smooth5",
+          "overall_mae": 28.0759,
+          "valence_mae": 23.6048,
+          "arousal_mae": 32.547,
+          "overall_mse": 1536.6927,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_v_s0p45_c8p0_smooth5",
+          "overall_mae": 28.0759,
+          "valence_mae": 23.6048,
+          "arousal_mae": 32.547,
+          "overall_mse": 1536.6927,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_both_s0p45_c8p0_smooth5",
+          "overall_mae": 28.0759,
+          "valence_mae": 23.6048,
+          "arousal_mae": 32.547,
+          "overall_mse": 1536.6927,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_both_s0p6_c8p0",
+          "overall_mae": 28.0817,
+          "valence_mae": 23.5634,
+          "arousal_mae": 32.6,
+          "overall_mse": 1536.9287,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_both_s0p45_c8p0_smooth5",
+          "overall_mae": 28.086,
+          "valence_mae": 23.6048,
+          "arousal_mae": 32.5672,
+          "overall_mse": 1536.9523,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_v_s0p45_c8p0",
+          "overall_mae": 28.0935,
+          "valence_mae": 23.6188,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1539.2155,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_v_s0p45_c8p0",
+          "overall_mae": 28.0935,
+          "valence_mae": 23.6188,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1539.2155,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_both_s0p45_c8p0",
+          "overall_mae": 28.0935,
+          "valence_mae": 23.6188,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1539.2155,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_both_s0p45_c8p0",
+          "overall_mae": 28.105,
+          "valence_mae": 23.6188,
+          "arousal_mae": 32.5912,
+          "overall_mse": 1539.4917,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_v_s0p36_c8p0_smooth5",
+          "overall_mae": 28.1144,
+          "valence_mae": 23.6818,
+          "arousal_mae": 32.547,
+          "overall_mse": 1540.3501,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_v_s0p36_c8p0_smooth5",
+          "overall_mae": 28.1144,
+          "valence_mae": 23.6818,
+          "arousal_mae": 32.547,
+          "overall_mse": 1540.3501,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_VOnly_both_s0p36_c8p0_smooth5",
+          "overall_mae": 28.1144,
+          "valence_mae": 23.6818,
+          "arousal_mae": 32.547,
+          "overall_mse": 1540.3501,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        },
+        {
+          "method": "270_CCMI_HelpfulProbabilityGate_v_s0p6_c6p0_smooth5",
+          "overall_mae": 28.1182,
+          "valence_mae": 23.6893,
+          "arousal_mae": 32.547,
+          "overall_mse": 1540.4127,
+          "notes": "Smoothed EEG-fNIRS residual correction."
+        }
+      ]
+    }
+  ]
+}

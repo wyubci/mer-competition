@@ -1,0 +1,494 @@
+{
+  "device": "cuda",
+  "method": "PA-BS: Prior-Aware Bilateral Smoothing",
+  "lagged_dprg": {
+    "valence_lag": -8,
+    "arousal_lag": -12,
+    "valence_scale": 11.5,
+    "valence_clip": 10.0,
+    "arousal_scale": 0.2,
+    "arousal_clip": 0.0
+  },
+  "results": [
+    {
+      "method": "PABS_window17_sigma10p0",
+      "overall_mae": 29.5553,
+      "valence_mae": 27.762,
+      "arousal_mae": 31.3485,
+      "overall_mse": 1496.0531,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 10.0
+    },
+    {
+      "method": "PABS_window17_sigma5p0",
+      "overall_mae": 29.5637,
+      "valence_mae": 27.7704,
+      "arousal_mae": 31.357,
+      "overall_mse": 1498.5612,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 5.0
+    },
+    {
+      "method": "PABS_window17_sigma20p0",
+      "overall_mae": 29.565,
+      "valence_mae": 27.7778,
+      "arousal_mae": 31.3523,
+      "overall_mse": 1493.5167,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 20.0
+    },
+    {
+      "method": "PABS_window13_sigma10p0",
+      "overall_mae": 29.5659,
+      "valence_mae": 27.7779,
+      "arousal_mae": 31.3538,
+      "overall_mse": 1497.207,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 10.0
+    },
+    {
+      "method": "PABS_window13_sigma20p0",
+      "overall_mae": 29.5685,
+      "valence_mae": 27.7829,
+      "arousal_mae": 31.354,
+      "overall_mse": 1495.3917,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 20.0
+    },
+    {
+      "method": "PABS_window13_sigma5p0",
+      "overall_mae": 29.5756,
+      "valence_mae": 27.7881,
+      "arousal_mae": 31.3631,
+      "overall_mse": 1499.1539,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 5.0
+    },
+    {
+      "method": "PABS_window11_sigma10p0",
+      "overall_mae": 29.5757,
+      "valence_mae": 27.7917,
+      "arousal_mae": 31.3597,
+      "overall_mse": 1497.9952,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 10.0
+    },
+    {
+      "method": "PABS_window13_sigma40p0",
+      "overall_mae": 29.5762,
+      "valence_mae": 27.7957,
+      "arousal_mae": 31.3568,
+      "overall_mse": 1494.4401,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 40.0
+    },
+    {
+      "method": "PABS_window11_sigma20p0",
+      "overall_mae": 29.5765,
+      "valence_mae": 27.7939,
+      "arousal_mae": 31.359,
+      "overall_mse": 1496.5748,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 20.0
+    },
+    {
+      "method": "PABS_window13_sigma80p0",
+      "overall_mae": 29.5794,
+      "valence_mae": 27.8009,
+      "arousal_mae": 31.3578,
+      "overall_mse": 1494.1595,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 80.0
+    },
+    {
+      "method": "PABS_window13_sigmainf",
+      "overall_mae": 29.5805,
+      "valence_mae": 27.8029,
+      "arousal_mae": 31.3581,
+      "overall_mse": 1494.0643,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 1000000.0
+    },
+    {
+      "method": "PABS_window11_sigma40p0",
+      "overall_mae": 29.581,
+      "valence_mae": 27.8014,
+      "arousal_mae": 31.3605,
+      "overall_mse": 1495.8746,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 40.0
+    },
+    {
+      "method": "MovingAverage_window9",
+      "overall_mae": 29.5823,
+      "valence_mae": 27.8036,
+      "arousal_mae": 31.361,
+      "overall_mse": 1494.4873,
+      "notes": "Fixed per-trial moving average smoothing.",
+      "window": 9,
+      "sigma_prior": null
+    },
+    {
+      "method": "PABS_window17_sigma40p0",
+      "overall_mae": 29.5826,
+      "valence_mae": 27.8063,
+      "arousal_mae": 31.359,
+      "overall_mse": 1492.1127,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 40.0
+    },
+    {
+      "method": "PABS_window11_sigma80p0",
+      "overall_mae": 29.5828,
+      "valence_mae": 27.8044,
+      "arousal_mae": 31.3611,
+      "overall_mse": 1495.6691,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 80.0
+    },
+    {
+      "method": "PABS_window11_sigmainf",
+      "overall_mae": 29.5834,
+      "valence_mae": 27.8056,
+      "arousal_mae": 31.3613,
+      "overall_mse": 1495.5986,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 1000000.0
+    },
+    {
+      "method": "PABS_window11_sigma5p0",
+      "overall_mae": 29.5847,
+      "valence_mae": 27.8013,
+      "arousal_mae": 31.3681,
+      "overall_mse": 1499.6127,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 5.0
+    },
+    {
+      "method": "MovingAverage_window7",
+      "overall_mae": 29.5881,
+      "valence_mae": 27.8104,
+      "arousal_mae": 31.3658,
+      "overall_mse": 1496.6377,
+      "notes": "Fixed per-trial moving average smoothing.",
+      "window": 7,
+      "sigma_prior": null
+    },
+    {
+      "method": "MovingAverage_window11",
+      "overall_mae": 29.5891,
+      "valence_mae": 27.8154,
+      "arousal_mae": 31.3628,
+      "overall_mse": 1492.6864,
+      "notes": "Fixed per-trial moving average smoothing.",
+      "window": 11,
+      "sigma_prior": null
+    },
+    {
+      "method": "PABS_window9_sigma20p0",
+      "overall_mae": 29.5898,
+      "valence_mae": 27.8127,
+      "arousal_mae": 31.367,
+      "overall_mse": 1497.9463,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 20.0
+    },
+    {
+      "method": "PABS_window17_sigma80p0",
+      "overall_mae": 29.5898,
+      "valence_mae": 27.8181,
+      "arousal_mae": 31.3614,
+      "overall_mse": 1491.7192,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 80.0
+    },
+    {
+      "method": "PABS_window9_sigma10p0",
+      "overall_mae": 29.59,
+      "valence_mae": 27.812,
+      "arousal_mae": 31.368,
+      "overall_mse": 1498.9713,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 10.0
+    },
+    {
+      "method": "PABS_window17_sigma2p0",
+      "overall_mae": 29.5902,
+      "valence_mae": 27.8027,
+      "arousal_mae": 31.3776,
+      "overall_mse": 1500.8457,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 2.0
+    },
+    {
+      "method": "PABS_window9_sigma40p0",
+      "overall_mae": 29.5919,
+      "valence_mae": 27.8166,
+      "arousal_mae": 31.3672,
+      "overall_mse": 1497.4825,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 40.0
+    },
+    {
+      "method": "PABS_window17_sigmainf",
+      "overall_mae": 29.5924,
+      "valence_mae": 27.8225,
+      "arousal_mae": 31.3623,
+      "overall_mse": 1491.5928,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 17,
+      "sigma_prior": 1000000.0
+    },
+    {
+      "method": "PABS_window9_sigma80p0",
+      "overall_mae": 29.5927,
+      "valence_mae": 27.8181,
+      "arousal_mae": 31.3674,
+      "overall_mse": 1497.3481,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 80.0
+    },
+    {
+      "method": "PABS_window9_sigmainf",
+      "overall_mae": 29.5931,
+      "valence_mae": 27.8187,
+      "arousal_mae": 31.3674,
+      "overall_mse": 1497.3021,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 1000000.0
+    },
+    {
+      "method": "PABS_window9_sigma5p0",
+      "overall_mae": 29.5968,
+      "valence_mae": 27.8192,
+      "arousal_mae": 31.3744,
+      "overall_mse": 1500.2379,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 5.0
+    },
+    {
+      "method": "PABS_window13_sigma2p0",
+      "overall_mae": 29.6,
+      "valence_mae": 27.8176,
+      "arousal_mae": 31.3824,
+      "overall_mse": 1501.2319,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 13,
+      "sigma_prior": 2.0
+    },
+    {
+      "method": "MovingAverage_window13",
+      "overall_mae": 29.6062,
+      "valence_mae": 27.8411,
+      "arousal_mae": 31.3713,
+      "overall_mse": 1491.2875,
+      "notes": "Fixed per-trial moving average smoothing.",
+      "window": 13,
+      "sigma_prior": null
+    },
+    {
+      "method": "PABS_window11_sigma2p0",
+      "overall_mae": 29.6065,
+      "valence_mae": 27.8276,
+      "arousal_mae": 31.3855,
+      "overall_mse": 1501.5092,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 11,
+      "sigma_prior": 2.0
+    },
+    {
+      "method": "MovingAverage_window5",
+      "overall_mae": 29.6081,
+      "valence_mae": 27.8393,
+      "arousal_mae": 31.3769,
+      "overall_mse": 1499.0568,
+      "notes": "Fixed per-trial moving average smoothing.",
+      "window": 5,
+      "sigma_prior": null
+    },
+    {
+      "method": "PABS_window7_sigma20p0",
+      "overall_mae": 29.6084,
+      "valence_mae": 27.8402,
+      "arousal_mae": 31.3766,
+      "overall_mse": 1499.5326,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 20.0
+    },
+    {
+      "method": "PABS_window7_sigma10p0",
+      "overall_mae": 29.6088,
+      "valence_mae": 27.8401,
+      "arousal_mae": 31.3776,
+      "overall_mse": 1500.1832,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 10.0
+    },
+    {
+      "method": "PABS_window7_sigma40p0",
+      "overall_mae": 29.6092,
+      "valence_mae": 27.8418,
+      "arousal_mae": 31.3766,
+      "overall_mse": 1499.267,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 40.0
+    },
+    {
+      "method": "PABS_window7_sigma80p0",
+      "overall_mae": 29.6095,
+      "valence_mae": 27.8425,
+      "arousal_mae": 31.3766,
+      "overall_mse": 1499.1919,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 80.0
+    },
+    {
+      "method": "PABS_window7_sigmainf",
+      "overall_mae": 29.6097,
+      "valence_mae": 27.8427,
+      "arousal_mae": 31.3766,
+      "overall_mse": 1499.1661,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 1000000.0
+    },
+    {
+      "method": "PABS_window7_sigma5p0",
+      "overall_mae": 29.6135,
+      "valence_mae": 27.845,
+      "arousal_mae": 31.382,
+      "overall_mse": 1501.0883,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 5.0
+    },
+    {
+      "method": "PABS_window9_sigma2p0",
+      "overall_mae": 29.6152,
+      "valence_mae": 27.8409,
+      "arousal_mae": 31.3896,
+      "overall_mse": 1501.8844,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 9,
+      "sigma_prior": 2.0
+    },
+    {
+      "method": "PABS_window7_sigma2p0",
+      "overall_mae": 29.6278,
+      "valence_mae": 27.861,
+      "arousal_mae": 31.3946,
+      "overall_mse": 1502.4248,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 7,
+      "sigma_prior": 2.0
+    },
+    {
+      "method": "PABS_window5_sigma20p0",
+      "overall_mae": 29.6322,
+      "valence_mae": 27.8771,
+      "arousal_mae": 31.3874,
+      "overall_mse": 1501.4054,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 20.0
+    },
+    {
+      "method": "PABS_window5_sigma40p0",
+      "overall_mae": 29.6323,
+      "valence_mae": 27.8774,
+      "arousal_mae": 31.3871,
+      "overall_mse": 1501.2812,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 40.0
+    },
+    {
+      "method": "PABS_window5_sigma80p0",
+      "overall_mae": 29.6323,
+      "valence_mae": 27.8775,
+      "arousal_mae": 31.3871,
+      "overall_mse": 1501.2469,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 80.0
+    },
+    {
+      "method": "PABS_window5_sigmainf",
+      "overall_mae": 29.6323,
+      "valence_mae": 27.8776,
+      "arousal_mae": 31.3871,
+      "overall_mse": 1501.2352,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 1000000.0
+    },
+    {
+      "method": "PABS_window5_sigma10p0",
+      "overall_mae": 29.6329,
+      "valence_mae": 27.8776,
+      "arousal_mae": 31.3881,
+      "overall_mse": 1501.7408,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 10.0
+    },
+    {
+      "method": "PABS_window5_sigma5p0",
+      "overall_mae": 29.6357,
+      "valence_mae": 27.8806,
+      "arousal_mae": 31.3908,
+      "overall_mse": 1502.2968,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 5.0
+    },
+    {
+      "method": "PABS_window5_sigma2p0",
+      "overall_mae": 29.6454,
+      "valence_mae": 27.8905,
+      "arousal_mae": 31.4004,
+      "overall_mse": 1503.2697,
+      "notes": "Prior-aware bilateral smoothing over each trial.",
+      "window": 5,
+      "sigma_prior": 2.0
+    },
+    {
+      "method": "MovingAverage_window17",
+      "overall_mae": 29.6637,
+      "valence_mae": 27.9219,
+      "arousal_mae": 31.4054,
+      "overall_mse": 1489.8317,
+      "notes": "Fixed per-trial moving average smoothing.",
+      "window": 17,
+      "sigma_prior": null
+    }
+  ]
+}

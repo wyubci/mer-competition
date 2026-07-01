@@ -1,0 +1,593 @@
+{
+  "method": "No-video-prior asymmetric residual refinement batch",
+  "iteration_range": "416-435",
+  "note": "No candidate uses video/time label priors. This batch refines the winning asymmetric Huber valence correction by varying negative scale, smoothing, blends, and magnitude gates.",
+  "feature_shapes": {
+    "eeg": [
+      36864,
+      64,
+      5
+    ],
+    "fnirs": [
+      36864,
+      51,
+      18
+    ],
+    "fnirs_types": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "Reference_321_Center128_noPrior",
+      "overall_mae": 49.9864,
+      "valence_mae": 56.1957,
+      "arousal_mae": 43.777,
+      "overall_mse": 3984.1726,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "431_HuberAsymThenClip40Valence_CenterArousal",
+      "overall_mae": 51.0575,
+      "valence_mae": 58.3379,
+      "arousal_mae": 43.777,
+      "overall_mse": 4171.3504,
+      "notes": "Magnitude-dependent asymmetric residual correction."
+    },
+    {
+      "method": "428_RidgeAsymP10N08Valence_CenterArousal",
+      "overall_mae": 51.3953,
+      "valence_mae": 59.0136,
+      "arousal_mae": 43.777,
+      "overall_mse": 4183.7928,
+      "notes": "Apply the same asymmetric output rule to a non-Huber head."
+    },
+    {
+      "method": "429_ElasticAsymP10N08Valence_CenterArousal",
+      "overall_mae": 51.5815,
+      "valence_mae": 59.386,
+      "arousal_mae": 43.777,
+      "overall_mse": 4210.1171,
+      "notes": "Apply the same asymmetric output rule to a non-Huber head."
+    },
+    {
+      "method": "426_HuberRidgeBlend50Valence_CenterArousal",
+      "overall_mae": 52.2292,
+      "valence_mae": 60.6814,
+      "arousal_mae": 43.777,
+      "overall_mse": 4335.9784,
+      "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+    },
+    {
+      "method": "430_HuberMeanShiftAsymP10N08Valence_CenterArousal",
+      "overall_mae": 52.289,
+      "valence_mae": 60.8009,
+      "arousal_mae": 43.777,
+      "overall_mse": 4344.2076,
+      "notes": "Train mean-shift plus asymmetric residual correction."
+    },
+    {
+      "method": "419_HuberAsymP09N08Valence_CenterArousal",
+      "overall_mae": 52.3786,
+      "valence_mae": 60.9803,
+      "arousal_mae": 43.777,
+      "overall_mse": 4375.2466,
+      "notes": "Refined asymmetric Huber valence residual candidate."
+    },
+    {
+      "method": "425_HuberAsymBlend75Valence_CenterArousal",
+      "overall_mae": 52.5361,
+      "valence_mae": 61.2952,
+      "arousal_mae": 43.777,
+      "overall_mse": 4398.3636,
+      "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+    },
+    {
+      "method": "416_HuberAsymP10N06Valence_CenterArousal",
+      "overall_mae": 52.9332,
+      "valence_mae": 62.0894,
+      "arousal_mae": 43.777,
+      "overall_mse": 4481.3492,
+      "notes": "Refined asymmetric Huber valence residual candidate."
+    },
+    {
+      "method": "433_HuberNegMagGateBValence_CenterArousal",
+      "overall_mae": 52.9567,
+      "valence_mae": 62.1364,
+      "arousal_mae": 43.777,
+      "overall_mse": 4484.5891,
+      "notes": "Magnitude-dependent asymmetric residual correction."
+    },
+    {
+      "method": "417_HuberAsymP10N07Valence_CenterArousal",
+      "overall_mae": 53.0031,
+      "valence_mae": 62.2292,
+      "arousal_mae": 43.777,
+      "overall_mse": 4491.521,
+      "notes": "Refined asymmetric Huber valence residual candidate."
+    },
+    {
+      "method": "427_HuberRidgeBlend90Valence_CenterArousal",
+      "overall_mae": 53.0036,
+      "valence_mae": 62.2302,
+      "arousal_mae": 43.777,
+      "overall_mse": 4483.1665,
+      "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+    },
+    {
+      "method": "432_HuberNegMagGateAValence_CenterArousal",
+      "overall_mae": 53.0157,
+      "valence_mae": 62.2543,
+      "arousal_mae": 43.777,
+      "overall_mse": 4493.1921,
+      "notes": "Magnitude-dependent asymmetric residual correction."
+    },
+    {
+      "method": "422_HuberAsymP10N08Smooth9Valence_CenterArousal",
+      "overall_mae": 53.0331,
+      "valence_mae": 62.2892,
+      "arousal_mae": 43.777,
+      "overall_mse": 4493.9152,
+      "notes": "Asymmetric residual correction after alternative temporal smoothing."
+    },
+    {
+      "method": "423_HuberAsymP10N08Exp03Valence_CenterArousal",
+      "overall_mae": 53.0364,
+      "valence_mae": 62.2957,
+      "arousal_mae": 43.777,
+      "overall_mse": 4490.2822,
+      "notes": "Asymmetric residual correction after alternative temporal smoothing."
+    },
+    {
+      "method": "435_HuberAsymExpBlendValence_CenterArousal",
+      "overall_mae": 53.0463,
+      "valence_mae": 62.3156,
+      "arousal_mae": 43.777,
+      "overall_mse": 4494.5874,
+      "notes": "Asymmetric residual correction after alternative temporal smoothing."
+    },
+    {
+      "method": "421_HuberAsymP10N08Smooth7Valence_CenterArousal",
+      "overall_mae": 53.0536,
+      "valence_mae": 62.3303,
+      "arousal_mae": 43.777,
+      "overall_mse": 4498.1088,
+      "notes": "Asymmetric residual correction after alternative temporal smoothing."
+    },
+    {
+      "method": "Reference_407_HuberAsymP10N08Valence_CenterArousal",
+      "overall_mae": 53.075,
+      "valence_mae": 62.3729,
+      "arousal_mae": 43.777,
+      "overall_mse": 4502.457,
+      "notes": "Reference from previous physiological-only batches."
+    },
+    {
+      "method": "424_HuberAsymP10N08Median5Valence_CenterArousal",
+      "overall_mae": 53.0867,
+      "valence_mae": 62.3965,
+      "arousal_mae": 43.777,
+      "overall_mse": 4504.8107,
+      "notes": "Asymmetric residual correction after alternative temporal smoothing."
+    },
+    {
+      "method": "418_HuberAsymP10N09Valence_CenterArousal",
+      "overall_mae": 53.149,
+      "valence_mae": 62.5211,
+      "arousal_mae": 43.777,
+      "overall_mse": 4514.1539,
+      "notes": "Refined asymmetric Huber valence residual candidate."
+    },
+    {
+      "method": "434_HuberPosBoostNegShrinkValence_CenterArousal",
+      "overall_mae": 53.8032,
+      "valence_mae": 63.8293,
+      "arousal_mae": 43.777,
+      "overall_mse": 4639.0503,
+      "notes": "Magnitude-dependent asymmetric residual correction."
+    },
+    {
+      "method": "420_HuberAsymP11N08Valence_CenterArousal",
+      "overall_mae": 53.8605,
+      "valence_mae": 63.9439,
+      "arousal_mae": 43.777,
+      "overall_mse": 4647.8846,
+      "notes": "Refined asymmetric Huber valence residual candidate."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 40.0646,
+          "valence_mae": 48.5337,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3061.8928,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "428_RidgeAsymP10N08Valence_CenterArousal",
+          "overall_mae": 43.4159,
+          "valence_mae": 55.2363,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3476.7188,
+          "notes": "Apply the same asymmetric output rule to a non-Huber head."
+        },
+        {
+          "method": "429_ElasticAsymP10N08Valence_CenterArousal",
+          "overall_mae": 43.6576,
+          "valence_mae": 55.7196,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3511.2961,
+          "notes": "Apply the same asymmetric output rule to a non-Huber head."
+        },
+        {
+          "method": "431_HuberAsymThenClip40Valence_CenterArousal",
+          "overall_mae": 43.9153,
+          "valence_mae": 56.2351,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3576.1155,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "426_HuberRidgeBlend50Valence_CenterArousal",
+          "overall_mae": 45.3783,
+          "valence_mae": 59.161,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3779.1331,
+          "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+        },
+        {
+          "method": "430_HuberMeanShiftAsymP10N08Valence_CenterArousal",
+          "overall_mae": 45.4748,
+          "valence_mae": 59.3541,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3780.4519,
+          "notes": "Train mean-shift plus asymmetric residual correction."
+        },
+        {
+          "method": "419_HuberAsymP09N08Valence_CenterArousal",
+          "overall_mae": 46.2349,
+          "valence_mae": 60.8743,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3905.45,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "425_HuberAsymBlend75Valence_CenterArousal",
+          "overall_mae": 46.3987,
+          "valence_mae": 61.2019,
+          "arousal_mae": 31.5955,
+          "overall_mse": 3934.8398,
+          "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+        },
+        {
+          "method": "427_HuberRidgeBlend90Valence_CenterArousal",
+          "overall_mae": 47.1776,
+          "valence_mae": 62.7596,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4063.8105,
+          "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+        },
+        {
+          "method": "416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 47.4979,
+          "valence_mae": 63.4003,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4106.7334,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "433_HuberNegMagGateBValence_CenterArousal",
+          "overall_mae": 47.5236,
+          "valence_mae": 63.4516,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4112.1797,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "417_HuberAsymP10N07Valence_CenterArousal",
+          "overall_mae": 47.539,
+          "valence_mae": 63.4824,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4115.1387,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "432_HuberNegMagGateAValence_CenterArousal",
+          "overall_mae": 47.5465,
+          "valence_mae": 63.4974,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4116.6602,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "422_HuberAsymP10N08Smooth9Valence_CenterArousal",
+          "overall_mae": 47.5514,
+          "valence_mae": 63.5073,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4118.4473,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "421_HuberAsymP10N08Smooth7Valence_CenterArousal",
+          "overall_mae": 47.5649,
+          "valence_mae": 63.5343,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4120.9297,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "Reference_407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 47.58,
+          "valence_mae": 63.5645,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4123.8638,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "435_HuberAsymExpBlendValence_CenterArousal",
+          "overall_mae": 47.5828,
+          "valence_mae": 63.57,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4120.623,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "424_HuberAsymP10N08Median5Valence_CenterArousal",
+          "overall_mae": 47.5895,
+          "valence_mae": 63.5834,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4125.752,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "423_HuberAsymP10N08Exp03Valence_CenterArousal",
+          "overall_mae": 47.5982,
+          "valence_mae": 63.6008,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4119.7202,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "418_HuberAsymP10N09Valence_CenterArousal",
+          "overall_mae": 47.6211,
+          "valence_mae": 63.6467,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4132.9077,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "434_HuberPosBoostNegShrinkValence_CenterArousal",
+          "overall_mae": 49.034,
+          "valence_mae": 66.4724,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4361.4609,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "420_HuberAsymP11N08Valence_CenterArousal",
+          "overall_mae": 49.0658,
+          "valence_mae": 66.536,
+          "arousal_mae": 31.5955,
+          "overall_mse": 4368.5669,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "431_HuberAsymThenClip40Valence_CenterArousal",
+          "overall_mae": 58.1996,
+          "valence_mae": 60.4406,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4766.7349,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "416_HuberAsymP10N06Valence_CenterArousal",
+          "overall_mae": 58.3684,
+          "valence_mae": 60.7783,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4856.0278,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "433_HuberNegMagGateBValence_CenterArousal",
+          "overall_mae": 58.3898,
+          "valence_mae": 60.821,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4857.062,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "417_HuberAsymP10N07Valence_CenterArousal",
+          "overall_mae": 58.4672,
+          "valence_mae": 60.9759,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4867.9663,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "423_HuberAsymP10N08Exp03Valence_CenterArousal",
+          "overall_mae": 58.4746,
+          "valence_mae": 60.9906,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4860.918,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "432_HuberNegMagGateAValence_CenterArousal",
+          "overall_mae": 58.4848,
+          "valence_mae": 61.0111,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4869.7871,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "435_HuberAsymExpBlendValence_CenterArousal",
+          "overall_mae": 58.5098,
+          "valence_mae": 61.0612,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4868.6167,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "422_HuberAsymP10N08Smooth9Valence_CenterArousal",
+          "overall_mae": 58.5148,
+          "valence_mae": 61.0711,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4869.4565,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "419_HuberAsymP09N08Valence_CenterArousal",
+          "overall_mae": 58.5222,
+          "valence_mae": 61.086,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4845.1167,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "421_HuberAsymP10N08Smooth7Valence_CenterArousal",
+          "overall_mae": 58.5424,
+          "valence_mae": 61.1264,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4875.3574,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "Reference_407_HuberAsymP10N08Valence_CenterArousal",
+          "overall_mae": 58.5699,
+          "valence_mae": 61.1812,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4881.1118,
+          "notes": "Reference from previous physiological-only batches."
+        },
+        {
+          "method": "434_HuberPosBoostNegShrinkValence_CenterArousal",
+          "overall_mae": 58.5723,
+          "valence_mae": 61.1861,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4916.7002,
+          "notes": "Magnitude-dependent asymmetric residual correction."
+        },
+        {
+          "method": "424_HuberAsymP10N08Median5Valence_CenterArousal",
+          "overall_mae": 58.5839,
+          "valence_mae": 61.2094,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4883.9395,
+          "notes": "Asymmetric residual correction after alternative temporal smoothing."
+        },
+        {
+          "method": "420_HuberAsymP11N08Valence_CenterArousal",
+          "overall_mae": 58.6551,
+          "valence_mae": 61.3518,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4927.2598,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "425_HuberAsymBlend75Valence_CenterArousal",
+          "overall_mae": 58.6734,
+          "valence_mae": 61.3883,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4861.9546,
+          "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+        },
+        {
+          "method": "418_HuberAsymP10N09Valence_CenterArousal",
+          "overall_mae": 58.6769,
+          "valence_mae": 61.3953,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4895.4634,
+          "notes": "Refined asymmetric Huber valence residual candidate."
+        },
+        {
+          "method": "427_HuberRidgeBlend90Valence_CenterArousal",
+          "overall_mae": 58.8297,
+          "valence_mae": 61.7008,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4902.5894,
+          "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+        },
+        {
+          "method": "426_HuberRidgeBlend50Valence_CenterArousal",
+          "overall_mae": 59.0803,
+          "valence_mae": 62.2021,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4892.8945,
+          "notes": "Blend Huber with Ridge before or after asymmetric residual correction."
+        },
+        {
+          "method": "430_HuberMeanShiftAsymP10N08Valence_CenterArousal",
+          "overall_mae": 59.103,
+          "valence_mae": 62.2476,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4908.0327,
+          "notes": "Train mean-shift plus asymmetric residual correction."
+        },
+        {
+          "method": "428_RidgeAsymP10N08Valence_CenterArousal",
+          "overall_mae": 59.3747,
+          "valence_mae": 62.791,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4890.939,
+          "notes": "Apply the same asymmetric output rule to a non-Huber head."
+        },
+        {
+          "method": "429_ElasticAsymP10N08Valence_CenterArousal",
+          "overall_mae": 59.5055,
+          "valence_mae": 63.0524,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4909.0107,
+          "notes": "Apply the same asymmetric output rule to a non-Huber head."
+        },
+        {
+          "method": "Reference_321_Center128_noPrior",
+          "overall_mae": 59.9081,
+          "valence_mae": 63.8577,
+          "arousal_mae": 55.9585,
+          "overall_mse": 4906.6851,
+          "notes": "Reference from previous physiological-only batches."
+        }
+      ]
+    }
+  ]
+}

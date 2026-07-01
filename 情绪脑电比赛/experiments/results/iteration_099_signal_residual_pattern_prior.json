@@ -1,0 +1,4706 @@
+{
+  "method": "Strong-prior EEG/fNIRS signal residual probe",
+  "note": "A frozen-feature linear probe over ASAC EEG/fNIRS features predicts residuals relative to PatternPrior_098. Train residual targets use leave-subject-out prior.",
+  "fold_size": 4,
+  "feature_cache": "experiments/features/asac_features_20_4.npz",
+  "best_098_config": {
+    "valence": {
+      "quantile": 65.0,
+      "stable": "UncertaintyBlend_meanPrior_q15p0-45p0_g0p25",
+      "dynamic": "UncertaintyBlend_smooth61_q15p0-45p0_g0p45"
+    },
+    "arousal": {
+      "quantile": 55.0,
+      "stable": "UncertaintyBlend_smooth51_q20p0-45p0_g0p5",
+      "dynamic": "UncertaintyBlend_meanPrior_q20p0-55p0_g0p55"
+    }
+  },
+  "aggregate_results": [
+    {
+      "method": "PatternPrior_098",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6661,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7482,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6661,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7483,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6672,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7483,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6672,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7502,
+      "valence_mae": 26.9817,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6895,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7502,
+      "valence_mae": 26.9817,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6895,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7502,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6906,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7502,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6906,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7502,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5267,
+      "overall_mse": 1590.6577,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+      "overall_mae": 28.7502,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5267,
+      "overall_mse": 1590.6577,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+      "overall_mae": 28.7503,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1590.6577,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+      "overall_mae": 28.7503,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1590.6577,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7503,
+      "valence_mae": 26.9819,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.5894,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7503,
+      "valence_mae": 26.9819,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.5894,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7503,
+      "valence_mae": 26.9821,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.5917,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7503,
+      "valence_mae": 26.9821,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.5917,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9831,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.744,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9831,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.744,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9832,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7432,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7509,
+      "valence_mae": 26.9832,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7432,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7512,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5285,
+      "overall_mse": 1590.5513,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+      "overall_mae": 28.7512,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5286,
+      "overall_mse": 1590.5513,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+      "overall_mae": 28.7512,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5285,
+      "overall_mse": 1590.5513,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+      "overall_mae": 28.7512,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5286,
+      "overall_mse": 1590.5513,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7523,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5267,
+      "overall_mse": 1590.5767,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+      "overall_mae": 28.7523,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1590.5767,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+      "overall_mae": 28.7523,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5267,
+      "overall_mse": 1590.5778,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+      "overall_mae": 28.7524,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1590.5778,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7526,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5313,
+      "overall_mse": 1590.4304,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+      "overall_mae": 28.7526,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5313,
+      "overall_mse": 1590.4304,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+      "overall_mae": 28.7527,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5316,
+      "overall_mse": 1590.4368,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+      "overall_mae": 28.7527,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5316,
+      "overall_mse": 1590.4368,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7541,
+      "valence_mae": 26.9896,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6334,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7541,
+      "valence_mae": 26.9896,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6334,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.9899,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6428,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.9899,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.6428,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5348,
+      "overall_mse": 1590.5753,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5348,
+      "overall_mse": 1590.5753,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.9819,
+      "arousal_mae": 30.5267,
+      "overall_mse": 1590.5,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.9819,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1590.5,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.99,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.4468,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7543,
+      "valence_mae": 26.99,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.4468,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+      "overall_mae": 28.7544,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5349,
+      "overall_mse": 1590.5753,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+      "overall_mae": 28.7544,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5349,
+      "overall_mse": 1590.5753,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+      "overall_mae": 28.7544,
+      "valence_mae": 26.9821,
+      "arousal_mae": 30.5267,
+      "overall_mse": 1590.5023,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+      "overall_mae": 28.7544,
+      "valence_mae": 26.9821,
+      "arousal_mae": 30.5268,
+      "overall_mse": 1590.5023,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7546,
+      "valence_mae": 26.9906,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.4567,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7546,
+      "valence_mae": 26.9906,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.4567,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7551,
+      "valence_mae": 26.9817,
+      "arousal_mae": 30.5285,
+      "overall_mse": 1590.4935,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+      "overall_mae": 28.7552,
+      "valence_mae": 26.9817,
+      "arousal_mae": 30.5286,
+      "overall_mse": 1590.4935,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+      "overall_mae": 28.7552,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.5285,
+      "overall_mse": 1590.4946,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+      "overall_mae": 28.7552,
+      "valence_mae": 26.9818,
+      "arousal_mae": 30.5286,
+      "overall_mse": 1590.4946,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+      "overall_mae": 28.7557,
+      "valence_mae": 26.9928,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7528,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+      "overall_mae": 28.7557,
+      "valence_mae": 26.9928,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7528,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+      "overall_mae": 28.7557,
+      "valence_mae": 26.9929,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7551,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+      "overall_mae": 28.7557,
+      "valence_mae": 26.9929,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7551,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+      "overall_mae": 28.7559,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.538,
+      "overall_mse": 1590.3456,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+      "overall_mae": 28.7559,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.538,
+      "overall_mse": 1590.3456,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+      "overall_mae": 28.7562,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5387,
+      "overall_mse": 1590.3737,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+      "overall_mae": 28.7562,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5387,
+      "overall_mse": 1590.3737,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+      "overall_mae": 28.7563,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5348,
+      "overall_mse": 1590.4943,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5391,
+      "overall_mse": 1589.9296,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5391,
+      "overall_mse": 1589.9296,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.9779,
+      "arousal_mae": 30.5349,
+      "overall_mse": 1590.4943,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5348,
+      "overall_mse": 1590.4954,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+      "overall_mae": 28.7564,
+      "valence_mae": 26.978,
+      "arousal_mae": 30.5349,
+      "overall_mse": 1590.4955,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+      "overall_mae": 28.7572,
+      "valence_mae": 26.9831,
+      "arousal_mae": 30.5313,
+      "overall_mse": 1590.4274,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.052,
+          "valence_mae": 24.704,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.3853,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.052,
+          "valence_mae": 24.704,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.3853,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0534,
+          "valence_mae": 24.7069,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.4465,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0534,
+          "valence_mae": 24.7069,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.4465,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0547,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.6006,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0547,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.6006,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0555,
+          "valence_mae": 24.7109,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.6254,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0555,
+          "valence_mae": 24.7109,
+          "arousal_mae": 27.4,
+          "overall_mse": 1237.6254,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 26.0582,
+          "valence_mae": 24.704,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1237.3324,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 26.0586,
+          "valence_mae": 24.704,
+          "arousal_mae": 27.4133,
+          "overall_mse": 1237.3324,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 26.0597,
+          "valence_mae": 24.7069,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1237.3937,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 26.0601,
+          "valence_mae": 24.7069,
+          "arousal_mae": 27.4133,
+          "overall_mse": 1237.3937,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 26.0604,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.4113,
+          "overall_mse": 1237.5739,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0605,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.0962,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0605,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.0962,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 26.0608,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.4121,
+          "overall_mse": 1237.5739,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 26.0611,
+          "valence_mae": 24.7109,
+          "arousal_mae": 27.4113,
+          "overall_mse": 1237.5984,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0611,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.1097,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0611,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.1097,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 26.0615,
+          "valence_mae": 24.7109,
+          "arousal_mae": 27.4121,
+          "overall_mse": 1237.5984,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 26.0641,
+          "valence_mae": 24.704,
+          "arousal_mae": 27.4241,
+          "overall_mse": 1237.2896,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 26.0644,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4078,
+          "overall_mse": 1238.0248,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0645,
+          "valence_mae": 24.729,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.5153,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0645,
+          "valence_mae": 24.729,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.5153,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0646,
+          "valence_mae": 24.7293,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.5137,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0646,
+          "valence_mae": 24.7293,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.5137,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 26.0646,
+          "valence_mae": 24.704,
+          "arousal_mae": 27.4252,
+          "overall_mse": 1237.291,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 26.0647,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4084,
+          "overall_mse": 1238.0248,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 26.065,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4078,
+          "overall_mse": 1238.0382,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 26.0653,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4084,
+          "overall_mse": 1238.0382,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 26.0655,
+          "valence_mae": 24.7069,
+          "arousal_mae": 27.4241,
+          "overall_mse": 1237.3507,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0656,
+          "valence_mae": 24.7312,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.6129,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0656,
+          "valence_mae": 24.7312,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.6129,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 26.0657,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.4218,
+          "overall_mse": 1237.5525,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 26.066,
+          "valence_mae": 24.7069,
+          "arousal_mae": 27.4252,
+          "overall_mse": 1237.3522,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.066,
+          "valence_mae": 24.7321,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.626,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.066,
+          "valence_mae": 24.7321,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.626,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 26.0661,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.4228,
+          "overall_mse": 1237.5533,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 26.0664,
+          "valence_mae": 24.7109,
+          "arousal_mae": 27.4218,
+          "overall_mse": 1237.577,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 26.0668,
+          "valence_mae": 24.7109,
+          "arousal_mae": 27.4228,
+          "overall_mse": 1237.578,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 26.0679,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4148,
+          "overall_mse": 1237.9567,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 26.0683,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4157,
+          "overall_mse": 1237.9569,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0685,
+          "valence_mae": 24.737,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.8646,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0685,
+          "valence_mae": 24.737,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.8646,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 26.0685,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4148,
+          "overall_mse": 1237.9702,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 26.0689,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4157,
+          "overall_mse": 1237.9703,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.069,
+          "valence_mae": 24.7381,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.8782,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.069,
+          "valence_mae": 24.7381,
+          "arousal_mae": 27.4,
+          "overall_mse": 1238.8782,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0702,
+          "valence_mae": 24.7405,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.0665,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0702,
+          "valence_mae": 24.7405,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.0665,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0703,
+          "valence_mae": 24.7406,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.0612,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0703,
+          "valence_mae": 24.7406,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.0612,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 26.0707,
+          "valence_mae": 24.729,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1238.4624,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 26.0709,
+          "valence_mae": 24.7293,
+          "arousal_mae": 27.4125,
+          "overall_mse": 1238.4608,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.071,
+          "valence_mae": 24.742,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.1246,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.071,
+          "valence_mae": 24.742,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.1246,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 26.0711,
+          "valence_mae": 24.729,
+          "arousal_mae": 27.4133,
+          "overall_mse": 1238.4624,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 26.0713,
+          "valence_mae": 24.7293,
+          "arousal_mae": 27.4133,
+          "overall_mse": 1238.4608,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0713,
+          "valence_mae": 24.7426,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.1317,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0713,
+          "valence_mae": 24.7426,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.1317,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 26.0713,
+          "valence_mae": 24.7312,
+          "arousal_mae": 27.4113,
+          "overall_mse": 1238.5861,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 26.0717,
+          "valence_mae": 24.7312,
+          "arousal_mae": 27.4121,
+          "overall_mse": 1238.5861,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 26.0717,
+          "valence_mae": 24.7321,
+          "arousal_mae": 27.4113,
+          "overall_mse": 1238.5991,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 26.0721,
+          "valence_mae": 24.7321,
+          "arousal_mae": 27.4121,
+          "overall_mse": 1238.5991,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 26.0724,
+          "valence_mae": 24.737,
+          "arousal_mae": 27.4078,
+          "overall_mse": 1238.7933,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0725,
+          "valence_mae": 24.7451,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.2531,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0725,
+          "valence_mae": 24.7451,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.2531,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 26.0727,
+          "valence_mae": 24.737,
+          "arousal_mae": 27.4084,
+          "overall_mse": 1238.7933,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 26.0729,
+          "valence_mae": 24.7457,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.2598,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 26.0729,
+          "valence_mae": 24.7457,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.2598,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 26.0729,
+          "valence_mae": 24.7381,
+          "arousal_mae": 27.4078,
+          "overall_mse": 1238.8066,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 26.0732,
+          "valence_mae": 24.7381,
+          "arousal_mae": 27.4084,
+          "overall_mse": 1238.8068,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 26.0749,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4288,
+          "overall_mse": 1237.8257,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 26.0755,
+          "valence_mae": 24.721,
+          "arousal_mae": 27.4299,
+          "overall_mse": 1237.828,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 26.0755,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4288,
+          "overall_mse": 1237.8392,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 26.0759,
+          "valence_mae": 24.737,
+          "arousal_mae": 27.4148,
+          "overall_mse": 1238.7252,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 26.076,
+          "valence_mae": 24.7222,
+          "arousal_mae": 27.4299,
+          "overall_mse": 1237.8414,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.4013,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.0437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.4013,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.0437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.4013,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.0437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4013,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.0437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 37.4071,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.0393,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 37.4071,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.0393,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 37.4071,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.0393,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 37.4071,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.0393,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.4104,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4307,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.4104,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4307,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.4104,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4307,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4104,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4307,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.4105,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4509,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.4105,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4509,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.4105,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4509,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4105,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.4509,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.411,
+          "valence_mae": 33.3199,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.2722,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.411,
+          "valence_mae": 33.3199,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.2722,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.411,
+          "valence_mae": 33.3199,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.2722,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.411,
+          "valence_mae": 33.3199,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.2722,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 37.4161,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.4143,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 37.4161,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.4143,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 37.4161,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.4143,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 37.4161,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.4143,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 37.4169,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2474.6614,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 37.4169,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2474.6614,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 37.4169,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2474.6614,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 37.4169,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2474.6614,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 37.4218,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.4314,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 37.4218,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.4314,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 37.4218,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.4314,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 37.4218,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.4314,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 37.4252,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.8015,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 37.4252,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.8015,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 37.4252,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.8015,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 37.4252,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5316,
+          "overall_mse": 2474.8015,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.4284,
+          "valence_mae": 33.3547,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.2185,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.4284,
+          "valence_mae": 33.3547,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.2185,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.4286,
+          "valence_mae": 33.3552,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.1914,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.4286,
+          "valence_mae": 33.3552,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.1914,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.4289,
+          "valence_mae": 33.3557,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.2625,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4289,
+          "valence_mae": 33.3557,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.2625,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.4292,
+          "valence_mae": 33.3563,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.241,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.4292,
+          "valence_mae": 33.3563,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2475.241,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 37.4294,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5763,
+          "overall_mse": 2476.1047,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 37.4294,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5763,
+          "overall_mse": 2476.1047,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 37.4297,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5768,
+          "overall_mse": 2476.1428,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 37.4297,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5768,
+          "overall_mse": 2476.1428,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 37.4298,
+          "valence_mae": 33.3575,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.8948,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 37.4298,
+          "valence_mae": 33.3575,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.8948,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 37.43,
+          "valence_mae": 33.3579,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.9099,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 37.43,
+          "valence_mae": 33.3579,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2474.9099,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 37.4308,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.8064,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 37.4308,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.8064,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 37.4308,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.8064,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 37.4308,
+          "valence_mae": 33.3005,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2474.8064,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 37.4351,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2475.4436,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 37.4351,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2475.4436,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 37.4351,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2475.4436,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 37.4351,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5513,
+          "overall_mse": 2475.4436,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 37.4399,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2475.1931,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 37.4399,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2475.1931,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 37.4399,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2475.1931,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 37.4399,
+          "valence_mae": 33.3188,
+          "arousal_mae": 41.5611,
+          "overall_mse": 2475.1931,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 37.44,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5974,
+          "overall_mse": 2475.5481,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 37.44,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5974,
+          "overall_mse": 2475.5481,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 37.4416,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.6006,
+          "overall_mse": 2475.7161,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.1635,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.1635,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.1635,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.1635,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6437,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.1636,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1325.7784,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.1636,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1325.7784,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.1638,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0656,
+          "overall_mse": 1325.6943,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.1638,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0656,
+          "overall_mse": 1325.6943,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.166,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6947,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.166,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6947,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.166,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6947,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.166,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.6947,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.1665,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1325.7921,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.1665,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1325.7921,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.1666,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0656,
+          "overall_mse": 1325.7081,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.1666,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0656,
+          "overall_mse": 1325.7081,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.1681,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.8905,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.1681,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.8905,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.1681,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.8905,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.1681,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.8905,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.1682,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3381,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.1682,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3381,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.1682,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3381,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.1682,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3381,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.1684,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.7483,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.1684,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.7483,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.1684,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.7483,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.1684,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.7483,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.1694,
+          "valence_mae": 24.2734,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1325.8116,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.1694,
+          "valence_mae": 24.2734,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1325.8119,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.1695,
+          "valence_mae": 24.2734,
+          "arousal_mae": 30.0656,
+          "overall_mse": 1325.7275,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.1695,
+          "valence_mae": 24.2734,
+          "arousal_mae": 30.0656,
+          "overall_mse": 1325.7279,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.1705,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.462,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.1705,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.462,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.1705,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.462,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.1705,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.462,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.6897,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.6897,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.6897,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.6897,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3892,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3892,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3892,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.1706,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.3892,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.1709,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.9042,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.1709,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.9042,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.1709,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.9042,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.1709,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0742,
+          "overall_mse": 1326.9042,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.173,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.7406,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.173,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.7406,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.173,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.7406,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.173,
+          "valence_mae": 24.2667,
+          "arousal_mae": 30.0794,
+          "overall_mse": 1327.7406,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.4427,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.4427,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.4427,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2716,
+          "arousal_mae": 30.0745,
+          "overall_mse": 1327.4427,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.4758,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.4758,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.4758,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2676,
+          "arousal_mae": 30.0791,
+          "overall_mse": 1327.4758,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2815,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.8622,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2815,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.8622,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0847,
+          "overall_mse": 1327.9336,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0847,
+          "overall_mse": 1327.9336,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0847,
+          "overall_mse": 1327.9336,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.1733,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0847,
+          "overall_mse": 1327.9336,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.1734,
+          "valence_mae": 24.2816,
+          "arousal_mae": 30.0652,
+          "overall_mse": 1326.8634,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5808,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5808,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5808,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5808,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5817,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.4819,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5817,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.4819,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5817,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.4819,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5817,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.4819,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5818,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.6597,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5818,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.6597,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5818,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.6597,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5818,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.6597,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5822,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.04,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5822,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.04,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5822,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.04,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5822,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.04,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5833,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.8114,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5833,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.8114,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5833,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.8114,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5833,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.8114,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5835,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1790.7334,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5835,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1790.7334,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5835,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1790.7334,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5835,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1790.7334,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1791.5625,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1791.5625,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1791.5625,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1791.5625,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.0859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.0859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.0859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5836,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.0859,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5842,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.4326,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5842,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.4326,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5842,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.4326,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5842,
+          "valence_mae": 28.676,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.4326,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 28.5845,
+          "valence_mae": 28.6833,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.8492,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 28.5845,
+          "valence_mae": 28.6833,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.8492,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 28.5845,
+          "valence_mae": 28.6833,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.8492,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 28.5845,
+          "valence_mae": 28.6833,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1791.8492,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.585,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.0558,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.585,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.0558,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.585,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.0558,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.585,
+          "valence_mae": 28.6777,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1791.0558,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5853,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.3022,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5853,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.3022,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5853,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.3022,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5853,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.3022,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5854,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.9847,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5854,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.9847,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5854,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.9847,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5854,
+          "valence_mae": 28.6779,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.9847,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 28.5868,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4994,
+          "overall_mse": 1791.3936,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 28.5868,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4994,
+          "overall_mse": 1791.3936,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 28.5868,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4994,
+          "overall_mse": 1791.3936,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 28.5868,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4994,
+          "overall_mse": 1791.3936,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5869,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1790.3071,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5869,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1790.3071,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5869,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1790.3071,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5869,
+          "valence_mae": 28.6814,
+          "arousal_mae": 28.4924,
+          "overall_mse": 1790.3071,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5873,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.411,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5873,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.411,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5873,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.411,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 28.5873,
+          "valence_mae": 28.6816,
+          "arousal_mae": 28.4929,
+          "overall_mse": 1790.411,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 28.5874,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.1045,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 28.5874,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.1045,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 28.5874,
+          "valence_mae": 28.6787,
+          "arousal_mae": 28.4962,
+          "overall_mse": 1791.1045,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.95,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.6753,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.95,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.6543,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.95,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.6753,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.95,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.6543,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9517,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.6039,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9517,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.583,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9517,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.6039,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9517,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.583,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.9534,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.7953,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.9534,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.7953,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.9534,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.7953,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.9534,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.7953,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9534,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.5161,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9534,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.5161,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9535,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.537,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9535,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.537,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.9551,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.724,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.9551,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.724,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.9551,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.724,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.9551,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.724,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 25.9555,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.4618,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 25.9555,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.4618,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 25.9555,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.4618,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 25.9555,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.4618,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 25.9556,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8889,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 25.9556,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8889,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 25.9556,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8889,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 25.9556,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8889,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.6527,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.6527,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.6527,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.6527,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.5128,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.5128,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.5128,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.5128,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9566,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.3754,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9566,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.3754,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9566,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.3754,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9566,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.3754,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9567,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.1068,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9567,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.1068,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9567,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.1068,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9567,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3805,
+          "overall_mse": 1295.1068,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 25.9568,
+          "valence_mae": 24.5297,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.7285,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 25.9568,
+          "valence_mae": 24.5297,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.7285,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 25.9568,
+          "valence_mae": 24.5297,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.7285,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p01_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 25.9568,
+          "valence_mae": 24.5297,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.7285,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.6571,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.6571,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.6571,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.5394,
+          "arousal_mae": 27.3744,
+          "overall_mse": 1294.6571,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3868,
+          "overall_mse": 1296.4932,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3868,
+          "overall_mse": 1296.4932,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3868,
+          "overall_mse": 1296.4932,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p02_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 25.9569,
+          "valence_mae": 24.527,
+          "arousal_mae": 27.3868,
+          "overall_mse": 1296.4932,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.957,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.3159,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.957,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.3159,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.957,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.3159,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.957,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.3159,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.5467,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.3955,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.5467,
+          "arousal_mae": 27.3675,
+          "overall_mse": 1292.3955,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.1763,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.1763,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.1763,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.9571,
+          "valence_mae": 24.5325,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.1763,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 25.9572,
+          "valence_mae": 24.5467,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.4164,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p02_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 25.9572,
+          "valence_mae": 24.5467,
+          "arousal_mae": 27.3676,
+          "overall_mse": 1292.4164,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.9572,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.0387,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.9572,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.0387,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.9572,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.0387,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p01_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.9572,
+          "valence_mae": 24.5326,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1296.0387,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8177,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8177,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8177,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.5358,
+          "arousal_mae": 27.3788,
+          "overall_mse": 1295.8177,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1295.7701,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1295.7701,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1295.7701,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p02_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 25.9573,
+          "valence_mae": 24.533,
+          "arousal_mae": 27.3817,
+          "overall_mse": 1295.7701,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.2826,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2258,
+          "overall_mse": 1407.835,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.2826,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2258,
+          "overall_mse": 1407.835,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.2878,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2362,
+          "overall_mse": 1410.6359,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.2878,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2362,
+          "overall_mse": 1410.6359,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.2887,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.238,
+          "overall_mse": 1410.7809,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.2887,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.238,
+          "overall_mse": 1410.7809,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.2892,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2389,
+          "overall_mse": 1409.5253,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.2892,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2389,
+          "overall_mse": 1409.5253,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.291,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2258,
+          "overall_mse": 1408.0348,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.291,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2258,
+          "overall_mse": 1408.0348,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.2923,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.2451,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.2923,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.2451,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.2923,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.2451,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.2923,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.2451,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.2951,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2507,
+          "overall_mse": 1410.9393,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.2951,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2507,
+          "overall_mse": 1410.9393,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.2957,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.3842,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.2957,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.3844,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.2957,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.3842,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.2957,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.3844,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.2962,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2362,
+          "overall_mse": 1410.8358,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.2962,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2362,
+          "overall_mse": 1410.8358,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.2964,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1339,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.2964,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1339,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.2964,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1339,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.2964,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1339,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.2966,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2537,
+          "overall_mse": 1411.3207,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.2966,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2537,
+          "overall_mse": 1411.3207,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.2971,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.238,
+          "overall_mse": 1410.9808,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.2971,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.238,
+          "overall_mse": 1410.9808,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "PatternPrior_098",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2389,
+          "overall_mse": 1409.7251,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2389,
+          "overall_mse": 1409.7251,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.2982,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.257,
+          "overall_mse": 1413.5718,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.2982,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.257,
+          "overall_mse": 1413.5718,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.2982,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.257,
+          "overall_mse": 1413.5718,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.2982,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.257,
+          "overall_mse": 1413.5718,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.299,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2585,
+          "overall_mse": 1413.2474,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.299,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2585,
+          "overall_mse": 1413.2474,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.299,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2585,
+          "overall_mse": 1413.2474,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.299,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2585,
+          "overall_mse": 1413.2474,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.2998,
+          "valence_mae": 26.3739,
+          "arousal_mae": 28.2258,
+          "overall_mse": 1408.2529,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p01_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.2998,
+          "valence_mae": 26.3739,
+          "arousal_mae": 28.2258,
+          "overall_mse": 1408.2535,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.3007,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.4449,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.3007,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.4449,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.3007,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.4449,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a1000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.3007,
+          "valence_mae": 26.3563,
+          "arousal_mae": 28.2451,
+          "overall_mse": 1412.4449,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.3008,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2622,
+          "overall_mse": 1412.6161,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.3008,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2622,
+          "overall_mse": 1412.6162,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.3008,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2622,
+          "overall_mse": 1412.6161,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p0_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.3008,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2622,
+          "overall_mse": 1412.6162,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv1p0_ca2p0",
+          "overall_mae": 27.3015,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2507,
+          "overall_mse": 1410.9849,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv2p0_ca2p0",
+          "overall_mae": 27.3015,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2507,
+          "overall_mse": 1410.9849,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv1p0_ca1p0",
+          "overall_mae": 27.3022,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.4297,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv1p0_ca2p0",
+          "overall_mae": 27.3022,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.4301,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv2p0_ca1p0",
+          "overall_mae": 27.3022,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.4297,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p01_cv2p0_ca2p0",
+          "overall_mae": 27.3022,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.252,
+          "overall_mse": 1412.4301,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca1p0",
+          "overall_mae": 27.3026,
+          "valence_mae": 26.3494,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.8969,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv1p0_ca2p0",
+          "overall_mae": 27.3026,
+          "valence_mae": 26.3494,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.8969,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca1p0",
+          "overall_mae": 27.3026,
+          "valence_mae": 26.3494,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.8969,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p0_cv2p0_ca2p0",
+          "overall_mae": 27.3026,
+          "valence_mae": 26.3494,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.8969,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.3029,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1796,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv1p0_ca2p0",
+          "overall_mae": 27.3029,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1796,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca1p0",
+          "overall_mae": 27.3029,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1796,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p005_cv2p0_ca2p0",
+          "overall_mae": 27.3029,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2534,
+          "overall_mse": 1413.1796,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv1p0_ca1p0",
+          "overall_mae": 27.303,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2537,
+          "overall_mse": 1411.3662,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a10000p0_sv0p005_sa0p02_cv2p0_ca1p0",
+          "overall_mae": 27.303,
+          "valence_mae": 26.3523,
+          "arousal_mae": 28.2537,
+          "overall_mse": 1411.3662,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        },
+        {
+          "method": "SignalResidualRidge_a100000p0_sv0p005_sa0p005_cv1p0_ca1p0",
+          "overall_mae": 27.3032,
+          "valence_mae": 26.3494,
+          "arousal_mae": 28.257,
+          "overall_mse": 1413.5669,
+          "notes": "PatternPrior_098 plus frozen-feature Ridge residual probe."
+        }
+      ]
+    }
+  ]
+}

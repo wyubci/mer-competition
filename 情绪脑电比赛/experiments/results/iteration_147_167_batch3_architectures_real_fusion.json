@@ -1,0 +1,3250 @@
+{
+  "method": "Batch 147-166: twenty new architecture families plus 167 integration",
+  "note": "No parameter-only variants: each numbered item uses a distinct modeling assumption.",
+  "architecture_map": {
+    "147": "Tukey biweight local M-estimator smoother",
+    "148": "Trimmed local attention smoother",
+    "149": "Bilateral edge-preserving value-time filter",
+    "150": "Robust trend/residual decomposition",
+    "151": "Deterministic particle filter",
+    "152": "Switching-regime linear dynamical system",
+    "153": "Gaussian Markov random field MAP smoother",
+    "154": "Laplacian pyramid multiscale blend",
+    "155": "Empirical-Bayes shrinkage to candidate consensus",
+    "156": "Conformal residual clamp around candidate consensus",
+    "157": "Prior-bin rank-preserving bias calibration",
+    "158": "Gaussian copula covariance calibration",
+    "159": "Trial prototype residual retrieval",
+    "160": "FFT phase-preserving high-frequency shrinkage",
+    "161": "AR(2) trajectory repair smoother",
+    "162": "Monotone micro-segment reversal repair",
+    "163": "Change-point piecewise trend model",
+    "164": "Dirichlet evidence-weighted expert averaging",
+    "165": "Risk-averse center/candidate clamp",
+    "166": "Learned phase-flow vector-field correction"
+  },
+  "fold_size": 4,
+  "candidate_pool_size": 24,
+  "aggregate_results": [
+    {
+      "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+      "overall_mae": 28.7111,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4809,
+      "overall_mse": 1590.2487,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "157_PriorBinBiasCalibration",
+      "overall_mae": 28.717,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4822,
+      "overall_mse": 1589.5275,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "150_RobustTrendResidualSplit",
+      "overall_mae": 28.7216,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4832,
+      "overall_mse": 1590.0396,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "158_GaussianCopulaCovarianceCalibration",
+      "overall_mae": 28.7227,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.5041,
+      "overall_mse": 1597.3939,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "125_PreviousStateFusion_reference",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": 1590.3336,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "156_ConformalResidualClamp",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": 1590.3336,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "162_MonotoneMicrosegmentRepair",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4838,
+      "overall_mse": 1590.3259,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "152_SwitchingRegimeDynamics",
+      "overall_mae": 28.7245,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4854,
+      "overall_mse": 1591.2167,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "153_GMRFMapSmoother",
+      "overall_mae": 28.7249,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.484,
+      "overall_mse": 1590.0575,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "149_BilateralEdgePreservingFilter",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4849,
+      "overall_mse": 1589.7096,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "148_TrimmedLocalAttention",
+      "overall_mae": 28.7259,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4846,
+      "overall_mse": 1590.1683,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "147_TukeyBiweightLocalMEstimator",
+      "overall_mae": 28.7271,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4849,
+      "overall_mse": 1589.895,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "155_EmpiricalBayesShrinkage",
+      "overall_mae": 28.7288,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4909,
+      "overall_mse": 1590.8823,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+      "overall_mae": 28.7303,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4913,
+      "overall_mse": 1589.5017,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "159_TrialPrototypeResidualRetrieval",
+      "overall_mae": 28.7311,
+      "valence_mae": 26.9813,
+      "arousal_mae": 30.4809,
+      "overall_mse": 1587.0117,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "104_DimwiseOOFMeta_reference",
+      "overall_mae": 28.7316,
+      "valence_mae": 26.973,
+      "arousal_mae": 30.4902,
+      "overall_mse": 1588.8086,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "154_LaplacianPyramidBlend",
+      "overall_mae": 28.7334,
+      "valence_mae": 26.9792,
+      "arousal_mae": 30.4877,
+      "overall_mse": 1588.8479,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "151_DeterministicParticleFilter",
+      "overall_mae": 28.736,
+      "valence_mae": 26.9868,
+      "arousal_mae": 30.4851,
+      "overall_mse": 1591.6725,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "098_PatternPrior",
+      "overall_mae": 28.7462,
+      "valence_mae": 26.9738,
+      "arousal_mae": 30.5186,
+      "overall_mse": 1590.7471,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "166_LearnedPhaseFlowCorrection",
+      "overall_mae": 28.7511,
+      "valence_mae": 26.9786,
+      "arousal_mae": 30.5235,
+      "overall_mse": 1590.5721,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "163_ChangePointPiecewiseTrend",
+      "overall_mae": 28.7607,
+      "valence_mae": 27.0053,
+      "arousal_mae": 30.5162,
+      "overall_mse": 1587.6798,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "165_RiskAverseConsensusClamp",
+      "overall_mae": 28.7804,
+      "valence_mae": 27.0685,
+      "arousal_mae": 30.4922,
+      "overall_mse": 1584.4978,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "164_DirichletEvidenceExpertAverage",
+      "overall_mae": 28.7884,
+      "valence_mae": 27.0045,
+      "arousal_mae": 30.5723,
+      "overall_mse": 1599.6913,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "161_AR2TrajectoryRepair",
+      "overall_mae": 28.8834,
+      "valence_mae": 27.1215,
+      "arousal_mae": 30.6454,
+      "overall_mse": 1589.3967,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "160_FFTPhasePreservingShrinkage",
+      "overall_mae": 29.0946,
+      "valence_mae": 27.3931,
+      "arousal_mae": 30.7962,
+      "overall_mse": 1596.8202,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "dimwise_integration": [
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7111,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7111,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7111,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7111,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7117,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7117,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7122,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7122,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7125,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7126,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7129,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7129,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.713,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.713,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.713,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.713,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7131,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7131,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7133,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7133,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7144,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7144,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7157,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4902,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7157,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4902,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[155_EmpiricalBayesShrinkage]",
+      "overall_mae": 28.716,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4909,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[155_EmpiricalBayesShrinkage]",
+      "overall_mae": 28.716,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4909,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[167_FixedBatch3Fusion_VTukey_ARiskMOE]",
+      "overall_mae": 28.7162,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4913,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[167_FixedBatch3Fusion_VTukey_ARiskMOE]",
+      "overall_mae": 28.7162,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4913,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7163,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7163,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[165_RiskAverseConsensusClamp]",
+      "overall_mae": 28.7167,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[165_RiskAverseConsensusClamp]",
+      "overall_mae": 28.7167,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.717,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7175,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7178,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7178,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7178,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7179,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7182,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7184,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7184,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7184,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7186,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7197,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7204,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7204,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.721,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4902,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.721,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[155_EmpiricalBayesShrinkage]",
+      "overall_mae": 28.7214,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4909,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[167_FixedBatch3Fusion_VTukey_ARiskMOE]",
+      "overall_mae": 28.7216,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4913,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7216,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7218,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7218,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7218,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7219,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[157_PriorBinBiasCalibration]__A[165_RiskAverseConsensusClamp]",
+      "overall_mae": 28.722,
+      "valence_mae": 26.9518,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7222,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7222,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7223,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7224,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7224,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7225,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7225,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7225,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7226,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7226,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7226,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7226,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VCopula_APrototype]__A[158_GaussianCopulaCovarianceCalibration]",
+      "overall_mae": 28.7227,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.5041,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[158_GaussianCopulaCovarianceCalibration]__A[158_GaussianCopulaCovarianceCalibration]",
+      "overall_mae": 28.7227,
+      "valence_mae": 26.9412,
+      "arousal_mae": 30.5041,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7227,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7229,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7232,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7233,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7233,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7234,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7234,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7234,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7234,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7234,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7237,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7237,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7237,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7237,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7238,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7238,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7238,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7238,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.7238,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.7238,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.724,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7241,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7241,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7241,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7242,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7242,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7242,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7242,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7244,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7244,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7244,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7245,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7245,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7245,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7246,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7247,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7247,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7247,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7247,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7248,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7248,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7248,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7248,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7248,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7248,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7249,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7249,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7249,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7249,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7249,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.725,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.725,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.725,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[167_FixedBatch3Fusion_VCopula_APrototype]",
+      "overall_mae": 28.725,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[159_TrialPrototypeResidualRetrieval]",
+      "overall_mae": 28.725,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4809,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[104_DimwiseOOFMeta_reference]",
+      "overall_mae": 28.7251,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4902,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7252,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7252,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7252,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7252,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7253,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7253,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7253,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[155_EmpiricalBayesShrinkage]",
+      "overall_mae": 28.7254,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4909,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7254,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7254,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7255,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[167_FixedBatch3Fusion_VTukey_ARiskMOE]",
+      "overall_mae": 28.7256,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4913,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7256,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[152_SwitchingRegimeDynamics]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7257,
+      "valence_mae": 26.9636,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7257,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7257,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7257,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7257,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[157_PriorBinBiasCalibration]",
+      "overall_mae": 28.7257,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4822,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7258,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7258,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7259,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[148_TrimmedLocalAttention]",
+      "overall_mae": 28.7259,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4846,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[162_MonotoneMicrosegmentRepair]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.726,
+      "valence_mae": 26.9642,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[125_PreviousStateFusion_reference]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.726,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[156_ConformalResidualClamp]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.726,
+      "valence_mae": 26.9643,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[150_RobustTrendResidualSplit]__A[165_RiskAverseConsensusClamp]",
+      "overall_mae": 28.7261,
+      "valence_mae": 26.9599,
+      "arousal_mae": 30.4922,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[155_EmpiricalBayesShrinkage]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7261,
+      "valence_mae": 26.9667,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[149_BilateralEdgePreservingFilter]",
+      "overall_mae": 28.7261,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[147_TukeyBiweightLocalMEstimator]",
+      "overall_mae": 28.7261,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4849,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[151_DeterministicParticleFilter]",
+      "overall_mae": 28.7261,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4851,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7262,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[150_RobustTrendResidualSplit]",
+      "overall_mae": 28.7262,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4832,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[148_TrimmedLocalAttention]__A[152_SwitchingRegimeDynamics]",
+      "overall_mae": 28.7263,
+      "valence_mae": 26.9672,
+      "arousal_mae": 30.4854,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[125_PreviousStateFusion_reference]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[156_ConformalResidualClamp]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[162_MonotoneMicrosegmentRepair]",
+      "overall_mae": 28.7265,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.4838,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[147_TukeyBiweightLocalMEstimator]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7266,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[167_FixedBatch3Fusion_VTukey_ARiskMOE]__A[153_GMRFMapSmoother]",
+      "overall_mae": 28.7266,
+      "valence_mae": 26.9692,
+      "arousal_mae": 30.484,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[153_GMRFMapSmoother]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.9659,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    },
+    {
+      "method": "167_DimwiseBatch3_V[149_BilateralEdgePreservingFilter]__A[154_LaplacianPyramidBlend]",
+      "overall_mae": 28.7268,
+      "valence_mae": 26.966,
+      "arousal_mae": 30.4877,
+      "overall_mse": null,
+      "notes": "Metric-composed integration after the 147-166 architecture batch."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "151_DeterministicParticleFilter",
+          "overall_mae": 25.9076,
+          "valence_mae": 24.6677,
+          "arousal_mae": 27.1474,
+          "overall_mse": 1228.5502,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "165_RiskAverseConsensusClamp",
+          "overall_mae": 25.9565,
+          "valence_mae": 24.7934,
+          "arousal_mae": 27.1197,
+          "overall_mse": 1223.2568,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "152_SwitchingRegimeDynamics",
+          "overall_mae": 25.9669,
+          "valence_mae": 24.687,
+          "arousal_mae": 27.2469,
+          "overall_mse": 1231.9102,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+          "overall_mae": 25.9722,
+          "valence_mae": 24.7106,
+          "arousal_mae": 27.2338,
+          "overall_mse": 1231.233,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+          "overall_mae": 25.9816,
+          "valence_mae": 24.7099,
+          "arousal_mae": 27.2532,
+          "overall_mse": 1232.5179,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "150_RobustTrendResidualSplit",
+          "overall_mae": 25.9821,
+          "valence_mae": 24.6995,
+          "arousal_mae": 27.2647,
+          "overall_mse": 1231.8822,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "162_MonotoneMicrosegmentRepair",
+          "overall_mae": 25.983,
+          "valence_mae": 24.703,
+          "arousal_mae": 27.2629,
+          "overall_mse": 1231.9839,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 25.9832,
+          "valence_mae": 24.7034,
+          "arousal_mae": 27.263,
+          "overall_mse": 1232.0081,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "156_ConformalResidualClamp",
+          "overall_mae": 25.9832,
+          "valence_mae": 24.7034,
+          "arousal_mae": 27.263,
+          "overall_mse": 1232.0081,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "153_GMRFMapSmoother",
+          "overall_mae": 25.9841,
+          "valence_mae": 24.7062,
+          "arousal_mae": 27.2619,
+          "overall_mse": 1231.6885,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "149_BilateralEdgePreservingFilter",
+          "overall_mae": 25.9858,
+          "valence_mae": 24.7083,
+          "arousal_mae": 27.2634,
+          "overall_mse": 1231.3593,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "147_TukeyBiweightLocalMEstimator",
+          "overall_mae": 25.9862,
+          "valence_mae": 24.7106,
+          "arousal_mae": 27.2619,
+          "overall_mse": 1231.5504,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "159_TrialPrototypeResidualRetrieval",
+          "overall_mae": 25.9893,
+          "valence_mae": 24.7254,
+          "arousal_mae": 27.2532,
+          "overall_mse": 1228.6379,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "148_TrimmedLocalAttention",
+          "overall_mae": 25.9907,
+          "valence_mae": 24.7095,
+          "arousal_mae": 27.272,
+          "overall_mse": 1232.1062,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "155_EmpiricalBayesShrinkage",
+          "overall_mae": 25.9939,
+          "valence_mae": 24.7056,
+          "arousal_mae": 27.2822,
+          "overall_mse": 1232.4081,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "154_LaplacianPyramidBlend",
+          "overall_mae": 25.994,
+          "valence_mae": 24.7265,
+          "arousal_mae": 27.2616,
+          "overall_mse": 1230.3473,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "157_PriorBinBiasCalibration",
+          "overall_mae": 26.0183,
+          "valence_mae": 24.7306,
+          "arousal_mae": 27.3059,
+          "overall_mse": 1232.8461,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 26.0233,
+          "valence_mae": 24.7271,
+          "arousal_mae": 27.3195,
+          "overall_mse": 1232.4683,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "161_AR2TrajectoryRepair",
+          "overall_mae": 26.0241,
+          "valence_mae": 24.7271,
+          "arousal_mae": 27.321,
+          "overall_mse": 1219.868,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "163_ChangePointPiecewiseTrend",
+          "overall_mae": 26.0733,
+          "valence_mae": 24.8211,
+          "arousal_mae": 27.3256,
+          "overall_mse": 1229.0175,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 26.0761,
+          "valence_mae": 24.7522,
+          "arousal_mae": 27.4,
+          "overall_mse": 1239.6322,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "166_LearnedPhaseFlowCorrection",
+          "overall_mae": 26.0792,
+          "valence_mae": 24.7548,
+          "arousal_mae": 27.4036,
+          "overall_mse": 1239.2965,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "164_DirichletEvidenceExpertAverage",
+          "overall_mae": 26.1193,
+          "valence_mae": 24.7384,
+          "arousal_mae": 27.5002,
+          "overall_mse": 1244.1555,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "158_GaussianCopulaCovarianceCalibration",
+          "overall_mae": 26.1468,
+          "valence_mae": 24.7099,
+          "arousal_mae": 27.5837,
+          "overall_mse": 1249.1581,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "160_FFTPhasePreservingShrinkage",
+          "overall_mae": 26.3601,
+          "valence_mae": 25.1632,
+          "arousal_mae": 27.557,
+          "overall_mse": 1238.5411,
+          "notes": "Batch 147-166 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "158_GaussianCopulaCovarianceCalibration",
+          "overall_mae": 37.2044,
+          "valence_mae": 33.1261,
+          "arousal_mae": 41.2828,
+          "overall_mse": 2475.7859,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+          "overall_mae": 37.2756,
+          "valence_mae": 33.1261,
+          "arousal_mae": 41.4251,
+          "overall_mse": 2469.8936,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "159_TrialPrototypeResidualRetrieval",
+          "overall_mae": 37.3399,
+          "valence_mae": 33.2547,
+          "arousal_mae": 41.4251,
+          "overall_mse": 2468.2932,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "157_PriorBinBiasCalibration",
+          "overall_mae": 37.3492,
+          "valence_mae": 33.1993,
+          "arousal_mae": 41.4992,
+          "overall_mse": 2472.4214,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 37.3664,
+          "valence_mae": 33.2712,
+          "arousal_mae": 41.4615,
+          "overall_mse": 2471.0767,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 37.3923,
+          "valence_mae": 33.2825,
+          "arousal_mae": 41.5021,
+          "overall_mse": 2473.6689,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "162_MonotoneMicrosegmentRepair",
+          "overall_mae": 37.3989,
+          "valence_mae": 33.2745,
+          "arousal_mae": 41.5234,
+          "overall_mse": 2475.1526,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 37.399,
+          "valence_mae": 33.2747,
+          "arousal_mae": 41.5233,
+          "overall_mse": 2475.1423,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "156_ConformalResidualClamp",
+          "overall_mae": 37.399,
+          "valence_mae": 33.2747,
+          "arousal_mae": 41.5233,
+          "overall_mse": 2475.1423,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "153_GMRFMapSmoother",
+          "overall_mae": 37.3998,
+          "valence_mae": 33.2761,
+          "arousal_mae": 41.5235,
+          "overall_mse": 2474.9006,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "166_LearnedPhaseFlowCorrection",
+          "overall_mae": 37.4009,
+          "valence_mae": 33.2924,
+          "arousal_mae": 41.5093,
+          "overall_mse": 2473.8193,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "147_TukeyBiweightLocalMEstimator",
+          "overall_mae": 37.4018,
+          "valence_mae": 33.2773,
+          "arousal_mae": 41.5263,
+          "overall_mse": 2474.8062,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "148_TrimmedLocalAttention",
+          "overall_mae": 37.4018,
+          "valence_mae": 33.2832,
+          "arousal_mae": 41.5205,
+          "overall_mse": 2475.0642,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "149_BilateralEdgePreservingFilter",
+          "overall_mae": 37.4025,
+          "valence_mae": 33.2786,
+          "arousal_mae": 41.5264,
+          "overall_mse": 2474.6497,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "150_RobustTrendResidualSplit",
+          "overall_mae": 37.4028,
+          "valence_mae": 33.2739,
+          "arousal_mae": 41.5317,
+          "overall_mse": 2475.177,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "154_LaplacianPyramidBlend",
+          "overall_mae": 37.4063,
+          "valence_mae": 33.2862,
+          "arousal_mae": 41.5264,
+          "overall_mse": 2473.8252,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "155_EmpiricalBayesShrinkage",
+          "overall_mae": 37.4064,
+          "valence_mae": 33.2852,
+          "arousal_mae": 41.5276,
+          "overall_mse": 2475.9412,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "163_ChangePointPiecewiseTrend",
+          "overall_mae": 37.409,
+          "valence_mae": 33.3032,
+          "arousal_mae": 41.5148,
+          "overall_mse": 2471.4124,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+          "overall_mae": 37.4125,
+          "valence_mae": 33.2773,
+          "arousal_mae": 41.5476,
+          "overall_mse": 2472.5784,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "152_SwitchingRegimeDynamics",
+          "overall_mae": 37.4313,
+          "valence_mae": 33.3074,
+          "arousal_mae": 41.5552,
+          "overall_mse": 2477.7068,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "164_DirichletEvidenceExpertAverage",
+          "overall_mae": 37.4636,
+          "valence_mae": 33.3834,
+          "arousal_mae": 41.5439,
+          "overall_mse": 2485.2937,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "165_RiskAverseConsensusClamp",
+          "overall_mae": 37.5343,
+          "valence_mae": 33.4612,
+          "arousal_mae": 41.6073,
+          "overall_mse": 2468.0427,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "151_DeterministicParticleFilter",
+          "overall_mae": 37.5554,
+          "valence_mae": 33.4587,
+          "arousal_mae": 41.6521,
+          "overall_mse": 2485.2449,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "161_AR2TrajectoryRepair",
+          "overall_mae": 37.7108,
+          "valence_mae": 33.943,
+          "arousal_mae": 41.4786,
+          "overall_mse": 2491.2805,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "160_FFTPhasePreservingShrinkage",
+          "overall_mae": 37.7915,
+          "valence_mae": 33.7391,
+          "arousal_mae": 41.8439,
+          "overall_mse": 2486.1594,
+          "notes": "Batch 147-166 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "158_GaussianCopulaCovarianceCalibration",
+          "overall_mae": 27.0392,
+          "valence_mae": 24.0574,
+          "arousal_mae": 30.0209,
+          "overall_mse": 1323.4894,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+          "overall_mae": 27.0402,
+          "valence_mae": 24.0574,
+          "arousal_mae": 30.0231,
+          "overall_mse": 1318.6345,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "157_PriorBinBiasCalibration",
+          "overall_mae": 27.1171,
+          "valence_mae": 24.1688,
+          "arousal_mae": 30.0654,
+          "overall_mse": 1326.0952,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "164_DirichletEvidenceExpertAverage",
+          "overall_mae": 27.1429,
+          "valence_mae": 24.2324,
+          "arousal_mae": 30.0535,
+          "overall_mse": 1330.9043,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+          "overall_mae": 27.1577,
+          "valence_mae": 24.2668,
+          "arousal_mae": 30.0485,
+          "overall_mse": 1326.9891,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.1731,
+          "valence_mae": 24.2619,
+          "arousal_mae": 30.0842,
+          "overall_mse": 1328.0439,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "155_EmpiricalBayesShrinkage",
+          "overall_mae": 27.1751,
+          "valence_mae": 24.2484,
+          "arousal_mae": 30.1018,
+          "overall_mse": 1330.1108,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.1768,
+          "valence_mae": 24.253,
+          "arousal_mae": 30.1006,
+          "overall_mse": 1328.1049,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "166_LearnedPhaseFlowCorrection",
+          "overall_mae": 27.1808,
+          "valence_mae": 24.2706,
+          "arousal_mae": 30.0911,
+          "overall_mse": 1328.1279,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 27.1849,
+          "valence_mae": 24.2551,
+          "arousal_mae": 30.1146,
+          "overall_mse": 1330.6753,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "156_ConformalResidualClamp",
+          "overall_mae": 27.1849,
+          "valence_mae": 24.2551,
+          "arousal_mae": 30.1146,
+          "overall_mse": 1330.6753,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "162_MonotoneMicrosegmentRepair",
+          "overall_mae": 27.1853,
+          "valence_mae": 24.2557,
+          "arousal_mae": 30.1148,
+          "overall_mse": 1330.6979,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "148_TrimmedLocalAttention",
+          "overall_mae": 27.1858,
+          "valence_mae": 24.2608,
+          "arousal_mae": 30.1107,
+          "overall_mse": 1330.4471,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "153_GMRFMapSmoother",
+          "overall_mae": 27.1866,
+          "valence_mae": 24.2581,
+          "arousal_mae": 30.115,
+          "overall_mse": 1330.4962,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "149_BilateralEdgePreservingFilter",
+          "overall_mae": 27.1867,
+          "valence_mae": 24.2577,
+          "arousal_mae": 30.1157,
+          "overall_mse": 1330.1024,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "163_ChangePointPiecewiseTrend",
+          "overall_mae": 27.1872,
+          "valence_mae": 24.2319,
+          "arousal_mae": 30.1424,
+          "overall_mse": 1327.3478,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "150_RobustTrendResidualSplit",
+          "overall_mae": 27.188,
+          "valence_mae": 24.2613,
+          "arousal_mae": 30.1147,
+          "overall_mse": 1330.7529,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "159_TrialPrototypeResidualRetrieval",
+          "overall_mae": 27.1905,
+          "valence_mae": 24.3579,
+          "arousal_mae": 30.0231,
+          "overall_mse": 1326.2479,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "147_TukeyBiweightLocalMEstimator",
+          "overall_mae": 27.1921,
+          "valence_mae": 24.2668,
+          "arousal_mae": 30.1173,
+          "overall_mse": 1330.4218,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "154_LaplacianPyramidBlend",
+          "overall_mae": 27.197,
+          "valence_mae": 24.2749,
+          "arousal_mae": 30.1191,
+          "overall_mse": 1329.639,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "152_SwitchingRegimeDynamics",
+          "overall_mae": 27.2035,
+          "valence_mae": 24.2819,
+          "arousal_mae": 30.125,
+          "overall_mse": 1333.3182,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "151_DeterministicParticleFilter",
+          "overall_mae": 27.2952,
+          "valence_mae": 24.4259,
+          "arousal_mae": 30.1646,
+          "overall_mse": 1340.7582,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "165_RiskAverseConsensusClamp",
+          "overall_mae": 27.4566,
+          "valence_mae": 24.7512,
+          "arousal_mae": 30.162,
+          "overall_mse": 1346.4359,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "160_FFTPhasePreservingShrinkage",
+          "overall_mae": 27.5514,
+          "valence_mae": 24.6819,
+          "arousal_mae": 30.4209,
+          "overall_mse": 1339.6118,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "161_AR2TrajectoryRepair",
+          "overall_mae": 27.6647,
+          "valence_mae": 24.6283,
+          "arousal_mae": 30.7011,
+          "overall_mse": 1352.8308,
+          "notes": "Batch 147-166 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "165_RiskAverseConsensusClamp",
+          "overall_mae": 28.3167,
+          "valence_mae": 28.2966,
+          "arousal_mae": 28.3368,
+          "overall_mse": 1753.5406,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "161_AR2TrajectoryRepair",
+          "overall_mae": 28.3836,
+          "valence_mae": 28.4869,
+          "arousal_mae": 28.2802,
+          "overall_mse": 1775.7208,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "163_ChangePointPiecewiseTrend",
+          "overall_mae": 28.4933,
+          "valence_mae": 28.6691,
+          "arousal_mae": 28.3175,
+          "overall_mse": 1790.0386,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "151_DeterministicParticleFilter",
+          "overall_mae": 28.5183,
+          "valence_mae": 28.6568,
+          "arousal_mae": 28.3797,
+          "overall_mse": 1789.334,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "159_TrialPrototypeResidualRetrieval",
+          "overall_mae": 28.5451,
+          "valence_mae": 28.7082,
+          "arousal_mae": 28.382,
+          "overall_mse": 1788.9777,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "150_RobustTrendResidualSplit",
+          "overall_mae": 28.5622,
+          "valence_mae": 28.7379,
+          "arousal_mae": 28.3865,
+          "overall_mse": 1796.127,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "149_BilateralEdgePreservingFilter",
+          "overall_mae": 28.5674,
+          "valence_mae": 28.7438,
+          "arousal_mae": 28.3911,
+          "overall_mse": 1795.9689,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 28.5678,
+          "valence_mae": 28.7116,
+          "arousal_mae": 28.4239,
+          "overall_mse": 1795.8242,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "157_PriorBinBiasCalibration",
+          "overall_mae": 28.5685,
+          "valence_mae": 28.7929,
+          "arousal_mae": 28.3441,
+          "overall_mse": 1798.7891,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "154_LaplacianPyramidBlend",
+          "overall_mae": 28.5689,
+          "valence_mae": 28.7465,
+          "arousal_mae": 28.3913,
+          "overall_mse": 1794.5846,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "147_TukeyBiweightLocalMEstimator",
+          "overall_mae": 28.5711,
+          "valence_mae": 28.7497,
+          "arousal_mae": 28.3925,
+          "overall_mse": 1796.2021,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "153_GMRFMapSmoother",
+          "overall_mae": 28.5716,
+          "valence_mae": 28.7484,
+          "arousal_mae": 28.3949,
+          "overall_mse": 1796.5405,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "152_SwitchingRegimeDynamics",
+          "overall_mae": 28.5724,
+          "valence_mae": 28.7467,
+          "arousal_mae": 28.3981,
+          "overall_mse": 1796.9237,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "162_MonotoneMicrosegmentRepair",
+          "overall_mae": 28.5725,
+          "valence_mae": 28.7488,
+          "arousal_mae": 28.3961,
+          "overall_mse": 1796.9359,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 28.5727,
+          "valence_mae": 28.7492,
+          "arousal_mae": 28.3963,
+          "overall_mse": 1796.9659,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "156_ConformalResidualClamp",
+          "overall_mae": 28.5727,
+          "valence_mae": 28.7492,
+          "arousal_mae": 28.3963,
+          "overall_mse": 1796.9659,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "155_EmpiricalBayesShrinkage",
+          "overall_mae": 28.5739,
+          "valence_mae": 28.7523,
+          "arousal_mae": 28.3954,
+          "overall_mse": 1797.3588,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "148_TrimmedLocalAttention",
+          "overall_mae": 28.5742,
+          "valence_mae": 28.7532,
+          "arousal_mae": 28.3952,
+          "overall_mse": 1796.8286,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+          "overall_mae": 28.5794,
+          "valence_mae": 28.7497,
+          "arousal_mae": 28.4091,
+          "overall_mse": 1793.9213,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 28.58,
+          "valence_mae": 28.6743,
+          "arousal_mae": 28.4856,
+          "overall_mse": 1792.2377,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "166_LearnedPhaseFlowCorrection",
+          "overall_mae": 28.5814,
+          "valence_mae": 28.6741,
+          "arousal_mae": 28.4886,
+          "overall_mse": 1791.6705,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "164_DirichletEvidenceExpertAverage",
+          "overall_mae": 28.6608,
+          "valence_mae": 28.8326,
+          "arousal_mae": 28.489,
+          "overall_mse": 1808.5192,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+          "overall_mae": 28.6798,
+          "valence_mae": 28.9776,
+          "arousal_mae": 28.382,
+          "overall_mse": 1805.6289,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "158_GaussianCopulaCovarianceCalibration",
+          "overall_mae": 28.8109,
+          "valence_mae": 28.9776,
+          "arousal_mae": 28.6442,
+          "overall_mse": 1825.025,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "160_FFTPhasePreservingShrinkage",
+          "overall_mae": 28.8785,
+          "valence_mae": 29.0775,
+          "arousal_mae": 28.6796,
+          "overall_mse": 1795.0436,
+          "notes": "Batch 147-166 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+          "overall_mae": 25.9448,
+          "valence_mae": 24.5638,
+          "arousal_mae": 27.3259,
+          "overall_mse": 1294.6168,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "150_RobustTrendResidualSplit",
+          "overall_mae": 25.9561,
+          "valence_mae": 24.5508,
+          "arousal_mae": 27.3614,
+          "overall_mse": 1296.4181,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 25.9582,
+          "valence_mae": 24.5324,
+          "arousal_mae": 27.3839,
+          "overall_mse": 1296.9982,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "159_TrialPrototypeResidualRetrieval",
+          "overall_mae": 25.9609,
+          "valence_mae": 24.5031,
+          "arousal_mae": 27.4187,
+          "overall_mse": 1292.8461,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "148_TrimmedLocalAttention",
+          "overall_mae": 25.962,
+          "valence_mae": 24.5595,
+          "arousal_mae": 27.3644,
+          "overall_mse": 1296.8635,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "162_MonotoneMicrosegmentRepair",
+          "overall_mae": 25.963,
+          "valence_mae": 24.5613,
+          "arousal_mae": 27.3647,
+          "overall_mse": 1297.1776,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 25.9633,
+          "valence_mae": 24.5618,
+          "arousal_mae": 27.3647,
+          "overall_mse": 1297.2078,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "156_ConformalResidualClamp",
+          "overall_mae": 25.9633,
+          "valence_mae": 24.5618,
+          "arousal_mae": 27.3647,
+          "overall_mse": 1297.2078,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "153_GMRFMapSmoother",
+          "overall_mae": 25.9635,
+          "valence_mae": 24.5621,
+          "arousal_mae": 27.3649,
+          "overall_mse": 1296.9679,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "149_BilateralEdgePreservingFilter",
+          "overall_mae": 25.9642,
+          "valence_mae": 24.5621,
+          "arousal_mae": 27.3663,
+          "overall_mse": 1296.6249,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "147_TukeyBiweightLocalMEstimator",
+          "overall_mae": 25.9644,
+          "valence_mae": 24.5638,
+          "arousal_mae": 27.365,
+          "overall_mse": 1296.85,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "166_LearnedPhaseFlowCorrection",
+          "overall_mae": 25.9644,
+          "valence_mae": 24.5382,
+          "arousal_mae": 27.3906,
+          "overall_mse": 1296.9487,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 25.9676,
+          "valence_mae": 24.5569,
+          "arousal_mae": 27.3784,
+          "overall_mse": 1295.2682,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "155_EmpiricalBayesShrinkage",
+          "overall_mae": 25.9692,
+          "valence_mae": 24.5665,
+          "arousal_mae": 27.3719,
+          "overall_mse": 1298.087,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "154_LaplacianPyramidBlend",
+          "overall_mae": 25.9711,
+          "valence_mae": 24.5731,
+          "arousal_mae": 27.3691,
+          "overall_mse": 1295.9412,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "152_SwitchingRegimeDynamics",
+          "overall_mae": 25.9727,
+          "valence_mae": 24.5746,
+          "arousal_mae": 27.3707,
+          "overall_mse": 1298.996,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+          "overall_mae": 25.9778,
+          "valence_mae": 24.5368,
+          "arousal_mae": 27.4187,
+          "overall_mse": 1297.8395,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "157_PriorBinBiasCalibration",
+          "overall_mae": 25.9978,
+          "valence_mae": 24.5671,
+          "arousal_mae": 27.4286,
+          "overall_mse": 1297.541,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "151_DeterministicParticleFilter",
+          "overall_mae": 26.0009,
+          "valence_mae": 24.6262,
+          "arousal_mae": 27.3755,
+          "overall_mse": 1301.415,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "165_RiskAverseConsensusClamp",
+          "overall_mae": 26.0062,
+          "valence_mae": 24.7029,
+          "arousal_mae": 27.3095,
+          "overall_mse": 1292.8446,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "158_GaussianCopulaCovarianceCalibration",
+          "overall_mae": 26.0119,
+          "valence_mae": 24.5368,
+          "arousal_mae": 27.4871,
+          "overall_mse": 1306.6346,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "164_DirichletEvidenceExpertAverage",
+          "overall_mae": 26.0433,
+          "valence_mae": 24.6198,
+          "arousal_mae": 27.4668,
+          "overall_mse": 1309.4728,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "163_ChangePointPiecewiseTrend",
+          "overall_mae": 26.0619,
+          "valence_mae": 24.6519,
+          "arousal_mae": 27.472,
+          "overall_mse": 1297.5101,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "161_AR2TrajectoryRepair",
+          "overall_mae": 26.1343,
+          "valence_mae": 24.6176,
+          "arousal_mae": 27.6509,
+          "overall_mse": 1296.0001,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "160_FFTPhasePreservingShrinkage",
+          "overall_mae": 26.3605,
+          "valence_mae": 25.0236,
+          "arousal_mae": 27.6975,
+          "overall_mse": 1304.5321,
+          "notes": "Batch 147-166 architecture model."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "158_GaussianCopulaCovarianceCalibration",
+          "overall_mae": 27.1227,
+          "valence_mae": 26.2395,
+          "arousal_mae": 28.006,
+          "overall_mse": 1404.2697,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "151_DeterministicParticleFilter",
+          "overall_mae": 27.1385,
+          "valence_mae": 26.0856,
+          "arousal_mae": 28.1915,
+          "overall_mse": 1404.7325,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "152_SwitchingRegimeDynamics",
+          "overall_mae": 27.2001,
+          "valence_mae": 26.184,
+          "arousal_mae": 28.2162,
+          "overall_mse": 1408.4458,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "150_RobustTrendResidualSplit",
+          "overall_mae": 27.2383,
+          "valence_mae": 26.236,
+          "arousal_mae": 28.2405,
+          "overall_mse": 1409.879,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "148_TrimmedLocalAttention",
+          "overall_mae": 27.2409,
+          "valence_mae": 26.2372,
+          "arousal_mae": 28.2446,
+          "overall_mse": 1409.6997,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "125_PreviousStateFusion_reference",
+          "overall_mae": 27.2412,
+          "valence_mae": 26.2415,
+          "arousal_mae": 28.2408,
+          "overall_mse": 1410.0026,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "156_ConformalResidualClamp",
+          "overall_mae": 27.2412,
+          "valence_mae": 26.2415,
+          "arousal_mae": 28.2408,
+          "overall_mse": 1410.0026,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "162_MonotoneMicrosegmentRepair",
+          "overall_mae": 27.2414,
+          "valence_mae": 26.2418,
+          "arousal_mae": 28.241,
+          "overall_mse": 1410.0078,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "153_GMRFMapSmoother",
+          "overall_mae": 27.244,
+          "valence_mae": 26.2444,
+          "arousal_mae": 28.2435,
+          "overall_mse": 1409.7521,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "149_BilateralEdgePreservingFilter",
+          "overall_mae": 27.2462,
+          "valence_mae": 26.2457,
+          "arousal_mae": 28.2467,
+          "overall_mse": 1409.5527,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "147_TukeyBiweightLocalMEstimator",
+          "overall_mae": 27.2469,
+          "valence_mae": 26.2472,
+          "arousal_mae": 28.2466,
+          "overall_mse": 1409.5386,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "157_PriorBinBiasCalibration",
+          "overall_mae": 27.2512,
+          "valence_mae": 26.2522,
+          "arousal_mae": 28.2501,
+          "overall_mse": 1409.4717,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "155_EmpiricalBayesShrinkage",
+          "overall_mae": 27.2544,
+          "valence_mae": 26.2423,
+          "arousal_mae": 28.2666,
+          "overall_mse": 1411.3887,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "154_LaplacianPyramidBlend",
+          "overall_mae": 27.2633,
+          "valence_mae": 26.268,
+          "arousal_mae": 28.2586,
+          "overall_mse": 1408.7504,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "104_DimwiseOOFMeta_reference",
+          "overall_mae": 27.2877,
+          "valence_mae": 26.318,
+          "arousal_mae": 28.2573,
+          "overall_mse": 1410.1099,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "098_PatternPrior",
+          "overall_mae": 27.2976,
+          "valence_mae": 26.3395,
+          "arousal_mae": 28.2558,
+          "overall_mse": 1413.9019,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "166_LearnedPhaseFlowCorrection",
+          "overall_mae": 27.2998,
+          "valence_mae": 26.3416,
+          "arousal_mae": 28.2579,
+          "overall_mse": 1413.5703,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "164_DirichletEvidenceExpertAverage",
+          "overall_mae": 27.3005,
+          "valence_mae": 26.2204,
+          "arousal_mae": 28.3805,
+          "overall_mse": 1419.8024,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VCopula_APrototype",
+          "overall_mae": 27.3114,
+          "valence_mae": 26.2395,
+          "arousal_mae": 28.3833,
+          "overall_mse": 1416.9774,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "167_FixedBatch3Fusion_VTukey_ARiskMOE",
+          "overall_mae": 27.315,
+          "valence_mae": 26.2472,
+          "arousal_mae": 28.3828,
+          "overall_mse": 1417.6718,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "163_ChangePointPiecewiseTrend",
+          "overall_mae": 27.3397,
+          "valence_mae": 26.3544,
+          "arousal_mae": 28.3251,
+          "overall_mse": 1410.7529,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "159_TrialPrototypeResidualRetrieval",
+          "overall_mae": 27.361,
+          "valence_mae": 26.3387,
+          "arousal_mae": 28.3833,
+          "overall_mse": 1417.0675,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "161_AR2TrajectoryRepair",
+          "overall_mae": 27.3832,
+          "valence_mae": 26.326,
+          "arousal_mae": 28.4404,
+          "overall_mse": 1400.6793,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "165_RiskAverseConsensusClamp",
+          "overall_mae": 27.412,
+          "valence_mae": 26.4059,
+          "arousal_mae": 28.4181,
+          "overall_mse": 1422.8666,
+          "notes": "Batch 147-166 architecture model."
+        },
+        {
+          "method": "160_FFTPhasePreservingShrinkage",
+          "overall_mae": 27.6257,
+          "valence_mae": 26.6732,
+          "arousal_mae": 28.5781,
+          "overall_mse": 1417.0336,
+          "notes": "Batch 147-166 architecture model."
+        }
+      ]
+    }
+  ]
+}

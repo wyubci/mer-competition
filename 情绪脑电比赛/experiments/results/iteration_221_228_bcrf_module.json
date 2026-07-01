@@ -1,0 +1,904 @@
+{
+  "method": "BCRF: Bayesian Credible Residual Field",
+  "note": "BCRF estimates residual correction and reliability from hierarchical OOF residual cells, then combines it with SCRF.",
+  "aggregate_results": [
+    {
+      "method": "222_BCRF_onSCRF",
+      "overall_mae": 28.692,
+      "valence_mae": 26.8902,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1594.1063,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "218_SCRF_reference",
+      "overall_mae": 28.6922,
+      "valence_mae": 26.8905,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1594.1135,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "228_BCRF_SCRF_plusArousal_probe",
+      "overall_mae": 28.6922,
+      "valence_mae": 26.8905,
+      "arousal_mae": 30.494,
+      "overall_mse": 1594.1154,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "224_BCRF_BrakeSCRFDisagreement",
+      "overall_mae": 28.6934,
+      "valence_mae": 26.8929,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1594.0879,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "223_BCRF_SCRFConsensusBlend",
+      "overall_mae": 28.694,
+      "valence_mae": 26.894,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1593.9559,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "226_BCRF_ReliabilityMixture",
+      "overall_mae": 28.6947,
+      "valence_mae": 26.8955,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1593.9567,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "221_BCRF_valenceOnly",
+      "overall_mae": 28.695,
+      "valence_mae": 26.896,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1593.692,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "225_BCRF_ConfidenceScaledSCRF",
+      "overall_mae": 28.696,
+      "valence_mae": 26.8982,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1593.8329,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "200_CurrentManualFusion",
+      "overall_mae": 28.6965,
+      "valence_mae": 26.8991,
+      "arousal_mae": 30.4939,
+      "overall_mse": 1593.7883,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "227_BCRF_arousalOnly_probe",
+      "overall_mae": 28.6966,
+      "valence_mae": 26.8991,
+      "arousal_mae": 30.494,
+      "overall_mse": 1593.7913,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "167_PreviousBest_reference",
+      "overall_mae": 28.7143,
+      "valence_mae": 26.9342,
+      "arousal_mae": 30.4943,
+      "overall_mse": 1590.2609,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "188_ValenceRiskExpert_reference",
+      "overall_mae": 28.738,
+      "valence_mae": 26.8991,
+      "arousal_mae": 30.5769,
+      "overall_mse": 1593.0935,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "diagnostics": {
+    "bcrf_delta_valence": -0.003104,
+    "mean_abs_bcrf_delta_arousal": 0.009838,
+    "mean_abs_bcrf_delta_valence": 0.053313,
+    "mean_conf_arousal": 0.080396,
+    "mean_conf_valence": 0.092685,
+    "scrf_delta_valence": -0.008678
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9825,
+          "valence_mae": 24.7127,
+          "arousal_mae": 27.2523,
+          "overall_mse": 1231.7386,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "221_BCRF_valenceOnly",
+          "overall_mae": 26.1063,
+          "valence_mae": 24.9608,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.1483,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "224_BCRF_BrakeSCRFDisagreement",
+          "overall_mae": 26.1084,
+          "valence_mae": 24.9649,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.5453,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "223_BCRF_SCRFConsensusBlend",
+          "overall_mae": 26.1087,
+          "valence_mae": 24.9654,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.4761,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "226_BCRF_ReliabilityMixture",
+          "overall_mae": 26.1089,
+          "valence_mae": 24.9659,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.4647,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.1096,
+          "valence_mae": 24.9672,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.349,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "227_BCRF_arousalOnly_probe",
+          "overall_mae": 26.1096,
+          "valence_mae": 24.9672,
+          "arousal_mae": 27.252,
+          "overall_mse": 1242.3529,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "225_BCRF_ConfidenceScaledSCRF",
+          "overall_mae": 26.1098,
+          "valence_mae": 24.9678,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.4232,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "222_BCRF_onSCRF",
+          "overall_mae": 26.1115,
+          "valence_mae": 24.971,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.8605,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "218_SCRF_reference",
+          "overall_mae": 26.1117,
+          "valence_mae": 24.9715,
+          "arousal_mae": 27.2519,
+          "overall_mse": 1242.8719,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "228_BCRF_SCRF_plusArousal_probe",
+          "overall_mae": 26.1117,
+          "valence_mae": 24.9715,
+          "arousal_mae": 27.252,
+          "overall_mse": 1242.8744,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 26.1379,
+          "valence_mae": 24.9672,
+          "arousal_mae": 27.3087,
+          "overall_mse": 1242.2568,
+          "notes": "BCRF module over SCRF and 200."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "222_BCRF_onSCRF",
+          "overall_mae": 37.0067,
+          "valence_mae": 32.5858,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2456.9756,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "218_SCRF_reference",
+          "overall_mae": 37.0068,
+          "valence_mae": 32.586,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2456.9788,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "228_BCRF_SCRF_plusArousal_probe",
+          "overall_mae": 37.0068,
+          "valence_mae": 32.586,
+          "arousal_mae": 41.4277,
+          "overall_mse": 2456.9841,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "224_BCRF_BrakeSCRFDisagreement",
+          "overall_mae": 37.0105,
+          "valence_mae": 32.5933,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2457.146,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "223_BCRF_SCRFConsensusBlend",
+          "overall_mae": 37.0162,
+          "valence_mae": 32.6048,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2457.3967,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "226_BCRF_ReliabilityMixture",
+          "overall_mae": 37.0185,
+          "valence_mae": 32.6093,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2457.4885,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "225_BCRF_ConfidenceScaledSCRF",
+          "overall_mae": 37.0264,
+          "valence_mae": 32.6252,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2457.8352,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "221_BCRF_valenceOnly",
+          "overall_mae": 37.0282,
+          "valence_mae": 32.6287,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2457.9473,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 37.0287,
+          "valence_mae": 32.6298,
+          "arousal_mae": 41.4276,
+          "overall_mse": 2457.9255,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "227_BCRF_arousalOnly_probe",
+          "overall_mae": 37.0288,
+          "valence_mae": 32.6298,
+          "arousal_mae": 41.4278,
+          "overall_mse": 2457.9341,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 37.0688,
+          "valence_mae": 32.6298,
+          "arousal_mae": 41.5078,
+          "overall_mse": 2453.0706,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 37.2741,
+          "valence_mae": 33.1203,
+          "arousal_mae": 41.4279,
+          "overall_mse": 2470.7151,
+          "notes": "BCRF module over SCRF and 200."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "222_BCRF_onSCRF",
+          "overall_mae": 26.7284,
+          "valence_mae": 23.3824,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1300.6426,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "218_SCRF_reference",
+          "overall_mae": 26.7286,
+          "valence_mae": 23.3828,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1300.639,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "228_BCRF_SCRF_plusArousal_probe",
+          "overall_mae": 26.7286,
+          "valence_mae": 23.3828,
+          "arousal_mae": 30.0743,
+          "overall_mse": 1300.639,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "224_BCRF_BrakeSCRFDisagreement",
+          "overall_mae": 26.7367,
+          "valence_mae": 23.3991,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1301.0157,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "223_BCRF_SCRFConsensusBlend",
+          "overall_mae": 26.7422,
+          "valence_mae": 23.4101,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1301.2594,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "226_BCRF_ReliabilityMixture",
+          "overall_mae": 26.745,
+          "valence_mae": 23.4156,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1301.3901,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "225_BCRF_ConfidenceScaledSCRF",
+          "overall_mae": 26.7527,
+          "valence_mae": 23.431,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1301.734,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "221_BCRF_valenceOnly",
+          "overall_mae": 26.7547,
+          "valence_mae": 23.4351,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1301.9506,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "227_BCRF_arousalOnly_probe",
+          "overall_mae": 26.7557,
+          "valence_mae": 23.4372,
+          "arousal_mae": 30.0743,
+          "overall_mse": 1301.8837,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.7558,
+          "valence_mae": 23.4372,
+          "arousal_mae": 30.0744,
+          "overall_mse": 1301.8835,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 26.8062,
+          "valence_mae": 23.4372,
+          "arousal_mae": 30.1753,
+          "overall_mse": 1302.3138,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.0553,
+          "valence_mae": 24.036,
+          "arousal_mae": 30.0747,
+          "overall_mse": 1319.7445,
+          "notes": "BCRF module over SCRF and 200."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 28.6729,
+          "valence_mae": 28.9733,
+          "arousal_mae": 28.3726,
+          "overall_mse": 1804.0352,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 28.9084,
+          "valence_mae": 29.4844,
+          "arousal_mae": 28.3323,
+          "overall_mse": 1830.2959,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "221_BCRF_valenceOnly",
+          "overall_mae": 28.922,
+          "valence_mae": 29.4716,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1834.0787,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 28.9284,
+          "valence_mae": 29.4844,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1834.5895,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "227_BCRF_arousalOnly_probe",
+          "overall_mae": 28.9284,
+          "valence_mae": 29.4844,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1834.5883,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "225_BCRF_ConfidenceScaledSCRF",
+          "overall_mae": 28.9302,
+          "valence_mae": 29.4881,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1834.8715,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "223_BCRF_SCRFConsensusBlend",
+          "overall_mae": 28.9365,
+          "valence_mae": 29.5008,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1835.7443,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "226_BCRF_ReliabilityMixture",
+          "overall_mae": 28.9365,
+          "valence_mae": 29.5007,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1835.6976,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "224_BCRF_BrakeSCRFDisagreement",
+          "overall_mae": 28.9431,
+          "valence_mae": 29.514,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1836.5538,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "222_BCRF_onSCRF",
+          "overall_mae": 28.9506,
+          "valence_mae": 29.5288,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1837.1797,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "218_SCRF_reference",
+          "overall_mae": 28.9511,
+          "valence_mae": 29.5299,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1837.2222,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "228_BCRF_SCRF_plusArousal_probe",
+          "overall_mae": 28.9511,
+          "valence_mae": 29.5299,
+          "arousal_mae": 28.3723,
+          "overall_mse": 1837.2216,
+          "notes": "BCRF module over SCRF and 200."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9994,
+          "valence_mae": 24.5256,
+          "arousal_mae": 27.4732,
+          "overall_mse": 1299.7421,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "222_BCRF_onSCRF",
+          "overall_mae": 26.0376,
+          "valence_mae": 24.6022,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.3933,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "218_SCRF_reference",
+          "overall_mae": 26.0378,
+          "valence_mae": 24.6026,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.3992,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "228_BCRF_SCRF_plusArousal_probe",
+          "overall_mae": 26.0378,
+          "valence_mae": 24.6026,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.4034,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "224_BCRF_BrakeSCRFDisagreement",
+          "overall_mae": 26.039,
+          "valence_mae": 24.605,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.4535,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "223_BCRF_SCRFConsensusBlend",
+          "overall_mae": 26.041,
+          "valence_mae": 24.609,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.4132,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "226_BCRF_ReliabilityMixture",
+          "overall_mae": 26.042,
+          "valence_mae": 24.6111,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.4127,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "221_BCRF_valenceOnly",
+          "overall_mae": 26.0439,
+          "valence_mae": 24.6148,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.2477,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "225_BCRF_ConfidenceScaledSCRF",
+          "overall_mae": 26.0453,
+          "valence_mae": 24.6177,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.3802,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.0467,
+          "valence_mae": 24.6203,
+          "arousal_mae": 27.473,
+          "overall_mse": 1305.3868,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "227_BCRF_arousalOnly_probe",
+          "overall_mae": 26.0467,
+          "valence_mae": 24.6203,
+          "arousal_mae": 27.4731,
+          "overall_mse": 1305.3937,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 26.0759,
+          "valence_mae": 24.6203,
+          "arousal_mae": 27.5314,
+          "overall_mse": 1303.299,
+          "notes": "BCRF module over SCRF and 200."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.3014,
+          "valence_mae": 26.2376,
+          "arousal_mae": 28.3652,
+          "overall_mse": 1415.5908,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 27.3102,
+          "valence_mae": 26.2559,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1420.5953,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "227_BCRF_arousalOnly_probe",
+          "overall_mae": 27.3102,
+          "valence_mae": 26.2559,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1420.5951,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "225_BCRF_ConfidenceScaledSCRF",
+          "overall_mae": 27.3118,
+          "valence_mae": 26.2591,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1420.7543,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "221_BCRF_valenceOnly",
+          "overall_mae": 27.3148,
+          "valence_mae": 26.2653,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1420.7789,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "218_SCRF_reference",
+          "overall_mae": 27.3172,
+          "valence_mae": 26.27,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1421.5698,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "228_BCRF_SCRF_plusArousal_probe",
+          "overall_mae": 27.3172,
+          "valence_mae": 26.27,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1421.5697,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "226_BCRF_ReliabilityMixture",
+          "overall_mae": 27.3175,
+          "valence_mae": 26.2706,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1421.2867,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "222_BCRF_onSCRF",
+          "overall_mae": 27.3176,
+          "valence_mae": 26.2708,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1421.5861,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "223_BCRF_SCRFConsensusBlend",
+          "overall_mae": 27.3192,
+          "valence_mae": 26.2739,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1421.4467,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "224_BCRF_BrakeSCRFDisagreement",
+          "overall_mae": 27.3228,
+          "valence_mae": 26.2811,
+          "arousal_mae": 28.3644,
+          "overall_mse": 1421.8135,
+          "notes": "BCRF module over SCRF and 200."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 27.4311,
+          "valence_mae": 26.2559,
+          "arousal_mae": 28.6062,
+          "overall_mse": 1427.3251,
+          "notes": "BCRF module over SCRF and 200."
+        }
+      ]
+    }
+  ]
+}

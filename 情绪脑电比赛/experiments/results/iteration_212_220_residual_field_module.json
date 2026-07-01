@@ -1,0 +1,959 @@
+{
+  "method": "Original module: hierarchical residual field",
+  "note": "The module learns a heavily shrunk residual field over video/time/value/slope conditions from OOF training residuals.",
+  "aggregate_results": [
+    {
+      "method": "218_HierResidualField_valenceConsensusMask",
+      "overall_mae": 28.6869,
+      "valence_mae": 26.8961,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1593.4852,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "219_HierResidualField_valenceConsensusBlend",
+      "overall_mae": 28.688,
+      "valence_mae": 26.8983,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1593.3905,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "215_HierResidualField_valenceOnly",
+      "overall_mae": 28.6901,
+      "valence_mae": 26.9025,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1593.8429,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "214_HierResidualField_signConsensus",
+      "overall_mae": 28.6907,
+      "valence_mae": 26.904,
+      "arousal_mae": 30.4774,
+      "overall_mse": 1593.1694,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "217_HierResidualField_valenceSignOnly",
+      "overall_mae": 28.6909,
+      "valence_mae": 26.904,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1593.1892,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "220_HierResidualField_valenceSoftConfidence",
+      "overall_mae": 28.6909,
+      "valence_mae": 26.904,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1593.1914,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "200_CurrentManualFusion",
+      "overall_mae": 28.6912,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1593.1635,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "212_HierResidualField_small",
+      "overall_mae": 28.6915,
+      "valence_mae": 26.9032,
+      "arousal_mae": 30.4798,
+      "overall_mse": 1593.7134,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "213_HierResidualField_medium",
+      "overall_mae": 28.6918,
+      "valence_mae": 26.9025,
+      "arousal_mae": 30.4811,
+      "overall_mse": 1594.0894,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "216_HierResidualField_arousalOnly",
+      "overall_mae": 28.6929,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.4811,
+      "overall_mse": 1593.4098,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "195_ConformalBand_reference",
+      "overall_mae": 28.7072,
+      "valence_mae": 26.9366,
+      "arousal_mae": 30.4777,
+      "overall_mse": 1589.5159,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "167_PreviousBest_reference",
+      "overall_mae": 28.7075,
+      "valence_mae": 26.9369,
+      "arousal_mae": 30.4782,
+      "overall_mse": 1589.5186,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "188_ValenceRiskExpert_reference",
+      "overall_mae": 28.7282,
+      "valence_mae": 26.9046,
+      "arousal_mae": 30.5518,
+      "overall_mse": 1592.1255,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "diagnostics": {
+    "delta_arousal": 0.003362,
+    "delta_overall": 0.000594,
+    "delta_valence": -0.002174,
+    "mean_abs_correction_arousal": 0.116984,
+    "mean_abs_correction_valence": 0.193995
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "195_ConformalBand_reference",
+          "overall_mae": 25.9752,
+          "valence_mae": 24.7058,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1231.8507,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9756,
+          "valence_mae": 24.7061,
+          "arousal_mae": 27.2452,
+          "overall_mse": 1231.8525,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.1054,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1242.5724,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "217_HierResidualField_valenceSignOnly",
+          "overall_mae": 26.1055,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1242.6044,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "220_HierResidualField_valenceSoftConfidence",
+          "overall_mae": 26.1055,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1242.6069,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "214_HierResidualField_signConsensus",
+          "overall_mae": 26.1058,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.2454,
+          "overall_mse": 1242.6183,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "219_HierResidualField_valenceConsensusBlend",
+          "overall_mae": 26.107,
+          "valence_mae": 24.9694,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1242.9579,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "218_HierResidualField_valenceConsensusMask",
+          "overall_mae": 26.1077,
+          "valence_mae": 24.9707,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1243.1173,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 26.1106,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.255,
+          "overall_mse": 1240.4178,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "215_HierResidualField_valenceOnly",
+          "overall_mae": 26.1136,
+          "valence_mae": 24.9825,
+          "arousal_mae": 27.2446,
+          "overall_mse": 1243.6542,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "212_HierResidualField_small",
+          "overall_mae": 26.1203,
+          "valence_mae": 24.9758,
+          "arousal_mae": 27.2648,
+          "overall_mse": 1243.9274,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "216_HierResidualField_arousalOnly",
+          "overall_mae": 26.1216,
+          "valence_mae": 24.9663,
+          "arousal_mae": 27.277,
+          "overall_mse": 1243.7224,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "213_HierResidualField_medium",
+          "overall_mae": 26.1297,
+          "valence_mae": 24.9825,
+          "arousal_mae": 27.277,
+          "overall_mse": 1244.8042,
+          "notes": "Original hierarchical residual field module."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "213_HierResidualField_medium",
+          "overall_mae": 36.9999,
+          "valence_mae": 32.5892,
+          "arousal_mae": 41.4107,
+          "overall_mse": 2457.2539,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "215_HierResidualField_valenceOnly",
+          "overall_mae": 37.0102,
+          "valence_mae": 32.5892,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2457.2441,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "218_HierResidualField_valenceConsensusMask",
+          "overall_mae": 37.0105,
+          "valence_mae": 32.59,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2456.8718,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "212_HierResidualField_small",
+          "overall_mae": 37.0125,
+          "valence_mae": 32.6068,
+          "arousal_mae": 41.4183,
+          "overall_mse": 2457.4695,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "219_HierResidualField_valenceConsensusBlend",
+          "overall_mae": 37.0169,
+          "valence_mae": 32.6027,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2457.1589,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "216_HierResidualField_arousalOnly",
+          "overall_mae": 37.0222,
+          "valence_mae": 32.6338,
+          "arousal_mae": 41.4107,
+          "overall_mse": 2457.8335,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "214_HierResidualField_signConsensus",
+          "overall_mae": 37.0319,
+          "valence_mae": 32.6329,
+          "arousal_mae": 41.4309,
+          "overall_mse": 2457.844,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "217_HierResidualField_valenceSignOnly",
+          "overall_mae": 37.032,
+          "valence_mae": 32.6329,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2457.8511,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "220_HierResidualField_valenceSoftConfidence",
+          "overall_mae": 37.032,
+          "valence_mae": 32.6329,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2457.8489,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 37.0325,
+          "valence_mae": 32.6338,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2457.8235,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 37.067,
+          "valence_mae": 32.6338,
+          "arousal_mae": 41.5002,
+          "overall_mse": 2453.1199,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "195_ConformalBand_reference",
+          "overall_mae": 37.2763,
+          "valence_mae": 33.1216,
+          "arousal_mae": 41.4311,
+          "overall_mse": 2470.5532,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 37.2764,
+          "valence_mae": 33.1216,
+          "arousal_mae": 41.4312,
+          "overall_mse": 2470.552,
+          "notes": "Original hierarchical residual field module."
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "213_HierResidualField_medium",
+          "overall_mae": 26.7214,
+          "valence_mae": 23.3999,
+          "arousal_mae": 30.043,
+          "overall_mse": 1299.2561,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "218_HierResidualField_valenceConsensusMask",
+          "overall_mae": 26.7284,
+          "valence_mae": 23.3964,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1299.6248,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "215_HierResidualField_valenceOnly",
+          "overall_mae": 26.7302,
+          "valence_mae": 23.3999,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1299.7701,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "212_HierResidualField_small",
+          "overall_mae": 26.7347,
+          "valence_mae": 23.4199,
+          "arousal_mae": 30.0496,
+          "overall_mse": 1299.8741,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "219_HierResidualField_valenceConsensusBlend",
+          "overall_mae": 26.736,
+          "valence_mae": 23.4114,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1299.9659,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "216_HierResidualField_arousalOnly",
+          "overall_mae": 26.7466,
+          "valence_mae": 23.4502,
+          "arousal_mae": 30.043,
+          "overall_mse": 1300.3447,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "214_HierResidualField_signConsensus",
+          "overall_mae": 26.7526,
+          "valence_mae": 23.4465,
+          "arousal_mae": 30.0586,
+          "overall_mse": 1300.7072,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "217_HierResidualField_valenceSignOnly",
+          "overall_mae": 26.7535,
+          "valence_mae": 23.4465,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1300.7787,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "220_HierResidualField_valenceSoftConfidence",
+          "overall_mae": 26.7535,
+          "valence_mae": 23.4465,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1300.7784,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.7554,
+          "valence_mae": 23.4502,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1300.8586,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 26.7839,
+          "valence_mae": 23.4502,
+          "arousal_mae": 30.1176,
+          "overall_mse": 1301.2145,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "195_ConformalBand_reference",
+          "overall_mae": 27.0561,
+          "valence_mae": 24.0516,
+          "arousal_mae": 30.0605,
+          "overall_mse": 1318.745,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.0564,
+          "valence_mae": 24.0518,
+          "arousal_mae": 30.061,
+          "overall_mse": 1318.7485,
+          "notes": "Original hierarchical residual field module."
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "195_ConformalBand_reference",
+          "overall_mae": 28.6743,
+          "valence_mae": 28.9702,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1803.8046,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 28.6749,
+          "valence_mae": 28.971,
+          "arousal_mae": 28.3789,
+          "overall_mse": 1803.8141,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 28.9158,
+          "valence_mae": 29.4881,
+          "arousal_mae": 28.3436,
+          "overall_mse": 1830.5356,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 28.9332,
+          "valence_mae": 29.4881,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1834.7091,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "214_HierResidualField_signConsensus",
+          "overall_mae": 28.9342,
+          "valence_mae": 29.4904,
+          "arousal_mae": 28.3779,
+          "overall_mse": 1834.8105,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "217_HierResidualField_valenceSignOnly",
+          "overall_mae": 28.9344,
+          "valence_mae": 29.4904,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1834.8495,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "220_HierResidualField_valenceSoftConfidence",
+          "overall_mae": 28.9345,
+          "valence_mae": 29.4908,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1834.8604,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "216_HierResidualField_arousalOnly",
+          "overall_mae": 28.935,
+          "valence_mae": 29.4881,
+          "arousal_mae": 28.382,
+          "overall_mse": 1835.1334,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "219_HierResidualField_valenceConsensusBlend",
+          "overall_mae": 28.9494,
+          "valence_mae": 29.5206,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1836.5977,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "212_HierResidualField_small",
+          "overall_mae": 28.9513,
+          "valence_mae": 29.522,
+          "arousal_mae": 28.3805,
+          "overall_mse": 1837.0814,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "218_HierResidualField_valenceConsensusMask",
+          "overall_mae": 28.956,
+          "valence_mae": 29.5337,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1837.3555,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "215_HierResidualField_valenceOnly",
+          "overall_mae": 28.9617,
+          "valence_mae": 29.545,
+          "arousal_mae": 28.3783,
+          "overall_mse": 1838.2393,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "213_HierResidualField_medium",
+          "overall_mae": 28.9635,
+          "valence_mae": 29.545,
+          "arousal_mae": 28.382,
+          "overall_mse": 1838.6637,
+          "notes": "Original hierarchical residual field module."
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "val_subjects": [
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "195_ConformalBand_reference",
+          "overall_mae": 25.991,
+          "valence_mae": 24.5329,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1298.603,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 25.9914,
+          "valence_mae": 24.5334,
+          "arousal_mae": 27.4494,
+          "overall_mse": 1298.6046,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "218_HierResidualField_valenceConsensusMask",
+          "overall_mae": 26.0311,
+          "valence_mae": 24.6131,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1304.374,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "219_HierResidualField_valenceConsensusBlend",
+          "overall_mae": 26.0333,
+          "valence_mae": 24.6175,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1304.3651,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "215_HierResidualField_valenceOnly",
+          "overall_mae": 26.0357,
+          "valence_mae": 24.6223,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1304.6444,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "214_HierResidualField_signConsensus",
+          "overall_mae": 26.0385,
+          "valence_mae": 24.6282,
+          "arousal_mae": 27.4487,
+          "overall_mse": 1304.3475,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "217_HierResidualField_valenceSignOnly",
+          "overall_mae": 26.0387,
+          "valence_mae": 24.6282,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1304.3657,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "220_HierResidualField_valenceSoftConfidence",
+          "overall_mae": 26.0387,
+          "valence_mae": 24.6282,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1304.3661,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 26.0401,
+          "valence_mae": 24.631,
+          "arousal_mae": 27.4491,
+          "overall_mse": 1304.4132,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "212_HierResidualField_small",
+          "overall_mae": 26.0449,
+          "valence_mae": 24.6255,
+          "arousal_mae": 27.4643,
+          "overall_mse": 1304.7882,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "213_HierResidualField_medium",
+          "overall_mae": 26.0479,
+          "valence_mae": 24.6223,
+          "arousal_mae": 27.4735,
+          "overall_mse": 1305.045,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "216_HierResidualField_arousalOnly",
+          "overall_mae": 26.0523,
+          "valence_mae": 24.631,
+          "arousal_mae": 27.4735,
+          "overall_mse": 1304.8138,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 26.0658,
+          "valence_mae": 24.631,
+          "arousal_mae": 27.5007,
+          "overall_mse": 1301.9877,
+          "notes": "Original hierarchical residual field module."
+        }
+      ]
+    },
+    {
+      "fold": 6,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4",
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8",
+        "test_9",
+        "test_10",
+        "test_11",
+        "test_12",
+        "test_13",
+        "test_14",
+        "test_15",
+        "test_16",
+        "test_17",
+        "test_18",
+        "test_19",
+        "test_20"
+      ],
+      "val_subjects": [
+        "test_21",
+        "test_22",
+        "test_23",
+        "test_24"
+      ],
+      "train_oof_rows": 30720,
+      "val_samples": 6144,
+      "feature_dim": 92,
+      "results": [
+        {
+          "method": "195_ConformalBand_reference",
+          "overall_mae": 27.2702,
+          "valence_mae": 26.2376,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1413.5391,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "167_PreviousBest_reference",
+          "overall_mae": 27.2705,
+          "valence_mae": 26.2376,
+          "arousal_mae": 28.3034,
+          "overall_mse": 1413.5402,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "216_HierResidualField_arousalOnly",
+          "overall_mae": 27.2795,
+          "valence_mae": 26.2585,
+          "arousal_mae": 28.3006,
+          "overall_mse": 1418.6115,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "200_CurrentManualFusion",
+          "overall_mae": 27.2806,
+          "valence_mae": 26.2585,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1418.6039,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "220_HierResidualField_valenceSoftConfidence",
+          "overall_mae": 27.281,
+          "valence_mae": 26.2592,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1418.6879,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "214_HierResidualField_signConsensus",
+          "overall_mae": 27.2811,
+          "valence_mae": 26.2594,
+          "arousal_mae": 28.3027,
+          "overall_mse": 1418.6901,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "217_HierResidualField_valenceSignOnly",
+          "overall_mae": 27.2811,
+          "valence_mae": 26.2594,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1418.6862,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "212_HierResidualField_small",
+          "overall_mae": 27.2851,
+          "valence_mae": 26.2689,
+          "arousal_mae": 28.3014,
+          "overall_mse": 1419.1395,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "219_HierResidualField_valenceConsensusBlend",
+          "overall_mae": 27.2857,
+          "valence_mae": 26.2685,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1419.2975,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "218_HierResidualField_valenceConsensusMask",
+          "overall_mae": 27.2877,
+          "valence_mae": 26.2726,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1419.5685,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "213_HierResidualField_medium",
+          "overall_mae": 27.2883,
+          "valence_mae": 26.2759,
+          "arousal_mae": 28.3006,
+          "overall_mse": 1419.5137,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "215_HierResidualField_valenceOnly",
+          "overall_mae": 27.2894,
+          "valence_mae": 26.2759,
+          "arousal_mae": 28.3028,
+          "overall_mse": 1419.5059,
+          "notes": "Original hierarchical residual field module."
+        },
+        {
+          "method": "188_ValenceRiskExpert_reference",
+          "overall_mae": 27.4261,
+          "valence_mae": 26.2585,
+          "arousal_mae": 28.5936,
+          "overall_mse": 1425.4781,
+          "notes": "Original hierarchical residual field module."
+        }
+      ]
+    }
+  ]
+}

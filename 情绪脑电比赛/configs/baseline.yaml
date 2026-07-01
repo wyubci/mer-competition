@@ -1,0 +1,22 @@
+data_root: data/MER_PS_codabench_trainval/MER_PS_codabench_public_trainval
+output_dir: experiments/checkpoints/asac_baseline
+train_subjects: test_1-test_20
+val_subjects: test_21-test_24
+
+model:
+  name: ASACRegressor
+  hidden_dim: 64
+  heads: 4
+  cheb_order: 3
+  dropout: 0.2
+  projection_dim: 64
+  temperature: 0.5
+
+training:
+  epochs: 50
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  contrastive_weight: 0.05
+  seed: 42
+  num_threads: 4

@@ -1,0 +1,829 @@
+{
+  "device": "cuda",
+  "checkpoints": [
+    "experiments\\checkpoints\\graph_mamba\\moddrop010_seed123.pt",
+    "experiments\\checkpoints\\graph_mamba\\hybrid_functional_graph.pt"
+  ],
+  "single_results": [
+    {
+      "method": "GraphMambaResidual_valence",
+      "overall_mae": 29.8735,
+      "valence_mae": 28.3362,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1520.3135,
+      "notes": "Adaptive channel graph encoders plus Mamba-like SSM temporal residual model.",
+      "checkpoint": "experiments\\checkpoints\\graph_mamba\\hybrid_functional_graph.pt"
+    },
+    {
+      "method": "GraphMambaResidual_valence",
+      "overall_mae": 29.9607,
+      "valence_mae": 28.5108,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1529.778,
+      "notes": "Adaptive channel graph encoders plus Mamba-like SSM temporal residual model.",
+      "checkpoint": "experiments\\checkpoints\\graph_mamba\\moddrop010_seed123.pt"
+    }
+  ],
+  "ensemble_results": [
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth7",
+      "overall_mae": 29.7369,
+      "valence_mae": 28.0866,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1505.5355,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth7",
+      "overall_mae": 29.7372,
+      "valence_mae": 28.0873,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1505.251,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth7",
+      "overall_mae": 29.7374,
+      "valence_mae": 28.0876,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1505.8594,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth7",
+      "overall_mae": 29.7386,
+      "valence_mae": 28.0901,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1506.223,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth7",
+      "overall_mae": 29.7387,
+      "valence_mae": 28.0902,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1505.006,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth5",
+      "overall_mae": 29.7408,
+      "valence_mae": 28.0925,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1507.2323,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth5",
+      "overall_mae": 29.741,
+      "valence_mae": 28.0927,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1507.5482,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth5",
+      "overall_mae": 29.7415,
+      "valence_mae": 28.0939,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1506.9561,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth5",
+      "overall_mae": 29.7418,
+      "valence_mae": 28.0944,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1507.9039,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth9",
+      "overall_mae": 29.7423,
+      "valence_mae": 28.0948,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1503.8906,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth9",
+      "overall_mae": 29.7423,
+      "valence_mae": 28.095,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1503.5986,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth9",
+      "overall_mae": 29.7431,
+      "valence_mae": 28.0965,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1504.222,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth5",
+      "overall_mae": 29.7432,
+      "valence_mae": 28.0973,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1506.7196,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth9",
+      "overall_mae": 29.7433,
+      "valence_mae": 28.0968,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1503.3457,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth9",
+      "overall_mae": 29.7449,
+      "valence_mae": 28.1002,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1504.5923,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth3",
+      "overall_mae": 29.7497,
+      "valence_mae": 28.1037,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1509.2755,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth3",
+      "overall_mae": 29.75,
+      "valence_mae": 28.1044,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1509.623,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth3",
+      "overall_mae": 29.75,
+      "valence_mae": 28.1043,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1508.9684,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth3",
+      "overall_mae": 29.7508,
+      "valence_mae": 28.106,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1508.7013,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth3",
+      "overall_mae": 29.7525,
+      "valence_mae": 28.1094,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1508.4745,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth11",
+      "overall_mae": 29.7555,
+      "valence_mae": 28.1149,
+      "arousal_mae": 31.396,
+      "overall_mse": 1502.1444,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth11",
+      "overall_mae": 29.7559,
+      "valence_mae": 28.1159,
+      "arousal_mae": 31.396,
+      "overall_mse": 1502.4434,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth11",
+      "overall_mae": 29.756,
+      "valence_mae": 28.1161,
+      "arousal_mae": 31.396,
+      "overall_mse": 1501.8842,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth11",
+      "overall_mae": 29.7573,
+      "valence_mae": 28.1186,
+      "arousal_mae": 31.396,
+      "overall_mse": 1502.7812,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth11",
+      "overall_mae": 29.7596,
+      "valence_mae": 28.1232,
+      "arousal_mae": 31.396,
+      "overall_mse": 1503.1581,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75",
+      "overall_mae": 29.7656,
+      "valence_mae": 28.1205,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1511.165,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50",
+      "overall_mae": 29.7657,
+      "valence_mae": 28.1208,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1511.4957,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00",
+      "overall_mae": 29.7661,
+      "valence_mae": 28.1216,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1510.8754,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25",
+      "overall_mae": 29.7676,
+      "valence_mae": 28.1246,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1510.6266,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50",
+      "overall_mae": 29.7697,
+      "valence_mae": 28.1288,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1510.4189,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth13",
+      "overall_mae": 29.7765,
+      "valence_mae": 28.1454,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1500.9537,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth13",
+      "overall_mae": 29.7768,
+      "valence_mae": 28.1462,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1500.6865,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth13",
+      "overall_mae": 29.7772,
+      "valence_mae": 28.1468,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1501.2598,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth13",
+      "overall_mae": 29.7791,
+      "valence_mae": 28.1507,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1501.6044,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth13",
+      "overall_mae": 29.7821,
+      "valence_mae": 28.1568,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1501.9878,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth15",
+      "overall_mae": 29.8043,
+      "valence_mae": 28.1842,
+      "arousal_mae": 31.4243,
+      "overall_mse": 1500.1117,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth15",
+      "overall_mae": 29.8044,
+      "valence_mae": 28.1845,
+      "arousal_mae": 31.4243,
+      "overall_mse": 1499.8379,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth15",
+      "overall_mae": 29.8054,
+      "valence_mae": 28.1865,
+      "arousal_mae": 31.4243,
+      "overall_mse": 1500.424,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth15",
+      "overall_mae": 29.8076,
+      "valence_mae": 28.191,
+      "arousal_mae": 31.4243,
+      "overall_mse": 1500.7749,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth15",
+      "overall_mae": 29.8111,
+      "valence_mae": 28.1979,
+      "arousal_mae": 31.4243,
+      "overall_mse": 1501.1642,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth17",
+      "overall_mae": 29.8383,
+      "valence_mae": 28.2316,
+      "arousal_mae": 31.4451,
+      "overall_mse": 1499.6543,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth17",
+      "overall_mae": 29.8385,
+      "valence_mae": 28.232,
+      "arousal_mae": 31.4451,
+      "overall_mse": 1499.374,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth17",
+      "overall_mae": 29.8393,
+      "valence_mae": 28.2336,
+      "arousal_mae": 31.4451,
+      "overall_mse": 1499.973,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth17",
+      "overall_mae": 29.8416,
+      "valence_mae": 28.2381,
+      "arousal_mae": 31.4451,
+      "overall_mse": 1500.3302,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth17",
+      "overall_mae": 29.8452,
+      "valence_mae": 28.2454,
+      "arousal_mae": 31.4451,
+      "overall_mse": 1500.7256,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth19",
+      "overall_mae": 29.8786,
+      "valence_mae": 28.2862,
+      "arousal_mae": 31.471,
+      "overall_mse": 1499.6075,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth19",
+      "overall_mae": 29.8789,
+      "valence_mae": 28.2868,
+      "arousal_mae": 31.471,
+      "overall_mse": 1499.3203,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth19",
+      "overall_mae": 29.8796,
+      "valence_mae": 28.2881,
+      "arousal_mae": 31.471,
+      "overall_mse": 1499.933,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth19",
+      "overall_mae": 29.882,
+      "valence_mae": 28.293,
+      "arousal_mae": 31.471,
+      "overall_mse": 1500.2965,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth19",
+      "overall_mae": 29.8857,
+      "valence_mae": 28.3004,
+      "arousal_mae": 31.471,
+      "overall_mse": 1500.6982,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth21",
+      "overall_mae": 29.9257,
+      "valence_mae": 28.3485,
+      "arousal_mae": 31.5029,
+      "overall_mse": 1500.0127,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth21",
+      "overall_mae": 29.9259,
+      "valence_mae": 28.3488,
+      "arousal_mae": 31.5029,
+      "overall_mse": 1499.7189,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth21",
+      "overall_mae": 29.9268,
+      "valence_mae": 28.3506,
+      "arousal_mae": 31.5029,
+      "overall_mse": 1500.3444,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth21",
+      "overall_mae": 29.9294,
+      "valence_mae": 28.3558,
+      "arousal_mae": 31.5029,
+      "overall_mse": 1500.7142,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth21",
+      "overall_mae": 29.9332,
+      "valence_mae": 28.3635,
+      "arousal_mae": 31.5029,
+      "overall_mse": 1501.1217,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth23",
+      "overall_mae": 29.9789,
+      "valence_mae": 28.4173,
+      "arousal_mae": 31.5406,
+      "overall_mse": 1500.8599,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth23",
+      "overall_mae": 29.979,
+      "valence_mae": 28.4175,
+      "arousal_mae": 31.5406,
+      "overall_mse": 1500.5605,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth23",
+      "overall_mae": 29.9802,
+      "valence_mae": 28.4198,
+      "arousal_mae": 31.5406,
+      "overall_mse": 1501.1973,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth23",
+      "overall_mae": 29.9829,
+      "valence_mae": 28.4252,
+      "arousal_mae": 31.5406,
+      "overall_mse": 1501.5724,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth23",
+      "overall_mae": 29.9867,
+      "valence_mae": 28.4329,
+      "arousal_mae": 31.5406,
+      "overall_mse": 1501.9857,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth25",
+      "overall_mae": 30.0384,
+      "valence_mae": 28.4931,
+      "arousal_mae": 31.5838,
+      "overall_mse": 1502.1285,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth25",
+      "overall_mae": 30.0385,
+      "valence_mae": 28.4932,
+      "arousal_mae": 31.5838,
+      "overall_mse": 1501.8243,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth25",
+      "overall_mae": 30.0397,
+      "valence_mae": 28.4956,
+      "arousal_mae": 31.5838,
+      "overall_mse": 1502.4708,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth25",
+      "overall_mae": 30.0426,
+      "valence_mae": 28.5015,
+      "arousal_mae": 31.5838,
+      "overall_mse": 1502.851,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth25",
+      "overall_mae": 30.0467,
+      "valence_mae": 28.5096,
+      "arousal_mae": 31.5838,
+      "overall_mse": 1503.2687,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth9",
+      "overall_mae": 30.0595,
+      "valence_mae": 28.7293,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1508.1771,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth7",
+      "overall_mae": 30.061,
+      "valence_mae": 28.7349,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1509.814,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth11",
+      "overall_mae": 30.0658,
+      "valence_mae": 28.7356,
+      "arousal_mae": 31.396,
+      "overall_mse": 1506.7194,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth5",
+      "overall_mae": 30.0689,
+      "valence_mae": 28.7486,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1511.5195,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth3",
+      "overall_mae": 30.0806,
+      "valence_mae": 28.7655,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1513.2384,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.50_smooth7",
+      "overall_mae": 30.081,
+      "valence_mae": 28.7748,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1537.7614,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.50_smooth5",
+      "overall_mae": 30.082,
+      "valence_mae": 28.7748,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1539.6138,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth13",
+      "overall_mae": 30.0824,
+      "valence_mae": 28.7573,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1505.5181,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.50_smooth9",
+      "overall_mae": 30.088,
+      "valence_mae": 28.7863,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1535.9698,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.50_smooth3",
+      "overall_mae": 30.0911,
+      "valence_mae": 28.7865,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1541.5527,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.75_smooth7",
+      "overall_mae": 30.0934,
+      "valence_mae": 28.7996,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1538.9711,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.75_smooth5",
+      "overall_mae": 30.0951,
+      "valence_mae": 28.801,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1540.8473,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.75_smooth9",
+      "overall_mae": 30.1,
+      "valence_mae": 28.8104,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1537.1576,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.75_smooth9",
+      "overall_mae": 30.1012,
+      "valence_mae": 28.8128,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1509.4991,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50",
+      "overall_mae": 30.1017,
+      "valence_mae": 28.7928,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1515.1846,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.75_smooth7",
+      "overall_mae": 30.1027,
+      "valence_mae": 28.8182,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1511.144,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.50_smooth11",
+      "overall_mae": 30.1031,
+      "valence_mae": 28.8103,
+      "arousal_mae": 31.396,
+      "overall_mse": 1534.4183,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.25_smooth27",
+      "overall_mae": 30.1034,
+      "valence_mae": 28.5745,
+      "arousal_mae": 31.6323,
+      "overall_mse": 1503.7645,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.50_smooth27",
+      "overall_mae": 30.1034,
+      "valence_mae": 28.5745,
+      "arousal_mae": 31.6323,
+      "overall_mse": 1503.4559,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.75_smooth3",
+      "overall_mae": 30.1046,
+      "valence_mae": 28.8136,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1542.8138,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale6.00_smooth27",
+      "overall_mae": 30.1046,
+      "valence_mae": 28.5769,
+      "arousal_mae": 31.6323,
+      "overall_mse": 1504.1107,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale6.00_smooth7",
+      "overall_mae": 30.1064,
+      "valence_mae": 28.8256,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1540.2321,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.75_smooth11",
+      "overall_mae": 30.1069,
+      "valence_mae": 28.8179,
+      "arousal_mae": 31.396,
+      "overall_mse": 1508.0338,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.75_smooth27",
+      "overall_mae": 30.1076,
+      "valence_mae": 28.5829,
+      "arousal_mae": 31.6323,
+      "overall_mse": 1504.4948,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale6.00_smooth5",
+      "overall_mae": 30.1086,
+      "valence_mae": 28.828,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1542.1334,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.50_smooth15",
+      "overall_mae": 30.1086,
+      "valence_mae": 28.7929,
+      "arousal_mae": 31.4243,
+      "overall_mse": 1504.6611,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.75_smooth5",
+      "overall_mae": 30.1109,
+      "valence_mae": 28.8326,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1512.8588,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123+hybrid_functional_graph_scale5.50_smooth27",
+      "overall_mae": 30.1119,
+      "valence_mae": 28.5915,
+      "arousal_mae": 31.6323,
+      "overall_mse": 1504.9164,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.50",
+      "overall_mae": 30.1122,
+      "valence_mae": 28.8138,
+      "arousal_mae": 31.4107,
+      "overall_mse": 1543.8322,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale6.00_smooth9",
+      "overall_mae": 30.1125,
+      "valence_mae": 28.8354,
+      "arousal_mae": 31.3897,
+      "overall_mse": 1538.3959,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale5.75_smooth11",
+      "overall_mae": 30.1149,
+      "valence_mae": 28.8337,
+      "arousal_mae": 31.396,
+      "overall_mse": 1535.5879,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale6.00_smooth3",
+      "overall_mae": 30.1186,
+      "valence_mae": 28.8416,
+      "arousal_mae": 31.3957,
+      "overall_mse": 1544.1289,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale6.25_smooth7",
+      "overall_mae": 30.1201,
+      "valence_mae": 28.853,
+      "arousal_mae": 31.3872,
+      "overall_mse": 1541.5449,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_hybrid_functional_graph_scale5.75_smooth13",
+      "overall_mae": 30.1227,
+      "valence_mae": 28.8379,
+      "arousal_mae": 31.4075,
+      "overall_mse": 1506.8241,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    },
+    {
+      "method": "Ensemble_moddrop010_seed123_scale6.25_smooth5",
+      "overall_mae": 30.123,
+      "valence_mae": 28.8567,
+      "arousal_mae": 31.3892,
+      "overall_mse": 1543.4723,
+      "notes": "Equal-weight checkpoint residual ensemble over VideoTimeMean prior."
+    }
+  ]
+}

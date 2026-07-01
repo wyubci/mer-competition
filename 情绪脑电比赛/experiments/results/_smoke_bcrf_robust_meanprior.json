@@ -1,0 +1,288 @@
+{
+  "method": "Full BCRF route with robust mean-prior replacement",
+  "note": "The replacement is applied consistently to OOF training priors and validation priors. Only UncertaintyBlend_meanPrior_* references are changed; the robust median base, smooth references, and downstream 200/SCRF/BCRF logic stay unchanged.",
+  "estimators": [
+    "winsor5"
+  ],
+  "fold_size": 4,
+  "aggregate_results": [
+    {
+      "method": "reference_200_MilestoneSynthesisFusion",
+      "overall_mae": 36.8094,
+      "valence_mae": 33.9482,
+      "arousal_mae": 39.6707,
+      "overall_mse": 2237.7439,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "reference_224_BCRF_Brake",
+      "overall_mae": 36.8107,
+      "valence_mae": 33.9507,
+      "arousal_mae": 39.6707,
+      "overall_mse": 2237.0037,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "reference_222_BCRF_onSCRF",
+      "overall_mae": 36.8147,
+      "valence_mae": 33.9587,
+      "arousal_mae": 39.6707,
+      "overall_mse": 2237.3958,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "reference_218_SCRF",
+      "overall_mae": 36.8148,
+      "valence_mae": 33.9589,
+      "arousal_mae": 39.6707,
+      "overall_mse": 2237.4468,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "winsor5_224_BCRF_Brake",
+      "overall_mae": 36.8408,
+      "valence_mae": 33.9906,
+      "arousal_mae": 39.691,
+      "overall_mse": 2239.6511,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "winsor5_200_MilestoneSynthesisFusion",
+      "overall_mae": 36.8413,
+      "valence_mae": 33.9916,
+      "arousal_mae": 39.691,
+      "overall_mse": 2240.5227,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "winsor5_218_SCRF",
+      "overall_mae": 36.8438,
+      "valence_mae": 33.9966,
+      "arousal_mae": 39.691,
+      "overall_mse": 2240.0342,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "winsor5_222_BCRF_onSCRF",
+      "overall_mae": 36.8438,
+      "valence_mae": 33.9967,
+      "arousal_mae": 39.691,
+      "overall_mse": 2239.9929,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "reference_098_PatternPrior",
+      "overall_mae": 36.9172,
+      "valence_mae": 33.9024,
+      "arousal_mae": 39.932,
+      "overall_mse": 2254.5706,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    },
+    {
+      "method": "winsor5_098_PatternPrior",
+      "overall_mae": 36.9487,
+      "valence_mae": 33.9254,
+      "arousal_mae": 39.9721,
+      "overall_mse": 2257.4695,
+      "notes": "Weighted aggregate across subject-disjoint folds."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "reference_200_MilestoneSynthesisFusion",
+          "overall_mae": 33.271,
+          "valence_mae": 32.2612,
+          "arousal_mae": 34.2809,
+          "overall_mse": 1782.389,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_224_BCRF_Brake",
+          "overall_mae": 33.2746,
+          "valence_mae": 32.2683,
+          "arousal_mae": 34.2809,
+          "overall_mse": 1781.3389,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_222_BCRF_onSCRF",
+          "overall_mae": 33.2854,
+          "valence_mae": 32.29,
+          "arousal_mae": 34.2809,
+          "overall_mse": 1782.4178,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_218_SCRF",
+          "overall_mae": 33.2857,
+          "valence_mae": 32.2904,
+          "arousal_mae": 34.2809,
+          "overall_mse": 1782.4965,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_200_MilestoneSynthesisFusion",
+          "overall_mae": 33.3159,
+          "valence_mae": 32.2912,
+          "arousal_mae": 34.3406,
+          "overall_mse": 1787.0962,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_224_BCRF_Brake",
+          "overall_mae": 33.3189,
+          "valence_mae": 32.2972,
+          "arousal_mae": 34.3406,
+          "overall_mse": 1786.0651,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_222_BCRF_onSCRF",
+          "overall_mae": 33.3292,
+          "valence_mae": 32.3178,
+          "arousal_mae": 34.3406,
+          "overall_mse": 1787.1304,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_218_SCRF",
+          "overall_mae": 33.3293,
+          "valence_mae": 32.3181,
+          "arousal_mae": 34.3406,
+          "overall_mse": 1787.2057,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_098_PatternPrior",
+          "overall_mae": 33.4029,
+          "valence_mae": 32.006,
+          "arousal_mae": 34.7998,
+          "overall_mse": 1808.8438,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_098_PatternPrior",
+          "overall_mae": 33.4355,
+          "valence_mae": 32.0278,
+          "arousal_mae": 34.8433,
+          "overall_mse": 1812.8959,
+          "notes": "Full route with robust mean-prior replacement."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2",
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_5",
+        "test_6",
+        "test_7",
+        "test_8"
+      ],
+      "val_samples": 6144,
+      "results": [
+        {
+          "method": "reference_218_SCRF",
+          "overall_mae": 40.3439,
+          "valence_mae": 35.6274,
+          "arousal_mae": 45.0605,
+          "overall_mse": 2692.3972,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_222_BCRF_onSCRF",
+          "overall_mae": 40.3439,
+          "valence_mae": 35.6274,
+          "arousal_mae": 45.0605,
+          "overall_mse": 2692.374,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_224_BCRF_Brake",
+          "overall_mae": 40.3468,
+          "valence_mae": 35.6331,
+          "arousal_mae": 45.0605,
+          "overall_mse": 2692.6682,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_200_MilestoneSynthesisFusion",
+          "overall_mae": 40.3478,
+          "valence_mae": 35.6352,
+          "arousal_mae": 45.0605,
+          "overall_mse": 2693.0986,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_218_SCRF",
+          "overall_mae": 40.3583,
+          "valence_mae": 35.6752,
+          "arousal_mae": 45.0415,
+          "overall_mse": 2692.8625,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_222_BCRF_onSCRF",
+          "overall_mae": 40.3585,
+          "valence_mae": 35.6755,
+          "arousal_mae": 45.0415,
+          "overall_mse": 2692.8555,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_224_BCRF_Brake",
+          "overall_mae": 40.3627,
+          "valence_mae": 35.684,
+          "arousal_mae": 45.0415,
+          "overall_mse": 2693.2371,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_200_MilestoneSynthesisFusion",
+          "overall_mae": 40.3667,
+          "valence_mae": 35.692,
+          "arousal_mae": 45.0415,
+          "overall_mse": 2693.949,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "reference_098_PatternPrior",
+          "overall_mae": 40.4315,
+          "valence_mae": 35.7989,
+          "arousal_mae": 45.0642,
+          "overall_mse": 2700.2971,
+          "notes": "Full route with robust mean-prior replacement."
+        },
+        {
+          "method": "winsor5_098_PatternPrior",
+          "overall_mae": 40.4619,
+          "valence_mae": 35.823,
+          "arousal_mae": 45.1009,
+          "overall_mse": 2702.043,
+          "notes": "Full route with robust mean-prior replacement."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "method": "EEG-fNIRS neurovascular fusion module search",
+  "note": "Each module predicts a small residual over PatternPrior_098 using separated EEG and fNIRS features. The modules differ in fusion logic: single-modality, lag coupling, HRF kernel, low-rank bilinear, PLS latent fusion, and agreement/confidence gates.",
+  "feature_shapes": {
+    "eeg": [
+      6144,
+      64,
+      5
+    ],
+    "fnirs": [
+      6144,
+      51,
+      9
+    ],
+    "eeg_core": [
+      6144,
+      17
+    ],
+    "fnirs_core": [
+      6144,
+      29
+    ]
+  },
+  "aggregate_results": [
+    {
+      "method": "232_NeurovascularLagProductRidge_a100p0_v_s0p03_c1p0",
+      "overall_mae": 28.3253,
+      "valence_mae": 25.4312,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1490.0289,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "234_CoupledSlopeFusionRidge_a100p0_v_s0p03_c1p0",
+      "overall_mae": 28.3351,
+      "valence_mae": 25.4509,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1490.8187,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "237_DualModalityAgreementGate_a100p0_v_s0p03_c1p0",
+      "overall_mae": 28.3373,
+      "valence_mae": 25.4553,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1491.3961,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "239_ModalityVarianceWeighted_a100p0_v_s0p03_c1p0",
+      "overall_mae": 28.3405,
+      "valence_mae": 25.4618,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1491.537,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    },
+    {
+      "method": "229_EEGLagRidge_a100p0_v_s0p03_c1p0",
+      "overall_mae": 28.343,
+      "valence_mae": 25.4667,
+      "arousal_mae": 31.2193,
+      "overall_mse": 1492.012,
+      "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "232_NeurovascularLagProductRidge_a100p0_v_s0p03_c1p0",
+          "overall_mae": 28.2528,
+          "valence_mae": 26.6353,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1413.0753,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "234_CoupledSlopeFusionRidge_a100p0_v_s0p03_c1p0",
+          "overall_mae": 28.2675,
+          "valence_mae": 26.6646,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1414.2559,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "229_EEGLagRidge_a100p0_v_s0p03_c1p0",
+          "overall_mae": 28.2761,
+          "valence_mae": 26.6817,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.641,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "236_PLSJointLatent_c2_v_s0p03_c1p0",
+          "overall_mae": 28.2776,
+          "valence_mae": 26.6848,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.6998,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "233_HRFKernelFusionRidge_a100p0_v_s0p03_c1p0",
+          "overall_mae": 28.278,
+          "valence_mae": 26.6857,
+          "arousal_mae": 29.8704,
+          "overall_mse": 1415.7399,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        "test_1",
+        "test_2"
+      ],
+      "val_subjects": [
+        "test_3",
+        "test_4"
+      ],
+      "val_samples": 3072,
+      "results": [
+        {
+          "method": "230_FNIRSSlowRidge_a100p0_both_s0p03_c1p0",
+          "overall_mae": 28.34,
+          "valence_mae": 24.2027,
+          "arousal_mae": 32.4771,
+          "overall_mse": 1562.834,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "239_ModalityVarianceWeighted_a100p0_both_s0p03_c1p0",
+          "overall_mae": 28.3642,
+          "valence_mae": 24.2017,
+          "arousal_mae": 32.5266,
+          "overall_mse": 1565.8877,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "237_DualModalityAgreementGate_a100p0_both_s0p03_c1p0",
+          "overall_mae": 28.3775,
+          "valence_mae": 24.2068,
+          "arousal_mae": 32.5483,
+          "overall_mse": 1565.9614,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "239_ModalityVarianceWeighted_a100p0_v_s0p03_c1p0",
+          "overall_mae": 28.385,
+          "valence_mae": 24.2017,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1566.2889,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        },
+        {
+          "method": "230_FNIRSSlowRidge_a100p0_v_s0p03_c1p0",
+          "overall_mae": 28.3855,
+          "valence_mae": 24.2027,
+          "arousal_mae": 32.5682,
+          "overall_mse": 1566.4235,
+          "notes": "PatternPrior_098 plus EEG-fNIRS residual correction."
+        }
+      ]
+    }
+  ]
+}
